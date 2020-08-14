@@ -3,7 +3,7 @@ title: "Module kusto"
 title_tag: "Module kusto | Package @pulumi/azure | Node.js SDK"
 linktitle: "kusto"
 meta_desc: "Explore members of the kusto module in the @pulumi/azure package."
-git_sha: "38f39deade34d0e187626f1cb68bf0835bc2c2d0"
+git_sha: "1ab68fc895391745ca99e4edaaef6ceeea643c4a"
 block_external_search_index: true
 ---
 
@@ -17,9 +17,13 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
+    <li><a href="#AttachedDatabaseConfiguration"><span class="symbol resource"></span>AttachedDatabaseConfiguration</a></li>
     <li><a href="#Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="#ClusterCustomerManagedKey"><span class="symbol resource"></span>ClusterCustomerManagedKey</a></li>
+    <li><a href="#ClusterPrincipalAssignment"><span class="symbol resource"></span>ClusterPrincipalAssignment</a></li>
     <li><a href="#Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="#DatabasePrincipal"><span class="symbol resource"></span>DatabasePrincipal</a></li>
+    <li><a href="#DatabasePrincipalAssignment"><span class="symbol resource"></span>DatabasePrincipalAssignment</a></li>
     <li><a href="#EventhubDataConnection"><span class="symbol resource"></span>EventhubDataConnection</a></li>
 </ul>
 
@@ -30,10 +34,18 @@ block_external_search_index: true
 
 <h3>Others</h3>
 <ul class="api">
+    <li><a href="#AttachedDatabaseConfigurationArgs"><span class="symbol api"></span>AttachedDatabaseConfigurationArgs</a></li>
+    <li><a href="#AttachedDatabaseConfigurationState"><span class="symbol api"></span>AttachedDatabaseConfigurationState</a></li>
     <li><a href="#ClusterArgs"><span class="symbol api"></span>ClusterArgs</a></li>
+    <li><a href="#ClusterCustomerManagedKeyArgs"><span class="symbol api"></span>ClusterCustomerManagedKeyArgs</a></li>
+    <li><a href="#ClusterCustomerManagedKeyState"><span class="symbol api"></span>ClusterCustomerManagedKeyState</a></li>
+    <li><a href="#ClusterPrincipalAssignmentArgs"><span class="symbol api"></span>ClusterPrincipalAssignmentArgs</a></li>
+    <li><a href="#ClusterPrincipalAssignmentState"><span class="symbol api"></span>ClusterPrincipalAssignmentState</a></li>
     <li><a href="#ClusterState"><span class="symbol api"></span>ClusterState</a></li>
     <li><a href="#DatabaseArgs"><span class="symbol api"></span>DatabaseArgs</a></li>
     <li><a href="#DatabasePrincipalArgs"><span class="symbol api"></span>DatabasePrincipalArgs</a></li>
+    <li><a href="#DatabasePrincipalAssignmentArgs"><span class="symbol api"></span>DatabasePrincipalAssignmentArgs</a></li>
+    <li><a href="#DatabasePrincipalAssignmentState"><span class="symbol api"></span>DatabasePrincipalAssignmentState</a></li>
     <li><a href="#DatabasePrincipalState"><span class="symbol api"></span>DatabasePrincipalState</a></li>
     <li><a href="#DatabaseState"><span class="symbol api"></span>DatabaseState</a></li>
     <li><a href="#EventhubDataConnectionArgs"><span class="symbol api"></span>EventhubDataConnectionArgs</a></li>
@@ -44,8 +56,181 @@ block_external_search_index: true
 
 
 <h2 id="resources">Resources</h2>
+<h3 class="pdoc-module-header" id="AttachedDatabaseConfiguration" data-link-title="AttachedDatabaseConfiguration">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L48">
+        Resource <strong>AttachedDatabaseConfiguration</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>AttachedDatabaseConfiguration</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages a Kusto (also known as Azure Data Explorer) Attached Database Configuration
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const rg = new azure.core.ResourceGroup("rg", {location: "East US"});
+const followerCluster = new azure.kusto.Cluster("followerCluster", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: {
+        name: "Dev(No SLA)_Standard_D11_v2",
+        capacity: 1,
+    },
+});
+const followedCluster = new azure.kusto.Cluster("followedCluster", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: {
+        name: "Dev(No SLA)_Standard_D11_v2",
+        capacity: 1,
+    },
+});
+const followedDatabase = new azure.kusto.Database("followedDatabase", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    clusterName: azurerm_kusto_cluster.cluster2.name,
+});
+const example = new azure.kusto.AttachedDatabaseConfiguration("example", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    clusterName: followerCluster.name,
+    clusterResourceId: followedCluster.id,
+    databaseName: "*",
+    defaultPrincipalModificationsKind: "None",
+});
+```
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L107"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> AttachedDatabaseConfiguration(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AttachedDatabaseConfigurationArgs'>AttachedDatabaseConfigurationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a AttachedDatabaseConfiguration resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L58">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AttachedDatabaseConfigurationState'>AttachedDatabaseConfigurationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#AttachedDatabaseConfiguration'>AttachedDatabaseConfiguration</a></code></pre>
+
+
+Get an existing AttachedDatabaseConfiguration resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L48">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L69">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is AttachedDatabaseConfiguration</code></pre>
+
+
+Returns true if the given object is an instance of AttachedDatabaseConfiguration.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-attachedDatabaseNames">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L79">property <b>attachedDatabaseNames</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>attachedDatabaseNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
+
+The list of databases from the `clusterResourceId` which are currently attached to the cluster.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-clusterName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L83">property <b>clusterName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-clusterResourceId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L87">property <b>clusterResourceId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>clusterResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The resource id of the cluster where the databases you would like to attach reside.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-databaseName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L91">property <b>databaseName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-defaultPrincipalModificationKind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L95">property <b>defaultPrincipalModificationKind</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>defaultPrincipalModificationKind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The default principals modification kind. Valid values are: `None` (default), `Replace` and `Union`.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L48">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L99">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the location of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L103">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L107">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfiguration-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L48">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L32">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -55,8 +240,6 @@ block_external_search_index: true
 Manages a Kusto (also known as Azure Data Explorer) Cluster
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -77,7 +260,7 @@ const example = new azure.kusto.Cluster("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L123"> <b>constructor</b></a>
 </h4>
 
 
@@ -91,7 +274,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -102,14 +285,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -120,7 +303,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-dataIngestionUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L65">property <b>dataIngestionUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L63">property <b>dataIngestionUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataIngestionUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -128,15 +311,23 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Kusto Cluster URI to be used for data ingestion.
 
 <h4 class="pdoc-member-header" id="Cluster-enableDiskEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L69">property <b>enableDiskEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L67">property <b>enableDiskEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableDiskEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies if the cluster's disks are encrypted.
 
+<h4 class="pdoc-member-header" id="Cluster-enablePurge">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L71">property <b>enablePurge</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>enablePurge: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Specifies if the purge operations are enabled.
+
 <h4 class="pdoc-member-header" id="Cluster-enableStreamingIngest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L73">property <b>enableStreamingIngest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L75">property <b>enableStreamingIngest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableStreamingIngest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,7 +335,7 @@ Specifies if the cluster's disks are encrypted.
 Specifies if the streaming ingest is enabled.
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -152,8 +343,24 @@ Specifies if the streaming ingest is enabled.
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
 
+<h4 class="pdoc-member-header" id="Cluster-identity">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L79">property <b>identity</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterIdentity'>ClusterIdentity</a>&gt;;</code></pre>
+
+A identity block.
+
+<h4 class="pdoc-member-header" id="Cluster-languageExtensions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L83">property <b>languageExtensions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>languageExtensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+An list of `languageExtensions` to enable. Valid values are: `PYTHON` and `R`.
+
 <h4 class="pdoc-member-header" id="Cluster-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L77">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L87">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,15 +368,23 @@ deployments and may be missing (undefined) during planning phases.
 The location where the Kusto Cluster should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The name of the Kusto Cluster to create. Changing this forces a new resource to be created.
 
+<h4 class="pdoc-member-header" id="Cluster-optimizedAutoScale">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L95">property <b>optimizedAutoScale</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>optimizedAutoScale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterOptimizedAutoScale'>ClusterOptimizedAutoScale</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+An `optimizedAutoScale` block as defined below.
+
 <h4 class="pdoc-member-header" id="Cluster-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L99">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +392,7 @@ The name of the Kusto Cluster to create. Changing this forces a new resource to 
 Specifies the Resource Group where the Kusto Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Cluster-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L89">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L103">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterSku'>ClusterSku</a>&gt;;</code></pre>
@@ -185,15 +400,23 @@ Specifies the Resource Group where the Kusto Cluster should exist. Changing this
 A `sku` block as defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L93">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L107">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
+<h4 class="pdoc-member-header" id="Cluster-trustedExternalTenants">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L111">property <b>trustedExternalTenants</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>trustedExternalTenants: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
+
+Specifies a list of tenant IDs that are trusted by the cluster.
+
 <h4 class="pdoc-member-header" id="Cluster-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L97">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L115">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -201,7 +424,292 @@ A mapping of tags to assign to the resource.
 The FQDN of the Azure Kusto Cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L32">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h4 class="pdoc-member-header" id="Cluster-virtualNetworkConfiguration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L119">property <b>virtualNetworkConfiguration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>virtualNetworkConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterVirtualNetworkConfiguration'>ClusterVirtualNetworkConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A `virtualNetworkConfiguration` block as defined below.
+
+<h4 class="pdoc-member-header" id="Cluster-zones">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L123">property <b>zones</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+A list of Availability Zones in which the cluster instances should be created in. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-module-header" id="ClusterCustomerManagedKey" data-link-title="ClusterCustomerManagedKey">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L10">
+        Resource <strong>ClusterCustomerManagedKey</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClusterCustomerManagedKey</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages a Customer Managed Key for a Kusto Cluster.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKey-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L53"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ClusterCustomerManagedKey(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ClusterCustomerManagedKeyArgs'>ClusterCustomerManagedKeyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a ClusterCustomerManagedKey resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKey-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L20">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ClusterCustomerManagedKeyState'>ClusterCustomerManagedKeyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ClusterCustomerManagedKey'>ClusterCustomerManagedKey</a></code></pre>
+
+
+Get an existing ClusterCustomerManagedKey resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKey-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L10">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKey-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L31">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ClusterCustomerManagedKey</code></pre>
+
+
+Returns true if the given object is an instance of ClusterCustomerManagedKey.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKey-clusterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L41">property <b>clusterId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Kusto Cluster. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKey-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L10">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKey-keyName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L45">property <b>keyName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>keyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of Key Vault Key.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKey-keyVaultId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L49">property <b>keyVaultId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Key Vault. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKey-keyVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L53">property <b>keyVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>keyVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The version of Key Vault Key.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKey-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L10">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="ClusterPrincipalAssignment" data-link-title="ClusterPrincipalAssignment">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L36">
+        Resource <strong>ClusterPrincipalAssignment</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClusterPrincipalAssignment</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages a Kusto Cluster Principal Assignment.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const rg = new azure.core.ResourceGroup("rg", {location: "East US"});
+const exampleCluster = new azure.kusto.Cluster("exampleCluster", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: {
+        name: "Standard_D13_v2",
+        capacity: 2,
+    },
+});
+const exampleClusterPrincipalAssignment = new azure.kusto.ClusterPrincipalAssignment("exampleClusterPrincipalAssignment", {
+    resourceGroupName: rg.name,
+    clusterName: exampleCluster.name,
+    tenantId: current.then(current => current.tenantId),
+    principalId: current.then(current => current.clientId),
+    principalType: "App",
+    role: "AllDatabasesAdmin",
+});
+```
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L96"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ClusterPrincipalAssignment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ClusterPrincipalAssignmentArgs'>ClusterPrincipalAssignmentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a ClusterPrincipalAssignment resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L46">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ClusterPrincipalAssignmentState'>ClusterPrincipalAssignmentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ClusterPrincipalAssignment'>ClusterPrincipalAssignment</a></code></pre>
+
+
+Get an existing ClusterPrincipalAssignment resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L36">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L57">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ClusterPrincipalAssignment</code></pre>
+
+
+Returns true if the given object is an instance of ClusterPrincipalAssignment.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-clusterName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L67">property <b>clusterName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the cluster in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L36">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L68">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-principalId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L72">property <b>principalId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The object id of the principal. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-principalName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L76">property <b>principalName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>principalName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the principal.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-principalType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L80">property <b>principalType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>principalType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The type of the principal. Valid values include `App`, `Group`, `User`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L84">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the resource group in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-role">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L88">property <b>role</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The cluster role assigned to the principal. Valid values include `AllDatabasesAdmin` and `AllDatabasesViewer`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L92">property <b>tenantId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The tenant id in which the principal resides. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-tenantName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L96">property <b>tenantName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>tenantName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the tenant.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignment-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -210,7 +718,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Database" data-link-title="Database">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L34">
         Resource <strong>Database</strong>
     </a>
 </h3>
@@ -220,8 +728,6 @@ deployments.
 Manages a Kusto (also known as Azure Data Explorer) Database
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -246,7 +752,7 @@ const database = new azure.kusto.Database("database", {
 ```
 
 <h4 class="pdoc-member-header" id="Database-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -260,7 +766,7 @@ Create a Database resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Database-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -271,14 +777,14 @@ Get an existing Database resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Database-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Database-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -289,7 +795,7 @@ Returns true if the given object is an instance of Database.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Database-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L67">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L65">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,7 +803,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the name of the Kusto Cluster this database will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-hotCachePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L71">property <b>hotCachePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L69">property <b>hotCachePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hotCachePeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -305,7 +811,7 @@ Specifies the name of the Kusto Cluster this database will be added to. Changing
 The time the data that should be kept in cache for fast queries as ISO 8601 timespan. Default is unlimited. For more information see: [ISO 8601 Timespan](https://en.wikipedia.org/wiki/ISO_8601#Durations)
 
 <h4 class="pdoc-member-header" id="Database-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -314,7 +820,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Database-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L75">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L73">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +828,7 @@ deployments and may be missing (undefined) during planning phases.
 The location where the Kusto Database should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -330,7 +836,7 @@ The location where the Kusto Database should be created. Changing this forces a 
 The name of the Kusto Database to create. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L83">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L81">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -338,7 +844,7 @@ The name of the Kusto Database to create. Changing this forces a new resource to
 Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L87">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L85">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -346,7 +852,7 @@ Specifies the Resource Group where the Kusto Database should exist. Changing thi
 The size of the database in bytes.
 
 <h4 class="pdoc-member-header" id="Database-softDeletePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L91">property <b>softDeletePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L89">property <b>softDeletePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>softDeletePeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -354,7 +860,7 @@ The size of the database in bytes.
 The time the data should be kept before it stops being accessible to queries as ISO 8601 timespan. Default is unlimited. For more information see: [ISO 8601 Timespan](https://en.wikipedia.org/wiki/ISO_8601#Durations)
 
 <h4 class="pdoc-member-header" id="Database-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -363,7 +869,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatabasePrincipal" data-link-title="DatabasePrincipal">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L46">
         Resource <strong>DatabasePrincipal</strong>
     </a>
 </h3>
@@ -372,9 +878,9 @@ deployments.
 
 Manages a Kusto (also known as Azure Data Explorer) Database Principal
 
+> **NOTE:** This resource is being **deprecated** due to API updates and should no longer be used.  Please use azure.kusto.DatabasePrincipalAssignment instead.
+
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -409,7 +915,7 @@ const principal = new azure.kusto.DatabasePrincipal("principal", {
 ```
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -423,7 +929,7 @@ Create a DatabasePrincipal resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -434,14 +940,14 @@ Get an existing DatabasePrincipal resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -452,7 +958,7 @@ Returns true if the given object is an instance of DatabasePrincipal.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L77">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L77">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -460,7 +966,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The app id, if not empty, of the principal.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L81">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L81">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -468,7 +974,7 @@ The app id, if not empty, of the principal.
 The Client ID that owns the specified `objectId`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L85">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L85">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -476,7 +982,7 @@ The Client ID that owns the specified `objectId`. Changing this forces a new res
 Specifies the name of the Kusto Cluster this database principal will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L89">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L89">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -484,7 +990,7 @@ Specifies the name of the Kusto Cluster this database principal will be added to
 Specified the name of the Kusto Database this principal will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L93">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L93">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -492,7 +998,7 @@ Specified the name of the Kusto Database this principal will be added to. Changi
 The email, if not empty, of the principal.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-fullyQualifiedName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L97">property <b>fullyQualifiedName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L97">property <b>fullyQualifiedName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fullyQualifiedName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -500,7 +1006,7 @@ The email, if not empty, of the principal.
 The fully qualified name of the principal.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -509,7 +1015,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L101">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -517,7 +1023,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Kusto Database Principal.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L105">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L105">property <b>objectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -525,7 +1031,7 @@ The name of the Kusto Database Principal.
 An Object ID of a User, Group, or App. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L109">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L109">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -533,7 +1039,7 @@ An Object ID of a User, Group, or App. Changing this forces a new resource to be
 Specifies the Resource Group where the Kusto Database Principal should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L113">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L113">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -541,7 +1047,7 @@ Specifies the Resource Group where the Kusto Database Principal should exist. Ch
 Specifies the permissions the Principal will have. Valid values include `Admin`, `Ingestor`, `Monitor`, `UnrestrictedViewers`, `User`, `Viewer`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L117">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L117">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -549,7 +1055,189 @@ Specifies the permissions the Principal will have. Valid values include `Admin`,
 Specifies the type of object the principal is. Valid values include `App`, `Group`, `User`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipal-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L46">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="DatabasePrincipalAssignment" data-link-title="DatabasePrincipalAssignment">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L44">
+        Resource <strong>DatabasePrincipalAssignment</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>DatabasePrincipalAssignment</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages a Kusto (also known as Azure Data Explorer) Database Principal Assignment.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const rg = new azure.core.ResourceGroup("rg", {location: "East US"});
+const exampleCluster = new azure.kusto.Cluster("exampleCluster", {
+    location: rg.location,
+    resourceGroupName: rg.name,
+    sku: {
+        name: "Standard_D13_v2",
+        capacity: 2,
+    },
+});
+const exampleDatabase = new azure.kusto.Database("exampleDatabase", {
+    resourceGroupName: rg.name,
+    location: rg.location,
+    clusterName: exampleCluster.name,
+    hotCachePeriod: "P7D",
+    softDeletePeriod: "P31D",
+});
+const exampleDatabasePrincipalAssignment = new azure.kusto.DatabasePrincipalAssignment("exampleDatabasePrincipalAssignment", {
+    resourceGroupName: rg.name,
+    clusterName: exampleCluster.name,
+    databaseName: exampleDatabase.name,
+    tenantId: current.then(current => current.tenantId),
+    principalId: current.then(current => current.clientId),
+    principalType: "App",
+    role: "Viewer",
+});
+```
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L108"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> DatabasePrincipalAssignment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DatabasePrincipalAssignmentArgs'>DatabasePrincipalAssignmentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a DatabasePrincipalAssignment resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L54">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DatabasePrincipalAssignmentState'>DatabasePrincipalAssignmentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DatabasePrincipalAssignment'>DatabasePrincipalAssignment</a></code></pre>
+
+
+Get an existing DatabasePrincipalAssignment resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L44">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L65">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is DatabasePrincipalAssignment</code></pre>
+
+
+Returns true if the given object is an instance of DatabasePrincipalAssignment.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-clusterName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L75">property <b>clusterName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the cluster in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-databaseName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L79">property <b>databaseName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the database in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L44">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L80">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-principalId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L84">property <b>principalId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The object id of the principal. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-principalName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L88">property <b>principalName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>principalName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the principal.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-principalType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L92">property <b>principalType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>principalType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The type of the principal. Valid values include `App`, `Group`, `User`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L96">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the resource group in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-role">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L100">property <b>role</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The database role assigned to the principal. Valid values include `Admin`, `Ingestor`, `Monitor`, `UnrestrictedViewers`, `User` and `Viewer`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L104">property <b>tenantId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The tenant id in which the principal resides. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-tenantName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L108">property <b>tenantName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>tenantName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the tenant.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignment-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -558,7 +1246,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventhubDataConnection" data-link-title="EventhubDataConnection">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L62">
         Resource <strong>EventhubDataConnection</strong>
     </a>
 </h3>
@@ -568,8 +1256,6 @@ deployments.
 Manages a Kusto (also known as Azure Data Explorer) EventHub Data Connection
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -622,7 +1308,7 @@ const eventhubConnection = new azure.kusto.EventhubDataConnection("eventhubConne
 ```
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L131"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L129"> <b>constructor</b></a>
 </h4>
 
 
@@ -636,7 +1322,7 @@ Create a EventhubDataConnection resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L74">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L72">method <b>get</b></a>
 </h4>
 
 
@@ -647,14 +1333,14 @@ Get an existing EventhubDataConnection resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L64">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L62">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L83">method <b>isInstance</b></a>
 </h4>
 
 
@@ -665,7 +1351,7 @@ Returns true if the given object is an instance of EventhubDataConnection.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L95">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L93">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -673,7 +1359,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-consumerGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L99">property <b>consumerGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L97">property <b>consumerGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>consumerGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +1367,7 @@ Specifies the name of the Kusto Cluster this data connection will be added to. C
 Specifies the EventHub consumer group this data connection will use for ingestion. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-dataFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L103">property <b>dataFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L101">property <b>dataFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -689,7 +1375,7 @@ Specifies the EventHub consumer group this data connection will use for ingestio
 Specifies the data format of the EventHub messages. Allowed values: `AVRO`, `CSV`, `JSON`, `MULTIJSON`, `PSV`, `RAW`, `SCSV`, `SINGLEJSON`, `SOHSV`, `TSV` and `TXT`
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L107">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L105">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -697,7 +1383,7 @@ Specifies the data format of the EventHub messages. Allowed values: `AVRO`, `CSV
 Specifies the name of the Kusto Database this data connection will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-eventhubId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L111">property <b>eventhubId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L109">property <b>eventhubId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventhubId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -705,7 +1391,7 @@ Specifies the name of the Kusto Database this data connection will be added to. 
 Specifies the resource id of the EventHub this data connection will use for ingestion. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -714,7 +1400,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L115">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L113">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -722,7 +1408,7 @@ deployments and may be missing (undefined) during planning phases.
 The location where the Kusto Database should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-mappingRuleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L119">property <b>mappingRuleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L117">property <b>mappingRuleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mappingRuleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -730,7 +1416,7 @@ The location where the Kusto Database should be created. Changing this forces a 
 Specifies the mapping rule used for the message ingestion. Mapping rule must exist before resource is created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L123">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L121">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -738,7 +1424,7 @@ Specifies the mapping rule used for the message ingestion. Mapping rule must exi
 The name of the Kusto EventHub Data Connection to create. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L127">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L125">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -746,7 +1432,7 @@ The name of the Kusto EventHub Data Connection to create. Changing this forces a
 Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L131">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L129">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tableName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -754,7 +1440,7 @@ Specifies the Resource Group where the Kusto Database should exist. Changing thi
 Specifies the target table name used for the message ingestion. Table must exist before resource is created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L64">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L62">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -765,7 +1451,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCluster" data-link-title="getCluster">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L24">
         Function <strong>getCluster</strong>
     </a>
 </h3>
@@ -777,8 +1463,6 @@ deployments.
 Use this data source to access information about an existing Kusto (also known as Azure Data Explorer) Cluster
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -792,8 +1476,148 @@ const example = pulumi.output(azure.kusto.getCluster({
 
 
 <h2 id="apis">Others</h2>
+<h3 class="pdoc-module-header" id="AttachedDatabaseConfigurationArgs" data-link-title="AttachedDatabaseConfigurationArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L204">
+        interface <strong>AttachedDatabaseConfigurationArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AttachedDatabaseConfigurationArgs</span></code></pre>
+
+The set of arguments for constructing a AttachedDatabaseConfiguration resource.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationArgs-clusterName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L208">property <b>clusterName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationArgs-clusterResourceId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L212">property <b>clusterResourceId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The resource id of the cluster where the databases you would like to attach reside.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationArgs-databaseName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L216">property <b>databaseName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationArgs-defaultPrincipalModificationKind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L220">property <b>defaultPrincipalModificationKind</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>defaultPrincipalModificationKind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The default principals modification kind. Valid values are: `None` (default), `Replace` and `Union`.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationArgs-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L224">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the location of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L228">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationArgs-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L232">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-module-header" id="AttachedDatabaseConfigurationState" data-link-title="AttachedDatabaseConfigurationState">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L166">
+        interface <strong>AttachedDatabaseConfigurationState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AttachedDatabaseConfigurationState</span></code></pre>
+
+Input properties used for looking up and filtering AttachedDatabaseConfiguration resources.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationState-attachedDatabaseNames">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L170">property <b>attachedDatabaseNames</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>attachedDatabaseNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+The list of databases from the `clusterResourceId` which are currently attached to the cluster.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationState-clusterName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L174">property <b>clusterName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationState-clusterResourceId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L178">property <b>clusterResourceId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The resource id of the cluster where the databases you would like to attach reside.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationState-databaseName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L182">property <b>databaseName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationState-defaultPrincipalModificationKind">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L186">property <b>defaultPrincipalModificationKind</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>defaultPrincipalModificationKind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The default principals modification kind. Valid values are: `None` (default), `Replace` and `Union`.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationState-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L190">property <b>location</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the location of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L194">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="AttachedDatabaseConfigurationState-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/attachedDatabaseConfiguration.ts#L198">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L262">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -803,23 +1627,47 @@ const example = pulumi.output(azure.kusto.getCluster({
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enableDiskEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L198">property <b>enableDiskEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L266">property <b>enableDiskEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDiskEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
 Specifies if the cluster's disks are encrypted.
 
+<h4 class="pdoc-member-header" id="ClusterArgs-enablePurge">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L270">property <b>enablePurge</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enablePurge?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Specifies if the purge operations are enabled.
+
 <h4 class="pdoc-member-header" id="ClusterArgs-enableStreamingIngest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L202">property <b>enableStreamingIngest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L274">property <b>enableStreamingIngest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableStreamingIngest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
 Specifies if the streaming ingest is enabled.
 
+<h4 class="pdoc-member-header" id="ClusterArgs-identity">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L278">property <b>identity</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterIdentity'>ClusterIdentity</a>&gt;;</code></pre>
+
+A identity block.
+
+<h4 class="pdoc-member-header" id="ClusterArgs-languageExtensions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L282">property <b>languageExtensions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>languageExtensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+An list of `languageExtensions` to enable. Valid values are: `PYTHON` and `R`.
+
 <h4 class="pdoc-member-header" id="ClusterArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L206">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L286">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -827,15 +1675,23 @@ Specifies if the streaming ingest is enabled.
 The location where the Kusto Cluster should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L210">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L290">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The name of the Kusto Cluster to create. Changing this forces a new resource to be created.
 
+<h4 class="pdoc-member-header" id="ClusterArgs-optimizedAutoScale">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L294">property <b>optimizedAutoScale</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>optimizedAutoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterOptimizedAutoScale'>ClusterOptimizedAutoScale</a>&gt;;</code></pre>
+
+An `optimizedAutoScale` block as defined below.
+
 <h4 class="pdoc-member-header" id="ClusterArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L214">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L298">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -843,7 +1699,7 @@ The name of the Kusto Cluster to create. Changing this forces a new resource to 
 Specifies the Resource Group where the Kusto Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L218">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L302">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterSku'>ClusterSku</a>&gt;;</code></pre>
@@ -851,15 +1707,265 @@ Specifies the Resource Group where the Kusto Cluster should exist. Changing this
 A `sku` block as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L222">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L306">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
+<h4 class="pdoc-member-header" id="ClusterArgs-trustedExternalTenants">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L310">property <b>trustedExternalTenants</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trustedExternalTenants?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+Specifies a list of tenant IDs that are trusted by the cluster.
+
+<h4 class="pdoc-member-header" id="ClusterArgs-virtualNetworkConfiguration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L314">property <b>virtualNetworkConfiguration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>virtualNetworkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterVirtualNetworkConfiguration'>ClusterVirtualNetworkConfiguration</a>&gt;;</code></pre>
+
+A `virtualNetworkConfiguration` block as defined below.
+
+<h4 class="pdoc-member-header" id="ClusterArgs-zones">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L318">property <b>zones</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>zones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+A list of Availability Zones in which the cluster instances should be created in. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-module-header" id="ClusterCustomerManagedKeyArgs" data-link-title="ClusterCustomerManagedKeyArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L126">
+        interface <strong>ClusterCustomerManagedKeyArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterCustomerManagedKeyArgs</span></code></pre>
+
+The set of arguments for constructing a ClusterCustomerManagedKey resource.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKeyArgs-clusterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L130">property <b>clusterId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Kusto Cluster. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKeyArgs-keyName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L134">property <b>keyName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>keyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of Key Vault Key.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKeyArgs-keyVaultId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L138">property <b>keyVaultId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Key Vault. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKeyArgs-keyVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L142">property <b>keyVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>keyVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The version of Key Vault Key.
+
+<h3 class="pdoc-module-header" id="ClusterCustomerManagedKeyState" data-link-title="ClusterCustomerManagedKeyState">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L104">
+        interface <strong>ClusterCustomerManagedKeyState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterCustomerManagedKeyState</span></code></pre>
+
+Input properties used for looking up and filtering ClusterCustomerManagedKey resources.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKeyState-clusterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L108">property <b>clusterId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Kusto Cluster. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKeyState-keyName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L112">property <b>keyName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of Key Vault Key.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKeyState-keyVaultId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L116">property <b>keyVaultId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>keyVaultId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Key Vault. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterCustomerManagedKeyState-keyVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterCustomerManagedKey.ts#L120">property <b>keyVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>keyVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The version of Key Vault Key.
+
+<h3 class="pdoc-module-header" id="ClusterPrincipalAssignmentArgs" data-link-title="ClusterPrincipalAssignmentArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L202">
+        interface <strong>ClusterPrincipalAssignmentArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterPrincipalAssignmentArgs</span></code></pre>
+
+The set of arguments for constructing a ClusterPrincipalAssignment resource.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentArgs-clusterName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L206">property <b>clusterName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the cluster in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L207">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentArgs-principalId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L211">property <b>principalId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The object id of the principal. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentArgs-principalType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L215">property <b>principalType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principalType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The type of the principal. Valid values include `App`, `Group`, `User`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentArgs-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L219">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the resource group in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentArgs-role">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L223">property <b>role</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The cluster role assigned to the principal. Valid values include `AllDatabasesAdmin` and `AllDatabasesViewer`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentArgs-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L227">property <b>tenantId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The tenant id in which the principal resides. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-module-header" id="ClusterPrincipalAssignmentState" data-link-title="ClusterPrincipalAssignmentState">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L163">
+        interface <strong>ClusterPrincipalAssignmentState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClusterPrincipalAssignmentState</span></code></pre>
+
+Input properties used for looking up and filtering ClusterPrincipalAssignment resources.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentState-clusterName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L167">property <b>clusterName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the cluster in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L168">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentState-principalId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L172">property <b>principalId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The object id of the principal. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentState-principalName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L176">property <b>principalName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the principal.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentState-principalType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L180">property <b>principalType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principalType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The type of the principal. Valid values include `App`, `Group`, `User`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentState-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L184">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the resource group in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentState-role">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L188">property <b>role</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The cluster role assigned to the principal. Valid values include `AllDatabasesAdmin` and `AllDatabasesViewer`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentState-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L192">property <b>tenantId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The tenant id in which the principal resides. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ClusterPrincipalAssignmentState-tenantName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/clusterPrincipalAssignment.ts#L196">property <b>tenantName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tenantName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the tenant.
+
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L192">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -869,7 +1975,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-dataIngestionUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L156">property <b>dataIngestionUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L196">property <b>dataIngestionUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataIngestionUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -877,23 +1983,47 @@ Input properties used for looking up and filtering Cluster resources.
 The Kusto Cluster URI to be used for data ingestion.
 
 <h4 class="pdoc-member-header" id="ClusterState-enableDiskEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L160">property <b>enableDiskEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L200">property <b>enableDiskEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDiskEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
 Specifies if the cluster's disks are encrypted.
 
+<h4 class="pdoc-member-header" id="ClusterState-enablePurge">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L204">property <b>enablePurge</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enablePurge?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Specifies if the purge operations are enabled.
+
 <h4 class="pdoc-member-header" id="ClusterState-enableStreamingIngest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L164">property <b>enableStreamingIngest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L208">property <b>enableStreamingIngest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableStreamingIngest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
 Specifies if the streaming ingest is enabled.
 
+<h4 class="pdoc-member-header" id="ClusterState-identity">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L212">property <b>identity</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterIdentity'>ClusterIdentity</a>&gt;;</code></pre>
+
+A identity block.
+
+<h4 class="pdoc-member-header" id="ClusterState-languageExtensions">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L216">property <b>languageExtensions</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>languageExtensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+An list of `languageExtensions` to enable. Valid values are: `PYTHON` and `R`.
+
 <h4 class="pdoc-member-header" id="ClusterState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L168">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L220">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -901,15 +2031,23 @@ Specifies if the streaming ingest is enabled.
 The location where the Kusto Cluster should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L224">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The name of the Kusto Cluster to create. Changing this forces a new resource to be created.
 
+<h4 class="pdoc-member-header" id="ClusterState-optimizedAutoScale">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L228">property <b>optimizedAutoScale</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>optimizedAutoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterOptimizedAutoScale'>ClusterOptimizedAutoScale</a>&gt;;</code></pre>
+
+An `optimizedAutoScale` block as defined below.
+
 <h4 class="pdoc-member-header" id="ClusterState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L176">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L232">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -917,7 +2055,7 @@ The name of the Kusto Cluster to create. Changing this forces a new resource to 
 Specifies the Resource Group where the Kusto Cluster should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ClusterState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L180">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L236">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterSku'>ClusterSku</a>&gt;;</code></pre>
@@ -925,23 +2063,47 @@ Specifies the Resource Group where the Kusto Cluster should exist. Changing this
 A `sku` block as defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L184">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L240">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
+<h4 class="pdoc-member-header" id="ClusterState-trustedExternalTenants">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L244">property <b>trustedExternalTenants</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trustedExternalTenants?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+Specifies a list of tenant IDs that are trusted by the cluster.
+
 <h4 class="pdoc-member-header" id="ClusterState-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/cluster.ts#L188">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L248">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The FQDN of the Azure Kusto Cluster.
 
+<h4 class="pdoc-member-header" id="ClusterState-virtualNetworkConfiguration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L252">property <b>virtualNetworkConfiguration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>virtualNetworkConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterVirtualNetworkConfiguration'>ClusterVirtualNetworkConfiguration</a>&gt;;</code></pre>
+
+A `virtualNetworkConfiguration` block as defined below.
+
+<h4 class="pdoc-member-header" id="ClusterState-zones">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/cluster.ts#L256">property <b>zones</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>zones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+A list of Availability Zones in which the cluster instances should be created in. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-module-header" id="DatabaseArgs" data-link-title="DatabaseArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L174">
         interface <strong>DatabaseArgs</strong>
     </a>
 </h3>
@@ -951,7 +2113,7 @@ The FQDN of the Azure Kusto Cluster.
 The set of arguments for constructing a Database resource.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L180">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L178">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -959,7 +2121,7 @@ The set of arguments for constructing a Database resource.
 Specifies the name of the Kusto Cluster this database will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-hotCachePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L184">property <b>hotCachePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L182">property <b>hotCachePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hotCachePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -967,7 +2129,7 @@ Specifies the name of the Kusto Cluster this database will be added to. Changing
 The time the data that should be kept in cache for fast queries as ISO 8601 timespan. Default is unlimited. For more information see: [ISO 8601 Timespan](https://en.wikipedia.org/wiki/ISO_8601#Durations)
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L188">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L186">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -975,7 +2137,7 @@ The time the data that should be kept in cache for fast queries as ISO 8601 time
 The location where the Kusto Database should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -983,7 +2145,7 @@ The location where the Kusto Database should be created. Changing this forces a 
 The name of the Kusto Database to create. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L196">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L194">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -991,7 +2153,7 @@ The name of the Kusto Database to create. Changing this forces a new resource to
 Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-softDeletePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L200">property <b>softDeletePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L198">property <b>softDeletePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>softDeletePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -999,7 +2161,7 @@ Specifies the Resource Group where the Kusto Database should exist. Changing thi
 The time the data should be kept before it stops being accessible to queries as ISO 8601 timespan. Default is unlimited. For more information see: [ISO 8601 Timespan](https://en.wikipedia.org/wiki/ISO_8601#Durations)
 
 <h3 class="pdoc-module-header" id="DatabasePrincipalArgs" data-link-title="DatabasePrincipalArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L241">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L241">
         interface <strong>DatabasePrincipalArgs</strong>
     </a>
 </h3>
@@ -1009,7 +2171,7 @@ The time the data should be kept before it stops being accessible to queries as 
 The set of arguments for constructing a DatabasePrincipal resource.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L245">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L245">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1017,7 +2179,7 @@ The set of arguments for constructing a DatabasePrincipal resource.
 The Client ID that owns the specified `objectId`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalArgs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L249">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L249">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1025,7 +2187,7 @@ The Client ID that owns the specified `objectId`. Changing this forces a new res
 Specifies the name of the Kusto Cluster this database principal will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalArgs-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L253">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L253">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1033,7 +2195,7 @@ Specifies the name of the Kusto Cluster this database principal will be added to
 Specified the name of the Kusto Database this principal will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalArgs-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L257">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L257">property <b>objectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1041,7 +2203,7 @@ Specified the name of the Kusto Database this principal will be added to. Changi
 An Object ID of a User, Group, or App. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L261">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L261">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1049,7 +2211,7 @@ An Object ID of a User, Group, or App. Changing this forces a new resource to be
 Specifies the Resource Group where the Kusto Database Principal should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L265">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L265">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1057,15 +2219,173 @@ Specifies the Resource Group where the Kusto Database Principal should exist. Ch
 Specifies the permissions the Principal will have. Valid values include `Admin`, `Ingestor`, `Monitor`, `UnrestrictedViewers`, `User`, `Viewer`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L269">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L269">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Specifies the type of object the principal is. Valid values include `App`, `Group`, `User`. Changing this forces a new resource to be created.
 
+<h3 class="pdoc-module-header" id="DatabasePrincipalAssignmentArgs" data-link-title="DatabasePrincipalAssignmentArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L223">
+        interface <strong>DatabasePrincipalAssignmentArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DatabasePrincipalAssignmentArgs</span></code></pre>
+
+The set of arguments for constructing a DatabasePrincipalAssignment resource.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentArgs-clusterName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L227">property <b>clusterName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the cluster in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentArgs-databaseName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L231">property <b>databaseName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the database in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L232">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentArgs-principalId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L236">property <b>principalId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The object id of the principal. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentArgs-principalType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L240">property <b>principalType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principalType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The type of the principal. Valid values include `App`, `Group`, `User`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentArgs-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L244">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the resource group in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentArgs-role">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L248">property <b>role</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The database role assigned to the principal. Valid values include `Admin`, `Ingestor`, `Monitor`, `UnrestrictedViewers`, `User` and `Viewer`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentArgs-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L252">property <b>tenantId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The tenant id in which the principal resides. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-module-header" id="DatabasePrincipalAssignmentState" data-link-title="DatabasePrincipalAssignmentState">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L180">
+        interface <strong>DatabasePrincipalAssignmentState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DatabasePrincipalAssignmentState</span></code></pre>
+
+Input properties used for looking up and filtering DatabasePrincipalAssignment resources.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentState-clusterName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L184">property <b>clusterName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the cluster in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentState-databaseName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L188">property <b>databaseName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the database in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L189">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentState-principalId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L193">property <b>principalId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The object id of the principal. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentState-principalName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L197">property <b>principalName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the principal.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentState-principalType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L201">property <b>principalType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>principalType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The type of the principal. Valid values include `App`, `Group`, `User`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentState-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L205">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the resource group in which to create the resource. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentState-role">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L209">property <b>role</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The database role assigned to the principal. Valid values include `Admin`, `Ingestor`, `Monitor`, `UnrestrictedViewers`, `User` and `Viewer`. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentState-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L213">property <b>tenantId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The tenant id in which the principal resides. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="DatabasePrincipalAssignmentState-tenantName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipalAssignment.ts#L217">property <b>tenantName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tenantName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the tenant.
+
 <h3 class="pdoc-module-header" id="DatabasePrincipalState" data-link-title="DatabasePrincipalState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L191">
         interface <strong>DatabasePrincipalState</strong>
     </a>
 </h3>
@@ -1075,7 +2395,7 @@ Specifies the type of object the principal is. Valid values include `App`, `Grou
 Input properties used for looking up and filtering DatabasePrincipal resources.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L195">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L195">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1083,7 +2403,7 @@ Input properties used for looking up and filtering DatabasePrincipal resources.
 The app id, if not empty, of the principal.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L199">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L199">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1091,7 +2411,7 @@ The app id, if not empty, of the principal.
 The Client ID that owns the specified `objectId`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalState-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L203">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L203">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1099,7 +2419,7 @@ The Client ID that owns the specified `objectId`. Changing this forces a new res
 Specifies the name of the Kusto Cluster this database principal will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalState-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L207">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L207">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1107,7 +2427,7 @@ Specifies the name of the Kusto Cluster this database principal will be added to
 Specified the name of the Kusto Database this principal will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L211">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L211">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1115,7 +2435,7 @@ Specified the name of the Kusto Database this principal will be added to. Changi
 The email, if not empty, of the principal.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalState-fullyQualifiedName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L215">property <b>fullyQualifiedName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L215">property <b>fullyQualifiedName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullyQualifiedName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1123,7 +2443,7 @@ The email, if not empty, of the principal.
 The fully qualified name of the principal.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L219">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L219">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1131,7 +2451,7 @@ The fully qualified name of the principal.
 The name of the Kusto Database Principal.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalState-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L223">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L223">property <b>objectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1139,7 +2459,7 @@ The name of the Kusto Database Principal.
 An Object ID of a User, Group, or App. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L227">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L227">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1147,7 +2467,7 @@ An Object ID of a User, Group, or App. Changing this forces a new resource to be
 Specifies the Resource Group where the Kusto Database Principal should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L231">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L231">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1155,7 +2475,7 @@ Specifies the Resource Group where the Kusto Database Principal should exist. Ch
 Specifies the permissions the Principal will have. Valid values include `Admin`, `Ingestor`, `Monitor`, `UnrestrictedViewers`, `User`, `Viewer`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabasePrincipalState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/databasePrincipal.ts#L235">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/databasePrincipal.ts#L235">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1163,7 +2483,7 @@ Specifies the permissions the Principal will have. Valid values include `Admin`,
 Specifies the type of object the principal is. Valid values include `App`, `Group`, `User`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="DatabaseState" data-link-title="DatabaseState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L140">
         interface <strong>DatabaseState</strong>
     </a>
 </h3>
@@ -1173,7 +2493,7 @@ Specifies the type of object the principal is. Valid values include `App`, `Grou
 Input properties used for looking up and filtering Database resources.
 
 <h4 class="pdoc-member-header" id="DatabaseState-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L146">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L144">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1181,7 +2501,7 @@ Input properties used for looking up and filtering Database resources.
 Specifies the name of the Kusto Cluster this database will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-hotCachePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L150">property <b>hotCachePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L148">property <b>hotCachePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hotCachePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1189,7 +2509,7 @@ Specifies the name of the Kusto Cluster this database will be added to. Changing
 The time the data that should be kept in cache for fast queries as ISO 8601 timespan. Default is unlimited. For more information see: [ISO 8601 Timespan](https://en.wikipedia.org/wiki/ISO_8601#Durations)
 
 <h4 class="pdoc-member-header" id="DatabaseState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L154">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L152">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1197,7 +2517,7 @@ The time the data that should be kept in cache for fast queries as ISO 8601 time
 The location where the Kusto Database should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L158">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L156">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1205,7 +2525,7 @@ The location where the Kusto Database should be created. Changing this forces a 
 The name of the Kusto Database to create. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L162">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L160">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1213,7 +2533,7 @@ The name of the Kusto Database to create. Changing this forces a new resource to
 Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L166">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L164">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1221,7 +2541,7 @@ Specifies the Resource Group where the Kusto Database should exist. Changing thi
 The size of the database in bytes.
 
 <h4 class="pdoc-member-header" id="DatabaseState-softDeletePeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/database.ts#L170">property <b>softDeletePeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/database.ts#L168">property <b>softDeletePeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>softDeletePeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1229,7 +2549,7 @@ The size of the database in bytes.
 The time the data should be kept before it stops being accessible to queries as ISO 8601 timespan. Default is unlimited. For more information see: [ISO 8601 Timespan](https://en.wikipedia.org/wiki/ISO_8601#Durations)
 
 <h3 class="pdoc-module-header" id="EventhubDataConnectionArgs" data-link-title="EventhubDataConnectionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L241">
         interface <strong>EventhubDataConnectionArgs</strong>
     </a>
 </h3>
@@ -1239,7 +2559,7 @@ The time the data should be kept before it stops being accessible to queries as 
 The set of arguments for constructing a EventhubDataConnection resource.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionArgs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L247">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L245">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1247,7 +2567,7 @@ The set of arguments for constructing a EventhubDataConnection resource.
 Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionArgs-consumerGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L251">property <b>consumerGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L249">property <b>consumerGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1255,7 +2575,7 @@ Specifies the name of the Kusto Cluster this data connection will be added to. C
 Specifies the EventHub consumer group this data connection will use for ingestion. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionArgs-dataFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L255">property <b>dataFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L253">property <b>dataFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1263,7 +2583,7 @@ Specifies the EventHub consumer group this data connection will use for ingestio
 Specifies the data format of the EventHub messages. Allowed values: `AVRO`, `CSV`, `JSON`, `MULTIJSON`, `PSV`, `RAW`, `SCSV`, `SINGLEJSON`, `SOHSV`, `TSV` and `TXT`
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionArgs-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L259">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L257">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1271,7 +2591,7 @@ Specifies the data format of the EventHub messages. Allowed values: `AVRO`, `CSV
 Specifies the name of the Kusto Database this data connection will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionArgs-eventhubId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L263">property <b>eventhubId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L261">property <b>eventhubId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1279,7 +2599,7 @@ Specifies the name of the Kusto Database this data connection will be added to. 
 Specifies the resource id of the EventHub this data connection will use for ingestion. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L267">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L265">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1287,7 +2607,7 @@ Specifies the resource id of the EventHub this data connection will use for inge
 The location where the Kusto Database should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionArgs-mappingRuleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L271">property <b>mappingRuleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L269">property <b>mappingRuleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mappingRuleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1295,7 +2615,7 @@ The location where the Kusto Database should be created. Changing this forces a 
 Specifies the mapping rule used for the message ingestion. Mapping rule must exist before resource is created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L275">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L273">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1303,7 +2623,7 @@ Specifies the mapping rule used for the message ingestion. Mapping rule must exi
 The name of the Kusto EventHub Data Connection to create. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L279">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L277">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1311,7 +2631,7 @@ The name of the Kusto EventHub Data Connection to create. Changing this forces a
 Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionArgs-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L283">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L281">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1319,7 +2639,7 @@ Specifies the Resource Group where the Kusto Database should exist. Changing thi
 Specifies the target table name used for the message ingestion. Table must exist before resource is created.
 
 <h3 class="pdoc-module-header" id="EventhubDataConnectionState" data-link-title="EventhubDataConnectionState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L197">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L195">
         interface <strong>EventhubDataConnectionState</strong>
     </a>
 </h3>
@@ -1329,7 +2649,7 @@ Specifies the target table name used for the message ingestion. Table must exist
 Input properties used for looking up and filtering EventhubDataConnection resources.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionState-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L201">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L199">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +2657,7 @@ Input properties used for looking up and filtering EventhubDataConnection resour
 Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionState-consumerGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L205">property <b>consumerGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L203">property <b>consumerGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consumerGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1345,7 +2665,7 @@ Specifies the name of the Kusto Cluster this data connection will be added to. C
 Specifies the EventHub consumer group this data connection will use for ingestion. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionState-dataFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L209">property <b>dataFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L207">property <b>dataFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1353,7 +2673,7 @@ Specifies the EventHub consumer group this data connection will use for ingestio
 Specifies the data format of the EventHub messages. Allowed values: `AVRO`, `CSV`, `JSON`, `MULTIJSON`, `PSV`, `RAW`, `SCSV`, `SINGLEJSON`, `SOHSV`, `TSV` and `TXT`
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionState-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L213">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L211">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1361,7 +2681,7 @@ Specifies the data format of the EventHub messages. Allowed values: `AVRO`, `CSV
 Specifies the name of the Kusto Database this data connection will be added to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionState-eventhubId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L217">property <b>eventhubId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L215">property <b>eventhubId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1369,7 +2689,7 @@ Specifies the name of the Kusto Database this data connection will be added to. 
 Specifies the resource id of the EventHub this data connection will use for ingestion. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L221">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L219">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1377,7 +2697,7 @@ Specifies the resource id of the EventHub this data connection will use for inge
 The location where the Kusto Database should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionState-mappingRuleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L225">property <b>mappingRuleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L223">property <b>mappingRuleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mappingRuleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1385,7 +2705,7 @@ The location where the Kusto Database should be created. Changing this forces a 
 Specifies the mapping rule used for the message ingestion. Mapping rule must exist before resource is created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L229">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L227">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1393,7 +2713,7 @@ Specifies the mapping rule used for the message ingestion. Mapping rule must exi
 The name of the Kusto EventHub Data Connection to create. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L233">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L231">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1401,7 +2721,7 @@ The name of the Kusto EventHub Data Connection to create. Changing this forces a
 Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="EventhubDataConnectionState-tableName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/eventhubDataConnection.ts#L237">property <b>tableName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/eventhubDataConnection.ts#L235">property <b>tableName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1409,7 +2729,7 @@ Specifies the Resource Group where the Kusto Database should exist. Changing thi
 Specifies the target table name used for the message ingestion. Table must exist before resource is created.
 
 <h3 class="pdoc-module-header" id="GetClusterArgs" data-link-title="GetClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L41">
         interface <strong>GetClusterArgs</strong>
     </a>
 </h3>
@@ -1419,7 +2739,7 @@ Specifies the target table name used for the message ingestion. Table must exist
 A collection of arguments for invoking getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1427,7 +2747,7 @@ A collection of arguments for invoking getCluster.
 Specifies the name of the Kusto Cluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L51">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L49">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1435,7 +2755,7 @@ Specifies the name of the Kusto Cluster.
 The name of the Resource Group where the Kusto Cluster exists.
 
 <h3 class="pdoc-module-header" id="GetClusterResult" data-link-title="GetClusterResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L55">
         interface <strong>GetClusterResult</strong>
     </a>
 </h3>
@@ -1445,7 +2765,7 @@ The name of the Resource Group where the Kusto Cluster exists.
 A collection of values returned by getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-dataIngestionUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L61">property <b>dataIngestionUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L59">property <b>dataIngestionUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataIngestionUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1453,7 +2773,7 @@ A collection of values returned by getCluster.
 The Kusto Cluster URI to be used for data ingestion.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1461,27 +2781,27 @@ The Kusto Cluster URI to be used for data ingestion.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L66">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L64">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L68">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L66">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L69">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L67">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-uri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/kusto/getCluster.ts#L73">property <b>uri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/kusto/getCluster.ts#L71">property <b>uri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

@@ -389,7 +389,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (`PT10M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -594,7 +594,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (`PT10M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -799,7 +799,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (`PT10M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1004,7 +1004,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (`PT10M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1392,7 +1392,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (`PT10M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1597,7 +1597,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (`PT10M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1802,7 +1802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (`PT10M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2007,7 +2007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minute (`PT10M`).
+    <dd>{{% md %}}The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (`PT10M`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -13,6 +13,7 @@ Explore the resources and functions of the redis module in the Azure package.
 <ul class="api">
     <li><a href="cache" title="Cache"><span class="symbol resource"></span>Cache</a></li>
     <li><a href="firewallrule" title="FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
+    <li><a href="linkedserver" title="LinkedServer"><span class="symbol resource"></span>LinkedServer</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -29,7 +30,7 @@ Explore the resources and functions of the redis module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.15.0</dd>
+	<dd>3.16.0</dd>
 </dl>
 
 

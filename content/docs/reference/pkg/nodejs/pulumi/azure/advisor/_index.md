@@ -3,7 +3,7 @@ title: "Module advisor"
 title_tag: "Module advisor | Package @pulumi/azure | Node.js SDK"
 linktitle: "advisor"
 meta_desc: "Explore members of the advisor module in the @pulumi/azure package."
-git_sha: "38f39deade34d0e187626f1cb68bf0835bc2c2d0"
+git_sha: "1ab68fc895391745ca99e4edaaef6ceeea643c4a"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getRecommendations" data-link-title="getRecommendations">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/advisor/getRecommendations.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/advisor/getRecommendations.ts#L28">
         Function <strong>getRecommendations</strong>
     </a>
 </h3>
@@ -43,8 +43,6 @@ block_external_search_index: true
 Use this data source to access information about an existing Advisor Recommendations.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -63,7 +61,7 @@ export const recommendations = example.then(example => example.recommendations);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetRecommendationsArgs" data-link-title="GetRecommendationsArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/advisor/getRecommendations.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/advisor/getRecommendations.ts#L46">
         interface <strong>GetRecommendationsArgs</strong>
     </a>
 </h3>
@@ -73,7 +71,7 @@ export const recommendations = example.then(example => example.recommendations);
 A collection of arguments for invoking getRecommendations.
 
 <h4 class="pdoc-member-header" id="GetRecommendationsArgs-filterByCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/advisor/getRecommendations.ts#L52">property <b>filterByCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/advisor/getRecommendations.ts#L50">property <b>filterByCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterByCategories?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -81,7 +79,7 @@ A collection of arguments for invoking getRecommendations.
 Specifies a list of categories in which the Advisor Recommendations will be listed. Possible values are `HighAvailability`, `Security`, `Performance`, `Cost` and `OperationalExcellence`.
 
 <h4 class="pdoc-member-header" id="GetRecommendationsArgs-filterByResourceGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/advisor/getRecommendations.ts#L56">property <b>filterByResourceGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/advisor/getRecommendations.ts#L54">property <b>filterByResourceGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterByResourceGroups?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -89,7 +87,7 @@ Specifies a list of categories in which the Advisor Recommendations will be list
 Specifies a list of resource groups about which the Advisor Recommendations will be listed.
 
 <h3 class="pdoc-module-header" id="GetRecommendationsResult" data-link-title="GetRecommendationsResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/advisor/getRecommendations.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/advisor/getRecommendations.ts#L60">
         interface <strong>GetRecommendationsResult</strong>
     </a>
 </h3>
@@ -99,17 +97,17 @@ Specifies a list of resource groups about which the Advisor Recommendations will
 A collection of values returned by getRecommendations.
 
 <h4 class="pdoc-member-header" id="GetRecommendationsResult-filterByCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/advisor/getRecommendations.ts#L63">property <b>filterByCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/advisor/getRecommendations.ts#L61">property <b>filterByCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterByCategories?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRecommendationsResult-filterByResourceGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/advisor/getRecommendations.ts#L64">property <b>filterByResourceGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/advisor/getRecommendations.ts#L62">property <b>filterByResourceGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterByResourceGroups?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRecommendationsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/advisor/getRecommendations.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/advisor/getRecommendations.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -117,7 +115,7 @@ A collection of values returned by getRecommendations.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRecommendationsResult-recommendations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/advisor/getRecommendations.ts#L72">property <b>recommendations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/advisor/getRecommendations.ts#L70">property <b>recommendations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recommendations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetRecommendationsRecommendation'>GetRecommendationsRecommendation</a>[];</code></pre>
