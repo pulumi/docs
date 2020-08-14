@@ -78,7 +78,7 @@ deny[msg] {
 
 The rule above uses the standard OPA Rego language to express a rule that enforces that any `Deployment` resource in Kubernetes must have a set of defined labels applied to it. All OPA rules used in Pulumi will be applied to an `input` object, which is a JSON representation of the resource inputs for the Pulumi resource being validated. In particular, for a Kubernetes `Deployment` resource, this will have top level `kind`, `apiVersion`, `metadata`, and `spec` fields which can be used to query aspects of the resource for policy enforcement.
 
-To test out our rule, we can create a new Pulumi Kubernetes project and deploy it with the policy enforced.
+To test our rule, we can create a new Pulumi Kubernetes project and deploy it with the policy enforced.
 
 First we create a new project `kubeapp` in a sibling folder:
 
