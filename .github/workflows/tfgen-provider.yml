@@ -53,6 +53,9 @@ jobs:
         uses: actions/setup-dotnet@v1
       - run: make ensure ensure_tools
         working-directory: docs
+      - name: run yarn install in nodejs sdk
+        run: yarn install && yarn run tsc
+        working-directory: ${{ github.event.client_payload.project }}/sdk/nodejs
       - name: run typedoc
         run: PKGS=${{ github.event.client_payload.project-shortname }} NOBUILD=true ./scripts/run_typedoc.sh
         working-directory: docs
