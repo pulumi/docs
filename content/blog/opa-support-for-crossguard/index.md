@@ -107,7 +107,7 @@ const deployment = new k8s.apps.v1.Deployment("nginx", {
 export const name = deployment.metadata.name;
 ```
 
-We can deploy this to any Kubernetes cluster (just configure your `kubectl` context locally to point at the desired cluster) with our policy applied with:
+We can deploy this to any Kubernetes cluster (configure your `kubectl` context locally to point at the desired cluster) with our policy applied with:
 
 ```
 $ pulumi up --policy-pack ../policy-kubernetes
