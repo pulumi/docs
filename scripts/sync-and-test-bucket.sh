@@ -37,7 +37,7 @@ destination_bucket_uri="s3://${destination_bucket}"
 # Translate Hugo redirects into a file we'll use for making 301 redirects later. Note that
 # we do this before syncing the site, as having the redirects file available for reference
 # can be helpful for debugging purposes.
-node scripts/translate-redirects.js "$build_dir" "$(pulumi -C infrastructure config get redirectDomain || echo '')"
+node scripts/translate-redirects.js "$build_dir" "$(pulumi -C infrastructure config get redirectDomain 2>/dev/null || echo '')"
 
 # Read the region from the stack's config -- we use it below.
 aws_region="$(pulumi -C infrastructure config get 'aws:region')"

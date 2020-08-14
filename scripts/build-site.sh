@@ -8,12 +8,13 @@ export NODE_ENV="production"
 
 # Paths to the CSS and JS bundles we'll generate below. Note that environment variables
 # are read by some templates during the Hugo build process.
-export CSS_BUNDLE="public/css/styles.$(build_identifier).css"
-export JS_BUNDLE="public/js/bundle.min.$(build_identifier).js"
+export ASSET_BUNDLE_ID="$(build_identifier)"
+export CSS_BUNDLE="public/css/styles.${ASSET_BUNDLE_ID}.css"
+export JS_BUNDLE="public/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 
 # Relative paths to those same files, read by Hugo templates.
-export REL_CSS_BUNDLE="/css/styles.$(build_identifier).css"
-export REL_JS_BUNDLE="/js/bundle.min.$(build_identifier).js"
+export REL_CSS_BUNDLE="/css/styles.${ASSET_BUNDLE_ID}.css"
+export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt

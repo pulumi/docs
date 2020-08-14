@@ -2,6 +2,8 @@
     "compilerOptions": {
         "allowJs": true,
         "removeComments": true,
+        "sourceMap": true,
+        "sourceRoot": "/"
     },
     "files": [
         "assets/js/main.js",
