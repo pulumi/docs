@@ -162,7 +162,7 @@ const exampleServer = new azure.mysql.Server("exampleServer", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mysql/#pulumi_azure.mysql.Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>administrator_login=None<span class="p">, </span>administrator_login_password=None<span class="p">, </span>auto_grow_enabled=None<span class="p">, </span>backup_retention_days=None<span class="p">, </span>create_mode=None<span class="p">, </span>creation_source_server_id=None<span class="p">, </span>geo_redundant_backup_enabled=None<span class="p">, </span>infrastructure_encryption_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_network_access_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>sku_name=None<span class="p">, </span>ssl_enforcement=None<span class="p">, </span>ssl_enforcement_enabled=None<span class="p">, </span>ssl_minimal_tls_version_enforced=None<span class="p">, </span>storage_mb=None<span class="p">, </span>storage_profile=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mysql/#pulumi_azure.mysql.Server">Server</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>administrator_login=None<span class="p">, </span>administrator_login_password=None<span class="p">, </span>auto_grow_enabled=None<span class="p">, </span>backup_retention_days=None<span class="p">, </span>create_mode=None<span class="p">, </span>creation_source_server_id=None<span class="p">, </span>geo_redundant_backup_enabled=None<span class="p">, </span>identity=None<span class="p">, </span>infrastructure_encryption_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_network_access_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>sku_name=None<span class="p">, </span>ssl_enforcement=None<span class="p">, </span>ssl_enforcement_enabled=None<span class="p">, </span>ssl_minimal_tls_version_enforced=None<span class="p">, </span>storage_mb=None<span class="p">, </span>storage_profile=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -446,6 +446,17 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="infrastructureencryptionenabled_csharp">
 <a href="#infrastructureencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption<wbr>Enabled</a>
 </span> 
@@ -689,6 +700,17 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Turn Geo-redundant server backups on/off. This allows you to choose between locally redundant or geo-redundant backup storage in the General Purpose and Memory Optimized tiers. When the backups are stored in geo-redundant backup storage, they are not only stored within the region in which your server is hosted, but are also replicated to a paired data center. This provides better protection and ability to restore your server in a different region in the event of a disaster. This is not supported for the Basic tier.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -940,6 +962,17 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="infrastructureencryptionenabled_nodejs">
 <a href="#infrastructureencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption<wbr>Enabled</a>
 </span> 
@@ -1183,6 +1216,17 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Turn Geo-redundant server backups on/off. This allows you to choose between locally redundant or geo-redundant backup storage in the General Purpose and Memory Optimized tiers. When the backups are stored in geo-redundant backup storage, they are not only stored within the region in which your server is hosted, but are also replicated to a paired data center. This provides better protection and ability to restore your server in a different region in the event of a disaster. This is not supported for the Basic tier.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serveridentity">Dict[Server<wbr>Identity]</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1457,7 +1501,7 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>administrator_login=None<span class="p">, </span>administrator_login_password=None<span class="p">, </span>auto_grow_enabled=None<span class="p">, </span>backup_retention_days=None<span class="p">, </span>create_mode=None<span class="p">, </span>creation_source_server_id=None<span class="p">, </span>fqdn=None<span class="p">, </span>geo_redundant_backup_enabled=None<span class="p">, </span>infrastructure_encryption_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_network_access_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>sku_name=None<span class="p">, </span>ssl_enforcement=None<span class="p">, </span>ssl_enforcement_enabled=None<span class="p">, </span>ssl_minimal_tls_version_enforced=None<span class="p">, </span>storage_mb=None<span class="p">, </span>storage_profile=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>version=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>administrator_login=None<span class="p">, </span>administrator_login_password=None<span class="p">, </span>auto_grow_enabled=None<span class="p">, </span>backup_retention_days=None<span class="p">, </span>create_mode=None<span class="p">, </span>creation_source_server_id=None<span class="p">, </span>fqdn=None<span class="p">, </span>geo_redundant_backup_enabled=None<span class="p">, </span>identity=None<span class="p">, </span>infrastructure_encryption_enabled=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>public_network_access_enabled=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>restore_point_in_time=None<span class="p">, </span>sku_name=None<span class="p">, </span>ssl_enforcement=None<span class="p">, </span>ssl_enforcement_enabled=None<span class="p">, </span>ssl_minimal_tls_version_enforced=None<span class="p">, </span>storage_mb=None<span class="p">, </span>storage_profile=None<span class="p">, </span>tags=None<span class="p">, </span>threat_detection_policy=None<span class="p">, </span>version=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1657,6 +1701,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Turn Geo-redundant server backups on/off. This allows you to choose between locally redundant or geo-redundant backup storage in the General Purpose and Memory Optimized tiers. When the backups are stored in geo-redundant backup storage, they are not only stored within the region in which your server is hosted, but are also replicated to a paired data center. This provides better protection and ability to restore your server in a different region in the event of a disaster. This is not supported for the Basic tier.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1919,6 +1974,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_infrastructureencryptionenabled_go">
 <a href="#state_infrastructureencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption<wbr>Enabled</a>
 </span> 
@@ -2173,6 +2239,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Turn Geo-redundant server backups on/off. This allows you to choose between locally redundant or geo-redundant backup storage in the General Purpose and Memory Optimized tiers. When the backups are stored in geo-redundant backup storage, they are not only stored within the region in which your server is hosted, but are also replicated to a paired data center. This provides better protection and ability to restore your server in a different region in the event of a disaster. This is not supported for the Basic tier.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2435,6 +2512,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serveridentity">Dict[Server<wbr>Identity]</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_infrastructure_encryption_enabled_python">
 <a href="#state_infrastructure_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption_<wbr>enabled</a>
 </span> 
@@ -2609,6 +2697,184 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="serveridentity">Server<wbr>Identity</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerIdentity">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mysql?tab=doc#ServerIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mysql?tab=doc#ServerIdentityOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MySql.Inputs.ServerIdentityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MySql.Outputs.ServerIdentity.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Type of Identity which should be used for this MySQL Server. At this time the only possible value is `SystemAssigned`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the Service Principal assigned to this MySQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Tenant the Service Principal is assigned in.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Type of Identity which should be used for this MySQL Server. At this time the only possible value is `SystemAssigned`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the Service Principal assigned to this MySQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Tenant the Service Principal is assigned in.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Type of Identity which should be used for this MySQL Server. At this time the only possible value is `SystemAssigned`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the Service Principal assigned to this MySQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Tenant the Service Principal is assigned in.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Type of Identity which should be used for this MySQL Server. At this time the only possible value is `SystemAssigned`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Client ID of the Service Principal assigned to this MySQL Server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Tenant the Service Principal is assigned in.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="serverstorageprofile">Server<wbr>Storage<wbr>Profile</h4>

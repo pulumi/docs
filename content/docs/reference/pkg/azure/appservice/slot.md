@@ -6585,7 +6585,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6595,7 +6596,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Address used for this IP Restriction.
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6606,7 +6607,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6617,7 +6618,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6627,7 +6639,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional.The Virtual Network Subnet ID used for this IP Restriction.
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
 {{% /md %}}</dd>
 
 </dl>
@@ -6645,7 +6657,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6655,7 +6668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Address used for this IP Restriction.
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6666,7 +6679,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6677,7 +6690,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6687,7 +6711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional.The Virtual Network Subnet ID used for this IP Restriction.
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
 {{% /md %}}</dd>
 
 </dl>
@@ -6705,7 +6729,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6715,7 +6740,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Address used for this IP Restriction.
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6726,7 +6751,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6737,7 +6762,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6747,7 +6783,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional.The Virtual Network Subnet ID used for this IP Restriction.
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
 {{% /md %}}</dd>
 
 </dl>
@@ -6765,7 +6801,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6775,7 +6812,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP Address used for this IP Restriction.
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6786,7 +6823,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the App Service Slot component. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6797,7 +6834,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6807,7 +6855,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Optional.The Virtual Network Subnet ID used for this IP Restriction.
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
 {{% /md %}}</dd>
 
 </dl>
@@ -6843,7 +6891,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6853,7 +6902,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Address used for this IP Restriction.
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6875,7 +6924,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6885,7 +6945,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional.The Virtual Network Subnet ID used for this IP Restriction.
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
 {{% /md %}}</dd>
 
 </dl>
@@ -6903,7 +6963,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6913,7 +6974,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Address used for this IP Restriction.
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6935,7 +6996,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6945,7 +7017,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional.The Virtual Network Subnet ID used for this IP Restriction.
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
 {{% /md %}}</dd>
 
 </dl>
@@ -6963,7 +7035,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6973,7 +7046,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IP Address used for this IP Restriction.
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6995,7 +7068,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7005,7 +7089,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional.The Virtual Network Subnet ID used for this IP Restriction.
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
 {{% /md %}}</dd>
 
 </dl>
@@ -7023,7 +7107,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Does this restriction `Allow` or `Deny` access for this IP range. Defaults to `Allow`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7033,7 +7118,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IP Address used for this IP Restriction.
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7055,7 +7140,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7065,7 +7161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Optional.The Virtual Network Subnet ID used for this IP Restriction.
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
 {{% /md %}}</dd>
 
 </dl>

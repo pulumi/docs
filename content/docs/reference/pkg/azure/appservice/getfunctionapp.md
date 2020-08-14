@@ -382,7 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Connection String.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -430,6 +430,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="siteconfigs_csharp">
+<a href="#siteconfigs_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfig">List&lt;Get<wbr>Function<wbr>App<wbr>Site<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="sitecredentials_csharp">
 <a href="#sitecredentials_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Credentials</a>
 </span> 
@@ -437,6 +447,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionappsitecredential">List&lt;Get<wbr>Function<wbr>App<wbr>Site<wbr>Credential&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sourcecontrols_csharp">
+<a href="#sourcecontrols_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Controls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsourcecontrol">List&lt;Get<wbr>Function<wbr>App<wbr>Source<wbr>Control&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `source_control` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -540,7 +561,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Connection String.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -588,6 +609,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="siteconfigs_go">
+<a href="#siteconfigs_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfig">[]Get<wbr>Function<wbr>App<wbr>Site<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="sitecredentials_go">
 <a href="#sitecredentials_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Credentials</a>
 </span> 
@@ -595,6 +626,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionappsitecredential">[]Get<wbr>Function<wbr>App<wbr>Site<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sourcecontrols_go">
+<a href="#sourcecontrols_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Controls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsourcecontrol">[]Get<wbr>Function<wbr>App<wbr>Source<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}A `source_control` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -698,7 +740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Connection String.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -746,6 +788,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="siteconfigs_nodejs">
+<a href="#siteconfigs_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfig">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="sitecredentials_nodejs">
 <a href="#sitecredentials_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Credentials</a>
 </span> 
@@ -753,6 +805,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionappsitecredential">Get<wbr>Function<wbr>App<wbr>Site<wbr>Credential[]</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sourcecontrols_nodejs">
+<a href="#sourcecontrols_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Controls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsourcecontrol">Get<wbr>Function<wbr>App<wbr>Source<wbr>Control[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `source_control` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -856,7 +919,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Connection String.
+    <dd>{{% md %}}The name for this IP Restriction.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -904,6 +967,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="site_configs_python">
+<a href="#site_configs_python" style="color: inherit; text-decoration: inherit;">site_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfig">List[Get<wbr>Function<wbr>App<wbr>Site<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="site_credentials_python">
 <a href="#site_credentials_python" style="color: inherit; text-decoration: inherit;">site_<wbr>credentials</a>
 </span> 
@@ -911,6 +984,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionappsitecredential">List[Get<wbr>Function<wbr>App<wbr>Site<wbr>Credential]</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="source_controls_python">
+<a href="#source_controls_python" style="color: inherit; text-decoration: inherit;">source_<wbr>controls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsourcecontrol">List[Get<wbr>Function<wbr>App<wbr>Source<wbr>Control]</a></span>
+    </dt>
+    <dd>{{% md %}}A `source_control` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1114,6 +1198,1322 @@ The following output properties are available:
 
 
 
+<h4 id="getfunctionappsiteconfig">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSiteConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppSiteConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppSiteConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alwayson_csharp">
+<a href="#alwayson_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the app loaded at all times?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="autoswapslotname_csharp">
+<a href="#autoswapslotname_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Swap<wbr>Slot<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cors_csharp">
+<a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigcors">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors` block as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ftpsstate_csharp">
+<a href="#ftpsstate_csharp" style="color: inherit; text-decoration: inherit;">Ftps<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}State of FTP / FTPS service for this AppService.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="http2enabled_csharp">
+<a href="#http2enabled_csharp" style="color: inherit; text-decoration: inherit;">Http2Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is HTTP2 Enabled on this App Service?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="iprestrictions_csharp">
+<a href="#iprestrictions_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigiprestriction">List&lt;Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linuxfxversion_csharp">
+<a href="#linuxfxversion_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Fx<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Linux App Framework and version for the AppService.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mintlsversion_csharp">
+<a href="#mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum supported TLS version for this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prewarmedinstancecount_csharp">
+<a href="#prewarmedinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Warmed<wbr>Instance<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pre-warmed instances for this function app. Only applicable to apps on the Premium plan.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmiprestrictions_csharp">
+<a href="#scmiprestrictions_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Ip<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigscmiprestriction">List&lt;Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `scm_ip_restriction` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmtype_csharp">
+<a href="#scmtype_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of Source Control enabled for this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmusemainiprestriction_csharp">
+<a href="#scmusemainiprestriction_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Use<wbr>Main<wbr>Ip<wbr>Restriction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}IP security restrictions for scm to use main.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="use32bitworkerprocess_csharp">
+<a href="#use32bitworkerprocess_csharp" style="color: inherit; text-decoration: inherit;">Use32Bit<wbr>Worker<wbr>Process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="websocketsenabled_csharp">
+<a href="#websocketsenabled_csharp" style="color: inherit; text-decoration: inherit;">Websockets<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Are WebSockets enabled for this App Service?
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alwayson_go">
+<a href="#alwayson_go" style="color: inherit; text-decoration: inherit;">Always<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the app loaded at all times?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="autoswapslotname_go">
+<a href="#autoswapslotname_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Swap<wbr>Slot<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cors_go">
+<a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigcors">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors` block as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ftpsstate_go">
+<a href="#ftpsstate_go" style="color: inherit; text-decoration: inherit;">Ftps<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}State of FTP / FTPS service for this AppService.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="http2enabled_go">
+<a href="#http2enabled_go" style="color: inherit; text-decoration: inherit;">Http2Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is HTTP2 Enabled on this App Service?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="iprestrictions_go">
+<a href="#iprestrictions_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigiprestriction">[]Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linuxfxversion_go">
+<a href="#linuxfxversion_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Fx<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Linux App Framework and version for the AppService.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mintlsversion_go">
+<a href="#mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum supported TLS version for this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prewarmedinstancecount_go">
+<a href="#prewarmedinstancecount_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Warmed<wbr>Instance<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pre-warmed instances for this function app. Only applicable to apps on the Premium plan.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmiprestrictions_go">
+<a href="#scmiprestrictions_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Ip<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigscmiprestriction">[]Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `scm_ip_restriction` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmtype_go">
+<a href="#scmtype_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of Source Control enabled for this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmusemainiprestriction_go">
+<a href="#scmusemainiprestriction_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Use<wbr>Main<wbr>Ip<wbr>Restriction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}IP security restrictions for scm to use main.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="use32bitworkerprocess_go">
+<a href="#use32bitworkerprocess_go" style="color: inherit; text-decoration: inherit;">Use32Bit<wbr>Worker<wbr>Process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="websocketsenabled_go">
+<a href="#websocketsenabled_go" style="color: inherit; text-decoration: inherit;">Websockets<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Are WebSockets enabled for this App Service?
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alwayson_nodejs">
+<a href="#alwayson_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is the app loaded at all times?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="autoswapslotname_nodejs">
+<a href="#autoswapslotname_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Swap<wbr>Slot<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cors_nodejs">
+<a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigcors">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors` block as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ftpsstate_nodejs">
+<a href="#ftpsstate_nodejs" style="color: inherit; text-decoration: inherit;">ftps<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}State of FTP / FTPS service for this AppService.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="http2enabled_nodejs">
+<a href="#http2enabled_nodejs" style="color: inherit; text-decoration: inherit;">http2Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is HTTP2 Enabled on this App Service?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="iprestrictions_nodejs">
+<a href="#iprestrictions_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigiprestriction">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linuxfxversion_nodejs">
+<a href="#linuxfxversion_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Fx<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Linux App Framework and version for the AppService.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="mintlsversion_nodejs">
+<a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum supported TLS version for this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prewarmedinstancecount_nodejs">
+<a href="#prewarmedinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Warmed<wbr>Instance<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pre-warmed instances for this function app. Only applicable to apps on the Premium plan.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmiprestrictions_nodejs">
+<a href="#scmiprestrictions_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigscmiprestriction">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `scm_ip_restriction` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmtype_nodejs">
+<a href="#scmtype_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of Source Control enabled for this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmusemainiprestriction_nodejs">
+<a href="#scmusemainiprestriction_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Use<wbr>Main<wbr>Ip<wbr>Restriction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}IP security restrictions for scm to use main.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="use32bitworkerprocess_nodejs">
+<a href="#use32bitworkerprocess_nodejs" style="color: inherit; text-decoration: inherit;">use32Bit<wbr>Worker<wbr>Process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="websocketsenabled_nodejs">
+<a href="#websocketsenabled_nodejs" style="color: inherit; text-decoration: inherit;">websockets<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Are WebSockets enabled for this App Service?
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alwayson_python">
+<a href="#alwayson_python" style="color: inherit; text-decoration: inherit;">always<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is the app loaded at all times?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="autoswapslotname_python">
+<a href="#autoswapslotname_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Swap<wbr>Slot<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cors_python">
+<a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigcors">Dict[Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors]</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors` block as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ftpsstate_python">
+<a href="#ftpsstate_python" style="color: inherit; text-decoration: inherit;">ftps<wbr>State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}State of FTP / FTPS service for this AppService.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="http2enabled_python">
+<a href="#http2enabled_python" style="color: inherit; text-decoration: inherit;">http2Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is HTTP2 Enabled on this App Service?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="iprestrictions_python">
+<a href="#iprestrictions_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigiprestriction">List[Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="linuxfxversion_python">
+<a href="#linuxfxversion_python" style="color: inherit; text-decoration: inherit;">linux<wbr>Fx<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Linux App Framework and version for the AppService.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="min_tls_version_python">
+<a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum supported TLS version for this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prewarmedinstancecount_python">
+<a href="#prewarmedinstancecount_python" style="color: inherit; text-decoration: inherit;">pre<wbr>Warmed<wbr>Instance<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of pre-warmed instances for this function app. Only applicable to apps on the Premium plan.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmiprestrictions_python">
+<a href="#scmiprestrictions_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Restrictions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigscmiprestriction">List[Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `scm_ip_restriction` blocks as defined above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmtype_python">
+<a href="#scmtype_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of Source Control enabled for this App Service.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scmusemainiprestriction_python">
+<a href="#scmusemainiprestriction_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Use<wbr>Main<wbr>Ip<wbr>Restriction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}IP security restrictions for scm to use main.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="use32bitworkerprocess_python">
+<a href="#use32bitworkerprocess_python" style="color: inherit; text-decoration: inherit;">use32Bit<wbr>Worker<wbr>Process</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="websocketsenabled_python">
+<a href="#websocketsenabled_python" style="color: inherit; text-decoration: inherit;">websockets<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Are WebSockets enabled for this App Service?
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getfunctionappsiteconfigcors">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSiteConfigCors">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppSiteConfigCors">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppSiteConfigCors.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allowedorigins_csharp">
+<a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="supportcredentials_csharp">
+<a href="#supportcredentials_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allowedorigins_go">
+<a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="supportcredentials_go">
+<a href="#supportcredentials_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allowedorigins_nodejs">
+<a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="supportcredentials_nodejs">
+<a href="#supportcredentials_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="allowedorigins_python">
+<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="supportcredentials_python">
+<a href="#supportcredentials_python" style="color: inherit; text-decoration: inherit;">support<wbr>Credentials</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getfunctionappsiteconfigiprestriction">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSiteConfigIpRestriction">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppSiteConfigIpRestriction">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppSiteConfigIpRestriction.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Function App resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworksubnetid_csharp">
+<a href="#virtualnetworksubnetid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Function App resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworksubnetid_go">
+<a href="#virtualnetworksubnetid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Function App resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworksubnetid_nodejs">
+<a href="#virtualnetworksubnetid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Function App resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworksubnetid_python">
+<a href="#virtualnetworksubnetid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getfunctionappsiteconfigscmiprestriction">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSiteConfigScmIpRestriction">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppSiteConfigScmIpRestriction">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppSiteConfigScmIpRestriction.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Function App resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworksubnetid_csharp">
+<a href="#virtualnetworksubnetid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Function App resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworksubnetid_go">
+<a href="#virtualnetworksubnetid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Function App resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworksubnetid_nodejs">
+<a href="#virtualnetworksubnetid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Function App resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The priority for this IP Restriction.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworksubnetid_python">
+<a href="#virtualnetworksubnetid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="getfunctionappsitecredential">Get<wbr>Function<wbr>App<wbr>Site<wbr>Credential</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSiteCredential">output</a> API doc for this type.
@@ -1239,6 +2639,272 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The username which can be used to publish to this App Service
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getfunctionappsourcecontrol">Get<wbr>Function<wbr>App<wbr>Source<wbr>Control</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSourceControl">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#GetFunctionAppSourceControl">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.GetFunctionAppSourceControl.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="branch_csharp">
+<a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The branch of the remote repository in use.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manualintegration_csharp">
+<a href="#manualintegration_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repourl_csharp">
+<a href="#repourl_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rollbackenabled_csharp">
+<a href="#rollbackenabled_csharp" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is roll-back enabled for the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usemercurial_csharp">
+<a href="#usemercurial_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="branch_go">
+<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The branch of the remote repository in use.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manualintegration_go">
+<a href="#manualintegration_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repourl_go">
+<a href="#repourl_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rollbackenabled_go">
+<a href="#rollbackenabled_go" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is roll-back enabled for the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usemercurial_go">
+<a href="#usemercurial_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="branch_nodejs">
+<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The branch of the remote repository in use.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manualintegration_nodejs">
+<a href="#manualintegration_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repourl_nodejs">
+<a href="#repourl_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rollbackenabled_nodejs">
+<a href="#rollbackenabled_nodejs" style="color: inherit; text-decoration: inherit;">rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is roll-back enabled for the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usemercurial_nodejs">
+<a href="#usemercurial_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="branch_python">
+<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The branch of the remote repository in use.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manualintegration_python">
+<a href="#manualintegration_python" style="color: inherit; text-decoration: inherit;">manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repourl_python">
+<a href="#repourl_python" style="color: inherit; text-decoration: inherit;">repo<wbr>Url</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rollbackenabled_python">
+<a href="#rollbackenabled_python" style="color: inherit; text-decoration: inherit;">rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is roll-back enabled for the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usemercurial_python">
+<a href="#usemercurial_python" style="color: inherit; text-decoration: inherit;">use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
 {{% /md %}}</dd>
 
 </dl>
