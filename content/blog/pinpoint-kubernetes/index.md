@@ -1,6 +1,6 @@
 ---
-title: "How Pinpoint Manages Kubernetes with Pulumi"
-date: 2020-08-14
+title: "How Pinpoint Manages Kubernetes Costs, Services and Deploymets"
+date: 2020-08-17
 meta_desc: "Pinpoint uses Pulumi to streamline deployments and scale Kubernetes"
 meta_image: meta.png
 authors:
@@ -9,7 +9,10 @@ tags:
     - Pinpoint
     - Kubernetes
 ---
-*This guest blog was contributed by Andrew Kunzel and Michael Goode. Andresis the Director of Backend Engineering and Michael is a Platform Operations Engineer at Pinpoint.*
+
+{{% notes type="info" %}}
+This guest blog was contributed by Andrew Kunzel and Michael Goode. Andrew is the Director of Backend Engineering and Michael is a Platform Operations Engineer at Pinpoint.
+{{% /notes %}}
 
 At Pinpoint, Kubernetes is the most powerful tool in our arsenal. It allows us to deploy and rapidly scale our applications with speed and efficiency that continues to delight our customers. In recent years, managed services like AWS EKS have made it easier than ever to leverage the power of Kubernetes in even the smallest of organizations. Yet even with these new conveniences, managing all of this infrastructure can be a daunting task. Right out of the gate, we knew that we wanted to avoid the burden of maintaining repositories full of home-brewed deployment scripts and domain-specific languages like YAML.
 
@@ -77,8 +80,6 @@ function getOnDemandPrice(instanceType: aws.ec2.InstanceType): pulumi.Output<any
     instanceType: instanceType,
     spotPrice: getOnDemandPrice(instanceType)
   })
-</code>
-
 
 function getOnDemandPrice(instanceType: aws.ec2.InstanceType): pulumi.Output<any> {
  return pulumi.output(aws.pricing.getProduct({
