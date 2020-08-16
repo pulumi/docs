@@ -1,5 +1,5 @@
 ---
-title: "How Pinpoint Manages Kubernetes Costs, Services and Deploymets"
+title: "How Pinpoint Manages Kubernetes Costs and Deployments"
 date: 2020-08-17
 meta_desc: "Pinpoint uses Pulumi to streamline deployments and scale Kubernetes"
 meta_image: meta.png
