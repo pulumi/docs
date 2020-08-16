@@ -1,0 +1,10 @@
+id = "michael-goode"
+name = "Michaek Goode"
+title = "Pinpoint Platform Operations Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "goodemk"
+linkedin = "michaelgoode1"
