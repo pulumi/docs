@@ -4,7 +4,8 @@ date: 2020-08-17
 meta_desc: "Pinpoint uses Pulumi to streamline deployments and scale Kubernetes"
 meta_image: meta.png
 authors:
-    - sophia-parafina
+    - andrew-kunzel
+    - michael-goode
 tags:
     - Pinpoint
     - Kubernetes
