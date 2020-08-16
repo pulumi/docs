@@ -9,14 +9,8 @@ tags:
     - Pinpoint
     - Kubernetes
 ---
-<<<<<<< HEAD:content/blog/pinpoint/index.md
 
-{{% notes type="info" %}}
-This guest blog was contributed by Andrew Kunzel and Michael Goode. Andrew is the Director of Backend Engineering and Michael is a Platform Operations Engineer at Pinpoint.
-{{% /notes %}}
-=======
 *This guest blog was contributed by Andrew Kunzel and Michael Goode. Andrew is the Director of Backend Engineering and Michael is a Platform Operations Engineer at Pinpoint.*
->>>>>>> 67512a48127871aaaae7ec8a0831650b1b11d68c:content/blog/pinpoint-kubernetes/index.md
 
 At Pinpoint, Kubernetes is the most powerful tool in our arsenal. It allows us to deploy and rapidly scale our applications with speed and efficiency that continues to delight our customers. In recent years, managed services like AWS EKS have made it easier than ever to leverage the power of Kubernetes in even the smallest of organizations. Yet even with these new conveniences, managing all of this infrastructure can be a daunting task. Right out of the gate, we knew that we wanted to avoid the burden of maintaining repositories full of home-brewed deployment scripts and domain-specific languages like YAML.
 
@@ -30,7 +24,7 @@ In this blog post, we’ll share some simple and intuitive ways in which Pulumi 
 
 As a startup, we are always budget-conscious. Every tool we use has to justify either the up-front subscription cost or development time, or both. To tamp down our AWS EC2 costs, we decided to leverage EC2 spot instances as worker nodes in our development Kubernetes cluster. Spot instances are highly cost-efficient because they use spare compute capacity within a region at a fraction of the on-demand instance price. When you request a spot instance, you must offer the maximum price you are willing to pay. This price can fluctuate based on demand in a particular region, but will always be less than or equal to the current on-demand price. Knowing this, we could use Pulumi’s JavaScript AWS library to get the current on-demand price for a given instance type and plug that directly into the spotPrice property of the node group configuration.
 
-```javascript
+```js
 
 function getOnDemandPrice(instanceType: aws.ec2.InstanceType): pulumi.Output<any> {
   return pulumi.output(aws.pricing.getProduct({
@@ -151,7 +145,7 @@ We prefer to use Helm for most of our deployments. It is an excellent tool for d
 
 As an example, we recently discovered that some versions of the Traefik Helm chart do not include an explicit namespace definition on certain templates. This caused a few resources to install into the default namespace; without Pulumi, we would have been unable to fix this issue without forking the chart or writing a post-install script to wrangle them back. Luckily, all we really had to do was create a function to set the object metadata and then pass that function directly into the ‘transformations’ property of the Traefik Helm chart:
 
-```javascript
+```js
  function setNamespace(obj: any) {
     if (obj.metadata.namespace === undefined) {
       obj.metadata.namespace = 'platform-services';
