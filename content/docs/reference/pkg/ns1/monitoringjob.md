@@ -1,8 +1,8 @@
 
 ---
 title: "MonitoringJob"
-title_tag: "Resource MonitoringJob | Package ns1"
-meta_desc: "Explore the MonitoringJob resource of the ns1 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a NS1 Monitoring Job resource. This can be used to create, modify, and delete monitoring jobs."
+title_tag: "Resource MonitoringJob | Package NS1"
+meta_desc: "Explore the MonitoringJob resource of the NS1 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a NS1 Monitoring Job resource. This can be used to create, modify, and delete monitoring jobs."
 ---
 
 
@@ -26,7 +26,7 @@ Provides a NS1 Monitoring Job resource. This can be used to create, modify, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/ns1/#MonitoringJob">MonitoringJob</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>config=None<span class="p">, </span>frequency=None<span class="p">, </span>job_type=None<span class="p">, </span>name=None<span class="p">, </span>notes=None<span class="p">, </span>notify_delay=None<span class="p">, </span>notify_failback=None<span class="p">, </span>notify_list=None<span class="p">, </span>notify_regional=None<span class="p">, </span>notify_repeat=None<span class="p">, </span>policy=None<span class="p">, </span>rapid_recheck=None<span class="p">, </span>regions=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.MonitoringJob">MonitoringJob</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>active=None<span class="p">, </span>config=None<span class="p">, </span>frequency=None<span class="p">, </span>job_type=None<span class="p">, </span>name=None<span class="p">, </span>notes=None<span class="p">, </span>notify_delay=None<span class="p">, </span>notify_failback=None<span class="p">, </span>notify_list=None<span class="p">, </span>notify_regional=None<span class="p">, </span>notify_repeat=None<span class="p">, </span>policy=None<span class="p">, </span>rapid_recheck=None<span class="p">, </span>regions=None<span class="p">, </span>rules=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -989,7 +989,7 @@ Get an existing MonitoringJob resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active=None<span class="p">, </span>config=None<span class="p">, </span>frequency=None<span class="p">, </span>job_type=None<span class="p">, </span>name=None<span class="p">, </span>notes=None<span class="p">, </span>notify_delay=None<span class="p">, </span>notify_failback=None<span class="p">, </span>notify_list=None<span class="p">, </span>notify_regional=None<span class="p">, </span>notify_repeat=None<span class="p">, </span>policy=None<span class="p">, </span>rapid_recheck=None<span class="p">, </span>regions=None<span class="p">, </span>rules=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active=None<span class="p">, </span>config=None<span class="p">, </span>frequency=None<span class="p">, </span>job_type=None<span class="p">, </span>name=None<span class="p">, </span>notes=None<span class="p">, </span>notify_delay=None<span class="p">, </span>notify_failback=None<span class="p">, </span>notify_list=None<span class="p">, </span>notify_regional=None<span class="p">, </span>notify_repeat=None<span class="p">, </span>policy=None<span class="p">, </span>rapid_recheck=None<span class="p">, </span>regions=None<span class="p">, </span>rules=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

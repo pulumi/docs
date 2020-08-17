@@ -1,8 +1,8 @@
 
 ---
 title: "DataSource"
-title_tag: "Resource DataSource | Package ns1"
-meta_desc: "Explore the DataSource resource of the ns1 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a NS1 Data Source resource. This can be used to create, modify, and delete data sources."
+title_tag: "Resource DataSource | Package NS1"
+meta_desc: "Explore the DataSource resource of the NS1 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a NS1 Data Source resource. This can be used to create, modify, and delete data sources."
 ---
 
 
@@ -26,7 +26,7 @@ Provides a NS1 Data Source resource. This can be used to create, modify, and del
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/ns1/#DataSource">DataSource</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>sourcetype=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.DataSource">DataSource</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>sourcetype=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -453,7 +453,7 @@ Get an existing DataSource resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>sourcetype=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>name=None<span class="p">, </span>sourcetype=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
