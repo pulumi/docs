@@ -22,7 +22,7 @@ meta_desc: "Explore the EtcdBackup resource of the Rancher 2 package, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/rancher2/#EtcdBackup">EtcdBackup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>backup_config=None<span class="p">, </span>cluster_id=None<span class="p">, </span>filename=None<span class="p">, </span>labels=None<span class="p">, </span>manual=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.EtcdBackup">EtcdBackup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>backup_config=None<span class="p">, </span>cluster_id=None<span class="p">, </span>filename=None<span class="p">, </span>labels=None<span class="p">, </span>manual=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -665,7 +665,7 @@ Get an existing EtcdBackup resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>annotations=None<span class="p">, </span>backup_config=None<span class="p">, </span>cluster_id=None<span class="p">, </span>filename=None<span class="p">, </span>labels=None<span class="p">, </span>manual=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>annotations=None<span class="p">, </span>backup_config=None<span class="p">, </span>cluster_id=None<span class="p">, </span>filename=None<span class="p">, </span>labels=None<span class="p">, </span>manual=None<span class="p">, </span>name=None<span class="p">, </span>namespace_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
