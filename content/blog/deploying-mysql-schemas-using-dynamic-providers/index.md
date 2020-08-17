@@ -7,7 +7,7 @@ authors: ["vova-ivanov"]
 tags: ["aws", "python", "mysql"]
 ---
 
-In our [previous post](https://www.pulumi.com/blog/creating-a-python-aws-application-using-flask-and-redis/), we created a Python voting application using Flask and Redis. In this blog post, we will explore how to create a MySQL database and initialize it with a schema and some data. What seems to be a simple step is much more interesting than it appears, however, because Pulumi does not have a built-in library for such a task. To do it, we will create our own library: a Dynamic Provider.
+In our [previous post](https://www.pulumi.com/blog/creating-a-python-aws-application-using-flask-and-redis/), we created a Python voting application using Flask and Redis. In this blog post, we will explore how to create a MySQL database and initialize it with a schema and data. What seems to be a simple step is much more interesting than it appears, because Pulumi's MySQL provider does not support creating and populating tables. To do it, we will extend it with a Dynamic Provider.
 
 <!--more-->
 
@@ -276,7 +276,6 @@ We can export the ID of our new resource, and view it when it is deployed.
 ```python
 pulumi.export("dynamic-resource-id",mysql_votes_table.id)
 ```
-
 
 In this example, I showed how straightforward it is to write additional code for Pulumi and expand its functionality even further. Dynamic Providers enable excellent flexibility in cloud architecture design, and help break down barriers that would otherwise be challenging to overcome.
 
