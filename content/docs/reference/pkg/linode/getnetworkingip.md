@@ -11,8 +11,6 @@ meta_desc: "Explore the GetNetworkingIp function of the Linode package, includin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides information about a Linode Networking IP Address
-
-
 ## Attributes
 
 The Linode Network IP Address resource exports the following attributes:
@@ -57,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ import pulumi_linode as linode
 
 ns1_linode_com = linode.get_networking_ip(address="162.159.27.72")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -81,6 +82,7 @@ const ns1LinodeCom = pulumi.output(linode.getNetworkingIp({
     address: "162.159.27.72",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

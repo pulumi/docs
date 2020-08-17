@@ -12,8 +12,6 @@ meta_desc: "Explore the GetSshKey function of the Linode package, including exam
 
 `linode..SshKey` provides access to a specifically labeled SSH Key in the Profile of the User identified by the access token.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_linode as linode
 
 foo = linode.get_ssh_key(label="foo")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -60,6 +61,7 @@ const foo = pulumi.output(linode.getSshKey({
     label: "foo",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

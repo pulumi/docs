@@ -12,8 +12,6 @@ meta_desc: "Explore the NodeBalancerNode resource of the Linode package, includi
 
 Provides a Linode NodeBalancer Node resource.  This can be used to create, modify, and delete Linodes NodeBalancer Nodes.
 For more information, see [Getting Started with NodeBalancers](https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createNodeBalancerNode).
-
-
 ## Attributes
 
 This resource exports the following attributes:
@@ -93,6 +91,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -137,9 +136,11 @@ for range in [{"value": i} for i in range(0, 3)]:
         nodebalancer_id=foobar.id,
         weight=50))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -183,6 +184,7 @@ for (let i = 0; i < 3; i++) {
     }));
 }
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -197,7 +199,7 @@ for (let i = 0; i < 3; i++) {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/linode/#NodeBalancerNode">NodeBalancerNode</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>config_id=None<span class="p">, </span>label=None<span class="p">, </span>mode=None<span class="p">, </span>nodebalancer_id=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.NodeBalancerNode">NodeBalancerNode</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>config_id=None<span class="p">, </span>label=None<span class="p">, </span>mode=None<span class="p">, </span>nodebalancer_id=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -796,7 +798,7 @@ Get an existing NodeBalancerNode resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>config_id=None<span class="p">, </span>label=None<span class="p">, </span>mode=None<span class="p">, </span>nodebalancer_id=None<span class="p">, </span>status=None<span class="p">, </span>weight=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>config_id=None<span class="p">, </span>label=None<span class="p">, </span>mode=None<span class="p">, </span>nodebalancer_id=None<span class="p">, </span>status=None<span class="p">, </span>weight=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

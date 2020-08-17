@@ -11,8 +11,6 @@ meta_desc: "Explore the GetObjectStorageCluster function of the Linode package, 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides information about a Linode Object Storage Cluster
-
-
 ## Attributes
 
 The Linode Object Storage Cluster resource exports the following attributes:
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +59,11 @@ import pulumi_linode as linode
 
 primary = linode.get_object_storage_cluster(id="us-east-1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -71,6 +72,7 @@ const primary = pulumi.output(linode.getObjectStorageCluster({
     id: "us-east-1",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -12,8 +12,6 @@ meta_desc: "Explore the Instance resource of the Linode package, including examp
 
 Provides a Linode Instance resource.  This can be used to create, modify, and delete Linodes.
 For more information, see [Getting Started with Linode](https://linode.com/docs/getting-started/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createLinodeInstance).
-
-
 ## Attributes
 
 This Linode Instance resource exports the following attributes:
@@ -37,13 +35,13 @@ This Linode Instance resource exports the following attributes:
 * `specs.0.transfer` - The amount of network transfer this Linode is allotted each month.
 
 * `backups` - Information about this Linode's backups status.
-
+  
   * `enabled` - If this Linode has the Backup service enabled.
-
+  
   * `schedule`
-
+    
     * `day` -  The day of the week that your Linode's weekly Backup is taken. If not set manually, a day will be chosen for you. Backups are taken every day, but backups taken on this day are preferred when selecting backups to retain for a longer period.  If not set manually, then when backups are initially enabled, this may come back as "Scheduling" until the day is automatically selected.
-
+    
     * `window` - The window ('W0'-'W22') in which your backups will be taken, in UTC. A backups window is a two-hour span of time in which the backup may occur. For example, 'W10' indicates that your backups should be taken between 10:00 and 12:00. If you do not choose a backup window, one will be selected for you automatically.  If not set manually, when backups are initially enabled this may come back as Scheduling until the window is automatically selected.
 
 {{% examples %}}
@@ -83,6 +81,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -106,9 +105,11 @@ web = linode.Instance("web",
     tags=["foo"],
     type="g6-standard-1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -126,6 +127,7 @@ const web = new linode.Instance("web", {
     type: "g6-standard-1",
 });
 ```
+
 {{% /example %}}
 
 ### Linode Instance with explicit Configs and Disks
@@ -200,6 +202,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -246,9 +249,11 @@ web = linode.Instance("web",
     tags=["foo"],
     type="g6-nanode-1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -292,6 +297,7 @@ const web = new linode.Instance("web", {
     type: "g6-nanode-1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -306,7 +312,7 @@ const web = new linode.Instance("web", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/linode/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alerts=None<span class="p">, </span>authorized_keys=None<span class="p">, </span>authorized_users=None<span class="p">, </span>backup_id=None<span class="p">, </span>backups_enabled=None<span class="p">, </span>boot_config_label=None<span class="p">, </span>configs=None<span class="p">, </span>disks=None<span class="p">, </span>group=None<span class="p">, </span>image=None<span class="p">, </span>label=None<span class="p">, </span>private_ip=None<span class="p">, </span>region=None<span class="p">, </span>root_pass=None<span class="p">, </span>stackscript_data=None<span class="p">, </span>stackscript_id=None<span class="p">, </span>swap_size=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>watchdog_enabled=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alerts=None<span class="p">, </span>authorized_keys=None<span class="p">, </span>authorized_users=None<span class="p">, </span>backup_id=None<span class="p">, </span>backups_enabled=None<span class="p">, </span>boot_config_label=None<span class="p">, </span>configs=None<span class="p">, </span>disks=None<span class="p">, </span>group=None<span class="p">, </span>image=None<span class="p">, </span>label=None<span class="p">, </span>private_ip=None<span class="p">, </span>region=None<span class="p">, </span>root_pass=None<span class="p">, </span>stackscript_data=None<span class="p">, </span>stackscript_id=None<span class="p">, </span>swap_size=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>watchdog_enabled=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1785,7 +1791,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alerts=None<span class="p">, </span>authorized_keys=None<span class="p">, </span>authorized_users=None<span class="p">, </span>backup_id=None<span class="p">, </span>backups=None<span class="p">, </span>backups_enabled=None<span class="p">, </span>boot_config_label=None<span class="p">, </span>configs=None<span class="p">, </span>disks=None<span class="p">, </span>group=None<span class="p">, </span>image=None<span class="p">, </span>ip_address=None<span class="p">, </span>ipv4s=None<span class="p">, </span>ipv6=None<span class="p">, </span>label=None<span class="p">, </span>private_ip=None<span class="p">, </span>private_ip_address=None<span class="p">, </span>region=None<span class="p">, </span>root_pass=None<span class="p">, </span>specs=None<span class="p">, </span>stackscript_data=None<span class="p">, </span>stackscript_id=None<span class="p">, </span>status=None<span class="p">, </span>swap_size=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>watchdog_enabled=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alerts=None<span class="p">, </span>authorized_keys=None<span class="p">, </span>authorized_users=None<span class="p">, </span>backup_id=None<span class="p">, </span>backups=None<span class="p">, </span>backups_enabled=None<span class="p">, </span>boot_config_label=None<span class="p">, </span>configs=None<span class="p">, </span>disks=None<span class="p">, </span>group=None<span class="p">, </span>image=None<span class="p">, </span>ip_address=None<span class="p">, </span>ipv4s=None<span class="p">, </span>ipv6=None<span class="p">, </span>label=None<span class="p">, </span>private_ip=None<span class="p">, </span>private_ip_address=None<span class="p">, </span>region=None<span class="p">, </span>root_pass=None<span class="p">, </span>specs=None<span class="p">, </span>stackscript_data=None<span class="p">, </span>stackscript_id=None<span class="p">, </span>status=None<span class="p">, </span>swap_size=None<span class="p">, </span>tags=None<span class="p">, </span>type=None<span class="p">, </span>watchdog_enabled=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

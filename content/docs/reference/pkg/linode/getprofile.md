@@ -11,8 +11,6 @@ meta_desc: "Explore the GetProfile function of the Linode package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides information about a Linode profile.
-
-
 ## Attributes
 
 The Linode Profile resource exports the following attributes:
@@ -68,6 +66,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,15 +80,18 @@ import pulumi_linode as linode
 
 profile = linode.get_profile()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
 const profile = pulumi.output(linode.getProfile({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

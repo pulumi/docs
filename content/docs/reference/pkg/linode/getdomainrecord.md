@@ -11,8 +11,6 @@ meta_desc: "Explore the GetDomainRecord function of the Linode package, includin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides information about a Linode Domain Record.
-
-
 ## Attributes
 
 The Linode Volume resource exports the following attributes:
@@ -69,6 +67,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,9 +84,11 @@ my_record = linode.get_domain_record(domain_id="3150401",
 my_www_record = linode.get_domain_record(domain_id="3150401",
     name="www")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -101,6 +102,7 @@ const myWwwRecord = pulumi.output(linode.getDomainRecord({
     name: "www",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
