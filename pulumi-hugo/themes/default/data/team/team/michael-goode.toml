@@ -3,7 +3,7 @@ name = "Michael Goode"
 title = "Pinpoint Platform Operations Engineer"
 weight = 1
 
-status = "active"
+status = "guest"
 
 [social]
 github = "goodemk"
