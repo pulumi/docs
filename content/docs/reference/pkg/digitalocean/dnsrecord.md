@@ -1,8 +1,8 @@
 
 ---
 title: "DnsRecord"
-title_tag: "Resource DnsRecord | Package Digital Ocean"
-meta_desc: "Explore the DnsRecord resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean DNS record resource."
+title_tag: "Resource DnsRecord | Package DigitalOcean"
+meta_desc: "Explore the DnsRecord resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean DNS record resource."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the DnsRecord resource of the Digital Ocean package, includi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a DigitalOcean DNS record resource.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -57,6 +55,7 @@ class MyStack : Stack
     public Output<string> MxFqdn { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,9 +82,11 @@ mx = digitalocean.DnsRecord("mx",
 pulumi.export("wwwFqdn", www.fqdn)
 pulumi.export("mxFqdn", mx.fqdn)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -107,6 +108,7 @@ const mx = new digitalocean.DnsRecord("mx", {
 export const wwwFqdn = www.fqdn;
 export const mxFqdn = mx.fqdn;
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -121,7 +123,7 @@ export const mxFqdn = mx.fqdn;
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#DnsRecord">DnsRecord</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>flags=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>priority=None<span class="p">, </span>tag=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.DnsRecord">DnsRecord</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>flags=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>priority=None<span class="p">, </span>tag=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -896,7 +898,7 @@ Get an existing DnsRecord resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>domain=None<span class="p">, </span>flags=None<span class="p">, </span>fqdn=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>priority=None<span class="p">, </span>tag=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>weight=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>domain=None<span class="p">, </span>flags=None<span class="p">, </span>fqdn=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>priority=None<span class="p">, </span>tag=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>value=None<span class="p">, </span>weight=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

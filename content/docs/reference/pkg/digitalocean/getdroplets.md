@@ -1,8 +1,8 @@
 
 ---
 title: "GetDroplets"
-title_tag: "Function GetDroplets | Package Digital Ocean"
-meta_desc: "Explore the GetDroplets function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on Droplets for use in other resources, with the ability to filter and sort the results."
+title_tag: "Function GetDroplets | Package DigitalOcean"
+meta_desc: "Explore the GetDroplets function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on Droplets for use in other resources, with the ability to filter and sort the results."
 ---
 
 
@@ -18,8 +18,6 @@ utilize any of the Droplets' data.
 
 Note: You can use the `digitalocean..Droplet` data source to obtain metadata
 about a single Droplet if you already know the `id`, unique `name`, or unique `tag` to retrieve.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -53,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +68,11 @@ small = digitalocean.get_droplets(filters=[{
     "values": ["s-1vcpu-1gb"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -83,6 +84,7 @@ const small = pulumi.output(digitalocean.getDroplets({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

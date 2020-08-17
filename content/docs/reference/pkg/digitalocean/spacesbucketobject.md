@@ -1,8 +1,8 @@
 
 ---
 title: "SpacesBucketObject"
-title_tag: "Resource SpacesBucketObject | Package Digital Ocean"
-meta_desc: "Explore the SpacesBucketObject resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a bucket object resource for Spaces, DigitalOcean&#39;s object storage product."
+title_tag: "Resource SpacesBucketObject | Package DigitalOcean"
+meta_desc: "Explore the SpacesBucketObject resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a bucket object resource for Spaces, DigitalOcean&#39;s object storage product."
 ---
 
 
@@ -58,8 +58,6 @@ class MyStack : Stack
 
 For more information, See [An Introduction to DigitalOcean Spaces](https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-spaces)
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -90,6 +88,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -109,9 +108,11 @@ index = digitalocean.SpacesBucketObject("index",
     content="<html><body><p>This page is empty.</p></body></html>",
     content_type="text/html")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -125,6 +126,7 @@ const index = new digitalocean.SpacesBucketObject("index", {
     contentType: "text/html",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -139,7 +141,7 @@ const index = new digitalocean.SpacesBucketObject("index", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#SpacesBucketObject">SpacesBucketObject</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cache_control=None<span class="p">, </span>content=None<span class="p">, </span>content_base64=None<span class="p">, </span>content_disposition=None<span class="p">, </span>content_encoding=None<span class="p">, </span>content_language=None<span class="p">, </span>content_type=None<span class="p">, </span>etag=None<span class="p">, </span>force_destroy=None<span class="p">, </span>key=None<span class="p">, </span>metadata=None<span class="p">, </span>region=None<span class="p">, </span>source=None<span class="p">, </span>website_redirect=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.SpacesBucketObject">SpacesBucketObject</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cache_control=None<span class="p">, </span>content=None<span class="p">, </span>content_base64=None<span class="p">, </span>content_disposition=None<span class="p">, </span>content_encoding=None<span class="p">, </span>content_language=None<span class="p">, </span>content_type=None<span class="p">, </span>etag=None<span class="p">, </span>force_destroy=None<span class="p">, </span>key=None<span class="p">, </span>metadata=None<span class="p">, </span>region=None<span class="p">, </span>source=None<span class="p">, </span>website_redirect=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1182,7 +1184,7 @@ Get an existing SpacesBucketObject resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cache_control=None<span class="p">, </span>content=None<span class="p">, </span>content_base64=None<span class="p">, </span>content_disposition=None<span class="p">, </span>content_encoding=None<span class="p">, </span>content_language=None<span class="p">, </span>content_type=None<span class="p">, </span>etag=None<span class="p">, </span>force_destroy=None<span class="p">, </span>key=None<span class="p">, </span>metadata=None<span class="p">, </span>region=None<span class="p">, </span>source=None<span class="p">, </span>version_id=None<span class="p">, </span>website_redirect=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>bucket=None<span class="p">, </span>cache_control=None<span class="p">, </span>content=None<span class="p">, </span>content_base64=None<span class="p">, </span>content_disposition=None<span class="p">, </span>content_encoding=None<span class="p">, </span>content_language=None<span class="p">, </span>content_type=None<span class="p">, </span>etag=None<span class="p">, </span>force_destroy=None<span class="p">, </span>key=None<span class="p">, </span>metadata=None<span class="p">, </span>region=None<span class="p">, </span>source=None<span class="p">, </span>version_id=None<span class="p">, </span>website_redirect=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

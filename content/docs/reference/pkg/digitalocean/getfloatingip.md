@@ -1,8 +1,8 @@
 
 ---
 title: "GetFloatingIp"
-title_tag: "Function GetFloatingIp | Package Digital Ocean"
-meta_desc: "Explore the GetFloatingIp function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on a floating ip. This data source provides the region and Droplet id"
+title_tag: "Function GetFloatingIp | Package DigitalOcean"
+meta_desc: "Explore the GetFloatingIp function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a floating ip. This data source provides the region and Droplet id"
 ---
 
 
@@ -16,8 +16,6 @@ in question is not managed by this provider or you need to find the Droplet the 
 attached to.
 
 An error is triggered if the provided floating IP does not exist.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -46,6 +44,7 @@ class MyStack : Stack
     public Output<string> FipOutput { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ public_ip = config.require_object("publicIp")
 example = digitalocean.get_floating_ip(ip_address=public_ip)
 pulumi.export("fipOutput", example.droplet_id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -76,6 +77,7 @@ const example = digitalocean.getFloatingIp({
 });
 export const fipOutput = example.then(example => example.dropletId);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

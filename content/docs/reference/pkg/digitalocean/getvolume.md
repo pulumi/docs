@@ -1,8 +1,8 @@
 
 ---
 title: "GetVolume"
-title_tag: "Function GetVolume | Package Digital Ocean"
-meta_desc: "Explore the GetVolume function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on a volume for use in other resources. This data source provides"
+title_tag: "Function GetVolume | Package DigitalOcean"
+meta_desc: "Explore the GetVolume function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a volume for use in other resources. This data source provides"
 ---
 
 
@@ -16,8 +16,6 @@ useful if the volume in question is not managed by this provider or you need to 
 any of the volumes data.
 
 An error is triggered if the provided volume name does not exist.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ import pulumi_digitalocean as digitalocean
 example = digitalocean.get_volume(name="app-data",
     region="nyc3")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -68,6 +69,7 @@ const example = pulumi.output(digitalocean.getVolume({
     region: "nyc3",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

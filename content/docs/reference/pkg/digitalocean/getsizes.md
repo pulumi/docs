@@ -1,8 +1,8 @@
 
 ---
 title: "GetSizes"
-title_tag: "Function GetSizes | Package Digital Ocean"
-meta_desc: "Explore the GetSizes function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Retrieves information about the Droplet sizes that DigitalOcean supports, with"
+title_tag: "Function GetSizes | Package DigitalOcean"
+meta_desc: "Explore the GetSizes function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Retrieves information about the Droplet sizes that DigitalOcean supports, with"
 ---
 
 
@@ -13,8 +13,6 @@ meta_desc: "Explore the GetSizes function of the Digital Ocean package, includin
 Retrieves information about the Droplet sizes that DigitalOcean supports, with
 the ability to filter and sort the results. If no filters are specified, all sizes
 will be returned.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,9 +73,11 @@ web = digitalocean.Droplet("web",
     region="sgp1",
     size=main.sizes[0]["slug"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -93,6 +94,7 @@ const web = new digitalocean.Droplet("web", {
     size: main.then(main => main.sizes)[0].then(sizes => sizes.slug),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

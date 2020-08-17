@@ -1,8 +1,8 @@
 
 ---
 title: "GetRecord"
-title_tag: "Function GetRecord | Package Digital Ocean"
-meta_desc: "Explore the GetRecord function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on a DNS record. This data source provides the name, TTL, and zone"
+title_tag: "Function GetRecord | Package DigitalOcean"
+meta_desc: "Explore the GetRecord function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a DNS record. This data source provides the name, TTL, and zone"
 ---
 
 
@@ -16,8 +16,6 @@ in question is not managed by this provider.
 
 An error is triggered if the provided domain name or record are not managed with
 your DigitalOcean account.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -48,6 +46,7 @@ class MyStack : Stack
     public Output<string> RecordTtl { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +63,11 @@ example = digitalocean.get_record(domain="example.com",
 pulumi.export("recordType", example.type)
 pulumi.export("recordTtl", example.ttl)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -78,6 +79,7 @@ const example = digitalocean.getRecord({
 export const recordType = example.then(example => example.type);
 export const recordTtl = example.then(example => example.ttl);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

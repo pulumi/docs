@@ -1,8 +1,8 @@
 
 ---
 title: "GetAccount"
-title_tag: "Function GetAccount | Package Digital Ocean"
-meta_desc: "Explore the GetAccount function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on your DigitalOcean account."
+title_tag: "Function GetAccount | Package DigitalOcean"
+meta_desc: "Explore the GetAccount function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on your DigitalOcean account."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the GetAccount function of the Digital Ocean package, includ
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Get information on your DigitalOcean account.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -33,6 +31,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -46,15 +45,18 @@ import pulumi_digitalocean as digitalocean
 
 example = digitalocean.get_account()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
 const example = pulumi.output(digitalocean.getAccount({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

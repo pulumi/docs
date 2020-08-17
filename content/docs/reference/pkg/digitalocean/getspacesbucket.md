@@ -1,8 +1,8 @@
 
 ---
 title: "GetSpacesBucket"
-title_tag: "Function GetSpacesBucket | Package Digital Ocean"
-meta_desc: "Explore the GetSpacesBucket function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on a Spaces bucket for use in other resources. This is useful if the Spaces bucket in question"
+title_tag: "Function GetSpacesBucket | Package DigitalOcean"
+meta_desc: "Explore the GetSpacesBucket function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a Spaces bucket for use in other resources. This is useful if the Spaces bucket in question"
 ---
 
 
@@ -12,8 +12,6 @@ meta_desc: "Explore the GetSpacesBucket function of the Digital Ocean package, i
 
 Get information on a Spaces bucket for use in other resources. This is useful if the Spaces bucket in question
 is not managed by this provider or you need to utilize any of the bucket's data.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -41,6 +39,7 @@ class MyStack : Stack
     public Output<string> BucketDomainName { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ example = digitalocean.get_spaces_bucket(name="my-spaces-bucket",
     region="nyc3")
 pulumi.export("bucketDomainName", example.bucket_domain_name)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -69,6 +70,7 @@ const example = digitalocean.getSpacesBucket({
 });
 export const bucketDomainName = example.then(example => example.bucketDomainName);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

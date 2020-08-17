@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Digital Ocean"
-meta_desc: "Explore the Provider resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the digitalocean package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package DigitalOcean"
+meta_desc: "Explore the Provider resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the digitalocean package. By default, resources use package-wide configuration"
 ---
 
 
@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_endpoint=None<span class="p">, </span>spaces_access_id=None<span class="p">, </span>spaces_endpoint=None<span class="p">, </span>spaces_secret_key=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_endpoint=None<span class="p">, </span>spaces_access_id=None<span class="p">, </span>spaces_endpoint=None<span class="p">, </span>spaces_secret_key=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

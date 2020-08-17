@@ -1,8 +1,8 @@
 
 ---
 title: "ContainerRegistryDockerCredentials"
-title_tag: "Resource ContainerRegistryDockerCredentials | Package Digital Ocean"
-meta_desc: "Explore the ContainerRegistryDockerCredentials resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Get Docker credentials for your DigitalOcean container registry."
+title_tag: "Resource ContainerRegistryDockerCredentials | Package DigitalOcean"
+meta_desc: "Explore the ContainerRegistryDockerCredentials resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Get Docker credentials for your DigitalOcean container registry."
 ---
 
 
@@ -13,8 +13,6 @@ meta_desc: "Explore the ContainerRegistryDockerCredentials resource of the Digit
 Get Docker credentials for your DigitalOcean container registry.
 
 An error is triggered if the provided container registry name does not exist.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_digitalocean as digitalocean
 
 example = digitalocean.ContainerRegistryDockerCredentials("example", registry_name="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -62,6 +63,7 @@ const example = new digitalocean.ContainerRegistryDockerCredentials("example", {
     registryName: "example",
 });
 ```
+
 {{% /example %}}
 
 ### Docker Provider Example
@@ -86,6 +88,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -100,9 +103,11 @@ import pulumi_digitalocean as digitalocean
 example_container_registry = digitalocean.get_container_registry(name="example")
 example_container_registry_docker_credentials = digitalocean.ContainerRegistryDockerCredentials("exampleContainerRegistryDockerCredentials", registry_name="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -112,6 +117,7 @@ const exampleContainerRegistry = digitalocean.getContainerRegistry({
 });
 const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegistryDockerCredentials("exampleContainerRegistryDockerCredentials", {registryName: "example"});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -126,7 +132,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#ContainerRegistryDockerCredentials">ContainerRegistryDockerCredentials</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>expiry_seconds=None<span class="p">, </span>registry_name=None<span class="p">, </span>write=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.ContainerRegistryDockerCredentials">ContainerRegistryDockerCredentials</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>expiry_seconds=None<span class="p">, </span>registry_name=None<span class="p">, </span>write=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -629,7 +635,7 @@ Get an existing ContainerRegistryDockerCredentials resource's state with the giv
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>credential_expiration_time=None<span class="p">, </span>docker_credentials=None<span class="p">, </span>expiry_seconds=None<span class="p">, </span>registry_name=None<span class="p">, </span>write=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>credential_expiration_time=None<span class="p">, </span>docker_credentials=None<span class="p">, </span>expiry_seconds=None<span class="p">, </span>registry_name=None<span class="p">, </span>write=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

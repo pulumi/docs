@@ -1,8 +1,8 @@
 
 ---
 title: "GetRegions"
-title_tag: "Function GetRegions | Package Digital Ocean"
-meta_desc: "Explore the GetRegions function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Retrieve information about all supported DigitalOcean regions, with the ability to"
+title_tag: "Function GetRegions | Package DigitalOcean"
+meta_desc: "Explore the GetRegions function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Retrieve information about all supported DigitalOcean regions, with the ability to"
 ---
 
 
@@ -15,8 +15,6 @@ filter and sort the results. If no filters are specified, all regions will be re
 
 Note: You can use the `digitalocean..getRegion` data source
 to obtain metadata about a single region if you already know the `slug` to retrieve.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ available = digitalocean.get_regions(filters=[{
     "values": ["true"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -80,6 +81,7 @@ const available = pulumi.output(digitalocean.getRegions({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -1,8 +1,8 @@
 
 ---
 title: "DatabaseConnectionPool"
-title_tag: "Resource DatabaseConnectionPool | Package Digital Ocean"
-meta_desc: "Explore the DatabaseConnectionPool resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean database connection pool resource."
+title_tag: "Resource DatabaseConnectionPool | Package DigitalOcean"
+meta_desc: "Explore the DatabaseConnectionPool resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean database connection pool resource."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the DatabaseConnectionPool resource of the Digital Ocean pac
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a DigitalOcean database connection pool resource.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -48,6 +46,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,6 +71,7 @@ pool_01 = digitalocean.DatabaseConnectionPool("pool-01",
     db_name="defaultdb",
     user="doadmin")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -94,6 +94,7 @@ const pool_01 = new digitalocean.DatabaseConnectionPool("pool-01", {
     user: "doadmin",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -108,7 +109,7 @@ const pool_01 = new digitalocean.DatabaseConnectionPool("pool-01", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#DatabaseConnectionPool">DatabaseConnectionPool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>db_name=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>size=None<span class="p">, </span>user=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.DatabaseConnectionPool">DatabaseConnectionPool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>db_name=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>size=None<span class="p">, </span>user=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -927,7 +928,7 @@ Get an existing DatabaseConnectionPool resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_id=None<span class="p">, </span>db_name=None<span class="p">, </span>host=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>private_host=None<span class="p">, </span>private_uri=None<span class="p">, </span>size=None<span class="p">, </span>uri=None<span class="p">, </span>user=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_id=None<span class="p">, </span>db_name=None<span class="p">, </span>host=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>private_host=None<span class="p">, </span>private_uri=None<span class="p">, </span>size=None<span class="p">, </span>uri=None<span class="p">, </span>user=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
