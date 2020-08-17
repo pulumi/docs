@@ -11,8 +11,6 @@ meta_desc: "Explore the GetVolume function of the Linode package, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides information about a Linode Volume.
-
-
 ## Attributes
 
 The Linode Volume resource exports the following attributes:
@@ -59,6 +57,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,9 +71,11 @@ import pulumi_linode as linode
 
 foo = linode.get_volume(id="1234567")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -83,6 +84,7 @@ const foo = pulumi.output(linode.getVolume({
     id: 1234567,
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

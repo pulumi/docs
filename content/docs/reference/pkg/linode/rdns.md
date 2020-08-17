@@ -16,9 +16,6 @@ Linode RDNS names must have a matching address value in an A or AAAA record.  Th
 
 For more information, see the [Linode APIv4 docs](https://developers.linode.com/api/v4/networking-ips-address/#put) and the [Configure your Linode for Reverse DNS](https://www.linode.com/docs/networking/dns/configure-your-linode-for-reverse-dns-classic-manager/) guide.
 
-{{% examples %}}
-{{% /examples %}}
-
 
 
 ## Create a Rdns Resource {#create}
@@ -30,7 +27,7 @@ For more information, see the [Linode APIv4 docs](https://developers.linode.com/
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/linode/#Rdns">Rdns</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>rdns=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Rdns">Rdns</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>rdns=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -409,7 +406,7 @@ Get an existing Rdns resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>rdns=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>rdns=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

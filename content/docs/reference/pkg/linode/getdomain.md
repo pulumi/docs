@@ -11,8 +11,6 @@ meta_desc: "Explore the GetDomain function of the Linode package, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides information about a Linode domain.
-
-
 ## Attributes
 
 The Linode Domain resource exports the following attributes:
@@ -71,6 +69,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -85,9 +84,11 @@ import pulumi_linode as linode
 foo = linode.get_domain(id="1234567")
 bar = linode.get_domain(domain="bar.example.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -99,6 +100,7 @@ const bar = pulumi.output(linode.getDomain({
     domain: "bar.example.com",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

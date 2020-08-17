@@ -11,8 +11,6 @@ meta_desc: "Explore the GetInstanceType function of the Linode package, includin
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides information about a Linode instance type
-
-
 ## Attributes
 
 The Linode Instance Type resource exports the following attributes:
@@ -55,6 +53,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ import pulumi_linode as linode
 
 default = linode.get_instance_type(id="g6-standard-2")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -79,6 +80,7 @@ const defaultInstanceType = pulumi.output(linode.getInstanceType({
     id: "g6-standard-2",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -13,8 +13,6 @@ meta_desc: "Explore the GetAccount function of the Linode package, including exa
 Provides information about a Linode account.
 
 This data source should not be used in conjuction with the `LINODE_DEBUG` option.  See the [debugging notes](https://www.terraform.io/docs/providers/linode/index.html#debugging) for more details.
-
-
 ## Attributes
 
 The Linode Account resource exports the following attributes:
@@ -62,6 +60,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -75,15 +74,18 @@ import pulumi_linode as linode
 
 account = linode.get_account()
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
 const account = pulumi.output(linode.getAccount({ async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
