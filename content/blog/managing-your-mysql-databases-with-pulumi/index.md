@@ -55,10 +55,12 @@ In this example, we will create a database in the previously configured MySQL se
 
 ```javascript
 import * as mysql from '@pulumi/mysql';
-import * as pulumi from ‘@pulumi/pulumi’;
+import * as pulumi from '@pulumi/pulumi';
 
 const config = new pulumi.Config();
-const jdoePassword = config.requireSecret(‘jdoePassword’);
+const mysqlConfig = new pulumi.Config();
+const jdoePassword = config.requireSecret('jdoePassword');
+const host = mysqlConfig.require('endpoint')
 
 const database = new mysql.Database('sample', {
   name: 'sample',
@@ -72,7 +74,7 @@ const user = new mysql.User('jdoe', {
 
 new mysql.Grant('jdoe', {
   user: user.user,
-  host: user.host.apply(h => h.toString()),
+  host: host,
   database: database.name,
   privileges: ['SELECT', 'UPDATE'],
 });
@@ -102,53 +104,56 @@ this user `SELECT` and `UPDATE` access to it:
 ```javascript
 import * as mysql from '@pulumi/mysql';
 import * as aws from '@pulumi/aws';
+import * as pulumi from '@pulumi/pulumi'
 
 const config = new pulumi.Config();
-const mysqlUser = config.require(mysqlUser);
-const mysqlPassword = config.requireSecret(mysqlPassword);
+const mysqlUser = config.require('mysqlUser');
+const mysqlPassword = config.requireSecret('mysqlPassword');
 
 const rds = new aws.rds.Instance('sample', {
-  engine: 'mysql',
-  username: mysqlUser,
-  password: mysqlPassword,
-  availabilityZone: 'us-east-1b',
-  instanceClass: 'db.t2.micro',
-  allocatedStorage: 20,
-  deletionProtection: true,
+    engine: 'mysql',
+    username: mysqlUser,
+    password: mysqlPassword,
+    availabilityZone: 'us-east-1b',
+    instanceClass: 'db.t2.micro',
+    allocatedStorage: 20,
+    deletionProtection: true,
 
-  // For a VPC cluster, you will also need the following:
-  // dbSubnetGroupName: 'sg-db01-replication-1',
-  // vpcSecurityGroupIds: ['sg-c1c63aba'],
+    // For a VPC cluster, you will also need the following:
+    // dbSubnetGroupName: 'sg-db01-replication-1',
+    // vpcSecurityGroupIds: ['sg-c1c63aba'],
 });
 
 const mysqlProvider = new mysql.Provider('mysql', {
-  endpoint: rds.endpoint,
-  username: rds.username,
-  password: rds.password.apply(p => p.toString()),
+    endpoint: rds.endpoint,
+    username: rds.username,
+    password: mysqlPassword,
 });
 
 const database = new mysql.Database('sample', {
-  name: 'sample',
+    name: 'sample',
 }, {
-  provider: mysqlProvider
+    provider: mysqlProvider
 });
 
+
 const user = new mysql.User('jdoe', {
-  user: "jdoe",
-  host: "example.com",
-  plaintextPassword: "password",
+    user: "jdoe",
+    host:  rds.endpoint,
+    plaintextPassword: "password",
 }, {
-  provider: mysqlProvider
+    provider: mysqlProvider
 });
 
 new mysql.Grant('jdoe', {
-  user: user.user,
-  host: user.host.apply(h => h.toString()),
-  database: database.name,
-  privileges: ["SELECT", "UPDATE"],
+    user: user.user,
+    host: rds.endpoint,
+    database: database.name,
+    privileges: ["SELECT", "UPDATE"],
 }, {
-  provider: mysqlProvider
+    provider: mysqlProvider
 });
+
 ```
 
 Now deploy the infrastructure:
