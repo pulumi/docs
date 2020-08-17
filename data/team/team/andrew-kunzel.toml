@@ -3,7 +3,7 @@ name = "Andrew Kunzel"
 title = "Pinpoint Director of Backend Engineering"
 weight = 1
 
-status = "active"
+status = "guest"
 
 [social]
 github = "kunzel-andrew"
