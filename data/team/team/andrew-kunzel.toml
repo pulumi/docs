@@ -1,0 +1,10 @@
+id = "andrew-kunzel"
+name = "Andrew Kunzel"
+title = "Pinpoint Director of Backend Engineering"
+weight = 1
+
+status = "active"
+
+[social]
+github = "kunzel-andrew"
+linkedin = "andrewkunzel"
