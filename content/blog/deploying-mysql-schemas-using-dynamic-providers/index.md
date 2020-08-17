@@ -273,7 +273,7 @@ The provider also takes in a `deletion_script`, which it uses to undo all of its
 deletion_script = "DROP TABLE votesTable"
 ```
 
-When create our resource, it behaves the same way as any other Pulumi resource, but takes its arguments as a `SchemaInputs` object.
+When we create our resource, it behaves the same way as any other Pulumi resource, but takes its arguments as a `SchemaInputs` object.
 
 ```python
 mysql_votes_table = Schema(name="mysql_votes_table",
