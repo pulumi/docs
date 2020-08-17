@@ -3,7 +3,10 @@ title: Package pulumi_dnsimple
 title_tag: Package pulumi_dnsimple | Python SDK
 linktitle: pulumi_dnsimple
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "dnsimple" >}}
 
 <div class="section" id="pulumi-dnsimple">
 <h1>Pulumi DNSimple<a class="headerlink" href="#pulumi-dnsimple" title="Permalink to this headline">¶</a></h1>
