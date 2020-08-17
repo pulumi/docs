@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_certificate_password=None<span class="p">, </span>client_certificate_path=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>environment=None<span class="p">, </span>msi_endpoint=None<span class="p">, </span>subscription_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>use_msi=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_certificate_password=None<span class="p">, </span>client_certificate_path=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>environment=None<span class="p">, </span>msi_endpoint=None<span class="p">, </span>subscription_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>use_msi=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
