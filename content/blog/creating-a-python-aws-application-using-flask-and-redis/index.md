@@ -42,7 +42,7 @@ $ cp -r aws-ts-voting-app/frontend/ aws-py-voting-app/frontend
 The `requirements.txt` file lists the libraries that the project depends on. We will need to add the following:
 
 ```
-pulumi-docker>=1.0.0,<3.0.0
+pulumi-docker>=2.0.0,<3.0.0
 ```
 
 The biggest difference between our project and the example is the code describing the cloud infrastructure we want to create. Instead of an `index.ts` file, the project uses a `__main__.py` file. The first few lines of the file will indicate which libraries to import and describe a pair of configuration options used by the application.
@@ -399,4 +399,4 @@ In this example, I showed how straightforward it is to convert infrastructure co
 
 Next week, I'll show how to modernize the application by changing the frontend from Flask to Django, and swapping out the database from Redis to Amazon RDS---using Pulumi to stand up new resources as I go.
 
-The full code for the blog post can be [found on github.](https://github.com/jetvova/examples/tree/vova/aws-py-flask-redis-voting-app/aws-py-voting-app)
+The full code for the blog post can be [found on github.](https://github.com/pulumi/examples/tree/master/aws-py-voting-app)
