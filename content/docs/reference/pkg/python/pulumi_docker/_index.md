@@ -3,7 +3,10 @@ title: Package pulumi_docker
 title_tag: Package pulumi_docker | Python SDK
 linktitle: pulumi_docker
 notitle: true
+block_external_search_index: true
 ---
+
+{{< resource-docs-alert "docker" >}}
 
 <div class="section" id="pulumi-docker">
 <h1>Pulumi Docker<a class="headerlink" href="#pulumi-docker" title="Permalink to this headline">¶</a></h1>
