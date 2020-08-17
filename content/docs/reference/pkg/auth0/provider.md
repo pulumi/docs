@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package auth0"
-meta_desc: "Explore the Provider resource of the auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the auth0 package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package Auth0"
+meta_desc: "Explore the Provider resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the auth0 package. By default, resources use package-wide configuration"
 ---
 
 
@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>debug=None<span class="p">, </span>domain=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_id=None<span class="p">, </span>client_secret=None<span class="p">, </span>debug=None<span class="p">, </span>domain=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

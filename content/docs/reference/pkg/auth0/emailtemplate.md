@@ -1,8 +1,8 @@
 
 ---
 title: "EmailTemplate"
-title_tag: "Resource EmailTemplate | Package auth0"
-meta_desc: "Explore the EmailTemplate resource of the auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can have standard welcome, password reset, and account verification email-based workflows built right into Auth0. This resource allows you to configure email templates to customize the look, feel, and sender identities of emails sent by Auth0. Used in conjunction with configured email providers."
+title_tag: "Resource EmailTemplate | Package Auth0"
+meta_desc: "Explore the EmailTemplate resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can have standard welcome, password reset, and account verification email-based workflows built right into Auth0. This resource allows you to configure email templates to customize the look, feel, and sender identities of emails sent by Auth0. Used in conjunction with configured email providers."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the EmailTemplate resource of the auth0 package, including e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 With Auth0, you can have standard welcome, password reset, and account verification email-based workflows built right into Auth0. This resource allows you to configure email templates to customize the look, feel, and sender identities of emails sent by Auth0. Used in conjunction with configured email providers.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -83,9 +82,11 @@ my_email_template = auth0.EmailTemplate("myEmailTemplate",
     url_lifetime_in_seconds=3600,
     enabled=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as auth0 from "@pulumi/auth0";
@@ -110,6 +111,7 @@ const myEmailTemplate = new auth0.EmailTemplate("myEmailTemplate", {
     enabled: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -124,7 +126,7 @@ const myEmailTemplate = new auth0.EmailTemplate("myEmailTemplate", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#EmailTemplate">EmailTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>body=None<span class="p">, </span>enabled=None<span class="p">, </span>from_=None<span class="p">, </span>result_url=None<span class="p">, </span>subject=None<span class="p">, </span>syntax=None<span class="p">, </span>template=None<span class="p">, </span>url_lifetime_in_seconds=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.EmailTemplate">EmailTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>body=None<span class="p">, </span>enabled=None<span class="p">, </span>from_=None<span class="p">, </span>result_url=None<span class="p">, </span>subject=None<span class="p">, </span>syntax=None<span class="p">, </span>template=None<span class="p">, </span>url_lifetime_in_seconds=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -767,7 +769,7 @@ Get an existing EmailTemplate resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>body=None<span class="p">, </span>enabled=None<span class="p">, </span>from_=None<span class="p">, </span>result_url=None<span class="p">, </span>subject=None<span class="p">, </span>syntax=None<span class="p">, </span>template=None<span class="p">, </span>url_lifetime_in_seconds=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>body=None<span class="p">, </span>enabled=None<span class="p">, </span>from_=None<span class="p">, </span>result_url=None<span class="p">, </span>subject=None<span class="p">, </span>syntax=None<span class="p">, </span>template=None<span class="p">, </span>url_lifetime_in_seconds=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

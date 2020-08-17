@@ -1,8 +1,8 @@
 
 ---
 title: "Client"
-title_tag: "Resource Client | Package auth0"
-meta_desc: "Explore the Client resource of the auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With this resource, you can set up applications that use Auth0 for authentication and configure allowed callback URLs and secrets for these applications. Depending on your plan, you may also configure add-ons to allow your application to call another application&#39;s API (such as Firebase and AWS) on behalf of an authenticated user."
+title_tag: "Resource Client | Package Auth0"
+meta_desc: "Explore the Client resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With this resource, you can set up applications that use Auth0 for authentication and configure allowed callback URLs and secrets for these applications. Depending on your plan, you may also configure add-ons to allow your application to call another application&#39;s API (such as Firebase and AWS) on behalf of an authenticated user."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the Client resource of the auth0 package, including examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 With this resource, you can set up applications that use Auth0 for authentication and configure allowed callback URLs and secrets for these applications. Depending on your plan, you may also configure add-ons to allow your application to call another application's API (such as Firebase and AWS) on behalf of an authenticated user.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -116,6 +114,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -185,9 +184,11 @@ my_client = auth0.Client("myClient",
     token_endpoint_auth_method="client_secret_post",
     web_origins=["https://example.com"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as auth0 from "@pulumi/auth0";
@@ -251,6 +252,7 @@ const myClient = new auth0.Client("my_client", {
     webOrigins: ["https://example.com"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -265,7 +267,7 @@ const myClient = new auth0.Client("my_client", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#Client">Client</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons=None<span class="p">, </span>allowed_logout_urls=None<span class="p">, </span>allowed_origins=None<span class="p">, </span>app_type=None<span class="p">, </span>callbacks=None<span class="p">, </span>client_metadata=None<span class="p">, </span>client_secret_rotation_trigger=None<span class="p">, </span>cross_origin_auth=None<span class="p">, </span>cross_origin_loc=None<span class="p">, </span>custom_login_page=None<span class="p">, </span>custom_login_page_on=None<span class="p">, </span>custom_login_page_preview=None<span class="p">, </span>description=None<span class="p">, </span>encryption_key=None<span class="p">, </span>form_template=None<span class="p">, </span>grant_types=None<span class="p">, </span>initiate_login_uri=None<span class="p">, </span>is_first_party=None<span class="p">, </span>is_token_endpoint_ip_header_trusted=None<span class="p">, </span>jwt_configuration=None<span class="p">, </span>logo_uri=None<span class="p">, </span>mobile=None<span class="p">, </span>name=None<span class="p">, </span>oidc_conformant=None<span class="p">, </span>sso=None<span class="p">, </span>sso_disabled=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>web_origins=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Client">Client</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>addons=None<span class="p">, </span>allowed_logout_urls=None<span class="p">, </span>allowed_origins=None<span class="p">, </span>app_type=None<span class="p">, </span>callbacks=None<span class="p">, </span>client_metadata=None<span class="p">, </span>client_secret_rotation_trigger=None<span class="p">, </span>cross_origin_auth=None<span class="p">, </span>cross_origin_loc=None<span class="p">, </span>custom_login_page=None<span class="p">, </span>custom_login_page_on=None<span class="p">, </span>custom_login_page_preview=None<span class="p">, </span>description=None<span class="p">, </span>encryption_key=None<span class="p">, </span>form_template=None<span class="p">, </span>grant_types=None<span class="p">, </span>initiate_login_uri=None<span class="p">, </span>is_first_party=None<span class="p">, </span>is_token_endpoint_ip_header_trusted=None<span class="p">, </span>jwt_configuration=None<span class="p">, </span>logo_uri=None<span class="p">, </span>mobile=None<span class="p">, </span>name=None<span class="p">, </span>oidc_conformant=None<span class="p">, </span>sso=None<span class="p">, </span>sso_disabled=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>web_origins=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1872,7 +1874,7 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons=None<span class="p">, </span>allowed_logout_urls=None<span class="p">, </span>allowed_origins=None<span class="p">, </span>app_type=None<span class="p">, </span>callbacks=None<span class="p">, </span>client_id=None<span class="p">, </span>client_metadata=None<span class="p">, </span>client_secret=None<span class="p">, </span>client_secret_rotation_trigger=None<span class="p">, </span>cross_origin_auth=None<span class="p">, </span>cross_origin_loc=None<span class="p">, </span>custom_login_page=None<span class="p">, </span>custom_login_page_on=None<span class="p">, </span>custom_login_page_preview=None<span class="p">, </span>description=None<span class="p">, </span>encryption_key=None<span class="p">, </span>form_template=None<span class="p">, </span>grant_types=None<span class="p">, </span>initiate_login_uri=None<span class="p">, </span>is_first_party=None<span class="p">, </span>is_token_endpoint_ip_header_trusted=None<span class="p">, </span>jwt_configuration=None<span class="p">, </span>logo_uri=None<span class="p">, </span>mobile=None<span class="p">, </span>name=None<span class="p">, </span>oidc_conformant=None<span class="p">, </span>sso=None<span class="p">, </span>sso_disabled=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>web_origins=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>addons=None<span class="p">, </span>allowed_logout_urls=None<span class="p">, </span>allowed_origins=None<span class="p">, </span>app_type=None<span class="p">, </span>callbacks=None<span class="p">, </span>client_id=None<span class="p">, </span>client_metadata=None<span class="p">, </span>client_secret=None<span class="p">, </span>client_secret_rotation_trigger=None<span class="p">, </span>cross_origin_auth=None<span class="p">, </span>cross_origin_loc=None<span class="p">, </span>custom_login_page=None<span class="p">, </span>custom_login_page_on=None<span class="p">, </span>custom_login_page_preview=None<span class="p">, </span>description=None<span class="p">, </span>encryption_key=None<span class="p">, </span>form_template=None<span class="p">, </span>grant_types=None<span class="p">, </span>initiate_login_uri=None<span class="p">, </span>is_first_party=None<span class="p">, </span>is_token_endpoint_ip_header_trusted=None<span class="p">, </span>jwt_configuration=None<span class="p">, </span>logo_uri=None<span class="p">, </span>mobile=None<span class="p">, </span>name=None<span class="p">, </span>oidc_conformant=None<span class="p">, </span>sso=None<span class="p">, </span>sso_disabled=None<span class="p">, </span>token_endpoint_auth_method=None<span class="p">, </span>web_origins=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

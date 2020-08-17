@@ -1,8 +1,8 @@
 
 ---
 title: "RuleConfig"
-title_tag: "Resource RuleConfig | Package auth0"
-meta_desc: "Explore the RuleConfig resource of the auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can create custom Javascript snippets that run in a secure, isolated sandbox as part of your authentication pipeline, which are otherwise known as rules. This resource allows you to create and manage variables that are available to all rules via Auth0&#39;s global configuration object. Used in conjunction with configured rules."
+title_tag: "Resource RuleConfig | Package Auth0"
+meta_desc: "Explore the RuleConfig resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can create custom Javascript snippets that run in a secure, isolated sandbox as part of your authentication pipeline, which are otherwise known as rules. This resource allows you to create and manage variables that are available to all rules via Auth0&#39;s global configuration object. Used in conjunction with configured rules."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the RuleConfig resource of the auth0 package, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 With Auth0, you can create custom Javascript snippets that run in a secure, isolated sandbox as part of your authentication pipeline, which are otherwise known as rules. This resource allows you to create and manage variables that are available to all rules via Auth0's global configuration object. Used in conjunction with configured rules.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ my_rule_config = auth0.RuleConfig("myRuleConfig",
     key="foo",
     value="bar")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as auth0 from "@pulumi/auth0";
@@ -87,6 +88,7 @@ const myRuleConfig = new auth0.RuleConfig("my_rule_config", {
     value: "bar",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -101,7 +103,7 @@ const myRuleConfig = new auth0.RuleConfig("my_rule_config", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#RuleConfig">RuleConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.RuleConfig">RuleConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key=None<span class="p">, </span>value=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -480,7 +482,7 @@ Get an existing RuleConfig resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>key=None<span class="p">, </span>value=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>key=None<span class="p">, </span>value=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
