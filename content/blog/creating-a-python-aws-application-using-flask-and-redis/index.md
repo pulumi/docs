@@ -1,6 +1,6 @@
 ---
 title: "Creating a Python AWS Application Using Flask and Redis"
-date: 2020-08-11T15:06:26-07:00
+date: 2020-08-13T15:06:26-07:00
 meta_desc: A tutorial on how to create a Python AWS application using Flask, Redis, and Pulumi.
 meta_image: meta.png
 authors: ["vova-ivanov"]
@@ -15,12 +15,34 @@ I've recently started developing with Pulumi, and have begun to explore its inne
 
 This blog post recreates the existing [Typescript voting app example](https://www.pulumi.com/docs/tutorials/aws/aws-ts-voting-app/) step by step in Python with Flask as the frontend and Redis as the backend. In future blog posts, we will explore how to change the front and backends, how to upgrade the app with additional AWS services, and migrating from one cloud provider to another.
 
-The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-python`. Since we won't be modifying the application's frontend, we simply copy the `frontend/` folder from the example into our directory.
+The first step is to clone the [Typescript voting app example](https://www.pulumi.com/docs/tutorials/aws/aws-ts-voting-app/). We'll use a sparse clone to copy only the `aws-ts-voting-app` directory.
+
+```bash
+$ mkdir examples && cd examples
+$ git init
+$ git remote add origin -f https://github.com/pulumi/examples/
+$ git config core.sparseCheckout true
+$ echo aws-ts-voting-app >> .git/info/sparse-checkout
+$ git pull origin master
+```
+
+The next step is to create a new directory and initialize a Pulumi project with `pulumi new aws-python`.
+
+```bash
+$ mkdir aws-py-voting-app && cd aws-py-voting-app
+$ pulumi new aws-python
+```
+
+Since we won't be modifying the application's frontend, we simply copy the frontend/ folder from the example into our directory.
+
+```bash
+$ cp -r aws-ts-voting-app/frontend/ aws-py-voting-app/frontend
+```
 
 The `requirements.txt` file lists the libraries that the project depends on. We will need to add the following:
 
 ```
-pulumi-docker>=1.0.0,<3.0.0
+pulumi-docker>=2.0.0,<3.0.0
 ```
 
 The biggest difference between our project and the example is the code describing the cloud infrastructure we want to create. Instead of an `index.ts` file, the project uses a `__main__.py` file. The first few lines of the file will indicate which libraries to import and describe a pair of configuration options used by the application.
@@ -377,4 +399,4 @@ In this example, I showed how straightforward it is to convert infrastructure co
 
 Next week, I'll show how to modernize the application by changing the frontend from Flask to Django, and swapping out the database from Redis to Amazon RDS---using Pulumi to stand up new resources as I go.
 
-The full code for the blog post can be [found on github.](https://github.com/jetvova/examples/tree/vova/aws-py-flask-redis-voting-app/aws-py-voting-app)
+The full code for the blog post can be [found on github.](https://github.com/pulumi/examples/tree/master/aws-py-voting-app)
