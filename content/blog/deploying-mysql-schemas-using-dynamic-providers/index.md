@@ -1,6 +1,6 @@
 ---
 title: "Deploying a MySQL schema using Dynamic Providers"
-date: 2020-08-16T15:06:26-07:00
+date: 2020-08-18
 meta_desc: Leveraging Pulumi Dynamic Providers to expand opportunities in cloud architecture design
 meta_image: meta.png
 authors: ["vova-ivanov"]
@@ -13,7 +13,7 @@ In our [previous post](https://www.pulumi.com/blog/creating-a-python-aws-applica
 
 The existing Pulumi MySQL provider allows us to create the MySQL server, database, and different users. However, it would be great to be able to create the tables as part of the deployment too, since database schema can be considered a type of infrastructure. Because creating tables requires admin credentials, deploying them along with the other infrastructure allows us to limit the sharing of admin credentials, and run the application under restricted permissions at all times.
 
-A great advantage of Pulumi is its extendability and modularity. If support for something isn't implemented, it is an easy process to write it yourself. We will be writing a Dynamic Provider that connects to a MySQL server, initializes a table, and creates some starting data all during `pulumi up`.
+A great advantage of Pulumi is its extensible and modular design. If support for something isn't implemented, you can write it yourself easily. We will be writing a Dynamic Provider that connects to a MySQL server, initializes a table, and creates some starting data all during `pulumi up`.
 
 The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-python`.
 
@@ -41,7 +41,7 @@ import binascii
 import os
 ```
 
-After setting up the imports, the next step is to begin writing the code. The first component of the Dynamic Provider is a class that represents the arguments that the dynamic provider needs when being created. These arguments are given a type `Input[str]`, and are automatically converted to regular `str` before being passed to the functions in the provider.
+After setting up the imports, the next step is to write the code. The first component of the Dynamic Provider is a class with the arguments that the dynamic provider requires when created. These arguments are given a type `Input[str]`, and are automatically converted to regular `str` before being passed to the functions in the provider.
 
 ```python
 class SchemaInputs(object):
@@ -60,7 +60,7 @@ class SchemaInputs(object):
         self.deletion_script = deletion_script
 ```
 
-The second step is to write the Dynamic Provider itself. The provider handles all the create, read, update, and delete operations the resource needs. The `create` function creates a new resource and assigns it a unique ID, the `delete` function deletes an existing resource, the `diff` function determines if we can update the resource without having to fully replace it, and the `update` function performs those updates.
+The second step is to write the Dynamic Provider. The provider handles the create, read, update, and delete operations the resource needs. The `create` function instantiates a new resource and assigns it a unique ID, the `delete` function deletes an existing resource, the `diff` function determines if we can update the resource without having to fully replace it, and the `update` function performs the update.
 
 ```python
 class SchemaProvider(ResourceProvider):
@@ -97,7 +97,7 @@ class SchemaProvider(ResourceProvider):
         return UpdateResult(outs={**newInputs})
 ```
 
-And lastly, is the main Schema resource that we instantiate in our infrastructure code. We make all the inputs to our provider availible as outputs, so that they can be accessed and exported.
+And lastly, we add the main Schema resource that we instantiate in our infrastructure code. We make all the inputs to our provider available as outputs, so that they can be accessed and exported.
 
 ```python
 class Schema(Resource):
@@ -219,7 +219,7 @@ mysql_provider = mysql.Provider("mysql-provider",
     password=admin_password)
 ```
 
-An example database is initialized, and a user is created to manage it.
+The example database is initialized, and a user is created to manage it.
 
 ```python
 mysql_database = mysql.Database("mysql-database",
@@ -244,7 +244,7 @@ mysql_access_grant = mysql.Grant("mysql-access-grant",
     opts=pulumi.ResourceOptions(provider=mysql_provider))
 ```
 
-Now, we begin to use the Dynamic Provider we created. The provider takes in a `creation_script` as a parameter, connects to our MySQL server, and runs it during deployment.
+Now, we we use our Dynamic Provider. The provider takes `creation_script` as a parameter, connects to our MySQL server, and runs it during deployment.
 
 ```python
 creation_script = """
@@ -264,7 +264,7 @@ The provider also takes in a `deletion_script`, which it uses to undo all of its
 deletion_script = "DROP TABLE votesTable"
 ```
 
-We can now create our resource. It behaves the same way as any other Pulumi resource, but takes its arguments as a `SchemaInputs` object.
+When create our resource, it behaves the same way as any other Pulumi resource, but takes its arguments as a `SchemaInputs` object.
 
 ```python
 mysql_votes_table = Schema(name="mysql_votes_table",
@@ -277,9 +277,8 @@ We can export the ID of our new resource, and view it when it is deployed.
 pulumi.export("dynamic-resource-id",mysql_votes_table.id)
 ```
 
-In this example, I showed how straightforward it is to convert infrastructure code defined in TypeScript to one defined in Python. Teams often choose to standardize on one language and Pulumi expands that choice, allowing them to standardize on one language for the frontend, the backend, and the infrastructure.
 
-In this example, I showed how straightforward it is to write additional code for Pulumi and expand its functionality even further. Dynamic Providers and resources allow for excellent flexibility in cloud architecture design, and help break down barriers that would otherwise be difficult to overcome.
+In this example, I showed how straightforward it is to write additional code for Pulumi and expand its functionality even further. Dynamic Providers enable excellent flexibility in cloud architecture design, and help break down barriers that would otherwise be challenging to overcome.
 
 Next week, I'll change the frontend from Flask to Django, and will show how to integrate it with our new MySQL server.
 
