@@ -1,8 +1,8 @@
 
 ---
 title: "Connection"
-title_tag: "Resource Connection | Package auth0"
-meta_desc: "Explore the Connection resource of the auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can define sources of users, otherwise known as connections, which may include identity providers (such as Google or LinkedIn), databases, or passwordless authentication methods. This resource allows you to configure and manage connections to be used with your clients and users."
+title_tag: "Resource Connection | Package Auth0"
+meta_desc: "Explore the Connection resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can define sources of users, otherwise known as connections, which may include identity providers (such as Google or LinkedIn), databases, or passwordless authentication methods. This resource allows you to configure and manage connections to be used with your clients and users."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the Connection resource of the auth0 package, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 With Auth0, you can define sources of users, otherwise known as connections, which may include identity providers (such as Google or LinkedIn), databases, or passwordless authentication methods. This resource allows you to configure and manage connections to be used with your clients and users.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -85,6 +83,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -135,9 +134,11 @@ my_waad_connection = auth0.Connection("myWaadConnection",
     },
     strategy="waad")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as auth0 from "@pulumi/auth0";
@@ -182,6 +183,7 @@ const myWaadConnection = new auth0.Connection("my_waad_connection", {
     strategy: "waad",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -196,7 +198,7 @@ const myWaadConnection = new auth0.Connection("my_waad_connection", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#Connection">Connection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>display_name=None<span class="p">, </span>enabled_clients=None<span class="p">, </span>is_domain_connection=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>realms=None<span class="p">, </span>strategy=None<span class="p">, </span>strategy_version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Connection">Connection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>display_name=None<span class="p">, </span>enabled_clients=None<span class="p">, </span>is_domain_connection=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>realms=None<span class="p">, </span>strategy=None<span class="p">, </span>strategy_version=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -839,7 +841,7 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>display_name=None<span class="p">, </span>enabled_clients=None<span class="p">, </span>is_domain_connection=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>realms=None<span class="p">, </span>strategy=None<span class="p">, </span>strategy_version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>display_name=None<span class="p">, </span>enabled_clients=None<span class="p">, </span>is_domain_connection=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>realms=None<span class="p">, </span>strategy=None<span class="p">, </span>strategy_version=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3326,8 +3328,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="from__python">
-<a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
+        <span id="from_python">
+<a href="#from_python" style="color: inherit; text-decoration: inherit;">from</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -1,8 +1,8 @@
 
 ---
 title: "Rule"
-title_tag: "Resource Rule | Package auth0"
-meta_desc: "Explore the Rule resource of the auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can create custom Javascript snippets that run in a secure, isolated sandbox as part of your authentication pipeline, which are otherwise known as rules. This resource allows you to create and manage rules. You can create global variable for use with rules by using the auth0..RuleConfig resource."
+title_tag: "Resource Rule | Package Auth0"
+meta_desc: "Explore the Rule resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can create custom Javascript snippets that run in a secure, isolated sandbox as part of your authentication pipeline, which are otherwise known as rules. This resource allows you to create and manage rules. You can create global variable for use with rules by using the auth0..RuleConfig resource."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the Rule resource of the auth0 package, including examples, 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 With Auth0, you can create custom Javascript snippets that run in a secure, isolated sandbox as part of your authentication pipeline, which are otherwise known as rules. This resource allows you to create and manage rules. You can create global variable for use with rules by using the auth0..RuleConfig resource.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ my_rule_config = auth0.RuleConfig("myRuleConfig",
     key="foo",
     value="bar")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as auth0 from "@pulumi/auth0";
@@ -87,6 +88,7 @@ const myRuleConfig = new auth0.RuleConfig("my_rule_config", {
     value: "bar",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -101,7 +103,7 @@ const myRuleConfig = new auth0.RuleConfig("my_rule_config", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#Rule">Rule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>order=None<span class="p">, </span>script=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Rule">Rule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>order=None<span class="p">, </span>script=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -568,7 +570,7 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>order=None<span class="p">, </span>script=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>order=None<span class="p">, </span>script=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
