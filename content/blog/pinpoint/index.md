@@ -26,7 +26,6 @@ In this blog post, we’ll share some simple and intuitive ways in which Pulumi 
 As a startup, we are always budget-conscious. Every tool we use has to justify either the up-front subscription cost or development time, or both. To tamp down our AWS EC2 costs, we decided to leverage EC2 spot instances as worker nodes in our development Kubernetes cluster. Spot instances are highly cost-efficient because they use spare compute capacity within a region at a fraction of the on-demand instance price. When you request a spot instance, you must offer the maximum price you are willing to pay. This price can fluctuate based on demand in a particular region, but will always be less than or equal to the current on-demand price. Knowing this, we could use Pulumi’s JavaScript AWS library to get the current on-demand price for a given instance type and plug that directly into the spotPrice property of the node group configuration.
 
 ```js
-
 function getOnDemandPrice(instanceType: aws.ec2.InstanceType): pulumi.Output<any> {
   return pulumi.output(aws.pricing.getProduct({
     filters: [
@@ -79,59 +78,6 @@ function getOnDemandPrice(instanceType: aws.ec2.InstanceType): pulumi.Output<any
     instanceType: instanceType,
     spotPrice: getOnDemandPrice(instanceType)
   })
-
-function getOnDemandPrice(instanceType: aws.ec2.InstanceType): pulumi.Output<any> {
- return pulumi.output(aws.pricing.getProduct({
-   filters: [
-     {
-       field: "instanceType",
-       value: `${instanceType}`,
-     },
-     {
-       field: "operatingSystem",
-       value: "Linux",
-     },
-     {
-       field: "location",
-       value: "US East (N. Virginia)",
-     },
-     {
-       field: "preInstalledSw",
-       value: "NA",
-     },
-     {
-       field: "usageType",
-       value: `BoxUsage:${instanceType}`,
-     },
-     {
-       field: "termType",
-       value: "OnDemand",
-     },
-   ],
-   serviceCode: "AmazonEC2",
- }, { async: true })).apply(data => {
-   let result = JSON.parse(data.result)
-   let typeOnDemand = result.terms.OnDemand
-   let skuTermCode = Object.keys(typeOnDemand)[0]
-   let rateCode = Object.keys(typeOnDemand[skuTermCode].priceDimensions)[0]
-   let price = typeOnDemand[skuTermCode].priceDimensions[rateCode].pricePerUnit.USD
-   return price
- })
-}
-
- cluster.createNodeGroup(`${stack.env}-${name}`, {
-   amiId: ami,
-   version: kubernetesVersion,
-   instanceProfile: nodeGroupInstanceProfile,
-   minSize: 1,
-   maxSize: 10,
-   desiredCapacity: 5,
-   nodeRootVolumeSize: 100,
-   nodeAssociatePublicIpAddress: false,
-   nodeSubnetIds: stack.privateSubnets,
-   instanceType: instanceType,
-   spotPrice: getOnDemandPrice(instanceType)
- })
 ```
 
 And just like that, we can quickly provision spot instances on our cluster! Better yet, we don’t ever have to worry about setting a valid spot price or managing this process via custom scripts in a CI/CD pipeline. The entire deployment is easily managed within the same file.
@@ -165,27 +111,6 @@ As an example, we recently discovered that some versions of the Traefik Helm cha
       },
     },
   }, { provider: provider });
-```
-
-```javascript
-function setNamespace(obj: any) {
-   if (obj.metadata.namespace === undefined) {
-     obj.metadata.namespace = 'platform-services';
-   }
- }
-
-new k8s.helm.v3.Chart("traefik", {
-   repo: "traefik",
-   chart: "traefik",
-   version: "6.0.0",
-   namespace: 'platform-services',
-   transformations: [setNamespace],
-   values: {
-     deployment: {
-       replicas: 3
-     },
-   },
- }, { provider: provider });
 ```
 
 This will run the transformation on every manifest used by the chart, fixing our issue in only a few code lines.
