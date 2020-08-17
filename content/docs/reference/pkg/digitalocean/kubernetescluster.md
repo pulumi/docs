@@ -1,8 +1,8 @@
 
 ---
 title: "KubernetesCluster"
-title_tag: "Resource KubernetesCluster | Package Digital Ocean"
-meta_desc: "Explore the KubernetesCluster resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the [official documentation](https://www.digitalocean.com/docs/kubernetes/)."
+title_tag: "Resource KubernetesCluster | Package DigitalOcean"
+meta_desc: "Explore the KubernetesCluster resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the [official documentation](https://www.digitalocean.com/docs/kubernetes/)."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the KubernetesCluster resource of the Digital Ocean package,
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the [official documentation](https://www.digitalocean.com/docs/kubernetes/).
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +62,11 @@ foo = digitalocean.KubernetesCluster("foo",
     region="nyc1",
     version="1.15.5-do.1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -81,6 +82,7 @@ const foo = new digitalocean.KubernetesCluster("foo", {
     version: "1.15.5-do.1",
 });
 ```
+
 {{% /example %}}
 
 ### Autoscaling Example
@@ -110,6 +112,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -132,9 +135,11 @@ foo = digitalocean.KubernetesCluster("foo",
     region="nyc1",
     version="1.15.5-do.1")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -151,6 +156,7 @@ const foo = new digitalocean.KubernetesCluster("foo", {
     version: "1.15.5-do.1",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -165,7 +171,7 @@ const foo = new digitalocean.KubernetesCluster("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#KubernetesCluster">KubernetesCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.KubernetesCluster">KubernetesCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1132,7 +1138,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_subnet=None<span class="p">, </span>created_at=None<span class="p">, </span>endpoint=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>kube_configs=None<span class="p">, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>service_subnet=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>updated_at=None<span class="p">, </span>version=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_subnet=None<span class="p">, </span>created_at=None<span class="p">, </span>endpoint=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>kube_configs=None<span class="p">, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>service_subnet=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>updated_at=None<span class="p">, </span>version=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

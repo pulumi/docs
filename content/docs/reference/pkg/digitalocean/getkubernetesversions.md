@@ -1,8 +1,8 @@
 
 ---
 title: "GetKubernetesVersions"
-title_tag: "Function GetKubernetesVersions | Package Digital Ocean"
-meta_desc: "Explore the GetKubernetesVersions function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Provides access to the available DigitalOcean Kubernetes Service versions."
+title_tag: "Function GetKubernetesVersions | Package DigitalOcean"
+meta_desc: "Explore the GetKubernetesVersions function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Provides access to the available DigitalOcean Kubernetes Service versions."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the GetKubernetesVersions function of the Digital Ocean pack
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides access to the available DigitalOcean Kubernetes Service versions.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -36,6 +34,7 @@ class MyStack : Stack
     public Output<string> K8s_versions { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +49,11 @@ import pulumi_digitalocean as digitalocean
 example = digitalocean.get_kubernetes_versions()
 pulumi.export("k8s-versions", example.valid_versions)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -60,6 +61,7 @@ import * as digitalocean from "@pulumi/digitalocean";
 const example = digitalocean.getKubernetesVersions({});
 export const k8s_versions = example.then(example => example.validVersions);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

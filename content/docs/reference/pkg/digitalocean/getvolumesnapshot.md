@@ -1,8 +1,8 @@
 
 ---
 title: "GetVolumeSnapshot"
-title_tag: "Function GetVolumeSnapshot | Package Digital Ocean"
-meta_desc: "Explore the GetVolumeSnapshot function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Volume snapshots are saved instances of a block storage volume. Use this data"
+title_tag: "Function GetVolumeSnapshot | Package DigitalOcean"
+meta_desc: "Explore the GetVolumeSnapshot function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Volume snapshots are saved instances of a block storage volume. Use this data"
 ---
 
 
@@ -13,8 +13,6 @@ meta_desc: "Explore the GetVolumeSnapshot function of the Digital Ocean package,
 Volume snapshots are saved instances of a block storage volume. Use this data
 source to retrieve the ID of a DigitalOcean volume snapshot for use in other
 resources.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ snapshot = digitalocean.get_volume_snapshot(most_recent=True,
     name_regex="^web",
     region="nyc3")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -68,6 +69,7 @@ const snapshot = pulumi.output(digitalocean.getVolumeSnapshot({
     region: "nyc3",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

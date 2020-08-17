@@ -1,8 +1,8 @@
 
 ---
 title: "GetImages"
-title_tag: "Function GetImages | Package Digital Ocean"
-meta_desc: "Explore the GetImages function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on images for use in other resources (e.g. creating a Droplet"
+title_tag: "Function GetImages | Package DigitalOcean"
+meta_desc: "Explore the GetImages function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on images for use in other resources (e.g. creating a Droplet"
 ---
 
 
@@ -19,8 +19,6 @@ of the image's data.
 
 Note: You can use the `digitalocean..getImage` data source to obtain metadata
 about a single image if you already know the `slug`, unique `name`, or `id` to retrieve.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ ubuntu = digitalocean.get_images(filters=[{
     "values": ["Ubuntu"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -84,6 +85,7 @@ const ubuntu = pulumi.output(digitalocean.getImages({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

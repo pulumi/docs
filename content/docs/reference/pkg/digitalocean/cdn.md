@@ -1,8 +1,8 @@
 
 ---
 title: "Cdn"
-title_tag: "Resource Cdn | Package Digital Ocean"
-meta_desc: "Explore the Cdn resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean CDN Endpoint resource for use with Spaces."
+title_tag: "Resource Cdn | Package DigitalOcean"
+meta_desc: "Explore the Cdn resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean CDN Endpoint resource for use with Spaces."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the Cdn resource of the Digital Ocean package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -46,6 +44,7 @@ class MyStack : Stack
     public Output<string> Fqdn { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -65,9 +64,11 @@ mybucket = digitalocean.SpacesBucket("mybucket",
 mycdn = digitalocean.Cdn("mycdn", origin=mybucket.bucket_domain_name)
 pulumi.export("fqdn", mycdn.endpoint)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -81,6 +82,7 @@ const mybucket = new digitalocean.SpacesBucket("mybucket", {
 const mycdn = new digitalocean.Cdn("mycdn", {origin: mybucket.bucketDomainName});
 export const fqdn = mycdn.endpoint;
 ```
+
 {{% /example %}}
 
 ### Custom Sub-Domain Example
@@ -119,6 +121,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -144,9 +147,11 @@ mycdn = digitalocean.Cdn("mycdn",
     custom_domain="static.example.com",
     certificate_id=cert.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -168,6 +173,7 @@ const mycdn = new digitalocean.Cdn("mycdn", {
     certificateId: cert.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -182,7 +188,7 @@ const mycdn = new digitalocean.Cdn("mycdn", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#Cdn">Cdn</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_id=None<span class="p">, </span>custom_domain=None<span class="p">, </span>origin=None<span class="p">, </span>ttl=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.Cdn">Cdn</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_id=None<span class="p">, </span>custom_domain=None<span class="p">, </span>origin=None<span class="p">, </span>ttl=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -737,7 +743,7 @@ Get an existing Cdn resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>certificate_id=None<span class="p">, </span>created_at=None<span class="p">, </span>custom_domain=None<span class="p">, </span>endpoint=None<span class="p">, </span>origin=None<span class="p">, </span>ttl=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>certificate_id=None<span class="p">, </span>created_at=None<span class="p">, </span>custom_domain=None<span class="p">, </span>endpoint=None<span class="p">, </span>origin=None<span class="p">, </span>ttl=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -1,8 +1,8 @@
 
 ---
 title: "SshKey"
-title_tag: "Resource SshKey | Package Digital Ocean"
-meta_desc: "Explore the SshKey resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean SSH key resource to allow you to manage SSH"
+title_tag: "Resource SshKey | Package DigitalOcean"
+meta_desc: "Explore the SshKey resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean SSH key resource to allow you to manage SSH"
 ---
 
 
@@ -14,8 +14,6 @@ Provides a DigitalOcean SSH key resource to allow you to manage SSH
 keys for Droplet access. Keys created with this resource
 can be referenced in your Droplet configuration via their ID or
 fingerprint.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -72,9 +71,11 @@ web = digitalocean.Droplet("web",
     size="s-1vcpu-1gb",
     ssh_keys=[default.fingerprint])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -90,6 +91,7 @@ const web = new digitalocean.Droplet("web", {
     sshKeys: [_default.fingerprint],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -104,7 +106,7 @@ const web = new digitalocean.Droplet("web", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#SshKey">SshKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>public_key=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.SshKey">SshKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>public_key=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -531,7 +533,7 @@ Get an existing SshKey resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>fingerprint=None<span class="p">, </span>name=None<span class="p">, </span>public_key=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>fingerprint=None<span class="p">, </span>name=None<span class="p">, </span>public_key=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

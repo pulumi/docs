@@ -1,8 +1,8 @@
 
 ---
 title: "DatabaseCluster"
-title_tag: "Resource DatabaseCluster | Package Digital Ocean"
-meta_desc: "Explore the DatabaseCluster resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean database cluster resource."
+title_tag: "Resource DatabaseCluster | Package DigitalOcean"
+meta_desc: "Explore the DatabaseCluster resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean database cluster resource."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the DatabaseCluster resource of the Digital Ocean package, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a DigitalOcean database cluster resource.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,6 +57,7 @@ postgres_example = digitalocean.DatabaseCluster("postgres-example",
     size="db-s-1vcpu-1gb",
     version="11")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -73,6 +73,7 @@ const postgres_example = new digitalocean.DatabaseCluster("postgres-example", {
     version: "11",
 });
 ```
+
 {{% /example %}}
 
 ### Create a new MySQL database cluster
@@ -97,6 +98,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -115,6 +117,7 @@ mysql_example = digitalocean.DatabaseCluster("mysql-example",
     size="db-s-1vcpu-1gb",
     version="8")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -130,6 +133,7 @@ const mysql_example = new digitalocean.DatabaseCluster("mysql-example", {
     version: "8",
 });
 ```
+
 {{% /example %}}
 
 ### Create a new Redis database cluster
@@ -154,6 +158,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -172,6 +177,7 @@ redis_example = digitalocean.DatabaseCluster("redis-example",
     size="db-s-1vcpu-1gb",
     version="5")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
@@ -187,6 +193,7 @@ const redis_example = new digitalocean.DatabaseCluster("redis-example", {
     version: "5",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -201,7 +208,7 @@ const redis_example = new digitalocean.DatabaseCluster("redis-example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#DatabaseCluster">DatabaseCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>engine=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>maintenance_windows=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>sql_mode=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.DatabaseCluster">DatabaseCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>engine=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>maintenance_windows=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>sql_mode=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1372,7 +1379,7 @@ Get an existing DatabaseCluster resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_urn=None<span class="p">, </span>database=None<span class="p">, </span>engine=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>host=None<span class="p">, </span>maintenance_windows=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>private_host=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>private_uri=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>sql_mode=None<span class="p">, </span>tags=None<span class="p">, </span>uri=None<span class="p">, </span>user=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_urn=None<span class="p">, </span>database=None<span class="p">, </span>engine=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>host=None<span class="p">, </span>maintenance_windows=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>password=None<span class="p">, </span>port=None<span class="p">, </span>private_host=None<span class="p">, </span>private_network_uuid=None<span class="p">, </span>private_uri=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>sql_mode=None<span class="p">, </span>tags=None<span class="p">, </span>uri=None<span class="p">, </span>user=None<span class="p">, </span>version=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

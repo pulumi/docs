@@ -1,8 +1,8 @@
 
 ---
 title: "GetSpacesBucketObject"
-title_tag: "Function GetSpacesBucketObject | Package Digital Ocean"
-meta_desc: "Explore the GetSpacesBucketObject function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. The Spaces object data source allows access to the metadata and"
+title_tag: "Function GetSpacesBucketObject | Package DigitalOcean"
+meta_desc: "Explore the GetSpacesBucketObject function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. The Spaces object data source allows access to the metadata and"
 ---
 
 
@@ -16,8 +16,6 @@ _optionally_ (see below) content of an object stored inside a Spaces bucket.
 > **Note:** The content of an object (`body` field) is available only for objects which have a human-readable
 `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially
 downloading large amount of data which would be thrown away in favor of metadata.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ web = digitalocean.Droplet("web",
     size="s-1vcpu-1gb",
     user_data=bootstrap_script.body)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -89,6 +90,7 @@ const web = new digitalocean.Droplet("web", {
     userData: bootstrapScript.then(bootstrapScript => bootstrapScript.body),
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

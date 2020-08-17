@@ -1,8 +1,8 @@
 
 ---
 title: "GetSpacesBuckets"
-title_tag: "Function GetSpacesBuckets | Package Digital Ocean"
-meta_desc: "Explore the GetSpacesBuckets function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on Spaces buckets for use in other resources, with the ability to filter and sort the results."
+title_tag: "Function GetSpacesBuckets | Package DigitalOcean"
+meta_desc: "Explore the GetSpacesBuckets function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on Spaces buckets for use in other resources, with the ability to filter and sort the results."
 ---
 
 
@@ -15,8 +15,6 @@ If no filters are specified, all Spaces buckets will be returned.
 
 Note: You can use the `digitalocean..SpacesBucket` data source to
 obtain metadata about a single bucket if you already know its `name` and `region`.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -66,9 +65,11 @@ nyc3 = digitalocean.get_spaces_buckets(filters=[{
     "values": ["nyc3"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -80,6 +81,7 @@ const nyc3 = pulumi.output(digitalocean.getSpacesBuckets({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

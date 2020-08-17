@@ -1,8 +1,8 @@
 
 ---
 title: "GetVpc"
-title_tag: "Function GetVpc | Package Digital Ocean"
-meta_desc: "Explore the GetVpc function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Retrieve information about a VPC for use in other resources."
+title_tag: "Function GetVpc | Package DigitalOcean"
+meta_desc: "Explore the GetVpc function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Retrieve information about a VPC for use in other resources."
 ---
 
 
@@ -18,8 +18,6 @@ this provider or you need to utilize any of the VPC's data.
 
 VPCs may be looked up by `id` or `name`. Specifying a `region` will
 return that that region's default VPC.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -56,9 +55,11 @@ import pulumi_digitalocean as digitalocean
 
 example = digitalocean.get_vpc(name="example-network")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -67,6 +68,7 @@ const example = pulumi.output(digitalocean.getVpc({
     name: "example-network",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -1,8 +1,8 @@
 
 ---
 title: "GetKubernetesCluster"
-title_tag: "Function GetKubernetesCluster | Package Digital Ocean"
-meta_desc: "Explore the GetKubernetesCluster function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Retrieves information about a DigitalOcean Kubernetes cluster for use in other resources. This data source provides all of the cluster&#39;s properties as configured on your DigitalOcean account. This is useful if the cluster in question is not managed by this provider."
+title_tag: "Function GetKubernetesCluster | Package DigitalOcean"
+meta_desc: "Explore the GetKubernetesCluster function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Retrieves information about a DigitalOcean Kubernetes cluster for use in other resources. This data source provides all of the cluster&#39;s properties as configured on your DigitalOcean account. This is useful if the cluster in question is not managed by this provider."
 ---
 
 
@@ -11,9 +11,6 @@ meta_desc: "Explore the GetKubernetesCluster function of the Digital Ocean packa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Retrieves information about a DigitalOcean Kubernetes cluster for use in other resources. This data source provides all of the cluster's properties as configured on your DigitalOcean account. This is useful if the cluster in question is not managed by this provider.
-
-{{% examples %}}
-{{% /examples %}}
 
 
 

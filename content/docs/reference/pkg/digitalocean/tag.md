@@ -1,8 +1,8 @@
 
 ---
 title: "Tag"
-title_tag: "Resource Tag | Package Digital Ocean"
-meta_desc: "Explore the Tag resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Tag resource. A Tag is a label that can be applied to a"
+title_tag: "Resource Tag | Package DigitalOcean"
+meta_desc: "Explore the Tag resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Tag resource. A Tag is a label that can be applied to a"
 ---
 
 
@@ -14,8 +14,6 @@ Provides a DigitalOcean Tag resource. A Tag is a label that can be applied to a
 Droplet resource in order to better organize or facilitate the lookups and
 actions on it. Tags created with this resource can be referenced in your Droplet
 configuration via their ID or name.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ web = digitalocean.Droplet("web",
     size="s-1vcpu-1gb",
     tags=[foobar.id])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -87,6 +88,7 @@ const web = new digitalocean.Droplet("web", {
     tags: [foobar.id],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -101,7 +103,7 @@ const web = new digitalocean.Droplet("web", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#Tag">Tag</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.Tag">Tag</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -700,7 +702,7 @@ Get an existing Tag resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>databases_count=None<span class="p">, </span>droplets_count=None<span class="p">, </span>images_count=None<span class="p">, </span>name=None<span class="p">, </span>total_resource_count=None<span class="p">, </span>volume_snapshots_count=None<span class="p">, </span>volumes_count=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>databases_count=None<span class="p">, </span>droplets_count=None<span class="p">, </span>images_count=None<span class="p">, </span>name=None<span class="p">, </span>total_resource_count=None<span class="p">, </span>volume_snapshots_count=None<span class="p">, </span>volumes_count=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

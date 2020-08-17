@@ -1,8 +1,8 @@
 
 ---
 title: "VolumeSnapshot"
-title_tag: "Resource VolumeSnapshot | Package Digital Ocean"
-meta_desc: "Explore the VolumeSnapshot resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot from an existing volume."
+title_tag: "Resource VolumeSnapshot | Package DigitalOcean"
+meta_desc: "Explore the VolumeSnapshot resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot from an existing volume."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the VolumeSnapshot resource of the Digital Ocean package, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot from an existing volume.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -42,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ foobar_volume = digitalocean.Volume("foobarVolume",
     description="an example volume")
 foobar_volume_snapshot = digitalocean.VolumeSnapshot("foobarVolumeSnapshot", volume_id=foobar_volume.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -73,6 +74,7 @@ const foobarVolume = new digitalocean.Volume("foobarVolume", {
 });
 const foobarVolumeSnapshot = new digitalocean.VolumeSnapshot("foobarVolumeSnapshot", {volumeId: foobarVolume.id});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -87,7 +89,7 @@ const foobarVolumeSnapshot = new digitalocean.VolumeSnapshot("foobarVolumeSnapsh
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#VolumeSnapshot">VolumeSnapshot</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.VolumeSnapshot">VolumeSnapshot</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -686,7 +688,7 @@ Get an existing VolumeSnapshot resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created_at=None<span class="p">, </span>min_disk_size=None<span class="p">, </span>name=None<span class="p">, </span>regions=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, </span>volume_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created_at=None<span class="p">, </span>min_disk_size=None<span class="p">, </span>name=None<span class="p">, </span>regions=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, </span>volume_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

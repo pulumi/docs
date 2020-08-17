@@ -1,8 +1,8 @@
 
 ---
 title: "SpacesBucket"
-title_tag: "Resource SpacesBucket | Package Digital Ocean"
-meta_desc: "Explore the SpacesBucket resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a bucket resource for Spaces, DigitalOcean&#39;s object storage product."
+title_tag: "Resource SpacesBucket | Package DigitalOcean"
+meta_desc: "Explore the SpacesBucket resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a bucket resource for Spaces, DigitalOcean&#39;s object storage product."
 ---
 
 
@@ -56,8 +56,6 @@ class MyStack : Stack
 
 For more information, See [An Introduction to DigitalOcean Spaces](https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-spaces)
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -80,6 +78,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -93,9 +92,11 @@ import pulumi_digitalocean as digitalocean
 
 foobar = digitalocean.SpacesBucket("foobar", region="nyc3")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -104,6 +105,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
     region: "nyc3",
 });
 ```
+
 {{% /example %}}
 
 ### Create a New Bucket With CORS Rules
@@ -161,6 +163,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -193,9 +196,11 @@ foobar = digitalocean.SpacesBucket("foobar",
     ],
     region="nyc3")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -222,6 +227,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
     region: "nyc3",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -236,7 +242,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#SpacesBucket">SpacesBucket</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>versioning=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.SpacesBucket">SpacesBucket</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>versioning=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -923,7 +929,7 @@ Get an existing SpacesBucket resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>bucket_domain_name=None<span class="p">, </span>bucket_urn=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>versioning=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>bucket_domain_name=None<span class="p">, </span>bucket_urn=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>versioning=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

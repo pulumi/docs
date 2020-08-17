@@ -1,8 +1,8 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Package Digital Ocean"
-meta_desc: "Explore the Certificate resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Certificate resource that allows you to manage"
+title_tag: "Resource Certificate | Package DigitalOcean"
+meta_desc: "Explore the Certificate resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Certificate resource that allows you to manage"
 ---
 
 
@@ -16,8 +16,6 @@ Certificates created with this resource can be referenced in your
 Load Balancer configuration via their ID. The certificate can either
 be a custom one provided by you or automatically generated one with
 Let's Encrypt.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -62,9 +61,11 @@ cert = digitalocean.Certificate("cert",
     leaf_certificate=(lambda path: open(path).read())("/Users/myuser/certs/cert.pem"),
     certificate_chain=(lambda path: open(path).read())("/Users/myuser/certs/fullchain.pem"))
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -77,6 +78,7 @@ const cert = new digitalocean.Certificate("cert", {
     certificateChain: fs.readFileSync("/Users/myuser/certs/fullchain.pem"),
 });
 ```
+
 {{% /example %}}
 
 ### Let&#39;s Encrypt Certificate
@@ -101,6 +103,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -116,9 +119,11 @@ cert = digitalocean.Certificate("cert",
     domains=["example.com"],
     type="lets_encrypt")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -128,6 +133,7 @@ const cert = new digitalocean.Certificate("cert", {
     type: "lets_encrypt",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -142,7 +148,7 @@ const cert = new digitalocean.Certificate("cert", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#Certificate">Certificate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>domains=None<span class="p">, </span>leaf_certificate=None<span class="p">, </span>name=None<span class="p">, </span>private_key=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.Certificate">Certificate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>domains=None<span class="p">, </span>leaf_certificate=None<span class="p">, </span>name=None<span class="p">, </span>private_key=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -853,7 +859,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>certificate_chain=None<span class="p">, </span>domains=None<span class="p">, </span>leaf_certificate=None<span class="p">, </span>name=None<span class="p">, </span>not_after=None<span class="p">, </span>private_key=None<span class="p">, </span>sha1_fingerprint=None<span class="p">, </span>state=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>certificate_chain=None<span class="p">, </span>domains=None<span class="p">, </span>leaf_certificate=None<span class="p">, </span>name=None<span class="p">, </span>not_after=None<span class="p">, </span>private_key=None<span class="p">, </span>sha1_fingerprint=None<span class="p">, </span>state=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

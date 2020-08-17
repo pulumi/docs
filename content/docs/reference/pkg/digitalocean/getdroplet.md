@@ -1,8 +1,8 @@
 
 ---
 title: "GetDroplet"
-title_tag: "Function GetDroplet | Package Digital Ocean"
-meta_desc: "Explore the GetDroplet function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on a Droplet for use in other resources. This data source provides"
+title_tag: "Function GetDroplet | Package DigitalOcean"
+meta_desc: "Explore the GetDroplet function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a Droplet for use in other resources. This data source provides"
 ---
 
 
@@ -17,8 +17,6 @@ utilize any of the Droplet's data.
 
 **Note:** This data source returns a single Droplet. When specifying a `tag`, an
 error is triggered if more than one Droplet is found.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -45,6 +43,7 @@ class MyStack : Stack
     public Output<string> DropletOutput { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ import pulumi_digitalocean as digitalocean
 example = digitalocean.get_droplet(name="web")
 pulumi.export("dropletOutput", example.ipv4_address)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -71,6 +72,7 @@ const example = digitalocean.getDroplet({
 });
 export const dropletOutput = example.then(example => example.ipv4Address);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

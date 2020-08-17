@@ -1,8 +1,8 @@
 
 ---
 title: "GetLoadBalancer"
-title_tag: "Function GetLoadBalancer | Package Digital Ocean"
-meta_desc: "Explore the GetLoadBalancer function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on a load balancer for use in other resources. This data source"
+title_tag: "Function GetLoadBalancer | Package DigitalOcean"
+meta_desc: "Explore the GetLoadBalancer function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a load balancer for use in other resources. This data source"
 ---
 
 
@@ -16,8 +16,6 @@ account. This is useful if the load balancer in question is not managed by
 this provider or you need to utilize any of the load balancers data.
 
 An error is triggered if the provided load balancer name does not exist.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -44,6 +42,7 @@ class MyStack : Stack
     public Output<string> LbOutput { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ import pulumi_digitalocean as digitalocean
 example = digitalocean.get_load_balancer(name="app")
 pulumi.export("lbOutput", example.ip)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -70,6 +71,7 @@ const example = digitalocean.getLoadBalancer({
 });
 export const lbOutput = example.then(example => example.ip);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
