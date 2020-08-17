@@ -148,7 +148,7 @@ const example = new aws.rds.Instance("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/random/#RandomPassword">RandomPassword</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>keepers=None<span class="p">, </span>length=None<span class="p">, </span>lower=None<span class="p">, </span>min_lower=None<span class="p">, </span>min_numeric=None<span class="p">, </span>min_special=None<span class="p">, </span>min_upper=None<span class="p">, </span>number=None<span class="p">, </span>override_special=None<span class="p">, </span>special=None<span class="p">, </span>upper=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_random/#pulumi_random.RandomPassword">RandomPassword</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>keepers=None<span class="p">, </span>length=None<span class="p">, </span>lower=None<span class="p">, </span>min_lower=None<span class="p">, </span>min_numeric=None<span class="p">, </span>min_special=None<span class="p">, </span>min_upper=None<span class="p">, </span>number=None<span class="p">, </span>override_special=None<span class="p">, </span>special=None<span class="p">, </span>upper=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -919,7 +919,7 @@ Get an existing RandomPassword resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>keepers=None<span class="p">, </span>length=None<span class="p">, </span>lower=None<span class="p">, </span>min_lower=None<span class="p">, </span>min_numeric=None<span class="p">, </span>min_special=None<span class="p">, </span>min_upper=None<span class="p">, </span>number=None<span class="p">, </span>override_special=None<span class="p">, </span>result=None<span class="p">, </span>special=None<span class="p">, </span>upper=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>keepers=None<span class="p">, </span>length=None<span class="p">, </span>lower=None<span class="p">, </span>min_lower=None<span class="p">, </span>min_numeric=None<span class="p">, </span>min_special=None<span class="p">, </span>min_upper=None<span class="p">, </span>number=None<span class="p">, </span>override_special=None<span class="p">, </span>result=None<span class="p">, </span>special=None<span class="p">, </span>upper=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
