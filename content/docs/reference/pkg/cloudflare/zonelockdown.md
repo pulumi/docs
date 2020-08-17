@@ -108,7 +108,7 @@ const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/cloudflare/#ZoneLockdown">ZoneLockdown</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>configurations=None<span class="p">, </span>description=None<span class="p">, </span>paused=None<span class="p">, </span>priority=None<span class="p">, </span>urls=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.ZoneLockdown">ZoneLockdown</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>configurations=None<span class="p">, </span>description=None<span class="p">, </span>paused=None<span class="p">, </span>priority=None<span class="p">, </span>urls=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -659,7 +659,7 @@ Get an existing ZoneLockdown resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>configurations=None<span class="p">, </span>description=None<span class="p">, </span>paused=None<span class="p">, </span>priority=None<span class="p">, </span>urls=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>configurations=None<span class="p">, </span>description=None<span class="p">, </span>paused=None<span class="p">, </span>priority=None<span class="p">, </span>urls=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
