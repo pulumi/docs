@@ -389,9 +389,6 @@ function getCannedExample(id) {
 
     let comment = "#"; // to suppress Markdown lint errors.
     switch (id) {
-        case "":
-            return "";
-
         case "nginx_pod":
             return `apiVersion: v1
 kind: Pod
@@ -534,7 +531,7 @@ rules:
 `;
 
         default:
-            throw new Error("unrecognized canned example ID: " + id);
+            return "";
     }
 }
 
