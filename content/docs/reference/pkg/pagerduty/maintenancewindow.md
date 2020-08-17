@@ -1,8 +1,8 @@
 
 ---
 title: "MaintenanceWindow"
-title_tag: "Resource MaintenanceWindow | Package pagerduty"
-meta_desc: "Explore the MaintenanceWindow resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. A [maintenance window](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Maintenance_Windows/get_maintenance_windows) is used to temporarily disable one or more services for a set period of time. No incidents will be triggered and no notifications will be received while a service is disabled by a maintenance window."
+title_tag: "Resource MaintenanceWindow | Package PagerDuty"
+meta_desc: "Explore the MaintenanceWindow resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [maintenance window](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Maintenance_Windows/get_maintenance_windows) is used to temporarily disable one or more services for a set period of time. No incidents will be triggered and no notifications will be received while a service is disabled by a maintenance window."
 ---
 
 
@@ -13,9 +13,6 @@ meta_desc: "Explore the MaintenanceWindow resource of the pagerduty package, inc
 A [maintenance window](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Maintenance_Windows/get_maintenance_windows) is used to temporarily disable one or more services for a set period of time. No incidents will be triggered and no notifications will be received while a service is disabled by a maintenance window.
 
 Maintenance windows are specified to start at a certain time and end after they have begun. Once started, a maintenance window cannot be deleted; it can only be ended immediately to re-enable the service.
-
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -44,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -60,9 +58,11 @@ example = pagerduty.MaintenanceWindow("example",
     services=[pagerduty_service["example"]["id"]],
     start_time="2015-11-09T20:00:00-05:00")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -73,6 +73,7 @@ const example = new pagerduty.MaintenanceWindow("example", {
     startTime: "2015-11-09T20:00:00-05:00",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -87,7 +88,7 @@ const example = new pagerduty.MaintenanceWindow("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#MaintenanceWindow">MaintenanceWindow</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>end_time=None<span class="p">, </span>services=None<span class="p">, </span>start_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.MaintenanceWindow">MaintenanceWindow</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>end_time=None<span class="p">, </span>services=None<span class="p">, </span>start_time=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -554,7 +555,7 @@ Get an existing MaintenanceWindow resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>end_time=None<span class="p">, </span>services=None<span class="p">, </span>start_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>end_time=None<span class="p">, </span>services=None<span class="p">, </span>start_time=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

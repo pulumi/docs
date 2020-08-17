@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceIntegration"
-title_tag: "Resource ServiceIntegration | Package pagerduty"
-meta_desc: "Explore the ServiceIntegration resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. A [service integration](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/post_services_id_integrations) is an integration that belongs to a service."
+title_tag: "Resource ServiceIntegration | Package PagerDuty"
+meta_desc: "Explore the ServiceIntegration resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [service integration](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/post_services_id_integrations) is an integration that belongs to a service."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the ServiceIntegration resource of the pagerduty package, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A [service integration](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/post_services_id_integrations) is an integration that belongs to a service.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -57,8 +55,8 @@ class MyStack : Stack
         });
         var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
         {
-            AcknowledgementTimeout = 600,
-            AutoResolveTimeout = 14400,
+            AcknowledgementTimeout = "600",
+            AutoResolveTimeout = "14400",
             EscalationPolicy = pagerduty_escalation_policy.Example.Id,
         });
         var exampleServiceIntegration = new Pagerduty.ServiceIntegration("exampleServiceIntegration", new Pagerduty.ServiceIntegrationArgs
@@ -88,6 +86,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -127,9 +126,11 @@ cloudwatch_service_integration = pagerduty.ServiceIntegration("cloudwatchService
     service=example_service.id,
     vendor=cloudwatch_vendor.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -172,6 +173,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
     vendor: cloudwatchVendor.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -186,7 +188,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#ServiceIntegration">ServiceIntegration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>integration_email=None<span class="p">, </span>integration_key=None<span class="p">, </span>name=None<span class="p">, </span>service=None<span class="p">, </span>type=None<span class="p">, </span>vendor=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.ServiceIntegration">ServiceIntegration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>integration_email=None<span class="p">, </span>integration_key=None<span class="p">, </span>name=None<span class="p">, </span>service=None<span class="p">, </span>type=None<span class="p">, </span>vendor=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -821,7 +823,7 @@ Get an existing ServiceIntegration resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>html_url=None<span class="p">, </span>integration_email=None<span class="p">, </span>integration_key=None<span class="p">, </span>name=None<span class="p">, </span>service=None<span class="p">, </span>type=None<span class="p">, </span>vendor=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>html_url=None<span class="p">, </span>integration_email=None<span class="p">, </span>integration_key=None<span class="p">, </span>name=None<span class="p">, </span>service=None<span class="p">, </span>type=None<span class="p">, </span>vendor=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

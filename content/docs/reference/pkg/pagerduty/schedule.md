@@ -1,8 +1,8 @@
 
 ---
 title: "Schedule"
-title_tag: "Resource Schedule | Package pagerduty"
-meta_desc: "Explore the Schedule resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. A [schedule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Schedules/get_schedules) determines the time periods that users are on call. Only on-call users are eligible to receive notifications from incidents."
+title_tag: "Resource Schedule | Package PagerDuty"
+meta_desc: "Explore the Schedule resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [schedule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Schedules/get_schedules) determines the time periods that users are on call. Only on-call users are eligible to receive notifications from incidents."
 ---
 
 
@@ -11,9 +11,6 @@ meta_desc: "Explore the Schedule resource of the pagerduty package, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A [schedule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Schedules/get_schedules) determines the time periods that users are on call. Only on-call users are eligible to receive notifications from incidents.
-
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -68,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,9 +95,11 @@ foo = pagerduty.Schedule("foo",
     }],
     time_zone="America/New_York")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -124,6 +124,7 @@ const foo = new pagerduty.Schedule("foo", {
     timeZone: "America/New_York",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -138,7 +139,7 @@ const foo = new pagerduty.Schedule("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#Schedule">Schedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>layers=None<span class="p">, </span>name=None<span class="p">, </span>overflow=None<span class="p">, </span>time_zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Schedule">Schedule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>layers=None<span class="p">, </span>name=None<span class="p">, </span>overflow=None<span class="p">, </span>time_zone=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -657,7 +658,7 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>layers=None<span class="p">, </span>name=None<span class="p">, </span>overflow=None<span class="p">, </span>time_zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>layers=None<span class="p">, </span>name=None<span class="p">, </span>overflow=None<span class="p">, </span>time_zone=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

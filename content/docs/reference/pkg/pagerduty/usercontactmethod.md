@@ -1,8 +1,8 @@
 
 ---
 title: "UserContactMethod"
-title_tag: "Resource UserContactMethod | Package pagerduty"
-meta_desc: "Explore the UserContactMethod resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. A [contact method](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_contact_methods) is a contact method for a PagerDuty user (email, phone or SMS)."
+title_tag: "Resource UserContactMethod | Package PagerDuty"
+meta_desc: "Explore the UserContactMethod resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [contact method](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_contact_methods) is a contact method for a PagerDuty user (email, phone or SMS)."
 ---
 
 
@@ -11,9 +11,6 @@ meta_desc: "Explore the UserContactMethod resource of the pagerduty package, inc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A [contact method](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_contact_methods) is a contact method for a PagerDuty user (email, phone or SMS).
-
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -47,7 +44,7 @@ class MyStack : Stack
         var phone = new Pagerduty.UserContactMethod("phone", new Pagerduty.UserContactMethodArgs
         {
             Address = "2025550199",
-            CountryCode = "+1",
+            CountryCode = 1,
             Label = "Work",
             Type = "phone_contact_method",
             UserId = example.Id,
@@ -55,7 +52,7 @@ class MyStack : Stack
         var sms = new Pagerduty.UserContactMethod("sms", new Pagerduty.UserContactMethodArgs
         {
             Address = "2025550199",
-            CountryCode = "+1",
+            CountryCode = 1,
             Label = "Work",
             Type = "sms_contact_method",
             UserId = example.Id,
@@ -64,6 +61,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,9 +94,11 @@ sms = pagerduty.UserContactMethod("sms",
     type="sms_contact_method",
     user_id=example.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -128,6 +128,7 @@ const sms = new pagerduty.UserContactMethod("sms", {
     userId: example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -142,7 +143,7 @@ const sms = new pagerduty.UserContactMethod("sms", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#UserContactMethod">UserContactMethod</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>country_code=None<span class="p">, </span>label=None<span class="p">, </span>send_short_email=None<span class="p">, </span>type=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.UserContactMethod">UserContactMethod</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>country_code=None<span class="p">, </span>label=None<span class="p">, </span>send_short_email=None<span class="p">, </span>type=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -785,7 +786,7 @@ Get an existing UserContactMethod resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>blacklisted=None<span class="p">, </span>country_code=None<span class="p">, </span>enabled=None<span class="p">, </span>label=None<span class="p">, </span>send_short_email=None<span class="p">, </span>type=None<span class="p">, </span>user_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>blacklisted=None<span class="p">, </span>country_code=None<span class="p">, </span>enabled=None<span class="p">, </span>label=None<span class="p">, </span>send_short_email=None<span class="p">, </span>type=None<span class="p">, </span>user_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -1,8 +1,8 @@
 
 ---
 title: "RulesetRule"
-title_tag: "Resource RulesetRule | Package pagerduty"
-meta_desc: "Explore the RulesetRule resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. An [event rule](https://support.pagerduty.com/docs/rulesets#section-create-event-rules) allows you to set actions that should be taken on events that meet your designated rule criteria."
+title_tag: "Resource RulesetRule | Package PagerDuty"
+meta_desc: "Explore the RulesetRule resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. An [event rule](https://support.pagerduty.com/docs/rulesets#section-create-event-rules) allows you to set actions that should be taken on events that meet your designated rule criteria."
 ---
 
 
@@ -11,9 +11,6 @@ meta_desc: "Explore the RulesetRule resource of the pagerduty package, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An [event rule](https://support.pagerduty.com/docs/rulesets#section-create-event-rules) allows you to set actions that should be taken on events that meet your designated rule criteria.
-
-{{% examples %}}
-{{% /examples %}}
 
 
 
@@ -26,7 +23,7 @@ An [event rule](https://support.pagerduty.com/docs/rulesets#section-create-event
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#RulesetRule">RulesetRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>conditions=None<span class="p">, </span>disabled=None<span class="p">, </span>position=None<span class="p">, </span>ruleset=None<span class="p">, </span>time_frame=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.RulesetRule">RulesetRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions=None<span class="p">, </span>conditions=None<span class="p">, </span>disabled=None<span class="p">, </span>position=None<span class="p">, </span>ruleset=None<span class="p">, </span>time_frame=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -581,7 +578,7 @@ Get an existing RulesetRule resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions=None<span class="p">, </span>conditions=None<span class="p">, </span>disabled=None<span class="p">, </span>position=None<span class="p">, </span>ruleset=None<span class="p">, </span>time_frame=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions=None<span class="p">, </span>conditions=None<span class="p">, </span>disabled=None<span class="p">, </span>position=None<span class="p">, </span>ruleset=None<span class="p">, </span>time_frame=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

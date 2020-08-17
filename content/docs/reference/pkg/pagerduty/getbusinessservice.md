@@ -1,8 +1,8 @@
 
 ---
 title: "GetBusinessService"
-title_tag: "Function GetBusinessService | Package pagerduty"
-meta_desc: "Explore the GetBusinessService function of the pagerduty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [business service](https://api-reference.pagerduty.com/#!/Business_Services/get_business_services)."
+title_tag: "Function GetBusinessService | Package PagerDuty"
+meta_desc: "Explore the GetBusinessService function of the PagerDuty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [business service](https://api-reference.pagerduty.com/#!/Business_Services/get_business_services)."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the GetBusinessService function of the pagerduty package, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to get information about a specific [business service](https://api-reference.pagerduty.com/#!/Business_Services/get_business_services).
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_pagerduty as pagerduty
 
 example = pagerduty.get_business_service(name="My Service")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -60,6 +61,7 @@ const example = pulumi.output(pagerduty.getBusinessService({
     name: "My Service",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

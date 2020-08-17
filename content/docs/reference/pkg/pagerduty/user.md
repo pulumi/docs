@@ -1,8 +1,8 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Package pagerduty"
-meta_desc: "Explore the User resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. A [user](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users) is a member of a PagerDuty account that have the ability to interact with incidents and other data on the account."
+title_tag: "Resource User | Package PagerDuty"
+meta_desc: "Explore the User resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [user](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users) is a member of a PagerDuty account that have the ability to interact with incidents and other data on the account."
 ---
 
 
@@ -11,9 +11,6 @@ meta_desc: "Explore the User resource of the pagerduty package, including exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A [user](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users) is a member of a PagerDuty account that have the ability to interact with incidents and other data on the account.
-
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -37,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -50,9 +48,11 @@ import pulumi_pagerduty as pagerduty
 
 example = pagerduty.User("example", email="125.greenholt.earline@graham.name")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -61,6 +61,7 @@ const example = new pagerduty.User("example", {
     email: "125.greenholt.earline@graham.name",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -75,7 +76,7 @@ const example = new pagerduty.User("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>color=None<span class="p">, </span>description=None<span class="p">, </span>email=None<span class="p">, </span>job_title=None<span class="p">, </span>name=None<span class="p">, </span>role=None<span class="p">, </span>teams=None<span class="p">, </span>time_zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>color=None<span class="p">, </span>description=None<span class="p">, </span>email=None<span class="p">, </span>job_title=None<span class="p">, </span>name=None<span class="p">, </span>role=None<span class="p">, </span>teams=None<span class="p">, </span>time_zone=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -846,7 +847,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>avatar_url=None<span class="p">, </span>color=None<span class="p">, </span>description=None<span class="p">, </span>email=None<span class="p">, </span>html_url=None<span class="p">, </span>invitation_sent=None<span class="p">, </span>job_title=None<span class="p">, </span>name=None<span class="p">, </span>role=None<span class="p">, </span>teams=None<span class="p">, </span>time_zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>avatar_url=None<span class="p">, </span>color=None<span class="p">, </span>description=None<span class="p">, </span>email=None<span class="p">, </span>html_url=None<span class="p">, </span>invitation_sent=None<span class="p">, </span>job_title=None<span class="p">, </span>name=None<span class="p">, </span>role=None<span class="p">, </span>teams=None<span class="p">, </span>time_zone=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

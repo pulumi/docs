@@ -1,8 +1,8 @@
 
 ---
 title: "GetVendor"
-title_tag: "Function GetVendor | Package pagerduty"
-meta_desc: "Explore the GetVendor function of the pagerduty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [vendor](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Vendors/get_vendors) that you can use for a service integration (e.g Amazon Cloudwatch, Splunk, Datadog)."
+title_tag: "Function GetVendor | Package PagerDuty"
+meta_desc: "Explore the GetVendor function of the PagerDuty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [vendor](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Vendors/get_vendors) that you can use for a service integration (e.g Amazon Cloudwatch, Splunk, Datadog)."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the GetVendor function of the pagerduty package, including e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to get information about a specific [vendor](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Vendors/get_vendors) that you can use for a service integration (e.g Amazon Cloudwatch, Splunk, Datadog).
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -61,8 +59,8 @@ class MyStack : Stack
         });
         var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
         {
-            AcknowledgementTimeout = 600,
-            AutoResolveTimeout = 14400,
+            AcknowledgementTimeout = "600",
+            AutoResolveTimeout = "14400",
             EscalationPolicy = pagerduty_escalation_policy.Example.Id,
         });
         var exampleServiceIntegration = new Pagerduty.ServiceIntegration("exampleServiceIntegration", new Pagerduty.ServiceIntegrationArgs
@@ -75,6 +73,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -108,9 +107,11 @@ example_service_integration = pagerduty.ServiceIntegration("exampleServiceIntegr
     type="generic_events_api_inbound_integration",
     vendor=datadog.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -143,6 +144,7 @@ const exampleServiceIntegration = new pagerduty.ServiceIntegration("example", {
     vendor: datadog.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

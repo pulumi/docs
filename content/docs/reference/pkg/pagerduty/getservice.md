@@ -1,8 +1,8 @@
 
 ---
 title: "GetService"
-title_tag: "Function GetService | Package pagerduty"
-meta_desc: "Explore the GetService function of the pagerduty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [service](https://api-reference.pagerduty.com/#!/Services/get_services)."
+title_tag: "Function GetService | Package PagerDuty"
+meta_desc: "Explore the GetService function of the PagerDuty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [service](https://api-reference.pagerduty.com/#!/Services/get_services)."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the GetService function of the pagerduty package, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to get information about a specific [service](https://api-reference.pagerduty.com/#!/Services/get_services).
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +63,11 @@ example_service_integration = pagerduty.ServiceIntegration("exampleServiceIntegr
     service=example_service.id,
     type="generic_events_api_inbound_integration")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -83,6 +84,7 @@ const exampleServiceIntegration = new pagerduty.ServiceIntegration("exampleServi
     type: "generic_events_api_inbound_integration",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
