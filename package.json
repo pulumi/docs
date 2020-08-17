@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.0.6",
+    "@sentry/cli": "^1.55.1",
     "autoprefixer": "^9.6.0",
     "broken-link-checker": "^0.7.8",
     "chokidar-cli": "^2.1.0",
