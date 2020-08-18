@@ -58,7 +58,7 @@ GitHub: [.NET Core MVC sample for Azure App Service](https://github.com/azure-sa
 Predictably enough, it's a Todo List application, and this time it is a
 web app built with [ASP.NET](http://ASP.NET) Core, Entity Framework Core
 and a SQL database.
-[Build an ASP.NET Core and SQL Database app in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-dotnetcore-sqldb)
+[Build an ASP.NET Core and SQL Database app in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/tutorial-dotnetcore-sqldb-app)
 describes how to deploy such application to Azure App Service by means
 of clicking buttons in the Azure portal.
 
