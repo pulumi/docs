@@ -22,7 +22,7 @@ meta_desc: "Explore the Bootstrap resource of the Rancher 2 package, including e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/rancher2/#Bootstrap">Bootstrap</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>current_password=None<span class="p">, </span>password=None<span class="p">, </span>telemetry=None<span class="p">, </span>token_ttl=None<span class="p">, </span>token_update=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.Bootstrap">Bootstrap</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>current_password=None<span class="p">, </span>password=None<span class="p">, </span>telemetry=None<span class="p">, </span>token_ttl=None<span class="p">, </span>token_update=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -797,7 +797,7 @@ Get an existing Bootstrap resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>current_password=None<span class="p">, </span>password=None<span class="p">, </span>telemetry=None<span class="p">, </span>temp_token=None<span class="p">, </span>temp_token_id=None<span class="p">, </span>token=None<span class="p">, </span>token_id=None<span class="p">, </span>token_ttl=None<span class="p">, </span>token_update=None<span class="p">, </span>url=None<span class="p">, </span>user=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>current_password=None<span class="p">, </span>password=None<span class="p">, </span>telemetry=None<span class="p">, </span>temp_token=None<span class="p">, </span>temp_token_id=None<span class="p">, </span>token=None<span class="p">, </span>token_id=None<span class="p">, </span>token_ttl=None<span class="p">, </span>token_update=None<span class="p">, </span>url=None<span class="p">, </span>user=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
