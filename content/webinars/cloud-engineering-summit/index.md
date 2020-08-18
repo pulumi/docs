@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Cloud Engineering Summit"
-meta_desc: "This annual Cloud Engineering Summit brings together leaders and practitioners to share best practices and end-user stories on a broad range of cloud engineering topics."
+meta_desc: "The Cloud Engineering Summit is a day-long experience filled with best practices and end-user stories ranging from architecture to reliability and security."
 
 # A featured webinar will display first in the list.
 featured: true
