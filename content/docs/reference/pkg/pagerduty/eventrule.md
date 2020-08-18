@@ -1,8 +1,8 @@
 
 ---
 title: "EventRule"
-title_tag: "Resource EventRule | Package pagerduty"
-meta_desc: "Explore the EventRule resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource EventRule | Package PagerDuty"
+meta_desc: "Explore the EventRule resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -22,7 +22,7 @@ meta_desc: "Explore the EventRule resource of the pagerduty package, including e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#EventRule">EventRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action_json=None<span class="p">, </span>advanced_condition_json=None<span class="p">, </span>condition_json=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.EventRule">EventRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>action_json=None<span class="p">, </span>advanced_condition_json=None<span class="p">, </span>condition_json=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -489,7 +489,7 @@ Get an existing EventRule resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>action_json=None<span class="p">, </span>advanced_condition_json=None<span class="p">, </span>catch_all=None<span class="p">, </span>condition_json=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>action_json=None<span class="p">, </span>advanced_condition_json=None<span class="p">, </span>catch_all=None<span class="p">, </span>condition_json=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

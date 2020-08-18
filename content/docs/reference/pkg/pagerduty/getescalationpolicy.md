@@ -1,8 +1,8 @@
 
 ---
 title: "GetEscalationPolicy"
-title_tag: "Function GetEscalationPolicy | Package pagerduty"
-meta_desc: "Explore the GetEscalationPolicy function of the pagerduty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [escalation policy](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Escalation_Policies/get_escalation_policies) that you can use for other PagerDuty resources."
+title_tag: "Function GetEscalationPolicy | Package PagerDuty"
+meta_desc: "Explore the GetEscalationPolicy function of the PagerDuty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [escalation policy](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Escalation_Policies/get_escalation_policies) that you can use for other PagerDuty resources."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the GetEscalationPolicy function of the pagerduty package, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to get information about a specific [escalation policy](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Escalation_Policies/get_escalation_policies) that you can use for other PagerDuty resources.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -34,14 +32,15 @@ class MyStack : Stack
         }));
         var testService = new Pagerduty.Service("testService", new Pagerduty.ServiceArgs
         {
-            AcknowledgementTimeout = 600,
-            AutoResolveTimeout = 14400,
+            AcknowledgementTimeout = "600",
+            AutoResolveTimeout = "14400",
             EscalationPolicy = testEscalationPolicy.Apply(testEscalationPolicy => testEscalationPolicy.Id),
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ test_service = pagerduty.Service("testService",
     auto_resolve_timeout=14400,
     escalation_policy=test_escalation_policy.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -75,6 +76,7 @@ const testService = new pagerduty.Service("test", {
     escalationPolicy: testEscalationPolicy.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

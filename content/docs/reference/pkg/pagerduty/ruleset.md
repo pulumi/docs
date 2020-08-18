@@ -1,8 +1,8 @@
 
 ---
 title: "Ruleset"
-title_tag: "Resource Ruleset | Package pagerduty"
-meta_desc: "Explore the Ruleset resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. [Rulesets](https://support.pagerduty.com/docs/rulesets) allow you to route events to an endpoint and create collections of event rules, which define sets of actions to take based on event content."
+title_tag: "Resource Ruleset | Package PagerDuty"
+meta_desc: "Explore the Ruleset resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. [Rulesets](https://support.pagerduty.com/docs/rulesets) allow you to route events to an endpoint and create collections of event rules, which define sets of actions to take based on event content."
 ---
 
 
@@ -11,9 +11,6 @@ meta_desc: "Explore the Ruleset resource of the pagerduty package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 [Rulesets](https://support.pagerduty.com/docs/rulesets) allow you to route events to an endpoint and create collections of event rules, which define sets of actions to take based on event content.
-
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -43,6 +40,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +57,11 @@ foo_ruleset = pagerduty.Ruleset("fooRuleset", team={
     "id": foo_team.id,
 })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -71,6 +71,7 @@ const fooRuleset = new pagerduty.Ruleset("fooRuleset", {team: {
     id: fooTeam.id,
 }});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -85,7 +86,7 @@ const fooRuleset = new pagerduty.Ruleset("fooRuleset", {team: {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#Ruleset">Ruleset</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>team=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Ruleset">Ruleset</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>team=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -552,7 +553,7 @@ Get an existing Ruleset resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>routing_keys=None<span class="p">, </span>team=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>routing_keys=None<span class="p">, </span>team=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

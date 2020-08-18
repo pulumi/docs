@@ -1,8 +1,8 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Package pagerduty"
-meta_desc: "Explore the Service resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. A [service](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/get_services) represents something you monitor (like a web service, email service, or database service). It is a container for related incidents that associates them with escalation policies."
+title_tag: "Resource Service | Package PagerDuty"
+meta_desc: "Explore the Service resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [service](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/get_services) represents something you monitor (like a web service, email service, or database service). It is a container for related incidents that associates them with escalation policies."
 ---
 
 
@@ -11,9 +11,6 @@ meta_desc: "Explore the Service resource of the pagerduty package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A [service](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/get_services) represents something you monitor (like a web service, email service, or database service). It is a container for related incidents that associates them with escalation policies.
-
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -58,15 +55,16 @@ class MyStack : Stack
         });
         var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
         {
-            AcknowledgementTimeout = 600,
+            AcknowledgementTimeout = "600",
             AlertCreation = "create_incidents",
-            AutoResolveTimeout = 14400,
+            AutoResolveTimeout = "14400",
             EscalationPolicy = pagerduty_escalation_policy.Example.Id,
         });
     }
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -96,9 +94,11 @@ example_service = pagerduty.Service("exampleService",
     auto_resolve_timeout=14400,
     escalation_policy=pagerduty_escalation_policy["example"]["id"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -124,6 +124,7 @@ const exampleService = new pagerduty.Service("example", {
     escalationPolicy: pagerduty_escalation_policy_example.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -138,7 +139,7 @@ const exampleService = new pagerduty.Service("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acknowledgement_timeout=None<span class="p">, </span>alert_creation=None<span class="p">, </span>alert_grouping=None<span class="p">, </span>alert_grouping_timeout=None<span class="p">, </span>auto_resolve_timeout=None<span class="p">, </span>description=None<span class="p">, </span>escalation_policy=None<span class="p">, </span>incident_urgency_rule=None<span class="p">, </span>name=None<span class="p">, </span>scheduled_actions=None<span class="p">, </span>support_hours=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acknowledgement_timeout=None<span class="p">, </span>alert_creation=None<span class="p">, </span>alert_grouping=None<span class="p">, </span>alert_grouping_timeout=None<span class="p">, </span>auto_resolve_timeout=None<span class="p">, </span>description=None<span class="p">, </span>escalation_policy=None<span class="p">, </span>incident_urgency_rule=None<span class="p">, </span>name=None<span class="p">, </span>scheduled_actions=None<span class="p">, </span>support_hours=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1057,7 +1058,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acknowledgement_timeout=None<span class="p">, </span>alert_creation=None<span class="p">, </span>alert_grouping=None<span class="p">, </span>alert_grouping_timeout=None<span class="p">, </span>auto_resolve_timeout=None<span class="p">, </span>created_at=None<span class="p">, </span>description=None<span class="p">, </span>escalation_policy=None<span class="p">, </span>html_url=None<span class="p">, </span>incident_urgency_rule=None<span class="p">, </span>last_incident_timestamp=None<span class="p">, </span>name=None<span class="p">, </span>scheduled_actions=None<span class="p">, </span>status=None<span class="p">, </span>support_hours=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acknowledgement_timeout=None<span class="p">, </span>alert_creation=None<span class="p">, </span>alert_grouping=None<span class="p">, </span>alert_grouping_timeout=None<span class="p">, </span>auto_resolve_timeout=None<span class="p">, </span>created_at=None<span class="p">, </span>description=None<span class="p">, </span>escalation_policy=None<span class="p">, </span>html_url=None<span class="p">, </span>incident_urgency_rule=None<span class="p">, </span>last_incident_timestamp=None<span class="p">, </span>name=None<span class="p">, </span>scheduled_actions=None<span class="p">, </span>status=None<span class="p">, </span>support_hours=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

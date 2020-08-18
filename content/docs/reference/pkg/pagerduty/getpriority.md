@@ -1,8 +1,8 @@
 
 ---
 title: "GetPriority"
-title_tag: "Function GetPriority | Package pagerduty"
-meta_desc: "Explore the GetPriority function of the pagerduty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [priority](https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/~1priorities/get) that you can use for other PagerDuty resources."
+title_tag: "Function GetPriority | Package PagerDuty"
+meta_desc: "Explore the GetPriority function of the PagerDuty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [priority](https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/~1priorities/get) that you can use for other PagerDuty resources."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the GetPriority function of the pagerduty package, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to get information about a specific [priority](https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/~1priorities/get) that you can use for other PagerDuty resources.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -39,7 +37,7 @@ class MyStack : Stack
         {
             Ruleset = fooRuleset.Id,
             Position = 0,
-            Disabled = "false",
+            Disabled = false,
             Conditions = new Pagerduty.Inputs.RulesetRuleConditionsArgs
             {
                 Operator = "and",
@@ -93,6 +91,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -138,9 +137,11 @@ foo_ruleset_rule = pagerduty.RulesetRule("fooRulesetRule",
         }],
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -182,6 +183,7 @@ const fooRulesetRule = new pagerduty.RulesetRule("fooRulesetRule", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

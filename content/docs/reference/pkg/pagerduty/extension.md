@@ -1,8 +1,8 @@
 
 ---
 title: "Extension"
-title_tag: "Resource Extension | Package pagerduty"
-meta_desc: "Explore the Extension resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. An [extension](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Extensions/post_extensions) can be associated with a service."
+title_tag: "Resource Extension | Package PagerDuty"
+meta_desc: "Explore the Extension resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. An [extension](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Extensions/post_extensions) can be associated with a service."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the Extension resource of the pagerduty package, including e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An [extension](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Extensions/post_extensions) can be associated with a service.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -61,8 +59,8 @@ class MyStack : Stack
         });
         var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
         {
-            AcknowledgementTimeout = 600,
-            AutoResolveTimeout = 14400,
+            AcknowledgementTimeout = "600",
+            AutoResolveTimeout = "14400",
             EscalationPolicy = pagerduty_escalation_policy.Example.Id,
         });
         var slack = new Pagerduty.Extension("slack", new Pagerduty.ExtensionArgs
@@ -89,6 +87,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -133,9 +132,11 @@ slack = pagerduty.Extension("slack",
     extension_objects=[example_service.id],
     extension_schema=webhook.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -178,6 +179,7 @@ const slack = new pagerduty.Extension("slack", {
     extensionSchema: webhook.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -192,7 +194,7 @@ const slack = new pagerduty.Extension("slack", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#Extension">Extension</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>endpoint_url=None<span class="p">, </span>extension_objects=None<span class="p">, </span>extension_schema=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Extension">Extension</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config=None<span class="p">, </span>endpoint_url=None<span class="p">, </span>extension_objects=None<span class="p">, </span>extension_schema=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -791,7 +793,7 @@ Get an existing Extension resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>endpoint_url=None<span class="p">, </span>extension_objects=None<span class="p">, </span>extension_schema=None<span class="p">, </span>html_url=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config=None<span class="p">, </span>endpoint_url=None<span class="p">, </span>extension_objects=None<span class="p">, </span>extension_schema=None<span class="p">, </span>html_url=None<span class="p">, </span>name=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

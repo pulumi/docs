@@ -1,8 +1,8 @@
 
 ---
 title: "EscalationPolicy"
-title_tag: "Resource EscalationPolicy | Package pagerduty"
-meta_desc: "Explore the EscalationPolicy resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. An [escalation policy](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Escalation_Policies/get_escalation_policies) determines what user or schedule will be notified first, second, and so on when an incident is triggered. Escalation policies are used by one or more services."
+title_tag: "Resource EscalationPolicy | Package PagerDuty"
+meta_desc: "Explore the EscalationPolicy resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. An [escalation policy](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Escalation_Policies/get_escalation_policies) determines what user or schedule will be notified first, second, and so on when an incident is triggered. Escalation policies are used by one or more services."
 ---
 
 
@@ -11,9 +11,6 @@ meta_desc: "Explore the EscalationPolicy resource of the pagerduty package, incl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An [escalation policy](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Escalation_Policies/get_escalation_policies) determines what user or schedule will be notified first, second, and so on when an incident is triggered. Escalation policies are used by one or more services.
-
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -68,6 +65,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -94,9 +92,11 @@ example_escalation_policy = pagerduty.EscalationPolicy("exampleEscalationPolicy"
     }],
     teams=[example_team.id])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -120,6 +120,7 @@ const exampleEscalationPolicy = new pagerduty.EscalationPolicy("example", {
     teams: [exampleTeam.id],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -134,7 +135,7 @@ const exampleEscalationPolicy = new pagerduty.EscalationPolicy("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#EscalationPolicy">EscalationPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>num_loops=None<span class="p">, </span>rules=None<span class="p">, </span>teams=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.EscalationPolicy">EscalationPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>num_loops=None<span class="p">, </span>rules=None<span class="p">, </span>teams=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -641,7 +642,7 @@ Get an existing EscalationPolicy resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>num_loops=None<span class="p">, </span>rules=None<span class="p">, </span>teams=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>num_loops=None<span class="p">, </span>rules=None<span class="p">, </span>teams=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
