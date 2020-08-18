@@ -7,11 +7,11 @@ authors: ["vova-ivanov"]
 tags: ["aws", "python", "mysql"]
 ---
 
-In our [previous post](https://www.pulumi.com/blog/creating-a-python-aws-application-using-flask-and-redis/), we created a Python voting application using Flask and Redis. In this blog post, we will explore how to create a MySQL database and initialize it with a schema and data. What seems to be a simple step is much more interesting than it appears, because Pulumi's MySQL provider does not support creating and populating tables. To do it, we will extend it with a Dynamic Provider.
+In our [previous post](https://www.pulumi.com/blog/creating-a-python-aws-application-using-flask-and-redis/), we created a Python voting application using Flask and Redis. This blog post will explore creating a MySQL database and initializing it with a schema and data. What seems to be a simple step is much more interesting than it appears, because Pulumi's MySQL provider does not support creating and populating tables. To do it, we will extend it with a Dynamic Provider.
 
 <!--more-->
 
-The existing Pulumi MySQL provider allows us to create the MySQL server, database, and different users. However, it would be great to be able to create the tables as part of the deployment too, since database schema can be considered a type of infrastructure. Because creating tables requires admin credentials, deploying them along with the other infrastructure allows us to limit the sharing of admin credentials, and run the application under restricted permissions at all times.
+The existing Pulumi MySQL provider allows us to create the MySQL server, database, and different users. However, it would be great to create the tables as part of the deployment, too, since database schema can be considered a type of infrastructure. Because creating tables requires admin credentials, deploying them along with the other infrastructure allows us to limit the sharing of admin credentials, and run the application under restricted permissions at all times.
 
 A great advantage of Pulumi is its extensible and modular design. If support for something isn't implemented, you can write it yourself easily. We will be writing a Dynamic Provider that connects to a MySQL server, initializes a table, and creates some starting data all during `pulumi up`.
 
@@ -22,7 +22,7 @@ $ mkdir aws-py-dynamicresource && cd aws-py-dynamicresource
 $ pulumi new aws-python
 ```
 
-This project requires a few extra configurations which we can give using `pulumi config set`. They describe the admin account used during deployment, and a user account that will be used when the table is initialized.  
+This project requires several configuration variables, which we set using `pulumi config set`. They are used to configure the MySQL admin account during deployment, and a user account for initializing the table.
 
 ```bash
 $ pulumi config set sql-admin-name <NAME>
@@ -31,14 +31,14 @@ $ pulumi config set sql-user-name <NAME>
 $ pulumi config set sql-user-password <PASSWORD> --secret
 ```
 
-The `requirements.txt` file lists the libraries that the project depends on. We will need to add the following:
+The `requirements.txt` file lists the libraries used in the project. We will need to add the following:
 
 ```
 pulumi-mysql>=1.0.0,<3.0.0
 mysql-connector-python>=1.0.0,<10.0.0
 ```
 
-To reduce clutter, we will write the code for our Dynamic Provider in a separate file, for example `MySqlDynamicProvider.py`. The first few lines of the file will indicate which libraries to import.
+We will write the code for our Dynamic Provider in a separate file to reduce clutter, for example, `MySqlDynamicProvider.py`. The first few lines of the file will indicate which libraries to import.
 
 ```python
 import mysql.connector as connector
@@ -50,7 +50,7 @@ import binascii
 import os
 ```
 
-After setting up the imports, the next step is to write the code. The first component of the Dynamic Provider is a class with the arguments that the dynamic provider requires when created. These arguments are given a type `Input[str]`, and are automatically converted to regular `str` before being passed to the functions in the provider.
+After setting up the imports, the next step is to write the code. The Dynamic Provider's first component is a class with the arguments that the dynamic provider requires when created. These arguments are given a type `Input[str]` and automatically converted to regular `str` before being passed to the provider's functions.
 
 ```python
 class SchemaInputs(object):
@@ -69,7 +69,7 @@ class SchemaInputs(object):
         self.deletion_script = deletion_script
 ```
 
-The second step is to write the Dynamic Provider. The provider handles the create, read, update, and delete operations the resource needs. The `create` function instantiates a new resource and assigns it a unique ID, the `delete` function deletes an existing resource, the `diff` function determines if we can update the resource without having to fully replace it, and the `update` function performs the update.
+The second step is to write the Dynamic Provider. The provider handles the create, read, update, and delete operations the resource needs. The `create` function instantiates a new resource and assigns it a unique ID. The `delete` function deletes an existing resource. The `diff` function determines if we can update the resource without entirely replacing it, and the `update` function performs the update.
 
 ```python
 class SchemaProvider(ResourceProvider):
@@ -120,7 +120,7 @@ class Schema(Resource):
         super().__init__(SchemaProvider(), name, vars(args), opts)
 ```
 
-With the dynamic provider finished, all that is left is to create it in our infrastructure. Similar to the last post, the project uses a `__main__.py` file, the first few lines of which indicate the libraries to import and describe the configuration options used by the application.
+With the dynamic provider finished, all that is left is to create it in our infrastructure. Like the previous post, the project uses a `__main__.py` file; the first few lines indicate the libraries to import and describe the application's configuration options.
 
 ```python
 import json
@@ -138,7 +138,7 @@ user_password = config.require_secret("sql-user-password")
 availability_zone = pulumi.Config("aws").get("region")
 ```
 
-To allow different tasks within our project to communicate, we create a Virtual Private Cloud and an associated subnet. Two subnets will be required for the project, so the availability zone suffix is set to "a"
+To allow different tasks within our project to communicate, we create a Virtual Private Cloud and an associated subnet. Two subnets are required for the project, so the availability zone suffix is set to "a".
 
 ```python
 app_vpc = aws.ec2.Vpc("app-vpc",
@@ -192,7 +192,7 @@ app_security_group = aws.ec2.SecurityGroup("security-group",
     }])
 ```
 
-Our MySQL database will be created inside an RDS instance. To create the instance, Amazon requires that it be given two subnets in different availability zones.
+Our MySQL database is created with an RDS instance. To create the instance, Amazon requires that it be given two subnets in different availability zones.
 
 ```python
 extra_rds_subnet = aws.ec2.Subnet("extra-rds-subnet",
@@ -201,7 +201,7 @@ extra_rds_subnet = aws.ec2.Subnet("extra-rds-subnet",
     vpc_id=app_vpc)
 ```
 
-Both subnets are assigned to a SubnetGroup, and are given to the RDS instance
+Both subnets are assigned to a SubnetGroup and belong to the RDS instance.
 
 ```python
 app_database_subnetgroup = aws.rds.SubnetGroup("app-database-subnetgroup",
@@ -228,7 +228,7 @@ mysql_provider = mysql.Provider("mysql-provider",
     password=admin_password)
 ```
 
-The example database is initialized, and a user is created to manage it.
+We initialize the example database and create a user to manage it.
 
 ```python
 mysql_database = mysql.Database("mysql-database",
@@ -253,7 +253,7 @@ mysql_access_grant = mysql.Grant("mysql-access-grant",
     opts=pulumi.ResourceOptions(provider=mysql_provider))
 ```
 
-Now, we we use our Dynamic Provider. The provider takes `creation_script` as a parameter, connects to our MySQL server, and runs it during deployment.
+Now, we use our Dynamic Provider. The provider takes `creation_script` as a parameter, connects to our MySQL server, and runs it during deployment.
 
 ```python
 creation_script = """
@@ -267,27 +267,27 @@ creation_script = """
     """
 ```
 
-The provider also takes in a `deletion_script`, which it uses to undo all of its actions when the resource needs to be deleted.
+The `deletion_script` parameter drops the table and deletes stored data.
 
 ```python
-deletion_script = "DROP TABLE votesTable"
+deletion_script = "DROP TABLE votesTable CASCADE"
 ```
 
-When we create our resource, it behaves the same way as any other Pulumi resource, but takes its arguments as a `SchemaInputs` object.
+When we create our resource, it behaves the same way as any other Pulumi resource but takes its arguments as a `SchemaInputs` object.
 
 ```python
 mysql_votes_table = Schema(name="mysql_votes_table",
     args=SchemaInputs(admin_name, admin_password, mysql_rds_server.address, mysql_database.name, creation_script, deletion_script))
 ```
 
-We can export the ID of our new resource, and view it when it is deployed.
+We can export the ID of our new resource, and view it when deployed.
 
 ```python
 pulumi.export("dynamic-resource-id",mysql_votes_table.id)
 ```
 
-In this example, I showed how straightforward it is to write additional code for Pulumi and expand its functionality even further. Dynamic Providers enable excellent flexibility in cloud architecture design, and help break down barriers that would otherwise be challenging to overcome.
+In this example, I showed how straightforward it is to expand functionality with Pulumi by writing additional code. Dynamic Providers enable excellent flexibility in cloud architecture design and help break down barriers that would otherwise be challenging to overcome.
 
 Next week, I'll change the frontend from Flask to Django, and will show how to integrate it with our new MySQL server.
 
-The full code for the blog post and an in-depth explanation on each component can be [found on github.](https://github.com/jetvova/examples/tree/vova/aws-py-sql-dynamicresource/aws-py-dynamicresource)
+The blog post's full code and an in-depth explanation for each component can be [found on Github](https://github.com/jetvova/examples/tree/vova/aws-py-sql-dynamicresource/aws-py-dynamicresource).
