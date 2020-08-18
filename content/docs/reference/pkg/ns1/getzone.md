@@ -1,8 +1,8 @@
 
 ---
 title: "GetZone"
-title_tag: "Function GetZone | Package ns1"
-meta_desc: "Explore the GetZone function of the ns1 package, including examples, input properties, output properties, and supporting types. Provides details about a NS1 Zone. Use this if you would simply like to read"
+title_tag: "Function GetZone | Package NS1"
+meta_desc: "Explore the GetZone function of the NS1 package, including examples, input properties, output properties, and supporting types. Provides details about a NS1 Zone. Use this if you would simply like to read"
 ---
 
 

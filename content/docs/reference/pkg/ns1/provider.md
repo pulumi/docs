@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package ns1"
-meta_desc: "Explore the Provider resource of the ns1 package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the ns1 package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package NS1"
+meta_desc: "Explore the Provider resource of the NS1 package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the ns1 package. By default, resources use package-wide configuration"
 ---
 
 
@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/ns1/#Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apikey=None<span class="p">, </span>enable_ddi=None<span class="p">, </span>endpoint=None<span class="p">, </span>ignore_ssl=None<span class="p">, </span>rate_limit_parallelism=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apikey=None<span class="p">, </span>enable_ddi=None<span class="p">, </span>endpoint=None<span class="p">, </span>ignore_ssl=None<span class="p">, </span>rate_limit_parallelism=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -1,8 +1,8 @@
 
 ---
 title: "GetDNSSec"
-title_tag: "Function GetDNSSec | Package ns1"
-meta_desc: "Explore the GetDNSSec function of the ns1 package, including examples, input properties, output properties, and supporting types. Provides DNSSEC details about a NS1 Zone."
+title_tag: "Function GetDNSSec | Package NS1"
+meta_desc: "Explore the GetDNSSec function of the NS1 package, including examples, input properties, output properties, and supporting types. Provides DNSSEC details about a NS1 Zone."
 ---
 
 

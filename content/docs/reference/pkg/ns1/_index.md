@@ -1,6 +1,6 @@
 ---
-title: "ns1"
-title_tag: "Module ns1 | Package ns1"
+title: "NS1"
+title_tag: "Module NS1 | Package NS1"
 meta_desc: "A Pulumi package for creating and managing ns1 cloud resources."
 menu:
     reference:
