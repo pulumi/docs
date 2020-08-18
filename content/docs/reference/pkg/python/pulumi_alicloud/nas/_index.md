@@ -18,9 +18,10 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_alicloud.nas"></span><dl class="py class">
 <dt id="pulumi_alicloud.nas.AccessGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AccessGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AccessGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Nas Access Group resource.</p>
-<p>In NAS, the permission group acts as a whitelist that allows you to restrict file system access. You can allow specified IP addresses or CIDR blocks to access the file system, and assign different levels of access permission to different IP addresses or CIDR blocks by adding rules to the permission group.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.nas.</code><code class="sig-name descname">AccessGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_group_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AccessGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a NAS Access Group resource.</p>
+<p>In NAS, the permission group acts as a whitelist that allows you to restrict file system access. You can allow specified IP addresses or CIDR blocks to access the file system, and assign different levels of access permission to different IP addresses or CIDR blocks by adding rules to the permission group.
+For information about NAS Access Group and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/en/doc-detail/27534">What is NAS Access Group</a></p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.33.0+.</p>
 </div></blockquote>
@@ -37,12 +38,27 @@ anything, please consult the source <a class="reference external" href="https://
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A Name of one Access Group.</p></li>
+<li><p><strong>access_group_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A Type of one Access Group. Valid values: <code class="docutils literal notranslate"><span class="pre">Vpc</span></code> and <code class="docutils literal notranslate"><span class="pre">Classic</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Access Group description.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A Name of one Access Group.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A Type of one Access Group. Valid values: <code class="docutils literal notranslate"><span class="pre">Vpc</span></code> and <code class="docutils literal notranslate"><span class="pre">Classic</span></code>.</p></li>
+<li><p><strong>file_system_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of file system. Valid values: <code class="docutils literal notranslate"><span class="pre">standard</span></code> and <code class="docutils literal notranslate"><span class="pre">extreme</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Note that the extreme only support Vpc Network.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Replaced by <code class="docutils literal notranslate"><span class="pre">access_group_name</span></code> after version 1.92.0.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Replaced by <code class="docutils literal notranslate"><span class="pre">access_group_type</span></code> after version 1.92.0.</p></li>
 </ul>
 </dd>
 </dl>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.nas.AccessGroup.access_group_name">
+<code class="sig-name descname">access_group_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.AccessGroup.access_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Name of one Access Group.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.nas.AccessGroup.access_group_type">
+<code class="sig-name descname">access_group_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.AccessGroup.access_group_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Type of one Access Group. Valid values: <code class="docutils literal notranslate"><span class="pre">Vpc</span></code> and <code class="docutils literal notranslate"><span class="pre">Classic</span></code>.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="pulumi_alicloud.nas.AccessGroup.description">
 <code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.AccessGroup.description" title="Permalink to this definition">¶</a></dt>
@@ -50,20 +66,26 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="py attribute">
+<dt id="pulumi_alicloud.nas.AccessGroup.file_system_type">
+<code class="sig-name descname">file_system_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.AccessGroup.file_system_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of file system. Valid values: <code class="docutils literal notranslate"><span class="pre">standard</span></code> and <code class="docutils literal notranslate"><span class="pre">extreme</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Note that the extreme only support Vpc Network.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt id="pulumi_alicloud.nas.AccessGroup.name">
 <code class="sig-name descname">name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.AccessGroup.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Name of one Access Group.</p>
+<dd><p>Replaced by <code class="docutils literal notranslate"><span class="pre">access_group_name</span></code> after version 1.92.0.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="pulumi_alicloud.nas.AccessGroup.type">
 <code class="sig-name descname">type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.nas.AccessGroup.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>A Type of one Access Group. Valid values: <code class="docutils literal notranslate"><span class="pre">Vpc</span></code> and <code class="docutils literal notranslate"><span class="pre">Classic</span></code>.</p>
+<dd><p>Replaced by <code class="docutils literal notranslate"><span class="pre">access_group_type</span></code> after version 1.92.0.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_alicloud.nas.AccessGroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AccessGroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_group_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_group_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_system_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.nas.AccessGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AccessGroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -72,9 +94,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A Name of one Access Group.</p></li>
+<li><p><strong>access_group_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A Type of one Access Group. Valid values: <code class="docutils literal notranslate"><span class="pre">Vpc</span></code> and <code class="docutils literal notranslate"><span class="pre">Classic</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Access Group description.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A Name of one Access Group.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A Type of one Access Group. Valid values: <code class="docutils literal notranslate"><span class="pre">Vpc</span></code> and <code class="docutils literal notranslate"><span class="pre">Classic</span></code>.</p></li>
+<li><p><strong>file_system_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of file system. Valid values: <code class="docutils literal notranslate"><span class="pre">standard</span></code> and <code class="docutils literal notranslate"><span class="pre">extreme</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Note that the extreme only support Vpc Network.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Replaced by <code class="docutils literal notranslate"><span class="pre">access_group_name</span></code> after version 1.92.0.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Replaced by <code class="docutils literal notranslate"><span class="pre">access_group_type</span></code> after version 1.92.0.</p></li>
 </ul>
 </dd>
 </dl>
