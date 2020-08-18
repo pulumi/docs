@@ -4720,8 +4720,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lambda_python">
-<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
+        <span id="lambda__python">
+<a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicruleerroractionlambda">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda]</a></span>

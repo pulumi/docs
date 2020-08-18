@@ -2881,8 +2881,8 @@ See Processing Configuration below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="lambda_python">
-<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
+        <span id="lambda__python">
+<a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda]</a></span>
@@ -4287,8 +4287,8 @@ See Kinesis Stream below for more details.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lambda_python">
-<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
+        <span id="lambda__python">
+<a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#analyticsapplicationoutputlambda">Dict[Analytics<wbr>Application<wbr>Output<wbr>Lambda]</a></span>
