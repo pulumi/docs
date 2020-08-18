@@ -1,21 +1,17 @@
 <script src="//js.hsforms.net/forms/v2.js"></script>
-{{ if .goToWebinarKey }}
-    <script>
+<script>
+    // When successfully loaded, the HubSpot forms script exposes an `hbspt` global.
+    if (typeof hbspt !== "undefined" && hbspt.forms && typeof hbspt.forms.create === "function") {
         hbspt.forms.create({
             portalId: "4429525",
             formId: {{ .hubspotFormID }},
             css: "",
             cssClass: "{{ .classNames }}",
-            goToWebinarWebinarKey: "{{ .goToWebinarKey }}",
+            {{ if .goToWebinarKey }}
+                goToWebinarWebinarKey: "{{ .goToWebinarKey }}",
+            {{ end }}
         });
-    </script>
-{{ else }}
-    <script>
-        hbspt.forms.create({
-            portalId: "4429525",
-            formId: {{ .hubspotFormID }},
-            css: "",
-            cssClass: "{{ .classNames }}",
-        });
-    </script>
-{{ end }}
+    } else {
+        console.log("Unable to load HubSpot form.");
+    }
+</script>
