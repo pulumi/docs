@@ -104,7 +104,7 @@ const development = new github.Branch("development", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.Branch">Branch</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>repository=None<span class="p">, </span>source_branch=None<span class="p">, </span>source_sha=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.Branch">Branch</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>repository=None<span class="p">, </span>source_branch=None<span class="p">, </span>source_sha=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -703,7 +703,7 @@ Get an existing Branch resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>branch=None<span class="p">, </span>etag=None<span class="p">, </span>ref=None<span class="p">, </span>repository=None<span class="p">, </span>sha=None<span class="p">, </span>source_branch=None<span class="p">, </span>source_sha=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>branch=None<span class="p">, </span>etag=None<span class="p">, </span>ref=None<span class="p">, </span>repository=None<span class="p">, </span>sha=None<span class="p">, </span>source_branch=None<span class="p">, </span>source_sha=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

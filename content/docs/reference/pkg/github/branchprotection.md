@@ -25,7 +25,7 @@ This resource allows you to configure branch protection for repositories in your
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.BranchProtection">BranchProtection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>enforce_admins=None<span class="p">, </span>repository=None<span class="p">, </span>require_signed_commits=None<span class="p">, </span>required_pull_request_reviews=None<span class="p">, </span>required_status_checks=None<span class="p">, </span>restrictions=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.BranchProtection">BranchProtection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>branch=None<span class="p">, </span>enforce_admins=None<span class="p">, </span>repository=None<span class="p">, </span>require_signed_commits=None<span class="p">, </span>required_pull_request_reviews=None<span class="p">, </span>required_status_checks=None<span class="p">, </span>restrictions=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -664,7 +664,7 @@ Get an existing BranchProtection resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>branch=None<span class="p">, </span>enforce_admins=None<span class="p">, </span>etag=None<span class="p">, </span>repository=None<span class="p">, </span>require_signed_commits=None<span class="p">, </span>required_pull_request_reviews=None<span class="p">, </span>required_status_checks=None<span class="p">, </span>restrictions=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>branch=None<span class="p">, </span>enforce_admins=None<span class="p">, </span>etag=None<span class="p">, </span>repository=None<span class="p">, </span>require_signed_commits=None<span class="p">, </span>required_pull_request_reviews=None<span class="p">, </span>required_status_checks=None<span class="p">, </span>restrictions=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
