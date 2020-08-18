@@ -528,7 +528,7 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
 `;
 
         default:
-            throw new Error("unrecognized canned example ID: " + id);
+            return "";
     }
 }
 
