@@ -7,7 +7,7 @@ authors: ["vova-ivanov"]
 tags: ["aws", "python", "mysql"]
 ---
 
-In our [previous post](https://www.pulumi.com/blog/creating-a-python-aws-application-using-flask-and-redis/), we created a Python voting application using Flask and Redis. This blog post will explore creating a MySQL database and initializing it with a schema and data. What seems to be a simple step is much more interesting than it appears, because Pulumi's MySQL provider does not support creating and populating tables. To do it, we will extend it with a Dynamic Provider.
+In our [previous post]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}), we created a Python voting application using Flask and Redis. This blog post will explore creating a MySQL database and initializing it with a schema and data. What seems to be a simple step is much more interesting than it appears, because Pulumi's MySQL provider does not support creating and populating tables. To do it, we will extend it with a Dynamic Provider.
 
 <!--more-->
 
