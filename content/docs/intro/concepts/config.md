@@ -198,10 +198,20 @@ print(config.require_secret('dbPassword'))
 {{% choosable language go %}}
 
 ```go
-c := config.New(ctx, "")
+package main
 
-name := c.Require("name")
-dbPassword := c.Require("dbPassword")
+import (
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        c := config.New(ctx, "")
+
+        name := c.Require("name")
+        dbPassword := c.Require("dbPassword")
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -304,6 +314,13 @@ print("Active:", data.get("active"))
 {{% choosable language go %}}
 
 ```go
+package main
+
+import (
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
 type Data struct {
 	Active bool
 	Nums   []int
