@@ -38,7 +38,7 @@ Explore the resources and functions of the networking/v1beta1 module in the Kube
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/networking/v1beta1/#" title="@pulumi/kubernetes/networking/v1beta1">@pulumi/kubernetes/networking/v1beta1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/networking.k8s.io/v1beta1" title="pulumi_kubernetes/networking.k8s.io/v1beta1">pulumi_kubernetes/networking.k8s.io/v1beta1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/networking/v1beta1" title="pulumi_kubernetes/networking/v1beta1">pulumi_kubernetes/networking/v1beta1</a></dd>
 
 </dl>
 

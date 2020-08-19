@@ -42,7 +42,7 @@ Explore the resources and functions of the storage/v1beta1 module in the Kuberne
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/storage/v1beta1/#" title="@pulumi/kubernetes/storage/v1beta1">@pulumi/kubernetes/storage/v1beta1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/storage.k8s.io/v1beta1" title="pulumi_kubernetes/storage.k8s.io/v1beta1">pulumi_kubernetes/storage.k8s.io/v1beta1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/storage/v1beta1" title="pulumi_kubernetes/storage/v1beta1">pulumi_kubernetes/storage/v1beta1</a></dd>
 
 </dl>
 

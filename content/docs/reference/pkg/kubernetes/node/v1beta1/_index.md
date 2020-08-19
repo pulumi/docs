@@ -36,7 +36,7 @@ Explore the resources and functions of the node/v1beta1 module in the Kubernetes
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/node/v1beta1/#" title="@pulumi/kubernetes/node/v1beta1">@pulumi/kubernetes/node/v1beta1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/node.k8s.io/v1beta1" title="pulumi_kubernetes/node.k8s.io/v1beta1">pulumi_kubernetes/node.k8s.io/v1beta1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/node/v1beta1" title="pulumi_kubernetes/node/v1beta1">pulumi_kubernetes/node/v1beta1</a></dd>
 
 </dl>
 

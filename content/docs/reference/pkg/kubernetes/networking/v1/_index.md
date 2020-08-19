@@ -36,7 +36,7 @@ Explore the resources and functions of the networking/v1 module in the Kubernete
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/networking/v1/#" title="@pulumi/kubernetes/networking/v1">@pulumi/kubernetes/networking/v1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/networking.k8s.io/v1" title="pulumi_kubernetes/networking.k8s.io/v1">pulumi_kubernetes/networking.k8s.io/v1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/networking/v1" title="pulumi_kubernetes/networking/v1">pulumi_kubernetes/networking/v1</a></dd>
 
 </dl>
 

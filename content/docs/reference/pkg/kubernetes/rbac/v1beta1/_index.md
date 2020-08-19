@@ -42,7 +42,7 @@ Explore the resources and functions of the rbac/v1beta1 module in the Kubernetes
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/rbac/v1beta1/#" title="@pulumi/kubernetes/rbac/v1beta1">@pulumi/kubernetes/rbac/v1beta1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/rbac.authorization.k8s.io/v1beta1" title="pulumi_kubernetes/rbac.authorization.k8s.io/v1beta1">pulumi_kubernetes/rbac.authorization.k8s.io/v1beta1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/rbac/v1beta1" title="pulumi_kubernetes/rbac/v1beta1">pulumi_kubernetes/rbac/v1beta1</a></dd>
 
 </dl>
 
