@@ -43,7 +43,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven"
+	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -105,12 +105,12 @@ const mypeeringconnection = aiven.getVpcPeeringConnection({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_vpc_peering_connection(</span>client_timeout=None<span class="p">, </span>peer_cloud_account=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_vpc=None<span class="p">, </span>peering_connection_id=None<span class="p">, </span>state=None<span class="p">, </span>state_info=None<span class="p">, </span>vpc_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_vpc_peering_connection(</span>peer_azure_app_id=None<span class="p">, </span>peer_azure_tenant_id=None<span class="p">, </span>peer_cloud_account=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_resource_group=None<span class="p">, </span>peer_vpc=None<span class="p">, </span>peering_connection_id=None<span class="p">, </span>state=None<span class="p">, </span>state_info=None<span class="p">, </span>vpc_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#LookupVpcPeeringConnectionArgs">LookupVpcPeeringConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#LookupVpcPeeringConnectionResult">LookupVpcPeeringConnectionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupVpcPeeringConnectionArgs">LookupVpcPeeringConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupVpcPeeringConnectionResult">LookupVpcPeeringConnectionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVpcPeeringConnection` in the Go SDK.
 
@@ -164,11 +164,21 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clienttimeout_csharp">
-<a href="#clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+        <span id="peerazureappid_csharp">
+<a href="#peerazureappid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionclienttimeout">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerazuretenantid_csharp">
+<a href="#peerazuretenantid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -176,6 +186,16 @@ The following arguments are supported:
             title="Optional">
         <span id="peerregion_csharp">
 <a href="#peerregion_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerresourcegroup_csharp">
+<a href="#peerresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -251,11 +271,21 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clienttimeout_go">
-<a href="#clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+        <span id="peerazureappid_go">
+<a href="#peerazureappid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionclienttimeout">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerazuretenantid_go">
+<a href="#peerazuretenantid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -263,6 +293,16 @@ The following arguments are supported:
             title="Optional">
         <span id="peerregion_go">
 <a href="#peerregion_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerresourcegroup_go">
+<a href="#peerresourcegroup_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -338,11 +378,21 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clienttimeout_nodejs">
-<a href="#clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
+        <span id="peerazureappid_nodejs">
+<a href="#peerazureappid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionclienttimeout">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerazuretenantid_nodejs">
+<a href="#peerazuretenantid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -350,6 +400,16 @@ The following arguments are supported:
             title="Optional">
         <span id="peerregion_nodejs">
 <a href="#peerregion_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peerresourcegroup_nodejs">
+<a href="#peerresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Resource<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -425,11 +485,21 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="client_timeout_python">
-<a href="#client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
+        <span id="peer_azure_app_id_python">
+<a href="#peer_azure_app_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionclienttimeout">Dict[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peer_azure_tenant_id_python">
+<a href="#peer_azure_tenant_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -437,6 +507,16 @@ The following arguments are supported:
             title="Optional">
         <span id="peer_region_python">
 <a href="#peer_region_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>region</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peer_resource_group_python">
+<a href="#peer_resource_group_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>resource_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -506,8 +586,38 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="peerazureappid_csharp">
+<a href="#peerazureappid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerazuretenantid_csharp">
+<a href="#peerazuretenantid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="peercloudaccount_csharp">
 <a href="#peercloudaccount_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cloud<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerresourcegroup_csharp">
+<a href="#peerresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -566,16 +676,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="clienttimeout_csharp">
-<a href="#clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionclienttimeout">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="peerregion_csharp">
 <a href="#peerregion_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
 </span> 
@@ -604,8 +704,38 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="peerazureappid_go">
+<a href="#peerazureappid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerazuretenantid_go">
+<a href="#peerazuretenantid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="peercloudaccount_go">
 <a href="#peercloudaccount_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cloud<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerresourcegroup_go">
+<a href="#peerresourcegroup_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -664,16 +794,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="clienttimeout_go">
-<a href="#clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionclienttimeout">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="peerregion_go">
 <a href="#peerregion_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
 </span> 
@@ -702,8 +822,38 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="peerazureappid_nodejs">
+<a href="#peerazureappid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>App<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerazuretenantid_nodejs">
+<a href="#peerazuretenantid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="peercloudaccount_nodejs">
 <a href="#peercloudaccount_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cloud<wbr>Account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerresourcegroup_nodejs">
+<a href="#peerresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Resource<wbr>Group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -762,16 +912,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="clienttimeout_nodejs">
-<a href="#clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionclienttimeout">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="peerregion_nodejs">
 <a href="#peerregion_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Region</a>
 </span> 
@@ -800,8 +940,38 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="peer_azure_app_id_python">
+<a href="#peer_azure_app_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>app_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peer_azure_tenant_id_python">
+<a href="#peer_azure_tenant_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="peer_cloud_account_python">
 <a href="#peer_cloud_account_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cloud_<wbr>account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peer_resource_group_python">
+<a href="#peer_resource_group_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>resource_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -860,110 +1030,8 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="client_timeout_python">
-<a href="#client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionclienttimeout">Dict[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="peer_region_python">
 <a href="#peer_region_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>region</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-
-## Supporting Types
-
-
-<h4 id="getvpcpeeringconnectionclienttimeout">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetVpcPeeringConnectionClientTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetVpcPeeringConnectionClientTimeout">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetVpcPeeringConnectionClientTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetVpcPeeringConnectionClientTimeout">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetVpcPeeringConnectionClientTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetVpcPeeringConnectionClientTimeout.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_csharp">
-<a href="#create_csharp" style="color: inherit; text-decoration: inherit;">Create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_go">
-<a href="#create_go" style="color: inherit; text-decoration: inherit;">Create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_nodejs">
-<a href="#create_nodejs" style="color: inherit; text-decoration: inherit;">create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_python">
-<a href="#create_python" style="color: inherit; text-decoration: inherit;">create</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

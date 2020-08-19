@@ -19,23 +19,34 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="accountteam" title="AccountTeam"><span class="symbol resource"></span>AccountTeam</a></li>
     <li><a href="accountteammember" title="AccountTeamMember"><span class="symbol resource"></span>AccountTeamMember</a></li>
     <li><a href="accountteamproject" title="AccountTeamProject"><span class="symbol resource"></span>AccountTeamProject</a></li>
+    <li><a href="cassandra" title="Cassandra"><span class="symbol resource"></span>Cassandra</a></li>
     <li><a href="connectionpool" title="ConnectionPool"><span class="symbol resource"></span>ConnectionPool</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
+    <li><a href="elasticsearch" title="ElasticSearch"><span class="symbol resource"></span>ElasticSearch</a></li>
     <li><a href="elasticsearchacl" title="ElasticSearchAcl"><span class="symbol resource"></span>ElasticSearchAcl</a></li>
+    <li><a href="grafana" title="Grafana"><span class="symbol resource"></span>Grafana</a></li>
+    <li><a href="influxdb" title="InfluxDb"><span class="symbol resource"></span>InfluxDb</a></li>
+    <li><a href="kafka" title="Kafka"><span class="symbol resource"></span>Kafka</a></li>
     <li><a href="kafkaacl" title="KafkaAcl"><span class="symbol resource"></span>KafkaAcl</a></li>
+    <li><a href="kafkaconnect" title="KafkaConnect"><span class="symbol resource"></span>KafkaConnect</a></li>
     <li><a href="kafkaconnector" title="KafkaConnector"><span class="symbol resource"></span>KafkaConnector</a></li>
+    <li><a href="kafkamirrormaker" title="KafkaMirrorMaker"><span class="symbol resource"></span>KafkaMirrorMaker</a></li>
     <li><a href="kafkaschema" title="KafkaSchema"><span class="symbol resource"></span>KafkaSchema</a></li>
     <li><a href="kafkaschemaconfiguration" title="KafkaSchemaConfiguration"><span class="symbol resource"></span>KafkaSchemaConfiguration</a></li>
     <li><a href="kafkatopic" title="KafkaTopic"><span class="symbol resource"></span>KafkaTopic</a></li>
     <li><a href="mirrormakerreplicationflow" title="MirrorMakerReplicationFlow"><span class="symbol resource"></span>MirrorMakerReplicationFlow</a></li>
+    <li><a href="mysql" title="MySql"><span class="symbol resource"></span>MySql</a></li>
+    <li><a href="pg" title="Pg"><span class="symbol resource"></span>Pg</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="projectuser" title="ProjectUser"><span class="symbol resource"></span>ProjectUser</a></li>
     <li><a href="projectvpc" title="ProjectVpc"><span class="symbol resource"></span>ProjectVpc</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="redis" title="Redis"><span class="symbol resource"></span>Redis</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
     <li><a href="serviceintegration" title="ServiceIntegration"><span class="symbol resource"></span>ServiceIntegration</a></li>
     <li><a href="serviceintegrationendpoint" title="ServiceIntegrationEndpoint"><span class="symbol resource"></span>ServiceIntegrationEndpoint</a></li>
     <li><a href="serviceuser" title="ServiceUser"><span class="symbol resource"></span>ServiceUser</a></li>
+    <li><a href="transitgatewayvpcattachment" title="TransitGatewayVpcAttachment"><span class="symbol resource"></span>TransitGatewayVpcAttachment</a></li>
     <li><a href="vpcpeeringconnection" title="VpcPeeringConnection"><span class="symbol resource"></span>VpcPeeringConnection</a></li>
 </ul>
 
@@ -46,22 +57,33 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="getaccountteam" title="GetAccountTeam"><span class="symbol function"></span>GetAccountTeam</a></li>
     <li><a href="getaccountteammember" title="GetAccountTeamMember"><span class="symbol function"></span>GetAccountTeamMember</a></li>
     <li><a href="getaccountteamproject" title="GetAccountTeamProject"><span class="symbol function"></span>GetAccountTeamProject</a></li>
+    <li><a href="getcassanda" title="GetCassanda"><span class="symbol function"></span>GetCassanda</a></li>
     <li><a href="getconnectionpool" title="GetConnectionPool"><span class="symbol function"></span>GetConnectionPool</a></li>
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
+    <li><a href="getelasticsearch" title="GetElasticSearch"><span class="symbol function"></span>GetElasticSearch</a></li>
     <li><a href="getelasticsearchacl" title="GetElasticSearchAcl"><span class="symbol function"></span>GetElasticSearchAcl</a></li>
+    <li><a href="getgrafana" title="GetGrafana"><span class="symbol function"></span>GetGrafana</a></li>
+    <li><a href="getinfluxdb" title="GetInfluxDb"><span class="symbol function"></span>GetInfluxDb</a></li>
+    <li><a href="getkafka" title="GetKafka"><span class="symbol function"></span>GetKafka</a></li>
     <li><a href="getkafkaacl" title="GetKafkaAcl"><span class="symbol function"></span>GetKafkaAcl</a></li>
+    <li><a href="getkafkaconnect" title="GetKafkaConnect"><span class="symbol function"></span>GetKafkaConnect</a></li>
     <li><a href="getkafkaconnector" title="GetKafkaConnector"><span class="symbol function"></span>GetKafkaConnector</a></li>
+    <li><a href="getkafkamirrormaker" title="GetKafkaMirrorMaker"><span class="symbol function"></span>GetKafkaMirrorMaker</a></li>
     <li><a href="getkafkaschema" title="GetKafkaSchema"><span class="symbol function"></span>GetKafkaSchema</a></li>
     <li><a href="getkafkaschemaconfiguration" title="GetKafkaSchemaConfiguration"><span class="symbol function"></span>GetKafkaSchemaConfiguration</a></li>
     <li><a href="getkafkatopic" title="GetKafkaTopic"><span class="symbol function"></span>GetKafkaTopic</a></li>
     <li><a href="getmirrormakerreplicationflow" title="GetMirrorMakerReplicationFlow"><span class="symbol function"></span>GetMirrorMakerReplicationFlow</a></li>
+    <li><a href="getmysql" title="GetMySql"><span class="symbol function"></span>GetMySql</a></li>
+    <li><a href="getpg" title="GetPg"><span class="symbol function"></span>GetPg</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
     <li><a href="getprojectuser" title="GetProjectUser"><span class="symbol function"></span>GetProjectUser</a></li>
     <li><a href="getprojectvpc" title="GetProjectVpc"><span class="symbol function"></span>GetProjectVpc</a></li>
+    <li><a href="getredis" title="GetRedis"><span class="symbol function"></span>GetRedis</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="getserviceintegration" title="GetServiceIntegration"><span class="symbol function"></span>GetServiceIntegration</a></li>
     <li><a href="getserviceintegrationendpoint" title="GetServiceIntegrationEndpoint"><span class="symbol function"></span>GetServiceIntegrationEndpoint</a></li>
     <li><a href="getserviceuser" title="GetServiceUser"><span class="symbol function"></span>GetServiceUser</a></li>
+    <li><a href="gettransitgatewayvpcattachment" title="GetTransitGatewayVpcAttachment"><span class="symbol function"></span>GetTransitGatewayVpcAttachment</a></li>
     <li><a href="getvpcpeeringconnection" title="GetVpcPeeringConnection"><span class="symbol function"></span>GetVpcPeeringConnection</a></li>
 </ul>
 
@@ -74,7 +96,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
 	<dt>Version</dt>
-	<dd>2.2.1</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -85,7 +107,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.html" title="Pulumi.Aiven">Pulumi.Aiven</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#" title="aiven">aiven</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#" title="aiven">aiven</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#" title="@pulumi/aiven">@pulumi/aiven</a></dd>
