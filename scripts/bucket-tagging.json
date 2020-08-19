@@ -1,0 +1,24 @@
+{
+    "TagSet": [
+        {
+            "Key": "VantaOwner",
+            "Value": "lee@pulumi.com"
+        },
+        {
+            "Key": "VantaNonProd",
+            "Value": true
+        },
+        {
+            "Key": "VantaDescription",
+            "Value": "Docs website bucket"
+        },
+        {
+            "Key": "VantaContainsUserData",
+            "Value": false
+        },
+        {
+            "Key": "VantaNoAlert",
+            "Value": "Docs website is not part of our production service."
+        }
+    ]
+}
