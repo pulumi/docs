@@ -53,6 +53,42 @@ summary = "Company funded by Madrona Venture Group and Tola Capital to help comp
 url = "https://info.pulumi.com/press-release/pulumi-launches-cloud-development-platform-to-help-teams-get-code-to-the-cloud-faster/"
 
 [[coverage]]
+date = "13th August 2020"
+title = "Infrastructure-as-code upstart boosts Kubernetes deployment"
+img = "/logos/press/techtarget.png"
+url = "https://searchitoperations.techtarget.com/news/252487644/Infrastructure-as-code-upstart-boosts-Kubernetes-deployment"
+
+[[coverage]]
+date = "24th April 2020"
+title = "Pulumi: Program the Infrastructure with an Actual Programming Language"
+img = "/logos/press/newstack.png"
+url = "https://thenewstack.io/pulumi-program-the-infrastructure-with-an-actual-programming-language/"
+
+[[coverage]]
+date = "22nd April 2020"
+title = "Push me, Pulumi: Terraform rival goes for complete workflow as version 2.0 arrives"
+img = "/logos/press/devclass.png"
+url = "https://devclass.com/2020/04/22/push-me-pulumi-terraform-rival-goes-for-complete-workflow-as-version-2-0-arrives/"
+
+[[coverage]]
+date = "21st April 2020"
+title = "Pulumi brings support for more languages to its infrastructure-as-code platform "
+img = "/logos/press/techcrunch.png"
+url = "https://techcrunch.com/2020/04/21/pulumi-brings-support-for-more-languages-to-its-infrastructure-as-code-platform/"
+
+[[coverage]]
+date = "21st April 2020"
+title = "Pulumi Tightens DevOps Platform Integration"
+img = "/logos/press/devops.png"
+url = "https://devops.com/pulumi-tightens-devops-platform-integration/"
+
+[[coverage]]
+date = "21st April 2020"
+title = "Infrastructure Is Code and with Pulumi 2.0, so Is Architecture and Policy"
+img = "/logos/press/newstack.png"
+url = "https://thenewstack.io/infrastructure-is-code-and-with-pulumi-2-0-so-is-architecture-and-policy/"
+
+[[coverage]]
 date = "13th Dec 2019"
 title = "Pulumi named one of Business Insider's top start-ups for 2019"
 img = "/logos/press/businessinsider.png"
