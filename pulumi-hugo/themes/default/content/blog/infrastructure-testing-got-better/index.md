@@ -27,7 +27,7 @@ With this shift, it makes sense to throw out old configurations and pick the bes
 
 * Pulumi supports TypeScript - the modern programming language that the team prefers for its static typing capabilities.
 * It works ‘out of the box’ with modern Integrated Development Environments (IDEs) like Visual Studio Code.
-* Because Pulumi uses real programming languages, we can unit test our code
+* Because Pulumi uses familiar programming languages, we can unit test our code
 * By virtue of working with TypeScript, it natively supports Mocha - our testing framework of choice.
 
 ##### *Watch Dustin Farris and Lee Zen demonstrate unit testing on this episode of [Modern Infrastructure Wednesday](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWloyj3V5gXzPraiKStO2GGZw).*

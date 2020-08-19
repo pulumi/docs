@@ -18,7 +18,7 @@ automate updating your cloud infrastructure using Pulumi.
 
 <!--more-->
 
-You’ve heard about *Infrastructure as Code* and decided to try your hand at using Pulumi to manage cloud infrastructure using real programming languages. Naturally, you’re curious and eager to start updating your cloud infrastructure in your CI/CD pipeline – but then panic hits... Is updating your cloud infrastructure secure? If you start doing cloud deployments in your CI/CD system, doesn’t that mean you need to give it your production credentials? Aren’t those the most sensitive things your company has?!?
+You’ve heard about *Infrastructure as Code* and decided to try your hand at using Pulumi to manage cloud infrastructure using familiar programming languages. Naturally, you’re curious and eager to start updating your cloud infrastructure in your CI/CD pipeline – but then panic hits... Is updating your cloud infrastructure secure? If you start doing cloud deployments in your CI/CD system, doesn’t that mean you need to give it your production credentials? Aren’t those the most sensitive things your company has?!?
 
 **Take a deep breath**. It’s going to be OK. You _can_ securely provide AWS credentials to your CI/CD system and practice continuous delivery. This is the first post
 in a series going in-depth on how to do just that.

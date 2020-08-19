@@ -18,7 +18,7 @@ carousel:
       label: Create
       description: modern applications.
       details:
-        - title: Real programming languages.
+        - title: Popular programming languages.
           description: >
             Define infrastructure in JavaScript, TypeScript, Python, Go, or
             any .NET language, including C#, F#, and VB.
@@ -64,6 +64,6 @@ contact_us_form:
         name_title: Site Reliability Engineer, Cockroach Labs
         content: |
             We are building a distributed-database-as-a-service product that runs on Kubernetes clusters across multiple
-            public clouds including GCP, AWS and others. Pulumi's declarative model, the support for real programming
+            public clouds including GCP, AWS and others. Pulumi's declarative model, the support for familiar programming
             languages, and the uniform workflow on any cloud make our SRE team much more efficient.
 ---

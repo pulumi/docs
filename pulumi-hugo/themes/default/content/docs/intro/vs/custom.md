@@ -25,7 +25,7 @@ The maintenance cost of solutions like this often grows to consume multiple team
 up your best and brightest engineers. Many teams find that they spend more time managing their home-grown
 infrastructure scripts than they do writing business logic, and still can't move as fast as they want to.
 
-Pulumi was designed to address these problems out of the box. It gives a real programming model, with familiar
+Pulumi was designed to address these problems out of the box. It offers a cloud programming model, with familiar
 languages, for expressing your cloud infrastructure and application needs. By expressing them using Pulumi, you
 get a robust and repeatable deployment model, that works in a team environment. Pulumi was also designed to
 make provisioning multiple copies of your infrastructure of application trivial, whether this is to bring up

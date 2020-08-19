@@ -7,7 +7,7 @@ authors: ["marc-holmes"]
 tags: ["Features"]
 ---
 
-When you're able to build an app for any cloud using real languages,
+When you're able to build an app for any cloud using familiar languages,
 the obvious question is "Where to start?". We hear you, and so we've
 built some new features to help you scaffold your app and program the
 cloud even faster than before.

@@ -67,7 +67,7 @@ as there is actual application code. The lack of expressiveness has led
 us to resort to bolting on templating systems, writing mountains of
 bash, and overall find ourselves swimming in a sea of complexity.
 
-The problem is, these are crude approximations of real languages. They
+The problem is, these are crude approximations of familiar, general-purpose languages. They
 lack real abstraction, sharing, and reuse. You can't fire up your editor
 and refactor, test, or analyze your code to find bugs ahead of time.
 Instead, you find simple syntax errors when it's too late, after
@@ -105,7 +105,7 @@ cloud** -- our rally cry, if you will.
 Just like code, we can collaborate with source control systems like Git
 -- code reviewing changes, pushing and pulling code to perform
 deployments -- using easy but robust continuous delivery workflows.
-Thanks to real languages, a cloud object model, and programmable cloud
+Thanks to familiar languages, a cloud object model, and programmable cloud
 APIs, the system has true semantic understanding of your cloud software,
 its resources and their relationships, which can be used for rich
 deployment statuses and to organize and find information more easily.

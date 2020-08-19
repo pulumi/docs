@@ -13,7 +13,7 @@ F5's [BIG-IP Local Traffic Managment (LTM) services](https://www.f5.com/products
 provides advanced traffic management, acceleration, security, and
 analytics features to your applications. With the addition of our F5
 BIG-IP Pulumi provider we are bringing *Cloud Native Infrastructure as
-Code* to F5 BIG-IP devices with real programming languages and a
+Code* to F5 BIG-IP devices with familiar programming languages and a
 consistent programming model. This addresses a frequent use-case we've
 heard from our customers for both on-premises and Cloud workloads.
 
@@ -204,7 +204,7 @@ or in your on-premises data centers. In a matter of minutes you can
 bring modern code and development practices to your BIG-IP-powered
 applications.
 
-To start managing your F5 BIG-IP systems with real programming
+To start managing your F5 BIG-IP systems with familiar programming
 languages, please check out the following links:
 
 - [F5 BIG-IP documentation]({{< relref "/docs/reference/pkg/f5bigip" >}})

@@ -19,7 +19,7 @@ for example, a managed database like AWS RDS or Azure CosmosDB?
 
 Pulumi is a cloud native development platform designed to be able to
 express any cloud native infrastructure as code in a natural,
-intentional manner using real languages. The most natural way to solve
+intentional manner using familiar languages. The most natural way to solve
 this challenge would be to stand up an instance of AWS RDS, populate a
 Kubernetes Secret with the connection details, and then simply let my
 application use these newly available resources. Pulumi gives users the

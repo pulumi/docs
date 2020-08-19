@@ -10,7 +10,7 @@ Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment
 automatically scaled out container running inside of a cluster.
 
 This example is authored using Pulumi's programming model in TypeScript instead of YAML and using the `pulumi` CLI for
-deployment rather than `kubectl`. This gives us the full power of real languages, combined with immutable
+deployment rather than `kubectl`. This gives us the full power of familiar languages, combined with immutable
 infrastructure, delivering a robust and repeatable update experience.
 
 This example is based on

@@ -8,7 +8,7 @@ date: "2019-09-05"
 meta_image: "pulumi-1-0.png"
 ---
 
-Today we are excited to announce the general availability of Pulumi 1.0. Pulumi is a modern infrastructure as code tool that lets you declare infrastructure using real languages, with a SaaS management console for configuring identities, organizations, and related policies. By using real languages, developers and operators are able to work better together, sharing and reusing best practices, accomplishing new levels of automation, and unlocking access to ecosystems of existing tools. The 1.0 release is a siginificant milestone for us, our community, and our customers, and signals completeness, stability, and compatibility.
+Today we are excited to announce the general availability of Pulumi 1.0. Pulumi is a modern infrastructure as code tool that lets you declare infrastructure using familiar, general-purpose languages, with a SaaS management console for configuring identities, organizations, and related policies. By using familiar languages, developers and operators are able to work better together, sharing and reusing best practices, accomplishing new levels of automation, and unlocking access to ecosystems of existing tools. The 1.0 release is a siginificant milestone for us, our community, and our customers, and signals completeness, stability, and compatibility.
 
 ## What is Pulumi?
 
@@ -44,7 +44,7 @@ The Pulumi service is available as a free Community Edition as well as advanced 
 
 ## Why Pulumi?
 
-Using real languages offers significant advantages for declaring your infrastructure:
+Using familiar languages offers significant advantages for declaring your infrastructure:
 
 * **Control flow**: use if statements, for loops, case statements, etc.
 * **Abstractions and reuse**: leverage classes and functions to avoid repeating the same boilerplate over and over again
