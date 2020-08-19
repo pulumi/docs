@@ -11,7 +11,7 @@ In this tutorial, we'll build and deploy
 The guestbook is a simple, multi-tier web application that uses Redis and Nginx, powered by Docker containers and
 Kubernetes. The primary difference between this example and the standard Kubernetes one is that we'll be authoring it in
 TypeScript instead of YAML, and we'll deploy it using `pulumi` rather than `kubectl`. This gives us the full power of
-real languages, combined with immutable infrastructure, delivering a robust and repeatable update experience.
+general-purpose languages, combined with immutable infrastructure, delivering a robust and repeatable update experience.
 
 The code for this tutorial is available on GitHub.
 

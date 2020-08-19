@@ -13,7 +13,7 @@ Here at Pulumi, everyone on our engineering team is a Gopher. Go has quickly bec
 
 Go has become the lingua franca of cloud-native infrastructure development. From projects like Docker, to Kubernetes, the community has embraced Go. The result is an ecosystem rich in tooling and packages designed for systems and cloud engineering.
 
-Pulumi lets you use real languages to express your application’s infrastructure needs, using a powerful technique called “infrastructure as code.” Using infrastructure as code, you declare desired infrastructure, and an engine provisions it for you so that it’s automated, easy to replicate, and robust enough for demanding production requirements. Pulumi improves this process by leveraging real languages and making modern cloud infrastructure patterns, such as containers and serverless programs, first-class and easy.
+Pulumi lets you use familiar languages to express your application’s infrastructure needs, using a powerful technique called “infrastructure as code.” Using infrastructure as code, you declare desired infrastructure, and an engine provisions it for you so that it’s automated, easy to replicate, and robust enough for demanding production requirements. Pulumi improves this process by leveraging general-purpose languages and making modern cloud infrastructure patterns, such as containers and serverless programs, first-class and easy.
 
 - Automatically create, update, or delete cloud resources using Pulumi’s infrastructure as code engine, removing manual point-and-clicking in the cloud provider consoles, UIs, and ad-hoc scripts.
 - Use your favorite IDEs and tools, including Visual Studio Code, taking advantage of features like auto-completion, refactoring, and interactive documentation.

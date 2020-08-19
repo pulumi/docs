@@ -9,7 +9,7 @@ meta_desc: "Pulumi's AWS package provides the simplest way possible to do server
 
 One of Pulumi's goals is to provide the simplest way possible to do
 serverless programming on AWS by enabling you to create cloud
-infrastructure with the real programming languages that you are already
+infrastructure with familiar programming languages that you are already
 using today. We believe that the existing constructs already present in
 these languages, like flow control, inheritance, composition, and so on,
 provide the right abstractions to effectively build up infrastructure in

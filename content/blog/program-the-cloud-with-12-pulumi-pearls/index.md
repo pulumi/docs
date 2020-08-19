@@ -11,7 +11,7 @@ that demonstrate some fun ways you can program the cloud using Pulumi.
 In my introductory post, I mentioned [a few of my "favorite things"](http://joeduffyblog.com/2018/06/18/hello-pulumi/#my-favorite-things).
 Now let's dive into a few specifics, from multi-cloud to cloud-specific,
 spanning containers, serverless, and infrastructure, and generally
-highlighting why using real languages is so empowering for cloud
+highlighting why using familiar languages is so empowering for cloud
 scenarios. Since Pulumi lets you do infrastructure-as-code from the
 lowest-level to the highest, we will cover a lot of interesting ground
 in short order.
@@ -22,14 +22,14 @@ and use, and [the quickstart]({{< relref "/docs/get-started" >}}) will acquaint 
 the examples are directly runnable and available in [our examples repo](https://github.com/pulumi/examples), and are just a
 `pulumi up` away, unlike other approaches that
 require you to point-and-click around in your cloud's console, and/or
-author reams of yucky YAML. And you get to use real languages!
+author reams of yucky YAML. And you get to use familiar languages!
 
 Here is an index of the pearls in case you want to dive straight into
 one in particular:
 
 [**Infrastructure**](#infrastructure):
 
-1. [Declare cloud infra using a real language (with loops!)](#real-languages)
+1. [Declare cloud infra using a familiar language (with loops!)](#familiar-languages)
 2. [Make a reusable component out of your cloud infra](#reusable-components)
 
 [**Serverless**](#serverless):
@@ -62,7 +62,7 @@ And with that, let's dive in.
 
 ## Infrastructure
 
-### Real Languages
+### Familiar Languages
 
 [ [Runnable Example](https://github.com/pulumi/examples/tree/master/aws-js-webserver) ]
 
@@ -131,7 +131,7 @@ the messy details of AWS networking.
 
 [ [Runnable Example](https://github.com/pulumi/pulumi-aws/blob/master/examples/webserver-comp/) ]
 
-Speaking of components, this is another benefit of using real languages:
+Speaking of components, this is another benefit of using familiar languages:
 abstraction. This includes the ability to hide uninteresting details
 through encapsulation, and create bigger things out of smaller things, a
 key to how we've become so productive with programming languages
@@ -216,7 +216,7 @@ infrastructure examples and the soon-to-be-mentioned container ones.
 Most real-world examples we see in fact mix all of these things together
 in the same program.
 
-Because of the way it uses real languages, there are great benefits to
+Because of the way it uses familiar languages, there are great benefits to
 serverless programming in Pulumi. No YAML required -- just write lambdas
 in your favorite language, and our compiler/runtime magic will deal with
 them. But first, let's start simple.
@@ -733,7 +733,7 @@ of your entire application and/or infrastructure when you need to scale,
 while also reducing friction during development and testing. Such
 hard-coding is a definite code smell and impediment, however.
 
-Because we are using a real language, we can do anything that real
+Because we are using a familiar language, we can do anything that general-purpose
 languages can do. That includes dynamically querying sources of
 information which, in this case, can be used to avoid hard-coding. We
 can even use the AWS SDK, which gives us full access to all AWS
