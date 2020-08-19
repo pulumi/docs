@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Continuous Delivery and Infrastructure Testing: A Perfect Fit"
-meta_desc: "As cloud-native applications become the norm, it is increasingly important to test infrastructure changes as well as core logic. How can you ensure that your application can still be deployed? Or verify that networking changes won’t break access to other microservices?"
+meta_desc: "Join Chris Smith as he shows us how to test infrastructure changes and core logic for cloud native applications, an increasingly important part of cloud-native application lifecycles."
 
 # A featured webinar will display first in the list.
 featured: false
