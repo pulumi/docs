@@ -258,7 +258,7 @@ rote translation has benefits -- for example, open it in your favorite
 editor, and you'll notice you get syntax highlighting, statement
 completion, and integrated documentation. But we'll soon see that once
 we have this code in our favorite language, we can refactor it to
-leverage real programming languages more idiomatically, reducing a lot
+leverage familiar programming languages more idiomatically, reducing a lot
 of boilerplate.
 
 After the conversion is complete, we can create, configure, and update a

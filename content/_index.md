@@ -4,7 +4,7 @@ meta_desc: Pulumi's open source infrastructure as code SDK enables you to create
 heading: Modern Infrastructure as Code.
 
 subhead: >
-    Any cloud, real languages. Now with superpowers.
+    Create, deploy, and manage infrastructure on any cloud using familiar programming languages and tools.
 
 ctas:
     - |
@@ -19,7 +19,7 @@ carousel:
       label: Create
       description: modern applications.
       details:
-        - title: Real programming languages.
+        - title: Familiar programming languages.
           description: >
             Define infrastructure in JavaScript, TypeScript, Python, Go, or
             any .NET language, including C#, F#, and VB.
@@ -75,7 +75,7 @@ quotes:
       body: >
         We are building a distributed-database-as-a-service product that runs on Kubernetes clusters
         across multiple public clouds including GCP, AWS and others. Pulumi's declarative model,
-        the support for real programming languages, and the uniform workflow on any cloud
+        the support for familiar programming languages, and the uniform workflow on any cloud
         make our SRE team much more efficient.
 
     - name: Beyang Liu

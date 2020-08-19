@@ -93,7 +93,7 @@ DevOps teams have taken it upon themselves to become those DSL experts, but are 
 
 ## Pulumi Provides a Cloud Native Programming Model
 
-Using real languages changes everything. [The Pulumi Cloud Development Platform]({{< relref "/product" >}}) is a combination of tools, libraries, runtime, and service that delivers a consistent development and operational control plane for cloud native infrastructure.
+Using familiar languages changes everything. [The Pulumi Cloud Development Platform]({{< relref "/product" >}}) is a combination of tools, libraries, runtime, and service that delivers a consistent development and operational control plane for cloud native infrastructure.
 
 At the center of Pulumi is an open source cloud object model, coupled with an evaluation runtime that understands how to take programs written in any language, understand the cloud resources necessary to execute them, and then plan and manage those resources in a robust way. This cloud runtime and object model is inherently language- and cloud-neutral, enabling Pulumi to support many languages and clouds rapidly.
 
@@ -102,7 +102,7 @@ At the center of Pulumi is an open source cloud object model, coupled with an ev
 Pulumi aims to provide a solution to the challenges of cloud application development and delivery by providing a consistent programming model for cloud native development:
 
 * **Consistent across cloud technology paradigms.** Providing a single toolset for infrastructure, managed services, containers, and serverless environments on any cloud infrastructure.
-* **Productive, expressive use of real languages.** Providing a common runtime that can be bound to existing languages, taking advantage of the idioms of that language: from abstraction, through to packaging.
+* **Productive, expressive use of familiar languages.** Providing a common runtime that can be bound to existing languages, taking advantage of the idioms of that language: from abstraction, through to packaging.
 * **Continuous delivery for cloud native infrastructure.** Providing a common structure to connect application code and infrastructure code to ensure a rapid inner development loop, and a well-managed outer operational loop.
 
 ### Consistency and power across cloud technology paradigms
@@ -117,17 +117,17 @@ The fragmentation of existing tools and DSLs is consolidated within the Pulumi f
 
 **Multi-Cloud Scope.** The Pulumi cloud object model is a powerful foundation that can support any cloud provider. This delivers a uni ed programming model, tools, and control plane for managing cloud software anywhere. There's no need to learn a variety of DSLs and tools just to get a cloud native application into production. Pulumi supports the major cloud vendors (Amazon Web Services, Microsoft Azure, Google Cloud Platform), Kubernetes (in any environment), along with OpenStack and VMWare vSphere.
 
-**Pulumi makes multi-cloud, multi-technology targeting a reality with a consistent programming model in real languages.**
+**Pulumi makes multi-cloud, multi-technology targeting a reality with a consistent programming model in familiar languages.**
 
-> Using real languages changes everything.
+> Using familiar languages changes everything.
 
-### Productive, expressive use of real languages
+### Productive, expressive use of familiar languages
 
 As the Pulumi runtime can support many languages, development and devops teams gain the natural productivity benefits of those languages which are often missing from DSLs and associated tooling. Advantages include:
 
 **Familiarity and expressiveness.** Using already understood languages has clear productivity, communication and collaboration benefits and negates the need to learn new bespoke DSLs or YAML-based templating languages. Developers and DevOps teams can work using a common language and code base rather than attempting a hand-o  through a DSL-enforced separation of concerns, which improves collaboration, and reduces the fragility and risk in a system.
 
-Real languages also means gaining access to powerful - but obvious - benefits: capture references to variables such as constants, configuration settings or encrypted secrets, or even references to other resources so that all resources can be connected in an expressive and logical manner to achieve the desired output.
+Familiar languages also means gaining access to powerful - but obvious - benefits: capture references to variables such as constants, configuration settings or encrypted secrets, or even references to other resources so that all resources can be connected in an expressive and logical manner to achieve the desired output.
 
 ```javascript
 import * as aws from "@pulumi/aws";
@@ -157,11 +157,11 @@ let network = new awsinfra.Network(`${prefix}-net`, {
 });
 ```
 
-**Tooling and workflows.** By using real languages, development and devops teams instantly gain access to IDEs, refactoring, testing, static analysis and linters, and so much more. This both improves the productivity and quality of team efforts, and throws into harsh relief the lack of tooling for DSL- based approaches, which is often hard to debug and remediate.
+**Tooling and workflows.** By using familiar languages, development and devops teams instantly gain access to IDEs, refactoring, testing, static analysis and linters, and so much more. This both improves the productivity and quality of team efforts, and throws into harsh relief the lack of tooling for DSL- based approaches, which is often hard to debug and remediate.
 
-**Pulumi brings the existing power of real programming languages to cloud native infrastructure and application delivery for huge productivity and collaboration gains.**
+**Pulumi brings the existing power of familiar programming languages to cloud native infrastructure and application delivery for huge productivity and collaboration gains.**
 
-> Pulumi brings the existing power of real programming languages to cloud native infrastructure and application delivery for huge productivity and collaboration gains.
+> Pulumi brings the existing power of familiar programming languages to cloud native infrastructure and application delivery for huge productivity and collaboration gains.
 
 ### Continuous delivery for cloud native infrastructure
 
@@ -290,7 +290,7 @@ By using Pulumi, Learning Machine were able to reduce 25,000 LoC of ad-hoc scrip
 
 <img class="mx-auto my-8 md:max-w-xl" src="/images/whitepaper/cloud-native-infrastructure/graph5.png">
 
-> Pulumi has given our team the tools and framework to achieve a unified development and DevOps model, boosting productivity and taking our business to any cloud environment that our customers need. We retired 25,000 lines of complex code that few team members understood and replaced it with 100s of lines in a real programming language.
+> Pulumi has given our team the tools and framework to achieve a unified development and DevOps model, boosting productivity and taking our business to any cloud environment that our customers need. We retired 25,000 lines of complex code that few team members understood and replaced it with 100s of lines in a familiar programming language.
 
 &mdash; Kim Hamilton, CTO, Learning Machine
 
@@ -300,8 +300,8 @@ By using Pulumi, Learning Machine were able to reduce 25,000 LoC of ad-hoc scrip
 
 Pulumi provides a platform to deliver cloud native infrastructure as code for any technology, any cloud, and any language:
 
-* Making multi-cloud, multi-technology targeting a reality with a consistent programming model in real languages.
-* Using the existing power of real programming languages to cloud native infrastructure and application delivery for huge productivity and collaboration gains.
+* Making multi-cloud, multi-technology targeting a reality with a consistent programming model in familiar languages.
+* Using the existing power of familiar programming languages to cloud native infrastructure and application delivery for huge productivity and collaboration gains.
 * Rewriting the rulebook on CI/CD by connecting application code and infrastructure code at the code base, unlocking new workflows to deliver cloud native infrastructure as code.
 
 Cloud Native development represents a step change in opportunity, and capabilities, for development and devops teams. Pulumi brings together those teams to ensure their success through huge productivity and quality gains with a Cloud Native Development Platform designed for every cloud evolution.

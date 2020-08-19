@@ -19,7 +19,7 @@ Pulumi is fundamentally different than these tools and works great alongside the
 updating of your cloud infrastructure and applications, including virtual machines, containers, databases, hosted
 cloud services, and serverless functions.
 
-Pulumi uses real languages, much like these configuration management tools, to express your cloud requirements and
+Pulumi uses expressive, general-purpose languages, much like some configuration management tools, to define cloud requirements and
 desired infrastructure state. The Pulumi tool then takes these descriptions and can manage multiple environments to
 ensure that your infrastructure is always up to date, either through its CLI or in a hosted CI/CD scenario.
 

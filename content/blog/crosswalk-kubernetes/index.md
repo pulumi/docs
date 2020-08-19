@@ -200,7 +200,7 @@ In addition to making Kubernetes configuration more accessible in these ways, th
 * **Data Services.** For many of us, managing persistent workloads in Kubernetes is not worth the hassle. Although it’s possible to manage the delicate dance of tainting, draining, and migration, many of our customers rely on hosted offerings for data stores &mdash; such as Amazon S3, RDS, Azure Cosmos DB or Google Cloud BigTable &mdash; and Kubernetes for stateless compute. Using managed services brings the advantage of intrinsic scaling, backups, and management, without the tedium. Pulumi lets you mix and match Kubernetes and public cloud infrastructure as code.
 * **Container Registries.** Most end users need to use private container registries to host application images. Furthermore, most of us want to use our cloud provider’s native offering, such as Amazon Elastic Container Registry, Azure Container Registry, or Google Container Registry, because it integrates with IAM. Using Pulumi, you don’t need separate deployment pipelines for containers compared to the supporting application infrastructure.
 * **Serverless.** If you want to use the best and most cost effective serverless capabilities, you likely want to use AWS Lambda, Azure Functions, or Google Cloud Functions. We see end users augmenting container-based applications with serverless extensions all the time.
-* **Architecture as Code.** Thanks to Pulumi’s use of real languages for infrastructure as code, end users have been able to abstract and encapsulate complexity into reusable forms, such as functions and classes. This helps you go beyond even the basic Kubernetes configuration challenges that Kx solves, to codifying recurring patterns in your cloud native architectures.
+* **Architecture as Code.** Thanks to Pulumi’s use of general-purpose languages for infrastructure as code, end users have been able to abstract and encapsulate complexity into reusable forms, such as functions and classes. This helps you go beyond even the basic Kubernetes configuration challenges that Kx solves, to codifying recurring patterns in your cloud native architectures.
 
 In addition to all of that, we’ve been hard at work on a new experimental “watch mode” feature which, in conjunction with the above, brings all of Kubernetes to your fingertips in a radically new way. We’re excited to show this off at our booth at KubeCon next week!
 
@@ -232,7 +232,7 @@ CQL also supports live streaming queries, which the CLI will display results fro
 
 ## Join a growing community
 
-Everything above is [open source](https://github.com/pulumi) and has been battle-tested with many end users and organizations over the last year &mdash; all the way from startups to ISVs to the largest enterprises in the world. We are excited to share these best practices in reusable forms, leveraging the foundation uniquely provided by Pulumi’s infrastructure as code platform using real languages.
+Everything above is [open source](https://github.com/pulumi) and has been battle-tested with many end users and organizations over the last year &mdash; all the way from startups to ISVs to the largest enterprises in the world. We are excited to share these best practices in reusable forms, leveraging the foundation uniquely provided by Pulumi’s infrastructure as code platform using familiar languages.
 
 To get started, check out the [documentation]({{< relref "/docs/guides/crosswalk/kubernetes" >}}), or [get started with the open source SDK now]({{< relref "/docs/get-started/kubernetes" >}}).
 

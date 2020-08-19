@@ -1,16 +1,16 @@
 ---
 title: "Lambdas as Lambdas: The magic of simple serverless Functions"
 date: "2018-10-10"
-meta_desc: "Infrastructure as code using real languages instead of YAML or DSLs. See how with Pulumi, serverless programming becomes simpler."
+meta_desc: "Infrastructure as code using familiar languages instead of YAML or DSLs. See how with Pulumi, serverless programming becomes simpler."
 meta_image: "closure.png"
 authors: ["cyrus-najmabadi"]
 tags: ["Serverless","TypeScript"]
 ---
 
-Pulumi's approach to infrastructure as code uses real languages instead
+Pulumi's approach to infrastructure as code uses familiar languages instead
 of YAML or DSLs. One major advantage of this approach is that AWS
 Lambdas, Azure Functions, Google Cloud Functions, et al. can just be
-real language lambdas, offering a flexible and simple path to
+real lambdas in your favorite language, offering a flexible and simple path to
 serverless. Such functions behave as normal functions, allowing you to
 treat serverless code as part of your application instead of separate
 "infrastructure" that needs to be configured, managed, and versioned
@@ -158,7 +158,7 @@ configuration using YAML can lead to plenty a headache.
 Despite all those issues, Pulumi is able to make that original
 application code work and it is able to magically effectively translate
 the above into a working Lambda. The real secret sauce here is that, by
-leveraging real languages, we can stand on the shoulders of all the
+leveraging familiar languages, we can stand on the shoulders of all the
 great compiler work underpinning them.
 
 So let's dig in -- how does this all really work?

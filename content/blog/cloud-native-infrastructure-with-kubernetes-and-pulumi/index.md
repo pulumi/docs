@@ -1,7 +1,7 @@
 ---
 title: "Cloud Native Infrastructure with Kubernetes and Pulumi"
 date: "2018-09-12"
-meta_desc: "Pulumi for Kubernetes is a way to create, deploy, and manage Kubernetes apps using a real programming language across AWS, Azure, GCP, and native environments."
+meta_desc: "Pulumi for Kubernetes lets you create, deploy, and manage Kubernetes apps using a familiar programming language across AWS, Azure, GCP, and native environments."
 meta_image: "meta.png"
 authors: ["joe-duffy"]
 tags: ["Kubernetes"]
@@ -50,7 +50,7 @@ need to bring joy, ease of use, and simplicity to the entire Kubernetes
 software development lifecycle. We must eliminate toil and maximize
 productivity. This is precisely what Pulumi for Kubernetes aims to do.
 
-## Real Languages
+## Familiar Languages
 
 Our favorite way to program Kubernetes is using TypeScript, as it
 delivers strong typing where possible and dynamic typing where needed.
@@ -60,7 +60,7 @@ error reporting, refactoring support, and more. The result is a
 radically improved inner development loop. In addition to TypeScript,
 JavaScript works too, and Python and Go are on the way.
 
-Perhaps the best part of using a real language is instance access to an
+Perhaps the best part of using a familiar language is instance access to an
 ecosystem of libraries. Any NPM module is an npm install away. And you
 can create your own libraries -- classes to encapsulate full
 components, and functions to capture repeated patterns of code --
@@ -119,7 +119,7 @@ Kubernetes config updates, and your cloud infrastructure.
 ## What's Next
 
 With Pulumi's
-support for Kubernetes and cloud native architectures, we hope that real languages will
+support for Kubernetes and cloud native architectures, we hope that familiar languages will
 bring you more joy, reduce toil, and ultimately lower the barriers to
 entry for using Kubernetes with real components and reuse.
 

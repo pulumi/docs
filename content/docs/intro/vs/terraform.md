@@ -30,7 +30,7 @@ The major differences between Terraform and Pulumi are as follows:
 1. Terraform requires that you and your team learn a new custom language, the HCL DSL. In contrast, Pulumi lets you use
    languages you already know and love, like Python, Go, JavaScript, TypeScript, and C#.
 
-2. Because of the use of real languages, you get familiar constructs like for loops, functions, and classes. This
+2. Because of the use of familiar languages, you get familiar constructs like for loops, functions, and classes. This
    significantly improves the ability to cut down on boilerplate and enforce best practices. Instead of creating
    a new ecosystem of modules and sharing, Pulumi lets you leverage existing package management tools and techniques.
 

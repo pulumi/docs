@@ -29,7 +29,7 @@ around a little:
 <!-- just links to this same post -->
 **[Config as Real Code](#config-as-real-code)**
 
-- [Define Kubernetes Applications in a Real Language](#1-define-kubernetes-applications-in-a-real-language)
+- [Define Kubernetes Applications in a Familiar Language](#1-define-kubernetes-applications-in-a-familiar-language)
 - [More Expressiveness, Less Boilerplate](#2-more-expressiveness-less-boilerplate)
 - [Inject Envoy Sidecars Using Abstraction](#3-inject-envoy-sidecars-using-abstraction)
 - [Adopt Existing Kubernetes YAML](#4-adopt-existing-kubernetes-yaml)
@@ -61,7 +61,7 @@ the most basic level of complexity, you'll soon have accidentally
 encoded critical software architecture decisions in YAML, where as
 software developers we prefer to write and maintain such things in code.
 
-Using a real language brings productivity and joy to development, but
+Using a familiar language brings productivity and joy to development, but
 more concretely also unlocks the ability to codify and enforce best
 practices, and to share and reuse them within your team or the
 community. This is something that simply isn't possible with YAML.
@@ -69,13 +69,13 @@ community. This is something that simply isn't possible with YAML.
 Pulumi supports the full Kubernetes API and lets you author and deploy
 resources in code.
 
-## 1. Define Kubernetes Applications in a Real Language
+## 1. Define Kubernetes Applications in a Familiar Language
 
 [
 [Code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx) |
 [Tutorial]({{< relref "/docs/tutorials/kubernetes/stateless-app" >}}) ]
 
-Let's begin by seeing what defining Kubernetes applications in a real
+Let's begin by seeing what defining Kubernetes applications in a familiar
 language looks like. The full Kubernetes API is available, just in code
 instead of YAML. A simple program looks like so:
 
@@ -272,14 +272,14 @@ const deployment = new EnvoyDeployment("nginx", {
 
 Of course, we can do the same with Prometheus or any other project
 requiring sidecars, and we envision possibly having a more general
-sidecar injection mechanism, thanks to real languages. In fact, we could
+sidecar injection mechanism, thanks to familiar languages. In fact, we could
 define a base class that our entire organization uses with certain
 sidecars baked in, updated easily in one place and rolled out using
 package managers.
 
 ## 4. Adopt existing Kubernetes YAML
 
-It's wonderful that we can use real languages, but there's already lots
+It's wonderful that we can use familiar languages, but there's already lots
 of YAML in the world. Pulumi lets us process that YAML dynamically, and
 adopt it on the fly to become part of our Pulumi program, without even
 needing to change it. This enables multi-cloud and advanced delivery
