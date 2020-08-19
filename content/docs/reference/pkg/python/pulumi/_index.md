@@ -47,9 +47,9 @@ resource.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="pulumi.Resource.urn">
-<code class="sig-name descname">urn</code><em class="property">: 'Output[str]'</em><em class="property"> = None</em><a class="headerlink" href="#pulumi.Resource.urn" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">urn</code><a class="headerlink" href="#pulumi.Resource.urn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The stable, logical URN used to distinctly address a resource, both before and after
 deployments.</p>
 </dd></dl>
@@ -129,9 +129,9 @@ resource.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="pulumi.CustomResource.id">
-<code class="sig-name descname">id</code><em class="property">: 'Output[str]'</em><em class="property"> = None</em><a class="headerlink" href="#pulumi.CustomResource.id" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi.CustomResource.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.</p>
 </dd></dl>
