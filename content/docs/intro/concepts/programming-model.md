@@ -101,7 +101,7 @@ server = aws.ec2.Instance('web-server',
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+    "github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
     "github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
@@ -1488,7 +1488,7 @@ server = aws.ec2.Instance('web-server',
 
 ```go
 import (
-    "github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+    "github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
     "github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
@@ -2450,13 +2450,26 @@ param = ssm.Parameter("a-secret-param",
 {{% choosable language go %}}
 
 ```go
-cfg := config.New(ctx, "")
-param, err := ssm.NewParameter(ctx, "a-secret-param", &ssm.ParameterArgs{
-    Type:  "SecureString",
-    Value: cfg.RequireSecret("my-secret-value"),
-})
-if err != nil {
-    return err
+package main
+
+import (
+    "github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        cfg := config.New(ctx, "")
+        param, err := ssm.NewParameter(ctx, "a-secret-param", &ssm.ParameterArgs{
+            Type:  "SecureString",
+            Value: cfg.RequireSecret("my-secret-value"),
+        })
+        if err != nil {
+            return err
+        }
+        return nil
+    }
 }
 ```
 
@@ -2750,13 +2763,24 @@ print(f'Hello, {name} -- I see your lucky number is {lucky}!')
 {{% choosable language go %}}
 
 ```go
-conf := config.New(ctx, "")
-name := conf.Require("name")
-lucky, err := conf.TryInt("lucky")
-if err != nil {
-    lucky = 42
+package main
+
+import (
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        conf := config.New(ctx, "")
+        name := conf.Require("name")
+        lucky, err := conf.TryInt("lucky")
+        if err != nil {
+            lucky = 42
+        }
+        fmt.Printf("Hello, %v -- I see your lucky number is %v!", name, lucky)
+        return nil
+    }
 }
-fmt.Printf("Hello, %v -- I see your lucky number is %v!", name, lucky)
 ```
 
 {{% /choosable %}}
@@ -2833,6 +2857,13 @@ print(f"Active: ${data.active}")
 {{% choosable language go %}}
 
 ```go
+package main
+
+import (
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
 type Data struct {
     Active bool
     Nums   []int
