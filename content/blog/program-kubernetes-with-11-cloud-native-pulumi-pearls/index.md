@@ -1,7 +1,7 @@
 ---
 title: "Program Kubernetes with 11 Pulumi Pearls"
 date: "2018-09-12"
-meta_desc: "How to build & deploy Kubernetes applications using infrastructure as code, in three categories: config as real code, multi-cloud, & software delivery as code."
+meta_desc: "How to build & deploy Kubernetes applications using infrastructure as code, in three categories: config as code, multi-cloud, & software delivery as code."
 meta_image: "health-checks.gif"
 authors: ["joe-duffy"]
 tags: ["Kubernetes"]
@@ -12,7 +12,7 @@ snippets -- that demonstrate using Pulumi to build and deploy Kubernetes
 applications using cloud native infrastructure as code. These pearls are
 organized into three categories, each demonstrating a unique scenario:
 
-- **Config as Real Code:** Use your favorite language for authoring
+- **Config as Code:** Use your favorite language for authoring
   applications and configuration, eliminating toil and YAML.
 - **Multi-Cloud Infrastructure:** Mix cloud services alongside
   Kubernetes resources and manage them using one set of tools and
@@ -20,14 +20,14 @@ organized into three categories, each demonstrating a unique scenario:
 - **Software Delivery as Code:** Perform sophisticated continuous
   delivery of your Kubernetes deployments -- including canaries,
   staged rollouts, leveraging cloud native projects like Envoy and
-  Prometheus -- authored in real code.
+  Prometheus -- authored in code using familiar languages.
 <!--more-->
 
 Here is a complete index of the pearls below, in case you want to jump
 around a little:
 
 <!-- just links to this same post -->
-**[Config as Real Code](#config-as-real-code)**
+**[Config as Code](#config-as-code)**
 
 - [Define Kubernetes Applications in a Familiar Language](#1-define-kubernetes-applications-in-a-familiar-language)
 - [More Expressiveness, Less Boilerplate](#2-more-expressiveness-less-boilerplate)
@@ -47,7 +47,7 @@ around a little:
 - [Trigger Cascading Rollouts from Dependent Updates](#10-trigger-cascading-rollouts-from-dependent-updates)
 - [Staged Application Rollouts Gated by Prometheus Checks](#11-staged-application-rollouts-gated-by-prometheus-checks)
 
-## Config as Real Code
+## Config as Code
 
 The default authoring experience for Kubernetes applications is in YAML,
 similar to other infrastructure as code solutions. These configuration
@@ -128,7 +128,7 @@ Selecting yes will carry out the update:
 ![4](./4.png)
 
 At this point, we've seen that we can gain some advantages from
-infrastructure as real code (like good IDE support and the use of a
+infrastructure as code (like good IDE support and the use of a
 variable to avoid repeating ourselves for appLabels ). But let's now see
 some more compelling reasons why this is so great.
 
@@ -576,7 +576,7 @@ towards operating. Namely, how to achieve robust continuous deployment
 (CD) of your Kubernetes applications.
 
 Pulumi takes an "everything is code" approach so, in addition to your
-infrastructure being written in real code, your software delivery
+infrastructure being written in code, your software delivery
 pipeline is too. In fact, each Pulumi program really is a deployment
 workflow expressed in code. The Pulumi CLI is responsible for evaluating
 programs, producing goal states, diffing states to produce plans, and
