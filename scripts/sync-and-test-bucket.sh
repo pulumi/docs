@@ -49,8 +49,10 @@ aws_region="$(pulumi -C infrastructure config get 'aws:region')"
 # fail, causing this script to exit nonzero. In either case, it's okay to continue.
 aws s3 mb $destination_bucket_uri --region $aws_region || true
 
-# Tag the bucket with ownership information
-aws s3api put-bucket-tagging --bucket $destination_bucket_uri --tagging file://bucket-tagging.json
+# Tag the bucket with ownership information for production buckets.
+if [ "$(pulumi stack --show-name)" == "production" ]; then
+    aws s3api put-bucket-tagging --bucket $destination_bucket_uri --tagging file://$(pwd)/scripts/bucket-tagging.json
+fi
 
 # Make the bucket an S3 website.
 aws s3 website $destination_bucket_uri --index-document index.html --error-document 404.html

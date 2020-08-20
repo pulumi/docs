@@ -6,7 +6,7 @@
         },
         {
             "Key": "VantaNonProd",
-            "Value": true
+            "Value": "true"
         },
         {
             "Key": "VantaDescription",
@@ -14,7 +14,7 @@
         },
         {
             "Key": "VantaContainsUserData",
-            "Value": false
+            "Value": "false"
         },
         {
             "Key": "VantaNoAlert",
