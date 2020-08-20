@@ -19,5 +19,5 @@ contact_us_form:
             Pulumi has given our team the tools and framework to achieve a unified development and DevOps model,
             boosting productivity and taking our business to any cloud environment that our customers need. We
             retired 25,000 lines of complex code that few team members understood and replaced it with 100s of
-            lines in a real programming language.
+            lines in a familiar programming language.
 ---

@@ -1,8 +1,8 @@
 
 ---
 title: "ClientGrant"
-title_tag: "Resource ClientGrant | Package auth0"
-meta_desc: "Explore the ClientGrant resource of the auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. Auth0 uses various grant types, or methods by which you grant limited access to your resources to another entity without exposing credentials. The OAuth 2.0 protocol supports several types of grants, which allow different types of access. This resource allows you to create and manage client grants used with configured Auth0 clients."
+title_tag: "Resource ClientGrant | Package Auth0"
+meta_desc: "Explore the ClientGrant resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. Auth0 uses various grant types, or methods by which you grant limited access to your resources to another entity without exposing credentials. The OAuth 2.0 protocol supports several types of grants, which allow different types of access. This resource allows you to create and manage client grants used with configured Auth0 clients."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the ClientGrant resource of the auth0 package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Auth0 uses various grant types, or methods by which you grant limited access to your resources to another entity without exposing credentials. The OAuth 2.0 protocol supports several types of grants, which allow different types of access. This resource allows you to create and manage client grants used with configured Auth0 clients.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -61,6 +59,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -90,9 +89,11 @@ my_client_grant = auth0.ClientGrant("myClientGrant",
     client_id=my_client.id,
     scopes=["create:foo"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as auth0 from "@pulumi/auth0";
@@ -117,6 +118,7 @@ const myClientGrant = new auth0.ClientGrant("my_client_grant", {
     scopes: ["create:foo"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -131,7 +133,7 @@ const myClientGrant = new auth0.ClientGrant("my_client_grant", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#ClientGrant">ClientGrant</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>audience=None<span class="p">, </span>client_id=None<span class="p">, </span>scopes=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.ClientGrant">ClientGrant</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>audience=None<span class="p">, </span>client_id=None<span class="p">, </span>scopes=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -554,7 +556,7 @@ Get an existing ClientGrant resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>audience=None<span class="p">, </span>client_id=None<span class="p">, </span>scopes=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>audience=None<span class="p">, </span>client_id=None<span class="p">, </span>scopes=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

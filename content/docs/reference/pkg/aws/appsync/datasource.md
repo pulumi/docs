@@ -28,6 +28,9 @@ class MyStack : Stack
     {
         var exampleTable = new Aws.DynamoDB.Table("exampleTable", new Aws.DynamoDB.TableArgs
         {
+            ReadCapacity = 1,
+            WriteCapacity = 1,
+            HashKey = "UserId",
             Attributes = 
             {
                 new Aws.DynamoDB.Inputs.TableAttributeArgs
@@ -36,9 +39,6 @@ class MyStack : Stack
                     Type = "S",
                 },
             },
-            HashKey = "UserId",
-            ReadCapacity = 1,
-            WriteCapacity = 1,
         });
         var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
         {
@@ -54,11 +54,11 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var exampleRolePolicy = new Aws.Iam.RolePolicy("exampleRolePolicy", new Aws.Iam.RolePolicyArgs
         {
+            Role = exampleRole.Id,
             Policy = exampleTable.Arn.Apply(arn => @$"{{
   ""Version"": ""2012-10-17"",
   ""Statement"": [
@@ -73,9 +73,7 @@ class MyStack : Stack
     }}
   ]
 }}
-
 "),
-            Role = exampleRole.Id,
         });
         var exampleGraphQLApi = new Aws.AppSync.GraphQLApi("exampleGraphQLApi", new Aws.AppSync.GraphQLApiArgs
         {
@@ -84,12 +82,12 @@ class MyStack : Stack
         var exampleDataSource = new Aws.AppSync.DataSource("exampleDataSource", new Aws.AppSync.DataSourceArgs
         {
             ApiId = exampleGraphQLApi.Id,
+            ServiceRoleArn = exampleRole.Arn,
+            Type = "AMAZON_DYNAMODB",
             DynamodbConfig = new Aws.AppSync.Inputs.DataSourceDynamodbConfigArgs
             {
                 TableName = exampleTable.Name,
             },
-            ServiceRoleArn = exampleRole.Arn,
-            Type = "AMAZON_DYNAMODB",
         });
     }
 
@@ -105,39 +103,39 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleTable, err := dynamodb.NewTable(ctx, "exampleTable", &dynamodb.TableArgs{
+			ReadCapacity:  pulumi.Int(1),
+			WriteCapacity: pulumi.Int(1),
+			HashKey:       pulumi.String("UserId"),
 			Attributes: dynamodb.TableAttributeArray{
 				&dynamodb.TableAttributeArgs{
 					Name: pulumi.String("UserId"),
 					Type: pulumi.String("S"),
 				},
 			},
-			HashKey:       pulumi.String("UserId"),
-			ReadCapacity:  pulumi.Int(1),
-			WriteCapacity: pulumi.Int(1),
 		})
 		if err != nil {
 			return err
 		}
 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"appsync.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"appsync.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = iam.NewRolePolicy(ctx, "exampleRolePolicy", &iam.RolePolicyArgs{
-			Policy: exampleTable.Arn.ApplyT(func(arn string) (string, error) {
-				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"dynamodb:*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", arn, "\"\n", "      ]\n", "    }\n", "  ]\n", "}\n", "\n"), nil
-			}).(pulumi.StringOutput),
 			Role: exampleRole.ID(),
+			Policy: exampleTable.Arn.ApplyT(func(arn string) (string, error) {
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"dynamodb:*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", arn, "\"\n", "      ]\n", "    }\n", "  ]\n", "}\n"), nil
+			}).(pulumi.StringOutput),
 		})
 		if err != nil {
 			return err
@@ -149,12 +147,12 @@ func main() {
 			return err
 		}
 		_, err = appsync.NewDataSource(ctx, "exampleDataSource", &appsync.DataSourceArgs{
-			ApiId: exampleGraphQLApi.ID(),
+			ApiId:          exampleGraphQLApi.ID(),
+			ServiceRoleArn: exampleRole.Arn,
+			Type:           pulumi.String("AMAZON_DYNAMODB"),
 			DynamodbConfig: &appsync.DataSourceDynamodbConfigArgs{
 				TableName: exampleTable.Name,
 			},
-			ServiceRoleArn: exampleRole.Arn,
-			Type:           pulumi.String("AMAZON_DYNAMODB"),
 		})
 		if err != nil {
 			return err
@@ -172,13 +170,13 @@ import pulumi
 import pulumi_aws as aws
 
 example_table = aws.dynamodb.Table("exampleTable",
+    read_capacity=1,
+    write_capacity=1,
+    hash_key="UserId",
     attributes=[{
         "name": "UserId",
         "type": "S",
-    }],
-    hash_key="UserId",
-    read_capacity=1,
-    write_capacity=1)
+    }])
 example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -191,9 +189,9 @@ example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
     }
   ]
 }
-
 """)
 example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
+    role=example_role.id,
     policy=example_table.arn.apply(lambda arn: f"""{{
   "Version": "2012-10-17",
   "Statement": [
@@ -208,17 +206,15 @@ example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
     }}
   ]
 }}
-
-"""),
-    role=example_role.id)
+"""))
 example_graph_ql_api = aws.appsync.GraphQLApi("exampleGraphQLApi", authentication_type="API_KEY")
 example_data_source = aws.appsync.DataSource("exampleDataSource",
     api_id=example_graph_ql_api.id,
+    service_role_arn=example_role.arn,
+    type="AMAZON_DYNAMODB",
     dynamodb_config={
         "table_name": example_table.name,
-    },
-    service_role_arn=example_role.arn,
-    type="AMAZON_DYNAMODB")
+    })
 ```
 
 {{% /example %}}
@@ -229,17 +225,16 @@ example_data_source = aws.appsync.DataSource("exampleDataSource",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleTable = new aws.dynamodb.Table("example", {
+const exampleTable = new aws.dynamodb.Table("exampleTable", {
+    readCapacity: 1,
+    writeCapacity: 1,
+    hashKey: "UserId",
     attributes: [{
         name: "UserId",
         type: "S",
     }],
-    hashKey: "UserId",
-    readCapacity: 1,
-    writeCapacity: 1,
 });
-const exampleRole = new aws.iam.Role("example", {
-    assumeRolePolicy: `{
+const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -251,9 +246,9 @@ const exampleRole = new aws.iam.Role("example", {
     }
   ]
 }
-`,
-});
-const exampleRolePolicy = new aws.iam.RolePolicy("example", {
+`});
+const exampleRolePolicy = new aws.iam.RolePolicy("exampleRolePolicy", {
+    role: exampleRole.id,
     policy: pulumi.interpolate`{
   "Version": "2012-10-17",
   "Statement": [
@@ -269,18 +264,15 @@ const exampleRolePolicy = new aws.iam.RolePolicy("example", {
   ]
 }
 `,
-    role: exampleRole.id,
 });
-const exampleGraphQLApi = new aws.appsync.GraphQLApi("example", {
-    authenticationType: "API_KEY",
-});
-const exampleDataSource = new aws.appsync.DataSource("example", {
+const exampleGraphQLApi = new aws.appsync.GraphQLApi("exampleGraphQLApi", {authenticationType: "API_KEY"});
+const exampleDataSource = new aws.appsync.DataSource("exampleDataSource", {
     apiId: exampleGraphQLApi.id,
+    serviceRoleArn: exampleRole.arn,
+    type: "AMAZON_DYNAMODB",
     dynamodbConfig: {
         tableName: exampleTable.name,
     },
-    serviceRoleArn: exampleRole.arn,
-    type: "AMAZON_DYNAMODB",
 });
 ```
 
@@ -302,7 +294,7 @@ const exampleDataSource = new aws.appsync.DataSource("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSource">NewDataSource</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSourceArgs">DataSourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSource">DataSource</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSource">NewDataSource</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSourceArgs">DataSourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSource">DataSource</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -376,7 +368,7 @@ const exampleDataSource = new aws.appsync.DataSource("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -396,7 +388,7 @@ const exampleDataSource = new aws.appsync.DataSource("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSourceArgs">DataSourceArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSourceArgs">DataSourceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -406,7 +398,7 @@ const exampleDataSource = new aws.appsync.DataSource("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1033,7 +1025,7 @@ Get an existing DataSource resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataSource<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSourceState">DataSourceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSource">DataSource</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataSource<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSourceState">DataSourceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSource">DataSource</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1625,7 +1617,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSourceDynamodbConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSourceDynamodbConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSourceDynamodbConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSourceDynamodbConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Inputs.DataSourceDynamodbConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Outputs.DataSourceDynamodbConfig.html">output</a> API doc for this type.
@@ -1803,7 +1795,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSourceElasticsearchConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSourceElasticsearchConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSourceElasticsearchConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSourceElasticsearchConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Inputs.DataSourceElasticsearchConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Outputs.DataSourceElasticsearchConfig.html">output</a> API doc for this type.
@@ -1937,7 +1929,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSourceHttpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSourceHttpConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSourceHttpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSourceHttpConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Inputs.DataSourceHttpConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Outputs.DataSourceHttpConfig.html">output</a> API doc for this type.
@@ -2027,7 +2019,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSourceLambdaConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appsync?tab=doc#DataSourceLambdaConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSourceLambdaConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync?tab=doc#DataSourceLambdaConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Inputs.DataSourceLambdaConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.Outputs.DataSourceLambdaConfig.html">output</a> API doc for this type.

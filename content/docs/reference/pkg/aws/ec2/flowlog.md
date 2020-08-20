@@ -45,7 +45,6 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var exampleFlowLog = new Aws.Ec2.FlowLog("exampleFlowLog", new Aws.Ec2.FlowLogArgs
@@ -57,6 +56,7 @@ class MyStack : Stack
         });
         var exampleRolePolicy = new Aws.Iam.RolePolicy("exampleRolePolicy", new Aws.Iam.RolePolicyArgs
         {
+            Role = exampleRole.Id,
             Policy = @"{
   ""Version"": ""2012-10-17"",
   ""Statement"": [
@@ -73,9 +73,7 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
-            Role = exampleRole.Id,
         });
     }
 
@@ -91,9 +89,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -104,7 +102,7 @@ func main() {
 			return err
 		}
 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"vpc-flow-logs.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"vpc-flow-logs.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -113,14 +111,14 @@ func main() {
 			IamRoleArn:     exampleRole.Arn,
 			LogDestination: exampleLogGroup.Arn,
 			TrafficType:    pulumi.String("ALL"),
-			VpcId:          pulumi.String(aws_vpc.Example.Id),
+			VpcId:          pulumi.Any(aws_vpc.Example.Id),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = iam.NewRolePolicy(ctx, "exampleRolePolicy", &iam.RolePolicyArgs{
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"logs:CreateLogGroup\",\n", "        \"logs:CreateLogStream\",\n", "        \"logs:PutLogEvents\",\n", "        \"logs:DescribeLogGroups\",\n", "        \"logs:DescribeLogStreams\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n", "\n")),
 			Role:   exampleRole.ID(),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"logs:CreateLogGroup\",\n", "        \"logs:CreateLogStream\",\n", "        \"logs:PutLogEvents\",\n", "        \"logs:DescribeLogGroups\",\n", "        \"logs:DescribeLogStreams\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -151,7 +149,6 @@ example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
     }
   ]
 }
-
 """)
 example_flow_log = aws.ec2.FlowLog("exampleFlowLog",
     iam_role_arn=example_role.arn,
@@ -159,6 +156,7 @@ example_flow_log = aws.ec2.FlowLog("exampleFlowLog",
     traffic_type="ALL",
     vpc_id=aws_vpc["example"]["id"])
 example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
+    role=example_role.id,
     policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -175,9 +173,7 @@ example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
     }
   ]
 }
-
-""",
-    role=example_role.id)
+""")
 ```
 
 {{% /example %}}
@@ -188,9 +184,8 @@ example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleLogGroup = new aws.cloudwatch.LogGroup("example", {});
-const exampleRole = new aws.iam.Role("example", {
-    assumeRolePolicy: `{
+const exampleLogGroup = new aws.cloudwatch.LogGroup("exampleLogGroup", {});
+const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -203,15 +198,15 @@ const exampleRole = new aws.iam.Role("example", {
     }
   ]
 }
-`,
-});
-const exampleFlowLog = new aws.ec2.FlowLog("example", {
+`});
+const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     iamRoleArn: exampleRole.arn,
     logDestination: exampleLogGroup.arn,
     trafficType: "ALL",
-    vpcId: aws_vpc_example.id,
+    vpcId: aws_vpc.example.id,
 });
-const exampleRolePolicy = new aws.iam.RolePolicy("example", {
+const exampleRolePolicy = new aws.iam.RolePolicy("exampleRolePolicy", {
+    role: exampleRole.id,
     policy: `{
   "Version": "2012-10-17",
   "Statement": [
@@ -229,7 +224,6 @@ const exampleRolePolicy = new aws.iam.RolePolicy("example", {
   ]
 }
 `,
-    role: exampleRole.id,
 });
 ```
 
@@ -267,8 +261,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -282,7 +276,7 @@ func main() {
 			LogDestination:     exampleBucket.Arn,
 			LogDestinationType: pulumi.String("s3"),
 			TrafficType:        pulumi.String("ALL"),
-			VpcId:              pulumi.String(aws_vpc.Example.Id),
+			VpcId:              pulumi.Any(aws_vpc.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -315,12 +309,12 @@ example_flow_log = aws.ec2.FlowLog("exampleFlowLog",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleBucket = new aws.s3.Bucket("example", {});
-const exampleFlowLog = new aws.ec2.FlowLog("example", {
+const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     logDestination: exampleBucket.arn,
     logDestinationType: "s3",
     trafficType: "ALL",
-    vpcId: aws_vpc_example.id,
+    vpcId: aws_vpc.example.id,
 });
 ```
 
@@ -342,7 +336,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#FlowLog">NewFlowLog</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#FlowLogArgs">FlowLogArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#FlowLog">FlowLog</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#FlowLog">NewFlowLog</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#FlowLogArgs">FlowLogArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#FlowLog">FlowLog</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -416,7 +410,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -436,7 +430,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#FlowLogArgs">FlowLogArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#FlowLogArgs">FlowLogArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -446,7 +440,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1173,7 +1167,7 @@ Get an existing FlowLog resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFlowLog<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#FlowLogState">FlowLogState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#FlowLog">FlowLog</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFlowLog<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#FlowLogState">FlowLogState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#FlowLog">FlowLog</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

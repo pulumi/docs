@@ -44,8 +44,8 @@ class MyStack : Stack
         });
         var exampleGatewayAssociation = new Aws.DirectConnect.GatewayAssociation("exampleGatewayAssociation", new Aws.DirectConnect.GatewayAssociationArgs
         {
-            AssociatedGatewayId = exampleVpnGateway.Id,
             DxGatewayId = exampleGateway.Id,
+            AssociatedGatewayId = exampleVpnGateway.Id,
         });
     }
 
@@ -59,8 +59,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -85,8 +85,8 @@ func main() {
 			return err
 		}
 		_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
-			AssociatedGatewayId: exampleVpnGateway.ID(),
 			DxGatewayId:         exampleGateway.ID(),
+			AssociatedGatewayId: exampleVpnGateway.ID(),
 		})
 		if err != nil {
 			return err
@@ -107,8 +107,8 @@ example_gateway = aws.directconnect.Gateway("exampleGateway", amazon_side_asn="6
 example_vpc = aws.ec2.Vpc("exampleVpc", cidr_block="10.255.255.0/28")
 example_vpn_gateway = aws.ec2.VpnGateway("exampleVpnGateway", vpc_id=example_vpc.id)
 example_gateway_association = aws.directconnect.GatewayAssociation("exampleGatewayAssociation",
-    associated_gateway_id=example_vpn_gateway.id,
-    dx_gateway_id=example_gateway.id)
+    dx_gateway_id=example_gateway.id,
+    associated_gateway_id=example_vpn_gateway.id)
 ```
 
 {{% /example %}}
@@ -119,18 +119,12 @@ example_gateway_association = aws.directconnect.GatewayAssociation("exampleGatew
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleGateway = new aws.directconnect.Gateway("example", {
-    amazonSideAsn: "64512",
-});
-const exampleVpc = new aws.ec2.Vpc("example", {
-    cidrBlock: "10.255.255.0/28",
-});
-const exampleVpnGateway = new aws.ec2.VpnGateway("example", {
-    vpcId: exampleVpc.id,
-});
-const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("example", {
-    associatedGatewayId: exampleVpnGateway.id,
+const exampleGateway = new aws.directconnect.Gateway("exampleGateway", {amazonSideAsn: "64512"});
+const exampleVpc = new aws.ec2.Vpc("exampleVpc", {cidrBlock: "10.255.255.0/28"});
+const exampleVpnGateway = new aws.ec2.VpnGateway("exampleVpnGateway", {vpcId: exampleVpc.id});
+const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exampleGatewayAssociation", {
     dxGatewayId: exampleGateway.id,
+    associatedGatewayId: exampleVpnGateway.id,
 });
 ```
 
@@ -155,13 +149,13 @@ class MyStack : Stack
         });
         var exampleGatewayAssociation = new Aws.DirectConnect.GatewayAssociation("exampleGatewayAssociation", new Aws.DirectConnect.GatewayAssociationArgs
         {
+            DxGatewayId = exampleGateway.Id,
+            AssociatedGatewayId = exampleTransitGateway.Id,
             AllowedPrefixes = 
             {
                 "10.255.255.0/30",
                 "10.255.255.8/30",
             },
-            AssociatedGatewayId = exampleTransitGateway.Id,
-            DxGatewayId = exampleGateway.Id,
         });
     }
 
@@ -175,8 +169,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -193,12 +187,12 @@ func main() {
 			return err
 		}
 		_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
+			DxGatewayId:         exampleGateway.ID(),
+			AssociatedGatewayId: exampleTransitGateway.ID(),
 			AllowedPrefixes: pulumi.StringArray{
 				pulumi.String("10.255.255.0/30"),
 				pulumi.String("10.255.255.8/30"),
 			},
-			AssociatedGatewayId: exampleTransitGateway.ID(),
-			DxGatewayId:         exampleGateway.ID(),
 		})
 		if err != nil {
 			return err
@@ -218,12 +212,12 @@ import pulumi_aws as aws
 example_gateway = aws.directconnect.Gateway("exampleGateway", amazon_side_asn="64512")
 example_transit_gateway = aws.ec2transitgateway.TransitGateway("exampleTransitGateway")
 example_gateway_association = aws.directconnect.GatewayAssociation("exampleGatewayAssociation",
+    dx_gateway_id=example_gateway.id,
+    associated_gateway_id=example_transit_gateway.id,
     allowed_prefixes=[
         "10.255.255.0/30",
         "10.255.255.8/30",
-    ],
-    associated_gateway_id=example_transit_gateway.id,
-    dx_gateway_id=example_gateway.id)
+    ])
 ```
 
 {{% /example %}}
@@ -234,17 +228,15 @@ example_gateway_association = aws.directconnect.GatewayAssociation("exampleGatew
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleGateway = new aws.directconnect.Gateway("example", {
-    amazonSideAsn: "64512",
-});
-const exampleTransitGateway = new aws.ec2transitgateway.TransitGateway("example", {});
-const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("example", {
+const exampleGateway = new aws.directconnect.Gateway("exampleGateway", {amazonSideAsn: "64512"});
+const exampleTransitGateway = new aws.ec2transitgateway.TransitGateway("exampleTransitGateway", {});
+const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exampleGatewayAssociation", {
+    dxGatewayId: exampleGateway.id,
+    associatedGatewayId: exampleTransitGateway.id,
     allowedPrefixes: [
         "10.255.255.0/30",
         "10.255.255.8/30",
     ],
-    associatedGatewayId: exampleTransitGateway.id,
-    dxGatewayId: exampleGateway.id,
 });
 ```
 
@@ -274,13 +266,13 @@ class MyStack : Stack
         });
         var exampleGatewayAssociation = new Aws.DirectConnect.GatewayAssociation("exampleGatewayAssociation", new Aws.DirectConnect.GatewayAssociationArgs
         {
+            DxGatewayId = exampleGateway.Id,
+            AssociatedGatewayId = exampleVpnGateway.Id,
             AllowedPrefixes = 
             {
                 "210.52.109.0/24",
                 "175.45.176.0/22",
             },
-            AssociatedGatewayId = exampleVpnGateway.Id,
-            DxGatewayId = exampleGateway.Id,
         });
     }
 
@@ -294,8 +286,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -320,12 +312,12 @@ func main() {
 			return err
 		}
 		_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
+			DxGatewayId:         exampleGateway.ID(),
+			AssociatedGatewayId: exampleVpnGateway.ID(),
 			AllowedPrefixes: pulumi.StringArray{
 				pulumi.String("210.52.109.0/24"),
 				pulumi.String("175.45.176.0/22"),
 			},
-			AssociatedGatewayId: exampleVpnGateway.ID(),
-			DxGatewayId:         exampleGateway.ID(),
 		})
 		if err != nil {
 			return err
@@ -346,12 +338,12 @@ example_gateway = aws.directconnect.Gateway("exampleGateway", amazon_side_asn="6
 example_vpc = aws.ec2.Vpc("exampleVpc", cidr_block="10.255.255.0/28")
 example_vpn_gateway = aws.ec2.VpnGateway("exampleVpnGateway", vpc_id=example_vpc.id)
 example_gateway_association = aws.directconnect.GatewayAssociation("exampleGatewayAssociation",
+    dx_gateway_id=example_gateway.id,
+    associated_gateway_id=example_vpn_gateway.id,
     allowed_prefixes=[
         "210.52.109.0/24",
         "175.45.176.0/22",
-    ],
-    associated_gateway_id=example_vpn_gateway.id,
-    dx_gateway_id=example_gateway.id)
+    ])
 ```
 
 {{% /example %}}
@@ -362,22 +354,16 @@ example_gateway_association = aws.directconnect.GatewayAssociation("exampleGatew
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleGateway = new aws.directconnect.Gateway("example", {
-    amazonSideAsn: "64512",
-});
-const exampleVpc = new aws.ec2.Vpc("example", {
-    cidrBlock: "10.255.255.0/28",
-});
-const exampleVpnGateway = new aws.ec2.VpnGateway("example", {
-    vpcId: exampleVpc.id,
-});
-const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("example", {
+const exampleGateway = new aws.directconnect.Gateway("exampleGateway", {amazonSideAsn: "64512"});
+const exampleVpc = new aws.ec2.Vpc("exampleVpc", {cidrBlock: "10.255.255.0/28"});
+const exampleVpnGateway = new aws.ec2.VpnGateway("exampleVpnGateway", {vpcId: exampleVpc.id});
+const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exampleGatewayAssociation", {
+    dxGatewayId: exampleGateway.id,
+    associatedGatewayId: exampleVpnGateway.id,
     allowedPrefixes: [
         "210.52.109.0/24",
         "175.45.176.0/22",
     ],
-    associatedGatewayId: exampleVpnGateway.id,
-    dxGatewayId: exampleGateway.id,
 });
 ```
 
@@ -395,11 +381,11 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/directconnect/#pulumi_aws.directconnect.GatewayAssociation">GatewayAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_prefixes=None<span class="p">, </span>associated_gateway_id=None<span class="p">, </span>associated_gateway_owner_account_id=None<span class="p">, </span>dx_gateway_id=None<span class="p">, </span>proposal_id=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/directconnect/#pulumi_aws.directconnect.GatewayAssociation">GatewayAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_prefixes=None<span class="p">, </span>associated_gateway_id=None<span class="p">, </span>associated_gateway_owner_account_id=None<span class="p">, </span>dx_gateway_id=None<span class="p">, </span>proposal_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#GatewayAssociation">NewGatewayAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#GatewayAssociationArgs">GatewayAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#GatewayAssociation">GatewayAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#GatewayAssociation">NewGatewayAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#GatewayAssociationArgs">GatewayAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#GatewayAssociation">GatewayAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -473,7 +459,7 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -493,7 +479,7 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#GatewayAssociationArgs">GatewayAssociationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#GatewayAssociationArgs">GatewayAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -503,7 +489,7 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -625,18 +611,6 @@ Used for cross-account Direct Connect gateway associations.
 Used for cross-account Direct Connect gateway associations.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="vpngatewayid_csharp">
-<a href="#vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}*Deprecated:* Use `associated_gateway_id` instead. The ID of the VGW with which to associate the gateway.
-Used for single account Direct Connect gateway associations.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -701,18 +675,6 @@ Used for cross-account Direct Connect gateway associations.
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="vpngatewayid_go">
-<a href="#vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}*Deprecated:* Use `associated_gateway_id` instead. The ID of the VGW with which to associate the gateway.
-Used for single account Direct Connect gateway associations.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -779,18 +741,6 @@ Used for cross-account Direct Connect gateway associations.
 Used for cross-account Direct Connect gateway associations.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="vpngatewayid_nodejs">
-<a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}*Deprecated:* Use `associated_gateway_id` instead. The ID of the VGW with which to associate the gateway.
-Used for single account Direct Connect gateway associations.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -855,18 +805,6 @@ Used for cross-account Direct Connect gateway associations.
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="vpn_gateway_id_python">
-<a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}*Deprecated:* Use `associated_gateway_id` instead. The ID of the VGW with which to associate the gateway.
-Used for single account Direct Connect gateway associations.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1098,11 +1036,11 @@ Get an existing GatewayAssociation resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allowed_prefixes=None<span class="p">, </span>associated_gateway_id=None<span class="p">, </span>associated_gateway_owner_account_id=None<span class="p">, </span>associated_gateway_type=None<span class="p">, </span>dx_gateway_association_id=None<span class="p">, </span>dx_gateway_id=None<span class="p">, </span>dx_gateway_owner_account_id=None<span class="p">, </span>proposal_id=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allowed_prefixes=None<span class="p">, </span>associated_gateway_id=None<span class="p">, </span>associated_gateway_owner_account_id=None<span class="p">, </span>associated_gateway_type=None<span class="p">, </span>dx_gateway_association_id=None<span class="p">, </span>dx_gateway_id=None<span class="p">, </span>dx_gateway_owner_account_id=None<span class="p">, </span>proposal_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGatewayAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#GatewayAssociationState">GatewayAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#GatewayAssociation">GatewayAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGatewayAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#GatewayAssociationState">GatewayAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/directconnect?tab=doc#GatewayAssociation">GatewayAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1303,18 +1241,6 @@ Used for cross-account Direct Connect gateway associations.
 Used for cross-account Direct Connect gateway associations.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_vpngatewayid_csharp">
-<a href="#state_vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}*Deprecated:* Use `associated_gateway_id` instead. The ID of the VGW with which to associate the gateway.
-Used for single account Direct Connect gateway associations.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1412,18 +1338,6 @@ Used for cross-account Direct Connect gateway associations.
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_vpngatewayid_go">
-<a href="#state_vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}*Deprecated:* Use `associated_gateway_id` instead. The ID of the VGW with which to associate the gateway.
-Used for single account Direct Connect gateway associations.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1523,18 +1437,6 @@ Used for cross-account Direct Connect gateway associations.
 Used for cross-account Direct Connect gateway associations.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_vpngatewayid_nodejs">
-<a href="#state_vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}*Deprecated:* Use `associated_gateway_id` instead. The ID of the VGW with which to associate the gateway.
-Used for single account Direct Connect gateway associations.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1632,18 +1534,6 @@ Used for cross-account Direct Connect gateway associations.
     <dd>{{% md %}}The ID of the Direct Connect gateway association proposal.
 Used for cross-account Direct Connect gateway associations.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_vpn_gateway_id_python">
-<a href="#state_vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}*Deprecated:* Use `associated_gateway_id` instead. The ID of the VGW with which to associate the gateway.
-Used for single account Direct Connect gateway associations.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;associated_gateway_id&#39; argument instead{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}

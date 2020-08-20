@@ -14,8 +14,6 @@ Creates a SAML Identity Provider Signing Key.
 
 This resource allows you to create and configure a SAML Identity Provider Signing Key.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -41,10 +39,33 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/idp"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := idp.NewSamlKey(ctx, "example", &idp.SamlKeyArgs{
+			X5cs: pulumi.StringArray{
+				pulumi.Any(okta_app_saml.Example.Certificate),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -54,9 +75,11 @@ import pulumi_okta as okta
 
 example = okta.idp.SamlKey("example", x5cs=[okta_app_saml["example"]["certificate"]])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -65,6 +88,7 @@ const example = new okta.idp.SamlKey("example", {
     x5cs: [okta_app_saml_example.certificate],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -79,7 +103,7 @@ const example = new okta.idp.SamlKey("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/idp/#SamlKey">SamlKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>x5cs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/idp/#pulumi_okta.idp.SamlKey">SamlKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>x5cs=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -678,7 +702,7 @@ Get an existing SamlKey resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created=None<span class="p">, </span>expires_at=None<span class="p">, </span>kid=None<span class="p">, </span>kty=None<span class="p">, </span>use=None<span class="p">, </span>x5cs=None<span class="p">, </span>x5t_s256=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created=None<span class="p">, </span>expires_at=None<span class="p">, </span>kid=None<span class="p">, </span>kty=None<span class="p">, </span>use=None<span class="p">, </span>x5cs=None<span class="p">, </span>x5t_s256=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

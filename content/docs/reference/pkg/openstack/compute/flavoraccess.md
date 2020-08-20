@@ -54,7 +54,42 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project1, err := identity.NewProject(ctx, "project1", nil)
+		if err != nil {
+			return err
+		}
+		flavor1, err := compute.NewFlavor(ctx, "flavor1", &compute.FlavorArgs{
+			Disk:     pulumi.Int(20),
+			IsPublic: pulumi.Bool(false),
+			Ram:      pulumi.Int(8096),
+			Vcpus:    pulumi.Int(2),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewFlavorAccess(ctx, "access1", &compute.FlavorAccessArgs{
+			FlavorId: flavor1.ID(),
+			TenantId: project1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -108,7 +143,7 @@ const access1 = new openstack.compute.FlavorAccess("access_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#FlavorAccess">FlavorAccess</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>flavor_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.FlavorAccess">FlavorAccess</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>flavor_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -543,7 +578,7 @@ Get an existing FlavorAccess resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>flavor_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>flavor_id=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

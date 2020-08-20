@@ -31,17 +31,21 @@ class MyStack : Stack
         var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
         {
         });
+        // ...
         var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
         {
         });
+        // Other parameters
         var @static = new Aws.LB.ListenerRule("static", new Aws.LB.ListenerRuleArgs
         {
+            ListenerArn = frontEndListener.Arn,
+            Priority = 100,
             Actions = 
             {
                 new Aws.LB.Inputs.ListenerRuleActionArgs
                 {
-                    TargetGroupArn = aws_lb_target_group.Static.Arn,
                     Type = "forward",
+                    TargetGroupArn = aws_lb_target_group.Static.Arn,
                 },
             },
             Conditions = 
@@ -67,37 +71,18 @@ class MyStack : Stack
                     },
                 },
             },
-            ListenerArn = frontEndListener.Arn,
-            Priority = 100,
         });
-        var hostBasedRouting = new Aws.LB.ListenerRule("hostBasedRouting", new Aws.LB.ListenerRuleArgs
+        // Forward action
+        var hostBasedWeightedRouting = new Aws.LB.ListenerRule("hostBasedWeightedRouting", new Aws.LB.ListenerRuleArgs
         {
+            ListenerArn = frontEndListener.Arn,
+            Priority = 99,
             Actions = 
             {
                 new Aws.LB.Inputs.ListenerRuleActionArgs
                 {
-                    Forward = new Aws.LB.Inputs.ListenerRuleActionForwardArgs
-                    {
-                        Stickiness = new Aws.LB.Inputs.ListenerRuleActionForwardStickinessArgs
-                        {
-                            Duration = 600,
-                            Enabled = true,
-                        },
-                        TargetGroup = 
-                        {
-                            
-                            {
-                                { "arn", aws_lb_target_group.Main.Arn },
-                                { "weight", 80 },
-                            },
-                            
-                            {
-                                { "arn", aws_lb_target_group.Canary.Arn },
-                                { "weight", 20 },
-                            },
-                        },
-                    },
                     Type = "forward",
+                    TargetGroupArn = aws_lb_target_group.Static.Arn,
                 },
             },
             Conditions = 
@@ -113,17 +98,38 @@ class MyStack : Stack
                     },
                 },
             },
+        });
+        // Weighted Forward action
+        var hostBasedRouting = new Aws.LB.ListenerRule("hostBasedRouting", new Aws.LB.ListenerRuleArgs
+        {
             ListenerArn = frontEndListener.Arn,
             Priority = 99,
-        });
-        var hostBasedWeightedRouting = new Aws.LB.ListenerRule("hostBasedWeightedRouting", new Aws.LB.ListenerRuleArgs
-        {
             Actions = 
             {
                 new Aws.LB.Inputs.ListenerRuleActionArgs
                 {
-                    TargetGroupArn = aws_lb_target_group.Static.Arn,
                     Type = "forward",
+                    Forward = new Aws.LB.Inputs.ListenerRuleActionForwardArgs
+                    {
+                        TargetGroups = 
+                        {
+                            new Aws.LB.Inputs.ListenerRuleActionForwardTargetGroupArgs
+                            {
+                                Arn = aws_lb_target_group.Main.Arn,
+                                Weight = 80,
+                            },
+                            new Aws.LB.Inputs.ListenerRuleActionForwardTargetGroupArgs
+                            {
+                                Arn = aws_lb_target_group.Canary.Arn,
+                                Weight = 20,
+                            },
+                        },
+                        Stickiness = new Aws.LB.Inputs.ListenerRuleActionForwardStickinessArgs
+                        {
+                            Enabled = true,
+                            Duration = 600,
+                        },
+                    },
                 },
             },
             Conditions = 
@@ -134,27 +140,27 @@ class MyStack : Stack
                     {
                         Values = 
                         {
-                            "my-service.*.mydomain.io",
+                            "my-service.*.mycompany.io",
                         },
                     },
                 },
             },
-            ListenerArn = frontEndListener.Arn,
-            Priority = 99,
         });
+        // Redirect action
         var redirectHttpToHttps = new Aws.LB.ListenerRule("redirectHttpToHttps", new Aws.LB.ListenerRuleArgs
         {
+            ListenerArn = frontEndListener.Arn,
             Actions = 
             {
                 new Aws.LB.Inputs.ListenerRuleActionArgs
                 {
+                    Type = "redirect",
                     Redirect = new Aws.LB.Inputs.ListenerRuleActionRedirectArgs
                     {
                         Port = "443",
                         Protocol = "HTTPS",
                         StatusCode = "HTTP_301",
                     },
-                    Type = "redirect",
                 },
             },
             Conditions = 
@@ -171,21 +177,22 @@ class MyStack : Stack
                     },
                 },
             },
-            ListenerArn = frontEndListener.Arn,
         });
+        // Fixed-response action
         var healthCheck = new Aws.LB.ListenerRule("healthCheck", new Aws.LB.ListenerRuleArgs
         {
+            ListenerArn = frontEndListener.Arn,
             Actions = 
             {
                 new Aws.LB.Inputs.ListenerRuleActionArgs
                 {
+                    Type = "fixed-response",
                     FixedResponse = new Aws.LB.Inputs.ListenerRuleActionFixedResponseArgs
                     {
                         ContentType = "text/plain",
                         MessageBody = "HEALTHY",
                         StatusCode = "200",
                     },
-                    Type = "fixed-response",
                 },
             },
             Conditions = 
@@ -206,23 +213,51 @@ class MyStack : Stack
                     },
                 },
             },
-            ListenerArn = frontEndListener.Arn,
         });
+        // Authenticate-cognito Action
         var pool = new Aws.Cognito.UserPool("pool", new Aws.Cognito.UserPoolArgs
         {
         });
+        // ...
         var client = new Aws.Cognito.UserPoolClient("client", new Aws.Cognito.UserPoolClientArgs
         {
         });
+        // ...
         var domain = new Aws.Cognito.UserPoolDomain("domain", new Aws.Cognito.UserPoolDomainArgs
         {
         });
-        var admin = new Aws.LB.ListenerRule("admin", new Aws.LB.ListenerRuleArgs
+        // ...
+        var adminListenerRule = new Aws.LB.ListenerRule("adminListenerRule", new Aws.LB.ListenerRuleArgs
         {
+            ListenerArn = frontEndListener.Arn,
             Actions = 
             {
                 new Aws.LB.Inputs.ListenerRuleActionArgs
                 {
+                    Type = "authenticate-cognito",
+                    AuthenticateCognito = new Aws.LB.Inputs.ListenerRuleActionAuthenticateCognitoArgs
+                    {
+                        UserPoolArn = pool.Arn,
+                        UserPoolClientId = client.Id,
+                        UserPoolDomain = domain.Domain,
+                    },
+                },
+                new Aws.LB.Inputs.ListenerRuleActionArgs
+                {
+                    Type = "forward",
+                    TargetGroupArn = aws_lb_target_group.Static.Arn,
+                },
+            },
+        });
+        // Authenticate-oidc Action
+        var adminLb_listenerRuleListenerRule = new Aws.LB.ListenerRule("adminLb/listenerRuleListenerRule", new Aws.LB.ListenerRuleArgs
+        {
+            ListenerArn = frontEndListener.Arn,
+            Actions = 
+            {
+                new Aws.LB.Inputs.ListenerRuleActionArgs
+                {
+                    Type = "authenticate-oidc",
                     AuthenticateOidc = new Aws.LB.Inputs.ListenerRuleActionAuthenticateOidcArgs
                     {
                         AuthorizationEndpoint = "https://example.com/authorization_endpoint",
@@ -232,15 +267,13 @@ class MyStack : Stack
                         TokenEndpoint = "https://example.com/token_endpoint",
                         UserInfoEndpoint = "https://example.com/user_info_endpoint",
                     },
-                    Type = "authenticate-oidc",
                 },
                 new Aws.LB.Inputs.ListenerRuleActionArgs
                 {
-                    TargetGroupArn = aws_lb_target_group.Static.Arn,
                     Type = "forward",
+                    TargetGroupArn = aws_lb_target_group.Static.Arn,
                 },
             },
-            ListenerArn = frontEndListener.Arn,
         });
     }
 
@@ -254,8 +287,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -270,10 +303,12 @@ func main() {
 			return err
 		}
 		_, err = lb.NewListenerRule(ctx, "static", &lb.ListenerRuleArgs{
+			ListenerArn: frontEndListener.Arn,
+			Priority:    pulumi.Int(100),
 			Actions: lb.ListenerRuleActionArray{
 				&lb.ListenerRuleActionArgs{
-					TargetGroupArn: pulumi.String(aws_lb_target_group.Static.Arn),
 					Type:           pulumi.String("forward"),
+					TargetGroupArn: pulumi.Any(aws_lb_target_group.Static.Arn),
 				},
 			},
 			Conditions: lb.ListenerRuleConditionArray{
@@ -292,32 +327,17 @@ func main() {
 					},
 				},
 			},
-			ListenerArn: frontEndListener.Arn,
-			Priority:    pulumi.Int(100),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = lb.NewListenerRule(ctx, "hostBasedRouting", &lb.ListenerRuleArgs{
+		_, err = lb.NewListenerRule(ctx, "hostBasedWeightedRouting", &lb.ListenerRuleArgs{
+			ListenerArn: frontEndListener.Arn,
+			Priority:    pulumi.Int(99),
 			Actions: lb.ListenerRuleActionArray{
 				&lb.ListenerRuleActionArgs{
-					Forward: &lb.ListenerRuleActionForwardArgs{
-						Stickiness: &lb.ListenerRuleActionForwardStickinessArgs{
-							Duration: pulumi.Int(600),
-							Enabled:  pulumi.Bool(true),
-						},
-						TargetGroup: pulumi.MapArray{
-							pulumi.Map{
-								"arn":    pulumi.String(aws_lb_target_group.Main.Arn),
-								"weight": pulumi.Float64(80),
-							},
-							pulumi.Map{
-								"arn":    pulumi.String(aws_lb_target_group.Canary.Arn),
-								"weight": pulumi.Float64(20),
-							},
-						},
-					},
-					Type: pulumi.String("forward"),
+					Type:           pulumi.String("forward"),
+					TargetGroupArn: pulumi.Any(aws_lb_target_group.Static.Arn),
 				},
 			},
 			Conditions: lb.ListenerRuleConditionArray{
@@ -329,43 +349,57 @@ func main() {
 					},
 				},
 			},
-			ListenerArn: frontEndListener.Arn,
-			Priority:    pulumi.Int(99),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = lb.NewListenerRule(ctx, "hostBasedWeightedRouting", &lb.ListenerRuleArgs{
+		_, err = lb.NewListenerRule(ctx, "hostBasedRouting", &lb.ListenerRuleArgs{
+			ListenerArn: frontEndListener.Arn,
+			Priority:    pulumi.Int(99),
 			Actions: lb.ListenerRuleActionArray{
 				&lb.ListenerRuleActionArgs{
-					TargetGroupArn: pulumi.String(aws_lb_target_group.Static.Arn),
-					Type:           pulumi.String("forward"),
+					Type: pulumi.String("forward"),
+					Forward: &lb.ListenerRuleActionForwardArgs{
+						TargetGroups: lb.ListenerRuleActionForwardTargetGroupArray{
+							&lb.ListenerRuleActionForwardTargetGroupArgs{
+								Arn:    pulumi.Any(aws_lb_target_group.Main.Arn),
+								Weight: pulumi.Int(80),
+							},
+							&lb.ListenerRuleActionForwardTargetGroupArgs{
+								Arn:    pulumi.Any(aws_lb_target_group.Canary.Arn),
+								Weight: pulumi.Int(20),
+							},
+						},
+						Stickiness: &lb.ListenerRuleActionForwardStickinessArgs{
+							Enabled:  pulumi.Bool(true),
+							Duration: pulumi.Int(600),
+						},
+					},
 				},
 			},
 			Conditions: lb.ListenerRuleConditionArray{
 				&lb.ListenerRuleConditionArgs{
 					HostHeader: &lb.ListenerRuleConditionHostHeaderArgs{
 						Values: pulumi.StringArray{
-							pulumi.String("my-service.*.mydomain.io"),
+							pulumi.String("my-service.*.mycompany.io"),
 						},
 					},
 				},
 			},
-			ListenerArn: frontEndListener.Arn,
-			Priority:    pulumi.Int(99),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = lb.NewListenerRule(ctx, "redirectHttpToHttps", &lb.ListenerRuleArgs{
+			ListenerArn: frontEndListener.Arn,
 			Actions: lb.ListenerRuleActionArray{
 				&lb.ListenerRuleActionArgs{
+					Type: pulumi.String("redirect"),
 					Redirect: &lb.ListenerRuleActionRedirectArgs{
 						Port:       pulumi.String("443"),
 						Protocol:   pulumi.String("HTTPS"),
 						StatusCode: pulumi.String("HTTP_301"),
 					},
-					Type: pulumi.String("redirect"),
 				},
 			},
 			Conditions: lb.ListenerRuleConditionArray{
@@ -378,20 +412,20 @@ func main() {
 					},
 				},
 			},
-			ListenerArn: frontEndListener.Arn,
 		})
 		if err != nil {
 			return err
 		}
 		_, err = lb.NewListenerRule(ctx, "healthCheck", &lb.ListenerRuleArgs{
+			ListenerArn: frontEndListener.Arn,
 			Actions: lb.ListenerRuleActionArray{
 				&lb.ListenerRuleActionArgs{
+					Type: pulumi.String("fixed-response"),
 					FixedResponse: &lb.ListenerRuleActionFixedResponseArgs{
 						ContentType: pulumi.String("text/plain"),
 						MessageBody: pulumi.String("HEALTHY"),
 						StatusCode:  pulumi.String("200"),
 					},
-					Type: pulumi.String("fixed-response"),
 				},
 			},
 			Conditions: lb.ListenerRuleConditionArray{
@@ -407,26 +441,47 @@ func main() {
 					},
 				},
 			},
-			ListenerArn: frontEndListener.Arn,
 		})
 		if err != nil {
 			return err
 		}
-		_, err = cognito.NewUserPool(ctx, "pool", nil)
+		pool, err := cognito.NewUserPool(ctx, "pool", nil)
 		if err != nil {
 			return err
 		}
-		_, err = cognito.NewUserPoolClient(ctx, "client", nil)
+		client, err := cognito.NewUserPoolClient(ctx, "client", nil)
 		if err != nil {
 			return err
 		}
-		_, err = cognito.NewUserPoolDomain(ctx, "domain", nil)
+		domain, err := cognito.NewUserPoolDomain(ctx, "domain", nil)
 		if err != nil {
 			return err
 		}
-		_, err = lb.NewListenerRule(ctx, "admin", &lb.ListenerRuleArgs{
+		_, err = lb.NewListenerRule(ctx, "adminListenerRule", &lb.ListenerRuleArgs{
+			ListenerArn: frontEndListener.Arn,
 			Actions: lb.ListenerRuleActionArray{
 				&lb.ListenerRuleActionArgs{
+					Type: pulumi.String("authenticate-cognito"),
+					AuthenticateCognito: &lb.ListenerRuleActionAuthenticateCognitoArgs{
+						UserPoolArn:      pool.Arn,
+						UserPoolClientId: client.ID(),
+						UserPoolDomain:   domain.Domain,
+					},
+				},
+				&lb.ListenerRuleActionArgs{
+					Type:           pulumi.String("forward"),
+					TargetGroupArn: pulumi.Any(aws_lb_target_group.Static.Arn),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = lb.NewListenerRule(ctx, "adminLb_listenerRuleListenerRule", &lb.ListenerRuleArgs{
+			ListenerArn: frontEndListener.Arn,
+			Actions: lb.ListenerRuleActionArray{
+				&lb.ListenerRuleActionArgs{
+					Type: pulumi.String("authenticate-oidc"),
 					AuthenticateOidc: &lb.ListenerRuleActionAuthenticateOidcArgs{
 						AuthorizationEndpoint: pulumi.String("https://example.com/authorization_endpoint"),
 						ClientId:              pulumi.String("client_id"),
@@ -435,14 +490,12 @@ func main() {
 						TokenEndpoint:         pulumi.String("https://example.com/token_endpoint"),
 						UserInfoEndpoint:      pulumi.String("https://example.com/user_info_endpoint"),
 					},
-					Type: pulumi.String("authenticate-oidc"),
 				},
 				&lb.ListenerRuleActionArgs{
-					TargetGroupArn: pulumi.String(aws_lb_target_group.Static.Arn),
 					Type:           pulumi.String("forward"),
+					TargetGroupArn: pulumi.Any(aws_lb_target_group.Static.Arn),
 				},
 			},
-			ListenerArn: frontEndListener.Arn,
 		})
 		if err != nil {
 			return err
@@ -460,11 +513,15 @@ import pulumi
 import pulumi_aws as aws
 
 front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+# ...
 front_end_listener = aws.lb.Listener("frontEndListener")
+# Other parameters
 static = aws.lb.ListenerRule("static",
+    listener_arn=front_end_listener.arn,
+    priority=100,
     actions=[{
-        "target_group_arn": aws_lb_target_group["static"]["arn"],
         "type": "forward",
+        "target_group_arn": aws_lb_target_group["static"]["arn"],
     }],
     conditions=[
         {
@@ -477,17 +534,28 @@ static = aws.lb.ListenerRule("static",
                 "values": ["example.com"],
             },
         },
-    ],
+    ])
+# Forward action
+host_based_weighted_routing = aws.lb.ListenerRule("hostBasedWeightedRouting",
     listener_arn=front_end_listener.arn,
-    priority=100)
-host_based_routing = aws.lb.ListenerRule("hostBasedRouting",
+    priority=99,
     actions=[{
+        "type": "forward",
+        "target_group_arn": aws_lb_target_group["static"]["arn"],
+    }],
+    conditions=[{
+        "hostHeader": {
+            "values": ["my-service.*.mycompany.io"],
+        },
+    }])
+# Weighted Forward action
+host_based_routing = aws.lb.ListenerRule("hostBasedRouting",
+    listener_arn=front_end_listener.arn,
+    priority=99,
+    actions=[{
+        "type": "forward",
         "forward": {
-            "stickiness": {
-                "duration": 600,
-                "enabled": True,
-            },
-            "targetGroup": [
+            "targetGroups": [
                 {
                     "arn": aws_lb_target_group["main"]["arn"],
                     "weight": 80,
@@ -497,52 +565,44 @@ host_based_routing = aws.lb.ListenerRule("hostBasedRouting",
                     "weight": 20,
                 },
             ],
+            "stickiness": {
+                "enabled": True,
+                "duration": 600,
+            },
         },
-        "type": "forward",
     }],
     conditions=[{
         "hostHeader": {
             "values": ["my-service.*.mycompany.io"],
         },
-    }],
-    listener_arn=front_end_listener.arn,
-    priority=99)
-host_based_weighted_routing = aws.lb.ListenerRule("hostBasedWeightedRouting",
-    actions=[{
-        "target_group_arn": aws_lb_target_group["static"]["arn"],
-        "type": "forward",
-    }],
-    conditions=[{
-        "hostHeader": {
-            "values": ["my-service.*.mydomain.io"],
-        },
-    }],
-    listener_arn=front_end_listener.arn,
-    priority=99)
+    }])
+# Redirect action
 redirect_http_to_https = aws.lb.ListenerRule("redirectHttpToHttps",
+    listener_arn=front_end_listener.arn,
     actions=[{
+        "type": "redirect",
         "redirect": {
             "port": "443",
             "protocol": "HTTPS",
             "status_code": "HTTP_301",
         },
-        "type": "redirect",
     }],
     conditions=[{
         "httpHeader": {
             "httpHeaderName": "X-Forwarded-For",
             "values": ["192.168.1.*"],
         },
-    }],
-    listener_arn=front_end_listener.arn)
+    }])
+# Fixed-response action
 health_check = aws.lb.ListenerRule("healthCheck",
+    listener_arn=front_end_listener.arn,
     actions=[{
+        "type": "fixed-response",
         "fixedResponse": {
             "content_type": "text/plain",
             "messageBody": "HEALTHY",
             "status_code": "200",
         },
-        "type": "fixed-response",
     }],
     conditions=[{
         "queryStrings": [
@@ -554,14 +614,36 @@ health_check = aws.lb.ListenerRule("healthCheck",
                 "value": "bar",
             },
         ],
-    }],
-    listener_arn=front_end_listener.arn)
+    }])
+# Authenticate-cognito Action
 pool = aws.cognito.UserPool("pool")
+# ...
 client = aws.cognito.UserPoolClient("client")
+# ...
 domain = aws.cognito.UserPoolDomain("domain")
-admin = aws.lb.ListenerRule("admin",
+# ...
+admin_listener_rule = aws.lb.ListenerRule("adminListenerRule",
+    listener_arn=front_end_listener.arn,
     actions=[
         {
+            "type": "authenticate-cognito",
+            "authenticateCognito": {
+                "userPoolArn": pool.arn,
+                "userPoolClientId": client.id,
+                "userPoolDomain": domain.domain,
+            },
+        },
+        {
+            "type": "forward",
+            "target_group_arn": aws_lb_target_group["static"]["arn"],
+        },
+    ])
+# Authenticate-oidc Action
+admin_lb_listener_rule_listener_rule = aws.lb.ListenerRule("adminLb/listenerRuleListenerRule",
+    listener_arn=front_end_listener.arn,
+    actions=[
+        {
+            "type": "authenticate-oidc",
             "authenticateOidc": {
                 "authorizationEndpoint": "https://example.com/authorization_endpoint",
                 "client_id": "client_id",
@@ -570,14 +652,12 @@ admin = aws.lb.ListenerRule("admin",
                 "tokenEndpoint": "https://example.com/token_endpoint",
                 "userInfoEndpoint": "https://example.com/user_info_endpoint",
             },
-            "type": "authenticate-oidc",
         },
         {
-            "target_group_arn": aws_lb_target_group["static"]["arn"],
             "type": "forward",
+            "target_group_arn": aws_lb_target_group["static"]["arn"],
         },
-    ],
-    listener_arn=front_end_listener.arn)
+    ])
 ```
 
 {{% /example %}}
@@ -588,12 +668,16 @@ admin = aws.lb.ListenerRule("admin",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const frontEndLoadBalancer = new aws.lb.LoadBalancer("front_end", {});
-const frontEndListener = new aws.lb.Listener("front_end", {});
+const frontEndLoadBalancer = new aws.lb.LoadBalancer("frontEndLoadBalancer", {});
+// ...
+const frontEndListener = new aws.lb.Listener("frontEndListener", {});
+// Other parameters
 const static = new aws.lb.ListenerRule("static", {
+    listenerArn: frontEndListener.arn,
+    priority: 100,
     actions: [{
-        targetGroupArn: aws_lb_target_group_static.arn,
         type: "forward",
+        targetGroupArn: aws_lb_target_group.static.arn,
     }],
     conditions: [
         {
@@ -607,58 +691,60 @@ const static = new aws.lb.ListenerRule("static", {
             },
         },
     ],
-    listenerArn: frontEndListener.arn,
-    priority: 100,
 });
-const hostBasedRouting = new aws.lb.ListenerRule("host_based_routing", {
+// Forward action
+const hostBasedWeightedRouting = new aws.lb.ListenerRule("hostBasedWeightedRouting", {
+    listenerArn: frontEndListener.arn,
+    priority: 99,
     actions: [{
-        forward: {
-            stickiness: {
-                duration: 600,
-                enabled: true,
-            },
-            targetGroups: [
-                {
-                    arn: aws_lb_target_group_main.arn,
-                    weight: 80,
-                },
-                {
-                    arn: aws_lb_target_group_canary.arn,
-                    weight: 20,
-                },
-            ],
-        },
         type: "forward",
+        targetGroupArn: aws_lb_target_group.static.arn,
     }],
     conditions: [{
         hostHeader: {
             values: ["my-service.*.mycompany.io"],
         },
     }],
+});
+// Weighted Forward action
+const hostBasedRouting = new aws.lb.ListenerRule("hostBasedRouting", {
     listenerArn: frontEndListener.arn,
     priority: 99,
-});
-const hostBasedWeightedRouting = new aws.lb.ListenerRule("host_based_weighted_routing", {
     actions: [{
-        targetGroupArn: aws_lb_target_group_static.arn,
         type: "forward",
+        forward: {
+            targetGroups: [
+                {
+                    arn: aws_lb_target_group.main.arn,
+                    weight: 80,
+                },
+                {
+                    arn: aws_lb_target_group.canary.arn,
+                    weight: 20,
+                },
+            ],
+            stickiness: {
+                enabled: true,
+                duration: 600,
+            },
+        },
     }],
     conditions: [{
         hostHeader: {
-            values: ["my-service.*.mydomain.io"],
+            values: ["my-service.*.mycompany.io"],
         },
     }],
-    listenerArn: frontEndListener.arn,
-    priority: 99,
 });
-const redirectHttpToHttps = new aws.lb.ListenerRule("redirect_http_to_https", {
+// Redirect action
+const redirectHttpToHttps = new aws.lb.ListenerRule("redirectHttpToHttps", {
+    listenerArn: frontEndListener.arn,
     actions: [{
+        type: "redirect",
         redirect: {
             port: "443",
             protocol: "HTTPS",
             statusCode: "HTTP_301",
         },
-        type: "redirect",
     }],
     conditions: [{
         httpHeader: {
@@ -666,16 +752,17 @@ const redirectHttpToHttps = new aws.lb.ListenerRule("redirect_http_to_https", {
             values: ["192.168.1.*"],
         },
     }],
-    listenerArn: frontEndListener.arn,
 });
-const healthCheck = new aws.lb.ListenerRule("health_check", {
+// Fixed-response action
+const healthCheck = new aws.lb.ListenerRule("healthCheck", {
+    listenerArn: frontEndListener.arn,
     actions: [{
+        type: "fixed-response",
         fixedResponse: {
             contentType: "text/plain",
             messageBody: "HEALTHY",
             statusCode: "200",
         },
-        type: "fixed-response",
     }],
     conditions: [{
         queryStrings: [
@@ -688,14 +775,37 @@ const healthCheck = new aws.lb.ListenerRule("health_check", {
             },
         ],
     }],
-    listenerArn: frontEndListener.arn,
 });
+// Authenticate-cognito Action
 const pool = new aws.cognito.UserPool("pool", {});
+// ...
 const client = new aws.cognito.UserPoolClient("client", {});
+// ...
 const domain = new aws.cognito.UserPoolDomain("domain", {});
-const admin = new aws.lb.ListenerRule("admin", {
+// ...
+const adminListenerRule = new aws.lb.ListenerRule("adminListenerRule", {
+    listenerArn: frontEndListener.arn,
     actions: [
         {
+            type: "authenticate-cognito",
+            authenticateCognito: {
+                userPoolArn: pool.arn,
+                userPoolClientId: client.id,
+                userPoolDomain: domain.domain,
+            },
+        },
+        {
+            type: "forward",
+            targetGroupArn: aws_lb_target_group.static.arn,
+        },
+    ],
+});
+// Authenticate-oidc Action
+const adminLb_listenerRuleListenerRule = new aws.lb.ListenerRule("adminLb/listenerRuleListenerRule", {
+    listenerArn: frontEndListener.arn,
+    actions: [
+        {
+            type: "authenticate-oidc",
             authenticateOidc: {
                 authorizationEndpoint: "https://example.com/authorization_endpoint",
                 clientId: "client_id",
@@ -704,14 +814,12 @@ const admin = new aws.lb.ListenerRule("admin", {
                 tokenEndpoint: "https://example.com/token_endpoint",
                 userInfoEndpoint: "https://example.com/user_info_endpoint",
             },
-            type: "authenticate-oidc",
         },
         {
-            targetGroupArn: aws_lb_target_group_static.arn,
             type: "forward",
+            targetGroupArn: aws_lb_target_group.static.arn,
         },
     ],
-    listenerArn: frontEndListener.arn,
 });
 ```
 
@@ -734,7 +842,7 @@ const admin = new aws.lb.ListenerRule("admin", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRule">NewListenerRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleArgs">ListenerRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRule">ListenerRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRule">NewListenerRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleArgs">ListenerRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRule">ListenerRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -808,7 +916,7 @@ const admin = new aws.lb.ListenerRule("admin", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -828,7 +936,7 @@ const admin = new aws.lb.ListenerRule("admin", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleArgs">ListenerRuleArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleArgs">ListenerRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -838,7 +946,7 @@ const admin = new aws.lb.ListenerRule("admin", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1245,7 +1353,7 @@ Get an existing ListenerRule resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListenerRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleState">ListenerRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRule">ListenerRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListenerRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleState">ListenerRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRule">ListenerRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1617,7 +1725,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleAction.html">output</a> API doc for this type.
@@ -2011,7 +2119,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionAuthenticateCognitoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionAuthenticateCognitoOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionAuthenticateCognitoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionAuthenticateCognitoOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleActionAuthenticateCognitoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleActionAuthenticateCognito.html">output</a> API doc for this type.
@@ -2409,7 +2517,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionAuthenticateOidcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionAuthenticateOidcOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionAuthenticateOidcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionAuthenticateOidcOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleActionAuthenticateOidcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleActionAuthenticateOidc.html">output</a> API doc for this type.
@@ -2939,7 +3047,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionFixedResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionFixedResponseOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionFixedResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionFixedResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleActionFixedResponseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleActionFixedResponse.html">output</a> API doc for this type.
@@ -3117,7 +3225,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleActionForwardArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleActionForward.html">output</a> API doc for this type.
@@ -3251,7 +3359,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardStickinessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardStickinessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardStickinessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardStickinessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleActionForwardStickinessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleActionForwardStickiness.html">output</a> API doc for this type.
@@ -3385,7 +3493,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardTargetGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardTargetGroupOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardTargetGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionForwardTargetGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleActionForwardTargetGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleActionForwardTargetGroup.html">output</a> API doc for this type.
@@ -3519,7 +3627,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionRedirectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionRedirectOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionRedirectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleActionRedirectOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleActionRedirectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleActionRedirect.html">output</a> API doc for this type.
@@ -3829,7 +3937,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleCondition.html">output</a> API doc for this type.
@@ -3840,17 +3948,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="field_csharp">
-<a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of condition. Valid values are `host-header` or `path-pattern`. Must also set `values`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;host_header&#39; or &#39;path_pattern&#39; attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3918,34 +4015,12 @@ The following state arguments are supported:
     <dd>{{% md %}}Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="values_csharp">
-<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;host_header&#39; or &#39;path_pattern&#39; attribute instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="field_go">
-<a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of condition. Valid values are `host-header` or `path-pattern`. Must also set `values`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;host_header&#39; or &#39;path_pattern&#39; attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4013,34 +4088,12 @@ The following state arguments are supported:
     <dd>{{% md %}}Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="values_go">
-<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;host_header&#39; or &#39;path_pattern&#39; attribute instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="field_nodejs">
-<a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The type of condition. Valid values are `host-header` or `path-pattern`. Must also set `values`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;host_header&#39; or &#39;path_pattern&#39; attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4108,34 +4161,12 @@ The following state arguments are supported:
     <dd>{{% md %}}Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="values_nodejs">
-<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;host_header&#39; or &#39;path_pattern&#39; attribute instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="field_python">
-<a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of condition. Valid values are `host-header` or `path-pattern`. Must also set `values`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;host_header&#39; or &#39;path_pattern&#39; attribute instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4203,17 +4234,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="values_python">
-<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;host_header&#39; or &#39;path_pattern&#39; attribute instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -4227,7 +4247,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHostHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHostHeaderOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHostHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHostHeaderOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleConditionHostHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleConditionHostHeader.html">output</a> API doc for this type.
@@ -4239,15 +4259,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4257,15 +4277,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4275,15 +4295,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4293,15 +4313,15 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4317,7 +4337,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHttpHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHttpHeaderOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHttpHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHttpHeaderOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleConditionHttpHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleConditionHttpHeader.html">output</a> API doc for this type.
@@ -4451,7 +4471,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHttpRequestMethodArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHttpRequestMethodOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHttpRequestMethodArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionHttpRequestMethodOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleConditionHttpRequestMethodArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleConditionHttpRequestMethod.html">output</a> API doc for this type.
@@ -4471,7 +4491,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4489,7 +4509,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4507,7 +4527,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4525,7 +4545,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4541,7 +4561,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionPathPatternArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionPathPatternOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionPathPatternArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionPathPatternOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleConditionPathPatternArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleConditionPathPattern.html">output</a> API doc for this type.
@@ -4553,15 +4573,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4571,15 +4591,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4589,15 +4609,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4607,15 +4627,15 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4631,7 +4651,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionQueryStringArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionQueryStringOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionQueryStringArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionQueryStringOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleConditionQueryStringArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleConditionQueryString.html">output</a> API doc for this type.
@@ -4765,7 +4785,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionSourceIpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionSourceIpOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionSourceIpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerRuleConditionSourceIpOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.ListenerRuleConditionSourceIpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Outputs.ListenerRuleConditionSourceIp.html">output</a> API doc for this type.
@@ -4785,7 +4805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4803,7 +4823,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4821,7 +4841,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>
@@ -4839,7 +4859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of exactly one pattern to match. Required when `field` is set.
+    <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd>
 
 </dl>

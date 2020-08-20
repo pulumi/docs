@@ -1,8 +1,8 @@
 
 ---
 title: "KubernetesNodePool"
-title_tag: "Resource KubernetesNodePool | Package Digital Ocean"
-meta_desc: "Explore the KubernetesNodePool resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the `digitalocean..KubernetesCluster` resource, this resource can be used to add additional ones to a cluster."
+title_tag: "Resource KubernetesNodePool | Package DigitalOcean"
+meta_desc: "Explore the KubernetesNodePool resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the `digitalocean..KubernetesCluster` resource, this resource can be used to add additional ones to a cluster."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the KubernetesNodePool resource of the Digital Ocean package
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the `digitalocean..KubernetesCluster` resource, this resource can be used to add additional ones to a cluster.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ autoscale_pool_01 = digitalocean.KubernetesNodePool("autoscale-pool-01",
     min_nodes=0,
     max_nodes=5)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -73,6 +74,7 @@ const autoscale_pool_01 = new digitalocean.KubernetesNodePool("autoscale-pool-01
     maxNodes: 5,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -87,7 +89,7 @@ const autoscale_pool_01 = new digitalocean.KubernetesNodePool("autoscale-pool-01
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#KubernetesNodePool">KubernetesNodePool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_scale=None<span class="p">, </span>cluster_id=None<span class="p">, </span>labels=None<span class="p">, </span>max_nodes=None<span class="p">, </span>min_nodes=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.KubernetesNodePool">KubernetesNodePool</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_scale=None<span class="p">, </span>cluster_id=None<span class="p">, </span>labels=None<span class="p">, </span>max_nodes=None<span class="p">, </span>min_nodes=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -886,7 +888,7 @@ Get an existing KubernetesNodePool resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actual_node_count=None<span class="p">, </span>auto_scale=None<span class="p">, </span>cluster_id=None<span class="p">, </span>labels=None<span class="p">, </span>max_nodes=None<span class="p">, </span>min_nodes=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>nodes=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actual_node_count=None<span class="p">, </span>auto_scale=None<span class="p">, </span>cluster_id=None<span class="p">, </span>labels=None<span class="p">, </span>max_nodes=None<span class="p">, </span>min_nodes=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>nodes=None<span class="p">, </span>size=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -23,7 +23,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/siterecovery/#pulumi_azure.siterecovery.ReplicatedVM">ReplicatedVM</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>managed_disks=None<span class="p">, </span>name=None<span class="p">, </span>recovery_replication_policy_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_recovery_fabric_name=None<span class="p">, </span>source_recovery_protection_container_name=None<span class="p">, </span>source_vm_id=None<span class="p">, </span>target_availability_set_id=None<span class="p">, </span>target_recovery_fabric_id=None<span class="p">, </span>target_recovery_protection_container_id=None<span class="p">, </span>target_resource_group_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/siterecovery/#pulumi_azure.siterecovery.ReplicatedVM">ReplicatedVM</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>managed_disks=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>recovery_replication_policy_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_recovery_fabric_name=None<span class="p">, </span>source_recovery_protection_container_name=None<span class="p">, </span>source_vm_id=None<span class="p">, </span>target_availability_set_id=None<span class="p">, </span>target_network_id=None<span class="p">, </span>target_recovery_fabric_id=None<span class="p">, </span>target_recovery_protection_container_id=None<span class="p">, </span>target_resource_group_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -317,6 +317,17 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="networkinterfaces_csharp">
+<a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">List&lt;Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `network_interface` block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="targetavailabilitysetid_csharp">
 <a href="#targetavailabilitysetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
 </span> 
@@ -324,6 +335,17 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetnetworkid_csharp">
+<a href="#targetnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
 {{% /md %}}</dd>
 
 </dl>
@@ -455,6 +477,17 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="networkinterfaces_go">
+<a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">[]Replicated<wbr>VMNetwork<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `network_interface` block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="targetavailabilitysetid_go">
 <a href="#targetavailabilitysetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
 </span> 
@@ -462,6 +495,17 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetnetworkid_go">
+<a href="#targetnetworkid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
 {{% /md %}}</dd>
 
 </dl>
@@ -593,6 +637,17 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="networkinterfaces_nodejs">
+<a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">Replicated<wbr>VMNetwork<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `network_interface` block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="targetavailabilitysetid_nodejs">
 <a href="#targetavailabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Set<wbr>Id</a>
 </span> 
@@ -600,6 +655,17 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetnetworkid_nodejs">
+<a href="#targetnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
 {{% /md %}}</dd>
 
 </dl>
@@ -731,6 +797,17 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="network_interfaces_python">
+<a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">List[Replicated<wbr>VMNetwork<wbr>Interface]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `network_interface` block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="target_availability_set_id_python">
 <a href="#target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
 </span> 
@@ -738,6 +815,17 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_network_id_python">
+<a href="#target_network_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
 {{% /md %}}</dd>
 
 </dl>
@@ -838,7 +926,7 @@ Get an existing ReplicatedVM resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>managed_disks=None<span class="p">, </span>name=None<span class="p">, </span>recovery_replication_policy_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_recovery_fabric_name=None<span class="p">, </span>source_recovery_protection_container_name=None<span class="p">, </span>source_vm_id=None<span class="p">, </span>target_availability_set_id=None<span class="p">, </span>target_recovery_fabric_id=None<span class="p">, </span>target_recovery_protection_container_id=None<span class="p">, </span>target_resource_group_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>managed_disks=None<span class="p">, </span>name=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>recovery_replication_policy_id=None<span class="p">, </span>recovery_vault_name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>source_recovery_fabric_name=None<span class="p">, </span>source_recovery_protection_container_name=None<span class="p">, </span>source_vm_id=None<span class="p">, </span>target_availability_set_id=None<span class="p">, </span>target_network_id=None<span class="p">, </span>target_recovery_fabric_id=None<span class="p">, </span>target_recovery_protection_container_id=None<span class="p">, </span>target_resource_group_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -976,6 +1064,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_networkinterfaces_csharp">
+<a href="#state_networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">List&lt;Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `network_interface` block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_recoveryreplicationpolicyid_csharp">
 <a href="#state_recoveryreplicationpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
 </span> 
@@ -1052,6 +1151,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_targetnetworkid_csharp">
+<a href="#state_targetnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_targetrecoveryfabricid_csharp">
 <a href="#state_targetrecoveryfabricid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Fabric<wbr>Id</a>
 </span> 
@@ -1110,6 +1220,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_networkinterfaces_go">
+<a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">[]Replicated<wbr>VMNetwork<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `network_interface` block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1190,6 +1311,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_targetnetworkid_go">
+<a href="#state_targetnetworkid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_targetrecoveryfabricid_go">
 <a href="#state_targetrecoveryfabricid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Fabric<wbr>Id</a>
 </span> 
@@ -1248,6 +1380,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_networkinterfaces_nodejs">
+<a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">Replicated<wbr>VMNetwork<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `network_interface` block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1328,6 +1471,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_targetnetworkid_nodejs">
+<a href="#state_targetnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_targetrecoveryfabricid_nodejs">
 <a href="#state_targetrecoveryfabricid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Recovery<wbr>Fabric<wbr>Id</a>
 </span> 
@@ -1386,6 +1540,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_network_interfaces_python">
+<a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicatedvmnetworkinterface">List[Replicated<wbr>VMNetwork<wbr>Interface]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `network_interface` block.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1462,6 +1627,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_target_network_id_python">
+<a href="#state_target_network_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1769,6 +1945,184 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="replicatedvmnetworkinterface">Replicated<wbr>VMNetwork<wbr>Interface</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ReplicatedVMNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ReplicatedVMNetworkInterface">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery?tab=doc#ReplicatedVMNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery?tab=doc#ReplicatedVMNetworkInterfaceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.SiteRecovery.Inputs.ReplicatedVMNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.SiteRecovery.Outputs.ReplicatedVMNetworkInterface.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcenetworkinterfaceid_csharp">
+<a href="#sourcenetworkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Network<wbr>Interface<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id source network interface.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetstaticip_csharp">
+<a href="#targetstaticip_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Static<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Static IP to assign when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetsubnetname_csharp">
+<a href="#targetsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the subnet to to use when a failover is done.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcenetworkinterfaceid_go">
+<a href="#sourcenetworkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Network<wbr>Interface<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id source network interface.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetstaticip_go">
+<a href="#targetstaticip_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Static<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Static IP to assign when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetsubnetname_go">
+<a href="#targetsubnetname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the subnet to to use when a failover is done.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcenetworkinterfaceid_nodejs">
+<a href="#sourcenetworkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Network<wbr>Interface<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id source network interface.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetstaticip_nodejs">
+<a href="#targetstaticip_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Static<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Static IP to assign when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetsubnetname_nodejs">
+<a href="#targetsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the subnet to to use when a failover is done.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcenetworkinterfaceid_python">
+<a href="#sourcenetworkinterfaceid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Network<wbr>Interface<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Id source network interface.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetstaticip_python">
+<a href="#targetstaticip_python" style="color: inherit; text-decoration: inherit;">target<wbr>Static<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Static IP to assign when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetsubnetname_python">
+<a href="#targetsubnetname_python" style="color: inherit; text-decoration: inherit;">target<wbr>Subnet<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the subnet to to use when a failover is done.
 {{% /md %}}</dd>
 
 </dl>

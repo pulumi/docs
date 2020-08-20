@@ -42,7 +42,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/secretsmanager"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/secretsmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -77,9 +77,9 @@ example = aws.secretsmanager.get_secret_version(secret_id=data["aws_secretsmanag
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws_secretsmanager_secret_example.id.apply(id => aws.secretsmanager.getSecretVersion({
-    secretId: id,
-}, { async: true }));
+const example = aws.secretsmanager.getSecretVersion({
+    secretId: data.aws_secretsmanager_secret.example.id,
+});
 ```
 
 {{% /example %}}
@@ -111,7 +111,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/secretsmanager"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/secretsmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -149,10 +149,10 @@ by_version_stage = aws.secretsmanager.get_secret_version(secret_id=data["aws_sec
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const by_version_stage = aws_secretsmanager_secret_example.id.apply(id => aws.secretsmanager.getSecretVersion({
-    secretId: id,
+const by-version-stage = aws.secretsmanager.getSecretVersion({
+    secretId: data.aws_secretsmanager_secret.example.id,
     versionStage: "example",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -176,7 +176,7 @@ const by_version_stage = aws_secretsmanager_secret_example.id.apply(id => aws.se
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecretVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/secretsmanager?tab=doc#LookupSecretVersionArgs">LookupSecretVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/secretsmanager?tab=doc#LookupSecretVersionResult">LookupSecretVersionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecretVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/secretsmanager?tab=doc#LookupSecretVersionArgs">LookupSecretVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/secretsmanager?tab=doc#LookupSecretVersionResult">LookupSecretVersionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSecretVersion` in the Go SDK.
 

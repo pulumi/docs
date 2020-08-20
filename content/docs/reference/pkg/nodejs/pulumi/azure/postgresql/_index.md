@@ -3,7 +3,7 @@ title: "Module postgresql"
 title_tag: "Module postgresql | Package @pulumi/azure | Node.js SDK"
 linktitle: "postgresql"
 meta_desc: "Explore members of the postgresql module in the @pulumi/azure package."
-git_sha: "38f39deade34d0e187626f1cb68bf0835bc2c2d0"
+git_sha: "1ab68fc895391745ca99e4edaaef6ceeea643c4a"
 block_external_search_index: true
 ---
 
@@ -17,6 +17,7 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
+    <li><a href="#ActiveDirectoryAdministrator"><span class="symbol resource"></span>ActiveDirectoryAdministrator</a></li>
     <li><a href="#Configuration"><span class="symbol resource"></span>Configuration</a></li>
     <li><a href="#Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="#FirewallRule"><span class="symbol resource"></span>FirewallRule</a></li>
@@ -31,6 +32,8 @@ block_external_search_index: true
 
 <h3>Others</h3>
 <ul class="api">
+    <li><a href="#ActiveDirectoryAdministratorArgs"><span class="symbol api"></span>ActiveDirectoryAdministratorArgs</a></li>
+    <li><a href="#ActiveDirectoryAdministratorState"><span class="symbol api"></span>ActiveDirectoryAdministratorState</a></li>
     <li><a href="#ConfigurationArgs"><span class="symbol api"></span>ConfigurationArgs</a></li>
     <li><a href="#ConfigurationState"><span class="symbol api"></span>ConfigurationState</a></li>
     <li><a href="#DatabaseArgs"><span class="symbol api"></span>DatabaseArgs</a></li>
@@ -47,8 +50,143 @@ block_external_search_index: true
 
 
 <h2 id="resources">Resources</h2>
+<h3 class="pdoc-module-header" id="ActiveDirectoryAdministrator" data-link-title="ActiveDirectoryAdministrator">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L34">
+        Resource <strong>ActiveDirectoryAdministrator</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ActiveDirectoryAdministrator</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Allows you to set a user or group as the AD administrator for an PostgreSQL server in Azure
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleServer = new azure.postgresql.Server("exampleServer", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    version: "9.6",
+    administratorLogin: "4dm1n157r470r",
+    administratorLoginPassword: "4-v3ry-53cr37-p455w0rd",
+});
+const exampleActiveDirectoryAdministrator = new azure.postgresql.ActiveDirectoryAdministrator("exampleActiveDirectoryAdministrator", {
+    serverName: exampleServer.name,
+    resourceGroupName: exampleResourceGroup.name,
+    login: "sqladmin",
+    tenantId: current.then(current => current.tenantId),
+    objectId: current.then(current => current.objectId),
+});
+```
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L81"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ActiveDirectoryAdministrator(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ActiveDirectoryAdministratorArgs'>ActiveDirectoryAdministratorArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a ActiveDirectoryAdministrator resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L44">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ActiveDirectoryAdministratorState'>ActiveDirectoryAdministratorState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ActiveDirectoryAdministrator'>ActiveDirectoryAdministrator</a></code></pre>
+
+
+Get an existing ActiveDirectoryAdministrator resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L34">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L55">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is ActiveDirectoryAdministrator</code></pre>
+
+
+Returns true if the given object is an instance of ActiveDirectoryAdministrator.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L34">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-login">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L65">property <b>login</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>login: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The login name of the principal to set as the server administrator
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-objectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L69">property <b>objectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the principal to set as the server administrator
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L73">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the resource group for the PostgreSQL server. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-serverName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L77">property <b>serverName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the PostgreSQL Server on which to set the administrator. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L81">property <b>tenantId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Azure Tenant ID
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministrator-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L34">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h3 class="pdoc-module-header" id="Configuration" data-link-title="Configuration">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L41">
         Resource <strong>Configuration</strong>
     </a>
 </h3>
@@ -62,8 +200,6 @@ Sets a PostgreSQL Configuration value on a PostgreSQL Server.
 > **Note:** Since this resource is provisioned by default, the Azure Provider will not check for the presence of an existing resource prior to attempting to create it.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -91,7 +227,7 @@ const exampleConfiguration = new azure.postgresql.Configuration("exampleConfigur
 ```
 
 <h4 class="pdoc-member-header" id="Configuration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -105,7 +241,7 @@ Create a Configuration resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Configuration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -116,14 +252,14 @@ Get an existing Configuration resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Configuration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Configuration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -134,7 +270,7 @@ Returns true if the given object is an instance of Configuration.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Configuration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -143,7 +279,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Configuration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -151,7 +287,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the PostgreSQL Configuration, which needs [to be a valid PostgreSQL configuration name](https://www.postgresql.org/docs/current/static/sql-syntax-lexical.html#SQL-SYNTAX-IDENTIFIER). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Configuration-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L78">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L76">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +295,7 @@ Specifies the name of the PostgreSQL Configuration, which needs [to be a valid P
 The name of the resource group in which the PostgreSQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Configuration-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L82">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L80">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -167,7 +303,7 @@ The name of the resource group in which the PostgreSQL Server exists. Changing t
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Configuration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -176,7 +312,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Configuration-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L86">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L84">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +320,7 @@ deployments.
 Specifies the value of the PostgreSQL Configuration. See the PostgreSQL documentation for valid values.
 
 <h3 class="pdoc-module-header" id="Database" data-link-title="Database">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L38">
         Resource <strong>Database</strong>
     </a>
 </h3>
@@ -194,8 +330,6 @@ Specifies the value of the PostgreSQL Configuration. See the PostgreSQL document
 Manages a PostgreSQL Database within a PostgreSQL Server
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -224,7 +358,7 @@ const exampleDatabase = new azure.postgresql.Database("exampleDatabase", {
 ```
 
 <h4 class="pdoc-member-header" id="Database-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -238,7 +372,7 @@ Create a Database resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Database-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -249,14 +383,14 @@ Get an existing Database resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Database-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Database-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -267,7 +401,7 @@ Returns true if the given object is an instance of Database.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Database-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L71">property <b>charset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L69">property <b>charset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>charset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -275,7 +409,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the Charset for the PostgreSQL Database, which needs [to be a valid PostgreSQL Charset](https://www.postgresql.org/docs/current/static/multibyte.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L75">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L73">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>collation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -283,7 +417,7 @@ Specifies the Charset for the PostgreSQL Database, which needs [to be a valid Po
 Specifies the Collation for the PostgreSQL Database, which needs [to be a valid PostgreSQL Collation](https://www.postgresql.org/docs/current/static/collation.html). Note that Microsoft uses different [notation](https://msdn.microsoft.com/library/windows/desktop/dd373814.aspx) - en-US instead of en_US. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -292,7 +426,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Database-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -301,7 +435,7 @@ Specifies the name of the PostgreSQL Database, which needs [to be a valid Postgr
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L84">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L82">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -309,7 +443,7 @@ new resource to be created.
 The name of the resource group in which the PostgreSQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L88">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L86">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -317,7 +451,7 @@ The name of the resource group in which the PostgreSQL Server exists. Changing t
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Database-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -326,7 +460,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="FirewallRule" data-link-title="FirewallRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L44">
         Resource <strong>FirewallRule</strong>
     </a>
 </h3>
@@ -336,7 +470,6 @@ deployments.
 Manages a Firewall Rule for a PostgreSQL Server
 
 #### Example Usage
-
 ##### Single IP Address)
 
 ```typescript
@@ -353,7 +486,6 @@ const exampleFirewallRule = new azure.postgresql.FirewallRule("exampleFirewallRu
     endIpAddress: "40.112.8.12",
 });
 ```
-
 ##### IP Range)
 
 ```typescript
@@ -372,7 +504,7 @@ const exampleFirewallRule = new azure.postgresql.FirewallRule("exampleFirewallRu
 ```
 
 <h4 class="pdoc-member-header" id="FirewallRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -386,7 +518,7 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FirewallRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -397,14 +529,14 @@ Get an existing FirewallRule resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FirewallRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FirewallRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -415,7 +547,7 @@ Returns true if the given object is an instance of FirewallRule.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FirewallRule-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L77">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L75">property <b>endIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -423,7 +555,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the End IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -432,7 +564,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FirewallRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -441,7 +573,7 @@ Specifies the name of the PostgreSQL Firewall Rule. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L86">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L84">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -449,7 +581,7 @@ new resource to be created.
 The name of the resource group in which the PostgreSQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L90">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L88">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -457,7 +589,7 @@ The name of the resource group in which the PostgreSQL Server exists. Changing t
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L94">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L92">property <b>startIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -465,7 +597,7 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -474,7 +606,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Server" data-link-title="Server">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L36">
         Resource <strong>Server</strong>
     </a>
 </h3>
@@ -484,8 +616,6 @@ deployments.
 Manages a PostgreSQL Server.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -510,7 +640,7 @@ const exampleServer = new azure.postgresql.Server("exampleServer", {
 ```
 
 <h4 class="pdoc-member-header" id="Server-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L157"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L159"> <b>constructor</b></a>
 </h4>
 
 
@@ -524,7 +654,7 @@ Create a Server resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Server-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -535,14 +665,14 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Server-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Server-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -553,7 +683,7 @@ Returns true if the given object is an instance of Server.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Server-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L69">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L67">property <b>administratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>administratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -561,7 +691,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Administrator Login for the PostgreSQL Server. Required when `createMode` is `Default`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L73">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L71">property <b>administratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>administratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -569,7 +699,7 @@ The Administrator Login for the PostgreSQL Server. Required when `createMode` is
 The Password associated with the `administratorLogin` for the PostgreSQL Server. Required when `createMode` is `Default`.
 
 <h4 class="pdoc-member-header" id="Server-autoGrowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L77">property <b>autoGrowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L75">property <b>autoGrowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoGrowEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -577,7 +707,7 @@ The Password associated with the `administratorLogin` for the PostgreSQL Server.
 Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
 
 <h4 class="pdoc-member-header" id="Server-backupRetentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L81">property <b>backupRetentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L79">property <b>backupRetentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupRetentionDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -585,7 +715,7 @@ Enable/Disable auto-growing of the storage. Storage auto-grow prevents your serv
 Backup retention days for the server, supported values are between `7` and `35` days.
 
 <h4 class="pdoc-member-header" id="Server-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L85">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L83">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -593,7 +723,7 @@ Backup retention days for the server, supported values are between `7` and `35` 
 The creation mode. Can be used to restore or replicate existing servers. Possible values are `Default`, `Replica`, `GeoRestore`, and `PointInTimeRestore`. Defaults to `Default.`
 
 <h4 class="pdoc-member-header" id="Server-creationSourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L89">property <b>creationSourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L87">property <b>creationSourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationSourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -601,7 +731,7 @@ The creation mode. Can be used to restore or replicate existing servers. Possibl
 For creation modes other then default the source server ID to use.
 
 <h4 class="pdoc-member-header" id="Server-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L93">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L91">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -609,7 +739,7 @@ For creation modes other then default the source server ID to use.
 The FQDN of the PostgreSQL Server.
 
 <h4 class="pdoc-member-header" id="Server-geoRedundantBackupEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L97">property <b>geoRedundantBackupEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L95">property <b>geoRedundantBackupEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>geoRedundantBackupEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -617,7 +747,7 @@ The FQDN of the PostgreSQL Server.
 Turn Geo-redundant server backups on/off. This allows you to choose between locally redundant or geo-redundant backup storage in the General Purpose and Memory Optimized tiers. When the backups are stored in geo-redundant backup storage, they are not only stored within the region in which your server is hosted, but are also replicated to a paired data center. This provides better protection and ability to restore your server in a different region in the event of a disaster. This is not support for the Basic tier.
 
 <h4 class="pdoc-member-header" id="Server-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -625,8 +755,16 @@ Turn Geo-redundant server backups on/off. This allows you to choose between loca
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
 
+<h4 class="pdoc-member-header" id="Server-identity">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L99">property <b>identity</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerIdentity'>ServerIdentity</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+An `identity` block as defined below.
+
 <h4 class="pdoc-member-header" id="Server-infrastructureEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L101">property <b>infrastructureEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L103">property <b>infrastructureEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>infrastructureEncryptionEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -634,7 +772,7 @@ deployments and may be missing (undefined) during planning phases.
 Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L105">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L107">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -642,7 +780,7 @@ Whether or not infrastructure is encrypted for this server. Defaults to `false`.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L111">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -650,7 +788,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L113">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L115">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicNetworkAccessEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -658,7 +796,7 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 Whether or not public network access is allowed for this server. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Server-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L117">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L119">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -666,7 +804,7 @@ Whether or not public network access is allowed for this server. Defaults to `tr
 The name of the resource group in which to create the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Server-restorePointInTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L121">property <b>restorePointInTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L123">property <b>restorePointInTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>restorePointInTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -674,7 +812,7 @@ The name of the resource group in which to create the PostgreSQL Server. Changin
 When `createMode` is `PointInTimeRestore` the point in time to restore from `creationSourceServerId`.
 
 <h4 class="pdoc-member-header" id="Server-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L125">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L127">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -682,7 +820,7 @@ When `createMode` is `PointInTimeRestore` the point in time to restore from `cre
 Specifies the SKU Name for this PostgreSQL Server. The name of the SKU, follows the `tier` + `family` + `cores` pattern (e.g. `B_Gen4_1`, `GP_Gen5_8`). For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/postgresql/servers/create#sku).
 
 <h4 class="pdoc-member-header" id="Server-sslEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L129">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L131">property <b>sslEnforcement</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -691,15 +829,15 @@ this has been renamed to the boolean `ssl_enforcement_enabled` and will be remov
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>sslEnforcement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Server-sslEnforcementEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L133">property <b>sslEnforcementEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L135">property <b>sslEnforcementEnabled</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>sslEnforcementEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>sslEnforcementEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
 
 <h4 class="pdoc-member-header" id="Server-sslMinimalTlsVersionEnforced">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L137">property <b>sslMinimalTlsVersionEnforced</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L139">property <b>sslMinimalTlsVersionEnforced</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sslMinimalTlsVersionEnforced: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -707,7 +845,7 @@ Specifies if SSL should be enforced on connections. Possible values are `true` a
 The mimimun TLS version to support on the sever. Possible values are `TLSEnforcementDisabled`, `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLSEnforcementDisabled`.
 
 <h4 class="pdoc-member-header" id="Server-storageMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L141">property <b>storageMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L143">property <b>storageMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageMb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -715,7 +853,7 @@ The mimimun TLS version to support on the sever. Possible values are `TLSEnforce
 Max storage allowed for a server. Possible values are between `5120` MB(5GB) and `1048576` MB(1TB) for the Basic SKU and between `5120` MB(5GB) and `4194304` MB(4TB) for General Purpose/Memory Optimized SKUs. For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/postgresql/servers/create#StorageProfile).
 
 <h4 class="pdoc-member-header" id="Server-storageProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L145">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L147">property <b>storageProfile</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -724,7 +862,7 @@ all storage_profile properties have been move to the top level. This block will 
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Server-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L149">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L151">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -732,7 +870,7 @@ all storage_profile properties have been move to the top level. This block will 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Server-threatDetectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L153">property <b>threatDetectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L155">property <b>threatDetectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>threatDetectionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerThreatDetectionPolicy'>ServerThreatDetectionPolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -740,7 +878,7 @@ A mapping of tags to assign to the resource.
 Threat detection policy configuration, known in the API as Server Security Alerts Policy. The `threatDetectionPolicy` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="Server-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -749,7 +887,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Server-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L157">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L159">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -757,7 +895,7 @@ deployments.
 Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, `10`, `10.0`, and `11`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="VirtualNetworkRule" data-link-title="VirtualNetworkRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L52">
         Resource <strong>VirtualNetworkRule</strong>
     </a>
 </h3>
@@ -769,8 +907,6 @@ Manages a PostgreSQL Virtual Network Rule.
 > **NOTE:** PostgreSQL Virtual Network Rules [can only be used with SKU Tiers of `GeneralPurpose` or `MemoryOptimized`](https://docs.microsoft.com/en-us/azure/postgresql/concepts-data-access-and-security-vnet)
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -792,7 +928,7 @@ const exampleServer = new azure.postgresql.Server("exampleServer", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
     skuName: "B_Gen5_2",
-    storage_profile: {
+    storageProfile: {
         storageMb: 5120,
         backupRetentionDays: 7,
         geoRedundantBackup: "Disabled",
@@ -811,7 +947,7 @@ const exampleVirtualNetworkRule = new azure.postgresql.VirtualNetworkRule("examp
 ```
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
@@ -825,7 +961,7 @@ Create a VirtualNetworkRule resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -836,14 +972,14 @@ Get an existing VirtualNetworkRule resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L54">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -854,7 +990,7 @@ Returns true if the given object is an instance of VirtualNetworkRule.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -863,7 +999,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-ignoreMissingVnetServiceEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L85">property <b>ignoreMissingVnetServiceEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L83">property <b>ignoreMissingVnetServiceEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ignoreMissingVnetServiceEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -871,7 +1007,7 @@ deployments and may be missing (undefined) during planning phases.
 Should the Virtual Network Rule be created before the Subnet has the Virtual Network Service Endpoint enabled? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -879,7 +1015,7 @@ Should the Virtual Network Rule be created before the Subnet has the Virtual Net
 The name of the PostgreSQL virtual network rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L93">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L91">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -887,7 +1023,7 @@ The name of the PostgreSQL virtual network rule. Cannot be empty and must only c
 The name of the resource group where the PostgreSQL server resides. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L97">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L95">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -895,7 +1031,7 @@ The name of the resource group where the PostgreSQL server resides. Changing thi
 The name of the SQL Server to which this PostgreSQL virtual network rule will be applied to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L101">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L99">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -903,7 +1039,7 @@ The name of the SQL Server to which this PostgreSQL virtual network rule will be
 The ID of the subnet that the PostgreSQL server will be connected to.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L54">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -914,7 +1050,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getServer" data-link-title="getServer">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L25">
         Function <strong>getServer</strong>
     </a>
 </h3>
@@ -926,8 +1062,6 @@ deployments.
 Use this data source to access information about an existing PostgreSQL Azure Database Server.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -942,8 +1076,108 @@ export const postgresqlServerId = example.then(example => example.id);
 
 
 <h2 id="apis">Others</h2>
+<h3 class="pdoc-module-header" id="ActiveDirectoryAdministratorArgs" data-link-title="ActiveDirectoryAdministratorArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L163">
+        interface <strong>ActiveDirectoryAdministratorArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ActiveDirectoryAdministratorArgs</span></code></pre>
+
+The set of arguments for constructing a ActiveDirectoryAdministrator resource.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorArgs-login">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L167">property <b>login</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>login: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The login name of the principal to set as the server administrator
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorArgs-objectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L171">property <b>objectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the principal to set as the server administrator
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorArgs-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L175">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the resource group for the PostgreSQL server. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorArgs-serverName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L179">property <b>serverName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the PostgreSQL Server on which to set the administrator. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorArgs-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L183">property <b>tenantId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Azure Tenant ID
+
+<h3 class="pdoc-module-header" id="ActiveDirectoryAdministratorState" data-link-title="ActiveDirectoryAdministratorState">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L137">
+        interface <strong>ActiveDirectoryAdministratorState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ActiveDirectoryAdministratorState</span></code></pre>
+
+Input properties used for looking up and filtering ActiveDirectoryAdministrator resources.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorState-login">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L141">property <b>login</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>login?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The login name of the principal to set as the server administrator
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorState-objectId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L145">property <b>objectId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>objectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the principal to set as the server administrator
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorState-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L149">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the resource group for the PostgreSQL server. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorState-serverName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L153">property <b>serverName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the PostgreSQL Server on which to set the administrator. Changing this forces a new resource to be created.
+
+<h4 class="pdoc-member-header" id="ActiveDirectoryAdministratorState-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/activeDirectoryAdministrator.ts#L157">property <b>tenantId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Azure Tenant ID
+
 <h3 class="pdoc-module-header" id="ConfigurationArgs" data-link-title="ConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L154">
         interface <strong>ConfigurationArgs</strong>
     </a>
 </h3>
@@ -953,7 +1187,7 @@ export const postgresqlServerId = example.then(example => example.id);
 The set of arguments for constructing a Configuration resource.
 
 <h4 class="pdoc-member-header" id="ConfigurationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L160">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L158">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -961,7 +1195,7 @@ The set of arguments for constructing a Configuration resource.
 Specifies the name of the PostgreSQL Configuration, which needs [to be a valid PostgreSQL configuration name](https://www.postgresql.org/docs/current/static/sql-syntax-lexical.html#SQL-SYNTAX-IDENTIFIER). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L164">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L162">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -969,7 +1203,7 @@ Specifies the name of the PostgreSQL Configuration, which needs [to be a valid P
 The name of the resource group in which the PostgreSQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L168">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L166">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -977,7 +1211,7 @@ The name of the resource group in which the PostgreSQL Server exists. Changing t
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L172">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L170">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -985,7 +1219,7 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 Specifies the value of the PostgreSQL Configuration. See the PostgreSQL documentation for valid values.
 
 <h3 class="pdoc-module-header" id="ConfigurationState" data-link-title="ConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L132">
         interface <strong>ConfigurationState</strong>
     </a>
 </h3>
@@ -995,7 +1229,7 @@ Specifies the value of the PostgreSQL Configuration. See the PostgreSQL document
 Input properties used for looking up and filtering Configuration resources.
 
 <h4 class="pdoc-member-header" id="ConfigurationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L136">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1003,7 +1237,7 @@ Input properties used for looking up and filtering Configuration resources.
 Specifies the name of the PostgreSQL Configuration, which needs [to be a valid PostgreSQL configuration name](https://www.postgresql.org/docs/current/static/sql-syntax-lexical.html#SQL-SYNTAX-IDENTIFIER). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L142">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L140">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1011,7 +1245,7 @@ Specifies the name of the PostgreSQL Configuration, which needs [to be a valid P
 The name of the resource group in which the PostgreSQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L146">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L144">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1019,7 +1253,7 @@ The name of the resource group in which the PostgreSQL Server exists. Changing t
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ConfigurationState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/configuration.ts#L150">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/configuration.ts#L148">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1027,7 +1261,7 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 Specifies the value of the PostgreSQL Configuration. See the PostgreSQL documentation for valid values.
 
 <h3 class="pdoc-module-header" id="DatabaseArgs" data-link-title="DatabaseArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L166">
         interface <strong>DatabaseArgs</strong>
     </a>
 </h3>
@@ -1037,7 +1271,7 @@ Specifies the value of the PostgreSQL Configuration. See the PostgreSQL document
 The set of arguments for constructing a Database resource.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L172">property <b>charset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L170">property <b>charset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>charset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1045,7 +1279,7 @@ The set of arguments for constructing a Database resource.
 Specifies the Charset for the PostgreSQL Database, which needs [to be a valid PostgreSQL Charset](https://www.postgresql.org/docs/current/static/multibyte.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L176">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L174">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1053,7 +1287,7 @@ Specifies the Charset for the PostgreSQL Database, which needs [to be a valid Po
 Specifies the Collation for the PostgreSQL Database, which needs [to be a valid PostgreSQL Collation](https://www.postgresql.org/docs/current/static/collation.html). Note that Microsoft uses different [notation](https://msdn.microsoft.com/library/windows/desktop/dd373814.aspx) - en-US instead of en_US. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1062,7 +1296,7 @@ Specifies the name of the PostgreSQL Database, which needs [to be a valid Postgr
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L185">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L183">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1070,7 +1304,7 @@ new resource to be created.
 The name of the resource group in which the PostgreSQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L189">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L187">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1078,7 +1312,7 @@ The name of the resource group in which the PostgreSQL Server exists. Changing t
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="DatabaseState" data-link-title="DatabaseState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L139">
         interface <strong>DatabaseState</strong>
     </a>
 </h3>
@@ -1088,7 +1322,7 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 Input properties used for looking up and filtering Database resources.
 
 <h4 class="pdoc-member-header" id="DatabaseState-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L145">property <b>charset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L143">property <b>charset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>charset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1096,7 +1330,7 @@ Input properties used for looking up and filtering Database resources.
 Specifies the Charset for the PostgreSQL Database, which needs [to be a valid PostgreSQL Charset](https://www.postgresql.org/docs/current/static/multibyte.html). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L149">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L147">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1104,7 +1338,7 @@ Specifies the Charset for the PostgreSQL Database, which needs [to be a valid Po
 Specifies the Collation for the PostgreSQL Database, which needs [to be a valid PostgreSQL Collation](https://www.postgresql.org/docs/current/static/collation.html). Note that Microsoft uses different [notation](https://msdn.microsoft.com/library/windows/desktop/dd373814.aspx) - en-US instead of en_US. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L154">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1113,7 +1347,7 @@ Specifies the name of the PostgreSQL Database, which needs [to be a valid Postgr
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L158">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L156">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1121,7 +1355,7 @@ new resource to be created.
 The name of the resource group in which the PostgreSQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DatabaseState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/database.ts#L162">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/database.ts#L160">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1129,7 +1363,7 @@ The name of the resource group in which the PostgreSQL Server exists. Changing t
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="FirewallRuleArgs" data-link-title="FirewallRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L172">
         interface <strong>FirewallRuleArgs</strong>
     </a>
 </h3>
@@ -1139,7 +1373,7 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 The set of arguments for constructing a FirewallRule resource.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L178">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L176">property <b>endIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1147,7 +1381,7 @@ The set of arguments for constructing a FirewallRule resource.
 Specifies the End IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L183">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L181">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1156,7 +1390,7 @@ Specifies the name of the PostgreSQL Firewall Rule. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L187">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L185">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1164,7 +1398,7 @@ new resource to be created.
 The name of the resource group in which the PostgreSQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L191">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L189">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1172,7 +1406,7 @@ The name of the resource group in which the PostgreSQL Server exists. Changing t
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleArgs-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L195">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L193">property <b>startIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1180,7 +1414,7 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="FirewallRuleState" data-link-title="FirewallRuleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L145">
         interface <strong>FirewallRuleState</strong>
     </a>
 </h3>
@@ -1190,7 +1424,7 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 Input properties used for looking up and filtering FirewallRule resources.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-endIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L151">property <b>endIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L149">property <b>endIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1198,7 +1432,7 @@ Input properties used for looking up and filtering FirewallRule resources.
 Specifies the End IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L154">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1207,7 +1441,7 @@ Specifies the name of the PostgreSQL Firewall Rule. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L160">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L158">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1215,7 +1449,7 @@ new resource to be created.
 The name of the resource group in which the PostgreSQL Server exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L164">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L162">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1223,7 +1457,7 @@ The name of the resource group in which the PostgreSQL Server exists. Changing t
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="FirewallRuleState-startIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/firewallRule.ts#L168">property <b>startIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/firewallRule.ts#L166">property <b>startIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1231,7 +1465,7 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="GetServerArgs" data-link-title="GetServerArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L42">
         interface <strong>GetServerArgs</strong>
     </a>
 </h3>
@@ -1241,7 +1475,7 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 A collection of arguments for invoking getServer.
 
 <h4 class="pdoc-member-header" id="GetServerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1249,7 +1483,7 @@ A collection of arguments for invoking getServer.
 The name of the PostgreSQL Server.
 
 <h4 class="pdoc-member-header" id="GetServerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L52">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L50">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1257,7 +1491,7 @@ The name of the PostgreSQL Server.
 Specifies the name of the Resource Group where the PostgreSQL Server exists.
 
 <h3 class="pdoc-module-header" id="GetServerResult" data-link-title="GetServerResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L56">
         interface <strong>GetServerResult</strong>
     </a>
 </h3>
@@ -1267,7 +1501,7 @@ Specifies the name of the Resource Group where the PostgreSQL Server exists.
 A collection of values returned by getServer.
 
 <h4 class="pdoc-member-header" id="GetServerResult-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L62">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L60">property <b>administratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLogin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1275,7 +1509,7 @@ A collection of values returned by getServer.
 The administrator username of the PostgreSQL Server.
 
 <h4 class="pdoc-member-header" id="GetServerResult-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L66">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L64">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1283,15 +1517,23 @@ The administrator username of the PostgreSQL Server.
 The fully qualified domain name of the PostgreSQL Server.
 
 <h4 class="pdoc-member-header" id="GetServerResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 The provider-assigned unique ID for this managed resource.
 
+<h4 class="pdoc-member-header" id="GetServerResult-identities">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L72">property <b>identities</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>identities: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServerIdentity'>GetServerIdentity</a>[];</code></pre>
+
+An `identity` block as defined below.
+
 <h4 class="pdoc-member-header" id="GetServerResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L74">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L76">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1299,17 +1541,25 @@ The provider-assigned unique ID for this managed resource.
 The location of the Resource Group in which the PostgreSQL Server exists.
 
 <h4 class="pdoc-member-header" id="GetServerResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServerResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L76">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L78">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetServerResult-skuName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L82">property <b>skuName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>skuName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The SKU name of the PostgreSQL Server.
+
 <h4 class="pdoc-member-header" id="GetServerResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L80">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L86">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1317,7 +1567,7 @@ The location of the Resource Group in which the PostgreSQL Server exists.
 A mapping of tags assigned to the resource.
 
 <h4 class="pdoc-member-header" id="GetServerResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/getServer.ts#L84">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/getServer.ts#L90">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1325,7 +1575,7 @@ A mapping of tags assigned to the resource.
 The version of the PostgreSQL Server.
 
 <h3 class="pdoc-module-header" id="ServerArgs" data-link-title="ServerArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L341">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L349">
         interface <strong>ServerArgs</strong>
     </a>
 </h3>
@@ -1335,7 +1585,7 @@ The version of the PostgreSQL Server.
 The set of arguments for constructing a Server resource.
 
 <h4 class="pdoc-member-header" id="ServerArgs-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L345">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L353">property <b>administratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLogin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1343,7 +1593,7 @@ The set of arguments for constructing a Server resource.
 The Administrator Login for the PostgreSQL Server. Required when `createMode` is `Default`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L349">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L357">property <b>administratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLoginPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1351,7 +1601,7 @@ The Administrator Login for the PostgreSQL Server. Required when `createMode` is
 The Password associated with the `administratorLogin` for the PostgreSQL Server. Required when `createMode` is `Default`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-autoGrowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L353">property <b>autoGrowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L361">property <b>autoGrowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoGrowEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1359,7 +1609,7 @@ The Password associated with the `administratorLogin` for the PostgreSQL Server.
 Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-backupRetentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L357">property <b>backupRetentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L365">property <b>backupRetentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1367,7 +1617,7 @@ Enable/Disable auto-growing of the storage. Storage auto-grow prevents your serv
 Backup retention days for the server, supported values are between `7` and `35` days.
 
 <h4 class="pdoc-member-header" id="ServerArgs-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L361">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L369">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1375,7 +1625,7 @@ Backup retention days for the server, supported values are between `7` and `35` 
 The creation mode. Can be used to restore or replicate existing servers. Possible values are `Default`, `Replica`, `GeoRestore`, and `PointInTimeRestore`. Defaults to `Default.`
 
 <h4 class="pdoc-member-header" id="ServerArgs-creationSourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L365">property <b>creationSourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L373">property <b>creationSourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationSourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1383,15 +1633,23 @@ The creation mode. Can be used to restore or replicate existing servers. Possibl
 For creation modes other then default the source server ID to use.
 
 <h4 class="pdoc-member-header" id="ServerArgs-geoRedundantBackupEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L369">property <b>geoRedundantBackupEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L377">property <b>geoRedundantBackupEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>geoRedundantBackupEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
 Turn Geo-redundant server backups on/off. This allows you to choose between locally redundant or geo-redundant backup storage in the General Purpose and Memory Optimized tiers. When the backups are stored in geo-redundant backup storage, they are not only stored within the region in which your server is hosted, but are also replicated to a paired data center. This provides better protection and ability to restore your server in a different region in the event of a disaster. This is not support for the Basic tier.
 
+<h4 class="pdoc-member-header" id="ServerArgs-identity">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L381">property <b>identity</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIdentity'>ServerIdentity</a>&gt;;</code></pre>
+
+An `identity` block as defined below.
+
 <h4 class="pdoc-member-header" id="ServerArgs-infrastructureEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L373">property <b>infrastructureEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L385">property <b>infrastructureEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>infrastructureEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1399,7 +1657,7 @@ Turn Geo-redundant server backups on/off. This allows you to choose between loca
 Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L377">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L389">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1407,7 +1665,7 @@ Whether or not infrastructure is encrypted for this server. Defaults to `false`.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L381">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L393">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1415,7 +1673,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L385">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L397">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicNetworkAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1423,7 +1681,7 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 Whether or not public network access is allowed for this server. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L389">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L401">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1431,7 +1689,7 @@ Whether or not public network access is allowed for this server. Defaults to `tr
 The name of the resource group in which to create the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerArgs-restorePointInTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L393">property <b>restorePointInTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L405">property <b>restorePointInTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restorePointInTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1439,7 +1697,7 @@ The name of the resource group in which to create the PostgreSQL Server. Changin
 When `createMode` is `PointInTimeRestore` the point in time to restore from `creationSourceServerId`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L397">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L409">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1447,7 +1705,7 @@ When `createMode` is `PointInTimeRestore` the point in time to restore from `cre
 Specifies the SKU Name for this PostgreSQL Server. The name of the SKU, follows the `tier` + `family` + `cores` pattern (e.g. `B_Gen4_1`, `GP_Gen5_8`). For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/postgresql/servers/create#sku).
 
 <h4 class="pdoc-member-header" id="ServerArgs-sslEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L401">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L413">property <b>sslEnforcement</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1456,7 +1714,7 @@ this has been renamed to the boolean `ssl_enforcement_enabled` and will be remov
 </div>
 <pre class="highlight"><code><span class='kd'></span>sslEnforcement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerArgs-sslEnforcementEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L405">property <b>sslEnforcementEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L417">property <b>sslEnforcementEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslEnforcementEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1464,7 +1722,7 @@ this has been renamed to the boolean `ssl_enforcement_enabled` and will be remov
 Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-sslMinimalTlsVersionEnforced">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L409">property <b>sslMinimalTlsVersionEnforced</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L421">property <b>sslMinimalTlsVersionEnforced</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslMinimalTlsVersionEnforced?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1472,7 +1730,7 @@ Specifies if SSL should be enforced on connections. Possible values are `true` a
 The mimimun TLS version to support on the sever. Possible values are `TLSEnforcementDisabled`, `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLSEnforcementDisabled`.
 
 <h4 class="pdoc-member-header" id="ServerArgs-storageMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L413">property <b>storageMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L425">property <b>storageMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1480,7 +1738,7 @@ The mimimun TLS version to support on the sever. Possible values are `TLSEnforce
 Max storage allowed for a server. Possible values are between `5120` MB(5GB) and `1048576` MB(1TB) for the Basic SKU and between `5120` MB(5GB) and `4194304` MB(4TB) for General Purpose/Memory Optimized SKUs. For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/postgresql/servers/create#StorageProfile).
 
 <h4 class="pdoc-member-header" id="ServerArgs-storageProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L417">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L429">property <b>storageProfile</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1489,7 +1747,7 @@ all storage_profile properties have been move to the top level. This block will 
 </div>
 <pre class="highlight"><code><span class='kd'></span>storageProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L421">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L433">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1497,7 +1755,7 @@ all storage_profile properties have been move to the top level. This block will 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ServerArgs-threatDetectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L425">property <b>threatDetectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L437">property <b>threatDetectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerThreatDetectionPolicy'>ServerThreatDetectionPolicy</a>&gt;;</code></pre>
@@ -1505,7 +1763,7 @@ A mapping of tags to assign to the resource.
 Threat detection policy configuration, known in the API as Server Security Alerts Policy. The `threatDetectionPolicy` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="ServerArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L429">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L441">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1513,7 +1771,7 @@ Threat detection policy configuration, known in the API as Server Security Alert
 Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, `10`, `10.0`, and `11`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ServerState" data-link-title="ServerState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L247">
         interface <strong>ServerState</strong>
     </a>
 </h3>
@@ -1523,7 +1781,7 @@ Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, `10`,
 Input properties used for looking up and filtering Server resources.
 
 <h4 class="pdoc-member-header" id="ServerState-administratorLogin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L247">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L251">property <b>administratorLogin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLogin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1531,7 +1789,7 @@ Input properties used for looking up and filtering Server resources.
 The Administrator Login for the PostgreSQL Server. Required when `createMode` is `Default`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-administratorLoginPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L251">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L255">property <b>administratorLoginPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administratorLoginPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1539,7 +1797,7 @@ The Administrator Login for the PostgreSQL Server. Required when `createMode` is
 The Password associated with the `administratorLogin` for the PostgreSQL Server. Required when `createMode` is `Default`.
 
 <h4 class="pdoc-member-header" id="ServerState-autoGrowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L255">property <b>autoGrowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L259">property <b>autoGrowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoGrowEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1547,7 +1805,7 @@ The Password associated with the `administratorLogin` for the PostgreSQL Server.
 Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. The default value if not explicitly specified is `true`.
 
 <h4 class="pdoc-member-header" id="ServerState-backupRetentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L259">property <b>backupRetentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L263">property <b>backupRetentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1555,7 +1813,7 @@ Enable/Disable auto-growing of the storage. Storage auto-grow prevents your serv
 Backup retention days for the server, supported values are between `7` and `35` days.
 
 <h4 class="pdoc-member-header" id="ServerState-createMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L263">property <b>createMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L267">property <b>createMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1563,7 +1821,7 @@ Backup retention days for the server, supported values are between `7` and `35` 
 The creation mode. Can be used to restore or replicate existing servers. Possible values are `Default`, `Replica`, `GeoRestore`, and `PointInTimeRestore`. Defaults to `Default.`
 
 <h4 class="pdoc-member-header" id="ServerState-creationSourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L267">property <b>creationSourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L271">property <b>creationSourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationSourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1571,7 +1829,7 @@ The creation mode. Can be used to restore or replicate existing servers. Possibl
 For creation modes other then default the source server ID to use.
 
 <h4 class="pdoc-member-header" id="ServerState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L271">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L275">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1579,15 +1837,23 @@ For creation modes other then default the source server ID to use.
 The FQDN of the PostgreSQL Server.
 
 <h4 class="pdoc-member-header" id="ServerState-geoRedundantBackupEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L275">property <b>geoRedundantBackupEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L279">property <b>geoRedundantBackupEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>geoRedundantBackupEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
 Turn Geo-redundant server backups on/off. This allows you to choose between locally redundant or geo-redundant backup storage in the General Purpose and Memory Optimized tiers. When the backups are stored in geo-redundant backup storage, they are not only stored within the region in which your server is hosted, but are also replicated to a paired data center. This provides better protection and ability to restore your server in a different region in the event of a disaster. This is not support for the Basic tier.
 
+<h4 class="pdoc-member-header" id="ServerState-identity">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L283">property <b>identity</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIdentity'>ServerIdentity</a>&gt;;</code></pre>
+
+An `identity` block as defined below.
+
 <h4 class="pdoc-member-header" id="ServerState-infrastructureEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L279">property <b>infrastructureEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L287">property <b>infrastructureEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>infrastructureEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1595,7 +1861,7 @@ Turn Geo-redundant server backups on/off. This allows you to choose between loca
 Whether or not infrastructure is encrypted for this server. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L283">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L291">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1603,7 +1869,7 @@ Whether or not infrastructure is encrypted for this server. Defaults to `false`.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L287">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L295">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1611,7 +1877,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-publicNetworkAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L291">property <b>publicNetworkAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L299">property <b>publicNetworkAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicNetworkAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1619,7 +1885,7 @@ Specifies the name of the PostgreSQL Server. Changing this forces a new resource
 Whether or not public network access is allowed for this server. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ServerState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L295">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L303">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1627,7 +1893,7 @@ Whether or not public network access is allowed for this server. Defaults to `tr
 The name of the resource group in which to create the PostgreSQL Server. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServerState-restorePointInTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L299">property <b>restorePointInTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L307">property <b>restorePointInTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restorePointInTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1635,7 +1901,7 @@ The name of the resource group in which to create the PostgreSQL Server. Changin
 When `createMode` is `PointInTimeRestore` the point in time to restore from `creationSourceServerId`.
 
 <h4 class="pdoc-member-header" id="ServerState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L303">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L311">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1643,7 +1909,7 @@ When `createMode` is `PointInTimeRestore` the point in time to restore from `cre
 Specifies the SKU Name for this PostgreSQL Server. The name of the SKU, follows the `tier` + `family` + `cores` pattern (e.g. `B_Gen4_1`, `GP_Gen5_8`). For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/postgresql/servers/create#sku).
 
 <h4 class="pdoc-member-header" id="ServerState-sslEnforcement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L307">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L315">property <b>sslEnforcement</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1652,7 +1918,7 @@ this has been renamed to the boolean `ssl_enforcement_enabled` and will be remov
 </div>
 <pre class="highlight"><code><span class='kd'></span>sslEnforcement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerState-sslEnforcementEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L311">property <b>sslEnforcementEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L319">property <b>sslEnforcementEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslEnforcementEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1660,7 +1926,7 @@ this has been renamed to the boolean `ssl_enforcement_enabled` and will be remov
 Specifies if SSL should be enforced on connections. Possible values are `true` and `false`.
 
 <h4 class="pdoc-member-header" id="ServerState-sslMinimalTlsVersionEnforced">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L315">property <b>sslMinimalTlsVersionEnforced</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L323">property <b>sslMinimalTlsVersionEnforced</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslMinimalTlsVersionEnforced?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1668,7 +1934,7 @@ Specifies if SSL should be enforced on connections. Possible values are `true` a
 The mimimun TLS version to support on the sever. Possible values are `TLSEnforcementDisabled`, `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLSEnforcementDisabled`.
 
 <h4 class="pdoc-member-header" id="ServerState-storageMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L319">property <b>storageMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L327">property <b>storageMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1676,7 +1942,7 @@ The mimimun TLS version to support on the sever. Possible values are `TLSEnforce
 Max storage allowed for a server. Possible values are between `5120` MB(5GB) and `1048576` MB(1TB) for the Basic SKU and between `5120` MB(5GB) and `4194304` MB(4TB) for General Purpose/Memory Optimized SKUs. For more information see the [product documentation](https://docs.microsoft.com/en-us/rest/api/postgresql/servers/create#StorageProfile).
 
 <h4 class="pdoc-member-header" id="ServerState-storageProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L323">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L331">property <b>storageProfile</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1685,7 +1951,7 @@ all storage_profile properties have been move to the top level. This block will 
 </div>
 <pre class="highlight"><code><span class='kd'></span>storageProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L327">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L335">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1693,7 +1959,7 @@ all storage_profile properties have been move to the top level. This block will 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ServerState-threatDetectionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L331">property <b>threatDetectionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L339">property <b>threatDetectionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerThreatDetectionPolicy'>ServerThreatDetectionPolicy</a>&gt;;</code></pre>
@@ -1701,7 +1967,7 @@ A mapping of tags to assign to the resource.
 Threat detection policy configuration, known in the API as Server Security Alerts Policy. The `threatDetectionPolicy` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="ServerState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/server.ts#L335">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/server.ts#L343">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1709,7 +1975,7 @@ Threat detection policy configuration, known in the API as Server Security Alert
 Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, `10`, `10.0`, and `11`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="VirtualNetworkRuleArgs" data-link-title="VirtualNetworkRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L175">
         interface <strong>VirtualNetworkRuleArgs</strong>
     </a>
 </h3>
@@ -1719,7 +1985,7 @@ Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, `10`,
 The set of arguments for constructing a VirtualNetworkRule resource.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleArgs-ignoreMissingVnetServiceEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L181">property <b>ignoreMissingVnetServiceEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L179">property <b>ignoreMissingVnetServiceEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreMissingVnetServiceEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1727,7 +1993,7 @@ The set of arguments for constructing a VirtualNetworkRule resource.
 Should the Virtual Network Rule be created before the Subnet has the Virtual Network Service Endpoint enabled? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L183">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1735,7 +2001,7 @@ Should the Virtual Network Rule be created before the Subnet has the Virtual Net
 The name of the PostgreSQL virtual network rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L189">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L187">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1743,7 +2009,7 @@ The name of the PostgreSQL virtual network rule. Cannot be empty and must only c
 The name of the resource group where the PostgreSQL server resides. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L193">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L191">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1751,7 +2017,7 @@ The name of the resource group where the PostgreSQL server resides. Changing thi
 The name of the SQL Server to which this PostgreSQL virtual network rule will be applied to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L197">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L195">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1759,7 +2025,7 @@ The name of the SQL Server to which this PostgreSQL virtual network rule will be
 The ID of the subnet that the PostgreSQL server will be connected to.
 
 <h3 class="pdoc-module-header" id="VirtualNetworkRuleState" data-link-title="VirtualNetworkRuleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L149">
         interface <strong>VirtualNetworkRuleState</strong>
     </a>
 </h3>
@@ -1769,7 +2035,7 @@ The ID of the subnet that the PostgreSQL server will be connected to.
 Input properties used for looking up and filtering VirtualNetworkRule resources.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleState-ignoreMissingVnetServiceEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L155">property <b>ignoreMissingVnetServiceEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L153">property <b>ignoreMissingVnetServiceEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreMissingVnetServiceEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1777,7 +2043,7 @@ Input properties used for looking up and filtering VirtualNetworkRule resources.
 Should the Virtual Network Rule be created before the Subnet has the Virtual Network Service Endpoint enabled? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L159">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L157">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1785,7 +2051,7 @@ Should the Virtual Network Rule be created before the Subnet has the Virtual Net
 The name of the PostgreSQL virtual network rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L163">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L161">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1793,7 +2059,7 @@ The name of the PostgreSQL virtual network rule. Cannot be empty and must only c
 The name of the resource group where the PostgreSQL server resides. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L167">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L165">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1801,7 +2067,7 @@ The name of the resource group where the PostgreSQL server resides. Changing thi
 The name of the SQL Server to which this PostgreSQL virtual network rule will be applied to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="VirtualNetworkRuleState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/postgresql/virtualNetworkRule.ts#L171">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/postgresql/virtualNetworkRule.ts#L169">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

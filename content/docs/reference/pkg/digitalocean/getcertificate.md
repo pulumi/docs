@@ -1,8 +1,8 @@
 
 ---
 title: "GetCertificate"
-title_tag: "Function GetCertificate | Package Digital Ocean"
-meta_desc: "Explore the GetCertificate function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on a certificate. This data source provides the name, type, state,"
+title_tag: "Function GetCertificate | Package DigitalOcean"
+meta_desc: "Explore the GetCertificate function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a certificate. This data source provides the name, type, state,"
 ---
 
 
@@ -16,8 +16,6 @@ This is useful if the certificate in question is not managed by this provider or
 any of the certificates data.
 
 An error is triggered if the provided certificate name does not exist.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ import pulumi_digitalocean as digitalocean
 
 example = digitalocean.get_certificate(name="example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -65,6 +66,7 @@ const example = pulumi.output(digitalocean.getCertificate({
     name: "example",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

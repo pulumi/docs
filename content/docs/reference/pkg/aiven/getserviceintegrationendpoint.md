@@ -38,7 +38,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.LookupServiceIntegrationEndpoint(ctx, &aiven.LookupServiceIntegrationEndpointArgs{
+			Project:      data.Aiven_project.Myproject.Project,
+			EndpointName: "<ENDPOINT_NAME>",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -46,7 +67,7 @@ Coming soon!
 import pulumi
 import pulumi_aiven as aiven
 
-myendpoint = aiven.get_service_integration_endpoint(project=data["aiven..Project"]["myproject"]["project"],
+myendpoint = aiven.get_service_integration_endpoint(project=data["aiven_project"]["myproject"]["project"],
     endpoint_name="<ENDPOINT_NAME>")
 ```
 
@@ -85,7 +106,7 @@ const myendpoint = aiven.getServiceIntegrationEndpoint({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceIntegrationEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#LookupServiceIntegrationEndpointArgs">LookupServiceIntegrationEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#LookupServiceIntegrationEndpointResult">LookupServiceIntegrationEndpointResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceIntegrationEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupServiceIntegrationEndpointArgs">LookupServiceIntegrationEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupServiceIntegrationEndpointResult">LookupServiceIntegrationEndpointResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServiceIntegrationEndpoint` in the Go SDK.
 
@@ -872,7 +893,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetServiceIntegrationEndpointDatadogUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetServiceIntegrationEndpointDatadogUserConfig">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointDatadogUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointDatadogUserConfig">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointDatadogUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointDatadogUserConfig.html">output</a> API doc for this type.
@@ -1078,7 +1099,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig.html">output</a> API doc for this type.
@@ -1324,7 +1345,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetServiceIntegrationEndpointPrometheusUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetServiceIntegrationEndpointPrometheusUserConfig">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointPrometheusUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointPrometheusUserConfig">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointPrometheusUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointPrometheusUserConfig.html">output</a> API doc for this type.
@@ -1450,7 +1471,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetServiceIntegrationEndpointRsyslogUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetServiceIntegrationEndpointRsyslogUserConfig">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointRsyslogUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointRsyslogUserConfig">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointRsyslogUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointRsyslogUserConfig.html">output</a> API doc for this type.

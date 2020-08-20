@@ -75,13 +75,15 @@ export class Choosable {
 
         if (this.mode === "global") {
             this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
-                const { preferences: { language, k8sLanguage, os, cloud } } = state;
+                const { preferences: { language, k8sLanguage, inputKind, os, cloud } } = state;
 
                 switch (this.type) {
                     case "language":
                         return { selection: language };
                     case "k8s-language":
                         return { selection: k8sLanguage };
+                    case "input-kind":
+                        return { selection: inputKind };
                     case "os":
                         return { selection: os };
                     case "cloud":

@@ -45,9 +45,9 @@ class MyStack : Stack
         });
         var foo = new Aws.Elb.LoadBalancerCookieStickinessPolicy("foo", new Aws.Elb.LoadBalancerCookieStickinessPolicyArgs
         {
-            CookieExpirationPeriod = 600,
-            LbPort = 80,
             LoadBalancer = lb.Id,
+            LbPort = 80,
+            CookieExpirationPeriod = 600,
         });
     }
 
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,9 +84,9 @@ func main() {
 			return err
 		}
 		_, err = elb.NewLoadBalancerCookieStickinessPolicy(ctx, "foo", &elb.LoadBalancerCookieStickinessPolicyArgs{
-			CookieExpirationPeriod: pulumi.Int(600),
-			LbPort:                 pulumi.Int(80),
 			LoadBalancer:           lb.ID(),
+			LbPort:                 pulumi.Int(80),
+			CookieExpirationPeriod: pulumi.Int(600),
 		})
 		if err != nil {
 			return err
@@ -112,9 +112,9 @@ lb = aws.elb.LoadBalancer("lb",
         "lbProtocol": "http",
     }])
 foo = aws.elb.LoadBalancerCookieStickinessPolicy("foo",
-    cookie_expiration_period=600,
+    load_balancer=lb.id,
     lb_port=80,
-    load_balancer=lb.id)
+    cookie_expiration_period=600)
 ```
 
 {{% /example %}}
@@ -135,9 +135,9 @@ const lb = new aws.elb.LoadBalancer("lb", {
     }],
 });
 const foo = new aws.elb.LoadBalancerCookieStickinessPolicy("foo", {
-    cookieExpirationPeriod: 600,
-    lbPort: 80,
     loadBalancer: lb.id,
+    lbPort: 80,
+    cookieExpirationPeriod: 600,
 });
 ```
 
@@ -160,7 +160,7 @@ const foo = new aws.elb.LoadBalancerCookieStickinessPolicy("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicy">NewLoadBalancerCookieStickinessPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicyArgs">LoadBalancerCookieStickinessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicy">LoadBalancerCookieStickinessPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicy">NewLoadBalancerCookieStickinessPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicyArgs">LoadBalancerCookieStickinessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicy">LoadBalancerCookieStickinessPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -234,7 +234,7 @@ const foo = new aws.elb.LoadBalancerCookieStickinessPolicy("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -254,7 +254,7 @@ const foo = new aws.elb.LoadBalancerCookieStickinessPolicy("foo", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicyArgs">LoadBalancerCookieStickinessPolicyArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicyArgs">LoadBalancerCookieStickinessPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -264,7 +264,7 @@ const foo = new aws.elb.LoadBalancerCookieStickinessPolicy("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -643,7 +643,7 @@ Get an existing LoadBalancerCookieStickinessPolicy resource's state with the giv
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancerCookieStickinessPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicyState">LoadBalancerCookieStickinessPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicy">LoadBalancerCookieStickinessPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancerCookieStickinessPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicyState">LoadBalancerCookieStickinessPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicy">LoadBalancerCookieStickinessPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

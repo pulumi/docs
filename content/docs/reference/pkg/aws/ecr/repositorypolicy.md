@@ -33,6 +33,7 @@ class MyStack : Stack
         });
         var foopolicy = new Aws.Ecr.RepositoryPolicy("foopolicy", new Aws.Ecr.RepositoryPolicyArgs
         {
+            Repository = foo.Name,
             Policy = @"{
     ""Version"": ""2008-10-17"",
     ""Statement"": [
@@ -59,9 +60,7 @@ class MyStack : Stack
         }
     ]
 }
-
 ",
-            Repository = foo.Name,
         });
     }
 
@@ -77,7 +76,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -88,8 +87,8 @@ func main() {
 			return err
 		}
 		_, err = ecr.NewRepositoryPolicy(ctx, "foopolicy", &ecr.RepositoryPolicyArgs{
-			Policy:     pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2008-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Sid\": \"new policy\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": \"*\",\n", "            \"Action\": [\n", "                \"ecr:GetDownloadUrlForLayer\",\n", "                \"ecr:BatchGetImage\",\n", "                \"ecr:BatchCheckLayerAvailability\",\n", "                \"ecr:PutImage\",\n", "                \"ecr:InitiateLayerUpload\",\n", "                \"ecr:UploadLayerPart\",\n", "                \"ecr:CompleteLayerUpload\",\n", "                \"ecr:DescribeRepositories\",\n", "                \"ecr:GetRepositoryPolicy\",\n", "                \"ecr:ListImages\",\n", "                \"ecr:DeleteRepository\",\n", "                \"ecr:BatchDeleteImage\",\n", "                \"ecr:SetRepositoryPolicy\",\n", "                \"ecr:DeleteRepositoryPolicy\"\n", "            ]\n", "        }\n", "    ]\n", "}\n", "\n")),
 			Repository: foo.Name,
+			Policy:     pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2008-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Sid\": \"new policy\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": \"*\",\n", "            \"Action\": [\n", "                \"ecr:GetDownloadUrlForLayer\",\n", "                \"ecr:BatchGetImage\",\n", "                \"ecr:BatchCheckLayerAvailability\",\n", "                \"ecr:PutImage\",\n", "                \"ecr:InitiateLayerUpload\",\n", "                \"ecr:UploadLayerPart\",\n", "                \"ecr:CompleteLayerUpload\",\n", "                \"ecr:DescribeRepositories\",\n", "                \"ecr:GetRepositoryPolicy\",\n", "                \"ecr:ListImages\",\n", "                \"ecr:DeleteRepository\",\n", "                \"ecr:BatchDeleteImage\",\n", "                \"ecr:SetRepositoryPolicy\",\n", "                \"ecr:DeleteRepositoryPolicy\"\n", "            ]\n", "        }\n", "    ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -108,6 +107,7 @@ import pulumi_aws as aws
 
 foo = aws.ecr.Repository("foo")
 foopolicy = aws.ecr.RepositoryPolicy("foopolicy",
+    repository=foo.name,
     policy="""{
     "Version": "2008-10-17",
     "Statement": [
@@ -134,9 +134,7 @@ foopolicy = aws.ecr.RepositoryPolicy("foopolicy",
         }
     ]
 }
-
-""",
-    repository=foo.name)
+""")
 ```
 
 {{% /example %}}
@@ -149,6 +147,7 @@ import * as aws from "@pulumi/aws";
 
 const foo = new aws.ecr.Repository("foo", {});
 const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
+    repository: foo.name,
     policy: `{
     "Version": "2008-10-17",
     "Statement": [
@@ -176,7 +175,6 @@ const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
     ]
 }
 `,
-    repository: foo.name,
 });
 ```
 
@@ -198,7 +196,7 @@ const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#RepositoryPolicy">NewRepositoryPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#RepositoryPolicyArgs">RepositoryPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#RepositoryPolicy">RepositoryPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryPolicy">NewRepositoryPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryPolicyArgs">RepositoryPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryPolicy">RepositoryPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -272,7 +270,7 @@ const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -292,7 +290,7 @@ const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#RepositoryPolicyArgs">RepositoryPolicyArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryPolicyArgs">RepositoryPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -302,7 +300,7 @@ const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -621,7 +619,7 @@ Get an existing RepositoryPolicy resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRepositoryPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#RepositoryPolicyState">RepositoryPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#RepositoryPolicy">RepositoryPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRepositoryPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryPolicyState">RepositoryPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryPolicy">RepositoryPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

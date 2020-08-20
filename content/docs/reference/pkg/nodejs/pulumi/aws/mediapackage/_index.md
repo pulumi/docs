@@ -3,7 +3,7 @@ title: "Module mediapackage"
 title_tag: "Module mediapackage | Package @pulumi/aws | Node.js SDK"
 linktitle: "mediapackage"
 meta_desc: "Explore members of the mediapackage module in the @pulumi/aws package."
-git_sha: "e07f1c21047146459fa7794a69555b4dd80e2222"
+git_sha: "0a2e76f947fd9ea3ee41beab30d2121c4b385e5c"
 block_external_search_index: true
 ---
 
@@ -11,13 +11,6 @@ block_external_search_index: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
 
 {{< resource-docs-alert "aws" >}}
-
-
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-aws` repo](https://github.com/pulumi/pulumi-aws/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-aws` repo](https://github.com/terraform-providers/terraform-provider-aws/issues).
-
 
 
 
@@ -37,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Channel" data-link-title="Channel">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L24">
         Resource <strong>Channel</strong>
     </a>
 </h3>
@@ -47,8 +40,6 @@ block_external_search_index: true
 Provides an AWS Elemental MediaPackage Channel.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -61,7 +52,7 @@ const kittens = new aws.mediapackage.Channel("kittens", {
 ```
 
 <h4 class="pdoc-member-header" id="Channel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -75,7 +66,7 @@ Create a Channel resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Channel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -86,14 +77,14 @@ Get an existing Channel resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Channel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L24">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Channel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -104,7 +95,7 @@ Returns true if the given object is an instance of Channel.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Channel-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L55">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -112,7 +103,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the channel
 
 <h4 class="pdoc-member-header" id="Channel-channelId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L61">property <b>channelId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L59">property <b>channelId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>channelId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -120,7 +111,7 @@ The ARN of the channel
 A unique identifier describing the channel
 
 <h4 class="pdoc-member-header" id="Channel-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L65">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L63">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -128,7 +119,7 @@ A unique identifier describing the channel
 A description of the channel
 
 <h4 class="pdoc-member-header" id="Channel-hlsIngests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L69">property <b>hlsIngests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L67">property <b>hlsIngests</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hlsIngests: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ChannelHlsIngest'>ChannelHlsIngest</a>[]&gt;;</code></pre>
@@ -136,7 +127,7 @@ A description of the channel
 A single item list of HLS ingest information
 
 <h4 class="pdoc-member-header" id="Channel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L24">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -145,15 +136,15 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Channel-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L71">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Channel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L24">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -165,7 +156,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ChannelArgs" data-link-title="ChannelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L141">
         interface <strong>ChannelArgs</strong>
     </a>
 </h3>
@@ -175,7 +166,7 @@ deployments.
 The set of arguments for constructing a Channel resource.
 
 <h4 class="pdoc-member-header" id="ChannelArgs-channelId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L147">property <b>channelId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L145">property <b>channelId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>channelId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -183,7 +174,7 @@ The set of arguments for constructing a Channel resource.
 A unique identifier describing the channel
 
 <h4 class="pdoc-member-header" id="ChannelArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L151">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L149">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -191,15 +182,15 @@ A unique identifier describing the channel
 A description of the channel
 
 <h4 class="pdoc-member-header" id="ChannelArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L155">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L153">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ChannelState" data-link-title="ChannelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L115">
         interface <strong>ChannelState</strong>
     </a>
 </h3>
@@ -209,7 +200,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering Channel resources.
 
 <h4 class="pdoc-member-header" id="ChannelState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L121">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L119">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -217,7 +208,7 @@ Input properties used for looking up and filtering Channel resources.
 The ARN of the channel
 
 <h4 class="pdoc-member-header" id="ChannelState-channelId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L125">property <b>channelId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L123">property <b>channelId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>channelId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -225,7 +216,7 @@ The ARN of the channel
 A unique identifier describing the channel
 
 <h4 class="pdoc-member-header" id="ChannelState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L129">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L127">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -233,7 +224,7 @@ A unique identifier describing the channel
 A description of the channel
 
 <h4 class="pdoc-member-header" id="ChannelState-hlsIngests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L133">property <b>hlsIngests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L131">property <b>hlsIngests</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hlsIngests?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ChannelHlsIngest'>ChannelHlsIngest</a>&gt;[]&gt;;</code></pre>
@@ -241,10 +232,10 @@ A description of the channel
 A single item list of HLS ingest information
 
 <h4 class="pdoc-member-header" id="ChannelState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/mediapackage/channel.ts#L137">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/mediapackage/channel.ts#L135">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 

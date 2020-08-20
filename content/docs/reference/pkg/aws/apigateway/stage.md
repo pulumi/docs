@@ -30,6 +30,26 @@ class MyStack : Stack
         {
             Description = "This is my API for demonstration purposes",
         });
+        var testResource = new Aws.ApiGateway.Resource("testResource", new Aws.ApiGateway.ResourceArgs
+        {
+            RestApi = testRestApi.Id,
+            ParentId = testRestApi.RootResourceId,
+            PathPart = "mytestresource",
+        });
+        var testMethod = new Aws.ApiGateway.Method("testMethod", new Aws.ApiGateway.MethodArgs
+        {
+            RestApi = testRestApi.Id,
+            ResourceId = testResource.Id,
+            HttpMethod = "GET",
+            Authorization = "NONE",
+        });
+        var testIntegration = new Aws.ApiGateway.Integration("testIntegration", new Aws.ApiGateway.IntegrationArgs
+        {
+            RestApi = testRestApi.Id,
+            ResourceId = testResource.Id,
+            HttpMethod = testMethod.HttpMethod,
+            Type = "MOCK",
+        });
         var testDeployment = new Aws.ApiGateway.Deployment("testDeployment", new Aws.ApiGateway.DeploymentArgs
         {
             RestApi = testRestApi.Id,
@@ -38,50 +58,30 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "aws_api_gateway_integration.test",
+                testIntegration,
             },
         });
         var testStage = new Aws.ApiGateway.Stage("testStage", new Aws.ApiGateway.StageArgs
         {
-            Deployment = testDeployment.Id,
-            RestApi = testRestApi.Id,
             StageName = "prod",
-        });
-        var testResource = new Aws.ApiGateway.Resource("testResource", new Aws.ApiGateway.ResourceArgs
-        {
-            ParentId = testRestApi.RootResourceId,
-            PathPart = "mytestresource",
             RestApi = testRestApi.Id,
-        });
-        var testMethod = new Aws.ApiGateway.Method("testMethod", new Aws.ApiGateway.MethodArgs
-        {
-            Authorization = "NONE",
-            HttpMethod = "GET",
-            ResourceId = testResource.Id,
-            RestApi = testRestApi.Id,
+            Deployment = testDeployment.Id,
         });
         var methodSettings = new Aws.ApiGateway.MethodSettings("methodSettings", new Aws.ApiGateway.MethodSettingsArgs
         {
+            RestApi = testRestApi.Id,
+            StageName = testStage.StageName,
             MethodPath = Output.Tuple(testResource.PathPart, testMethod.HttpMethod).Apply(values =>
             {
                 var pathPart = values.Item1;
                 var httpMethod = values.Item2;
                 return $"{pathPart}/{httpMethod}";
             }),
-            RestApi = testRestApi.Id,
             Settings = new Aws.ApiGateway.Inputs.MethodSettingsSettingsArgs
             {
-                LoggingLevel = "INFO",
                 MetricsEnabled = true,
+                LoggingLevel = "INFO",
             },
-            StageName = testStage.StageName,
-        });
-        var testIntegration = new Aws.ApiGateway.Integration("testIntegration", new Aws.ApiGateway.IntegrationArgs
-        {
-            HttpMethod = testMethod.HttpMethod,
-            ResourceId = testResource.Id,
-            RestApi = testRestApi.Id,
-            Type = "MOCK",
         });
     }
 
@@ -97,7 +97,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -109,61 +109,61 @@ func main() {
 		if err != nil {
 			return err
 		}
-		testDeployment, err := apigateway.NewDeployment(ctx, "testDeployment", &apigateway.DeploymentArgs{
-			RestApi:   testRestApi.ID(),
-			StageName: pulumi.String("dev"),
-		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_api_gateway_integration.test",
-		}))
-		if err != nil {
-			return err
-		}
-		testStage, err := apigateway.NewStage(ctx, "testStage", &apigateway.StageArgs{
-			Deployment: testDeployment.ID(),
-			RestApi:    testRestApi.ID(),
-			StageName:  pulumi.String("prod"),
-		})
-		if err != nil {
-			return err
-		}
 		testResource, err := apigateway.NewResource(ctx, "testResource", &apigateway.ResourceArgs{
+			RestApi:  testRestApi.ID(),
 			ParentId: testRestApi.RootResourceId,
 			PathPart: pulumi.String("mytestresource"),
-			RestApi:  testRestApi.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		testMethod, err := apigateway.NewMethod(ctx, "testMethod", &apigateway.MethodArgs{
-			Authorization: pulumi.String("NONE"),
-			HttpMethod:    pulumi.String("GET"),
-			ResourceId:    testResource.ID(),
 			RestApi:       testRestApi.ID(),
+			ResourceId:    testResource.ID(),
+			HttpMethod:    pulumi.String("GET"),
+			Authorization: pulumi.String("NONE"),
+		})
+		if err != nil {
+			return err
+		}
+		testIntegration, err := apigateway.NewIntegration(ctx, "testIntegration", &apigateway.IntegrationArgs{
+			RestApi:    testRestApi.ID(),
+			ResourceId: testResource.ID(),
+			HttpMethod: testMethod.HttpMethod,
+			Type:       pulumi.String("MOCK"),
+		})
+		if err != nil {
+			return err
+		}
+		testDeployment, err := apigateway.NewDeployment(ctx, "testDeployment", &apigateway.DeploymentArgs{
+			RestApi:   testRestApi.ID(),
+			StageName: pulumi.String("dev"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			testIntegration,
+		}))
+		if err != nil {
+			return err
+		}
+		testStage, err := apigateway.NewStage(ctx, "testStage", &apigateway.StageArgs{
+			StageName:  pulumi.String("prod"),
+			RestApi:    testRestApi.ID(),
+			Deployment: testDeployment.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = apigateway.NewMethodSettings(ctx, "methodSettings", &apigateway.MethodSettingsArgs{
+			RestApi:   testRestApi.ID(),
+			StageName: testStage.StageName,
 			MethodPath: pulumi.All(testResource.PathPart, testMethod.HttpMethod).ApplyT(func(_args []interface{}) (string, error) {
 				pathPart := _args[0].(string)
 				httpMethod := _args[1].(string)
 				return fmt.Sprintf("%v%v%v", pathPart, "/", httpMethod), nil
 			}).(pulumi.StringOutput),
-			RestApi: testRestApi.ID(),
 			Settings: &apigateway.MethodSettingsSettingsArgs{
-				LoggingLevel:   pulumi.String("INFO"),
 				MetricsEnabled: pulumi.Bool(true),
+				LoggingLevel:   pulumi.String("INFO"),
 			},
-			StageName: testStage.StageName,
-		})
-		if err != nil {
-			return err
-		}
-		_, err = apigateway.NewIntegration(ctx, "testIntegration", &apigateway.IntegrationArgs{
-			HttpMethod: testMethod.HttpMethod,
-			ResourceId: testResource.ID(),
-			RestApi:    testRestApi.ID(),
-			Type:       pulumi.String("MOCK"),
 		})
 		if err != nil {
 			return err
@@ -181,36 +181,36 @@ import pulumi
 import pulumi_aws as aws
 
 test_rest_api = aws.apigateway.RestApi("testRestApi", description="This is my API for demonstration purposes")
+test_resource = aws.apigateway.Resource("testResource",
+    rest_api=test_rest_api.id,
+    parent_id=test_rest_api.root_resource_id,
+    path_part="mytestresource")
+test_method = aws.apigateway.Method("testMethod",
+    rest_api=test_rest_api.id,
+    resource_id=test_resource.id,
+    http_method="GET",
+    authorization="NONE")
+test_integration = aws.apigateway.Integration("testIntegration",
+    rest_api=test_rest_api.id,
+    resource_id=test_resource.id,
+    http_method=test_method.http_method,
+    type="MOCK")
 test_deployment = aws.apigateway.Deployment("testDeployment",
     rest_api=test_rest_api.id,
     stage_name="dev",
-    opts=ResourceOptions(depends_on=["aws_api_gateway_integration.test"]))
+    opts=ResourceOptions(depends_on=[test_integration]))
 test_stage = aws.apigateway.Stage("testStage",
-    deployment=test_deployment.id,
+    stage_name="prod",
     rest_api=test_rest_api.id,
-    stage_name="prod")
-test_resource = aws.apigateway.Resource("testResource",
-    parent_id=test_rest_api.root_resource_id,
-    path_part="mytestresource",
-    rest_api=test_rest_api.id)
-test_method = aws.apigateway.Method("testMethod",
-    authorization="NONE",
-    http_method="GET",
-    resource_id=test_resource.id,
-    rest_api=test_rest_api.id)
+    deployment=test_deployment.id)
 method_settings = aws.apigateway.MethodSettings("methodSettings",
+    rest_api=test_rest_api.id,
+    stage_name=test_stage.stage_name,
     method_path=pulumi.Output.all(test_resource.path_part, test_method.http_method).apply(lambda path_part, http_method: f"{path_part}/{http_method}"),
-    rest_api=test_rest_api.id,
     settings={
-        "loggingLevel": "INFO",
         "metricsEnabled": True,
-    },
-    stage_name=test_stage.stage_name)
-test_integration = aws.apigateway.Integration("testIntegration",
-    http_method=test_method.http_method,
-    resource_id=test_resource.id,
-    rest_api=test_rest_api.id,
-    type="MOCK")
+        "loggingLevel": "INFO",
+    })
 ```
 
 {{% /example %}}
@@ -221,43 +221,43 @@ test_integration = aws.apigateway.Integration("testIntegration",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testRestApi = new aws.apigateway.RestApi("test", {
-    description: "This is my API for demonstration purposes",
-});
-const testResource = new aws.apigateway.Resource("test", {
+const testRestApi = new aws.apigateway.RestApi("testRestApi", {description: "This is my API for demonstration purposes"});
+const testResource = new aws.apigateway.Resource("testResource", {
+    restApi: testRestApi.id,
     parentId: testRestApi.rootResourceId,
     pathPart: "mytestresource",
-    restApi: testRestApi.id,
 });
-const testMethod = new aws.apigateway.Method("test", {
-    authorization: "NONE",
+const testMethod = new aws.apigateway.Method("testMethod", {
+    restApi: testRestApi.id,
+    resourceId: testResource.id,
     httpMethod: "GET",
-    resourceId: testResource.id,
-    restApi: testRestApi.id,
+    authorization: "NONE",
 });
-const testIntegration = new aws.apigateway.Integration("test", {
-    httpMethod: testMethod.httpMethod,
-    resourceId: testResource.id,
+const testIntegration = new aws.apigateway.Integration("testIntegration", {
     restApi: testRestApi.id,
+    resourceId: testResource.id,
+    httpMethod: testMethod.httpMethod,
     type: "MOCK",
 });
-const testDeployment = new aws.apigateway.Deployment("test", {
+const testDeployment = new aws.apigateway.Deployment("testDeployment", {
     restApi: testRestApi.id,
     stageName: "dev",
-}, { dependsOn: [testIntegration] });
-const testStage = new aws.apigateway.Stage("test", {
-    deployment: testDeployment.id,
-    restApi: testRestApi.id,
-    stageName: "prod",
+}, {
+    dependsOn: [testIntegration],
 });
-const methodSettings = new aws.apigateway.MethodSettings("s", {
-    methodPath: pulumi.interpolate`${testResource.pathPart}/${testMethod.httpMethod}`,
+const testStage = new aws.apigateway.Stage("testStage", {
+    stageName: "prod",
     restApi: testRestApi.id,
-    settings: {
-        loggingLevel: "INFO",
-        metricsEnabled: true,
-    },
+    deployment: testDeployment.id,
+});
+const methodSettings = new aws.apigateway.MethodSettings("methodSettings", {
+    restApi: testRestApi.id,
     stageName: testStage.stageName,
+    methodPath: pulumi.interpolate`${testResource.pathPart}/${testMethod.httpMethod}`,
+    settings: {
+        metricsEnabled: true,
+        loggingLevel: "INFO",
+    },
 });
 ```
 
@@ -265,11 +265,78 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
 
 ### Managing the API Logging CloudWatch Log Group
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var config = new Config();
+        var stageName = config.Get("stageName") ?? "example";
+        var exampleRestApi = new Aws.ApiGateway.RestApi("exampleRestApi", new Aws.ApiGateway.RestApiArgs
+        {
+        });
+        // ... other configuration ...
+        var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
+        {
+            RetentionInDays = 7,
+        });
+        // ... potentially other configuration ...
+        var exampleStage = new Aws.ApiGateway.Stage("exampleStage", new Aws.ApiGateway.StageArgs
+        {
+            StageName = stageName,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleLogGroup,
+            },
+        });
+        // ... other configuration ...
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apigateway.NewRestApi(ctx, "exampleRestApi", nil)
+		if err != nil {
+			return err
+		}
+		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", &cloudwatch.LogGroupArgs{
+			RetentionInDays: pulumi.Int(7),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = apigateway.NewStage(ctx, "exampleStage", &apigateway.StageArgs{
+			StageName: pulumi.String(stageName),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleLogGroup,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -282,9 +349,12 @@ stage_name = config.get("stageName")
 if stage_name is None:
     stage_name = "example"
 example_rest_api = aws.apigateway.RestApi("exampleRestApi")
-example_stage = aws.apigateway.Stage("exampleStage", name=stage_name,
-opts=ResourceOptions(depends_on=["aws_cloudwatch_log_group.example"]))
+# ... other configuration ...
 example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup", retention_in_days=7)
+# ... potentially other configuration ...
+example_stage = aws.apigateway.Stage("exampleStage", stage_name=stage_name,
+opts=ResourceOptions(depends_on=[example_log_group]))
+# ... other configuration ...
 ```
 
 {{% /example %}}
@@ -297,14 +367,14 @@ import * as aws from "@pulumi/aws";
 
 const config = new pulumi.Config();
 const stageName = config.get("stageName") || "example";
-
-const exampleRestApi = new aws.apigateway.RestApi("example", {});
-const exampleLogGroup = new aws.cloudwatch.LogGroup("example", {
-    retentionInDays: 7,
+const exampleRestApi = new aws.apigateway.RestApi("exampleRestApi", {});
+// ... other configuration ...
+const exampleLogGroup = new aws.cloudwatch.LogGroup("exampleLogGroup", {retentionInDays: 7});
+// ... potentially other configuration ...
+const exampleStage = new aws.apigateway.Stage("exampleStage", {stageName: stageName}, {
+    dependsOn: [exampleLogGroup],
 });
-const exampleStage = new aws.apigateway.Stage("example", {
-    name: stageName,
-}, { dependsOn: [exampleLogGroup] });
+// ... other configuration ...
 ```
 
 {{% /example %}}
@@ -325,7 +395,7 @@ const exampleStage = new aws.apigateway.Stage("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Stage">NewStage</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#StageArgs">StageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Stage">Stage</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Stage">NewStage</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#StageArgs">StageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Stage">Stage</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -399,7 +469,7 @@ const exampleStage = new aws.apigateway.Stage("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -419,7 +489,7 @@ const exampleStage = new aws.apigateway.Stage("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#StageArgs">StageArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#StageArgs">StageArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -429,7 +499,7 @@ const exampleStage = new aws.apigateway.Stage("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1292,7 +1362,7 @@ Get an existing Stage resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#StageState">StageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Stage">Stage</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#StageState">StageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Stage">Stage</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2120,7 +2190,7 @@ e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#StageAccessLogSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#StageAccessLogSettingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#StageAccessLogSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#StageAccessLogSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Inputs.StageAccessLogSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.StageAccessLogSettings.html">output</a> API doc for this type.

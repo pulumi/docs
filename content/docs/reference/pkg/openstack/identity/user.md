@@ -46,7 +46,7 @@ class MyStack : Stack
             {
                 new OpenStack.Identity.Inputs.UserMultiFactorAuthRuleArgs
                 {
-                    Rule = 
+                    Rules = 
                     {
                         "password",
                         "totp",
@@ -54,7 +54,7 @@ class MyStack : Stack
                 },
                 new OpenStack.Identity.Inputs.UserMultiFactorAuthRuleArgs
                 {
-                    Rule = 
+                    Rules = 
                     {
                         "password",
                     },
@@ -70,7 +70,51 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project1, err := identity.NewProject(ctx, "project1", nil)
+		if err != nil {
+			return err
+		}
+		_, err = identity.NewUser(ctx, "user1", &identity.UserArgs{
+			DefaultProjectId: project1.ID(),
+			Description:      pulumi.String("A user"),
+			Extra: pulumi.StringMap{
+				"email": pulumi.String("user_1@foobar.com"),
+			},
+			IgnoreChangePasswordUponFirstUse: pulumi.Bool(true),
+			MultiFactorAuthEnabled:           pulumi.Bool(true),
+			MultiFactorAuthRules: identity.UserMultiFactorAuthRuleArray{
+				&identity.UserMultiFactorAuthRuleArgs{
+					Rules: pulumi.StringArray{
+						pulumi.String("password"),
+						pulumi.String("totp"),
+					},
+				},
+				&identity.UserMultiFactorAuthRuleArgs{
+					Rules: pulumi.StringArray{
+						pulumi.String("password"),
+					},
+				},
+			},
+			Password: pulumi.String("password123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,13 +133,13 @@ user1 = openstack.identity.User("user1",
     multi_factor_auth_enabled=True,
     multi_factor_auth_rules=[
         {
-            "rule": [
+            "rules": [
                 "password",
                 "totp",
             ],
         },
         {
-            "rule": ["password"],
+            "rules": ["password"],
         },
     ],
     password="password123")
@@ -147,7 +191,7 @@ const user1 = new openstack.identity.User("user_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/identity/#User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_project_id=None<span class="p">, </span>description=None<span class="p">, </span>domain_id=None<span class="p">, </span>enabled=None<span class="p">, </span>extra=None<span class="p">, </span>ignore_change_password_upon_first_use=None<span class="p">, </span>ignore_lockout_failure_attempts=None<span class="p">, </span>ignore_password_expiry=None<span class="p">, </span>multi_factor_auth_enabled=None<span class="p">, </span>multi_factor_auth_rules=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/identity/#pulumi_openstack.identity.User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_project_id=None<span class="p">, </span>description=None<span class="p">, </span>domain_id=None<span class="p">, </span>enabled=None<span class="p">, </span>extra=None<span class="p">, </span>ignore_change_password_upon_first_use=None<span class="p">, </span>ignore_lockout_failure_attempts=None<span class="p">, </span>ignore_password_expiry=None<span class="p">, </span>multi_factor_auth_enabled=None<span class="p">, </span>multi_factor_auth_rules=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1050,7 +1094,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>default_project_id=None<span class="p">, </span>description=None<span class="p">, </span>domain_id=None<span class="p">, </span>enabled=None<span class="p">, </span>extra=None<span class="p">, </span>ignore_change_password_upon_first_use=None<span class="p">, </span>ignore_lockout_failure_attempts=None<span class="p">, </span>ignore_password_expiry=None<span class="p">, </span>multi_factor_auth_enabled=None<span class="p">, </span>multi_factor_auth_rules=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>default_project_id=None<span class="p">, </span>description=None<span class="p">, </span>domain_id=None<span class="p">, </span>enabled=None<span class="p">, </span>extra=None<span class="p">, </span>ignore_change_password_upon_first_use=None<span class="p">, </span>ignore_lockout_failure_attempts=None<span class="p">, </span>ignore_password_expiry=None<span class="p">, </span>multi_factor_auth_enabled=None<span class="p">, </span>multi_factor_auth_rules=None<span class="p">, </span>name=None<span class="p">, </span>password=None<span class="p">, </span>region=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

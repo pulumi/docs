@@ -26,7 +26,7 @@ Pulumi is a modern infrastructure as code platform. Learn more about its most im
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "languages" >}}"><i class="fas fa-keyboard pr-2"></i>Languages</a></h3>
-        <p>Pulumi enables you to program the cloud using real programming languages and tools.</p>
+        <p>Pulumi enables you to program the cloud using familiar programming languages and tools.</p>
     </div>
 </div>
 <div class="md:flex flex-row mt-6 mb-6">

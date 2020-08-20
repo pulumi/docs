@@ -41,14 +41,13 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var testLambda = new Aws.Lambda.Function("testLambda", new Aws.Lambda.FunctionArgs
         {
             Code = new FileArchive("lambdatest.zip"),
-            Handler = "exports.handler",
             Role = iamForLambda.Arn,
+            Handler = "exports.handler",
             Runtime = "nodejs8.10",
         });
         var testAlias = new Aws.Lambda.Alias("testAlias", new Aws.Lambda.AliasArgs
@@ -62,8 +61,8 @@ class MyStack : Stack
             Action = "lambda:InvokeFunction",
             Function = testLambda.Name,
             Principal = "events.amazonaws.com",
-            Qualifier = testAlias.Name,
             SourceArn = "arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
+            Qualifier = testAlias.Name,
         });
     }
 
@@ -94,12 +93,11 @@ iam_for_lambda = aws.iam.Role("iamForLambda", assume_role_policy="""{
     }
   ]
 }
-
 """)
 test_lambda = aws.lambda_.Function("testLambda",
     code=pulumi.FileArchive("lambdatest.zip"),
-    handler="exports.handler",
     role=iam_for_lambda.arn,
+    handler="exports.handler",
     runtime="nodejs8.10")
 test_alias = aws.lambda_.Alias("testAlias",
     description="a sample description",
@@ -109,8 +107,8 @@ allow_cloudwatch = aws.lambda_.Permission("allowCloudwatch",
     action="lambda:InvokeFunction",
     function=test_lambda.name,
     principal="events.amazonaws.com",
-    qualifier=test_alias.name,
-    source_arn="arn:aws:events:eu-west-1:111122223333:rule/RunDaily")
+    source_arn="arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
+    qualifier=test_alias.name)
 ```
 
 {{% /example %}}
@@ -121,8 +119,7 @@ allow_cloudwatch = aws.lambda_.Permission("allowCloudwatch",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const iamForLambda = new aws.iam.Role("iam_for_lambda", {
-    assumeRolePolicy: `{
+const iamForLambda = new aws.iam.Role("iamForLambda", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -135,25 +132,24 @@ const iamForLambda = new aws.iam.Role("iam_for_lambda", {
     }
   ]
 }
-`,
-});
-const testLambda = new aws.lambda.Function("test_lambda", {
+`});
+const testLambda = new aws.lambda.Function("testLambda", {
     code: new pulumi.asset.FileArchive("lambdatest.zip"),
-    handler: "exports.handler",
     role: iamForLambda.arn,
+    handler: "exports.handler",
     runtime: "nodejs8.10",
 });
-const testAlias = new aws.lambda.Alias("test_alias", {
+const testAlias = new aws.lambda.Alias("testAlias", {
     description: "a sample description",
-    functionName: testLambda.functionName,
-    functionVersion: "$LATEST",
+    functionName: testLambda.name,
+    functionVersion: `$LATEST`,
 });
-const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
+const allowCloudwatch = new aws.lambda.Permission("allowCloudwatch", {
     action: "lambda:InvokeFunction",
-    function: testLambda.functionName,
+    "function": testLambda.name,
     principal: "events.amazonaws.com",
-    qualifier: testAlias.name,
     sourceArn: "arn:aws:events:eu-west-1:111122223333:rule/RunDaily",
+    qualifier: testAlias.name,
 });
 ```
 
@@ -187,14 +183,13 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var func = new Aws.Lambda.Function("func", new Aws.Lambda.FunctionArgs
         {
             Code = new FileArchive("lambdatest.zip"),
-            Handler = "exports.handler",
             Role = defaultRole.Arn,
+            Handler = "exports.handler",
             Runtime = "python2.7",
         });
         var withSns = new Aws.Lambda.Permission("withSns", new Aws.Lambda.PermissionArgs
@@ -206,9 +201,9 @@ class MyStack : Stack
         });
         var lambda = new Aws.Sns.TopicSubscription("lambda", new Aws.Sns.TopicSubscriptionArgs
         {
-            Endpoint = func.Arn,
-            Protocol = "lambda",
             Topic = defaultTopic.Arn,
+            Protocol = "lambda",
+            Endpoint = func.Arn,
         });
     }
 
@@ -240,12 +235,11 @@ default_role = aws.iam.Role("defaultRole", assume_role_policy="""{
     }
   ]
 }
-
 """)
 func = aws.lambda_.Function("func",
     code=pulumi.FileArchive("lambdatest.zip"),
-    handler="exports.handler",
     role=default_role.arn,
+    handler="exports.handler",
     runtime="python2.7")
 with_sns = aws.lambda_.Permission("withSns",
     action="lambda:InvokeFunction",
@@ -253,9 +247,9 @@ with_sns = aws.lambda_.Permission("withSns",
     principal="sns.amazonaws.com",
     source_arn=default_topic.arn)
 lambda_ = aws.sns.TopicSubscription("lambda",
-    endpoint=func.arn,
+    topic=default_topic.arn,
     protocol="lambda",
-    topic=default_topic.arn)
+    endpoint=func.arn)
 ```
 
 {{% /example %}}
@@ -266,9 +260,8 @@ lambda_ = aws.sns.TopicSubscription("lambda",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultTopic = new aws.sns.Topic("default", {});
-const defaultRole = new aws.iam.Role("default", {
-    assumeRolePolicy: `{
+const defaultTopic = new aws.sns.Topic("defaultTopic", {});
+const defaultRole = new aws.iam.Role("defaultRole", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -281,24 +274,23 @@ const defaultRole = new aws.iam.Role("default", {
     }
   ]
 }
-`,
-});
+`});
 const func = new aws.lambda.Function("func", {
     code: new pulumi.asset.FileArchive("lambdatest.zip"),
-    handler: "exports.handler",
     role: defaultRole.arn,
+    handler: "exports.handler",
     runtime: "python2.7",
 });
-const withSns = new aws.lambda.Permission("with_sns", {
+const withSns = new aws.lambda.Permission("withSns", {
     action: "lambda:InvokeFunction",
-    function: func.functionName,
+    "function": func.name,
     principal: "sns.amazonaws.com",
     sourceArn: defaultTopic.arn,
 });
 const lambda = new aws.sns.TopicSubscription("lambda", {
-    endpoint: func.arn,
-    protocol: "lambda",
     topic: defaultTopic.arn,
+    protocol: "lambda",
+    endpoint: func.arn,
 });
 ```
 
@@ -339,8 +331,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -420,7 +412,7 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#Permission">NewPermission</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#PermissionArgs">PermissionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#Permission">Permission</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#Permission">NewPermission</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#PermissionArgs">PermissionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#Permission">Permission</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -494,7 +486,7 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -514,7 +506,7 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#PermissionArgs">PermissionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#PermissionArgs">PermissionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -524,7 +516,7 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1139,7 +1131,7 @@ Get an existing Permission resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPermission<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#PermissionState">PermissionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#Permission">Permission</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPermission<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#PermissionState">PermissionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#Permission">Permission</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

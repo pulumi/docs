@@ -1,8 +1,8 @@
 
 ---
 title: "Tenant"
-title_tag: "Resource Tenant | Package auth0"
-meta_desc: "Explore the Tenant resource of the auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With this resource, you can manage Auth0 tenants, including setting logos and support contact information, setting error pages, and configuring default tenant behaviors."
+title_tag: "Resource Tenant | Package Auth0"
+meta_desc: "Explore the Tenant resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With this resource, you can manage Auth0 tenants, including setting logos and support contact information, setting error pages, and configuring default tenant behaviors."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the Tenant resource of the auth0 package, including examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 With this resource, you can manage Auth0 tenants, including setting logos and support contact information, setting error pages, and configuring default tenant behaviors.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -64,6 +62,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -99,9 +98,11 @@ tenant = auth0.Tenant("tenant",
     support_email="support@mysite",
     support_url="http://mysite/support")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as auth0 from "@pulumi/auth0";
@@ -132,6 +133,7 @@ const tenant = new auth0.Tenant("tenant", {
     supportUrl: "http://mysite/support",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -146,7 +148,7 @@ const tenant = new auth0.Tenant("tenant", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#Tenant">Tenant</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_logout_urls=None<span class="p">, </span>change_password=None<span class="p">, </span>default_audience=None<span class="p">, </span>default_directory=None<span class="p">, </span>default_redirection_uri=None<span class="p">, </span>enabled_locales=None<span class="p">, </span>error_page=None<span class="p">, </span>flags=None<span class="p">, </span>friendly_name=None<span class="p">, </span>guardian_mfa_page=None<span class="p">, </span>idle_session_lifetime=None<span class="p">, </span>picture_url=None<span class="p">, </span>sandbox_version=None<span class="p">, </span>session_lifetime=None<span class="p">, </span>support_email=None<span class="p">, </span>support_url=None<span class="p">, </span>universal_login=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Tenant">Tenant</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allowed_logout_urls=None<span class="p">, </span>change_password=None<span class="p">, </span>default_audience=None<span class="p">, </span>default_directory=None<span class="p">, </span>default_redirection_uri=None<span class="p">, </span>enabled_locales=None<span class="p">, </span>error_page=None<span class="p">, </span>flags=None<span class="p">, </span>friendly_name=None<span class="p">, </span>guardian_mfa_page=None<span class="p">, </span>idle_session_lifetime=None<span class="p">, </span>picture_url=None<span class="p">, </span>sandbox_version=None<span class="p">, </span>session_lifetime=None<span class="p">, </span>support_email=None<span class="p">, </span>support_url=None<span class="p">, </span>universal_login=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1181,7 +1183,7 @@ Get an existing Tenant resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allowed_logout_urls=None<span class="p">, </span>change_password=None<span class="p">, </span>default_audience=None<span class="p">, </span>default_directory=None<span class="p">, </span>default_redirection_uri=None<span class="p">, </span>enabled_locales=None<span class="p">, </span>error_page=None<span class="p">, </span>flags=None<span class="p">, </span>friendly_name=None<span class="p">, </span>guardian_mfa_page=None<span class="p">, </span>idle_session_lifetime=None<span class="p">, </span>picture_url=None<span class="p">, </span>sandbox_version=None<span class="p">, </span>session_lifetime=None<span class="p">, </span>support_email=None<span class="p">, </span>support_url=None<span class="p">, </span>universal_login=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allowed_logout_urls=None<span class="p">, </span>change_password=None<span class="p">, </span>default_audience=None<span class="p">, </span>default_directory=None<span class="p">, </span>default_redirection_uri=None<span class="p">, </span>enabled_locales=None<span class="p">, </span>error_page=None<span class="p">, </span>flags=None<span class="p">, </span>friendly_name=None<span class="p">, </span>guardian_mfa_page=None<span class="p">, </span>idle_session_lifetime=None<span class="p">, </span>picture_url=None<span class="p">, </span>sandbox_version=None<span class="p">, </span>session_lifetime=None<span class="p">, </span>support_email=None<span class="p">, </span>support_url=None<span class="p">, </span>universal_login=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

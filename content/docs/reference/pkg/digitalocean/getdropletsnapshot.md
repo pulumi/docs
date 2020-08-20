@@ -1,8 +1,8 @@
 
 ---
 title: "GetDropletSnapshot"
-title_tag: "Function GetDropletSnapshot | Package Digital Ocean"
-meta_desc: "Explore the GetDropletSnapshot function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Droplet snapshots are saved instances of a Droplet. Use this data"
+title_tag: "Function GetDropletSnapshot | Package DigitalOcean"
+meta_desc: "Explore the GetDropletSnapshot function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Droplet snapshots are saved instances of a Droplet. Use this data"
 ---
 
 
@@ -13,8 +13,6 @@ meta_desc: "Explore the GetDropletSnapshot function of the Digital Ocean package
 Droplet snapshots are saved instances of a Droplet. Use this data
 source to retrieve the ID of a DigitalOcean Droplet snapshot for use in other
 resources.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -40,6 +38,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -55,9 +54,11 @@ web_snapshot = digitalocean.get_droplet_snapshot(most_recent=True,
     name_regex="^web",
     region="nyc3")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -68,6 +69,7 @@ const web_snapshot = pulumi.output(digitalocean.getDropletSnapshot({
     region: "nyc3",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

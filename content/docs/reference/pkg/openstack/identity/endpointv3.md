@@ -46,7 +46,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		service1, err := identity.NewServiceV3(ctx, "service1", &identity.ServiceV3Args{
+			Type: pulumi.String("my-service-type"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = identity.NewEndpointV3(ctx, "endpoint1", &identity.EndpointV3Args{
+			EndpointRegion: service1.Region,
+			ServiceId:      service1.ID(),
+			Url:            pulumi.String("http://my-endpoint"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,7 +121,7 @@ const endpoint1 = new openstack.identity.EndpointV3("endpoint_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/identity/#EndpointV3">EndpointV3</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>endpoint_region=None<span class="p">, </span>interface=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>service_id=None<span class="p">, </span>url=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/identity/#pulumi_openstack.identity.EndpointV3">EndpointV3</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>endpoint_region=None<span class="p">, </span>interface=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>service_id=None<span class="p">, </span>url=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -748,7 +776,7 @@ Get an existing EndpointV3 resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>endpoint_region=None<span class="p">, </span>interface=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>service_id=None<span class="p">, </span>service_name=None<span class="p">, </span>service_type=None<span class="p">, </span>url=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>endpoint_region=None<span class="p">, </span>interface=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>service_id=None<span class="p">, </span>service_name=None<span class="p">, </span>service_type=None<span class="p">, </span>url=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

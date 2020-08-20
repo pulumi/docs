@@ -47,7 +47,6 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var lambdaIam = new Aws.Iam.Role("lambdaIam", new Aws.Iam.RoleArgs
@@ -65,14 +64,13 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var lambdaProcessor = new Aws.Lambda.Function("lambdaProcessor", new Aws.Lambda.FunctionArgs
         {
             Code = new FileArchive("lambda.zip"),
-            Handler = "exports.handler",
             Role = lambdaIam.Arn,
+            Handler = "exports.handler",
             Runtime = "nodejs8.10",
         });
         var extendedS3Stream = new Aws.Kinesis.FirehoseDeliveryStream("extendedS3Stream", new Aws.Kinesis.FirehoseDeliveryStreamArgs
@@ -80,6 +78,7 @@ class MyStack : Stack
             Destination = "extended_s3",
             ExtendedS3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationArgs
             {
+                RoleArn = firehoseRole.Arn,
                 BucketArn = bucket.Arn,
                 ProcessingConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs
                 {
@@ -88,6 +87,7 @@ class MyStack : Stack
                     {
                         new Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs
                         {
+                            Type = "Lambda",
                             Parameters = 
                             {
                                 new Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs
@@ -96,11 +96,9 @@ class MyStack : Stack
                                     ParameterValue = lambdaProcessor.Arn.Apply(arn => $"{arn}:$LATEST"),
                                 },
                             },
-                            Type = "Lambda",
                         },
                     },
                 },
-                RoleArn = firehoseRole.Arn,
             },
         });
     }
@@ -133,7 +131,6 @@ firehose_role = aws.iam.Role("firehoseRole", assume_role_policy="""{
     }
   ]
 }
-
 """)
 lambda_iam = aws.iam.Role("lambdaIam", assume_role_policy="""{
   "Version": "2012-10-17",
@@ -148,28 +145,27 @@ lambda_iam = aws.iam.Role("lambdaIam", assume_role_policy="""{
     }
   ]
 }
-
 """)
 lambda_processor = aws.lambda_.Function("lambdaProcessor",
     code=pulumi.FileArchive("lambda.zip"),
-    handler="exports.handler",
     role=lambda_iam.arn,
+    handler="exports.handler",
     runtime="nodejs8.10")
 extended_s3_stream = aws.kinesis.FirehoseDeliveryStream("extendedS3Stream",
     destination="extended_s3",
     extended_s3_configuration={
+        "role_arn": firehose_role.arn,
         "bucketArn": bucket.arn,
         "processingConfiguration": {
             "enabled": "true",
             "processors": [{
+                "type": "Lambda",
                 "parameters": [{
                     "parameterName": "LambdaArn",
                     "parameterValue": lambda_processor.arn.apply(lambda arn: f"{arn}:$LATEST"),
                 }],
-                "type": "Lambda",
             }],
         },
-        "role_arn": firehose_role.arn,
     })
 ```
 
@@ -181,11 +177,8 @@ extended_s3_stream = aws.kinesis.FirehoseDeliveryStream("extendedS3Stream",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bucket = new aws.s3.Bucket("bucket", {
-    acl: "private",
-});
-const firehoseRole = new aws.iam.Role("firehose_role", {
-    assumeRolePolicy: `{
+const bucket = new aws.s3.Bucket("bucket", {acl: "private"});
+const firehoseRole = new aws.iam.Role("firehoseRole", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -198,10 +191,8 @@ const firehoseRole = new aws.iam.Role("firehose_role", {
     }
   ]
 }
-`,
-});
-const lambdaIam = new aws.iam.Role("lambda_iam", {
-    assumeRolePolicy: `{
+`});
+const lambdaIam = new aws.iam.Role("lambdaIam", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -214,29 +205,28 @@ const lambdaIam = new aws.iam.Role("lambda_iam", {
     }
   ]
 }
-`,
-});
-const lambdaProcessor = new aws.lambda.Function("lambda_processor", {
+`});
+const lambdaProcessor = new aws.lambda.Function("lambdaProcessor", {
     code: new pulumi.asset.FileArchive("lambda.zip"),
-    handler: "exports.handler",
     role: lambdaIam.arn,
+    handler: "exports.handler",
     runtime: "nodejs8.10",
 });
-const extendedS3Stream = new aws.kinesis.FirehoseDeliveryStream("extended_s3_stream", {
+const extendedS3Stream = new aws.kinesis.FirehoseDeliveryStream("extendedS3Stream", {
     destination: "extended_s3",
     extendedS3Configuration: {
+        roleArn: firehoseRole.arn,
         bucketArn: bucket.arn,
         processingConfiguration: {
-            enabled: true,
+            enabled: "true",
             processors: [{
+                type: "Lambda",
                 parameters: [{
                     parameterName: "LambdaArn",
                     parameterValue: pulumi.interpolate`${lambdaProcessor.arn}:$LATEST`,
                 }],
-                type: "Lambda",
             }],
         },
-        roleArn: firehoseRole.arn,
     },
 });
 ```
@@ -272,7 +262,6 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var testStream = new Aws.Kinesis.FirehoseDeliveryStream("testStream", new Aws.Kinesis.FirehoseDeliveryStreamArgs
@@ -280,8 +269,8 @@ class MyStack : Stack
             Destination = "s3",
             S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
             {
-                BucketArn = bucket.Arn,
                 RoleArn = firehoseRole.Arn,
+                BucketArn = bucket.Arn,
             },
         });
     }
@@ -298,9 +287,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -313,7 +302,7 @@ func main() {
 			return err
 		}
 		firehoseRole, err := iam.NewRole(ctx, "firehoseRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"firehose.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"firehose.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -321,8 +310,8 @@ func main() {
 		_, err = kinesis.NewFirehoseDeliveryStream(ctx, "testStream", &kinesis.FirehoseDeliveryStreamArgs{
 			Destination: pulumi.String("s3"),
 			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
-				BucketArn: bucket.Arn,
 				RoleArn:   firehoseRole.Arn,
+				BucketArn: bucket.Arn,
 			},
 		})
 		if err != nil {
@@ -354,13 +343,12 @@ firehose_role = aws.iam.Role("firehoseRole", assume_role_policy="""{
     }
   ]
 }
-
 """)
 test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
     destination="s3",
     s3_configuration={
-        "bucketArn": bucket.arn,
         "role_arn": firehose_role.arn,
+        "bucketArn": bucket.arn,
     })
 ```
 
@@ -372,11 +360,8 @@ test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bucket = new aws.s3.Bucket("bucket", {
-    acl: "private",
-});
-const firehoseRole = new aws.iam.Role("firehose_role", {
-    assumeRolePolicy: `{
+const bucket = new aws.s3.Bucket("bucket", {acl: "private"});
+const firehoseRole = new aws.iam.Role("firehoseRole", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -389,13 +374,12 @@ const firehoseRole = new aws.iam.Role("firehose_role", {
     }
   ]
 }
-`,
-});
-const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
+`});
+const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
     destination: "s3",
     s3Configuration: {
-        bucketArn: bucket.arn,
         roleArn: firehoseRole.arn,
+        bucketArn: bucket.arn,
     },
 });
 ```
@@ -415,46 +399,46 @@ class MyStack : Stack
         var testCluster = new Aws.RedShift.Cluster("testCluster", new Aws.RedShift.ClusterArgs
         {
             ClusterIdentifier = "tf-redshift-cluster-%d",
-            ClusterType = "single-node",
             DatabaseName = "test",
-            MasterPassword = "T3stPass",
             MasterUsername = "testuser",
+            MasterPassword = "T3stPass",
             NodeType = "dc1.large",
+            ClusterType = "single-node",
         });
         var testStream = new Aws.Kinesis.FirehoseDeliveryStream("testStream", new Aws.Kinesis.FirehoseDeliveryStreamArgs
         {
             Destination = "redshift",
+            S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
+            {
+                RoleArn = aws_iam_role.Firehose_role.Arn,
+                BucketArn = aws_s3_bucket.Bucket.Arn,
+                BufferSize = 10,
+                BufferInterval = 400,
+                CompressionFormat = "GZIP",
+            },
             RedshiftConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationArgs
             {
+                RoleArn = aws_iam_role.Firehose_role.Arn,
                 ClusterJdbcurl = Output.Tuple(testCluster.Endpoint, testCluster.DatabaseName).Apply(values =>
                 {
                     var endpoint = values.Item1;
                     var databaseName = values.Item2;
                     return $"jdbc:redshift://{endpoint}/{databaseName}";
                 }),
+                Username = "testuser",
+                Password = "T3stPass",
+                DataTableName = "test-table",
                 CopyOptions = "delimiter '|'",
                 DataTableColumns = "test-col",
-                DataTableName = "test-table",
-                Password = "T3stPass",
-                RoleArn = aws_iam_role.Firehose_role.Arn,
+                S3BackupMode = "Enabled",
                 S3BackupConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs
                 {
-                    BucketArn = aws_s3_bucket.Bucket.Arn,
-                    BufferInterval = 300,
-                    BufferSize = 15,
-                    CompressionFormat = "GZIP",
                     RoleArn = aws_iam_role.Firehose_role.Arn,
+                    BucketArn = aws_s3_bucket.Bucket.Arn,
+                    BufferSize = 15,
+                    BufferInterval = 300,
+                    CompressionFormat = "GZIP",
                 },
-                S3BackupMode = "Enabled",
-                Username = "testuser",
-            },
-            S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
-            {
-                BucketArn = aws_s3_bucket.Bucket.Arn,
-                BufferInterval = 400,
-                BufferSize = 10,
-                CompressionFormat = "GZIP",
-                RoleArn = aws_iam_role.Firehose_role.Arn,
             },
         });
     }
@@ -471,8 +455,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/redshift"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -480,44 +464,44 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testCluster, err := redshift.NewCluster(ctx, "testCluster", &redshift.ClusterArgs{
 			ClusterIdentifier: pulumi.String(fmt.Sprintf("%v%v%v", "tf-redshift-cluster-", "%", "d")),
-			ClusterType:       pulumi.String("single-node"),
 			DatabaseName:      pulumi.String("test"),
-			MasterPassword:    pulumi.String("T3stPass"),
 			MasterUsername:    pulumi.String("testuser"),
+			MasterPassword:    pulumi.String("T3stPass"),
 			NodeType:          pulumi.String("dc1.large"),
+			ClusterType:       pulumi.String("single-node"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = kinesis.NewFirehoseDeliveryStream(ctx, "testStream", &kinesis.FirehoseDeliveryStreamArgs{
 			Destination: pulumi.String("redshift"),
+			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
+				RoleArn:           pulumi.Any(aws_iam_role.Firehose_role.Arn),
+				BucketArn:         pulumi.Any(aws_s3_bucket.Bucket.Arn),
+				BufferSize:        pulumi.Int(10),
+				BufferInterval:    pulumi.Int(400),
+				CompressionFormat: pulumi.String("GZIP"),
+			},
 			RedshiftConfiguration: &kinesis.FirehoseDeliveryStreamRedshiftConfigurationArgs{
+				RoleArn: pulumi.Any(aws_iam_role.Firehose_role.Arn),
 				ClusterJdbcurl: pulumi.All(testCluster.Endpoint, testCluster.DatabaseName).ApplyT(func(_args []interface{}) (string, error) {
 					endpoint := _args[0].(string)
 					databaseName := _args[1].(string)
 					return fmt.Sprintf("%v%v%v%v", "jdbc:redshift://", endpoint, "/", databaseName), nil
 				}).(pulumi.StringOutput),
+				Username:         pulumi.String("testuser"),
+				Password:         pulumi.String("T3stPass"),
+				DataTableName:    pulumi.String("test-table"),
 				CopyOptions:      pulumi.String("delimiter '|'"),
 				DataTableColumns: pulumi.String("test-col"),
-				DataTableName:    pulumi.String("test-table"),
-				Password:         pulumi.String("T3stPass"),
-				RoleArn:          pulumi.String(aws_iam_role.Firehose_role.Arn),
+				S3BackupMode:     pulumi.String("Enabled"),
 				S3BackupConfiguration: &kinesis.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs{
-					BucketArn:         pulumi.String(aws_s3_bucket.Bucket.Arn),
-					BufferInterval:    pulumi.Int(300),
+					RoleArn:           pulumi.Any(aws_iam_role.Firehose_role.Arn),
+					BucketArn:         pulumi.Any(aws_s3_bucket.Bucket.Arn),
 					BufferSize:        pulumi.Int(15),
+					BufferInterval:    pulumi.Int(300),
 					CompressionFormat: pulumi.String("GZIP"),
-					RoleArn:           pulumi.String(aws_iam_role.Firehose_role.Arn),
 				},
-				S3BackupMode: pulumi.String("Enabled"),
-				Username:     pulumi.String("testuser"),
-			},
-			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
-				BucketArn:         pulumi.String(aws_s3_bucket.Bucket.Arn),
-				BufferInterval:    pulumi.Int(400),
-				BufferSize:        pulumi.Int(10),
-				CompressionFormat: pulumi.String("GZIP"),
-				RoleArn:           pulumi.String(aws_iam_role.Firehose_role.Arn),
 			},
 		})
 		if err != nil {
@@ -537,36 +521,36 @@ import pulumi_aws as aws
 
 test_cluster = aws.redshift.Cluster("testCluster",
     cluster_identifier="tf-redshift-cluster-%d",
-    cluster_type="single-node",
     database_name="test",
-    master_password="T3stPass",
     master_username="testuser",
-    node_type="dc1.large")
+    master_password="T3stPass",
+    node_type="dc1.large",
+    cluster_type="single-node")
 test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
     destination="redshift",
+    s3_configuration={
+        "role_arn": aws_iam_role["firehose_role"]["arn"],
+        "bucketArn": aws_s3_bucket["bucket"]["arn"],
+        "bufferSize": 10,
+        "bufferInterval": 400,
+        "compressionFormat": "GZIP",
+    },
     redshift_configuration={
+        "role_arn": aws_iam_role["firehose_role"]["arn"],
         "clusterJdbcurl": pulumi.Output.all(test_cluster.endpoint, test_cluster.database_name).apply(lambda endpoint, database_name: f"jdbc:redshift://{endpoint}/{database_name}"),
+        "username": "testuser",
+        "password": "T3stPass",
+        "dataTableName": "test-table",
         "copyOptions": "delimiter '|'",
         "dataTableColumns": "test-col",
-        "dataTableName": "test-table",
-        "password": "T3stPass",
-        "role_arn": aws_iam_role["firehose_role"]["arn"],
-        "s3BackupConfiguration": {
-            "bucketArn": aws_s3_bucket["bucket"]["arn"],
-            "bufferInterval": 300,
-            "bufferSize": 15,
-            "compressionFormat": "GZIP",
-            "role_arn": aws_iam_role["firehose_role"]["arn"],
-        },
         "s3BackupMode": "Enabled",
-        "username": "testuser",
-    },
-    s3_configuration={
-        "bucketArn": aws_s3_bucket["bucket"]["arn"],
-        "bufferInterval": 400,
-        "bufferSize": 10,
-        "compressionFormat": "GZIP",
-        "role_arn": aws_iam_role["firehose_role"]["arn"],
+        "s3BackupConfiguration": {
+            "role_arn": aws_iam_role["firehose_role"]["arn"],
+            "bucketArn": aws_s3_bucket["bucket"]["arn"],
+            "bufferSize": 15,
+            "bufferInterval": 300,
+            "compressionFormat": "GZIP",
+        },
     })
 ```
 
@@ -578,39 +562,39 @@ test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testCluster = new aws.redshift.Cluster("test_cluster", {
-    clusterIdentifier: "tf-redshift-cluster-%d",
-    clusterType: "single-node",
+const testCluster = new aws.redshift.Cluster("testCluster", {
+    clusterIdentifier: `tf-redshift-cluster-%d`,
     databaseName: "test",
-    masterPassword: "T3stPass",
     masterUsername: "testuser",
+    masterPassword: "T3stPass",
     nodeType: "dc1.large",
+    clusterType: "single-node",
 });
-const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
+const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
     destination: "redshift",
-    redshiftConfiguration: {
-        clusterJdbcurl: pulumi.interpolate`jdbc:redshift://${testCluster.endpoint}/${testCluster.databaseName}`,
-        copyOptions: "delimiter '|'", // the default delimiter
-        dataTableColumns: "test-col",
-        dataTableName: "test-table",
-        password: "T3stPass",
-        roleArn: aws_iam_role_firehose_role.arn,
-        s3BackupConfiguration: {
-            bucketArn: aws_s3_bucket_bucket.arn,
-            bufferInterval: 300,
-            bufferSize: 15,
-            compressionFormat: "GZIP",
-            roleArn: aws_iam_role_firehose_role.arn,
-        },
-        s3BackupMode: "Enabled",
-        username: "testuser",
-    },
     s3Configuration: {
-        bucketArn: aws_s3_bucket_bucket.arn,
-        bufferInterval: 400,
+        roleArn: aws_iam_role.firehose_role.arn,
+        bucketArn: aws_s3_bucket.bucket.arn,
         bufferSize: 10,
+        bufferInterval: 400,
         compressionFormat: "GZIP",
-        roleArn: aws_iam_role_firehose_role.arn,
+    },
+    redshiftConfiguration: {
+        roleArn: aws_iam_role.firehose_role.arn,
+        clusterJdbcurl: pulumi.interpolate`jdbc:redshift://${testCluster.endpoint}/${testCluster.databaseName}`,
+        username: "testuser",
+        password: "T3stPass",
+        dataTableName: "test-table",
+        copyOptions: "delimiter '|'",
+        dataTableColumns: "test-col",
+        s3BackupMode: "Enabled",
+        s3BackupConfiguration: {
+            roleArn: aws_iam_role.firehose_role.arn,
+            bucketArn: aws_s3_bucket.bucket.arn,
+            bufferSize: 15,
+            bufferInterval: 300,
+            compressionFormat: "GZIP",
+        },
     },
 });
 ```
@@ -633,10 +617,20 @@ class MyStack : Stack
         var testStream = new Aws.Kinesis.FirehoseDeliveryStream("testStream", new Aws.Kinesis.FirehoseDeliveryStreamArgs
         {
             Destination = "elasticsearch",
+            S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
+            {
+                RoleArn = aws_iam_role.Firehose_role.Arn,
+                BucketArn = aws_s3_bucket.Bucket.Arn,
+                BufferSize = 10,
+                BufferInterval = 400,
+                CompressionFormat = "GZIP",
+            },
             ElasticsearchConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationArgs
             {
                 DomainArn = testCluster.Arn,
+                RoleArn = aws_iam_role.Firehose_role.Arn,
                 IndexName = "test",
+                TypeName = "test",
                 ProcessingConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs
                 {
                     Enabled = true,
@@ -644,6 +638,7 @@ class MyStack : Stack
                     {
                         new Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs
                         {
+                            Type = "Lambda",
                             Parameters = 
                             {
                                 new Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs
@@ -652,20 +647,9 @@ class MyStack : Stack
                                     ParameterValue = $"{aws_lambda_function.Lambda_processor.Arn}:$LATEST",
                                 },
                             },
-                            Type = "Lambda",
                         },
                     },
                 },
-                RoleArn = aws_iam_role.Firehose_role.Arn,
-                TypeName = "test",
-            },
-            S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
-            {
-                BucketArn = aws_s3_bucket.Bucket.Arn,
-                BufferInterval = 400,
-                BufferSize = 10,
-                CompressionFormat = "GZIP",
-                RoleArn = aws_iam_role.Firehose_role.Arn,
             },
         });
     }
@@ -682,8 +666,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -695,32 +679,32 @@ func main() {
 		}
 		_, err = kinesis.NewFirehoseDeliveryStream(ctx, "testStream", &kinesis.FirehoseDeliveryStreamArgs{
 			Destination: pulumi.String("elasticsearch"),
+			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
+				RoleArn:           pulumi.Any(aws_iam_role.Firehose_role.Arn),
+				BucketArn:         pulumi.Any(aws_s3_bucket.Bucket.Arn),
+				BufferSize:        pulumi.Int(10),
+				BufferInterval:    pulumi.Int(400),
+				CompressionFormat: pulumi.String("GZIP"),
+			},
 			ElasticsearchConfiguration: &kinesis.FirehoseDeliveryStreamElasticsearchConfigurationArgs{
 				DomainArn: testCluster.Arn,
+				RoleArn:   pulumi.Any(aws_iam_role.Firehose_role.Arn),
 				IndexName: pulumi.String("test"),
+				TypeName:  pulumi.String("test"),
 				ProcessingConfiguration: &kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs{
 					Enabled: pulumi.Bool(true),
 					Processors: kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArray{
 						&kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs{
+							Type: pulumi.String("Lambda"),
 							Parameters: kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArray{
 								&kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs{
 									ParameterName:  pulumi.String("LambdaArn"),
 									ParameterValue: pulumi.String(fmt.Sprintf("%v%v%v%v", aws_lambda_function.Lambda_processor.Arn, ":", "$", "LATEST")),
 								},
 							},
-							Type: pulumi.String("Lambda"),
 						},
 					},
 				},
-				RoleArn:  pulumi.String(aws_iam_role.Firehose_role.Arn),
-				TypeName: pulumi.String("test"),
-			},
-			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
-				BucketArn:         pulumi.String(aws_s3_bucket.Bucket.Arn),
-				BufferInterval:    pulumi.Int(400),
-				BufferSize:        pulumi.Int(10),
-				CompressionFormat: pulumi.String("GZIP"),
-				RoleArn:           pulumi.String(aws_iam_role.Firehose_role.Arn),
 			},
 		})
 		if err != nil {
@@ -741,28 +725,28 @@ import pulumi_aws as aws
 test_cluster = aws.elasticsearch.Domain("testCluster")
 test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
     destination="elasticsearch",
+    s3_configuration={
+        "role_arn": aws_iam_role["firehose_role"]["arn"],
+        "bucketArn": aws_s3_bucket["bucket"]["arn"],
+        "bufferSize": 10,
+        "bufferInterval": 400,
+        "compressionFormat": "GZIP",
+    },
     elasticsearch_configuration={
         "domainArn": test_cluster.arn,
+        "role_arn": aws_iam_role["firehose_role"]["arn"],
         "indexName": "test",
+        "typeName": "test",
         "processingConfiguration": {
             "enabled": "true",
             "processors": [{
+                "type": "Lambda",
                 "parameters": [{
                     "parameterName": "LambdaArn",
                     "parameterValue": f"{aws_lambda_function['lambda_processor']['arn']}:$LATEST",
                 }],
-                "type": "Lambda",
             }],
         },
-        "role_arn": aws_iam_role["firehose_role"]["arn"],
-        "typeName": "test",
-    },
-    s3_configuration={
-        "bucketArn": aws_s3_bucket["bucket"]["arn"],
-        "bufferInterval": 400,
-        "bufferSize": 10,
-        "compressionFormat": "GZIP",
-        "role_arn": aws_iam_role["firehose_role"]["arn"],
     })
 ```
 
@@ -774,31 +758,31 @@ test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testCluster = new aws.elasticsearch.Domain("test_cluster", {});
-const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
+const testCluster = new aws.elasticsearch.Domain("testCluster", {});
+const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
     destination: "elasticsearch",
+    s3Configuration: {
+        roleArn: aws_iam_role.firehose_role.arn,
+        bucketArn: aws_s3_bucket.bucket.arn,
+        bufferSize: 10,
+        bufferInterval: 400,
+        compressionFormat: "GZIP",
+    },
     elasticsearchConfiguration: {
         domainArn: testCluster.arn,
+        roleArn: aws_iam_role.firehose_role.arn,
         indexName: "test",
+        typeName: "test",
         processingConfiguration: {
-            enabled: true,
+            enabled: "true",
             processors: [{
+                type: "Lambda",
                 parameters: [{
                     parameterName: "LambdaArn",
-                    parameterValue: pulumi.interpolate`${aws_lambda_function_lambda_processor.arn}:$LATEST`,
+                    parameterValue: `${aws_lambda_function.lambda_processor.arn}:$LATEST`,
                 }],
-                type: "Lambda",
             }],
         },
-        roleArn: aws_iam_role_firehose_role.arn,
-        typeName: "test",
-    },
-    s3Configuration: {
-        bucketArn: aws_s3_bucket_bucket.arn,
-        bufferInterval: 400,
-        bufferSize: 10,
-        compressionFormat: "GZIP",
-        roleArn: aws_iam_role_firehose_role.arn,
     },
 });
 ```
@@ -820,18 +804,18 @@ class MyStack : Stack
             Destination = "splunk",
             S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
             {
-                BucketArn = aws_s3_bucket.Bucket.Arn,
-                BufferInterval = 400,
-                BufferSize = 10,
-                CompressionFormat = "GZIP",
                 RoleArn = aws_iam_role.Firehose.Arn,
+                BucketArn = aws_s3_bucket.Bucket.Arn,
+                BufferSize = 10,
+                BufferInterval = 400,
+                CompressionFormat = "GZIP",
             },
             SplunkConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamSplunkConfigurationArgs
             {
-                HecAcknowledgmentTimeout = 600,
                 HecEndpoint = "https://http-inputs-mydomain.splunkcloud.com:443",
-                HecEndpointType = "Event",
                 HecToken = "51D4DA16-C61B-4F5F-8EC7-ED4301342A4A",
+                HecAcknowledgmentTimeout = 600,
+                HecEndpointType = "Event",
                 S3BackupMode = "FailedEventsOnly",
             },
         });
@@ -847,7 +831,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -856,17 +840,17 @@ func main() {
 		_, err := kinesis.NewFirehoseDeliveryStream(ctx, "testStream", &kinesis.FirehoseDeliveryStreamArgs{
 			Destination: pulumi.String("splunk"),
 			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
-				BucketArn:         pulumi.String(aws_s3_bucket.Bucket.Arn),
-				BufferInterval:    pulumi.Int(400),
+				RoleArn:           pulumi.Any(aws_iam_role.Firehose.Arn),
+				BucketArn:         pulumi.Any(aws_s3_bucket.Bucket.Arn),
 				BufferSize:        pulumi.Int(10),
+				BufferInterval:    pulumi.Int(400),
 				CompressionFormat: pulumi.String("GZIP"),
-				RoleArn:           pulumi.String(aws_iam_role.Firehose.Arn),
 			},
 			SplunkConfiguration: &kinesis.FirehoseDeliveryStreamSplunkConfigurationArgs{
-				HecAcknowledgmentTimeout: pulumi.Int(600),
 				HecEndpoint:              pulumi.String("https://http-inputs-mydomain.splunkcloud.com:443"),
-				HecEndpointType:          pulumi.String("Event"),
 				HecToken:                 pulumi.String("51D4DA16-C61B-4F5F-8EC7-ED4301342A4A"),
+				HecAcknowledgmentTimeout: pulumi.Int(600),
+				HecEndpointType:          pulumi.String("Event"),
 				S3BackupMode:             pulumi.String("FailedEventsOnly"),
 			},
 		})
@@ -888,17 +872,17 @@ import pulumi_aws as aws
 test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
     destination="splunk",
     s3_configuration={
-        "bucketArn": aws_s3_bucket["bucket"]["arn"],
-        "bufferInterval": 400,
-        "bufferSize": 10,
-        "compressionFormat": "GZIP",
         "role_arn": aws_iam_role["firehose"]["arn"],
+        "bucketArn": aws_s3_bucket["bucket"]["arn"],
+        "bufferSize": 10,
+        "bufferInterval": 400,
+        "compressionFormat": "GZIP",
     },
     splunk_configuration={
-        "hecAcknowledgmentTimeout": 600,
         "hecEndpoint": "https://http-inputs-mydomain.splunkcloud.com:443",
-        "hecEndpointType": "Event",
         "hecToken": "51D4DA16-C61B-4F5F-8EC7-ED4301342A4A",
+        "hecAcknowledgmentTimeout": 600,
+        "hecEndpointType": "Event",
         "s3BackupMode": "FailedEventsOnly",
     })
 ```
@@ -911,20 +895,20 @@ test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
+const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
     destination: "splunk",
     s3Configuration: {
-        bucketArn: aws_s3_bucket_bucket.arn,
-        bufferInterval: 400,
+        roleArn: aws_iam_role.firehose.arn,
+        bucketArn: aws_s3_bucket.bucket.arn,
         bufferSize: 10,
+        bufferInterval: 400,
         compressionFormat: "GZIP",
-        roleArn: aws_iam_role_firehose.arn,
     },
     splunkConfiguration: {
-        hecAcknowledgmentTimeout: 600,
         hecEndpoint: "https://http-inputs-mydomain.splunkcloud.com:443",
-        hecEndpointType: "Event",
         hecToken: "51D4DA16-C61B-4F5F-8EC7-ED4301342A4A",
+        hecAcknowledgmentTimeout: 600,
+        hecEndpointType: "Event",
         s3BackupMode: "FailedEventsOnly",
     },
 });
@@ -948,7 +932,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStream">NewFirehoseDeliveryStream</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamArgs">FirehoseDeliveryStreamArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStream">FirehoseDeliveryStream</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStream">NewFirehoseDeliveryStream</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamArgs">FirehoseDeliveryStreamArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStream">FirehoseDeliveryStream</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1022,7 +1006,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1042,7 +1026,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamArgs">FirehoseDeliveryStreamArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamArgs">FirehoseDeliveryStreamArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1052,7 +1036,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1823,7 +1807,7 @@ Get an existing FirehoseDeliveryStream resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirehoseDeliveryStream<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamState">FirehoseDeliveryStreamState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStream">FirehoseDeliveryStream</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirehoseDeliveryStream<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamState">FirehoseDeliveryStreamState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStream">FirehoseDeliveryStream</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2559,7 +2543,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamElasticsearchConfiguration.html">output</a> API doc for this type.
@@ -3089,7 +3073,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
@@ -3267,7 +3251,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration.html">output</a> API doc for this type.
@@ -3401,7 +3385,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor.html">output</a> API doc for this type.
@@ -3535,7 +3519,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter.html">output</a> API doc for this type.
@@ -3669,7 +3653,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3Configuration.html">output</a> API doc for this type.
@@ -4295,7 +4279,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
@@ -4473,7 +4457,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration.html">output</a> API doc for this type.
@@ -4695,7 +4679,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfiguration.html">output</a> API doc for this type.
@@ -4785,7 +4769,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer.html">output</a> API doc for this type.
@@ -4919,7 +4903,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe.html">output</a> API doc for this type.
@@ -5009,7 +4993,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe.html">output</a> API doc for this type.
@@ -5187,7 +5171,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration.html">output</a> API doc for this type.
@@ -5277,7 +5261,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer.html">output</a> API doc for this type.
@@ -5411,7 +5395,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDe.html">output</a> API doc for this type.
@@ -5897,7 +5881,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe.html">output</a> API doc for this type.
@@ -6207,7 +6191,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration.html">output</a> API doc for this type.
@@ -6517,7 +6501,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration.html">output</a> API doc for this type.
@@ -6651,7 +6635,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor.html">output</a> API doc for this type.
@@ -6785,7 +6769,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter.html">output</a> API doc for this type.
@@ -6919,7 +6903,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration.html">output</a> API doc for this type.
@@ -7325,7 +7309,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
@@ -7503,7 +7487,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamKinesisSourceConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamKinesisSourceConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamKinesisSourceConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamKinesisSourceConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamKinesisSourceConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamKinesisSourceConfiguration.html">output</a> API doc for this type.
@@ -7637,7 +7621,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfiguration.html">output</a> API doc for this type.
@@ -8211,7 +8195,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
@@ -8389,7 +8373,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration.html">output</a> API doc for this type.
@@ -8523,7 +8507,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor.html">output</a> API doc for this type.
@@ -8657,7 +8641,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameter.html">output</a> API doc for this type.
@@ -8791,7 +8775,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration.html">output</a> API doc for this type.
@@ -9197,7 +9181,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
@@ -9375,7 +9359,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamS3Configuration.html">output</a> API doc for this type.
@@ -9781,7 +9765,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
@@ -9959,7 +9943,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamServerSideEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamServerSideEncryptionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamServerSideEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamServerSideEncryptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamServerSideEncryptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamServerSideEncryption.html">output</a> API doc for this type.
@@ -10049,7 +10033,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamSplunkConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfiguration.html">output</a> API doc for this type.
@@ -10447,7 +10431,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions.html">output</a> API doc for this type.
@@ -10625,7 +10609,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration.html">output</a> API doc for this type.
@@ -10759,7 +10743,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor.html">output</a> API doc for this type.
@@ -10893,7 +10877,7 @@ be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.Outputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter.html">output</a> API doc for this type.

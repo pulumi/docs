@@ -60,7 +60,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		volume1, err := blockstorage.NewVolumeV2(ctx, "volume1", &blockstorage.VolumeV2Args{
+			Size: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = blockstorage.NewVolumeAttachV2(ctx, "va1", &blockstorage.VolumeAttachV2Args{
+			Device:    pulumi.String("auto"),
+			HostName:  pulumi.String("devstack"),
+			Initiator: pulumi.String("iqn.1993-08.org.debian:01:e9861fb1859"),
+			IpAddress: pulumi.String("192.168.255.10"),
+			OsType:    pulumi.String("linux2"),
+			Platform:  pulumi.String("x86_64"),
+			VolumeId:  volume1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -115,7 +147,7 @@ const va1 = new openstack.blockstorage.VolumeAttachV2("va_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/blockstorage/#VolumeAttachV2">VolumeAttachV2</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attach_mode=None<span class="p">, </span>device=None<span class="p">, </span>host_name=None<span class="p">, </span>initiator=None<span class="p">, </span>ip_address=None<span class="p">, </span>multipath=None<span class="p">, </span>os_type=None<span class="p">, </span>platform=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, </span>wwnn=None<span class="p">, </span>wwpns=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/blockstorage/#pulumi_openstack.blockstorage.VolumeAttachV2">VolumeAttachV2</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attach_mode=None<span class="p">, </span>device=None<span class="p">, </span>host_name=None<span class="p">, </span>initiator=None<span class="p">, </span>ip_address=None<span class="p">, </span>multipath=None<span class="p">, </span>os_type=None<span class="p">, </span>platform=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, </span>wwnn=None<span class="p">, </span>wwpns=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1106,7 +1138,7 @@ Get an existing VolumeAttachV2 resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attach_mode=None<span class="p">, </span>data=None<span class="p">, </span>device=None<span class="p">, </span>driver_volume_type=None<span class="p">, </span>host_name=None<span class="p">, </span>initiator=None<span class="p">, </span>ip_address=None<span class="p">, </span>mount_point_base=None<span class="p">, </span>multipath=None<span class="p">, </span>os_type=None<span class="p">, </span>platform=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, </span>wwnn=None<span class="p">, </span>wwpns=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attach_mode=None<span class="p">, </span>data=None<span class="p">, </span>device=None<span class="p">, </span>driver_volume_type=None<span class="p">, </span>host_name=None<span class="p">, </span>initiator=None<span class="p">, </span>ip_address=None<span class="p">, </span>mount_point_base=None<span class="p">, </span>multipath=None<span class="p">, </span>os_type=None<span class="p">, </span>platform=None<span class="p">, </span>region=None<span class="p">, </span>volume_id=None<span class="p">, </span>wwnn=None<span class="p">, </span>wwpns=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

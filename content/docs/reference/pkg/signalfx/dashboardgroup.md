@@ -91,7 +91,7 @@ const mydashboardgroup0 = new signalfx.DashboardGroup("mydashboardgroup0", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/signalfx/#DashboardGroup">DashboardGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authorized_writer_teams=None<span class="p">, </span>authorized_writer_users=None<span class="p">, </span>dashboards=None<span class="p">, </span>description=None<span class="p">, </span>import_qualifiers=None<span class="p">, </span>name=None<span class="p">, </span>teams=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.DashboardGroup">DashboardGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authorized_writer_teams=None<span class="p">, </span>authorized_writer_users=None<span class="p">, </span>dashboards=None<span class="p">, </span>description=None<span class="p">, </span>import_qualifiers=None<span class="p">, </span>name=None<span class="p">, </span>teams=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -686,7 +686,7 @@ Get an existing DashboardGroup resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>authorized_writer_teams=None<span class="p">, </span>authorized_writer_users=None<span class="p">, </span>dashboards=None<span class="p">, </span>description=None<span class="p">, </span>import_qualifiers=None<span class="p">, </span>name=None<span class="p">, </span>teams=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>authorized_writer_teams=None<span class="p">, </span>authorized_writer_users=None<span class="p">, </span>dashboards=None<span class="p">, </span>description=None<span class="p">, </span>import_qualifiers=None<span class="p">, </span>name=None<span class="p">, </span>teams=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

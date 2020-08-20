@@ -1,6 +1,6 @@
 ---
-title: "auth0"
-title_tag: "Module auth0 | Package auth0"
+title: "Auth0"
+title_tag: "Module Auth0 | Package Auth0"
 meta_desc: "A Pulumi package for creating and managing auth0 cloud resources."
 menu:
     reference:

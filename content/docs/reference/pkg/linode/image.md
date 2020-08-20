@@ -13,8 +13,6 @@ meta_desc: "Explore the Image resource of the Linode package, including examples
 Provides a Linode Image resource.  This can be used to create, modify, and delete Linodes Images.  Linode Images are snapshots of a Linode Instance Disk which can then be used to provision more Linode Instances.  Images can be used across regions.
 
 For more information, see [Linode's documentation on Images](https://www.linode.com/docs/platform/disk-images/linode-images/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createImage).
-
-
 ## Attributes
 
 This resource exports the following attributes:
@@ -73,6 +71,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -97,9 +96,11 @@ bar_based = linode.Instance("barBased",
     region="eu-west",
     type=foo.type)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -120,6 +121,7 @@ const barBased = new linode.Instance("bar_based", {
     type: foo.type,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -134,7 +136,7 @@ const barBased = new linode.Instance("bar_based", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/linode/#Image">Image</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>disk_id=None<span class="p">, </span>label=None<span class="p">, </span>linode_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Image">Image</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>disk_id=None<span class="p">, </span>label=None<span class="p">, </span>linode_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -957,7 +959,7 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created=None<span class="p">, </span>created_by=None<span class="p">, </span>deprecated=None<span class="p">, </span>description=None<span class="p">, </span>disk_id=None<span class="p">, </span>expiry=None<span class="p">, </span>is_public=None<span class="p">, </span>label=None<span class="p">, </span>linode_id=None<span class="p">, </span>size=None<span class="p">, </span>type=None<span class="p">, </span>vendor=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created=None<span class="p">, </span>created_by=None<span class="p">, </span>deprecated=None<span class="p">, </span>description=None<span class="p">, </span>disk_id=None<span class="p">, </span>expiry=None<span class="p">, </span>is_public=None<span class="p">, </span>label=None<span class="p">, </span>linode_id=None<span class="p">, </span>size=None<span class="p">, </span>type=None<span class="p">, </span>vendor=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -3,7 +3,7 @@ title: "Module settings/v1alpha1"
 title_tag: "Module settings/v1alpha1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1alpha1"
 meta_desc: "Explore members of the v1alpha1 module in the @pulumi/kubernetes package."
-git_sha: "ffb56cbd66a23d2c0ce121749832115f40ec831a"
+git_sha: "2d5f66dff2f98c399f6df3e47fdd05918ad66597"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="PodPreset" data-link-title="PodPreset">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L12">
         Resource <strong>PodPreset</strong>
     </a>
 </h3>
@@ -41,7 +41,7 @@ block_external_search_index: true
 PodPreset is a policy resource that defines additional runtime requirements for a Pod.
 
 <h4 class="pdoc-member-header" id="PodPreset-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L48"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L48"> <b>constructor</b></a>
 </h4>
 
 
@@ -55,7 +55,7 @@ Create a PodPreset resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PodPreset-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -66,14 +66,14 @@ Get an existing PodPreset resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PodPreset-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PodPreset-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Returns true if the given object is an instance of PodPreset.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PodPreset-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"settings.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -92,7 +92,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodPreset-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -101,7 +101,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PodPreset-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L46">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L46">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodPreset"</span>&gt;;</code></pre>
@@ -109,17 +109,17 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodPreset-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L47">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L47">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PodPreset-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L48">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L48">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodPresetSpec'>PodPresetSpec</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PodPreset-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -128,7 +128,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PodPresetList" data-link-title="PodPresetList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L12">
         Resource <strong>PodPresetList</strong>
     </a>
 </h3>
@@ -138,7 +138,7 @@ deployments.
 PodPresetList is a list of PodPreset objects.
 
 <h4 class="pdoc-member-header" id="PodPresetList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -152,7 +152,7 @@ Create a PodPresetList resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PodPresetList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -163,14 +163,14 @@ Get an existing PodPresetList resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PodPresetList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PodPresetList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -181,7 +181,7 @@ Returns true if the given object is an instance of PodPresetList.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PodPresetList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"settings.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodPresetList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -198,7 +198,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PodPresetList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L46">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L46">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodPreset'>PodPreset</a>[]&gt;;</code></pre>
@@ -206,7 +206,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="PodPresetList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L50">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L50">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodPresetList"</span>&gt;;</code></pre>
@@ -214,7 +214,7 @@ Items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodPresetList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L54">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L54">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -222,7 +222,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PodPresetList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -234,7 +234,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="PodPresetArgs" data-link-title="PodPresetArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L77">
         interface <strong>PodPresetArgs</strong>
     </a>
 </h3>
@@ -244,7 +244,7 @@ deployments.
 The set of arguments for constructing a PodPreset resource.
 
 <h4 class="pdoc-member-header" id="PodPresetArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L81">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L81">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"settings.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -252,7 +252,7 @@ The set of arguments for constructing a PodPreset resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodPresetArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L85">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L85">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PodPreset"</span>&gt;;</code></pre>
@@ -260,17 +260,17 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodPresetArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L86">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L86">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PodPresetArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPreset.ts#L87">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPreset.ts#L87">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodPresetSpec'>PodPresetSpec</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PodPresetListArgs" data-link-title="PodPresetListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L86">
         interface <strong>PodPresetListArgs</strong>
     </a>
 </h3>
@@ -280,7 +280,7 @@ Kind is a string value representing the REST resource this object represents. Se
 The set of arguments for constructing a PodPresetList resource.
 
 <h4 class="pdoc-member-header" id="PodPresetListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L90">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L90">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"settings.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -288,7 +288,7 @@ The set of arguments for constructing a PodPresetList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodPresetListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L94">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L94">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodPreset'>PodPreset</a>&gt;[]&gt;;</code></pre>
@@ -296,7 +296,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="PodPresetListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L98">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L98">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PodPresetList"</span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ Items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodPresetListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ffb56cbd66a23d2c0ce121749832115f40ec831a/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L102">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/settings/v1alpha1/podPresetList.ts#L102">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>

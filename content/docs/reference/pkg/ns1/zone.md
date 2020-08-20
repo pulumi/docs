@@ -1,8 +1,8 @@
 
 ---
 title: "Zone"
-title_tag: "Resource Zone | Package ns1"
-meta_desc: "Explore the Zone resource of the ns1 package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "Resource Zone | Package NS1"
+meta_desc: "Explore the Zone resource of the NS1 package, including examples, input properties, output properties, lookup functions, and supporting types. "
 ---
 
 
@@ -22,7 +22,7 @@ meta_desc: "Explore the Zone resource of the ns1 package, including examples, in
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/ns1/#Zone">Zone</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_primaries=None<span class="p">, </span>autogenerate_ns_record=None<span class="p">, </span>dnssec=None<span class="p">, </span>expiry=None<span class="p">, </span>link=None<span class="p">, </span>networks=None<span class="p">, </span>nx_ttl=None<span class="p">, </span>primary=None<span class="p">, </span>refresh=None<span class="p">, </span>retry=None<span class="p">, </span>secondaries=None<span class="p">, </span>ttl=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.Zone">Zone</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_primaries=None<span class="p">, </span>autogenerate_ns_record=None<span class="p">, </span>dnssec=None<span class="p">, </span>expiry=None<span class="p">, </span>link=None<span class="p">, </span>networks=None<span class="p">, </span>nx_ttl=None<span class="p">, </span>primary=None<span class="p">, </span>refresh=None<span class="p">, </span>retry=None<span class="p">, </span>secondaries=None<span class="p">, </span>ttl=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1017,7 +1017,7 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_primaries=None<span class="p">, </span>autogenerate_ns_record=None<span class="p">, </span>dns_servers=None<span class="p">, </span>dnssec=None<span class="p">, </span>expiry=None<span class="p">, </span>hostmaster=None<span class="p">, </span>link=None<span class="p">, </span>networks=None<span class="p">, </span>nx_ttl=None<span class="p">, </span>primary=None<span class="p">, </span>refresh=None<span class="p">, </span>retry=None<span class="p">, </span>secondaries=None<span class="p">, </span>ttl=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_primaries=None<span class="p">, </span>autogenerate_ns_record=None<span class="p">, </span>dns_servers=None<span class="p">, </span>dnssec=None<span class="p">, </span>expiry=None<span class="p">, </span>hostmaster=None<span class="p">, </span>link=None<span class="p">, </span>networks=None<span class="p">, </span>nx_ttl=None<span class="p">, </span>primary=None<span class="p">, </span>refresh=None<span class="p">, </span>retry=None<span class="p">, </span>secondaries=None<span class="p">, </span>ttl=None<span class="p">, </span>zone=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

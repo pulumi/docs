@@ -1,8 +1,8 @@
 
 ---
 title: "GetTeam"
-title_tag: "Function GetTeam | Package pagerduty"
-meta_desc: "Explore the GetTeam function of the pagerduty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [team](https://v1.developer.pagerduty.com/documentation/rest/teams/list) that you can use for other PagerDuty resources."
+title_tag: "Function GetTeam | Package PagerDuty"
+meta_desc: "Explore the GetTeam function of the PagerDuty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [team](https://v1.developer.pagerduty.com/documentation/rest/teams/list) that you can use for other PagerDuty resources."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the GetTeam function of the pagerduty package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to get information about a specific [team](https://v1.developer.pagerduty.com/documentation/rest/teams/list) that you can use for other PagerDuty resources.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -63,6 +61,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -87,9 +86,11 @@ foo = pagerduty.EscalationPolicy("foo",
     }],
     teams=[devops.id])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -112,6 +113,7 @@ const foo = new pagerduty.EscalationPolicy("foo", {
     teams: [devops.id],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

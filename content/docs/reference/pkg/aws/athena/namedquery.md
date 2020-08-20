@@ -50,14 +50,14 @@ class MyStack : Stack
         });
         var hogeDatabase = new Aws.Athena.Database("hogeDatabase", new Aws.Athena.DatabaseArgs
         {
-            Bucket = hogeBucket.Id,
             Name = "users",
+            Bucket = hogeBucket.Id,
         });
         var foo = new Aws.Athena.NamedQuery("foo", new Aws.Athena.NamedQueryArgs
         {
+            Workgroup = testWorkgroup.Id,
             Database = hogeDatabase.Name,
             Query = hogeDatabase.Name.Apply(name => $"SELECT * FROM {name} limit 10;"),
-            Workgroup = testWorkgroup.Id,
         });
     }
 
@@ -73,9 +73,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/kms"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/athena"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kms"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -106,18 +106,18 @@ func main() {
 			return err
 		}
 		hogeDatabase, err := athena.NewDatabase(ctx, "hogeDatabase", &athena.DatabaseArgs{
-			Bucket: hogeBucket.ID(),
 			Name:   pulumi.String("users"),
+			Bucket: hogeBucket.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = athena.NewNamedQuery(ctx, "foo", &athena.NamedQueryArgs{
-			Database: hogeDatabase.Name,
+			Workgroup: testWorkgroup.ID(),
+			Database:  hogeDatabase.Name,
 			Query: hogeDatabase.Name.ApplyT(func(name string) (string, error) {
 				return fmt.Sprintf("%v%v%v", "SELECT * FROM ", name, " limit 10;"), nil
 			}).(pulumi.StringOutput),
-			Workgroup: testWorkgroup.ID(),
 		})
 		if err != nil {
 			return err
@@ -147,12 +147,12 @@ test_workgroup = aws.athena.Workgroup("testWorkgroup", configuration={
     },
 })
 hoge_database = aws.athena.Database("hogeDatabase",
-    bucket=hoge_bucket.id,
-    name="users")
+    name="users",
+    bucket=hoge_bucket.id)
 foo = aws.athena.NamedQuery("foo",
+    workgroup=test_workgroup.id,
     database=hoge_database.name,
-    query=hoge_database.name.apply(lambda name: f"SELECT * FROM {name} limit 10;"),
-    workgroup=test_workgroup.id)
+    query=hoge_database.name.apply(lambda name: f"SELECT * FROM {name} limit 10;"))
 ```
 
 {{% /example %}}
@@ -163,29 +163,27 @@ foo = aws.athena.NamedQuery("foo",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const hogeBucket = new aws.s3.Bucket("hoge", {});
-const testKey = new aws.kms.Key("test", {
+const hogeBucket = new aws.s3.Bucket("hogeBucket", {});
+const testKey = new aws.kms.Key("testKey", {
     deletionWindowInDays: 7,
     description: "Athena KMS Key",
 });
-const testWorkgroup = new aws.athena.Workgroup("test", {
-    configuration: {
-        resultConfiguration: {
-            encryptionConfiguration: {
-                encryptionOption: "SSE_KMS",
-                kmsKeyArn: testKey.arn,
-            },
+const testWorkgroup = new aws.athena.Workgroup("testWorkgroup", {configuration: {
+    resultConfiguration: {
+        encryptionConfiguration: {
+            encryptionOption: "SSE_KMS",
+            kmsKeyArn: testKey.arn,
         },
     },
-});
-const hogeDatabase = new aws.athena.Database("hoge", {
-    bucket: hogeBucket.id,
+}});
+const hogeDatabase = new aws.athena.Database("hogeDatabase", {
     name: "users",
+    bucket: hogeBucket.id,
 });
 const foo = new aws.athena.NamedQuery("foo", {
+    workgroup: testWorkgroup.id,
     database: hogeDatabase.name,
     query: pulumi.interpolate`SELECT * FROM ${hogeDatabase.name} limit 10;`,
-    workgroup: testWorkgroup.id,
 });
 ```
 
@@ -207,7 +205,7 @@ const foo = new aws.athena.NamedQuery("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#NamedQuery">NewNamedQuery</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#NamedQueryArgs">NamedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#NamedQuery">NamedQuery</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/athena?tab=doc#NamedQuery">NewNamedQuery</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/athena?tab=doc#NamedQueryArgs">NamedQueryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/athena?tab=doc#NamedQuery">NamedQuery</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -281,7 +279,7 @@ const foo = new aws.athena.NamedQuery("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -301,7 +299,7 @@ const foo = new aws.athena.NamedQuery("foo", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#NamedQueryArgs">NamedQueryArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/athena?tab=doc#NamedQueryArgs">NamedQueryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -311,7 +309,7 @@ const foo = new aws.athena.NamedQuery("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -718,7 +716,7 @@ Get an existing NamedQuery resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNamedQuery<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#NamedQueryState">NamedQueryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/athena?tab=doc#NamedQuery">NamedQuery</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNamedQuery<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/athena?tab=doc#NamedQueryState">NamedQueryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/athena?tab=doc#NamedQuery">NamedQuery</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

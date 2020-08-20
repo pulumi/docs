@@ -46,6 +46,11 @@ git_sha_short() {
     echo "$(git_sha)" | cut -c1-8
 }
 
+# current_time_in_ms returns the epoch time in milliseconds.
+current_time_in_ms() {
+    echo "$(node -e 'console.log(Date.now())')"
+}
+
 origin_bucket_prefix() {
     echo "pulumi-docs-origin"
 }
@@ -55,21 +60,76 @@ origin_bucket_metadata_filepath() {
     echo "./origin-bucket-metadata.json"
 }
 
-# pr_number_or_git_sha returns either the PR number of the current GitHub Actions run or
-# the Git SHA of the current branch, for purposes of naming the destination bucket and
-# bundled build assets.
-pr_number_or_git_sha() {
-    if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; then
-        echo "pr-$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")"
+# build_identifier returns a string that is used to identify the current build for naming
+# S3 buckets and asset bundles.
+build_identifier() {
+    local identifier
+
+    # For CI builds, we use the GitHub Actions event to generate more readable identifiers.
+    # - For pull_request actions, return "pr-<number>-<git-sha>"
+    # - For others, return "<event-name>-<git-sha>".
+    if [[ ! -z "$GITHUB_EVENT_NAME" && ! -z "$GITHUB_EVENT_PATH" ]]; then
+        identifier="$GITHUB_EVENT_NAME"
+
+        if [ "$GITHUB_EVENT_NAME" == "pull_request" ]; then
+            identifier="pr-$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")"
+        fi
+
+        identifier="${identifier}-$(git_sha_short)"
     else
-        echo "push-$(git_sha_short)"
+        # For on-demand builds, if an identifier's been set, use it.
+        identifier="$BUILD_IDENTIFIER"
+
+        # Otherwise, just use the current Git SHA.
+        if [ -z "$BUILD_IDENTIFIER" ]; then
+            identifier="$(git_sha_short)"
+        fi
     fi
+
+    echo "$identifier"
 }
 
 # Get the AWS SSM Parameter Store key for the specified commit SHA. Used for mapping a
 # commit to a previously created bucket.
 ssm_parameter_key_for_commit() {
     echo "/docs/commits/$1/bucket"
+}
+
+# Get the S3 bucket associated with a specific commit.
+get_bucket_for_commit() {
+    aws ssm get-parameter \
+        --name "$(ssm_parameter_key_for_commit $1)" \
+        --query Parameter.Value \
+        --region us-west-2 \
+        --output text || echo ""
+}
+
+# Set the S3 bucket associated with a specific commit.
+set_bucket_for_commit() {
+    aws ssm put-parameter \
+        --name "$(ssm_parameter_key_for_commit $1)" \
+        --value "$2" \
+        --type String \
+        --region $3 \
+        --overwrite
+}
+
+# Get the GitHub pull_request object associated with a particular commit.
+# Note that this GitHub API is still in preview:
+# https://docs.github.com/en/rest/reference/repos#list-pull-requests-associated-with-a-commit
+get_pr_for_commit() {
+    curl -s \
+         -H "Accept: application/vnd.github.groot-preview+json" \
+         "https://api.github.com/repos/pulumi/docs/commits/$1/pulls" || echo ""
+}
+
+# List the 50 most recent bucket in the current account, sorted descendingly by
+# CreationDate, matching the prefix we use to name website buckets. Supports an optional
+# suffix to filter by (e.g., "pr" or "push").
+get_recent_buckets() {
+    aws s3api list-buckets \
+        --query "reverse(sort_by(Buckets,&CreationDate))[:50].{id:Name,date:CreationDate}|[?starts_with(id,'$(origin_bucket_prefix)-${1}')]" \
+        --output json | jq -r '.[].id'
 }
 
 # Retry the given command some number of times, with a delay of some number of seconds between calls.

@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Steering Kubernetes on DigitalOcean with Pulumi"
-meta_desc: "Learn how Pulumi helps you to leverage real programming languages to overhaul the complexity of deploying and managing Kubernetes clusters and workloads."
+meta_desc: "Learn how Pulumi helps you to leverage familiar programming languages to overhaul the complexity of deploying and managing Kubernetes clusters and workloads."
 
 # A featured webinar will display first in the list.
 featured: false

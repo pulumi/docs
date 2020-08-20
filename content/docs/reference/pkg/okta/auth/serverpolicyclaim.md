@@ -14,8 +14,6 @@ Creates an Authorization Server Policy Rule.
 
 This resource allows you to create and configure an Authorization Server Policy Rule.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -49,10 +47,40 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/auth"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := auth.NewServerPolicyClaim(ctx, "example", &auth.ServerPolicyClaimArgs{
+			AuthServerId: pulumi.String("<auth server id>"),
+			GrantTypeWhitelists: pulumi.StringArray{
+				pulumi.String("implicit"),
+			},
+			GroupWhitelists: pulumi.StringArray{
+				pulumi.String("<group ids>"),
+			},
+			PolicyId: pulumi.String("<auth server policy id>"),
+			Priority: pulumi.Int(1),
+			Status:   pulumi.String("ACTIVE"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -68,9 +96,11 @@ example = okta.auth.ServerPolicyClaim("example",
     priority=1,
     status="ACTIVE")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -84,6 +114,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
     status: "ACTIVE",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -98,7 +129,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/auth/#ServerPolicyClaim">ServerPolicyClaim</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_token_lifetime_minutes=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>grant_type_whitelists=None<span class="p">, </span>group_blacklists=None<span class="p">, </span>group_whitelists=None<span class="p">, </span>inline_hook_id=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>priority=None<span class="p">, </span>refresh_token_lifetime_minutes=None<span class="p">, </span>refresh_token_window_minutes=None<span class="p">, </span>scope_whitelists=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>user_blacklists=None<span class="p">, </span>user_whitelists=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/auth/#pulumi_okta.auth.ServerPolicyClaim">ServerPolicyClaim</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_token_lifetime_minutes=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>grant_type_whitelists=None<span class="p">, </span>group_blacklists=None<span class="p">, </span>group_whitelists=None<span class="p">, </span>inline_hook_id=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>priority=None<span class="p">, </span>refresh_token_lifetime_minutes=None<span class="p">, </span>refresh_token_window_minutes=None<span class="p">, </span>scope_whitelists=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>user_blacklists=None<span class="p">, </span>user_whitelists=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1073,7 +1104,7 @@ Get an existing ServerPolicyClaim resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_token_lifetime_minutes=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>grant_type_whitelists=None<span class="p">, </span>group_blacklists=None<span class="p">, </span>group_whitelists=None<span class="p">, </span>inline_hook_id=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>priority=None<span class="p">, </span>refresh_token_lifetime_minutes=None<span class="p">, </span>refresh_token_window_minutes=None<span class="p">, </span>scope_whitelists=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>user_blacklists=None<span class="p">, </span>user_whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_token_lifetime_minutes=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>grant_type_whitelists=None<span class="p">, </span>group_blacklists=None<span class="p">, </span>group_whitelists=None<span class="p">, </span>inline_hook_id=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>priority=None<span class="p">, </span>refresh_token_lifetime_minutes=None<span class="p">, </span>refresh_token_window_minutes=None<span class="p">, </span>scope_whitelists=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>user_blacklists=None<span class="p">, </span>user_whitelists=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

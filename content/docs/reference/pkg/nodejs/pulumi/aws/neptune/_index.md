@@ -3,7 +3,7 @@ title: "Module neptune"
 title_tag: "Module neptune | Package @pulumi/aws | Node.js SDK"
 linktitle: "neptune"
 meta_desc: "Explore members of the neptune module in the @pulumi/aws package."
-git_sha: "e07f1c21047146459fa7794a69555b4dd80e2222"
+git_sha: "0a2e76f947fd9ea3ee41beab30d2121c4b385e5c"
 block_external_search_index: true
 ---
 
@@ -11,13 +11,6 @@ block_external_search_index: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
 
 {{< resource-docs-alert "aws" >}}
-
-
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-aws` repo](https://github.com/pulumi/pulumi-aws/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-aws` repo](https://github.com/terraform-providers/terraform-provider-aws/issues).
-
 
 
 
@@ -55,7 +48,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L38">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -74,8 +67,6 @@ phase because a modification has not yet taken place. You can use the
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -91,8 +82,11 @@ const defaultCluster = new aws.neptune.Cluster("default", {
 });
 ```
 
+> **Note:** AWS Neptune does not support user name/password–based access control.
+See the AWS [Docs](https://docs.aws.amazon.com/neptune/latest/userguide/limits.html) for more information.
+
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L184"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L185"> <b>constructor</b></a>
 </h4>
 
 
@@ -106,7 +100,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -117,14 +111,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -135,7 +129,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L68">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L69">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applyImmediately: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -143,7 +137,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`.
 
 <h4 class="pdoc-member-header" id="Cluster-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L72">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L73">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -151,7 +145,7 @@ Specifies whether any cluster modifications are applied immediately, or during t
 The Neptune Cluster Amazon Resource Name (ARN)
 
 <h4 class="pdoc-member-header" id="Cluster-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L76">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L77">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -159,7 +153,7 @@ The Neptune Cluster Amazon Resource Name (ARN)
 A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.
 
 <h4 class="pdoc-member-header" id="Cluster-backupRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L80">property <b>backupRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L81">property <b>backupRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupRetentionPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -167,7 +161,7 @@ A list of EC2 Availability Zones that instances in the Neptune cluster can be cr
 The days to retain backups for. Default `1`
 
 <h4 class="pdoc-member-header" id="Cluster-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L84">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L85">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -175,7 +169,7 @@ The days to retain backups for. Default `1`
 The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterIdentifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L88">property <b>clusterIdentifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L89">property <b>clusterIdentifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterIdentifierPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -183,7 +177,7 @@ The cluster identifier. If omitted, this provider will assign a random, unique i
 Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `clusterIdentifier`.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L92">property <b>clusterMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L93">property <b>clusterMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterMembers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -191,7 +185,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
 List of Neptune Instances that are a part of this cluster
 
 <h4 class="pdoc-member-header" id="Cluster-clusterResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L96">property <b>clusterResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L97">property <b>clusterResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -199,7 +193,7 @@ List of Neptune Instances that are a part of this cluster
 The Neptune Cluster Resource ID
 
 <h4 class="pdoc-member-header" id="Cluster-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L100">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L101">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -207,7 +201,7 @@ The Neptune Cluster Resource ID
 A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
 
 <h4 class="pdoc-member-header" id="Cluster-enableCloudwatchLogsExports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L104">property <b>enableCloudwatchLogsExports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L105">property <b>enableCloudwatchLogsExports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableCloudwatchLogsExports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -215,7 +209,7 @@ A value that indicates whether the DB cluster has deletion protection enabled.Th
 A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports `audit`.
 
 <h4 class="pdoc-member-header" id="Cluster-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L108">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L109">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -223,7 +217,7 @@ A list of the log types this DB cluster is configured to export to Cloudwatch Lo
 The DNS address of the Neptune instance
 
 <h4 class="pdoc-member-header" id="Cluster-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L112">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L113">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -231,7 +225,7 @@ The DNS address of the Neptune instance
 The name of the database engine to be used for this Neptune cluster. Defaults to `neptune`.
 
 <h4 class="pdoc-member-header" id="Cluster-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L116">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L117">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -239,7 +233,7 @@ The name of the database engine to be used for this Neptune cluster. Defaults to
 The database engine version.
 
 <h4 class="pdoc-member-header" id="Cluster-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L120">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L121">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>finalSnapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -247,7 +241,7 @@ The database engine version.
 The name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.
 
 <h4 class="pdoc-member-header" id="Cluster-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L124">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L125">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostedZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -255,7 +249,7 @@ The name of your final Neptune snapshot when this Neptune cluster is deleted. If
 The Route53 Hosted Zone ID of the endpoint
 
 <h4 class="pdoc-member-header" id="Cluster-iamDatabaseAuthenticationEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L128">property <b>iamDatabaseAuthenticationEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L129">property <b>iamDatabaseAuthenticationEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamDatabaseAuthenticationEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -263,7 +257,7 @@ The Route53 Hosted Zone ID of the endpoint
 Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
 
 <h4 class="pdoc-member-header" id="Cluster-iamRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L132">property <b>iamRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L133">property <b>iamRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -271,7 +265,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
 A List of ARNs for the IAM roles to associate to the Neptune Cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -280,7 +274,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L136">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L137">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -288,7 +282,7 @@ deployments and may be missing (undefined) during planning phases.
 The ARN for the KMS encryption key. When specifying `kmsKeyArn`, `storageEncrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="Cluster-neptuneClusterParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L140">property <b>neptuneClusterParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L141">property <b>neptuneClusterParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>neptuneClusterParameterGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -296,7 +290,7 @@ The ARN for the KMS encryption key. When specifying `kmsKeyArn`, `storageEncrypt
 A cluster parameter group to associate with the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-neptuneSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L144">property <b>neptuneSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L145">property <b>neptuneSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>neptuneSubnetGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -304,7 +298,7 @@ A cluster parameter group to associate with the cluster.
 A Neptune subnet group to associate with this Neptune instance.
 
 <h4 class="pdoc-member-header" id="Cluster-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L148">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L149">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -312,7 +306,7 @@ A Neptune subnet group to associate with this Neptune instance.
 The port on which the Neptune accepts connections. Default is `8182`.
 
 <h4 class="pdoc-member-header" id="Cluster-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L152">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L153">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredBackupWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -320,7 +314,7 @@ The port on which the Neptune accepts connections. Default is `8182`.
 The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 
 <h4 class="pdoc-member-header" id="Cluster-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L156">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L157">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredMaintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -328,7 +322,7 @@ The daily time range during which automated backups are created if automated bac
 The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
 
 <h4 class="pdoc-member-header" id="Cluster-readerEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L160">property <b>readerEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L161">property <b>readerEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readerEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -336,7 +330,7 @@ The weekly time range during which system maintenance can occur, in (UTC) e.g. w
 A read-only endpoint for the Neptune cluster, automatically load-balanced across replicas
 
 <h4 class="pdoc-member-header" id="Cluster-replicationSourceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L164">property <b>replicationSourceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L165">property <b>replicationSourceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationSourceIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -344,7 +338,7 @@ A read-only endpoint for the Neptune cluster, automatically load-balanced across
 ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is to be created as a Read Replica.
 
 <h4 class="pdoc-member-header" id="Cluster-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L168">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L169">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skipFinalSnapshot: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -352,7 +346,7 @@ ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is t
 Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from `finalSnapshotIdentifier`. Default is `false`.
 
 <h4 class="pdoc-member-header" id="Cluster-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L172">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L173">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -360,7 +354,7 @@ Determines whether a final Neptune snapshot is created before the Neptune cluste
 Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot.
 
 <h4 class="pdoc-member-header" id="Cluster-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L176">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L177">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -368,15 +362,15 @@ Specifies whether or not to create this cluster from a snapshot. You can use eit
 Specifies whether the Neptune cluster is encrypted. The default is `false` if not specified.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L180">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L181">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A map of tags to assign to the Neptune cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -385,7 +379,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L184">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L185">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcSecurityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -393,7 +387,7 @@ deployments.
 List of VPC security groups to associate with the Cluster
 
 <h3 class="pdoc-module-header" id="ClusterInstance" data-link-title="ClusterInstance">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L41">
         Resource <strong>ClusterInstance</strong>
     </a>
 </h3>
@@ -405,37 +399,36 @@ A Cluster Instance Resource defines attributes that are specific to a single ins
 You can simply add neptune instances and Neptune manages the replication. You can use the [count](https://www.terraform.io/docs/configuration/resources.html#count)
 meta-parameter to make multiple instances and join them all to the same Neptune Cluster, or you may specify different Cluster Instance resources with various `instanceClass` sizes.
 
-
 #### Example Usage
 
-
+The following example will create a neptune cluster with two neptune instances(one writer and one reader).
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultCluster = new aws.neptune.Cluster("default", {
-    applyImmediately: true,
-    backupRetentionPeriod: 5,
+const _default = new aws.neptune.Cluster("default", {
     clusterIdentifier: "neptune-cluster-demo",
     engine: "neptune",
-    iamDatabaseAuthenticationEnabled: true,
+    backupRetentionPeriod: 5,
     preferredBackupWindow: "07:00-09:00",
     skipFinalSnapshot: true,
+    iamDatabaseAuthenticationEnabled: true,
+    applyImmediately: true,
 });
-const example: aws.neptune.ClusterInstance[] = [];
-for (let i = 0; i < 2; i++) {
-    example.push(new aws.neptune.ClusterInstance(`example-${i}`, {
-        applyImmediately: true,
-        clusterIdentifier: defaultCluster.id,
+const example: aws.neptune.ClusterInstance[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    example.push(new aws.neptune.ClusterInstance(`example-${range.value}`, {
+        clusterIdentifier: _default.id,
         engine: "neptune",
         instanceClass: "db.r4.large",
+        applyImmediately: true,
     }));
 }
 ```
 
 <h4 class="pdoc-member-header" id="ClusterInstance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L167"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L166"> <b>constructor</b></a>
 </h4>
 
 
@@ -449,7 +442,7 @@ Create a ClusterInstance resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -460,14 +453,14 @@ Get an existing ClusterInstance resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -478,7 +471,7 @@ Returns true if the given object is an instance of ClusterInstance.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L73">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L72">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -486,7 +479,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The hostname of the instance. See also `endpoint` and `port`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L78">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L77">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applyImmediately: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -495,7 +488,7 @@ Specifies whether any instance modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L82">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L81">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -503,7 +496,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 Amazon Resource Name (ARN) of neptune instance
 
 <h4 class="pdoc-member-header" id="ClusterInstance-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L86">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L85">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoMinorVersionUpgrade: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -511,7 +504,7 @@ Amazon Resource Name (ARN) of neptune instance
 Indicates that minor engine upgrades will be applied automatically to the instance during the maintenance window. Default is `true`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L90">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L89">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -519,7 +512,7 @@ Indicates that minor engine upgrades will be applied automatically to the instan
 The EC2 Availability Zone that the neptune instance is created in.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L94">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L93">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -527,7 +520,7 @@ The EC2 Availability Zone that the neptune instance is created in.
 The identifier of the `aws.neptune.Cluster` in which to launch this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-dbiResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L98">property <b>dbiResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L97">property <b>dbiResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbiResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -535,7 +528,7 @@ The identifier of the `aws.neptune.Cluster` in which to launch this instance.
 The region-unique, immutable identifier for the neptune instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L102">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L101">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -543,7 +536,7 @@ The region-unique, immutable identifier for the neptune instance.
 The connection endpoint in `address:port` format.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L106">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L105">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -551,7 +544,7 @@ The connection endpoint in `address:port` format.
 The name of the database engine to be used for the neptune instance. Defaults to `neptune`. Valid Values: `neptune`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L110">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L109">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -559,7 +552,7 @@ The name of the database engine to be used for the neptune instance. Defaults to
 The neptune engine version.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -568,7 +561,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L114">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L113">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +569,7 @@ deployments and may be missing (undefined) during planning phases.
 The indentifier for the neptune instance, if omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L118">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L117">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identifierPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -584,7 +577,7 @@ The indentifier for the neptune instance, if omitted, this provider will assign 
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L122">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L121">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -592,7 +585,7 @@ Creates a unique identifier beginning with the specified prefix. Conflicts with 
 The instance class to use.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L126">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L125">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -600,7 +593,7 @@ The instance class to use.
 The ARN for the KMS encryption key if one is set to the neptune cluster.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-neptuneParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L130">property <b>neptuneParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L129">property <b>neptuneParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>neptuneParameterGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -608,7 +601,7 @@ The ARN for the KMS encryption key if one is set to the neptune cluster.
 The name of the neptune parameter group to associate with this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-neptuneSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L134">property <b>neptuneSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L133">property <b>neptuneSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>neptuneSubnetGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -616,7 +609,7 @@ The name of the neptune parameter group to associate with this instance.
 A subnet group to associate with this neptune instance. **NOTE:** This must match the `neptuneSubnetGroupName` of the attached `aws.neptune.Cluster`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L138">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L137">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -624,7 +617,7 @@ A subnet group to associate with this neptune instance. **NOTE:** This must matc
 The port on which the DB accepts connections. Defaults to `8182`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L142">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L141">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredBackupWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +625,7 @@ The port on which the DB accepts connections. Defaults to `8182`.
 The daily time range during which automated backups are created if automated backups are enabled. Eg: "04:00-09:00"
 
 <h4 class="pdoc-member-header" id="ClusterInstance-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L147">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L146">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredMaintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -641,7 +634,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h4 class="pdoc-member-header" id="ClusterInstance-promotionTier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L151">property <b>promotionTier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L150">property <b>promotionTier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>promotionTier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -649,7 +642,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L155">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L154">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publiclyAccessible: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -657,7 +650,7 @@ Default 0. Failover Priority setting on instance level. The reader who has lower
 Bool to control if instance is publicly accessible. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L159">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L158">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -665,15 +658,15 @@ Bool to control if instance is publicly accessible. Default is `false`.
 Specifies whether the neptune cluster is encrypted.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L163">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L162">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A map of tags to assign to the instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -682,7 +675,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ClusterInstance-writer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L167">property <b>writer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L166">property <b>writer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>writer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -690,7 +683,7 @@ deployments.
 Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
 
 <h3 class="pdoc-module-header" id="ClusterParameterGroup" data-link-title="ClusterParameterGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L28">
         Resource <strong>ClusterParameterGroup</strong>
     </a>
 </h3>
@@ -700,8 +693,6 @@ Boolean indicating if this instance is writable. `False` indicates this instance
 Manages a Neptune Cluster Parameter Group
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -718,7 +709,7 @@ const example = new aws.neptune.ClusterParameterGroup("example", {
 ```
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -732,7 +723,7 @@ Create a ClusterParameterGroup resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -743,14 +734,14 @@ Get an existing ClusterParameterGroup resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -761,7 +752,7 @@ Returns true if the given object is an instance of ClusterParameterGroup.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L61">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L59">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -769,7 +760,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the neptune cluster parameter group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L65">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L63">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -777,7 +768,7 @@ The ARN of the neptune cluster parameter group.
 The description of the neptune cluster parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L69">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L67">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -785,7 +776,7 @@ The description of the neptune cluster parameter group. Defaults to "Managed by 
 The family of the neptune cluster parameter group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -794,7 +785,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -802,7 +793,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the neptune parameter.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L77">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L75">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -810,7 +801,7 @@ The name of the neptune parameter.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L81">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L79">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterParameterGroupParameter'>ClusterParameterGroupParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -818,15 +809,15 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of neptune parameters to apply.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L83">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -835,7 +826,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClusterSnapshot" data-link-title="ClusterSnapshot">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L22">
         Resource <strong>ClusterSnapshot</strong>
     </a>
 </h3>
@@ -846,20 +837,18 @@ Manages a Neptune database cluster snapshot.
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.neptune.ClusterSnapshot("example", {
-    dbClusterIdentifier: aws_neptune_cluster_example.id,
+    dbClusterIdentifier: aws_neptune_cluster.example.id,
     dbClusterSnapshotIdentifier: "resourcetestsnapshot1234",
 });
 ```
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -873,7 +862,7 @@ Create a ClusterSnapshot resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L32">method <b>get</b></a>
 </h4>
 
 
@@ -884,14 +873,14 @@ Get an existing ClusterSnapshot resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L22">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L43">method <b>isInstance</b></a>
 </h4>
 
 
@@ -902,7 +891,7 @@ Returns true if the given object is an instance of ClusterSnapshot.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L55">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L53">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allocatedStorage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -910,7 +899,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the allocated storage size in gigabytes (GB).
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L59">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L57">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -918,7 +907,7 @@ Specifies the allocated storage size in gigabytes (GB).
 List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-dbClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L63">property <b>dbClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L61">property <b>dbClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbClusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -926,7 +915,7 @@ List of EC2 Availability Zones that instances in the DB cluster snapshot can be 
 The DB Cluster Identifier from which to take the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-dbClusterSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L67">property <b>dbClusterSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L65">property <b>dbClusterSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbClusterSnapshotArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -934,7 +923,7 @@ The DB Cluster Identifier from which to take the snapshot.
 The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-dbClusterSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L71">property <b>dbClusterSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L69">property <b>dbClusterSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbClusterSnapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -942,7 +931,7 @@ The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 The Identifier for the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L75">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L73">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -950,7 +939,7 @@ The Identifier for the snapshot.
 Specifies the name of the database engine.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L79">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L77">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -958,7 +947,7 @@ Specifies the name of the database engine.
 Version of the database engine for this DB cluster snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -967,7 +956,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L83">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L81">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -975,7 +964,7 @@ deployments and may be missing (undefined) during planning phases.
 If storageEncrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L87">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L85">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseModel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -983,7 +972,7 @@ If storageEncrypted is true, the AWS KMS key identifier for the encrypted DB clu
 License model information for the restored DB cluster.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L91">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L89">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -991,17 +980,17 @@ License model information for the restored DB cluster.
 Port that the DB cluster was listening on at the time of the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-snapshotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L92">property <b>snapshotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L90">property <b>snapshotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshot-sourceDbClusterSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L93">property <b>sourceDbClusterSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L91">property <b>sourceDbClusterSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceDbClusterSnapshotArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshot-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L97">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L95">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1009,7 +998,7 @@ Port that the DB cluster was listening on at the time of the snapshot.
 The status of this DB Cluster Snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L101">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L99">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageEncrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1017,7 +1006,7 @@ The status of this DB Cluster Snapshot.
 Specifies whether the DB cluster snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L22">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1026,7 +1015,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshot-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L105">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L103">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1034,7 +1023,7 @@ deployments.
 The VPC ID associated with the DB cluster snapshot.
 
 <h3 class="pdoc-module-header" id="EventSubscription" data-link-title="EventSubscription">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L61">
         Resource <strong>EventSubscription</strong>
     </a>
 </h3>
@@ -1047,23 +1036,26 @@ The VPC ID associated with the DB cluster snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultCluster = new aws.neptune.Cluster("default", {
-    applyImmediately: true,
-    backupRetentionPeriod: 5,
+const defaultCluster = new aws.neptune.Cluster("defaultCluster", {
     clusterIdentifier: "neptune-cluster-demo",
     engine: "neptune",
-    iamDatabaseAuthenticationEnabled: true,
+    backupRetentionPeriod: 5,
     preferredBackupWindow: "07:00-09:00",
     skipFinalSnapshot: true,
+    iamDatabaseAuthenticationEnabled: "true",
+    applyImmediately: "true",
 });
 const example = new aws.neptune.ClusterInstance("example", {
-    applyImmediately: true,
     clusterIdentifier: defaultCluster.id,
     engine: "neptune",
     instanceClass: "db.r4.large",
+    applyImmediately: "true",
 });
-const defaultTopic = new aws.sns.Topic("default", {});
-const defaultEventSubscription = new aws.neptune.EventSubscription("default", {
+const defaultTopic = new aws.sns.Topic("defaultTopic", {});
+const defaultEventSubscription = new aws.neptune.EventSubscription("defaultEventSubscription", {
+    snsTopicArn: defaultTopic.arn,
+    sourceType: "db-instance",
+    sourceIds: [example.id],
     eventCategories: [
         "maintenance",
         "availability",
@@ -1078,15 +1070,11 @@ const defaultEventSubscription = new aws.neptune.EventSubscription("default", {
         "configuration change",
         "read replica",
     ],
-    snsTopicArn: defaultTopic.arn,
-    sourceIds: [example.id],
-    sourceType: "db-instance",
     tags: {
         env: "test",
     },
 });
 ```
-
 #### Attributes
 
 The following additional atttributes are provided:
@@ -1096,7 +1084,7 @@ The following additional atttributes are provided:
 * `customerAwsId` - The AWS customer account associated with the Neptune event notification subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L125"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L122"> <b>constructor</b></a>
 </h4>
 
 
@@ -1110,7 +1098,7 @@ Create a EventSubscription resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventSubscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L74">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L71">method <b>get</b></a>
 </h4>
 
 
@@ -1121,14 +1109,14 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L64">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L61">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L82">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1139,17 +1127,17 @@ Returns true if the given object is an instance of EventSubscription.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventSubscription-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L92">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L89">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscription-customerAwsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L93">property <b>customerAwsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L90">property <b>customerAwsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customerAwsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscription-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L97">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L94">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1157,7 +1145,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A boolean flag to enable/disable the subscription. Defaults to true.
 
 <h4 class="pdoc-member-header" id="EventSubscription-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L101">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L98">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventCategories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1165,7 +1153,7 @@ A boolean flag to enable/disable the subscription. Defaults to true.
 A list of event categories for a `sourceType` that you want to subscribe to. Run `aws neptune describe-event-categories` to find all the event categories.
 
 <h4 class="pdoc-member-header" id="EventSubscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1174,7 +1162,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventSubscription-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L105">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1182,7 +1170,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Neptune event subscription. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="EventSubscription-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L109">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L106">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1190,7 +1178,7 @@ The name of the Neptune event subscription. By default generated by this provide
 The name of the Neptune event subscription. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="EventSubscription-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L113">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L110">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snsTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1198,7 +1186,7 @@ The name of the Neptune event subscription. Conflicts with `name`.
 The ARN of the SNS topic to send events to.
 
 <h4 class="pdoc-member-header" id="EventSubscription-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L117">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L114">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1206,7 +1194,7 @@ The ARN of the SNS topic to send events to.
 A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a `sourceType` must also be specified.
 
 <h4 class="pdoc-member-header" id="EventSubscription-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L121">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L118">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1214,15 +1202,15 @@ A list of identifiers of the event sources for which events will be returned. If
 The type of source that will be generating the events. Valid options are `db-instance`, `db-security-group`, `db-parameter-group`, `db-snapshot`, `db-cluster` or `db-cluster-snapshot`. If not set, all sources will be subscribed to.
 
 <h4 class="pdoc-member-header" id="EventSubscription-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L125">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L122">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="EventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L64">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L61">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1231,7 +1219,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ParameterGroup" data-link-title="ParameterGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L27">
         Resource <strong>ParameterGroup</strong>
     </a>
 </h3>
@@ -1241,8 +1229,6 @@ deployments.
 Manages a Neptune Parameter Group
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1258,7 +1244,7 @@ const example = new aws.neptune.ParameterGroup("example", {
 ```
 
 <h4 class="pdoc-member-header" id="ParameterGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -1272,7 +1258,7 @@ Create a ParameterGroup resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -1283,14 +1269,14 @@ Get an existing ParameterGroup resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ParameterGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1301,7 +1287,7 @@ Returns true if the given object is an instance of ParameterGroup.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L60">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1309,7 +1295,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Neptune parameter group Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="ParameterGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L64">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L62">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1317,7 +1303,7 @@ The Neptune parameter group Amazon Resource Name (ARN).
 The description of the Neptune parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroup-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L68">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L66">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1325,7 +1311,7 @@ The description of the Neptune parameter group. Defaults to "Managed by Pulumi".
 The family of the Neptune parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1334,7 +1320,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1342,7 +1328,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Neptune parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L76">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L74">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ParameterGroupParameter'>ParameterGroupParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1350,15 +1336,15 @@ The name of the Neptune parameter.
 A list of Neptune parameters to apply.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L80">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L78">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1367,7 +1353,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SubnetGroup" data-link-title="SubnetGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L27">
         Resource <strong>SubnetGroup</strong>
     </a>
 </h3>
@@ -1378,16 +1364,14 @@ Provides an Neptune subnet group resource.
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultSubnetGroup = new aws.neptune.SubnetGroup("default", {
+const _default = new aws.neptune.SubnetGroup("default", {
     subnetIds: [
-        aws_subnet_frontend.id,
-        aws_subnet_backend.id,
+        aws_subnet.frontend.id,
+        aws_subnet.backend.id,
     ],
     tags: {
         Name: "My neptune subnet group",
@@ -1396,7 +1380,7 @@ const defaultSubnetGroup = new aws.neptune.SubnetGroup("default", {
 ```
 
 <h4 class="pdoc-member-header" id="SubnetGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -1410,7 +1394,7 @@ Create a SubnetGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -1421,14 +1405,14 @@ Get an existing SubnetGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SubnetGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1439,7 +1423,7 @@ Returns true if the given object is an instance of SubnetGroup.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L60">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1447,7 +1431,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the neptune subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L64">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L62">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1455,7 +1439,7 @@ The ARN of the neptune subnet group.
 The description of the neptune subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1464,7 +1448,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1472,7 +1456,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the neptune subnet group. If omitted, this provider will assign a random, unique name.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L72">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L70">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1480,7 +1464,7 @@ The name of the neptune subnet group. If omitted, this provider will assign a ra
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L76">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L74">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1488,15 +1472,15 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of VPC subnet IDs.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L80">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L78">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1508,7 +1492,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L401">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L402">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -1518,7 +1502,7 @@ deployments.
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L405">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L406">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1526,7 +1510,7 @@ The set of arguments for constructing a Cluster resource.
 Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L409">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L410">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1534,7 +1518,7 @@ Specifies whether any cluster modifications are applied immediately, or during t
 A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-backupRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L413">property <b>backupRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L414">property <b>backupRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1542,7 +1526,7 @@ A list of EC2 Availability Zones that instances in the Neptune cluster can be cr
 The days to retain backups for. Default `1`
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L417">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L418">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1550,7 +1534,7 @@ The days to retain backups for. Default `1`
 The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterIdentifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L421">property <b>clusterIdentifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L422">property <b>clusterIdentifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1558,7 +1542,7 @@ The cluster identifier. If omitted, this provider will assign a random, unique i
 Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `clusterIdentifier`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L425">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L426">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1566,7 +1550,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
 A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enableCloudwatchLogsExports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L429">property <b>enableCloudwatchLogsExports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L430">property <b>enableCloudwatchLogsExports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableCloudwatchLogsExports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1574,7 +1558,7 @@ A value that indicates whether the DB cluster has deletion protection enabled.Th
 A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports `audit`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L433">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L434">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1582,7 +1566,7 @@ A list of the log types this DB cluster is configured to export to Cloudwatch Lo
 The name of the database engine to be used for this Neptune cluster. Defaults to `neptune`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L437">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L438">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1590,7 +1574,7 @@ The name of the database engine to be used for this Neptune cluster. Defaults to
 The database engine version.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L441">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L442">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>finalSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1598,7 +1582,7 @@ The database engine version.
 The name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-iamDatabaseAuthenticationEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L445">property <b>iamDatabaseAuthenticationEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L446">property <b>iamDatabaseAuthenticationEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamDatabaseAuthenticationEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1606,7 +1590,7 @@ The name of your final Neptune snapshot when this Neptune cluster is deleted. If
 Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-iamRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L449">property <b>iamRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L450">property <b>iamRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1614,7 +1598,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
 A List of ARNs for the IAM roles to associate to the Neptune Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L453">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L454">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1622,7 +1606,7 @@ A List of ARNs for the IAM roles to associate to the Neptune Cluster.
 The ARN for the KMS encryption key. When specifying `kmsKeyArn`, `storageEncrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-neptuneClusterParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L457">property <b>neptuneClusterParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L458">property <b>neptuneClusterParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>neptuneClusterParameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1630,7 +1614,7 @@ The ARN for the KMS encryption key. When specifying `kmsKeyArn`, `storageEncrypt
 A cluster parameter group to associate with the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-neptuneSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L461">property <b>neptuneSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L462">property <b>neptuneSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>neptuneSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1638,7 +1622,7 @@ A cluster parameter group to associate with the cluster.
 A Neptune subnet group to associate with this Neptune instance.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L465">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L466">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1646,7 +1630,7 @@ A Neptune subnet group to associate with this Neptune instance.
 The port on which the Neptune accepts connections. Default is `8182`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L469">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L470">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredBackupWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1654,7 +1638,7 @@ The port on which the Neptune accepts connections. Default is `8182`.
 The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 
 <h4 class="pdoc-member-header" id="ClusterArgs-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L473">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L474">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1662,7 +1646,7 @@ The daily time range during which automated backups are created if automated bac
 The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
 
 <h4 class="pdoc-member-header" id="ClusterArgs-replicationSourceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L477">property <b>replicationSourceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L478">property <b>replicationSourceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSourceIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1670,7 +1654,7 @@ The weekly time range during which system maintenance can occur, in (UTC) e.g. w
 ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is to be created as a Read Replica.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L481">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L482">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipFinalSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1678,7 +1662,7 @@ ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is t
 Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from `finalSnapshotIdentifier`. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L485">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L486">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1686,7 +1670,7 @@ Determines whether a final Neptune snapshot is created before the Neptune cluste
 Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L489">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L490">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1694,15 +1678,15 @@ Specifies whether or not to create this cluster from a snapshot. You can use eit
 Specifies whether the Neptune cluster is encrypted. The default is `false` if not specified.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L493">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L494">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the Neptune cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L497">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L498">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1710,7 +1694,7 @@ A map of tags to assign to the Neptune cluster.
 List of VPC security groups to associate with the Cluster
 
 <h3 class="pdoc-module-header" id="ClusterInstanceArgs" data-link-title="ClusterInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L356">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L355">
         interface <strong>ClusterInstanceArgs</strong>
     </a>
 </h3>
@@ -1720,7 +1704,7 @@ List of VPC security groups to associate with the Cluster
 The set of arguments for constructing a ClusterInstance resource.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L361">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L360">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1729,7 +1713,7 @@ Specifies whether any instance modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L365">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L364">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1737,7 +1721,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 Indicates that minor engine upgrades will be applied automatically to the instance during the maintenance window. Default is `true`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L369">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L368">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1745,7 +1729,7 @@ Indicates that minor engine upgrades will be applied automatically to the instan
 The EC2 Availability Zone that the neptune instance is created in.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L373">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L372">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1753,7 +1737,7 @@ The EC2 Availability Zone that the neptune instance is created in.
 The identifier of the `aws.neptune.Cluster` in which to launch this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L377">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L376">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1761,7 +1745,7 @@ The identifier of the `aws.neptune.Cluster` in which to launch this instance.
 The name of the database engine to be used for the neptune instance. Defaults to `neptune`. Valid Values: `neptune`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L381">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L380">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1769,7 +1753,7 @@ The name of the database engine to be used for the neptune instance. Defaults to
 The neptune engine version.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L385">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L384">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1777,7 +1761,7 @@ The neptune engine version.
 The indentifier for the neptune instance, if omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L389">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L388">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1785,7 +1769,7 @@ The indentifier for the neptune instance, if omitted, this provider will assign 
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L393">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L392">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1793,7 +1777,7 @@ Creates a unique identifier beginning with the specified prefix. Conflicts with 
 The instance class to use.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-neptuneParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L397">property <b>neptuneParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L396">property <b>neptuneParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>neptuneParameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1801,7 +1785,7 @@ The instance class to use.
 The name of the neptune parameter group to associate with this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-neptuneSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L401">property <b>neptuneSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L400">property <b>neptuneSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>neptuneSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1809,7 +1793,7 @@ The name of the neptune parameter group to associate with this instance.
 A subnet group to associate with this neptune instance. **NOTE:** This must match the `neptuneSubnetGroupName` of the attached `aws.neptune.Cluster`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L405">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L404">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1817,7 +1801,7 @@ A subnet group to associate with this neptune instance. **NOTE:** This must matc
 The port on which the DB accepts connections. Defaults to `8182`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L409">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L408">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredBackupWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1825,7 +1809,7 @@ The port on which the DB accepts connections. Defaults to `8182`.
 The daily time range during which automated backups are created if automated backups are enabled. Eg: "04:00-09:00"
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L414">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L413">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1834,7 +1818,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-promotionTier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L418">property <b>promotionTier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L417">property <b>promotionTier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>promotionTier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1842,7 +1826,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L422">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L421">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1850,15 +1834,15 @@ Default 0. Failover Priority setting on instance level. The reader who has lower
 Bool to control if instance is publicly accessible. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L426">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L425">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the instance.
 
 <h3 class="pdoc-module-header" id="ClusterInstanceState" data-link-title="ClusterInstanceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L252">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L251">
         interface <strong>ClusterInstanceState</strong>
     </a>
 </h3>
@@ -1868,7 +1852,7 @@ A map of tags to assign to the instance.
 Input properties used for looking up and filtering ClusterInstance resources.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L256">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L255">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1876,7 +1860,7 @@ Input properties used for looking up and filtering ClusterInstance resources.
 The hostname of the instance. See also `endpoint` and `port`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L261">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L260">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1885,7 +1869,7 @@ Specifies whether any instance modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L265">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L264">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1893,7 +1877,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 Amazon Resource Name (ARN) of neptune instance
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L269">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L268">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1901,7 +1885,7 @@ Amazon Resource Name (ARN) of neptune instance
 Indicates that minor engine upgrades will be applied automatically to the instance during the maintenance window. Default is `true`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L273">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L272">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1909,7 +1893,7 @@ Indicates that minor engine upgrades will be applied automatically to the instan
 The EC2 Availability Zone that the neptune instance is created in.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L277">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L276">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1917,7 +1901,7 @@ The EC2 Availability Zone that the neptune instance is created in.
 The identifier of the `aws.neptune.Cluster` in which to launch this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-dbiResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L281">property <b>dbiResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L280">property <b>dbiResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbiResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1925,7 +1909,7 @@ The identifier of the `aws.neptune.Cluster` in which to launch this instance.
 The region-unique, immutable identifier for the neptune instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L285">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L284">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1933,7 +1917,7 @@ The region-unique, immutable identifier for the neptune instance.
 The connection endpoint in `address:port` format.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L289">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L288">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1941,7 +1925,7 @@ The connection endpoint in `address:port` format.
 The name of the database engine to be used for the neptune instance. Defaults to `neptune`. Valid Values: `neptune`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L293">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L292">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1949,7 +1933,7 @@ The name of the database engine to be used for the neptune instance. Defaults to
 The neptune engine version.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L297">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L296">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1957,7 +1941,7 @@ The neptune engine version.
 The indentifier for the neptune instance, if omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L301">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L300">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1965,7 +1949,7 @@ The indentifier for the neptune instance, if omitted, this provider will assign 
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-instanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L305">property <b>instanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L304">property <b>instanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1973,7 +1957,7 @@ Creates a unique identifier beginning with the specified prefix. Conflicts with 
 The instance class to use.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L309">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L308">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1981,7 +1965,7 @@ The instance class to use.
 The ARN for the KMS encryption key if one is set to the neptune cluster.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-neptuneParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L313">property <b>neptuneParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L312">property <b>neptuneParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>neptuneParameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1989,7 +1973,7 @@ The ARN for the KMS encryption key if one is set to the neptune cluster.
 The name of the neptune parameter group to associate with this instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-neptuneSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L317">property <b>neptuneSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L316">property <b>neptuneSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>neptuneSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1997,7 +1981,7 @@ The name of the neptune parameter group to associate with this instance.
 A subnet group to associate with this neptune instance. **NOTE:** This must match the `neptuneSubnetGroupName` of the attached `aws.neptune.Cluster`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L321">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L320">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2005,7 +1989,7 @@ A subnet group to associate with this neptune instance. **NOTE:** This must matc
 The port on which the DB accepts connections. Defaults to `8182`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L325">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L324">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredBackupWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2013,7 +1997,7 @@ The port on which the DB accepts connections. Defaults to `8182`.
 The daily time range during which automated backups are created if automated backups are enabled. Eg: "04:00-09:00"
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L330">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L329">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2022,7 +2006,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-promotionTier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L334">property <b>promotionTier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L333">property <b>promotionTier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>promotionTier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2030,7 +2014,7 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L338">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L337">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2038,7 +2022,7 @@ Default 0. Failover Priority setting on instance level. The reader who has lower
 Bool to control if instance is publicly accessible. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L342">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L341">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2046,15 +2030,15 @@ Bool to control if instance is publicly accessible. Default is `false`.
 Specifies whether the neptune cluster is encrypted.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L346">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L345">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the instance.
 
 <h4 class="pdoc-member-header" id="ClusterInstanceState-writer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterInstance.ts#L350">property <b>writer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterInstance.ts#L349">property <b>writer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2062,7 +2046,7 @@ A map of tags to assign to the instance.
 Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
 
 <h3 class="pdoc-module-header" id="ClusterParameterGroupArgs" data-link-title="ClusterParameterGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L165">
         interface <strong>ClusterParameterGroupArgs</strong>
     </a>
 </h3>
@@ -2072,7 +2056,7 @@ Boolean indicating if this instance is writable. `False` indicates this instance
 The set of arguments for constructing a ClusterParameterGroup resource.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L171">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L169">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2080,7 +2064,7 @@ The set of arguments for constructing a ClusterParameterGroup resource.
 The description of the neptune cluster parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L175">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L173">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2088,7 +2072,7 @@ The description of the neptune cluster parameter group. Defaults to "Managed by 
 The family of the neptune cluster parameter group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2096,7 +2080,7 @@ The family of the neptune cluster parameter group.
 The name of the neptune parameter.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L183">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L181">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2104,7 +2088,7 @@ The name of the neptune parameter.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L187">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L185">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterParameterGroupParameter'>ClusterParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -2112,15 +2096,15 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of neptune parameters to apply.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L191">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L189">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ClusterParameterGroupState" data-link-title="ClusterParameterGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L131">
         interface <strong>ClusterParameterGroupState</strong>
     </a>
 </h3>
@@ -2130,7 +2114,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering ClusterParameterGroup resources.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L137">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L135">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2138,7 +2122,7 @@ Input properties used for looking up and filtering ClusterParameterGroup resourc
 The ARN of the neptune cluster parameter group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L141">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L139">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2146,7 +2130,7 @@ The ARN of the neptune cluster parameter group.
 The description of the neptune cluster parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L145">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L143">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2154,7 +2138,7 @@ The description of the neptune cluster parameter group. Defaults to "Managed by 
 The family of the neptune cluster parameter group.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L147">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2162,7 +2146,7 @@ The family of the neptune cluster parameter group.
 The name of the neptune parameter.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L153">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L151">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2170,7 +2154,7 @@ The name of the neptune parameter.
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L157">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L155">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterParameterGroupParameter'>ClusterParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -2178,15 +2162,15 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of neptune parameters to apply.
 
 <h4 class="pdoc-member-header" id="ClusterParameterGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterParameterGroup.ts#L161">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterParameterGroup.ts#L159">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ClusterSnapshotArgs" data-link-title="ClusterSnapshotArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L232">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L230">
         interface <strong>ClusterSnapshotArgs</strong>
     </a>
 </h3>
@@ -2196,7 +2180,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a ClusterSnapshot resource.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotArgs-dbClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L236">property <b>dbClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L234">property <b>dbClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2204,7 +2188,7 @@ The set of arguments for constructing a ClusterSnapshot resource.
 The DB Cluster Identifier from which to take the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotArgs-dbClusterSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L240">property <b>dbClusterSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L238">property <b>dbClusterSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterSnapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2212,7 +2196,7 @@ The DB Cluster Identifier from which to take the snapshot.
 The Identifier for the snapshot.
 
 <h3 class="pdoc-module-header" id="ClusterSnapshotState" data-link-title="ClusterSnapshotState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L170">
         interface <strong>ClusterSnapshotState</strong>
     </a>
 </h3>
@@ -2222,7 +2206,7 @@ The Identifier for the snapshot.
 Input properties used for looking up and filtering ClusterSnapshot resources.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L176">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L174">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allocatedStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2230,7 +2214,7 @@ Input properties used for looking up and filtering ClusterSnapshot resources.
 Specifies the allocated storage size in gigabytes (GB).
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L180">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L178">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2238,7 +2222,7 @@ Specifies the allocated storage size in gigabytes (GB).
 List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-dbClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L184">property <b>dbClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L182">property <b>dbClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2246,7 +2230,7 @@ List of EC2 Availability Zones that instances in the DB cluster snapshot can be 
 The DB Cluster Identifier from which to take the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-dbClusterSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L188">property <b>dbClusterSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L186">property <b>dbClusterSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterSnapshotArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2254,7 +2238,7 @@ The DB Cluster Identifier from which to take the snapshot.
 The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-dbClusterSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L192">property <b>dbClusterSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L190">property <b>dbClusterSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbClusterSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2262,7 +2246,7 @@ The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 The Identifier for the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L196">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L194">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2270,7 +2254,7 @@ The Identifier for the snapshot.
 Specifies the name of the database engine.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L200">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L198">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2278,7 +2262,7 @@ Specifies the name of the database engine.
 Version of the database engine for this DB cluster snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L204">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L202">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2286,7 +2270,7 @@ Version of the database engine for this DB cluster snapshot.
 If storageEncrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-licenseModel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L208">property <b>licenseModel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L206">property <b>licenseModel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseModel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2294,7 +2278,7 @@ If storageEncrypted is true, the AWS KMS key identifier for the encrypted DB clu
 License model information for the restored DB cluster.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L212">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L210">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2302,17 +2286,17 @@ License model information for the restored DB cluster.
 Port that the DB cluster was listening on at the time of the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-snapshotType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L213">property <b>snapshotType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L211">property <b>snapshotType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-sourceDbClusterSnapshotArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L214">property <b>sourceDbClusterSnapshotArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L212">property <b>sourceDbClusterSnapshotArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceDbClusterSnapshotArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L218">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L216">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2320,7 +2304,7 @@ Port that the DB cluster was listening on at the time of the snapshot.
 The status of this DB Cluster Snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L222">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L220">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2328,7 +2312,7 @@ The status of this DB Cluster Snapshot.
 Specifies whether the DB cluster snapshot is encrypted.
 
 <h4 class="pdoc-member-header" id="ClusterSnapshotState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/clusterSnapshot.ts#L226">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/clusterSnapshot.ts#L224">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2336,7 +2320,7 @@ Specifies whether the DB cluster snapshot is encrypted.
 The VPC ID associated with the DB cluster snapshot.
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L275">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L276">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -2346,7 +2330,7 @@ The VPC ID associated with the DB cluster snapshot.
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L279">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L280">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2354,7 +2338,7 @@ Input properties used for looking up and filtering Cluster resources.
 Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L283">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L284">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2362,7 +2346,7 @@ Specifies whether any cluster modifications are applied immediately, or during t
 The Neptune Cluster Amazon Resource Name (ARN)
 
 <h4 class="pdoc-member-header" id="ClusterState-availabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L287">property <b>availabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L288">property <b>availabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2370,7 +2354,7 @@ The Neptune Cluster Amazon Resource Name (ARN)
 A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.
 
 <h4 class="pdoc-member-header" id="ClusterState-backupRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L291">property <b>backupRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L292">property <b>backupRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupRetentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2378,7 +2362,7 @@ A list of EC2 Availability Zones that instances in the Neptune cluster can be cr
 The days to retain backups for. Default `1`
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L295">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L296">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2386,7 +2370,7 @@ The days to retain backups for. Default `1`
 The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterIdentifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L299">property <b>clusterIdentifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L300">property <b>clusterIdentifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2394,7 +2378,7 @@ The cluster identifier. If omitted, this provider will assign a random, unique i
 Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `clusterIdentifier`.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterMembers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L303">property <b>clusterMembers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L304">property <b>clusterMembers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterMembers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2402,7 +2386,7 @@ Creates a unique cluster identifier beginning with the specified prefix. Conflic
 List of Neptune Instances that are a part of this cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L307">property <b>clusterResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L308">property <b>clusterResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2410,7 +2394,7 @@ List of Neptune Instances that are a part of this cluster
 The Neptune Cluster Resource ID
 
 <h4 class="pdoc-member-header" id="ClusterState-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L311">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L312">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2418,7 +2402,7 @@ The Neptune Cluster Resource ID
 A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
 
 <h4 class="pdoc-member-header" id="ClusterState-enableCloudwatchLogsExports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L315">property <b>enableCloudwatchLogsExports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L316">property <b>enableCloudwatchLogsExports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableCloudwatchLogsExports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2426,7 +2410,7 @@ A value that indicates whether the DB cluster has deletion protection enabled.Th
 A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports `audit`.
 
 <h4 class="pdoc-member-header" id="ClusterState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L319">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L320">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2434,7 +2418,7 @@ A list of the log types this DB cluster is configured to export to Cloudwatch Lo
 The DNS address of the Neptune instance
 
 <h4 class="pdoc-member-header" id="ClusterState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L323">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L324">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2442,7 +2426,7 @@ The DNS address of the Neptune instance
 The name of the database engine to be used for this Neptune cluster. Defaults to `neptune`.
 
 <h4 class="pdoc-member-header" id="ClusterState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L327">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L328">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2450,7 +2434,7 @@ The name of the database engine to be used for this Neptune cluster. Defaults to
 The database engine version.
 
 <h4 class="pdoc-member-header" id="ClusterState-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L331">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L332">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>finalSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2458,7 +2442,7 @@ The database engine version.
 The name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.
 
 <h4 class="pdoc-member-header" id="ClusterState-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L335">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L336">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2466,7 +2450,7 @@ The name of your final Neptune snapshot when this Neptune cluster is deleted. If
 The Route53 Hosted Zone ID of the endpoint
 
 <h4 class="pdoc-member-header" id="ClusterState-iamDatabaseAuthenticationEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L339">property <b>iamDatabaseAuthenticationEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L340">property <b>iamDatabaseAuthenticationEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamDatabaseAuthenticationEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2474,7 +2458,7 @@ The Route53 Hosted Zone ID of the endpoint
 Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
 
 <h4 class="pdoc-member-header" id="ClusterState-iamRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L343">property <b>iamRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L344">property <b>iamRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2482,7 +2466,7 @@ Specifies whether or mappings of AWS Identity and Access Management (IAM) accoun
 A List of ARNs for the IAM roles to associate to the Neptune Cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L347">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L348">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2490,7 +2474,7 @@ A List of ARNs for the IAM roles to associate to the Neptune Cluster.
 The ARN for the KMS encryption key. When specifying `kmsKeyArn`, `storageEncrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="ClusterState-neptuneClusterParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L351">property <b>neptuneClusterParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L352">property <b>neptuneClusterParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>neptuneClusterParameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2498,7 +2482,7 @@ The ARN for the KMS encryption key. When specifying `kmsKeyArn`, `storageEncrypt
 A cluster parameter group to associate with the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-neptuneSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L355">property <b>neptuneSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L356">property <b>neptuneSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>neptuneSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2506,7 +2490,7 @@ A cluster parameter group to associate with the cluster.
 A Neptune subnet group to associate with this Neptune instance.
 
 <h4 class="pdoc-member-header" id="ClusterState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L359">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L360">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2514,7 +2498,7 @@ A Neptune subnet group to associate with this Neptune instance.
 The port on which the Neptune accepts connections. Default is `8182`.
 
 <h4 class="pdoc-member-header" id="ClusterState-preferredBackupWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L363">property <b>preferredBackupWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L364">property <b>preferredBackupWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredBackupWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2522,7 +2506,7 @@ The port on which the Neptune accepts connections. Default is `8182`.
 The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 
 <h4 class="pdoc-member-header" id="ClusterState-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L367">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L368">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2530,7 +2514,7 @@ The daily time range during which automated backups are created if automated bac
 The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
 
 <h4 class="pdoc-member-header" id="ClusterState-readerEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L371">property <b>readerEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L372">property <b>readerEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readerEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2538,7 +2522,7 @@ The weekly time range during which system maintenance can occur, in (UTC) e.g. w
 A read-only endpoint for the Neptune cluster, automatically load-balanced across replicas
 
 <h4 class="pdoc-member-header" id="ClusterState-replicationSourceIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L375">property <b>replicationSourceIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L376">property <b>replicationSourceIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSourceIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2546,7 +2530,7 @@ A read-only endpoint for the Neptune cluster, automatically load-balanced across
 ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is to be created as a Read Replica.
 
 <h4 class="pdoc-member-header" id="ClusterState-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L379">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L380">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipFinalSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2554,7 +2538,7 @@ ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is t
 Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from `finalSnapshotIdentifier`. Default is `false`.
 
 <h4 class="pdoc-member-header" id="ClusterState-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L383">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L384">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2562,7 +2546,7 @@ Determines whether a final Neptune snapshot is created before the Neptune cluste
 Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterState-storageEncrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L387">property <b>storageEncrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L388">property <b>storageEncrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageEncrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2570,15 +2554,15 @@ Specifies whether or not to create this cluster from a snapshot. You can use eit
 Specifies whether the Neptune cluster is encrypted. The default is `false` if not specified.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L391">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L392">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the Neptune cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/cluster.ts#L395">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/cluster.ts#L396">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2586,7 +2570,7 @@ A map of tags to assign to the Neptune cluster.
 List of VPC security groups to associate with the Cluster
 
 <h3 class="pdoc-module-header" id="EventSubscriptionArgs" data-link-title="EventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L219">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L216">
         interface <strong>EventSubscriptionArgs</strong>
     </a>
 </h3>
@@ -2596,7 +2580,7 @@ List of VPC security groups to associate with the Cluster
 The set of arguments for constructing a EventSubscription resource.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L223">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L220">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2604,7 +2588,7 @@ The set of arguments for constructing a EventSubscription resource.
 A boolean flag to enable/disable the subscription. Defaults to true.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L227">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L224">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventCategories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2612,7 +2596,7 @@ A boolean flag to enable/disable the subscription. Defaults to true.
 A list of event categories for a `sourceType` that you want to subscribe to. Run `aws neptune describe-event-categories` to find all the event categories.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L231">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L228">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2620,7 +2604,7 @@ A list of event categories for a `sourceType` that you want to subscribe to. Run
 The name of the Neptune event subscription. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L235">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L232">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2628,7 +2612,7 @@ The name of the Neptune event subscription. By default generated by this provide
 The name of the Neptune event subscription. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L239">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L236">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2636,7 +2620,7 @@ The name of the Neptune event subscription. Conflicts with `name`.
 The ARN of the SNS topic to send events to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L243">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L240">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2644,7 +2628,7 @@ The ARN of the SNS topic to send events to.
 A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a `sourceType` must also be specified.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L247">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L244">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2652,15 +2636,15 @@ A list of identifiers of the event sources for which events will be returned. If
 The type of source that will be generating the events. Valid options are `db-instance`, `db-security-group`, `db-parameter-group`, `db-snapshot`, `db-cluster` or `db-cluster-snapshot`. If not set, all sources will be subscribed to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L251">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L248">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="EventSubscriptionState" data-link-title="EventSubscriptionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L176">
         interface <strong>EventSubscriptionState</strong>
     </a>
 </h3>
@@ -2670,17 +2654,17 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering EventSubscription resources.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L180">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L177">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscriptionState-customerAwsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L181">property <b>customerAwsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L178">property <b>customerAwsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerAwsId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscriptionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L185">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L182">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2688,7 +2672,7 @@ Input properties used for looking up and filtering EventSubscription resources.
 A boolean flag to enable/disable the subscription. Defaults to true.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L189">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L186">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventCategories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2696,7 +2680,7 @@ A boolean flag to enable/disable the subscription. Defaults to true.
 A list of event categories for a `sourceType` that you want to subscribe to. Run `aws neptune describe-event-categories` to find all the event categories.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L193">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2704,7 +2688,7 @@ A list of event categories for a `sourceType` that you want to subscribe to. Run
 The name of the Neptune event subscription. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L197">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L194">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2712,7 +2696,7 @@ The name of the Neptune event subscription. By default generated by this provide
 The name of the Neptune event subscription. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L201">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L198">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2720,7 +2704,7 @@ The name of the Neptune event subscription. Conflicts with `name`.
 The ARN of the SNS topic to send events to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L205">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L202">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2728,7 +2712,7 @@ The ARN of the SNS topic to send events to.
 A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a `sourceType` must also be specified.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L209">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L206">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2736,15 +2720,15 @@ A list of identifiers of the event sources for which events will be returned. If
 The type of source that will be generating the events. Valid options are `db-instance`, `db-security-group`, `db-parameter-group`, `db-snapshot`, `db-cluster` or `db-cluster-snapshot`. If not set, all sources will be subscribed to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/eventSubscription.ts#L213">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/eventSubscription.ts#L210">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ParameterGroupArgs" data-link-title="ParameterGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L154">
         interface <strong>ParameterGroupArgs</strong>
     </a>
 </h3>
@@ -2754,7 +2738,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a ParameterGroup resource.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L160">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L158">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2762,7 +2746,7 @@ The set of arguments for constructing a ParameterGroup resource.
 The description of the Neptune parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L164">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L162">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2770,7 +2754,7 @@ The description of the Neptune parameter group. Defaults to "Managed by Pulumi".
 The family of the Neptune parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L166">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2778,7 +2762,7 @@ The family of the Neptune parameter group.
 The name of the Neptune parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L172">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L170">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -2786,15 +2770,15 @@ The name of the Neptune parameter.
 A list of Neptune parameters to apply.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L176">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L174">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ParameterGroupState" data-link-title="ParameterGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L124">
         interface <strong>ParameterGroupState</strong>
     </a>
 </h3>
@@ -2804,7 +2788,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering ParameterGroup resources.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L130">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L128">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2812,7 +2796,7 @@ Input properties used for looking up and filtering ParameterGroup resources.
 The Neptune parameter group Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L134">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L132">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2820,7 +2804,7 @@ The Neptune parameter group Amazon Resource Name (ARN).
 The description of the Neptune parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L138">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L136">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2828,7 +2812,7 @@ The description of the Neptune parameter group. Defaults to "Managed by Pulumi".
 The family of the Neptune parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2836,7 +2820,7 @@ The family of the Neptune parameter group.
 The name of the Neptune parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L146">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L144">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -2844,15 +2828,15 @@ The name of the Neptune parameter.
 A list of Neptune parameters to apply.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/parameterGroup.ts#L150">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/parameterGroup.ts#L148">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="SubnetGroupArgs" data-link-title="SubnetGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L154">
         interface <strong>SubnetGroupArgs</strong>
     </a>
 </h3>
@@ -2862,7 +2846,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a SubnetGroup resource.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L160">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L158">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2870,7 +2854,7 @@ The set of arguments for constructing a SubnetGroup resource.
 The description of the neptune subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2878,7 +2862,7 @@ The description of the neptune subnet group. Defaults to "Managed by Pulumi".
 The name of the neptune subnet group. If omitted, this provider will assign a random, unique name.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L168">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L166">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2886,7 +2870,7 @@ The name of the neptune subnet group. If omitted, this provider will assign a ra
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L172">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L170">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2894,15 +2878,15 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of VPC subnet IDs.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L176">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L174">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="SubnetGroupState" data-link-title="SubnetGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L124">
         interface <strong>SubnetGroupState</strong>
     </a>
 </h3>
@@ -2912,7 +2896,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering SubnetGroup resources.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L130">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L128">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2920,7 +2904,7 @@ Input properties used for looking up and filtering SubnetGroup resources.
 The ARN of the neptune subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L134">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L132">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2928,7 +2912,7 @@ The ARN of the neptune subnet group.
 The description of the neptune subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L136">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2936,7 +2920,7 @@ The description of the neptune subnet group. Defaults to "Managed by Pulumi".
 The name of the neptune subnet group. If omitted, this provider will assign a random, unique name.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L142">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L140">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2944,7 +2928,7 @@ The name of the neptune subnet group. If omitted, this provider will assign a ra
 Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L146">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L144">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2952,10 +2936,10 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 A list of VPC subnet IDs.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/neptune/subnetGroup.ts#L150">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/neptune/subnetGroup.ts#L148">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 

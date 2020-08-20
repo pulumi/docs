@@ -12,8 +12,6 @@ meta_desc: "Explore the GetMetadataSaml function of the idp module, including ex
 
 Use this data source to retrieve SAML IdP metadata from Okta.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,10 +34,31 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/idp"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := idp.GetMetadataSaml(ctx, &idp.GetMetadataSamlArgs{
+			Id: "<idp id>",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -49,9 +68,11 @@ import pulumi_okta as okta
 
 example = okta.idp.get_metadata_saml(id="<idp id>")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -60,6 +81,7 @@ const example = pulumi.output(okta.idp.getMetadataSaml({
     id: "<idp id>",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -1,8 +1,8 @@
 ---
-title: "Generate Kubernetes YAML with Real Programming Languages"
+title: "Generate Kubernetes YAML with Familiar Programming Languages"
 date: 2020-03-03
 draft: false
-meta_desc: Stop writing Kubernetes YAML by hand, and start using the power of real programming languages! Pulumi now supports rendering YAML for Kubernetes resources.
+meta_desc: Stop writing Kubernetes YAML by hand, and start using the power of familiar programming languages! Pulumi now supports rendering YAML for Kubernetes resources.
 meta_image: yamlRuler.png
 authors:
     - levi-blackstone
@@ -13,7 +13,7 @@ tags:
     
 ---
 
-Stop writing Kubernetes YAML by hand, and start using the power of real programming languages! Pulumi can
+Stop writing Kubernetes YAML by hand, and start using the power of familiar programming languages! Pulumi can
 generate Kubernetes manifests that easily integrate into existing CI/CD workflows.
 
 <!--more-->
@@ -25,7 +25,7 @@ existing workflows. The [v1.5.4](https://github.com/pulumi/pulumi-kubernetes/rel
 option, which enables this feature. This option is available in every Pulumi-supported language, including
 TypeScript/JavaScript, Python, and .NET ([Go support is coming soon!](https://github.com/pulumi/pulumi-kubernetes/issues/70)).
 
-Aside from easily templating configuration across resources, using a real programming language allows you to write and
+Aside from easily templating configuration across resources, using a familiar programming language allows you to write and
 consume libraries, and easily mix in infrastructure configuration (e.g., managed database endpoints, object storage,
 etc.), all in the same program.
 

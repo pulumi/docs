@@ -212,7 +212,7 @@ const exampleAppService = new azure.appservice.AppService("exampleAppService", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.AppService">AppService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_plan_id=None<span class="p">, </span>app_settings=None<span class="p">, </span>auth_settings=None<span class="p">, </span>backup=None<span class="p">, </span>client_affinity_enabled=None<span class="p">, </span>client_cert_enabled=None<span class="p">, </span>connection_strings=None<span class="p">, </span>enabled=None<span class="p">, </span>https_only=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>logs=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>site_config=None<span class="p">, </span>storage_accounts=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.AppService">AppService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_service_plan_id=None<span class="p">, </span>app_settings=None<span class="p">, </span>auth_settings=None<span class="p">, </span>backup=None<span class="p">, </span>client_affinity_enabled=None<span class="p">, </span>client_cert_enabled=None<span class="p">, </span>connection_strings=None<span class="p">, </span>enabled=None<span class="p">, </span>https_only=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>logs=None<span class="p">, </span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>site_config=None<span class="p">, </span>source_control=None<span class="p">, </span>storage_accounts=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -551,6 +551,17 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sourcecontrol_csharp">
+<a href="#sourcecontrol_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A Source Control block as defined below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageaccounts_csharp">
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span> 
@@ -741,6 +752,17 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#appservicesiteconfig">App<wbr>Service<wbr>Site<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcecontrol_go">
+<a href="#sourcecontrol_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}A Source Control block as defined below
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -939,6 +961,17 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sourcecontrol_nodejs">
+<a href="#sourcecontrol_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}A Source Control block as defined below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageaccounts_nodejs">
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
 </span> 
@@ -1133,6 +1166,17 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="source_control_python">
+<a href="#source_control_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">Dict[App<wbr>Service<wbr>Source<wbr>Control]</a></span>
+    </dt>
+    <dd>{{% md %}}A Source Control block as defined below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="storage_accounts_python">
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
@@ -1225,17 +1269,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="sourcecontrols_csharp">
-<a href="#sourcecontrols_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Controls</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">List&lt;App<wbr>Service<wbr>Source<wbr>Control&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A `source_control` block as defined below, which contains the Source Control information when `scm_type` is set to `LocalGit`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1295,17 +1328,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#appservicesitecredential">[]App<wbr>Service<wbr>Site<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="sourcecontrols_go">
-<a href="#sourcecontrols_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Controls</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">[]App<wbr>Service<wbr>Source<wbr>Control</a></span>
-    </dt>
-    <dd>{{% md %}}A `source_control` block as defined below, which contains the Source Control information when `scm_type` is set to `LocalGit`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1369,17 +1391,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="sourcecontrols_nodejs">
-<a href="#sourcecontrols_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Controls</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control[]</a></span>
-    </dt>
-    <dd>{{% md %}}A `source_control` block as defined below, which contains the Source Control information when `scm_type` is set to `LocalGit`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1441,17 +1452,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="source_controls_python">
-<a href="#source_controls_python" style="color: inherit; text-decoration: inherit;">source_<wbr>controls</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">List[App<wbr>Service<wbr>Source<wbr>Control]</a></span>
-    </dt>
-    <dd>{{% md %}}A `source_control` block as defined below, which contains the Source Control information when `scm_type` is set to `LocalGit`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1471,7 +1471,7 @@ Get an existing AppService resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_service_plan_id=None<span class="p">, </span>app_settings=None<span class="p">, </span>auth_settings=None<span class="p">, </span>backup=None<span class="p">, </span>client_affinity_enabled=None<span class="p">, </span>client_cert_enabled=None<span class="p">, </span>connection_strings=None<span class="p">, </span>default_site_hostname=None<span class="p">, </span>enabled=None<span class="p">, </span>https_only=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>logs=None<span class="p">, </span>name=None<span class="p">, </span>outbound_ip_addresses=None<span class="p">, </span>possible_outbound_ip_addresses=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>site_config=None<span class="p">, </span>site_credentials=None<span class="p">, </span>source_controls=None<span class="p">, </span>storage_accounts=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_service_plan_id=None<span class="p">, </span>app_settings=None<span class="p">, </span>auth_settings=None<span class="p">, </span>backup=None<span class="p">, </span>client_affinity_enabled=None<span class="p">, </span>client_cert_enabled=None<span class="p">, </span>connection_strings=None<span class="p">, </span>default_site_hostname=None<span class="p">, </span>enabled=None<span class="p">, </span>https_only=None<span class="p">, </span>identity=None<span class="p">, </span>location=None<span class="p">, </span>logs=None<span class="p">, </span>name=None<span class="p">, </span>outbound_ip_addresses=None<span class="p">, </span>possible_outbound_ip_addresses=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>site_config=None<span class="p">, </span>site_credentials=None<span class="p">, </span>source_control=None<span class="p">, </span>storage_accounts=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1796,13 +1796,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_sourcecontrols_csharp">
-<a href="#state_sourcecontrols_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Controls</a>
+        <span id="state_sourcecontrol_csharp">
+<a href="#state_sourcecontrol_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">List&lt;App<wbr>Service<wbr>Source<wbr>Control<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `source_control` block as defined below, which contains the Source Control information when `scm_type` is set to `LocalGit`.
+    <dd>{{% md %}}A Source Control block as defined below
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2045,13 +2045,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_sourcecontrols_go">
-<a href="#state_sourcecontrols_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Controls</a>
+        <span id="state_sourcecontrol_go">
+<a href="#state_sourcecontrol_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">[]App<wbr>Service<wbr>Source<wbr>Control</a></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}A `source_control` block as defined below, which contains the Source Control information when `scm_type` is set to `LocalGit`.
+    <dd>{{% md %}}A Source Control block as defined below
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2294,13 +2294,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_sourcecontrols_nodejs">
-<a href="#state_sourcecontrols_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Controls</a>
+        <span id="state_sourcecontrol_nodejs">
+<a href="#state_sourcecontrol_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control[]</a></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}A `source_control` block as defined below, which contains the Source Control information when `scm_type` is set to `LocalGit`.
+    <dd>{{% md %}}A Source Control block as defined below
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2543,13 +2543,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_source_controls_python">
-<a href="#state_source_controls_python" style="color: inherit; text-decoration: inherit;">source_<wbr>controls</a>
+        <span id="state_source_control_python">
+<a href="#state_source_control_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">List[App<wbr>Service<wbr>Source<wbr>Control]</a></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">Dict[App<wbr>Service<wbr>Source<wbr>Control]</a></span>
     </dt>
-    <dd>{{% md %}}A `source_control` block as defined below, which contains the Source Control information when `scm_type` is set to `LocalGit`.
+    <dd>{{% md %}}A Source Control block as defined below
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6925,8 +6925,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintlsversion_python">
-<a href="#mintlsversion_python" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
+        <span id="min_tls_version_python">
+<a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7247,6 +7247,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworksubnetid_csharp">
@@ -7308,6 +7318,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7371,6 +7391,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworksubnetid_nodejs">
@@ -7432,6 +7462,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7513,6 +7553,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworksubnetid_csharp">
@@ -7574,6 +7624,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7637,6 +7697,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworksubnetid_nodejs">
@@ -7698,6 +7768,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction. Restrictions are enforced in priority order. By default, priority is set to 65000 if not specified.
 {{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been deprecated in favour of `virtual_network_subnet_id` and will be removed in a future version of the provider{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7853,14 +7933,14 @@ The following state arguments are supported:
 
 <h4 id="appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSourceControl">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceSourceControl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSourceControl">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#AppServiceSourceControlOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#AppServiceSourceControlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#AppServiceSourceControlOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.AppServiceSourceControl.html">output</a> API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Inputs.AppServiceSourceControlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.Outputs.AppServiceSourceControl.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7877,7 +7957,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Branch name of the Git repository for this App Service.
+    <dd>{{% md %}}The branch of the remote repository to use. Defaults to 'master'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manualintegration_csharp">
+<a href="#manualintegration_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration. Defaults to `false` if not specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7888,7 +7979,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the Git repository for this App Service.
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollbackenabled_csharp">
+<a href="#rollbackenabled_csharp" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable roll-back for the repository. Defaults to `false` if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usemercurial_csharp">
+<a href="#usemercurial_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use Mercurial if `true`, otherwise uses Git.
 {{% /md %}}</dd>
 
 </dl>
@@ -7906,7 +8019,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Branch name of the Git repository for this App Service.
+    <dd>{{% md %}}The branch of the remote repository to use. Defaults to 'master'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manualintegration_go">
+<a href="#manualintegration_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration. Defaults to `false` if not specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7917,7 +8041,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the Git repository for this App Service.
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollbackenabled_go">
+<a href="#rollbackenabled_go" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable roll-back for the repository. Defaults to `false` if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usemercurial_go">
+<a href="#usemercurial_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use Mercurial if `true`, otherwise uses Git.
 {{% /md %}}</dd>
 
 </dl>
@@ -7935,7 +8081,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Branch name of the Git repository for this App Service.
+    <dd>{{% md %}}The branch of the remote repository to use. Defaults to 'master'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manualintegration_nodejs">
+<a href="#manualintegration_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration. Defaults to `false` if not specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7946,7 +8103,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL of the Git repository for this App Service.
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollbackenabled_nodejs">
+<a href="#rollbackenabled_nodejs" style="color: inherit; text-decoration: inherit;">rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable roll-back for the repository. Defaults to `false` if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usemercurial_nodejs">
+<a href="#usemercurial_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Use Mercurial if `true`, otherwise uses Git.
 {{% /md %}}</dd>
 
 </dl>
@@ -7964,7 +8143,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Branch name of the Git repository for this App Service.
+    <dd>{{% md %}}The branch of the remote repository to use. Defaults to 'master'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manualintegration_python">
+<a href="#manualintegration_python" style="color: inherit; text-decoration: inherit;">manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration. Defaults to `false` if not specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7975,7 +8165,29 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL of the Git repository for this App Service.
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rollbackenabled_python">
+<a href="#rollbackenabled_python" style="color: inherit; text-decoration: inherit;">rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable roll-back for the repository. Defaults to `false` if not specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usemercurial_python">
+<a href="#usemercurial_python" style="color: inherit; text-decoration: inherit;">use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Use Mercurial if `true`, otherwise uses Git.
 {{% /md %}}</dd>
 
 </dl>

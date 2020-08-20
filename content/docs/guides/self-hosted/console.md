@@ -36,7 +36,11 @@ You can run this container on the same host that your API container is running o
 
 ## What's In The Container?
 
-The Console container is a Node 10-based image. A single web server handles delivering UI static assets to your web browser, as well as handling authentication callbacks.
+The Console container runs a web server using a Node 10-based image.
+
+### Server
+
+The container runs a single web server which handles delivering UI static assets to your web browser, as well as handling authentication callbacks. The console will be served using port `3000` over HTTP by default. If [TLS](#tls-environment-variables) is configured the console will instead be served using port `3443` over HTTPS.
 
 ## Primary Environment Variables
 
@@ -79,3 +83,22 @@ The following are the core environment variables that are required at a minimum.
 | ------------- | ----------- |
 | BITBUCKET_OAUTH_ID| Atlassian Bitbucket OAuth consumer client ID. Used for Bitbucket OAuth signins. |
 | BITBUCKET_OAUTH_SECRET | |
+
+### TLS Environment Variables
+
+The following environment variables must be configured to enable TLS. The values of the environment variables may either be a filepath or the actual value of the entity. If these variables are set, the console will be served over HTTPS (i.e. using TLS) using port `3443`. If the following variables are not set the console will default to serving over HTTP using port `3000`.
+
+| Variable Name       | Description                                                                                                       |
+|---------------------|-------------------------------------------------------------------------------------------------------------------|
+| CONSOLE_TLS_CERTIFICATE | The TLS certificate. The certificate must be supplied in X.509 format and must be PEM encoded.                |
+| CONSOLE_TLS_PRIVATE_KEY | The private key associated with the TLS certificate. The private key must be PEM encoded.                     |
+| CONSOLE_MIN_TLS_VERSION | The minimum version of TLS to allow (must be in \<major>.\<minor> format, e.g. `1.2`). This variable is optional, if not set a minimum version will not be enforced.|
+
+> Note: Self-signed certificates may be used to configure TLS in the event the need for a trusted entity is not necessary. A self-signed cert and private key may be generated using OpenSSL. The following command uses OpenSSL to generate a self-signed certificate. This example will output two files, the certificate (cert.pem) and the private key (key.pem) used to sign it.
+
+>
+```
+openssl \
+  req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem \
+  -days { days_until_expiration } -nodes -subj "/CN={ common_name }"
+```

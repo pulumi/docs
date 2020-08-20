@@ -1,8 +1,8 @@
 
 ---
 title: "GetTags"
-title_tag: "Function GetTags | Package Digital Ocean"
-meta_desc: "Explore the GetTags function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Returns a list of tags in your DigitalOcean account, with the ability to"
+title_tag: "Function GetTags | Package DigitalOcean"
+meta_desc: "Explore the GetTags function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Returns a list of tags in your DigitalOcean account, with the ability to"
 ---
 
 
@@ -13,9 +13,6 @@ meta_desc: "Explore the GetTags function of the Digital Ocean package, including
 Returns a list of tags in your DigitalOcean account, with the ability to
 filter and sort the results. If no filters are specified, all tags will be
 returned.
-
-{{% examples %}}
-{{% /examples %}}
 
 
 

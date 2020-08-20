@@ -78,6 +78,12 @@
                     @apply text-xl text-purple-100 leading-relaxed;
                 }
 
+                // We have reapply the text-black class otherwise Tailwind will ignore
+                // in favor of the above defined "p" style.
+                p.text-black {
+                    @apply text-black;
+                }
+
                 .header-hero-actions {
                     @apply flex flex-col items-center mt-4;
 
@@ -102,6 +108,7 @@
                     @apply pr-0;
                 }
             }
+
         }
 
         @screen lg {

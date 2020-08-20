@@ -18,6 +18,7 @@ Explore the resources and functions of the route53 module in the AWS package.
     <li><a href="resolverendpoint" title="ResolverEndpoint"><span class="symbol resource"></span>ResolverEndpoint</a></li>
     <li><a href="resolverrule" title="ResolverRule"><span class="symbol resource"></span>ResolverRule</a></li>
     <li><a href="resolverruleassociation" title="ResolverRuleAssociation"><span class="symbol resource"></span>ResolverRuleAssociation</a></li>
+    <li><a href="vpcassociationauthorization" title="VpcAssociationAuthorization"><span class="symbol resource"></span>VpcAssociationAuthorization</a></li>
     <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
     <li><a href="zoneassociation" title="ZoneAssociation"><span class="symbol resource"></span>ZoneAssociation</a></li>
 </ul>
@@ -39,7 +40,7 @@ Explore the resources and functions of the route53 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.13.1</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 
@@ -50,7 +51,7 @@ Explore the resources and functions of the route53 module in the AWS package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.html" title="Pulumi.Aws.Route53">Pulumi.Aws.Route53</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#" title="aws/route53">aws/route53</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#" title="aws/route53">aws/route53</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#" title="@pulumi/aws/route53">@pulumi/aws/route53</a></dd>

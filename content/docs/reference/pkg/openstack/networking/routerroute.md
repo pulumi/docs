@@ -55,6 +55,12 @@ class MyStack : Stack
             DestinationCidr = "10.0.1.0/24",
             NextHop = "192.168.199.254",
             RouterId = router1.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                "openstack_networking_router_interface_v2.int_1",
+            },
         });
     }
 
@@ -64,7 +70,58 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		router1, err := networking.NewRouter(ctx, "router1", &networking.RouterArgs{
+			AdminStateUp: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		network1, err := networking.NewNetwork(ctx, "network1", &networking.NetworkArgs{
+			AdminStateUp: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		subnet1, err := networking.NewSubnet(ctx, "subnet1", &networking.SubnetArgs{
+			Cidr:      pulumi.String("192.168.199.0/24"),
+			IpVersion: pulumi.Int(4),
+			NetworkId: network1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = networking.NewRouterInterface(ctx, "int1", &networking.RouterInterfaceArgs{
+			RouterId: router1.ID(),
+			SubnetId: subnet1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = networking.NewRouterRoute(ctx, "routerRoute1", &networking.RouterRouteArgs{
+			DestinationCidr: pulumi.String("10.0.1.0/24"),
+			NextHop:         pulumi.String("192.168.199.254"),
+			RouterId:        router1.ID(),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			"openstack_networking_router_interface_v2.int_1",
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,7 +141,8 @@ int1 = openstack.networking.RouterInterface("int1",
 router_route1 = openstack.networking.RouterRoute("routerRoute1",
     destination_cidr="10.0.1.0/24",
     next_hop="192.168.199.254",
-    router_id=router1.id)
+    router_id=router1.id,
+    opts=ResourceOptions(depends_on=["openstack_networking_router_interface_v2.int_1"]))
 ```
 
 {{% /example %}}
@@ -131,7 +189,7 @@ const routerRoute1 = new openstack.networking.RouterRoute("router_route_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#RouterRoute">RouterRoute</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination_cidr=None<span class="p">, </span>next_hop=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.RouterRoute">RouterRoute</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination_cidr=None<span class="p">, </span>next_hop=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -622,7 +680,7 @@ Get an existing RouterRoute resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>destination_cidr=None<span class="p">, </span>next_hop=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>destination_cidr=None<span class="p">, </span>next_hop=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

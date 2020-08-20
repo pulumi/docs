@@ -1,8 +1,8 @@
 
 ---
 title: "UserNotificationRule"
-title_tag: "Resource UserNotificationRule | Package pagerduty"
-meta_desc: "Explore the UserNotificationRule resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. A [notification rule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_notification_rules_notification_rule_id) configures where and when a PagerDuty user is notified when a triggered incident is assigned to him. Unique notification rules can be created for both high and low-urgency incidents."
+title_tag: "Resource UserNotificationRule | Package PagerDuty"
+meta_desc: "Explore the UserNotificationRule resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [notification rule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_notification_rules_notification_rule_id) configures where and when a PagerDuty user is notified when a triggered incident is assigned to him. Unique notification rules can be created for both high and low-urgency incidents."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the UserNotificationRule resource of the pagerduty package, 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A [notification rule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_notification_rules_notification_rule_id) configures where and when a PagerDuty user is notified when a triggered incident is assigned to him. Unique notification rules can be created for both high and low-urgency incidents.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -43,7 +41,7 @@ class MyStack : Stack
         {
             UserId = example.Id,
             Type = "phone_contact_method",
-            CountryCode = "+1",
+            CountryCode = 1,
             Address = "2025550199",
             Label = "Work",
         });
@@ -51,7 +49,7 @@ class MyStack : Stack
         {
             UserId = example.Id,
             Type = "sms_contact_method",
-            CountryCode = "+1",
+            CountryCode = 1,
             Address = "2025550199",
             Label = "Work",
         });
@@ -92,6 +90,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -146,9 +145,11 @@ low_urgency_sms = pagerduty.UserNotificationRule("lowUrgencySms",
         "id": sms.id,
     })
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -202,6 +203,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     },
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -216,7 +218,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#UserNotificationRule">UserNotificationRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>contact_method=None<span class="p">, </span>start_delay_in_minutes=None<span class="p">, </span>urgency=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.UserNotificationRule">UserNotificationRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>contact_method=None<span class="p">, </span>start_delay_in_minutes=None<span class="p">, </span>urgency=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -683,7 +685,7 @@ Get an existing UserNotificationRule resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>contact_method=None<span class="p">, </span>start_delay_in_minutes=None<span class="p">, </span>urgency=None<span class="p">, </span>user_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>contact_method=None<span class="p">, </span>start_delay_in_minutes=None<span class="p">, </span>urgency=None<span class="p">, </span>user_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

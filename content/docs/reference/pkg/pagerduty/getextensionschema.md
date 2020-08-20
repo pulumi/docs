@@ -1,8 +1,8 @@
 
 ---
 title: "GetExtensionSchema"
-title_tag: "Function GetExtensionSchema | Package pagerduty"
-meta_desc: "Explore the GetExtensionSchema function of the pagerduty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [extension](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Extension_Schemas/get_extension_schemas) vendor that you can use for a service (e.g: Slack, Generic Webhook, ServiceNow)."
+title_tag: "Function GetExtensionSchema | Package PagerDuty"
+meta_desc: "Explore the GetExtensionSchema function of the PagerDuty package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific [extension](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Extension_Schemas/get_extension_schemas) vendor that you can use for a service (e.g: Slack, Generic Webhook, ServiceNow)."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the GetExtensionSchema function of the pagerduty package, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to get information about a specific [extension](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Extension_Schemas/get_extension_schemas) vendor that you can use for a service (e.g: Slack, Generic Webhook, ServiceNow).
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -61,8 +59,8 @@ class MyStack : Stack
         });
         var exampleService = new Pagerduty.Service("exampleService", new Pagerduty.ServiceArgs
         {
-            AcknowledgementTimeout = 600,
-            AutoResolveTimeout = 14400,
+            AcknowledgementTimeout = "600",
+            AutoResolveTimeout = "14400",
             EscalationPolicy = pagerduty_escalation_policy.Example.Id,
         });
         var slack = new Pagerduty.Extension("slack", new Pagerduty.ExtensionArgs
@@ -78,6 +76,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -111,9 +110,11 @@ slack = pagerduty.Extension("slack",
     extension_objects=[example_service.id],
     extension_schema=webhook.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -146,6 +147,7 @@ const slack = new pagerduty.Extension("slack", {
     extensionSchema: webhook.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

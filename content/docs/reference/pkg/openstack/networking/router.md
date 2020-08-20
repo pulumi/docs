@@ -39,7 +39,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := networking.NewRouter(ctx, "router1", &networking.RouterArgs{
+			AdminStateUp:      pulumi.Bool(true),
+			ExternalNetworkId: pulumi.String("f67f0d72-0ddf-11e4-9d95-e1f29f417e2f"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,7 +101,7 @@ const router1 = new openstack.networking.Router("router_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#Router">Router</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>description=None<span class="p">, </span>distributed=None<span class="p">, </span>enable_snat=None<span class="p">, </span>external_fixed_ips=None<span class="p">, </span>external_gateway=None<span class="p">, </span>external_network_id=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>vendor_options=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Router">Router</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>description=None<span class="p">, </span>distributed=None<span class="p">, </span>enable_snat=None<span class="p">, </span>external_fixed_ips=None<span class="p">, </span>external_gateway=None<span class="p">, </span>external_network_id=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>vendor_options=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1139,7 +1160,7 @@ Get an existing Router resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>all_tags=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>description=None<span class="p">, </span>distributed=None<span class="p">, </span>enable_snat=None<span class="p">, </span>external_fixed_ips=None<span class="p">, </span>external_gateway=None<span class="p">, </span>external_network_id=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>vendor_options=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>all_tags=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>description=None<span class="p">, </span>distributed=None<span class="p">, </span>enable_snat=None<span class="p">, </span>external_fixed_ips=None<span class="p">, </span>external_gateway=None<span class="p">, </span>external_network_id=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>vendor_options=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

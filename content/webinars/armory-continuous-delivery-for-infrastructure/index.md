@@ -51,7 +51,7 @@ main:
     # Webinar title.
     title: "Armory + Pulumi: Continuous Delivery for your Infrastructure as Code"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-08-06T12:00:00-07:00
+    sortable_date: 2020-09-10T12:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.

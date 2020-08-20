@@ -38,6 +38,7 @@ class MyStack : Stack
         }));
         var subnet = new Aws.Ec2.SecurityGroup("subnet", new Aws.Ec2.SecurityGroupArgs
         {
+            VpcId = selected.Apply(selected => selected.VpcId),
             Ingress = 
             {
                 new Aws.Ec2.Inputs.SecurityGroupIngressArgs
@@ -47,11 +48,10 @@ class MyStack : Stack
                         selected.Apply(selected => selected.CidrBlock),
                     },
                     FromPort = 80,
-                    Protocol = "tcp",
                     ToPort = 80,
+                    Protocol = "tcp",
                 },
             },
-            VpcId = selected.Apply(selected => selected.VpcId),
         });
     }
 
@@ -65,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -79,17 +79,17 @@ func main() {
 			return err
 		}
 		_, err = ec2.NewSecurityGroup(ctx, "subnet", &ec2.SecurityGroupArgs{
+			VpcId: pulumi.String(selected.VpcId),
 			Ingress: ec2.SecurityGroupIngressArray{
 				&ec2.SecurityGroupIngressArgs{
 					CidrBlocks: pulumi.StringArray{
 						pulumi.String(selected.CidrBlock),
 					},
 					FromPort: pulumi.Int(80),
-					Protocol: pulumi.String("tcp"),
 					ToPort:   pulumi.Int(80),
+					Protocol: pulumi.String("tcp"),
 				},
 			},
-			VpcId: pulumi.String(selected.VpcId),
 		})
 		if err != nil {
 			return err
@@ -110,13 +110,13 @@ config = pulumi.Config()
 subnet_id = config.require_object("subnetId")
 selected = aws.ec2.get_subnet(id=subnet_id)
 subnet = aws.ec2.SecurityGroup("subnet",
+    vpc_id=selected.vpc_id,
     ingress=[{
         "cidr_blocks": [selected.cidr_block],
         "from_port": 80,
-        "protocol": "tcp",
         "to_port": 80,
-    }],
-    vpc_id=selected.vpc_id)
+        "protocol": "tcp",
+    }])
 ```
 
 {{% /example %}}
@@ -128,19 +128,18 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const config = new pulumi.Config();
-const subnetId = config.require("subnetId");
-
-const selected = pulumi.output(aws.ec2.getSubnet({
+const subnetId = config.requireObject("subnetId");
+const selected = aws.ec2.getSubnet({
     id: subnetId,
-}, { async: true }));
+});
 const subnet = new aws.ec2.SecurityGroup("subnet", {
+    vpcId: selected.then(selected => selected.vpcId),
     ingress: [{
-        cidrBlocks: [selected.cidrBlock!],
+        cidrBlocks: [selected.then(selected => selected.cidrBlock)],
         fromPort: 80,
-        protocol: "tcp",
         toPort: 80,
+        protocol: "tcp",
     }],
-    vpcId: selected.vpcId!,
 });
 ```
 
@@ -165,7 +164,7 @@ const subnet = new aws.ec2.SecurityGroup("subnet", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSubnet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupSubnetArgs">LookupSubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupSubnetResult">LookupSubnetResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSubnet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupSubnetArgs">LookupSubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupSubnetResult">LookupSubnetResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSubnet` in the Go SDK.
 
@@ -1372,7 +1371,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetSubnetFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetSubnetFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetSubnetFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetSubnetFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetSubnetFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetSubnetFilter.html">output</a> API doc for this type.

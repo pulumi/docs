@@ -34,7 +34,7 @@ Pulumi also offers a first class CLI experience. The cloud solutions don't let y
 your client machine before submitting them, and generally haven't focused on a great CLI experience like Pulumi has,
 because they are so service-oriented and closed source.
 
-There are many community-led projects which allow you to write code in a real language and then emit the
+There are many community-led projects which allow you to write code in a programming language and then emit the
 configuration templates as a sort of "compilation" step. These offer nice syntactic sugar on top of the raw
 templates, but the underlying model leaks through and carries forward all of the other abovementioned shortcomings.
 

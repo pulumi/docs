@@ -20,13 +20,11 @@ Manages an association with WAF Regional Web ACL.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ipset = new aws.wafregional.IpSet("ipset", {
-    ipSetDescriptors: [{
-        type: "IPV4",
-        value: "192.0.7.0/24",
-    }],
-});
-const fooRule = new aws.wafregional.Rule("foo", {
+const ipset = new aws.wafregional.IpSet("ipset", {ipSetDescriptors: [{
+    type: "IPV4",
+    value: "192.0.7.0/24",
+}]});
+const fooRule = new aws.wafregional.Rule("fooRule", {
     metricName: "tfWAFRule",
     predicates: [{
         dataId: ipset.id,
@@ -34,11 +32,11 @@ const fooRule = new aws.wafregional.Rule("foo", {
         type: "IPMatch",
     }],
 });
-const fooWebAcl = new aws.wafregional.WebAcl("foo", {
+const fooWebAcl = new aws.wafregional.WebAcl("fooWebAcl", {
+    metricName: "foo",
     defaultAction: {
         type: "ALLOW",
     },
-    metricName: "foo",
     rules: [{
         action: {
             type: "BLOCK",
@@ -47,28 +45,26 @@ const fooWebAcl = new aws.wafregional.WebAcl("foo", {
         ruleId: fooRule.id,
     }],
 });
-const fooVpc = new aws.ec2.Vpc("foo", {
-    cidrBlock: "10.1.0.0/16",
-});
-const available = pulumi.output(aws.getAvailabilityZones({ async: true }));
-const fooSubnet = new aws.ec2.Subnet("foo", {
-    availabilityZone: available.apply(available => available.names[0]),
-    cidrBlock: "10.1.1.0/24",
+const fooVpc = new aws.ec2.Vpc("fooVpc", {cidrBlock: "10.1.0.0/16"});
+const available = aws.getAvailabilityZones({});
+const fooSubnet = new aws.ec2.Subnet("fooSubnet", {
     vpcId: fooVpc.id,
+    cidrBlock: "10.1.1.0/24",
+    availabilityZone: available.then(available => available.names[0]),
 });
 const bar = new aws.ec2.Subnet("bar", {
-    availabilityZone: available.apply(available => available.names[1]),
-    cidrBlock: "10.1.2.0/24",
     vpcId: fooVpc.id,
+    cidrBlock: "10.1.2.0/24",
+    availabilityZone: available.then(available => available.names[1]),
 });
-const fooLoadBalancer = new aws.alb.LoadBalancer("foo", {
+const fooLoadBalancer = new aws.alb.LoadBalancer("fooLoadBalancer", {
     internal: true,
     subnets: [
         fooSubnet.id,
         bar.id,
     ],
 });
-const fooWebAclAssociation = new aws.wafregional.WebAclAssociation("foo", {
+const fooWebAclAssociation = new aws.wafregional.WebAclAssociation("fooWebAclAssociation", {
     resourceArn: fooLoadBalancer.arn,
     webAclId: fooWebAcl.id,
 });
@@ -89,10 +85,10 @@ foo_rule = aws.wafregional.Rule("fooRule",
         "type": "IPMatch",
     }])
 foo_web_acl = aws.wafregional.WebAcl("fooWebAcl",
+    metric_name="foo",
     default_action={
         "type": "ALLOW",
     },
-    metric_name="foo",
     rules=[{
         "action": {
             "type": "BLOCK",
@@ -103,13 +99,13 @@ foo_web_acl = aws.wafregional.WebAcl("fooWebAcl",
 foo_vpc = aws.ec2.Vpc("fooVpc", cidr_block="10.1.0.0/16")
 available = aws.get_availability_zones()
 foo_subnet = aws.ec2.Subnet("fooSubnet",
-    availability_zone=available.names[0],
+    vpc_id=foo_vpc.id,
     cidr_block="10.1.1.0/24",
-    vpc_id=foo_vpc.id)
+    availability_zone=available.names[0])
 bar = aws.ec2.Subnet("bar",
-    availability_zone=available.names[1],
+    vpc_id=foo_vpc.id,
     cidr_block="10.1.2.0/24",
-    vpc_id=foo_vpc.id)
+    availability_zone=available.names[1])
 foo_load_balancer = aws.alb.LoadBalancer("fooLoadBalancer",
     internal=True,
     subnets=[
@@ -154,11 +150,11 @@ class MyStack : Stack
         });
         var fooWebAcl = new Aws.WafRegional.WebAcl("fooWebAcl", new Aws.WafRegional.WebAclArgs
         {
+            MetricName = "foo",
             DefaultAction = new Aws.WafRegional.Inputs.WebAclDefaultActionArgs
             {
                 Type = "ALLOW",
             },
-            MetricName = "foo",
             Rules = 
             {
                 new Aws.WafRegional.Inputs.WebAclRuleArgs
@@ -179,15 +175,15 @@ class MyStack : Stack
         var available = Output.Create(Aws.GetAvailabilityZones.InvokeAsync());
         var fooSubnet = new Aws.Ec2.Subnet("fooSubnet", new Aws.Ec2.SubnetArgs
         {
-            AvailabilityZone = available.Apply(available => available.Names[0]),
-            CidrBlock = "10.1.1.0/24",
             VpcId = fooVpc.Id,
+            CidrBlock = "10.1.1.0/24",
+            AvailabilityZone = available.Apply(available => available.Names[0]),
         });
         var bar = new Aws.Ec2.Subnet("bar", new Aws.Ec2.SubnetArgs
         {
-            AvailabilityZone = available.Apply(available => available.Names[1]),
-            CidrBlock = "10.1.2.0/24",
             VpcId = fooVpc.Id,
+            CidrBlock = "10.1.2.0/24",
+            AvailabilityZone = available.Apply(available => available.Names[1]),
         });
         var fooLoadBalancer = new Aws.Alb.LoadBalancer("fooLoadBalancer", new Aws.Alb.LoadBalancerArgs
         {
@@ -211,10 +207,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/alb"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -245,10 +241,10 @@ func main() {
 			return err
 		}
 		fooWebAcl, err := wafregional.NewWebAcl(ctx, "fooWebAcl", &wafregional.WebAclArgs{
+			MetricName: pulumi.String("foo"),
 			DefaultAction: &wafregional.WebAclDefaultActionArgs{
 				Type: pulumi.String("ALLOW"),
 			},
-			MetricName: pulumi.String("foo"),
 			Rules: wafregional.WebAclRuleArray{
 				&wafregional.WebAclRuleArgs{
 					Action: &wafregional.WebAclRuleActionArgs{
@@ -273,17 +269,17 @@ func main() {
 			return err
 		}
 		fooSubnet, err := ec2.NewSubnet(ctx, "fooSubnet", &ec2.SubnetArgs{
-			AvailabilityZone: pulumi.String(available.Names[0]),
-			CidrBlock:        pulumi.String("10.1.1.0/24"),
 			VpcId:            fooVpc.ID(),
+			CidrBlock:        pulumi.String("10.1.1.0/24"),
+			AvailabilityZone: pulumi.String(available.Names[0]),
 		})
 		if err != nil {
 			return err
 		}
 		bar, err := ec2.NewSubnet(ctx, "bar", &ec2.SubnetArgs{
-			AvailabilityZone: pulumi.String(available.Names[1]),
-			CidrBlock:        pulumi.String("10.1.2.0/24"),
 			VpcId:            fooVpc.ID(),
+			CidrBlock:        pulumi.String("10.1.2.0/24"),
+			AvailabilityZone: pulumi.String(available.Names[1]),
 		})
 		if err != nil {
 			return err
@@ -316,13 +312,11 @@ func main() {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ipset = new aws.wafregional.IpSet("ipset", {
-    ipSetDescriptors: [{
-        type: "IPV4",
-        value: "192.0.7.0/24",
-    }],
-});
-const fooRule = new aws.wafregional.Rule("foo", {
+const ipset = new aws.wafregional.IpSet("ipset", {ipSetDescriptors: [{
+    type: "IPV4",
+    value: "192.0.7.0/24",
+}]});
+const fooRule = new aws.wafregional.Rule("fooRule", {
     metricName: "tfWAFRule",
     predicates: [{
         dataId: ipset.id,
@@ -330,11 +324,11 @@ const fooRule = new aws.wafregional.Rule("foo", {
         type: "IPMatch",
     }],
 });
-const fooWebAcl = new aws.wafregional.WebAcl("foo", {
+const fooWebAcl = new aws.wafregional.WebAcl("fooWebAcl", {
+    metricName: "foo",
     defaultAction: {
         type: "ALLOW",
     },
-    metricName: "foo",
     rules: [{
         action: {
             type: "BLOCK",
@@ -343,25 +337,25 @@ const fooWebAcl = new aws.wafregional.WebAcl("foo", {
         ruleId: fooRule.id,
     }],
 });
-const testRestApi = new aws.apigateway.RestApi("test", {});
-const testResource = new aws.apigateway.Resource("test", {
+const testRestApi = new aws.apigateway.RestApi("testRestApi", {});
+const testResource = new aws.apigateway.Resource("testResource", {
     parentId: testRestApi.rootResourceId,
     pathPart: "test",
     restApi: testRestApi.id,
 });
-const testMethod = new aws.apigateway.Method("test", {
+const testMethod = new aws.apigateway.Method("testMethod", {
     authorization: "NONE",
     httpMethod: "GET",
     resourceId: testResource.id,
     restApi: testRestApi.id,
 });
-const testMethodResponse = new aws.apigateway.MethodResponse("test", {
+const testMethodResponse = new aws.apigateway.MethodResponse("testMethodResponse", {
     httpMethod: testMethod.httpMethod,
     resourceId: testResource.id,
     restApi: testRestApi.id,
     statusCode: "400",
 });
-const testIntegration = new aws.apigateway.Integration("test", {
+const testIntegration = new aws.apigateway.Integration("testIntegration", {
     httpMethod: testMethod.httpMethod,
     integrationHttpMethod: "GET",
     resourceId: testResource.id,
@@ -369,16 +363,16 @@ const testIntegration = new aws.apigateway.Integration("test", {
     type: "HTTP",
     uri: "http://www.example.com",
 });
-const testIntegrationResponse = new aws.apigateway.IntegrationResponse("test", {
-    httpMethod: testIntegration.httpMethod,
-    resourceId: testResource.id,
+const testIntegrationResponse = new aws.apigateway.IntegrationResponse("testIntegrationResponse", {
     restApi: testRestApi.id,
+    resourceId: testResource.id,
+    httpMethod: testIntegration.httpMethod,
     statusCode: testMethodResponse.statusCode,
 });
-const testDeployment = new aws.apigateway.Deployment("test", {
-    restApi: testRestApi.id,
-}, { dependsOn: [testIntegrationResponse] });
-const testStage = new aws.apigateway.Stage("test", {
+const testDeployment = new aws.apigateway.Deployment("testDeployment", {restApi: testRestApi.id}, {
+    dependsOn: [testIntegrationResponse],
+});
+const testStage = new aws.apigateway.Stage("testStage", {
     deployment: testDeployment.id,
     restApi: testRestApi.id,
     stageName: "test",
@@ -404,10 +398,10 @@ foo_rule = aws.wafregional.Rule("fooRule",
         "type": "IPMatch",
     }])
 foo_web_acl = aws.wafregional.WebAcl("fooWebAcl",
+    metric_name="foo",
     default_action={
         "type": "ALLOW",
     },
-    metric_name="foo",
     rules=[{
         "action": {
             "type": "BLOCK",
@@ -438,12 +432,12 @@ test_integration = aws.apigateway.Integration("testIntegration",
     type="HTTP",
     uri="http://www.example.com")
 test_integration_response = aws.apigateway.IntegrationResponse("testIntegrationResponse",
-    http_method=test_integration.http_method,
-    resource_id=test_resource.id,
     rest_api=test_rest_api.id,
+    resource_id=test_resource.id,
+    http_method=test_integration.http_method,
     status_code=test_method_response.status_code)
 test_deployment = aws.apigateway.Deployment("testDeployment", rest_api=test_rest_api.id,
-opts=ResourceOptions(depends_on=["aws_api_gateway_integration_response.test"]))
+opts=ResourceOptions(depends_on=[test_integration_response]))
 test_stage = aws.apigateway.Stage("testStage",
     deployment=test_deployment.id,
     rest_api=test_rest_api.id,
@@ -486,11 +480,11 @@ class MyStack : Stack
         });
         var fooWebAcl = new Aws.WafRegional.WebAcl("fooWebAcl", new Aws.WafRegional.WebAclArgs
         {
+            MetricName = "foo",
             DefaultAction = new Aws.WafRegional.Inputs.WebAclDefaultActionArgs
             {
                 Type = "ALLOW",
             },
-            MetricName = "foo",
             Rules = 
             {
                 new Aws.WafRegional.Inputs.WebAclRuleArgs
@@ -538,9 +532,9 @@ class MyStack : Stack
         });
         var testIntegrationResponse = new Aws.ApiGateway.IntegrationResponse("testIntegrationResponse", new Aws.ApiGateway.IntegrationResponseArgs
         {
-            HttpMethod = testIntegration.HttpMethod,
-            ResourceId = testResource.Id,
             RestApi = testRestApi.Id,
+            ResourceId = testResource.Id,
+            HttpMethod = testIntegration.HttpMethod,
             StatusCode = testMethodResponse.StatusCode,
         });
         var testDeployment = new Aws.ApiGateway.Deployment("testDeployment", new Aws.ApiGateway.DeploymentArgs
@@ -550,7 +544,7 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "aws_api_gateway_integration_response.test",
+                testIntegrationResponse,
             },
         });
         var testStage = new Aws.ApiGateway.Stage("testStage", new Aws.ApiGateway.StageArgs
@@ -572,8 +566,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -604,10 +598,10 @@ func main() {
 			return err
 		}
 		fooWebAcl, err := wafregional.NewWebAcl(ctx, "fooWebAcl", &wafregional.WebAclArgs{
+			MetricName: pulumi.String("foo"),
 			DefaultAction: &wafregional.WebAclDefaultActionArgs{
 				Type: pulumi.String("ALLOW"),
 			},
-			MetricName: pulumi.String("foo"),
 			Rules: wafregional.WebAclRuleArray{
 				&wafregional.WebAclRuleArgs{
 					Action: &wafregional.WebAclRuleActionArgs{
@@ -662,10 +656,10 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = apigateway.NewIntegrationResponse(ctx, "testIntegrationResponse", &apigateway.IntegrationResponseArgs{
-			HttpMethod: testIntegration.HttpMethod,
-			ResourceId: testResource.ID(),
+		testIntegrationResponse, err := apigateway.NewIntegrationResponse(ctx, "testIntegrationResponse", &apigateway.IntegrationResponseArgs{
 			RestApi:    testRestApi.ID(),
+			ResourceId: testResource.ID(),
+			HttpMethod: testIntegration.HttpMethod,
 			StatusCode: testMethodResponse.StatusCode,
 		})
 		if err != nil {
@@ -674,7 +668,7 @@ func main() {
 		testDeployment, err := apigateway.NewDeployment(ctx, "testDeployment", &apigateway.DeploymentArgs{
 			RestApi: testRestApi.ID(),
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_api_gateway_integration_response.test",
+			testIntegrationResponse,
 		}))
 		if err != nil {
 			return err
@@ -714,7 +708,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclAssociation">NewWebAclAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclAssociationArgs">WebAclAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclAssociation">WebAclAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociation">NewWebAclAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociationArgs">WebAclAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociation">WebAclAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -788,7 +782,7 @@ func main() {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -808,7 +802,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclAssociationArgs">WebAclAssociationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociationArgs">WebAclAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -818,7 +812,7 @@ func main() {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1093,7 +1087,7 @@ Get an existing WebAclAssociation resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebAclAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclAssociationState">WebAclAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclAssociation">WebAclAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebAclAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociationState">WebAclAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociation">WebAclAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

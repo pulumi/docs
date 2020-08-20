@@ -36,11 +36,11 @@ explore what's possible, you've come to the right place.
 
 ### Monitoring
 
-{{< resource-providers "datadog,newrelic,signalfx" >}}
+{{< resource-providers "datadog,newrelic,signalfx,wavefront" >}}
 
 ### Network
 
-{{< resource-providers "cloudflare,dnsimple,f5bigip,ns1" >}}
+{{< resource-providers "cloudflare,dnsimple,f5bigip,ns1,akamai" >}}
 
 ### Version Control
 

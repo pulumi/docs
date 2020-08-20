@@ -129,7 +129,7 @@ seconds:
 
 ![done](./done.png)
 
-Note the resource graph. Pulumi uses real languages, which allows
+Note the resource graph. Pulumi uses familiar languages, which allows
 encapsulation and hiding of unnecessary complexity. So underneath that
 simple-looking `onObjectCreated` are many AWS resources, like IAM
 attachments. This is a lot like how we can ignore all the messy OS API

@@ -1,8 +1,8 @@
 
 ---
 title: "TeamMembership"
-title_tag: "Resource TeamMembership | Package pagerduty"
-meta_desc: "Explore the TeamMembership resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. A [team membership](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Teams/put_teams_id_users_user_id) manages memberships within a team."
+title_tag: "Resource TeamMembership | Package PagerDuty"
+meta_desc: "Explore the TeamMembership resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [team membership](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Teams/put_teams_id_users_user_id) manages memberships within a team."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the TeamMembership resource of the pagerduty package, includ
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A [team membership](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Teams/put_teams_id_users_user_id) manages memberships within a team.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -46,6 +44,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +63,11 @@ foo_team_membership = pagerduty.TeamMembership("fooTeamMembership",
     team_id=foo_team.id,
     user_id=foo_user.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -83,6 +84,7 @@ const fooTeamMembership = new pagerduty.TeamMembership("foo", {
     userId: fooUser.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -97,7 +99,7 @@ const fooTeamMembership = new pagerduty.TeamMembership("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#TeamMembership">TeamMembership</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>role=None<span class="p">, </span>team_id=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.TeamMembership">TeamMembership</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>role=None<span class="p">, </span>team_id=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -520,7 +522,7 @@ Get an existing TeamMembership resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>role=None<span class="p">, </span>team_id=None<span class="p">, </span>user_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>role=None<span class="p">, </span>team_id=None<span class="p">, </span>user_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -37,7 +37,7 @@ want to wait, you need to use the `retain_on_delete` flag.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#Distribution">NewDistribution</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionArgs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#Distribution">NewDistribution</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionArgs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -111,7 +111,7 @@ want to wait, you need to use the `retain_on_delete` flag.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -131,7 +131,7 @@ want to wait, you need to use the `retain_on_delete` flag.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionArgs">DistributionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionArgs">DistributionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -141,7 +141,7 @@ want to wait, you need to use the `retain_on_delete` flag.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1182,19 +1182,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="activetrustedsigners_csharp">
-<a href="#activetrustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
-each trusted signer, if the distribution is set up to serve private content
-with signed URLs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span> 
@@ -1299,25 +1286,24 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="trustedsigners_csharp">
+<a href="#trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">List&lt;Distribution<wbr>Trusted<wbr>Signer&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span id="activetrustedsigners_go">
-<a href="#activetrustedsigners_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
-each trusted signer, if the distribution is set up to serve private content
-with signed URLs.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1425,25 +1411,24 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="trustedsigners_go">
+<a href="#trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">[]Distribution<wbr>Trusted<wbr>Signer</a></span>
+    </dt>
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span id="activetrustedsigners_nodejs">
-<a href="#activetrustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Trusted<wbr>Signers</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
-each trusted signer, if the distribution is set up to serve private content
-with signed URLs.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1551,25 +1536,24 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="trustedsigners_nodejs">
+<a href="#trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">Distribution<wbr>Trusted<wbr>Signer[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span id="active_trusted_signers_python">
-<a href="#active_trusted_signers_python" style="color: inherit; text-decoration: inherit;">active_<wbr>trusted_<wbr>signers</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
-each trusted signer, if the distribution is set up to serve private content
-with signed URLs.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1677,6 +1661,18 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="trusted_signers_python">
+<a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">List[Distribution<wbr>Trusted<wbr>Signer]</a></span>
+    </dt>
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1696,11 +1692,11 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>active_trusted_signers=None<span class="p">, </span>aliases=None<span class="p">, </span>arn=None<span class="p">, </span>caller_reference=None<span class="p">, </span>comment=None<span class="p">, </span>custom_error_responses=None<span class="p">, </span>default_cache_behavior=None<span class="p">, </span>default_root_object=None<span class="p">, </span>domain_name=None<span class="p">, </span>enabled=None<span class="p">, </span>etag=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>http_version=None<span class="p">, </span>in_progress_validation_batches=None<span class="p">, </span>is_ipv6_enabled=None<span class="p">, </span>last_modified_time=None<span class="p">, </span>logging_config=None<span class="p">, </span>ordered_cache_behaviors=None<span class="p">, </span>origin_groups=None<span class="p">, </span>origins=None<span class="p">, </span>price_class=None<span class="p">, </span>restrictions=None<span class="p">, </span>retain_on_delete=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>viewer_certificate=None<span class="p">, </span>wait_for_deployment=None<span class="p">, </span>web_acl_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>aliases=None<span class="p">, </span>arn=None<span class="p">, </span>caller_reference=None<span class="p">, </span>comment=None<span class="p">, </span>custom_error_responses=None<span class="p">, </span>default_cache_behavior=None<span class="p">, </span>default_root_object=None<span class="p">, </span>domain_name=None<span class="p">, </span>enabled=None<span class="p">, </span>etag=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>http_version=None<span class="p">, </span>in_progress_validation_batches=None<span class="p">, </span>is_ipv6_enabled=None<span class="p">, </span>last_modified_time=None<span class="p">, </span>logging_config=None<span class="p">, </span>ordered_cache_behaviors=None<span class="p">, </span>origin_groups=None<span class="p">, </span>origins=None<span class="p">, </span>price_class=None<span class="p">, </span>restrictions=None<span class="p">, </span>retain_on_delete=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>trusted_signers=None<span class="p">, </span>viewer_certificate=None<span class="p">, </span>wait_for_deployment=None<span class="p">, </span>web_acl_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1809,19 +1805,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_activetrustedsigners_csharp">
-<a href="#state_activetrustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
-each trusted signer, if the distribution is set up to serve private content
-with signed URLs.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2114,6 +2097,18 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_trustedsigners_csharp">
+<a href="#state_trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">List&lt;Distribution<wbr>Trusted<wbr>Signer<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_viewercertificate_csharp">
 <a href="#state_viewercertificate_csharp" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
 </span> 
@@ -2159,19 +2154,6 @@ region and the credentials configuring this argument must have
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_activetrustedsigners_go">
-<a href="#state_activetrustedsigners_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Trusted<wbr>Signers</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
-each trusted signer, if the distribution is set up to serve private content
-with signed URLs.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2464,6 +2446,18 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_trustedsigners_go">
+<a href="#state_trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">[]Distribution<wbr>Trusted<wbr>Signer</a></span>
+    </dt>
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_viewercertificate_go">
 <a href="#state_viewercertificate_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
 </span> 
@@ -2509,19 +2503,6 @@ region and the credentials configuring this argument must have
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_activetrustedsigners_nodejs">
-<a href="#state_activetrustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Trusted<wbr>Signers</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
-each trusted signer, if the distribution is set up to serve private content
-with signed URLs.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2814,6 +2795,18 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_trustedsigners_nodejs">
+<a href="#state_trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">Distribution<wbr>Trusted<wbr>Signer[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_viewercertificate_nodejs">
 <a href="#state_viewercertificate_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Certificate</a>
 </span> 
@@ -2859,19 +2852,6 @@ region and the credentials configuring this argument must have
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_active_trusted_signers_python">
-<a href="#state_active_trusted_signers_python" style="color: inherit; text-decoration: inherit;">active_<wbr>trusted_<wbr>signers</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The key pair IDs that CloudFront is aware of for
-each trusted signer, if the distribution is set up to serve private content
-with signed URLs.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3164,6 +3144,18 @@ CloudFront system.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_trusted_signers_python">
+<a href="#state_trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">List[Distribution<wbr>Trusted<wbr>Signer]</a></span>
+    </dt>
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_viewer_certificate_python">
 <a href="#state_viewer_certificate_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>certificate</a>
 </span> 
@@ -3224,7 +3216,7 @@ region and the credentials configuring this argument must have
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionCustomErrorResponseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionCustomErrorResponse.html">output</a> API doc for this type.
@@ -3466,7 +3458,7 @@ example, `/custom_404.html`).
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehavior.html">output</a> API doc for this type.
@@ -3640,8 +3632,8 @@ associated with this cache behavior.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The AWS accounts, if any, that you want to
-allow to create signed URLs for private content.
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd>
 
 </dl>
@@ -3813,8 +3805,8 @@ associated with this cache behavior.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS accounts, if any, that you want to
-allow to create signed URLs for private content.
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd>
 
 </dl>
@@ -3986,8 +3978,8 @@ associated with this cache behavior.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The AWS accounts, if any, that you want to
-allow to create signed URLs for private content.
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd>
 
 </dl>
@@ -4153,14 +4145,14 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedsigners_python">
-<a href="#trustedsigners_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
+        <span id="trusted_signers_python">
+<a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The AWS accounts, if any, that you want to
-allow to create signed URLs for private content.
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd>
 
 </dl>
@@ -4176,7 +4168,7 @@ allow to create signed URLs for private content.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorForwardedValuesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehaviorForwardedValues.html">output</a> API doc for this type.
@@ -4426,7 +4418,7 @@ value of `true` for `query_string`, all query string keys are cached.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehaviorForwardedValuesCookies.html">output</a> API doc for this type.
@@ -4580,7 +4572,7 @@ your origin.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionDefaultCacheBehaviorLambdaFunctionAssociation.html">output</a> API doc for this type.
@@ -4766,7 +4758,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionLoggingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionLoggingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionLoggingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionLoggingConfig.html">output</a> API doc for this type.
@@ -4956,7 +4948,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehavior.html">output</a> API doc for this type.
@@ -5142,8 +5134,8 @@ associated with this cache behavior.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The AWS accounts, if any, that you want to
-allow to create signed URLs for private content.
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd>
 
 </dl>
@@ -5327,8 +5319,8 @@ associated with this cache behavior.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The AWS accounts, if any, that you want to
-allow to create signed URLs for private content.
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd>
 
 </dl>
@@ -5512,8 +5504,8 @@ associated with this cache behavior.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The AWS accounts, if any, that you want to
-allow to create signed URLs for private content.
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd>
 
 </dl>
@@ -5691,14 +5683,14 @@ associated with this cache behavior.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="trustedsigners_python">
-<a href="#trustedsigners_python" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
+        <span id="trusted_signers_python">
+<a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The AWS accounts, if any, that you want to
-allow to create signed URLs for private content.
+    <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content. 
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd>
 
 </dl>
@@ -5714,7 +5706,7 @@ allow to create signed URLs for private content.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorForwardedValuesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehaviorForwardedValues.html">output</a> API doc for this type.
@@ -5964,7 +5956,7 @@ value of `true` for `query_string`, all query string keys are cached.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehaviorForwardedValuesCookies.html">output</a> API doc for this type.
@@ -6118,7 +6110,7 @@ your origin.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrderedCacheBehaviorLambdaFunctionAssociation.html">output</a> API doc for this type.
@@ -6304,7 +6296,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOrigin.html">output</a> API doc for this type.
@@ -6650,7 +6642,7 @@ configuration information. If a custom origin is required, use
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginCustomHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginCustomHeader.html">output</a> API doc for this type.
@@ -6776,7 +6768,7 @@ configuration information. If a custom origin is required, use
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginCustomOriginConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginCustomOriginConfig.html">output</a> API doc for this type.
@@ -7098,7 +7090,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginGroup.html">output</a> API doc for this type.
@@ -7276,7 +7268,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginGroupFailoverCriteriaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginGroupFailoverCriteria.html">output</a> API doc for this type.
@@ -7366,7 +7358,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginGroupMemberArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginGroupMember.html">output</a> API doc for this type.
@@ -7456,7 +7448,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionOriginS3OriginConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionOriginS3OriginConfig.html">output</a> API doc for this type.
@@ -7550,7 +7542,7 @@ identity][5] to associate with the origin.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionRestrictionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionRestrictionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionRestrictionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionRestrictions.html">output</a> API doc for this type.
@@ -7636,7 +7628,7 @@ identity][5] to associate with the origin.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionRestrictionsGeoRestrictionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionRestrictionsGeoRestriction.html">output</a> API doc for this type.
@@ -7780,13 +7772,285 @@ distribute your content (`blacklist`).
 
 
 
+<h4 id="distributiontrustedsigner">Distribution<wbr>Trusted<wbr>Signer</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionTrustedSigner">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionTrustedSignerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionTrustedSigner.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the distribution is enabled to accept end
+user requests for content.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="items_csharp">
+<a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigneritem">List&lt;Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of nested attributes for each trusted signer
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the distribution is enabled to accept end
+user requests for content.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="items_go">
+<a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigneritem">[]Distribution<wbr>Trusted<wbr>Signer<wbr>Item</a></span>
+    </dt>
+    <dd>{{% md %}}List of nested attributes for each trusted signer
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the distribution is enabled to accept end
+user requests for content.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="items_nodejs">
+<a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigneritem">Distribution<wbr>Trusted<wbr>Signer<wbr>Item[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of nested attributes for each trusted signer
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the distribution is enabled to accept end
+user requests for content.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="items_python">
+<a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#distributiontrustedsigneritem">List[Distribution<wbr>Trusted<wbr>Signer<wbr>Item]</a></span>
+    </dt>
+    <dd>{{% md %}}List of nested attributes for each trusted signer
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="distributiontrustedsigneritem">Distribution<wbr>Trusted<wbr>Signer<wbr>Item</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionTrustedSignerItem">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionTrustedSignerItemOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionTrustedSignerItem.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="awsaccountnumber_csharp">
+<a href="#awsaccountnumber_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Account<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}AWS account ID or `self`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keypairids_csharp">
+<a href="#keypairids_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="awsaccountnumber_go">
+<a href="#awsaccountnumber_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Account<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}AWS account ID or `self`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keypairids_go">
+<a href="#keypairids_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="awsaccountnumber_nodejs">
+<a href="#awsaccountnumber_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Account<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}AWS account ID or `self`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keypairids_nodejs">
+<a href="#keypairids_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="awsaccountnumber_python">
+<a href="#awsaccountnumber_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Account<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}AWS account ID or `self`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keypairids_python">
+<a href="#keypairids_python" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionViewerCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionViewerCertificate">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionViewerCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionViewerCertificateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionViewerCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#DistributionViewerCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Inputs.DistributionViewerCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.Outputs.DistributionViewerCertificate.html">output</a> API doc for this type.
@@ -7849,7 +8113,7 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
 `cloudfront_default_certificate = false`. One of `SSLv3`, `TLSv1`,
-`TLSv1_2016`, `TLSv1.1_2016` or `TLSv1.2_2018`. Default: `TLSv1`. **NOTE**:
+`TLSv1_2016`, `TLSv1.1_2016`, `TLSv1.2_2018` or `TLSv1.2_2019`. Default: `TLSv1`. **NOTE**:
 If you are using a custom certificate (specified with `acm_certificate_arn`
 or `iam_certificate_id`), and have specified `sni-only` in
 `ssl_support_method`, `TLSv1` or later must be specified. If you have
@@ -7926,7 +8190,7 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
 `cloudfront_default_certificate = false`. One of `SSLv3`, `TLSv1`,
-`TLSv1_2016`, `TLSv1.1_2016` or `TLSv1.2_2018`. Default: `TLSv1`. **NOTE**:
+`TLSv1_2016`, `TLSv1.1_2016`, `TLSv1.2_2018` or `TLSv1.2_2019`. Default: `TLSv1`. **NOTE**:
 If you are using a custom certificate (specified with `acm_certificate_arn`
 or `iam_certificate_id`), and have specified `sni-only` in
 `ssl_support_method`, `TLSv1` or later must be specified. If you have
@@ -8003,7 +8267,7 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
 `cloudfront_default_certificate = false`. One of `SSLv3`, `TLSv1`,
-`TLSv1_2016`, `TLSv1.1_2016` or `TLSv1.2_2018`. Default: `TLSv1`. **NOTE**:
+`TLSv1_2016`, `TLSv1.1_2016`, `TLSv1.2_2018` or `TLSv1.2_2019`. Default: `TLSv1`. **NOTE**:
 If you are using a custom certificate (specified with `acm_certificate_arn`
 or `iam_certificate_id`), and have specified `sni-only` in
 `ssl_support_method`, `TLSv1` or later must be specified. If you have
@@ -8080,7 +8344,7 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
 `cloudfront_default_certificate = false`. One of `SSLv3`, `TLSv1`,
-`TLSv1_2016`, `TLSv1.1_2016` or `TLSv1.2_2018`. Default: `TLSv1`. **NOTE**:
+`TLSv1_2016`, `TLSv1.1_2016`, `TLSv1.2_2018` or `TLSv1.2_2019`. Default: `TLSv1`. **NOTE**:
 If you are using a custom certificate (specified with `acm_certificate_arn`
 or `iam_certificate_id`), and have specified `sni-only` in
 `ssl_support_method`, `TLSv1` or later must be specified. If you have

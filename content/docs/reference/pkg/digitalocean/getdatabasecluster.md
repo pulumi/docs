@@ -1,8 +1,8 @@
 
 ---
 title: "GetDatabaseCluster"
-title_tag: "Function GetDatabaseCluster | Package Digital Ocean"
-meta_desc: "Explore the GetDatabaseCluster function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Provides information on a DigitalOcean database cluster resource."
+title_tag: "Function GetDatabaseCluster | Package DigitalOcean"
+meta_desc: "Explore the GetDatabaseCluster function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Provides information on a DigitalOcean database cluster resource."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the GetDatabaseCluster function of the Digital Ocean package
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides information on a DigitalOcean database cluster resource.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -39,6 +37,7 @@ class MyStack : Stack
     public Output<string> DatabaseOutput { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -53,9 +52,11 @@ import pulumi_digitalocean as digitalocean
 example = digitalocean.get_database_cluster(name="example-cluster")
 pulumi.export("databaseOutput", example.uri)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -65,6 +66,7 @@ const example = digitalocean.getDatabaseCluster({
 });
 export const databaseOutput = example.then(example => example.uri);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

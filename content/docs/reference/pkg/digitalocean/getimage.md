@@ -1,8 +1,8 @@
 
 ---
 title: "GetImage"
-title_tag: "Function GetImage | Package Digital Ocean"
-meta_desc: "Explore the GetImage function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on an image for use in other resources (e.g. creating a Droplet"
+title_tag: "Function GetImage | Package DigitalOcean"
+meta_desc: "Explore the GetImage function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on an image for use in other resources (e.g. creating a Droplet"
 ---
 
 
@@ -16,8 +16,6 @@ configured on your DigitalOcean account. This is useful if the image in question
 is not managed by this provider or you need to utilize any of the image's data.
 
 An error is triggered if zero or more than one result is returned by the query.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ import pulumi_digitalocean as digitalocean
 
 example1 = digitalocean.get_image(name="example-1.0.0")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -65,6 +66,7 @@ const example1 = pulumi.output(digitalocean.getImage({
     name: "example-1.0.0",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

@@ -11,69 +11,6 @@ meta_desc: "Explore the Integration resource of the apigateway module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an HTTP Method Integration for an API Gateway Integration.
-## Lambda integration
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const config = new pulumi.Config();
-// Variables
-const myregion = config.require("myregion");
-const accountId = config.require("accountId");
-
-// API Gateway
-const api = new aws.apigateway.RestApi("api", {});
-const resource = new aws.apigateway.Resource("resource", {
-    parentId: api.rootResourceId,
-    pathPart: "resource",
-    restApi: api.id,
-});
-const method = new aws.apigateway.Method("method", {
-    authorization: "NONE",
-    httpMethod: "GET",
-    resourceId: resource.id,
-    restApi: api.id,
-});
-// IAM
-const role = new aws.iam.Role("role", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "lambda.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-`,
-});
-const lambda = new aws.lambda.Function("lambda", {
-    code: new pulumi.asset.FileArchive("lambda.zip"),
-    handler: "lambda.lambda_handler",
-    role: role.arn,
-    runtime: "python2.7",
-});
-const integration = new aws.apigateway.Integration("integration", {
-    httpMethod: method.httpMethod,
-    integrationHttpMethod: "POST",
-    resourceId: resource.id,
-    restApi: api.id,
-    type: "AWS_PROXY",
-    uri: lambda.invokeArn,
-});
-// Lambda
-const apigwLambda = new aws.lambda.Permission("apigw_lambda", {
-    action: "lambda:InvokeFunction",
-    function: lambda.functionName,
-    principal: "apigateway.amazonaws.com",
-    sourceArn: pulumi.interpolate`arn:aws:execute-api:${myregion}:${accountId}:${api.id}/*/${method.httpMethod}${resource.path}`,
-});
-```
 
 {{% examples %}}
 ## Example Usage
@@ -95,25 +32,29 @@ class MyStack : Stack
         });
         var myDemoResource = new Aws.ApiGateway.Resource("myDemoResource", new Aws.ApiGateway.ResourceArgs
         {
+            RestApi = myDemoAPI.Id,
             ParentId = myDemoAPI.RootResourceId,
             PathPart = "mydemoresource",
-            RestApi = myDemoAPI.Id,
         });
         var myDemoMethod = new Aws.ApiGateway.Method("myDemoMethod", new Aws.ApiGateway.MethodArgs
         {
-            Authorization = "NONE",
-            HttpMethod = "GET",
-            ResourceId = myDemoResource.Id,
             RestApi = myDemoAPI.Id,
+            ResourceId = myDemoResource.Id,
+            HttpMethod = "GET",
+            Authorization = "NONE",
         });
         var myDemoIntegration = new Aws.ApiGateway.Integration("myDemoIntegration", new Aws.ApiGateway.IntegrationArgs
         {
+            RestApi = myDemoAPI.Id,
+            ResourceId = myDemoResource.Id,
+            HttpMethod = myDemoMethod.HttpMethod,
+            Type = "MOCK",
             CacheKeyParameters = 
             {
                 "method.request.path.param",
             },
             CacheNamespace = "foobar",
-            HttpMethod = myDemoMethod.HttpMethod,
+            TimeoutMilliseconds = 29000,
             RequestParameters = 
             {
                 { "integration.request.header.X-Authorization", "'static'" },
@@ -123,13 +64,8 @@ class MyStack : Stack
                 { "application/xml", @"{
    ""body"" : $input.json('$')
 }
-
 " },
             },
-            ResourceId = myDemoResource.Id,
-            RestApi = myDemoAPI.Id,
-            TimeoutMilliseconds = 29000,
-            Type = "MOCK",
         });
     }
 
@@ -145,7 +81,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -158,38 +94,38 @@ func main() {
 			return err
 		}
 		myDemoResource, err := apigateway.NewResource(ctx, "myDemoResource", &apigateway.ResourceArgs{
+			RestApi:  myDemoAPI.ID(),
 			ParentId: myDemoAPI.RootResourceId,
 			PathPart: pulumi.String("mydemoresource"),
-			RestApi:  myDemoAPI.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		myDemoMethod, err := apigateway.NewMethod(ctx, "myDemoMethod", &apigateway.MethodArgs{
-			Authorization: pulumi.String("NONE"),
-			HttpMethod:    pulumi.String("GET"),
-			ResourceId:    myDemoResource.ID(),
 			RestApi:       myDemoAPI.ID(),
+			ResourceId:    myDemoResource.ID(),
+			HttpMethod:    pulumi.String("GET"),
+			Authorization: pulumi.String("NONE"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = apigateway.NewIntegration(ctx, "myDemoIntegration", &apigateway.IntegrationArgs{
+			RestApi:    myDemoAPI.ID(),
+			ResourceId: myDemoResource.ID(),
+			HttpMethod: myDemoMethod.HttpMethod,
+			Type:       pulumi.String("MOCK"),
 			CacheKeyParameters: pulumi.StringArray{
 				pulumi.String("method.request.path.param"),
 			},
-			CacheNamespace: pulumi.String("foobar"),
-			HttpMethod:     myDemoMethod.HttpMethod,
+			CacheNamespace:      pulumi.String("foobar"),
+			TimeoutMilliseconds: pulumi.Int(29000),
 			RequestParameters: pulumi.StringMap{
 				"integration.request.header.X-Authorization": pulumi.String("'static'"),
 			},
 			RequestTemplates: pulumi.StringMap{
-				"application/xml": pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v", "{\n", "   \"body\" : ", "$", "input.json('", "$", "')\n", "}\n", "\n")),
+				"application/xml": pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "{\n", "   \"body\" : ", "$", "input.json('", "$", "')\n", "}\n")),
 			},
-			ResourceId:          myDemoResource.ID(),
-			RestApi:             myDemoAPI.ID(),
-			TimeoutMilliseconds: pulumi.Int(29000),
-			Type:                pulumi.String("MOCK"),
 		})
 		if err != nil {
 			return err
@@ -208,18 +144,22 @@ import pulumi_aws as aws
 
 my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
 my_demo_resource = aws.apigateway.Resource("myDemoResource",
+    rest_api=my_demo_api.id,
     parent_id=my_demo_api.root_resource_id,
-    path_part="mydemoresource",
-    rest_api=my_demo_api.id)
+    path_part="mydemoresource")
 my_demo_method = aws.apigateway.Method("myDemoMethod",
-    authorization="NONE",
-    http_method="GET",
+    rest_api=my_demo_api.id,
     resource_id=my_demo_resource.id,
-    rest_api=my_demo_api.id)
+    http_method="GET",
+    authorization="NONE")
 my_demo_integration = aws.apigateway.Integration("myDemoIntegration",
+    rest_api=my_demo_api.id,
+    resource_id=my_demo_resource.id,
+    http_method=my_demo_method.http_method,
+    type="MOCK",
     cache_key_parameters=["method.request.path.param"],
     cache_namespace="foobar",
-    http_method=my_demo_method.http_method,
+    timeout_milliseconds=29000,
     request_parameters={
         "integration.request.header.X-Authorization": "'static'",
     },
@@ -227,13 +167,8 @@ my_demo_integration = aws.apigateway.Integration("myDemoIntegration",
         "application/xml": """{
    "body" : $input.json('$')
 }
-
 """,
-    },
-    resource_id=my_demo_resource.id,
-    rest_api=my_demo_api.id,
-    timeout_milliseconds=29000,
-    type="MOCK")
+    })
 ```
 
 {{% /example %}}
@@ -244,38 +179,35 @@ my_demo_integration = aws.apigateway.Integration("myDemoIntegration",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
-    description: "This is my API for demonstration purposes",
-});
-const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
+const myDemoAPI = new aws.apigateway.RestApi("myDemoAPI", {description: "This is my API for demonstration purposes"});
+const myDemoResource = new aws.apigateway.Resource("myDemoResource", {
+    restApi: myDemoAPI.id,
     parentId: myDemoAPI.rootResourceId,
     pathPart: "mydemoresource",
-    restApi: myDemoAPI.id,
 });
-const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
-    authorization: "NONE",
-    httpMethod: "GET",
+const myDemoMethod = new aws.apigateway.Method("myDemoMethod", {
+    restApi: myDemoAPI.id,
     resourceId: myDemoResource.id,
-    restApi: myDemoAPI.id,
+    httpMethod: "GET",
+    authorization: "NONE",
 });
-const myDemoIntegration = new aws.apigateway.Integration("MyDemoIntegration", {
+const myDemoIntegration = new aws.apigateway.Integration("myDemoIntegration", {
+    restApi: myDemoAPI.id,
+    resourceId: myDemoResource.id,
+    httpMethod: myDemoMethod.httpMethod,
+    type: "MOCK",
     cacheKeyParameters: ["method.request.path.param"],
     cacheNamespace: "foobar",
-    httpMethod: myDemoMethod.httpMethod,
+    timeoutMilliseconds: 29000,
     requestParameters: {
         "integration.request.header.X-Authorization": "'static'",
     },
-    // Transforms the incoming XML request to JSON
     requestTemplates: {
         "application/xml": `{
    "body" : $input.json('$')
 }
 `,
     },
-    resourceId: myDemoResource.id,
-    restApi: myDemoAPI.id,
-    timeoutMilliseconds: 29000,
-    type: "MOCK",
 });
 ```
 
@@ -297,7 +229,7 @@ const myDemoIntegration = new aws.apigateway.Integration("MyDemoIntegration", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -371,7 +303,7 @@ const myDemoIntegration = new aws.apigateway.Integration("MyDemoIntegration", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -391,7 +323,7 @@ const myDemoIntegration = new aws.apigateway.Integration("MyDemoIntegration", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -401,7 +333,7 @@ const myDemoIntegration = new aws.apigateway.Integration("MyDemoIntegration", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1324,7 +1256,7 @@ Get an existing Integration resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

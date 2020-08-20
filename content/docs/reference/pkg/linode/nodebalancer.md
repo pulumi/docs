@@ -12,8 +12,6 @@ meta_desc: "Explore the NodeBalancer resource of the Linode package, including e
 
 Provides a Linode NodeBalancer resource.  This can be used to create, modify, and delete Linodes NodeBalancers in Linode's managed load balancer service.
 For more information, see [Getting Started with NodeBalancers](https://www.linode.com/docs/platform/nodebalancer/getting-started-with-nodebalancers/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createNodeBalancer).
-
-
 ## Attributes
 
 This resource exports the following attributes:
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +68,11 @@ foobar = linode.NodeBalancer("foobar",
     region="us-east",
     tags=["foobar"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -83,6 +84,7 @@ const foobar = new linode.NodeBalancer("foobar", {
     tags: ["foobar"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -97,7 +99,7 @@ const foobar = new linode.NodeBalancer("foobar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/linode/#NodeBalancer">NodeBalancer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_conn_throttle=None<span class="p">, </span>label=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.NodeBalancer">NodeBalancer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_conn_throttle=None<span class="p">, </span>label=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -816,7 +818,7 @@ Get an existing NodeBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_conn_throttle=None<span class="p">, </span>created=None<span class="p">, </span>hostname=None<span class="p">, </span>ipv4=None<span class="p">, </span>ipv6=None<span class="p">, </span>label=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>transfer=None<span class="p">, </span>updated=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_conn_throttle=None<span class="p">, </span>created=None<span class="p">, </span>hostname=None<span class="p">, </span>ipv4=None<span class="p">, </span>ipv6=None<span class="p">, </span>label=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>transfer=None<span class="p">, </span>updated=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1525,8 +1527,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="in__python">
-<a href="#in__python" style="color: inherit; text-decoration: inherit;">in_</a>
+        <span id="in_python">
+<a href="#in_python" style="color: inherit; text-decoration: inherit;">in</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

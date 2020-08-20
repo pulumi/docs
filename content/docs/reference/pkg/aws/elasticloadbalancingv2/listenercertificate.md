@@ -33,16 +33,19 @@ class MyStack : Stack
         var exampleCertificate = new Aws.Acm.Certificate("exampleCertificate", new Aws.Acm.CertificateArgs
         {
         });
+        // ...
         var frontEndLoadBalancer = new Aws.LB.LoadBalancer("frontEndLoadBalancer", new Aws.LB.LoadBalancerArgs
         {
         });
+        // ...
         var frontEndListener = new Aws.LB.Listener("frontEndListener", new Aws.LB.ListenerArgs
         {
         });
+        // ...
         var exampleListenerCertificate = new Aws.LB.ListenerCertificate("exampleListenerCertificate", new Aws.LB.ListenerCertificateArgs
         {
-            CertificateArn = exampleCertificate.Arn,
             ListenerArn = frontEndListener.Arn,
+            CertificateArn = exampleCertificate.Arn,
         });
     }
 
@@ -56,8 +59,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acm"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -76,8 +79,8 @@ func main() {
 			return err
 		}
 		_, err = lb.NewListenerCertificate(ctx, "exampleListenerCertificate", &lb.ListenerCertificateArgs{
-			CertificateArn: exampleCertificate.Arn,
 			ListenerArn:    frontEndListener.Arn,
+			CertificateArn: exampleCertificate.Arn,
 		})
 		if err != nil {
 			return err
@@ -95,11 +98,14 @@ import pulumi
 import pulumi_aws as aws
 
 example_certificate = aws.acm.Certificate("exampleCertificate")
+# ...
 front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
+# ...
 front_end_listener = aws.lb.Listener("frontEndListener")
+# ...
 example_listener_certificate = aws.lb.ListenerCertificate("exampleListenerCertificate",
-    certificate_arn=example_certificate.arn,
-    listener_arn=front_end_listener.arn)
+    listener_arn=front_end_listener.arn,
+    certificate_arn=example_certificate.arn)
 ```
 
 {{% /example %}}
@@ -110,12 +116,15 @@ example_listener_certificate = aws.lb.ListenerCertificate("exampleListenerCertif
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleCertificate = new aws.acm.Certificate("example", {});
-const frontEndLoadBalancer = new aws.lb.LoadBalancer("front_end", {});
-const frontEndListener = new aws.lb.Listener("front_end", {});
-const exampleListenerCertificate = new aws.lb.ListenerCertificate("example", {
-    certificateArn: exampleCertificate.arn,
+const exampleCertificate = new aws.acm.Certificate("exampleCertificate", {});
+// ...
+const frontEndLoadBalancer = new aws.lb.LoadBalancer("frontEndLoadBalancer", {});
+// ...
+const frontEndListener = new aws.lb.Listener("frontEndListener", {});
+// ...
+const exampleListenerCertificate = new aws.lb.ListenerCertificate("exampleListenerCertificate", {
     listenerArn: frontEndListener.arn,
+    certificateArn: exampleCertificate.arn,
 });
 ```
 
@@ -138,7 +147,7 @@ const exampleListenerCertificate = new aws.lb.ListenerCertificate("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificate">NewListenerCertificate</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificateArgs">ListenerCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificate">ListenerCertificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificate">NewListenerCertificate</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificateArgs">ListenerCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificate">ListenerCertificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -212,7 +221,7 @@ const exampleListenerCertificate = new aws.lb.ListenerCertificate("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -232,7 +241,7 @@ const exampleListenerCertificate = new aws.lb.ListenerCertificate("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificateArgs">ListenerCertificateArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificateArgs">ListenerCertificateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -242,7 +251,7 @@ const exampleListenerCertificate = new aws.lb.ListenerCertificate("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -517,7 +526,7 @@ Get an existing ListenerCertificate resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListenerCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificateState">ListenerCertificateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificate">ListenerCertificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListenerCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificateState">ListenerCertificateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancingv2?tab=doc#ListenerCertificate">ListenerCertificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

@@ -19,6 +19,13 @@ case ${PULUMI_ACTION} in
         pulumi -C infrastructure preview
         ;;
     update)
+        # Given how frequently we update the CloudFront distribution, and how easy it can
+        # be for our checkpointed CloudFront Etag to fall out of sync with what's current,
+        # we refresh the distribution on every update -- but we consider any other
+        # difference in stack state an error to be examined and corrected manually.
+        pulumi -C infrastructure refresh -t "urn:pulumi:production::www.pulumi.com::aws:cloudfront/distribution:Distribution::cdn" --yes
+        pulumi -C infrastructure refresh --expect-no-changes --yes
+
         pulumi -C infrastructure up --yes
         ;;
     *)

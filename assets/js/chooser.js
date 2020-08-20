@@ -111,6 +111,11 @@ function selectK8sLang(syntax) {
     selectChoice("k8s-language", syntax);
 }
 
+// selectInputKind chooses an input kind.
+function selectInputKind(kind) {
+    selectChoice("input-kind", kind);
+}
+
 // Hides and shows choices based on previous preferences.
 function hideShowChoices(kind, selector, defaultChoice) {
     var tabsOnPage = {};
@@ -162,7 +167,7 @@ function hideShowChoices(kind, selector, defaultChoice) {
 $(document).on("rendered", function() {
 
     // If a query param's been provided for a tab category, honor that.
-    ["language", "os", "cloud", "k8s-language"].forEach(function(kind) {
+    ["language", "os", "cloud", "k8s-language", "input-kind"].forEach(function(kind) {
         var val = getQueryVariable(kind);
         if (val) {
             selectChoice(kind, val);
@@ -184,4 +189,5 @@ $(document).on("rendered", function() {
     hideShowChoices("os", selectOs, defaultOsChoice);
     hideShowChoices("cloud", selectCloud, "aws");
     hideShowChoices("k8s-language", selectK8sLang, "typescript");
+    hideShowChoices("input-kind", selectInputKind, "url");
 });

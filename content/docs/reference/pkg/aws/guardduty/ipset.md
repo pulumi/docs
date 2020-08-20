@@ -12,7 +12,7 @@ meta_desc: "Explore the IPSet resource of the guardduty module, including exampl
 
 Provides a resource to manage a GuardDuty IPSet.
 
-> **Note:** Currently in GuardDuty, users from member accounts cannot upload and further manage IPSets. IPSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the [GuardDuty API Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/create-ip-set.html)
+> **Note:** Currently in GuardDuty, users from member accounts cannot upload and further manage IPSets. IPSets that are uploaded by the primary account are imposed on GuardDuty functionality in its member accounts. See the [GuardDuty API Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/create-ip-set.html)
 
 {{% examples %}}
 ## Example Usage
@@ -28,7 +28,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var master = new Aws.GuardDuty.Detector("master", new Aws.GuardDuty.DetectorArgs
+        var primary = new Aws.GuardDuty.Detector("primary", new Aws.GuardDuty.DetectorArgs
         {
             Enable = true,
         });
@@ -36,21 +36,20 @@ class MyStack : Stack
         {
             Acl = "private",
         });
-        var myIPSetBucketObject = new Aws.S3.BucketObject("myIPSetBucketObject", new Aws.S3.BucketObjectArgs
+        var myIPSet = new Aws.S3.BucketObject("myIPSet", new Aws.S3.BucketObjectArgs
         {
             Acl = "public-read",
-            Bucket = bucket.Id,
             Content = @"10.0.0.0/8
-
 ",
+            Bucket = bucket.Id,
             Key = "MyIPSet",
         });
-        var myIPSetIPSet = new Aws.GuardDuty.IPSet("myIPSetIPSet", new Aws.GuardDuty.IPSetArgs
+        var example = new Aws.GuardDuty.IPSet("example", new Aws.GuardDuty.IPSetArgs
         {
             Activate = true,
-            DetectorId = master.Id,
+            DetectorId = primary.Id,
             Format = "TXT",
-            Location = Output.Tuple(myIPSetBucketObject.Bucket, myIPSetBucketObject.Key).Apply(values =>
+            Location = Output.Tuple(myIPSet.Bucket, myIPSet.Key).Apply(values =>
             {
                 var bucket = values.Item1;
                 var key = values.Item2;
@@ -71,14 +70,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/guardduty"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		master, err := guardduty.NewDetector(ctx, "master", &guardduty.DetectorArgs{
+		primary, err := guardduty.NewDetector(ctx, "primary", &guardduty.DetectorArgs{
 			Enable: pulumi.Bool(true),
 		})
 		if err != nil {
@@ -90,20 +89,20 @@ func main() {
 		if err != nil {
 			return err
 		}
-		myIPSetBucketObject, err := s3.NewBucketObject(ctx, "myIPSetBucketObject", &s3.BucketObjectArgs{
+		myIPSet, err := s3.NewBucketObject(ctx, "myIPSet", &s3.BucketObjectArgs{
 			Acl:     pulumi.String("public-read"),
+			Content: pulumi.String("10.0.0.0/8\n"),
 			Bucket:  bucket.ID(),
-			Content: pulumi.String(fmt.Sprintf("%v%v", "10.0.0.0/8\n", "\n")),
 			Key:     pulumi.String("MyIPSet"),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = guardduty.NewIPSet(ctx, "myIPSetIPSet", &guardduty.IPSetArgs{
+		_, err = guardduty.NewIPSet(ctx, "example", &guardduty.IPSetArgs{
 			Activate:   pulumi.Bool(true),
-			DetectorId: master.ID(),
+			DetectorId: primary.ID(),
 			Format:     pulumi.String("TXT"),
-			Location: pulumi.All(myIPSetBucketObject.Bucket, myIPSetBucketObject.Key).ApplyT(func(_args []interface{}) (string, error) {
+			Location: pulumi.All(myIPSet.Bucket, myIPSet.Key).ApplyT(func(_args []interface{}) (string, error) {
 				bucket := _args[0].(string)
 				key := _args[1].(string)
 				return fmt.Sprintf("%v%v%v%v", "https://s3.amazonaws.com/", bucket, "/", key), nil
@@ -124,20 +123,18 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-master = aws.guardduty.Detector("master", enable=True)
+primary = aws.guardduty.Detector("primary", enable=True)
 bucket = aws.s3.Bucket("bucket", acl="private")
-my_ip_set_bucket_object = aws.s3.BucketObject("myIPSetBucketObject",
+my_ip_set = aws.s3.BucketObject("myIPSet",
     acl="public-read",
+    content="10.0.0.0/8\n",
     bucket=bucket.id,
-    content="""10.0.0.0/8
-
-""",
     key="MyIPSet")
-my_ip_set_ip_set = aws.guardduty.IPSet("myIPSetIPSet",
+example = aws.guardduty.IPSet("example",
     activate=True,
-    detector_id=master.id,
+    detector_id=primary.id,
     format="TXT",
-    location=pulumi.Output.all(my_ip_set_bucket_object.bucket, my_ip_set_bucket_object.key).apply(lambda bucket, key: f"https://s3.amazonaws.com/{bucket}/{key}"))
+    location=pulumi.Output.all(my_ip_set.bucket, my_ip_set.key).apply(lambda bucket, key: f"https://s3.amazonaws.com/{bucket}/{key}"))
 ```
 
 {{% /example %}}
@@ -148,23 +145,19 @@ my_ip_set_ip_set = aws.guardduty.IPSet("myIPSetIPSet",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const master = new aws.guardduty.Detector("master", {
-    enable: true,
-});
-const bucket = new aws.s3.Bucket("bucket", {
-    acl: "private",
-});
-const myIPSetBucketObject = new aws.s3.BucketObject("MyIPSet", {
+const primary = new aws.guardduty.Detector("primary", {enable: true});
+const bucket = new aws.s3.Bucket("bucket", {acl: "private"});
+const myIPSet = new aws.s3.BucketObject("myIPSet", {
     acl: "public-read",
-    bucket: bucket.id,
     content: "10.0.0.0/8\n",
+    bucket: bucket.id,
     key: "MyIPSet",
 });
-const myIPSetIPSet = new aws.guardduty.IPSet("MyIPSet", {
+const example = new aws.guardduty.IPSet("example", {
     activate: true,
-    detectorId: master.id,
+    detectorId: primary.id,
     format: "TXT",
-    location: pulumi.interpolate`https://s3.amazonaws.com/${myIPSetBucketObject.bucket}/${myIPSetBucketObject.key}`,
+    location: pulumi.interpolate`https://s3.amazonaws.com/${myIPSet.bucket}/${myIPSet.key}`,
 });
 ```
 
@@ -186,7 +179,7 @@ const myIPSetIPSet = new aws.guardduty.IPSet("MyIPSet", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty?tab=doc#IPSet">NewIPSet</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty?tab=doc#IPSetArgs">IPSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty?tab=doc#IPSet">IPSet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/guardduty?tab=doc#IPSet">NewIPSet</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/guardduty?tab=doc#IPSetArgs">IPSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/guardduty?tab=doc#IPSet">IPSet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -260,7 +253,7 @@ const myIPSetIPSet = new aws.guardduty.IPSet("MyIPSet", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -280,7 +273,7 @@ const myIPSetIPSet = new aws.guardduty.IPSet("MyIPSet", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty?tab=doc#IPSetArgs">IPSetArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/guardduty?tab=doc#IPSetArgs">IPSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -290,7 +283,7 @@ const myIPSetIPSet = new aws.guardduty.IPSet("MyIPSet", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -785,7 +778,7 @@ Get an existing IPSet resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIPSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty?tab=doc#IPSetState">IPSetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty?tab=doc#IPSet">IPSet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIPSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/guardduty?tab=doc#IPSetState">IPSetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/guardduty?tab=doc#IPSet">IPSet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

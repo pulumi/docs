@@ -89,7 +89,79 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute"
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network1, err := networking.NewNetwork(ctx, "network1", &networking.NetworkArgs{
+			AdminStateUp: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		subnet1, err := networking.NewSubnet(ctx, "subnet1", &networking.SubnetArgs{
+			Cidr:      pulumi.String("192.168.199.0/24"),
+			IpVersion: pulumi.Int(4),
+			NetworkId: network1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		secgroup1, err := compute.NewSecGroup(ctx, "secgroup1", &compute.SecGroupArgs{
+			Description: pulumi.String("a security group"),
+			Rules: compute.SecGroupRuleArray{
+				&compute.SecGroupRuleArgs{
+					Cidr:       pulumi.String("0.0.0.0/0"),
+					FromPort:   pulumi.Int(22),
+					IpProtocol: pulumi.String("tcp"),
+					ToPort:     pulumi.Int(22),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		port1, err := networking.NewPort(ctx, "port1", &networking.PortArgs{
+			AdminStateUp: pulumi.Bool(true),
+			FixedIps: networking.PortFixedIpArray{
+				&networking.PortFixedIpArgs{
+					IpAddress: pulumi.String("192.168.199.10"),
+					SubnetId:  subnet1.ID(),
+				},
+			},
+			NetworkId: network1.ID(),
+			SecurityGroupIds: pulumi.StringArray{
+				secgroup1.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInstance(ctx, "instance1", &compute.InstanceArgs{
+			Networks: compute.InstanceNetworkArray{
+				&compute.InstanceNetworkArgs{
+					Port: port1.ID(),
+				},
+			},
+			SecurityGroups: pulumi.StringArray{
+				secgroup1.Name,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -181,7 +253,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#Network">Network</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>description=None<span class="p">, </span>dns_domain=None<span class="p">, </span>external=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>port_security_enabled=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, </span>segments=None<span class="p">, </span>shared=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transparent_vlan=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Network">Network</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>description=None<span class="p">, </span>dns_domain=None<span class="p">, </span>external=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>port_security_enabled=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, </span>segments=None<span class="p">, </span>shared=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transparent_vlan=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1332,7 +1404,7 @@ Get an existing Network resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>all_tags=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>description=None<span class="p">, </span>dns_domain=None<span class="p">, </span>external=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>port_security_enabled=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, </span>segments=None<span class="p">, </span>shared=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transparent_vlan=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>all_tags=None<span class="p">, </span>availability_zone_hints=None<span class="p">, </span>description=None<span class="p">, </span>dns_domain=None<span class="p">, </span>external=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>port_security_enabled=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, </span>segments=None<span class="p">, </span>shared=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>transparent_vlan=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

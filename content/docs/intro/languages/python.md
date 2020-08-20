@@ -14,7 +14,7 @@ aliases: ["/docs/reference/python/"]
 
 Pulumi supports programs written in Python 3. Python version 3.6 or later is required.
 
-<a class="btn" href="https://www.python.org/downloads/" target="_blank" title="Install Python 3">INSTALL PYTHON 3</a>
+{{< install-python >}}
 
 ## Getting Started
 

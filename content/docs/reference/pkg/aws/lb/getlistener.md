@@ -33,7 +33,7 @@ class MyStack : Stack
     public MyStack()
     {
         var config = new Config();
-        var listenerArn = config.RequireObject<dynamic>("listenerArn");
+        var listenerArn = config.Require("listenerArn");
         var listener = Output.Create(Aws.LB.GetListener.InvokeAsync(new Aws.LB.GetListenerArgs
         {
             Arn = listenerArn,
@@ -59,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -101,7 +101,7 @@ import pulumi
 import pulumi_aws as aws
 
 config = pulumi.Config()
-listener_arn = config.require_object("listenerArn")
+listener_arn = config.require("listenerArn")
 listener = aws.lb.get_listener(arn=listener_arn)
 selected = aws.lb.get_load_balancer(name="default-public")
 selected443 = aws.lb.get_listener(load_balancer_arn=selected.arn,
@@ -118,17 +118,16 @@ import * as aws from "@pulumi/aws";
 
 const config = new pulumi.Config();
 const listenerArn = config.require("listenerArn");
-
-const listener = pulumi.output(aws.lb.getListener({
+const listener = aws.lb.getListener({
     arn: listenerArn,
-}, { async: true }));
-const selected = pulumi.output(aws.lb.getLoadBalancer({
+});
+const selected = aws.lb.getLoadBalancer({
     name: "default-public",
-}, { async: true }));
-const selected443 = selected.apply(selected => aws.lb.getListener({
-    loadBalancerArn: selected.arn!,
+});
+const selected443 = selected.then(selected => aws.lb.getListener({
+    loadBalancerArn: selected.arn,
     port: 443,
-}, { async: true }));
+}));
 ```
 
 {{% /example %}}
@@ -152,7 +151,7 @@ const selected443 = selected.apply(selected => aws.lb.getListener({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#LookupListenerArgs">LookupListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#LookupListenerResult">LookupListenerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#LookupListenerArgs">LookupListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#LookupListenerResult">LookupListenerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupListener` in the Go SDK.
 
@@ -711,7 +710,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#GetListenerDefaultAction">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetListenerDefaultAction">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetListenerDefaultAction.html">output</a> API doc for this type.
@@ -1037,7 +1036,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#GetListenerDefaultActionAuthenticateCognito">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetListenerDefaultActionAuthenticateCognito">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetListenerDefaultActionAuthenticateCognito.html">output</a> API doc for this type.
@@ -1403,7 +1402,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#GetListenerDefaultActionAuthenticateOidc">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetListenerDefaultActionAuthenticateOidc">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetListenerDefaultActionAuthenticateOidc.html">output</a> API doc for this type.
@@ -1889,7 +1888,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#GetListenerDefaultActionFixedResponse">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetListenerDefaultActionFixedResponse">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetListenerDefaultActionFixedResponse.html">output</a> API doc for this type.
@@ -2055,7 +2054,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lb?tab=doc#GetListenerDefaultActionRedirect">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetListenerDefaultActionRedirect">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetListenerDefaultActionRedirect.html">output</a> API doc for this type.

@@ -12,8 +12,6 @@ meta_desc: "Explore the GetUsers function of the user module, including examples
 
 Use this data source to retrieve a list of users from Okta.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -44,10 +42,37 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := user.GetUsers(ctx, &user.GetUsersArgs{
+			Searches: []user.GetUsersSearch{
+				user.GetUsersSearch{
+					Comparison: "sw",
+					Name:       "profile.company",
+					Value:      "Articulate",
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -61,9 +86,11 @@ example = okta.user.get_users(searches=[{
     "value": "Articulate",
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -76,6 +103,7 @@ const example = pulumi.output(okta.user.getUsers({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

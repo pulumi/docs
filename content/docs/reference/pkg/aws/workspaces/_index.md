@@ -19,6 +19,7 @@ Explore the resources and functions of the workspaces module in the AWS package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getbundle" title="GetBundle"><span class="symbol function"></span>GetBundle</a></li>
+    <li><a href="getdirectory" title="GetDirectory"><span class="symbol function"></span>GetDirectory</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,7 +31,7 @@ Explore the resources and functions of the workspaces module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.13.1</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 
@@ -41,7 +42,7 @@ Explore the resources and functions of the workspaces module in the AWS package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.html" title="Pulumi.Aws.Workspaces">Pulumi.Aws.Workspaces</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#" title="aws/workspaces">aws/workspaces</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#" title="aws/workspaces">aws/workspaces</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/workspaces/#" title="@pulumi/aws/workspaces">@pulumi/aws/workspaces</a></dd>

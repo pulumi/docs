@@ -32,7 +32,7 @@ invocation type.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInvocation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#GetInvocationArgs">GetInvocationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#GetInvocationResult">GetInvocationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInvocation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#GetInvocationArgs">GetInvocationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#GetInvocationResult">GetInvocationResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -271,17 +271,6 @@ The following output properties are available:
     <dd>{{% md %}}String result of the lambda function invocation.
 {{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="resultmap_csharp">
-<a href="#resultmap_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Map</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}(**DEPRECATED**) This field is set only if result is a map of primitive types, where the map is string keys and string values.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `result` attribute with jsondecode() function{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="qualifier_csharp">
@@ -340,17 +329,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}String result of the lambda function invocation.
 {{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="resultmap_go">
-<a href="#resultmap_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Map</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}(**DEPRECATED**) This field is set only if result is a map of primitive types, where the map is string keys and string values.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `result` attribute with jsondecode() function{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -411,17 +389,6 @@ The following output properties are available:
     <dd>{{% md %}}String result of the lambda function invocation.
 {{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="resultmap_nodejs">
-<a href="#resultmap_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Map</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}(**DEPRECATED**) This field is set only if result is a map of primitive types, where the map is string keys and string values.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `result` attribute with jsondecode() function{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="qualifier_nodejs">
@@ -480,17 +447,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}String result of the lambda function invocation.
 {{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="result_map_python">
-<a href="#result_map_python" style="color: inherit; text-decoration: inherit;">result_<wbr>map</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}(**DEPRECATED**) This field is set only if result is a map of primitive types, where the map is string keys and string values.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `result` attribute with jsondecode() function{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">

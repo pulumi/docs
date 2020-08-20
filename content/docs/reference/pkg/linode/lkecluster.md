@@ -12,8 +12,6 @@ meta_desc: "Explore the LkeCluster resource of the Linode package, including exa
 
 Manages an LKE cluster.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -71,9 +70,11 @@ my_cluster = linode.LkeCluster("my-cluster",
     region="us-central",
     tags=["prod"])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -89,6 +90,7 @@ const my_cluster = new linode.LkeCluster("my-cluster", {
     tags: ["prod"],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -103,7 +105,7 @@ const my_cluster = new linode.LkeCluster("my-cluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/linode/#LkeCluster">LkeCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>k8s_version=None<span class="p">, </span>label=None<span class="p">, </span>pools=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.LkeCluster">LkeCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>k8s_version=None<span class="p">, </span>label=None<span class="p">, </span>pools=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -746,7 +748,7 @@ Get an existing LkeCluster resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_endpoints=None<span class="p">, </span>k8s_version=None<span class="p">, </span>kubeconfig=None<span class="p">, </span>label=None<span class="p">, </span>pools=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_endpoints=None<span class="p">, </span>k8s_version=None<span class="p">, </span>kubeconfig=None<span class="p">, </span>label=None<span class="p">, </span>pools=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

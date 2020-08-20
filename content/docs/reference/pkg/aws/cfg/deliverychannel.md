@@ -32,16 +32,6 @@ class MyStack : Stack
         {
             ForceDestroy = true,
         });
-        var fooDeliveryChannel = new Aws.Cfg.DeliveryChannel("fooDeliveryChannel", new Aws.Cfg.DeliveryChannelArgs
-        {
-            S3BucketName = bucket.BucketName,
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                "aws_config_configuration_recorder.foo",
-            },
-        });
         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
         {
             AssumeRolePolicy = @"{
@@ -57,15 +47,25 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var fooRecorder = new Aws.Cfg.Recorder("fooRecorder", new Aws.Cfg.RecorderArgs
         {
             RoleArn = role.Arn,
         });
+        var fooDeliveryChannel = new Aws.Cfg.DeliveryChannel("fooDeliveryChannel", new Aws.Cfg.DeliveryChannelArgs
+        {
+            S3BucketName = bucket.BucketName,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                fooRecorder,
+            },
+        });
         var rolePolicy = new Aws.Iam.RolePolicy("rolePolicy", new Aws.Iam.RolePolicyArgs
         {
+            Role = role.Id,
             Policy = Output.Tuple(bucket.Arn, bucket.Arn).Apply(values =>
             {
                 var bucketArn = values.Item1;
@@ -85,10 +85,8 @@ class MyStack : Stack
     }}
   ]
 }}
-
 ";
             }),
-            Role = role.Id,
         });
     }
 
@@ -104,9 +102,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -118,33 +116,33 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = cfg.NewDeliveryChannel(ctx, "fooDeliveryChannel", &cfg.DeliveryChannelArgs{
-			S3BucketName: bucket.Bucket,
-		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_config_configuration_recorder.foo",
-		}))
-		if err != nil {
-			return err
-		}
 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"config.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"config.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = cfg.NewRecorder(ctx, "fooRecorder", &cfg.RecorderArgs{
+		fooRecorder, err := cfg.NewRecorder(ctx, "fooRecorder", &cfg.RecorderArgs{
 			RoleArn: role.Arn,
 		})
 		if err != nil {
 			return err
 		}
+		_, err = cfg.NewDeliveryChannel(ctx, "fooDeliveryChannel", &cfg.DeliveryChannelArgs{
+			S3BucketName: bucket.Bucket,
+		}, pulumi.DependsOn([]pulumi.Resource{
+			fooRecorder,
+		}))
+		if err != nil {
+			return err
+		}
 		_, err = iam.NewRolePolicy(ctx, "rolePolicy", &iam.RolePolicyArgs{
+			Role: role.ID(),
 			Policy: pulumi.All(bucket.Arn, bucket.Arn).ApplyT(func(_args []interface{}) (string, error) {
 				bucketArn := _args[0].(string)
 				bucketArn1 := _args[1].(string)
-				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"s3:*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", bucketArn, "\",\n", "        \"", bucketArn1, "/*\"\n", "      ]\n", "    }\n", "  ]\n", "}\n", "\n"), nil
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"s3:*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"", bucketArn, "\",\n", "        \"", bucketArn1, "/*\"\n", "      ]\n", "    }\n", "  ]\n", "}\n"), nil
 			}).(pulumi.StringOutput),
-			Role: role.ID(),
 		})
 		if err != nil {
 			return err
@@ -162,8 +160,6 @@ import pulumi
 import pulumi_aws as aws
 
 bucket = aws.s3.Bucket("bucket", force_destroy=True)
-foo_delivery_channel = aws.cfg.DeliveryChannel("fooDeliveryChannel", s3_bucket_name=bucket.bucket,
-opts=ResourceOptions(depends_on=["aws_config_configuration_recorder.foo"]))
 role = aws.iam.Role("role", assume_role_policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -177,10 +173,12 @@ role = aws.iam.Role("role", assume_role_policy="""{
     }
   ]
 }
-
 """)
 foo_recorder = aws.cfg.Recorder("fooRecorder", role_arn=role.arn)
+foo_delivery_channel = aws.cfg.DeliveryChannel("fooDeliveryChannel", s3_bucket_name=bucket.bucket,
+opts=ResourceOptions(depends_on=[foo_recorder]))
 role_policy = aws.iam.RolePolicy("rolePolicy",
+    role=role.id,
     policy=pulumi.Output.all(bucket.arn, bucket.arn).apply(lambda bucketArn, bucketArn1: f"""{{
   "Version": "2012-10-17",
   "Statement": [
@@ -196,9 +194,7 @@ role_policy = aws.iam.RolePolicy("rolePolicy",
     }}
   ]
 }}
-
-"""),
-    role=role.id)
+"""))
 ```
 
 {{% /example %}}
@@ -209,11 +205,8 @@ role_policy = aws.iam.RolePolicy("rolePolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bucket = new aws.s3.Bucket("b", {
-    forceDestroy: true,
-});
-const role = new aws.iam.Role("r", {
-    assumeRolePolicy: `{
+const bucket = new aws.s3.Bucket("bucket", {forceDestroy: true});
+const role = new aws.iam.Role("role", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -226,15 +219,13 @@ const role = new aws.iam.Role("r", {
     }
   ]
 }
-`,
+`});
+const fooRecorder = new aws.cfg.Recorder("fooRecorder", {roleArn: role.arn});
+const fooDeliveryChannel = new aws.cfg.DeliveryChannel("fooDeliveryChannel", {s3BucketName: bucket.bucket}, {
+    dependsOn: [fooRecorder],
 });
-const fooRecorder = new aws.cfg.Recorder("foo", {
-    roleArn: role.arn,
-});
-const fooDeliveryChannel = new aws.cfg.DeliveryChannel("foo", {
-    s3BucketName: bucket.bucket,
-}, { dependsOn: [fooRecorder] });
-const rolePolicy = new aws.iam.RolePolicy("p", {
+const rolePolicy = new aws.iam.RolePolicy("rolePolicy", {
+    role: role.id,
     policy: pulumi.interpolate`{
   "Version": "2012-10-17",
   "Statement": [
@@ -251,7 +242,6 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
   ]
 }
 `,
-    role: role.id,
 });
 ```
 
@@ -273,7 +263,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannel">NewDeliveryChannel</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannelArgs">DeliveryChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannel">DeliveryChannel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#DeliveryChannel">NewDeliveryChannel</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#DeliveryChannelArgs">DeliveryChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#DeliveryChannel">DeliveryChannel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -347,7 +337,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -367,7 +357,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannelArgs">DeliveryChannelArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#DeliveryChannelArgs">DeliveryChannelArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -377,7 +367,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -784,7 +774,7 @@ Get an existing DeliveryChannel resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeliveryChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannelState">DeliveryChannelState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannel">DeliveryChannel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeliveryChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#DeliveryChannelState">DeliveryChannelState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#DeliveryChannel">DeliveryChannel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1156,7 +1146,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannelSnapshotDeliveryPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannelSnapshotDeliveryPropertiesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#DeliveryChannelSnapshotDeliveryPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#DeliveryChannelSnapshotDeliveryPropertiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Inputs.DeliveryChannelSnapshotDeliveryPropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Outputs.DeliveryChannelSnapshotDeliveryProperties.html">output</a> API doc for this type.

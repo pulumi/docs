@@ -14,8 +14,6 @@ Creates an Okta Network Zone.
 
 This resource allows you to create and configure an Okta Network Zone.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -48,10 +46,39 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewZone(ctx, "example", &network.ZoneArgs{
+			Gateways: pulumi.StringArray{
+				pulumi.String("1.2.3.4/24"),
+				pulumi.String("2.3.4.5-2.3.4.15"),
+			},
+			Proxies: pulumi.StringArray{
+				pulumi.String("2.2.3.4/24"),
+				pulumi.String("3.3.4.5-3.3.4.15"),
+			},
+			Type: pulumi.String("IP"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -70,9 +97,11 @@ example = okta.network.Zone("example",
     ],
     type="IP")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -89,6 +118,7 @@ const example = new okta.network.Zone("example", {
     type: "IP",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -103,7 +133,7 @@ const example = new okta.network.Zone("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/network/#Zone">Zone</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dynamic_locations=None<span class="p">, </span>gateways=None<span class="p">, </span>name=None<span class="p">, </span>proxies=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/network/#pulumi_okta.network.Zone">Zone</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dynamic_locations=None<span class="p">, </span>gateways=None<span class="p">, </span>name=None<span class="p">, </span>proxies=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -614,7 +644,7 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dynamic_locations=None<span class="p">, </span>gateways=None<span class="p">, </span>name=None<span class="p">, </span>proxies=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dynamic_locations=None<span class="p">, </span>gateways=None<span class="p">, </span>name=None<span class="p">, </span>proxies=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

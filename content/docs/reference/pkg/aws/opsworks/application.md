@@ -29,45 +29,45 @@ class MyStack : Stack
     {
         var foo_app = new Aws.OpsWorks.Application("foo-app", new Aws.OpsWorks.ApplicationArgs
         {
-            AppSources = 
-            {
-                new Aws.OpsWorks.Inputs.ApplicationAppSourceArgs
-                {
-                    Revision = "master",
-                    Type = "git",
-                    Url = "https://github.com/example.git",
-                },
-            },
-            AutoBundleOnDeploy = "true",
+            ShortName = "foobar",
+            StackId = aws_opsworks_stack.Main.Id,
+            Type = "rails",
             Description = "This is a Rails application",
-            DocumentRoot = "public",
             Domains = 
             {
                 "example.com",
                 "sub.example.com",
             },
-            EnableSsl = true,
             Environments = 
             {
                 new Aws.OpsWorks.Inputs.ApplicationEnvironmentArgs
                 {
                     Key = "key",
-                    Secure = false,
                     Value = "value",
+                    Secure = false,
                 },
             },
-            RailsEnv = "staging",
-            ShortName = "foobar",
+            AppSources = 
+            {
+                new Aws.OpsWorks.Inputs.ApplicationAppSourceArgs
+                {
+                    Type = "git",
+                    Revision = "master",
+                    Url = "https://github.com/example.git",
+                },
+            },
+            EnableSsl = true,
             SslConfigurations = 
             {
                 new Aws.OpsWorks.Inputs.ApplicationSslConfigurationArgs
                 {
-                    Certificate = File.ReadAllText("./foobar.crt"),
                     PrivateKey = File.ReadAllText("./foobar.key"),
+                    Certificate = File.ReadAllText("./foobar.crt"),
                 },
             },
-            StackId = aws_opsworks_stack.Main.Id,
-            Type = "rails",
+            DocumentRoot = "public",
+            AutoBundleOnDeploy = "true",
+            RailsEnv = "staging",
         });
     }
 
@@ -86,32 +86,32 @@ import pulumi
 import pulumi_aws as aws
 
 foo_app = aws.opsworks.Application("foo-app",
-    app_sources=[{
-        "revision": "master",
-        "type": "git",
-        "url": "https://github.com/example.git",
-    }],
-    auto_bundle_on_deploy=True,
+    short_name="foobar",
+    stack_id=aws_opsworks_stack["main"]["id"],
+    type="rails",
     description="This is a Rails application",
-    document_root="public",
     domains=[
         "example.com",
         "sub.example.com",
     ],
-    enable_ssl=True,
     environments=[{
         "key": "key",
-        "secure": False,
         "value": "value",
+        "secure": False,
     }],
-    rails_env="staging",
-    short_name="foobar",
+    app_sources=[{
+        "type": "git",
+        "revision": "master",
+        "url": "https://github.com/example.git",
+    }],
+    enable_ssl=True,
     ssl_configurations=[{
-        "certificate": (lambda path: open(path).read())("./foobar.crt"),
         "private_key": (lambda path: open(path).read())("./foobar.key"),
+        "certificate": (lambda path: open(path).read())("./foobar.crt"),
     }],
-    stack_id=aws_opsworks_stack["main"]["id"],
-    type="rails")
+    document_root="public",
+    auto_bundle_on_deploy=True,
+    rails_env="staging")
 ```
 
 {{% /example %}}
@@ -121,35 +121,35 @@ foo_app = aws.opsworks.Application("foo-app",
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
-import * as fs from "fs";
+import * from "fs";
 
 const foo_app = new aws.opsworks.Application("foo-app", {
-    appSources: [{
-        revision: "master",
-        type: "git",
-        url: "https://github.com/example.git",
-    }],
-    autoBundleOnDeploy: "true",
+    shortName: "foobar",
+    stackId: aws_opsworks_stack.main.id,
+    type: "rails",
     description: "This is a Rails application",
-    documentRoot: "public",
     domains: [
         "example.com",
         "sub.example.com",
     ],
-    enableSsl: true,
     environments: [{
         key: "key",
-        secure: false,
         value: "value",
+        secure: false,
     }],
-    railsEnv: "staging",
-    shortName: "foobar",
+    appSources: [{
+        type: "git",
+        revision: "master",
+        url: "https://github.com/example.git",
+    }],
+    enableSsl: true,
     sslConfigurations: [{
-        certificate: fs.readFileSync("./foobar.crt", "utf-8"),
-        privateKey: fs.readFileSync("./foobar.key", "utf-8"),
+        privateKey: fs.readFileSync("./foobar.key"),
+        certificate: fs.readFileSync("./foobar.crt"),
     }],
-    stackId: aws_opsworks_stack_main.id,
-    type: "rails",
+    documentRoot: "public",
+    autoBundleOnDeploy: true,
+    railsEnv: "staging",
 });
 ```
 
@@ -171,7 +171,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#Application">NewApplication</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#Application">NewApplication</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -245,7 +245,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -265,7 +265,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#ApplicationArgs">ApplicationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#ApplicationArgs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,7 +275,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1210,7 +1210,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2110,7 +2110,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#ApplicationAppSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#ApplicationAppSourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#ApplicationAppSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#ApplicationAppSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Inputs.ApplicationAppSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Outputs.ApplicationAppSource.html">output</a> API doc for this type.
@@ -2420,7 +2420,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#ApplicationEnvironmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#ApplicationEnvironmentOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#ApplicationEnvironmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#ApplicationEnvironmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Inputs.ApplicationEnvironmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Outputs.ApplicationEnvironment.html">output</a> API doc for this type.
@@ -2598,7 +2598,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#ApplicationSslConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#ApplicationSslConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#ApplicationSslConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#ApplicationSslConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Inputs.ApplicationSslConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Outputs.ApplicationSslConfiguration.html">output</a> API doc for this type.

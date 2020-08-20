@@ -46,7 +46,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,11 +110,11 @@ const foo = new aws.ecr.Repository("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecr/#pulumi_aws.ecr.Repository">Repository</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>image_scanning_configuration=None<span class="p">, </span>image_tag_mutability=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecr/#pulumi_aws.ecr.Repository">Repository</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>encryption_configurations=None<span class="p">, </span>image_scanning_configuration=None<span class="p">, </span>image_tag_mutability=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#Repository">NewRepository</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#RepositoryArgs">RepositoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#Repository">Repository</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#Repository">NewRepository</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryArgs">RepositoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#Repository">Repository</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -188,7 +188,7 @@ const foo = new aws.ecr.Repository("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -208,7 +208,7 @@ const foo = new aws.ecr.Repository("foo", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#RepositoryArgs">RepositoryArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryArgs">RepositoryArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -218,7 +218,7 @@ const foo = new aws.ecr.Repository("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -284,6 +284,17 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfigurations_csharp">
+<a href="#encryptionconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">List&lt;Repository<wbr>Encryption<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="imagescanningconfiguration_csharp">
 <a href="#imagescanningconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Scanning<wbr>Configuration</a>
 </span> 
@@ -332,6 +343,17 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionconfigurations_go">
+<a href="#encryptionconfigurations_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">[]Repository<wbr>Encryption<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -386,6 +408,17 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptionconfigurations_nodejs">
+<a href="#encryptionconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">Repository<wbr>Encryption<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="imagescanningconfiguration_nodejs">
 <a href="#imagescanningconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Scanning<wbr>Configuration</a>
 </span> 
@@ -434,6 +467,17 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_configurations_python">
+<a href="#encryption_configurations_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">List[Repository<wbr>Encryption<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -709,11 +753,11 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>image_scanning_configuration=None<span class="p">, </span>image_tag_mutability=None<span class="p">, </span>name=None<span class="p">, </span>registry_id=None<span class="p">, </span>repository_url=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>encryption_configurations=None<span class="p">, </span>image_scanning_configuration=None<span class="p">, </span>image_tag_mutability=None<span class="p">, </span>name=None<span class="p">, </span>registry_id=None<span class="p">, </span>repository_url=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRepository<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#RepositoryState">RepositoryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#Repository">Repository</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRepository<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryState">RepositoryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#Repository">Repository</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -836,6 +880,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_encryptionconfigurations_csharp">
+<a href="#state_encryptionconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">List&lt;Repository<wbr>Encryption<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_imagescanningconfiguration_csharp">
 <a href="#state_imagescanningconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Scanning<wbr>Configuration</a>
 </span> 
@@ -916,6 +971,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Full ARN of the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_encryptionconfigurations_go">
+<a href="#state_encryptionconfigurations_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">[]Repository<wbr>Encryption<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1004,6 +1070,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_encryptionconfigurations_nodejs">
+<a href="#state_encryptionconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">Repository<wbr>Encryption<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_imagescanningconfiguration_nodejs">
 <a href="#state_imagescanningconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Scanning<wbr>Configuration</a>
 </span> 
@@ -1088,6 +1165,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_encryption_configurations_python">
+<a href="#state_encryption_configurations_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">List[Repository<wbr>Encryption<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_image_scanning_configuration_python">
 <a href="#state_image_scanning_configuration_python" style="color: inherit; text-decoration: inherit;">image_<wbr>scanning_<wbr>configuration</a>
 </span> 
@@ -1167,13 +1255,147 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+<h4 id="repositoryencryptionconfiguration">Repository<wbr>Encryption<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RepositoryEncryptionConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RepositoryEncryptionConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryEncryptionConfigurationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecr.Inputs.RepositoryEncryptionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecr.Outputs.RepositoryEncryptionConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptiontype_csharp">
+<a href="#encryptiontype_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskey_csharp">
+<a href="#kmskey_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptiontype_go">
+<a href="#encryptiontype_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskey_go">
+<a href="#kmskey_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptiontype_nodejs">
+<a href="#encryptiontype_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskey_nodejs">
+<a href="#kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_type_python">
+<a href="#encryption_type_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskey_python">
+<a href="#kmskey_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RepositoryImageScanningConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RepositoryImageScanningConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#RepositoryImageScanningConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#RepositoryImageScanningConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryImageScanningConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#RepositoryImageScanningConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecr.Inputs.RepositoryImageScanningConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecr.Outputs.RepositoryImageScanningConfiguration.html">output</a> API doc for this type.

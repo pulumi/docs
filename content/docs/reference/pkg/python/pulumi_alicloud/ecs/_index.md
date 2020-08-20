@@ -294,6 +294,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_alicloud.ecs.AwaitableGetDedicatedHostsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetDedicatedHostsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dedicated_host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dedicated_host_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dedicated_host_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetDedicatedHostsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_alicloud.ecs.AwaitableGetDisksResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">AwaitableGetDisksResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">disks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.AwaitableGetDisksResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -391,6 +396,235 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_alicloud.ecs.CopyImage.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.CopyImage.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.ecs.DedicatedHost">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">DedicatedHost</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_on_maintenance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_placement</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_release_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_renew</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_renew_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dedicated_host_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dedicated_host_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">detail_fee</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dry_run</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expired_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payment_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sale_cycle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resouce used to create a dedicated host and store its initial version. For information about Aliecs Dedicated Host and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/134238.htm">What is Resource Aliecs Dedicated Host</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in 1.91.0+.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>action_on_maintenance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy used to migrate the instances from the dedicated host when the dedicated host fails or needs to be repaired online. Valid values: <code class="docutils literal notranslate"><span class="pre">Migrate</span></code>, <code class="docutils literal notranslate"><span class="pre">Stop</span></code>.</p></li>
+<li><p><strong>auto_placement</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you do not specify the DedicatedHostId parameter when you create an instance on a dedicated host, Alibaba Cloud automatically selects a dedicated host from the resource pool to host the instance. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code>, <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">on</span></code>.</p></li>
+<li><p><strong>auto_release_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p></li>
+<li><p><strong>auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to automatically renew the subscription dedicated host.</p></li>
+<li><p><strong>auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The auto-renewal period of the dedicated host. Unit: months. Valid values: <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">6</span></code>, and <code class="docutils literal notranslate"><span class="pre">12</span></code>. takes effect and is required only when the AutoRenew parameter is set to true.</p></li>
+<li><p><strong>dedicated_host*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the dedicated host. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. It can contain letters, digits, colons (:), underscores (<a href="#id3"><span class="problematic" id="id4">*</span></a>), and hyphens (-).</p>
+</p></li>
+<li><p><strong>dedicated_host_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the dedicated host. You can call the <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/134240.htm">DescribeDedicatedHostTypes</a> operation to obtain the most recent list of dedicated host types.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the dedicated host. The description must be 2 to 256 characters in length and cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
+<li><p><strong>detail_fee</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to return the billing details of the order when the billing method is changed from subscription to pay-as-you-go. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>dry_run</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to only validate the request. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>expired_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subscription period of the dedicated host. The Period parameter takes effect and is required only when the ChargeType parameter is set to PrePaid.</p></li>
+<li><p><strong>network_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – dedicated host network parameters. contains the following attributes:</p></li>
+<li><p><strong>payment_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing method of the dedicated host. Valid values: <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
+<li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the resource group to which the dedicated host belongs.</p></li>
+<li><p><strong>sale_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unit of the subscription period of the dedicated host.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID of the dedicated host. This parameter is empty by default. If you do not specify this parameter, the system automatically selects a zone.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>network_attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slbUdpTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The timeout period for a UDP session between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid values: 15 to 310.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">udpTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The timeout period for a UDP session between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid values: 15 to 310.</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.action_on_maintenance">
+<code class="sig-name descname">action_on_maintenance</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.action_on_maintenance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The policy used to migrate the instances from the dedicated host when the dedicated host fails or needs to be repaired online. Valid values: <code class="docutils literal notranslate"><span class="pre">Migrate</span></code>, <code class="docutils literal notranslate"><span class="pre">Stop</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.auto_placement">
+<code class="sig-name descname">auto_placement</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.auto_placement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you do not specify the DedicatedHostId parameter when you create an instance on a dedicated host, Alibaba Cloud automatically selects a dedicated host from the resource pool to host the instance. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code>, <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">on</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.auto_release_time">
+<code class="sig-name descname">auto_release_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.auto_release_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.auto_renew">
+<code class="sig-name descname">auto_renew</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.auto_renew" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether to automatically renew the subscription dedicated host.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.auto_renew_period">
+<code class="sig-name descname">auto_renew_period</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.auto_renew_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>The auto-renewal period of the dedicated host. Unit: months. Valid values: <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">6</span></code>, and <code class="docutils literal notranslate"><span class="pre">12</span></code>. takes effect and is required only when the AutoRenew parameter is set to true.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.dedicated_host_name">
+<code class="sig-name descname">dedicated_host_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.dedicated_host_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the dedicated host. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.dedicated_host_type">
+<code class="sig-name descname">dedicated_host_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.dedicated_host_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the dedicated host. You can call the <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/134240.htm">DescribeDedicatedHostTypes</a> operation to obtain the most recent list of dedicated host types.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.description">
+<code class="sig-name descname">description</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the dedicated host. The description must be 2 to 256 characters in length and cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.detail_fee">
+<code class="sig-name descname">detail_fee</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.detail_fee" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether to return the billing details of the order when the billing method is changed from subscription to pay-as-you-go. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.dry_run">
+<code class="sig-name descname">dry_run</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.dry_run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether to only validate the request. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.expired_time">
+<code class="sig-name descname">expired_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.expired_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The subscription period of the dedicated host. The Period parameter takes effect and is required only when the ChargeType parameter is set to PrePaid.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.network_attributes">
+<code class="sig-name descname">network_attributes</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.network_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>dedicated host network parameters. contains the following attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slbUdpTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The timeout period for a UDP session between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid values: 15 to 310.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">udpTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The timeout period for a UDP session between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid values: 15 to 310.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.payment_type">
+<code class="sig-name descname">payment_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.payment_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The billing method of the dedicated host. Valid values: <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.resource_group_id">
+<code class="sig-name descname">resource_group_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.resource_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the resource group to which the dedicated host belongs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.sale_cycle">
+<code class="sig-name descname">sale_cycle</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.sale_cycle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unit of the subscription period of the dedicated host.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.status">
+<code class="sig-name descname">status</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the dedicated host.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.tags">
+<code class="sig-name descname">tags</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.zone_id">
+<code class="sig-name descname">zone_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The zone ID of the dedicated host. This parameter is empty by default. If you do not specify this parameter, the system automatically selects a zone.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">action_on_maintenance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_placement</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_release_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_renew</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_renew_period</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dedicated_host_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dedicated_host_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">detail_fee</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dry_run</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">expired_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_attributes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payment_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sale_cycle</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DedicatedHost resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>action_on_maintenance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy used to migrate the instances from the dedicated host when the dedicated host fails or needs to be repaired online. Valid values: <code class="docutils literal notranslate"><span class="pre">Migrate</span></code>, <code class="docutils literal notranslate"><span class="pre">Stop</span></code>.</p></li>
+<li><p><strong>auto_placement</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you do not specify the DedicatedHostId parameter when you create an instance on a dedicated host, Alibaba Cloud automatically selects a dedicated host from the resource pool to host the instance. Valid values: <code class="docutils literal notranslate"><span class="pre">on</span></code>, <code class="docutils literal notranslate"><span class="pre">off</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">on</span></code>.</p></li>
+<li><p><strong>auto_release_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p></li>
+<li><p><strong>auto_renew</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to automatically renew the subscription dedicated host.</p></li>
+<li><p><strong>auto_renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The auto-renewal period of the dedicated host. Unit: months. Valid values: <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">6</span></code>, and <code class="docutils literal notranslate"><span class="pre">12</span></code>. takes effect and is required only when the AutoRenew parameter is set to true.</p></li>
+<li><p><strong>dedicated_host*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the dedicated host. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. It can contain letters, digits, colons (:), underscores (<a href="#id8"><span class="problematic" id="id9">*</span></a>), and hyphens (-).</p>
+</p></li>
+<li><p><strong>dedicated_host_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The type of the dedicated host. You can call the <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/134240.htm">DescribeDedicatedHostTypes</a> operation to obtain the most recent list of dedicated host types.</p>
+</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the dedicated host. The description must be 2 to 256 characters in length and cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
+<li><p><strong>detail_fee</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to return the billing details of the order when the billing method is changed from subscription to pay-as-you-go. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>dry_run</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether to only validate the request. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>expired_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subscription period of the dedicated host. The Period parameter takes effect and is required only when the ChargeType parameter is set to PrePaid.</p></li>
+<li><p><strong>network_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – dedicated host network parameters. contains the following attributes:</p></li>
+<li><p><strong>payment_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing method of the dedicated host. Valid values: <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>, <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">PostPaid</span></code>.</p></li>
+<li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the resource group to which the dedicated host belongs.</p></li>
+<li><p><strong>sale_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unit of the subscription period of the dedicated host.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the dedicated host.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID of the dedicated host. This parameter is empty by default. If you do not specify this parameter, the system automatically selects a zone.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>network_attributes</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slbUdpTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The timeout period for a UDP session between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid values: 15 to 310.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">udpTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The timeout period for a UDP session between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid values: 15 to 310.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_alicloud.ecs.DedicatedHost.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.DedicatedHost.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -543,7 +777,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the disk will be encrypted, conflict with <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code>.</p></li>
 <li><p><strong>kms_key*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ID of the KMS key corresponding to the data disk, The specified parameter <code class="docutils literal notranslate"><span class="pre">Encrypted</span></code> must be <code class="docutils literal notranslate"><span class="pre">true</span></code> when KmsKeyId is not empty.</p>
 </p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the ECS disk. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id3"><span class="problematic" id="id4">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the ECS disk. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id13"><span class="problematic" id="id14">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
 <li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of resource group which the disk belongs.</p></li>
 </ul>
 </dd>
@@ -794,7 +1028,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>ip*address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The elastic ip address</p>
 </p></li>
 <li><p><strong>isp</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The line type of the Elastic IP instance. Default to <code class="docutils literal notranslate"><span class="pre">BGP</span></code>. Other type of the isp need to open a whitelist.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id7"><span class="problematic" id="id8">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“,”.”,”<a href="#id17"><span class="problematic" id="id18">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
 <li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration that you will buy the resource, in month. It is valid when <code class="docutils literal notranslate"><span class="pre">instance_charge_type</span></code> is <code class="docutils literal notranslate"><span class="pre">PrePaid</span></code>.
 Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify “period” and you can do that via web console.</p></li>
 <li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of resource group which the eip belongs.</p></li>
@@ -931,6 +1165,66 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_alicloud.ecs.GetDedicatedHostsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">GetDedicatedHostsResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dedicated_host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dedicated_host_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dedicated_host_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.GetDedicatedHostsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDedicatedHosts.</p>
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.GetDedicatedHostsResult.dedicated_host_id">
+<code class="sig-name descname">dedicated_host_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDedicatedHostsResult.dedicated_host_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the ECS Dedicated Host.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.GetDedicatedHostsResult.dedicated_host_name">
+<code class="sig-name descname">dedicated_host_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDedicatedHostsResult.dedicated_host_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the dedicated host.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.GetDedicatedHostsResult.dedicated_host_type">
+<code class="sig-name descname">dedicated_host_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDedicatedHostsResult.dedicated_host_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of the dedicated host.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.GetDedicatedHostsResult.hosts">
+<code class="sig-name descname">hosts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDedicatedHostsResult.hosts" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of ECS Dedicated Hosts. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.GetDedicatedHostsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDedicatedHostsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.GetDedicatedHostsResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDedicatedHostsResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of ECS Dedicated Host ids.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.GetDedicatedHostsResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDedicatedHostsResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of ECS Dedicated Host names.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.GetDedicatedHostsResult.resource_group_id">
+<code class="sig-name descname">resource_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDedicatedHostsResult.resource_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the resource group to which the dedicated host belongs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_alicloud.ecs.GetDedicatedHostsResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.GetDedicatedHostsResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service status of the dedicated host.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1510,7 +1804,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. It must be 2 to 128 characters in length, and must begin with a letter or Chinese character (beginning with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a> is not allowed). It can contain digits, colons (:), underscores (<a href="#id11"><span class="problematic" id="id12">*</span></a>), or hyphens (-). Default value: null.</p>
+<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. It must be 2 to 128 characters in length, and must begin with a letter or Chinese character (beginning with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a> is not allowed). It can contain digits, colons (:), underscores (<a href="#id21"><span class="problematic" id="id22">*</span></a>), or hyphens (-). Default value: null.</p>
 </p></li>
 <li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance ID.</p></li>
 <li><p><strong>platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: <code class="docutils literal notranslate"><span class="pre">CentOS</span></code>, <code class="docutils literal notranslate"><span class="pre">Ubuntu</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span></code>, <code class="docutils literal notranslate"><span class="pre">OpenSUSE</span></code>, <code class="docutils literal notranslate"><span class="pre">RedHat</span></code>, <code class="docutils literal notranslate"><span class="pre">Debian</span></code>, <code class="docutils literal notranslate"><span class="pre">CoreOS</span></code>, <code class="docutils literal notranslate"><span class="pre">Aliyun</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Server</span> <span class="pre">2003</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Server</span> <span class="pre">2008</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Server</span> <span class="pre">2012</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">7</span></code>, Default is <code class="docutils literal notranslate"><span class="pre">Others</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">Customized</span> <span class="pre">Linux</span></code>.</p></li>
@@ -1622,7 +1916,7 @@ properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. It must be 2 to 128 characters in length, and must begin with a letter or Chinese character (beginning with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a> is not allowed). It can contain digits, colons (:), underscores (<a href="#id15"><span class="problematic" id="id16">*</span></a>), or hyphens (-). Default value: null.</p>
+<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. It must be 2 to 128 characters in length, and must begin with a letter or Chinese character (beginning with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a> is not allowed). It can contain digits, colons (:), underscores (<a href="#id25"><span class="problematic" id="id26">*</span></a>), or hyphens (-). Default value: null.</p>
 </p></li>
 <li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance ID.</p></li>
 <li><p><strong>platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: <code class="docutils literal notranslate"><span class="pre">CentOS</span></code>, <code class="docutils literal notranslate"><span class="pre">Ubuntu</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span></code>, <code class="docutils literal notranslate"><span class="pre">OpenSUSE</span></code>, <code class="docutils literal notranslate"><span class="pre">RedHat</span></code>, <code class="docutils literal notranslate"><span class="pre">Debian</span></code>, <code class="docutils literal notranslate"><span class="pre">CoreOS</span></code>, <code class="docutils literal notranslate"><span class="pre">Aliyun</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Server</span> <span class="pre">2003</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Server</span> <span class="pre">2008</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Server</span> <span class="pre">2012</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">7</span></code>, Default is <code class="docutils literal notranslate"><span class="pre">Others</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">Customized</span> <span class="pre">Linux</span></code>.</p></li>
@@ -1726,7 +2020,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. It must be 2 to 128 characters in length, and must begin with a letter or Chinese character (beginning with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a> is not allowed). It can contain digits, colons (:), underscores (<a href="#id19"><span class="problematic" id="id20">*</span></a>), or hyphens (-). Default value: null.</p>
+<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. It must be 2 to 128 characters in length, and must begin with a letter or Chinese character (beginning with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a> is not allowed). It can contain digits, colons (:), underscores (<a href="#id29"><span class="problematic" id="id30">*</span></a>), or hyphens (-). Default value: null.</p>
 </p></li>
 <li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Key ID used to encrypt the image.</p></li>
 <li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source image ID.</p></li>
@@ -1811,7 +2105,7 @@ properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. It must be 2 to 128 characters in length, and must begin with a letter or Chinese character (beginning with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a> is not allowed). It can contain digits, colons (:), underscores (<a href="#id24"><span class="problematic" id="id25">*</span></a>), or hyphens (-). Default value: null.</p>
+<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. It must be 2 to 128 characters in length, and must begin with a letter or Chinese character (beginning with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a> is not allowed). It can contain digits, colons (:), underscores (<a href="#id34"><span class="problematic" id="id35">*</span></a>), or hyphens (-). Default value: null.</p>
 </p></li>
 <li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Key ID used to encrypt the image.</p></li>
 <li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source image ID.</p></li>
@@ -2012,7 +2306,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>architecture</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: <code class="docutils literal notranslate"><span class="pre">i386</span></code> , Default is <code class="docutils literal notranslate"><span class="pre">x86_64</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.</p></li>
 <li><p><strong>disk_device_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Description of the system with disks and snapshots under the image.</p></li>
-<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a english letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (<a href="#id29"><span class="problematic" id="id30">*</span></a>), or hyphens (-).</p>
+<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a english letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (<a href="#id39"><span class="problematic" id="id40">*</span></a>), or hyphens (-).</p>
 </p></li>
 <li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the license used to activate the operating system after the image is imported. Default value: <code class="docutils literal notranslate"><span class="pre">Auto</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">Auto</span></code>,<code class="docutils literal notranslate"><span class="pre">Aliyun</span></code>,<code class="docutils literal notranslate"><span class="pre">BYOL</span></code>.</p></li>
 <li><p><strong>os_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Operating system platform type. Valid values: <code class="docutils literal notranslate"><span class="pre">windows</span></code>, Default is <code class="docutils literal notranslate"><span class="pre">linux</span></code>.</p></li>
@@ -2091,7 +2385,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>architecture</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: <code class="docutils literal notranslate"><span class="pre">i386</span></code> , Default is <code class="docutils literal notranslate"><span class="pre">x86_64</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.</p></li>
 <li><p><strong>disk_device_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Description of the system with disks and snapshots under the image.</p></li>
-<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a english letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (<a href="#id33"><span class="problematic" id="id34">*</span></a>), or hyphens (-).</p>
+<li><p><strong>image*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a english letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (<a href="#id43"><span class="problematic" id="id44">*</span></a>), or hyphens (-).</p>
 </p></li>
 <li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the license used to activate the operating system after the image is imported. Default value: <code class="docutils literal notranslate"><span class="pre">Auto</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">Auto</span></code>,<code class="docutils literal notranslate"><span class="pre">Aliyun</span></code>,<code class="docutils literal notranslate"><span class="pre">BYOL</span></code>.</p></li>
 <li><p><strong>os_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Operating system platform type. Valid values: <code class="docutils literal notranslate"><span class="pre">windows</span></code>, Default is <code class="docutils literal notranslate"><span class="pre">linux</span></code>.</p></li>
@@ -2302,7 +2596,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If it is true, the “PrePaid” instance will be change to “PostPaid” and then deleted forcibly.
 However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that “Don’t modify instance charge type frequentlly in one month”.</p></li>
 <li><p><strong>host*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
-On other OSs such as Linux, the host name can contain a maximum of 64 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “<a href="#id37"><span class="problematic" id="id38">*</span></a>“. When it is changed, the instance will reboot to make the change take effect.</p>
+On other OSs such as Linux, the host name can contain a maximum of 64 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “<a href="#id47"><span class="problematic" id="id48">*</span></a>“. When it is changed, the instance will reboot to make the change take effect.</p>
 </p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Image to use for the instance. ECS instance’s image can be replaced via changing <code class="docutils literal notranslate"><span class="pre">image_id</span></code>. When it is changed, the instance will reboot to make the change take effect.</p></li>
 <li><p><strong>include_data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to change instance disks charge type when changing instance charge type.</p></li>
@@ -2810,7 +3104,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
 <li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If it is true, the “PrePaid” instance will be change to “PostPaid” and then deleted forcibly.
 However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that “Don’t modify instance charge type frequentlly in one month”.</p></li>
 <li><p><strong>host*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
-On other OSs such as Linux, the host name can contain a maximum of 64 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “<a href="#id43"><span class="problematic" id="id44">*</span></a>“. When it is changed, the instance will reboot to make the change take effect.</p>
+On other OSs such as Linux, the host name can contain a maximum of 64 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “<a href="#id53"><span class="problematic" id="id54">*</span></a>“. When it is changed, the instance will reboot to make the change take effect.</p>
 </p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Image to use for the instance. ECS instance’s image can be replaced via changing <code class="docutils literal notranslate"><span class="pre">image_id</span></code>. When it is changed, the instance will reboot to make the change take effect.</p></li>
 <li><p><strong>include_data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to change instance disks charge type when changing instance charge type.</p></li>
@@ -2986,7 +3280,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.ResourceOptions opts: Options for the resource.
 :param pulumi.Input[str] key_file: The name of file to save your new key pair’s private key. Strongly suggest you to specified it when you creating key pair, otherwise, you wouldn’t get its private key ever.
 :param pulumi.Input[str] key_name: The key pair’s name. It is the only in one Alicloud account.
-:param pulumi.Input[str] public_key: You can import an existing public key and using Alicloud key pair to manage it.
+:param pulumi.Input[str] public_key: You can import an existing public key and using Alicloud key pair to manage it. If this parameter is specified, <code class="docutils literal notranslate"><span class="pre">resource_group_id</span></code> is the key pair belongs.
 :param pulumi.Input[str] resource_group_id: The Id of resource group which the key pair belongs.</p>
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.KeyPair.key_file">
@@ -3003,7 +3297,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_alicloud.ecs.KeyPair.public_key">
 <code class="sig-name descname">public_key</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.ecs.KeyPair.public_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>You can import an existing public key and using Alicloud key pair to manage it.</p>
+<dd><p>You can import an existing public key and using Alicloud key pair to manage it. If this parameter is specified, <code class="docutils literal notranslate"><span class="pre">resource_group_id</span></code> is the key pair belongs.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -3025,7 +3319,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>key_file</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of file to save your new key pair’s private key. Strongly suggest you to specified it when you creating key pair, otherwise, you wouldn’t get its private key ever.</p></li>
 <li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key pair’s name. It is the only in one Alicloud account.</p></li>
-<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – You can import an existing public key and using Alicloud key pair to manage it.</p></li>
+<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – You can import an existing public key and using Alicloud key pair to manage it. If this parameter is specified, <code class="docutils literal notranslate"><span class="pre">resource_group_id</span></code> is the key pair belongs.</p></li>
 <li><p><strong>resource_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of resource group which the key pair belongs.</p></li>
 </ul>
 </dd>
@@ -3286,7 +3580,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>instance*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance. The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods (.), colons (:), underscores (<a href="#id49"><span class="problematic" id="id50">*</span></a>), and hyphens (-).</p>
+<li><p><strong>instance*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance. The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods (.), colons (:), underscores (<a href="#id59"><span class="problematic" id="id60">*</span></a>), and hyphens (-).</p>
 </p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance type. For more information, call resource_alicloud_instances to obtain the latest instance type list.</p></li>
 <li><p><strong>internet_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Internet bandwidth billing method. Optional values: <code class="docutils literal notranslate"><span class="pre">PayByTraffic</span></code> | <code class="docutils literal notranslate"><span class="pre">PayByBandwidth</span></code>.</p></li>
@@ -3344,7 +3638,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>system_disk_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – System disk description. It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
-<li><p><strong>system_disk*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>System disk name. The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods (.), colons (:), underscores (<a href="#id53"><span class="problematic" id="id54">*</span></a>), and hyphens (-).</p>
+<li><p><strong>system_disk*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>System disk name. The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods (.), colons (:), underscores (<a href="#id63"><span class="problematic" id="id64">*</span></a>), and hyphens (-).</p>
 </p></li>
 <li><p><strong>system_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of the system disk, measured in GB. Value range: [20, 500].</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -3659,7 +3953,7 @@ properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>instance*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance. The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods (.), colons (:), underscores (<a href="#id57"><span class="problematic" id="id58">*</span></a>), and hyphens (-).</p>
+<li><p><strong>instance*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance. The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods (.), colons (:), underscores (<a href="#id67"><span class="problematic" id="id68">*</span></a>), and hyphens (-).</p>
 </p></li>
 <li><p><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance type. For more information, call resource_alicloud_instances to obtain the latest instance type list.</p></li>
 <li><p><strong>internet_charge_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Internet bandwidth billing method. Optional values: <code class="docutils literal notranslate"><span class="pre">PayByTraffic</span></code> | <code class="docutils literal notranslate"><span class="pre">PayByBandwidth</span></code>.</p></li>
@@ -3717,7 +4011,7 @@ properties used to qualify the lookup.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>system_disk_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – System disk description. It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
-<li><p><strong>system_disk*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>System disk name. The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods (.), colons (:), underscores (<a href="#id61"><span class="problematic" id="id62">*</span></a>), and hyphens (-).</p>
+<li><p><strong>system_disk*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>System disk name. The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods (.), colons (:), underscores (<a href="#id71"><span class="problematic" id="id72">*</span></a>), and hyphens (-).</p>
 </p></li>
 <li><p><strong>system_disk_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Size of the system disk, measured in GB. Value range: [20, 500].</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -3841,7 +4135,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>instance_amount</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of instances allocated to an RI (An RI is a coupon that includes one or more allocated instances.).</p></li>
 <li><p><strong>instance*type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Instance type of the RI. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/25378.html">Instance type families</a>.</p>
 </p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RI. The name must be a string of 2 to 128 characters in length and can contain letters, numbers, colons (:), underscores (<a href="#id65"><span class="problematic" id="id66">*</span></a>), and hyphens. It must start with a letter. It cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RI. The name must be a string of 2 to 128 characters in length and can contain letters, numbers, colons (:), underscores (<a href="#id75"><span class="problematic" id="id76">*</span></a>), and hyphens. It must start with a letter. It cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
 <li><p><strong>offering_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Payment type of the RI. Optional values: <cite>No Upfront</cite>: No upfront payment is required., <cite>Partial Upfront</cite>: A portion of upfront payment is required.<code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">Upfront</span></code>: Full upfront payment is required.</p></li>
 <li><p><strong>period_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Term unit. Optional value: Year.</p></li>
 <li><p><strong>platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operating system type of the image used by the instance. Optional values: <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">Linux</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">Linux</span></code>.</p></li>
@@ -3926,7 +4220,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>instance_amount</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of instances allocated to an RI (An RI is a coupon that includes one or more allocated instances.).</p></li>
 <li><p><strong>instance*type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Instance type of the RI. For more information, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/25378.html">Instance type families</a>.</p>
 </p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RI. The name must be a string of 2 to 128 characters in length and can contain letters, numbers, colons (:), underscores (<a href="#id72"><span class="problematic" id="id73">*</span></a>), and hyphens. It must start with a letter. It cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the RI. The name must be a string of 2 to 128 characters in length and can contain letters, numbers, colons (:), underscores (<a href="#id82"><span class="problematic" id="id83">*</span></a>), and hyphens. It must start with a letter. It cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
 <li><p><strong>offering_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Payment type of the RI. Optional values: <cite>No Upfront</cite>: No upfront payment is required., <cite>Partial Upfront</cite>: A portion of upfront payment is required.<code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">Upfront</span></code>: Full upfront payment is required.</p></li>
 <li><p><strong>period_unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Term unit. Optional value: Year.</p></li>
 <li><p><strong>platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operating system type of the image used by the instance. Optional values: <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">Linux</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">Linux</span></code>.</p></li>
@@ -4298,7 +4592,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the snapshot. This description can have a string of 2 to 256 characters, It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
 <li><p><strong>disk*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The source disk ID.</p>
 </p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the snapshot. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“, “.”, “<a href="#id77"><span class="problematic" id="id78">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the snapshot. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“, “.”, “<a href="#id87"><span class="problematic" id="id88">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
@@ -4341,7 +4635,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the snapshot. This description can have a string of 2 to 256 characters, It cannot begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
 <li><p><strong>disk*id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The source disk ID.</p>
 </p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the snapshot. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“, “.”, “<a href="#id81"><span class="problematic" id="id82">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the snapshot. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as “-“, “.”, “<a href="#id91"><span class="problematic" id="id92">*</span></a>”, and must not begin or end with a hyphen, and must not begin with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>. Default value is null.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
@@ -4555,6 +4849,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_alicloud.ecs.get_dedicated_hosts">
+<code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_dedicated_hosts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dedicated_host_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dedicated_host_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dedicated_host_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ids</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_regex</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_group_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_dedicated_hosts" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list of ECS Dedicated Hosts in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.91.0+.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dedicated_host_id</strong> (<em>str</em>) – The ID of ECS Dedicated Host.</p></li>
+<li><p><strong>dedicated_host_name</strong> (<em>str</em>) – The name of ECS Dedicated Host.</p></li>
+<li><p><strong>dedicated_host_type</strong> (<em>str</em>) – The type of the dedicated host.</p></li>
+<li><p><strong>ids</strong> (<em>list</em>) – A list of ECS Dedicated Host ids.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by the ECS Dedicated Host name.</p></li>
+<li><p><strong>output_file</strong> (<em>str</em>) – Save the result to the file.</p></li>
+<li><p><strong>resource_group_id</strong> (<em>str</em>) – The ID of the resource group to which the ECS Dedicated Host belongs.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the ECS Dedicated Host. validate value: <code class="docutils literal notranslate"><span class="pre">Available</span></code>, <code class="docutils literal notranslate"><span class="pre">Creating</span></code>, <code class="docutils literal notranslate"><span class="pre">PermanentFailure</span></code>, <code class="docutils literal notranslate"><span class="pre">Released</span></code>, <code class="docutils literal notranslate"><span class="pre">UnderAssessment</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>zone_id</strong> (<em>str</em>) – The zone ID of the ECS Dedicated Host.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">

@@ -39,7 +39,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.LookupAccountTeamProject(ctx, &aiven.LookupAccountTeamProjectArgs{
+			AccountId:   aiven_account_team.Developers.Account_id,
+			ProjectName: aiven_project.Project1.Project,
+			TeamId:      aiven_account_team.Developers.Team_id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,7 +110,7 @@ const accountTeamProject1 = pulumi.all([aiven_account_team_developers.accountId,
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccountTeamProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#LookupAccountTeamProjectArgs">LookupAccountTeamProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#LookupAccountTeamProjectResult">LookupAccountTeamProjectResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccountTeamProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupAccountTeamProjectArgs">LookupAccountTeamProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupAccountTeamProjectResult">LookupAccountTeamProjectResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAccountTeamProject` in the Go SDK.
 

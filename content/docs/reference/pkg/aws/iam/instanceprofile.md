@@ -28,6 +28,7 @@ class MyStack : Stack
     {
         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
         {
+            Path = "/",
             AssumeRolePolicy = @"{
     ""Version"": ""2012-10-17"",
     ""Statement"": [
@@ -41,9 +42,7 @@ class MyStack : Stack
         }
     ]
 }
-
 ",
-            Path = "/",
         });
         var testProfile = new Aws.Iam.InstanceProfile("testProfile", new Aws.Iam.InstanceProfileArgs
         {
@@ -63,15 +62,15 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Action\": \"sts:AssumeRole\",\n", "            \"Principal\": {\n", "               \"Service\": \"ec2.amazonaws.com\"\n", "            },\n", "            \"Effect\": \"Allow\",\n", "            \"Sid\": \"\"\n", "        }\n", "    ]\n", "}\n", "\n")),
 			Path:             pulumi.String("/"),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Action\": \"sts:AssumeRole\",\n", "            \"Principal\": {\n", "               \"Service\": \"ec2.amazonaws.com\"\n", "            },\n", "            \"Effect\": \"Allow\",\n", "            \"Sid\": \"\"\n", "        }\n", "    ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -95,6 +94,7 @@ import pulumi
 import pulumi_aws as aws
 
 role = aws.iam.Role("role",
+    path="/",
     assume_role_policy="""{
     "Version": "2012-10-17",
     "Statement": [
@@ -108,9 +108,7 @@ role = aws.iam.Role("role",
         }
     ]
 }
-
-""",
-    path="/")
+""")
 test_profile = aws.iam.InstanceProfile("testProfile", role=role.name)
 ```
 
@@ -123,6 +121,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const role = new aws.iam.Role("role", {
+    path: "/",
     assumeRolePolicy: `{
     "Version": "2012-10-17",
     "Statement": [
@@ -137,11 +136,8 @@ const role = new aws.iam.Role("role", {
     ]
 }
 `,
-    path: "/",
 });
-const testProfile = new aws.iam.InstanceProfile("test_profile", {
-    role: role.name,
-});
+const testProfile = new aws.iam.InstanceProfile("testProfile", {role: role.name});
 ```
 
 {{% /example %}}
@@ -158,11 +154,11 @@ const testProfile = new aws.iam.InstanceProfile("test_profile", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iam/#pulumi_aws.iam.InstanceProfile">InstanceProfile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>role=None<span class="p">, </span>roles=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iam/#pulumi_aws.iam.InstanceProfile">InstanceProfile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>role=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#InstanceProfile">NewInstanceProfile</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#InstanceProfileArgs">InstanceProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#InstanceProfile">InstanceProfile</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#InstanceProfile">NewInstanceProfile</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#InstanceProfileArgs">InstanceProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#InstanceProfile">InstanceProfile</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -236,7 +232,7 @@ const testProfile = new aws.iam.InstanceProfile("test_profile", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -256,7 +252,7 @@ const testProfile = new aws.iam.InstanceProfile("test_profile", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#InstanceProfileArgs">InstanceProfileArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#InstanceProfileArgs">InstanceProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -266,7 +262,7 @@ const testProfile = new aws.iam.InstanceProfile("test_profile", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -374,17 +370,6 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The role name to include in the profile.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="roles_csharp">
-<a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -435,17 +420,6 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The role name to include in the profile.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="roles_go">
-<a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -498,17 +472,6 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The role name to include in the profile.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="roles_nodejs">
-<a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">string | Role[]</span>
-    </dt>
-    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -559,17 +522,6 @@ The InstanceProfile resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The role name to include in the profile.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="roles_python">
-<a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">List[Role, Default=String>]</span>
-    </dt>
-    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -801,11 +753,11 @@ Get an existing InstanceProfile resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>create_date=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>role=None<span class="p">, </span>roles=None<span class="p">, </span>unique_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>create_date=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>path=None<span class="p">, </span>role=None<span class="p">, </span>unique_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#InstanceProfileState">InstanceProfileState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#InstanceProfile">InstanceProfile</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#InstanceProfileState">InstanceProfileState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#InstanceProfile">InstanceProfile</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -981,17 +933,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The role name to include in the profile.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_roles_csharp">
-<a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uniqueid_csharp">
@@ -1075,17 +1016,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The role name to include in the profile.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_roles_go">
-<a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1171,17 +1101,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The role name to include in the profile.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_roles_nodejs">
-<a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">string | Role[]</span>
-    </dt>
-    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uniqueid_nodejs">
@@ -1265,17 +1184,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The role name to include in the profile.
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_roles_python">
-<a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">List[Role, Default=String>]</span>
-    </dt>
-    <dd>{{% md %}}A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `role` instead. Only a single role can be passed to an IAM Instance Profile{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

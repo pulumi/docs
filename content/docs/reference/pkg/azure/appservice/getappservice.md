@@ -446,7 +446,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappservicesourcecontrol">List&lt;Get<wbr>App<wbr>Service<wbr>Source<wbr>Control&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `source_control` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -648,7 +649,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappservicesourcecontrol">[]Get<wbr>App<wbr>Service<wbr>Source<wbr>Control</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `source_control` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -850,7 +852,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappservicesourcecontrol">Get<wbr>App<wbr>Service<wbr>Source<wbr>Control[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `source_control` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1052,7 +1055,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappservicesourcecontrol">List[Get<wbr>App<wbr>Service<wbr>Source<wbr>Control]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `source_control` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1282,7 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the app be loaded at all times?
+    <dd>{{% md %}}Is the app loaded at all times?
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1575,7 +1579,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the app be loaded at all times?
+    <dd>{{% md %}}Is the app loaded at all times?
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1868,7 +1872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Is the app be loaded at all times?
+    <dd>{{% md %}}Is the app loaded at all times?
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2161,7 +2165,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is the app be loaded at all times?
+    <dd>{{% md %}}Is the app loaded at all times?
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2320,8 +2324,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="mintlsversion_python">
-<a href="#mintlsversion_python" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
+        <span id="min_tls_version_python">
+<a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3264,7 +3268,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The branch of the remote repository in use.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manualintegration_csharp">
+<a href="#manualintegration_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3274,7 +3290,30 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rollbackenabled_csharp">
+<a href="#rollbackenabled_csharp" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is roll-back enabled for the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usemercurial_csharp">
+<a href="#usemercurial_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3291,7 +3330,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The branch of the remote repository in use.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manualintegration_go">
+<a href="#manualintegration_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3301,7 +3352,30 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rollbackenabled_go">
+<a href="#rollbackenabled_go" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is roll-back enabled for the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usemercurial_go">
+<a href="#usemercurial_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3318,7 +3392,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The branch of the remote repository in use.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manualintegration_nodejs">
+<a href="#manualintegration_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3328,7 +3414,30 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rollbackenabled_nodejs">
+<a href="#rollbackenabled_nodejs" style="color: inherit; text-decoration: inherit;">rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is roll-back enabled for the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usemercurial_nodejs">
+<a href="#usemercurial_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3345,7 +3454,19 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The branch of the remote repository in use.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="manualintegration_python">
+<a href="#manualintegration_python" style="color: inherit; text-decoration: inherit;">manual<wbr>Integration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Limits to manual integration.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3355,7 +3476,30 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The URL of the source code repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="rollbackenabled_python">
+<a href="#rollbackenabled_python" style="color: inherit; text-decoration: inherit;">rollback<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is roll-back enabled for the repository.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usemercurial_python">
+<a href="#usemercurial_python" style="color: inherit; text-decoration: inherit;">use<wbr>Mercurial</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

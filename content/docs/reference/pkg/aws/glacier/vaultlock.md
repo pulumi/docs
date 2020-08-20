@@ -43,22 +43,22 @@ class MyStack : Stack
                     {
                         "glacier:DeleteArchive",
                     },
+                    Effect = "Deny",
+                    Resources = 
+                    {
+                        arn,
+                    },
                     Conditions = 
                     {
                         new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs
                         {
                             Test = "NumericLessThanEquals",
+                            Variable = "glacier:ArchiveAgeinDays",
                             Values = 
                             {
                                 "365",
                             },
-                            Variable = "glacier:ArchiveAgeinDays",
                         },
-                    },
-                    Effect = "Deny",
-                    Resources = 
-                    {
-                        arn,
                     },
                 },
             },
@@ -81,8 +81,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -117,13 +117,13 @@ import pulumi_aws as aws
 example_vault = aws.glacier.Vault("exampleVault")
 example_policy_document = example_vault.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[{
     "actions": ["glacier:DeleteArchive"],
-    "conditions": [{
-        "test": "NumericLessThanEquals",
-        "values": ["365"],
-        "variable": "glacier:ArchiveAgeinDays",
-    }],
     "effect": "Deny",
     "resources": [arn],
+    "conditions": [{
+        "test": "NumericLessThanEquals",
+        "variable": "glacier:ArchiveAgeinDays",
+        "values": ["365"],
+    }],
 }]))
 example_vault_lock = aws.glacier.VaultLock("exampleVaultLock",
     complete_lock=False,
@@ -139,20 +139,20 @@ example_vault_lock = aws.glacier.VaultLock("exampleVaultLock",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleVault = new aws.glacier.Vault("example", {});
+const exampleVault = new aws.glacier.Vault("exampleVault", {});
 const examplePolicyDocument = exampleVault.arn.apply(arn => aws.iam.getPolicyDocument({
     statements: [{
         actions: ["glacier:DeleteArchive"],
-        conditions: [{
-            test: "NumericLessThanEquals",
-            values: ["365"],
-            variable: "glacier:ArchiveAgeinDays",
-        }],
         effect: "Deny",
         resources: [arn],
+        conditions: [{
+            test: "NumericLessThanEquals",
+            variable: "glacier:ArchiveAgeinDays",
+            values: ["365"],
+        }],
     }],
-}, { async: true }));
-const exampleVaultLock = new aws.glacier.VaultLock("example", {
+}));
+const exampleVaultLock = new aws.glacier.VaultLock("exampleVaultLock", {
     completeLock: false,
     policy: examplePolicyDocument.json,
     vaultName: exampleVault.name,
@@ -189,7 +189,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -197,8 +197,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := glacier.NewVaultLock(ctx, "example", &glacier.VaultLockArgs{
 			CompleteLock: pulumi.Bool(true),
-			Policy:       pulumi.String(data.Aws_iam_policy_document.Example.Json),
-			VaultName:    pulumi.String(aws_glacier_vault.Example.Name),
+			Policy:       pulumi.Any(data.Aws_iam_policy_document.Example.Json),
+			VaultName:    pulumi.Any(aws_glacier_vault.Example.Name),
 		})
 		if err != nil {
 			return err
@@ -231,8 +231,8 @@ import * as aws from "@pulumi/aws";
 
 const example = new aws.glacier.VaultLock("example", {
     completeLock: true,
-    policy: aws_iam_policy_document_example.json,
-    vaultName: aws_glacier_vault_example.name,
+    policy: data.aws_iam_policy_document.example.json,
+    vaultName: aws_glacier_vault.example.name,
 });
 ```
 
@@ -254,7 +254,7 @@ const example = new aws.glacier.VaultLock("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultLock">NewVaultLock</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultLockArgs">VaultLockArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultLock">VaultLock</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#VaultLock">NewVaultLock</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#VaultLockArgs">VaultLockArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#VaultLock">VaultLock</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -328,7 +328,7 @@ const example = new aws.glacier.VaultLock("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -348,7 +348,7 @@ const example = new aws.glacier.VaultLock("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultLockArgs">VaultLockArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#VaultLockArgs">VaultLockArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -358,7 +358,7 @@ const example = new aws.glacier.VaultLock("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -721,7 +721,7 @@ Get an existing VaultLock resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVaultLock<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultLockState">VaultLockState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glacier?tab=doc#VaultLock">VaultLock</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVaultLock<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#VaultLockState">VaultLockState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glacier?tab=doc#VaultLock">VaultLock</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

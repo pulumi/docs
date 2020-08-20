@@ -12,8 +12,6 @@ meta_desc: "Explore the GetRegion function of the Linode package, including exam
 
 `linode..getRegion` provides details about a specific Linode region. See all regions [here](https://api.linode.com/v4/regions).
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_linode as linode
 
 region = linode.get_region(id="us-east")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -60,6 +61,7 @@ const region = pulumi.output(linode.getRegion({
     id: "us-east",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

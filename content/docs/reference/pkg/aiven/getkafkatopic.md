@@ -39,7 +39,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.LookupKafkaTopic(ctx, &aiven.LookupKafkaTopicArgs{
+			Project:     data.Aiven_service.Myservice.Project,
+			ServiceName: data.Aiven_service.Myservice.Service_name,
+			TopicName:   "<TOPIC_NAME>",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -47,8 +69,8 @@ Coming soon!
 import pulumi
 import pulumi_aiven as aiven
 
-mytesttopic = aiven.get_kafka_topic(project=data["aiven..Service"]["myservice"]["project"],
-    service_name=data["aiven..Service"]["myservice"]["service_name"],
+mytesttopic = aiven.get_kafka_topic(project=data["aiven_service"]["myservice"]["project"],
+    service_name=data["aiven_service"]["myservice"]["service_name"],
     topic_name="<TOPIC_NAME>")
 ```
 
@@ -83,12 +105,12 @@ const mytesttopic = aiven.getKafkaTopic({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kafka_topic(</span>cleanup_policy=None<span class="p">, </span>client_timeout=None<span class="p">, </span>minimum_in_sync_replicas=None<span class="p">, </span>partitions=None<span class="p">, </span>project=None<span class="p">, </span>replication=None<span class="p">, </span>retention_bytes=None<span class="p">, </span>retention_hours=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, </span>topic_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kafka_topic(</span>cleanup_policy=None<span class="p">, </span>minimum_in_sync_replicas=None<span class="p">, </span>partitions=None<span class="p">, </span>project=None<span class="p">, </span>replication=None<span class="p">, </span>retention_bytes=None<span class="p">, </span>retention_hours=None<span class="p">, </span>service_name=None<span class="p">, </span>termination_protection=None<span class="p">, </span>topic_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafkaTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#LookupKafkaTopicArgs">LookupKafkaTopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#LookupKafkaTopicResult">LookupKafkaTopicResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafkaTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupKafkaTopicArgs">LookupKafkaTopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupKafkaTopicResult">LookupKafkaTopicResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupKafkaTopic` in the Go SDK.
 
@@ -147,16 +169,6 @@ The following arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="clienttimeout_csharp">
-<a href="#clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopicclienttimeout">Get<wbr>Kafka<wbr>Topic<wbr>Client<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -269,16 +281,6 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clienttimeout_go">
-<a href="#clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopicclienttimeout">Get<wbr>Kafka<wbr>Topic<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="minimuminsyncreplicas_go">
 <a href="#minimuminsyncreplicas_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
 </span> 
@@ -386,16 +388,6 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clienttimeout_nodejs">
-<a href="#clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopicclienttimeout">Get<wbr>Kafka<wbr>Topic<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="minimuminsyncreplicas_nodejs">
 <a href="#minimuminsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
 </span> 
@@ -498,16 +490,6 @@ The following arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="client_timeout_python">
-<a href="#client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopicclienttimeout">Dict[Get<wbr>Kafka<wbr>Topic<wbr>Client<wbr>Timeout]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -644,16 +626,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="clienttimeout_csharp">
-<a href="#clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopicclienttimeout">Get<wbr>Kafka<wbr>Topic<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="minimuminsyncreplicas_csharp">
 <a href="#minimuminsyncreplicas_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
 </span> 
@@ -767,16 +739,6 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="clienttimeout_go">
-<a href="#clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopicclienttimeout">Get<wbr>Kafka<wbr>Topic<wbr>Client<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -900,16 +862,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="clienttimeout_nodejs">
-<a href="#clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopicclienttimeout">Get<wbr>Kafka<wbr>Topic<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="minimuminsyncreplicas_nodejs">
 <a href="#minimuminsyncreplicas_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>In<wbr>Sync<wbr>Replicas</a>
 </span> 
@@ -1028,16 +980,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="client_timeout_python">
-<a href="#client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkafkatopicclienttimeout">Dict[Get<wbr>Kafka<wbr>Topic<wbr>Client<wbr>Timeout]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="minimum_in_sync_replicas_python">
 <a href="#minimum_in_sync_replicas_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>in_<wbr>sync_<wbr>replicas</a>
 </span> 
@@ -1093,138 +1035,6 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-
-## Supporting Types
-
-
-<h4 id="getkafkatopicclienttimeout">Get<wbr>Kafka<wbr>Topic<wbr>Client<wbr>Timeout</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetKafkaTopicClientTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetKafkaTopicClientTimeout">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetKafkaTopicClientTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#GetKafkaTopicClientTimeout">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetKafkaTopicClientTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetKafkaTopicClientTimeout.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_csharp">
-<a href="#create_csharp" style="color: inherit; text-decoration: inherit;">Create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="read_csharp">
-<a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_go">
-<a href="#create_go" style="color: inherit; text-decoration: inherit;">Create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="read_go">
-<a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_nodejs">
-<a href="#create_nodejs" style="color: inherit; text-decoration: inherit;">create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="read_nodejs">
-<a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_python">
-<a href="#create_python" style="color: inherit; text-decoration: inherit;">create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="read_python">
-<a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

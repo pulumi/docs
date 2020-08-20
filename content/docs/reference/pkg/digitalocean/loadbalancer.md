@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancer"
-title_tag: "Resource LoadBalancer | Package Digital Ocean"
-meta_desc: "Explore the LoadBalancer resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Load Balancer resource. This can be used to create,"
+title_tag: "Resource LoadBalancer | Package DigitalOcean"
+meta_desc: "Explore the LoadBalancer resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Load Balancer resource. This can be used to create,"
 ---
 
 
@@ -12,9 +12,6 @@ meta_desc: "Explore the LoadBalancer resource of the Digital Ocean package, incl
 
 Provides a DigitalOcean Load Balancer resource. This can be used to create,
 modify, and delete Load Balancers.
-
-{{% examples %}}
-{{% /examples %}}
 
 
 
@@ -27,7 +24,7 @@ modify, and delete Load Balancers.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#LoadBalancer">LoadBalancer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_backend_keepalive=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.LoadBalancer">LoadBalancer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_backend_keepalive=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1006,7 +1003,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_backend_keepalive=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>ip=None<span class="p">, </span>load_balancer_urn=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_backend_keepalive=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>ip=None<span class="p">, </span>load_balancer_urn=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

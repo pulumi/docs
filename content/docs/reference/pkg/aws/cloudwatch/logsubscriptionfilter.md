@@ -28,11 +28,11 @@ class MyStack : Stack
     {
         var testLambdafunctionLogfilter = new Aws.CloudWatch.LogSubscriptionFilter("testLambdafunctionLogfilter", new Aws.CloudWatch.LogSubscriptionFilterArgs
         {
+            RoleArn = aws_iam_role.Iam_for_lambda.Arn,
+            LogGroup = "/aws/lambda/example_lambda_name",
+            FilterPattern = "logtype test",
             DestinationArn = aws_kinesis_stream.Test_logstream.Arn,
             Distribution = "Random",
-            FilterPattern = "logtype test",
-            LogGroup = "/aws/lambda/example_lambda_name",
-            RoleArn = aws_iam_role.Iam_for_lambda.Arn,
         });
     }
 
@@ -46,18 +46,18 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cloudwatch.NewLogSubscriptionFilter(ctx, "testLambdafunctionLogfilter", &cloudwatch.LogSubscriptionFilterArgs{
-			DestinationArn: pulumi.String(aws_kinesis_stream.Test_logstream.Arn),
-			Distribution:   pulumi.String("Random"),
-			FilterPattern:  pulumi.String("logtype test"),
+			RoleArn:        pulumi.Any(aws_iam_role.Iam_for_lambda.Arn),
 			LogGroup:       pulumi.String("/aws/lambda/example_lambda_name"),
-			RoleArn:        pulumi.String(aws_iam_role.Iam_for_lambda.Arn),
+			FilterPattern:  pulumi.String("logtype test"),
+			DestinationArn: pulumi.Any(aws_kinesis_stream.Test_logstream.Arn),
+			Distribution:   pulumi.String("Random"),
 		})
 		if err != nil {
 			return err
@@ -75,11 +75,11 @@ import pulumi
 import pulumi_aws as aws
 
 test_lambdafunction_logfilter = aws.cloudwatch.LogSubscriptionFilter("testLambdafunctionLogfilter",
-    destination_arn=aws_kinesis_stream["test_logstream"]["arn"],
-    distribution="Random",
-    filter_pattern="logtype test",
+    role_arn=aws_iam_role["iam_for_lambda"]["arn"],
     log_group="/aws/lambda/example_lambda_name",
-    role_arn=aws_iam_role["iam_for_lambda"]["arn"])
+    filter_pattern="logtype test",
+    destination_arn=aws_kinesis_stream["test_logstream"]["arn"],
+    distribution="Random")
 ```
 
 {{% /example %}}
@@ -90,12 +90,12 @@ test_lambdafunction_logfilter = aws.cloudwatch.LogSubscriptionFilter("testLambda
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testLambdafunctionLogfilter = new aws.cloudwatch.LogSubscriptionFilter("test_lambdafunction_logfilter", {
-    destinationArn: aws_kinesis_stream_test_logstream.arn,
-    distribution: "Random",
-    filterPattern: "logtype test",
+const testLambdafunctionLogfilter = new aws.cloudwatch.LogSubscriptionFilter("testLambdafunctionLogfilter", {
+    roleArn: aws_iam_role.iam_for_lambda.arn,
     logGroup: "/aws/lambda/example_lambda_name",
-    roleArn: aws_iam_role_iam_for_lambda.arn,
+    filterPattern: "logtype test",
+    destinationArn: aws_kinesis_stream.test_logstream.arn,
+    distribution: "Random",
 });
 ```
 
@@ -117,7 +117,7 @@ const testLambdafunctionLogfilter = new aws.cloudwatch.LogSubscriptionFilter("te
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogSubscriptionFilter">NewLogSubscriptionFilter</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogSubscriptionFilterArgs">LogSubscriptionFilterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogSubscriptionFilter">LogSubscriptionFilter</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogSubscriptionFilter">NewLogSubscriptionFilter</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogSubscriptionFilterArgs">LogSubscriptionFilterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogSubscriptionFilter">LogSubscriptionFilter</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -191,7 +191,7 @@ const testLambdafunctionLogfilter = new aws.cloudwatch.LogSubscriptionFilter("te
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -211,7 +211,7 @@ const testLambdafunctionLogfilter = new aws.cloudwatch.LogSubscriptionFilter("te
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogSubscriptionFilterArgs">LogSubscriptionFilterArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogSubscriptionFilterArgs">LogSubscriptionFilterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -221,7 +221,7 @@ const testLambdafunctionLogfilter = new aws.cloudwatch.LogSubscriptionFilter("te
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -672,7 +672,7 @@ Get an existing LogSubscriptionFilter resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLogSubscriptionFilter<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogSubscriptionFilterState">LogSubscriptionFilterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#LogSubscriptionFilter">LogSubscriptionFilter</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLogSubscriptionFilter<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogSubscriptionFilterState">LogSubscriptionFilterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#LogSubscriptionFilter">LogSubscriptionFilter</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

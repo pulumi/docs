@@ -377,7 +377,7 @@ const guestbook = new k8s.yaml.ConfigFile("guestbook",
         ],
     },
     {
-        providers: { "kubernetes": clusterProvider },
+        providers: { "kubernetes": cluster.provider },
     },
 );
 

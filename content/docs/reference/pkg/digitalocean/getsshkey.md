@@ -1,8 +1,8 @@
 
 ---
 title: "GetSshKey"
-title_tag: "Function GetSshKey | Package Digital Ocean"
-meta_desc: "Explore the GetSshKey function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on a ssh key. This data source provides the name, public key,"
+title_tag: "Function GetSshKey | Package DigitalOcean"
+meta_desc: "Explore the GetSshKey function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a ssh key. This data source provides the name, public key,"
 ---
 
 
@@ -16,8 +16,6 @@ the ssh key in question is not managed by this provider or you need to utilize a
 of the keys data.
 
 An error is triggered if the provided ssh key name does not exist.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -51,6 +49,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +68,11 @@ example_droplet = digitalocean.Droplet("exampleDroplet",
     size="s-1vcpu-1gb",
     ssh_keys=[example_ssh_key.id])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -86,6 +87,7 @@ const exampleDroplet = new digitalocean.Droplet("exampleDroplet", {
     sshKeys: [exampleSshKey.then(exampleSshKey => exampleSshKey.id)],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

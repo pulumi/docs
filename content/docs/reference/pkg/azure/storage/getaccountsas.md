@@ -50,6 +50,7 @@ class MyStack : Stack
         {
             ConnectionString = primaryConnectionString,
             HttpsOnly = true,
+            SignedVersion = "2017-07-29",
             ResourceTypes = new Azure.Storage.Inputs.GetAccountSASResourceTypesArgs
             {
                 Service = true,
@@ -143,6 +144,7 @@ example_account = azure.storage.Account("exampleAccount",
     })
 example_account_sas = example_account.primary_connection_string.apply(lambda primary_connection_string: azure.storage.get_account_sas(connection_string=primary_connection_string,
     https_only=True,
+    signed_version="2017-07-29",
     resource_types={
         "service": True,
         "container": False,
@@ -190,6 +192,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
 const exampleAccountSAS = exampleAccount.primaryConnectionString.apply(primaryConnectionString => azure.storage.getAccountSAS({
     connectionString: primaryConnectionString,
     httpsOnly: true,
+    signedVersion: "2017-07-29",
     resourceTypes: {
         service: true,
         container: false,
@@ -233,7 +236,7 @@ export const sasUrlQueryString = exampleAccountSAS.sas;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_account_sas(</span>connection_string=None<span class="p">, </span>expiry=None<span class="p">, </span>https_only=None<span class="p">, </span>permissions=None<span class="p">, </span>resource_types=None<span class="p">, </span>services=None<span class="p">, </span>start=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_account_sas(</span>connection_string=None<span class="p">, </span>expiry=None<span class="p">, </span>https_only=None<span class="p">, </span>permissions=None<span class="p">, </span>resource_types=None<span class="p">, </span>services=None<span class="p">, </span>signed_version=None<span class="p">, </span>start=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -335,6 +338,17 @@ The following arguments are supported:
     <dd>{{% md %}}Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signedversion_csharp">
+<a href="#signedversion_csharp" style="color: inherit; text-decoration: inherit;">Signed<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the signed storage service version to use to authorize requests made with this account SAS. Defaults to `2017-07-29`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -417,6 +431,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signedversion_go">
+<a href="#signedversion_go" style="color: inherit; text-decoration: inherit;">Signed<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the signed storage service version to use to authorize requests made with this account SAS. Defaults to `2017-07-29`.
 {{% /md %}}</dd>
 
 </dl>
@@ -503,6 +528,17 @@ The following arguments are supported:
     <dd>{{% md %}}Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signedversion_nodejs">
+<a href="#signedversion_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the signed storage service version to use to authorize requests made with this account SAS. Defaults to `2017-07-29`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -585,6 +621,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signed_version_python">
+<a href="#signed_version_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the signed storage service version to use to authorize requests made with this account SAS. Defaults to `2017-07-29`.
 {{% /md %}}</dd>
 
 </dl>
@@ -699,6 +746,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="signedversion_csharp">
+<a href="#signedversion_csharp" style="color: inherit; text-decoration: inherit;">Signed<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -795,6 +852,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signedversion_go">
+<a href="#signedversion_go" style="color: inherit; text-decoration: inherit;">Signed<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -897,6 +964,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="signedversion_nodejs">
+<a href="#signedversion_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -993,6 +1070,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signed_version_python">
+<a href="#signed_version_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

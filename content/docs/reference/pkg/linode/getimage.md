@@ -11,8 +11,6 @@ meta_desc: "Explore the GetImage function of the Linode package, including examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides information about a Linode image
-
-
 ## Attributes
 
 The Linode Image resource exports the following attributes:
@@ -57,6 +55,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -70,9 +69,11 @@ import pulumi_linode as linode
 
 k8_master = linode.get_image(id="linode/debian8")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -81,6 +82,7 @@ const k8Master = pulumi.output(linode.getImage({
     id: "linode/debian8",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

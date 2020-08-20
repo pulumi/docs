@@ -22,11 +22,11 @@ meta_desc: "Explore the AccountAuthentication resource of the Aiven package, inc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#AccountAuthentication">AccountAuthentication</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>authentication_id=None<span class="p">, </span>create_time=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>saml_acs_url=None<span class="p">, </span>saml_certificate=None<span class="p">, </span>saml_entity_id=None<span class="p">, </span>saml_idp_url=None<span class="p">, </span>saml_metadata_url=None<span class="p">, </span>type=None<span class="p">, </span>update_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.AccountAuthentication">AccountAuthentication</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_id=None<span class="p">, </span>authentication_id=None<span class="p">, </span>create_time=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>saml_acs_url=None<span class="p">, </span>saml_certificate=None<span class="p">, </span>saml_entity_id=None<span class="p">, </span>saml_idp_url=None<span class="p">, </span>saml_metadata_url=None<span class="p">, </span>type=None<span class="p">, </span>update_time=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#AccountAuthentication">NewAccountAuthentication</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#AccountAuthenticationArgs">AccountAuthenticationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#AccountAuthentication">AccountAuthentication</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#AccountAuthentication">NewAccountAuthentication</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#AccountAuthenticationArgs">AccountAuthenticationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#AccountAuthentication">AccountAuthentication</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -100,7 +100,7 @@ meta_desc: "Explore the AccountAuthentication resource of the Aiven package, inc
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -120,7 +120,7 @@ meta_desc: "Explore the AccountAuthentication resource of the Aiven package, inc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#AccountAuthenticationArgs">AccountAuthenticationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#AccountAuthenticationArgs">AccountAuthenticationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -130,7 +130,7 @@ meta_desc: "Explore the AccountAuthentication resource of the Aiven package, inc
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -841,11 +841,11 @@ Get an existing AccountAuthentication resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>authentication_id=None<span class="p">, </span>create_time=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>saml_acs_url=None<span class="p">, </span>saml_certificate=None<span class="p">, </span>saml_entity_id=None<span class="p">, </span>saml_idp_url=None<span class="p">, </span>saml_metadata_url=None<span class="p">, </span>type=None<span class="p">, </span>update_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_id=None<span class="p">, </span>authentication_id=None<span class="p">, </span>create_time=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>saml_acs_url=None<span class="p">, </span>saml_certificate=None<span class="p">, </span>saml_entity_id=None<span class="p">, </span>saml_idp_url=None<span class="p">, </span>saml_metadata_url=None<span class="p">, </span>type=None<span class="p">, </span>update_time=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccountAuthentication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#AccountAuthenticationState">AccountAuthenticationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#AccountAuthentication">AccountAuthentication</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccountAuthentication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#AccountAuthenticationState">AccountAuthenticationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#AccountAuthentication">AccountAuthentication</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

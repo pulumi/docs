@@ -57,6 +57,9 @@ The following arguments are supported:
 * `labels` - (Optional) The list of key value pairs representing additional
   properties of the cluster. Changing this creates a new cluster.
 
+* `merge_labels` - (Optional) Indicates whether the provided labels should be
+  merged with cluster template labels. Changing this creates a new cluster.
+
 * `master_count` - (Optional) The number of master nodes for the cluster.
   Changing this creates a new cluster.
 
@@ -68,6 +71,9 @@ The following arguments are supported:
 
 * `fixed_subnet` - (Optional) The fixed subnet that will be attached to the
   cluster. Changing this creates a new cluster.
+
+* `floating_ip_enabled` - (Optional) Indicates whether floating IP should be
+  created for every cluster node. Changing this creates a new cluster.
 
 ## Attributes reference
 
@@ -89,10 +95,12 @@ The following attributes are exported:
 * `master_flavor` - See Argument Reference above.
 * `keypair` - See Argument Reference above.
 * `labels` - See Argument Reference above.
+* `merge_labels` - See Argument Reference above.
 * `master_count` - See Argument Reference above.
 * `node_count` - See Argument Reference above.
 * `fixed_network` - See Argument Reference above.
 * `fixed_subnet` - See Argument Reference above.
+* `floating_ip_enabled` - See Argument Reference above.
 * `master_addresses` - IP addresses of the master node of the cluster.
 * `node_addresses` - IP addresses of the node of the cluster.
 * `stack_id` - UUID of the Orchestration service stack.
@@ -132,7 +140,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/containerinfra"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerinfra.NewCluster(ctx, "cluster1", &containerinfra.ClusterArgs{
+			ClusterTemplateId: pulumi.String("b9a45c5c-cd03-4958-82aa-b80bf93cb922"),
+			Keypair:           pulumi.String("ssh_keypair"),
+			MasterCount:       pulumi.Int(3),
+			NodeCount:         pulumi.Int(5),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -177,7 +208,7 @@ const cluster1 = new openstack.containerinfra.Cluster("cluster_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/containerinfra/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_template_id=None<span class="p">, </span>create_timeout=None<span class="p">, </span>discovery_url=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>keypair=None<span class="p">, </span>labels=None<span class="p">, </span>master_count=None<span class="p">, </span>master_flavor=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/containerinfra/#pulumi_openstack.containerinfra.Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_template_id=None<span class="p">, </span>create_timeout=None<span class="p">, </span>discovery_url=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>floating_ip_enabled=None<span class="p">, </span>keypair=None<span class="p">, </span>labels=None<span class="p">, </span>master_count=None<span class="p">, </span>master_flavor=None<span class="p">, </span>merge_labels=None<span class="p">, </span>name=None<span class="p">, </span>node_count=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -421,6 +452,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="floatingipenabled_csharp">
+<a href="#floatingipenabled_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="keypair_csharp">
 <a href="#keypair_csharp" style="color: inherit; text-decoration: inherit;">Keypair</a>
 </span> 
@@ -456,6 +497,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mergelabels_csharp">
+<a href="#mergelabels_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -568,6 +619,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="floatingipenabled_go">
+<a href="#floatingipenabled_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="keypair_go">
 <a href="#keypair_go" style="color: inherit; text-decoration: inherit;">Keypair</a>
 </span> 
@@ -603,6 +664,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mergelabels_go">
+<a href="#mergelabels_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -715,6 +786,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="floatingipenabled_nodejs">
+<a href="#floatingipenabled_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="keypair_nodejs">
 <a href="#keypair_nodejs" style="color: inherit; text-decoration: inherit;">keypair</a>
 </span> 
@@ -750,6 +831,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mergelabels_nodejs">
+<a href="#mergelabels_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -862,6 +953,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
     <dt class="property-optional"
             title="Optional">
+        <span id="floating_ip_enabled_python">
+<a href="#floating_ip_enabled_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="keypair_python">
 <a href="#keypair_python" style="color: inherit; text-decoration: inherit;">keypair</a>
 </span> 
@@ -897,6 +998,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="merge_labels_python">
+<a href="#merge_labels_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1468,7 +1579,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_address=None<span class="p">, </span>cluster_template_id=None<span class="p">, </span>coe_version=None<span class="p">, </span>container_version=None<span class="p">, </span>create_timeout=None<span class="p">, </span>created_at=None<span class="p">, </span>discovery_url=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>keypair=None<span class="p">, </span>kubeconfig=None<span class="p">, </span>labels=None<span class="p">, </span>master_addresses=None<span class="p">, </span>master_count=None<span class="p">, </span>master_flavor=None<span class="p">, </span>name=None<span class="p">, </span>node_addresses=None<span class="p">, </span>node_count=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>stack_id=None<span class="p">, </span>updated_at=None<span class="p">, </span>user_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_address=None<span class="p">, </span>cluster_template_id=None<span class="p">, </span>coe_version=None<span class="p">, </span>container_version=None<span class="p">, </span>create_timeout=None<span class="p">, </span>created_at=None<span class="p">, </span>discovery_url=None<span class="p">, </span>docker_volume_size=None<span class="p">, </span>fixed_network=None<span class="p">, </span>fixed_subnet=None<span class="p">, </span>flavor=None<span class="p">, </span>floating_ip_enabled=None<span class="p">, </span>keypair=None<span class="p">, </span>kubeconfig=None<span class="p">, </span>labels=None<span class="p">, </span>master_addresses=None<span class="p">, </span>master_count=None<span class="p">, </span>master_flavor=None<span class="p">, </span>merge_labels=None<span class="p">, </span>name=None<span class="p">, </span>node_addresses=None<span class="p">, </span>node_count=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>stack_id=None<span class="p">, </span>updated_at=None<span class="p">, </span>user_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1694,6 +1805,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_floatingipenabled_csharp">
+<a href="#state_floatingipenabled_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_keypair_csharp">
 <a href="#state_keypair_csharp" style="color: inherit; text-decoration: inherit;">Keypair</a>
 </span> 
@@ -1749,6 +1870,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mergelabels_csharp">
+<a href="#state_mergelabels_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1951,6 +2082,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_floatingipenabled_go">
+<a href="#state_floatingipenabled_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_keypair_go">
 <a href="#state_keypair_go" style="color: inherit; text-decoration: inherit;">Keypair</a>
 </span> 
@@ -2006,6 +2147,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mergelabels_go">
+<a href="#state_mergelabels_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2208,6 +2359,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_floatingipenabled_nodejs">
+<a href="#state_floatingipenabled_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_keypair_nodejs">
 <a href="#state_keypair_nodejs" style="color: inherit; text-decoration: inherit;">keypair</a>
 </span> 
@@ -2263,6 +2424,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mergelabels_nodejs">
+<a href="#state_mergelabels_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2465,6 +2636,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_floating_ip_enabled_python">
+<a href="#state_floating_ip_enabled_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_keypair_python">
 <a href="#state_keypair_python" style="color: inherit; text-decoration: inherit;">keypair</a>
 </span> 
@@ -2520,6 +2701,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_merge_labels_python">
+<a href="#state_merge_labels_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -15,8 +15,6 @@ Provides a Linode Token resource.  This can be used to create, modify, and delet
 It is common for the provider itself to be configured with broadly scoped Personal Access Tokens.  Provisioning scripts or tools configured within a Linode Instance should follow the principle of least privilege to afford only the required roles for tools to perform their necessary tasks.  The `linode..Token` resource allows for the management of Personal Access Tokens with scopes mirroring or narrowing the scope of the parent token.
 
 For more information, see the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/getTokens).
-
-
 ## Attributes
 
 This resource exports the following attributes:
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -69,9 +68,11 @@ foo_token = linode.Token("fooToken",
     scopes="linodes:read_only")
 foo_instance = linode.Instance("fooInstance")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -83,6 +84,7 @@ const fooToken = new linode.Token("foo", {
 });
 const fooInstance = new linode.Instance("foo", {});
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -97,7 +99,7 @@ const fooInstance = new linode.Instance("foo", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/linode/#Token">Token</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>expiry=None<span class="p">, </span>label=None<span class="p">, </span>scopes=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Token">Token</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>expiry=None<span class="p">, </span>label=None<span class="p">, </span>scopes=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -608,7 +610,7 @@ Get an existing Token resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created=None<span class="p">, </span>expiry=None<span class="p">, </span>label=None<span class="p">, </span>scopes=None<span class="p">, </span>token=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>created=None<span class="p">, </span>expiry=None<span class="p">, </span>label=None<span class="p">, </span>scopes=None<span class="p">, </span>token=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -1,4 +1,16 @@
 [[releases]]
+date = "17th August 2020"
+title = "Pinpoint Software Chooses Pulumi for Cloud Native Engineering"
+summary = "Pulumi’s industry-leading Kubernetes support gaining strong customer momentum"
+url = "https://info.pulumi.com/press-release/pinpoint"
+
+[[releases]]
+date = "12th August 2020"
+title = "Pulumi Accelerates Cloud Native Engineering with Expansive New Kubernetes Capabilities"
+summary = "Snowflake, Mercedes-Benz and Lemonade among hundreds of enterprises using Pulumi’s Kubernetes superpowers to speed innovation through software"
+url = "https://info.pulumi.com/press-release/kubernetes"
+
+[[releases]]
 date = "21st April 2020"
 title = "Pulumi 2.0 Delivers Cloud Engineering Superpowers"
 summary = "New Modern Infrastructure as Code capabilities help developers and infrastructure teams ship faster with governance and confidence"

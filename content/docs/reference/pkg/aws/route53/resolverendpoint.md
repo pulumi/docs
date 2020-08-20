@@ -29,6 +29,11 @@ class MyStack : Stack
         var foo = new Aws.Route53.ResolverEndpoint("foo", new Aws.Route53.ResolverEndpointArgs
         {
             Direction = "INBOUND",
+            SecurityGroupIds = 
+            {
+                aws_security_group.Sg1.Id,
+                aws_security_group.Sg2.Id,
+            },
             IpAddresses = 
             {
                 new Aws.Route53.Inputs.ResolverEndpointIpAddressArgs
@@ -37,14 +42,9 @@ class MyStack : Stack
                 },
                 new Aws.Route53.Inputs.ResolverEndpointIpAddressArgs
                 {
-                    Ip = "10.0.64.4",
                     SubnetId = aws_subnet.Sn2.Id,
+                    Ip = "10.0.64.4",
                 },
-            },
-            SecurityGroupIds = 
-            {
-                aws_security_group.Sg1.Id,
-                aws_security_group.Sg2.Id,
             },
             Tags = 
             {
@@ -63,7 +63,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -71,18 +71,18 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := route53.NewResolverEndpoint(ctx, "foo", &route53.ResolverEndpointArgs{
 			Direction: pulumi.String("INBOUND"),
+			SecurityGroupIds: pulumi.StringArray{
+				pulumi.Any(aws_security_group.Sg1.Id),
+				pulumi.Any(aws_security_group.Sg2.Id),
+			},
 			IpAddresses: route53.ResolverEndpointIpAddressArray{
 				&route53.ResolverEndpointIpAddressArgs{
-					SubnetId: pulumi.String(aws_subnet.Sn1.Id),
+					SubnetId: pulumi.Any(aws_subnet.Sn1.Id),
 				},
 				&route53.ResolverEndpointIpAddressArgs{
+					SubnetId: pulumi.Any(aws_subnet.Sn2.Id),
 					Ip:       pulumi.String("10.0.64.4"),
-					SubnetId: pulumi.String(aws_subnet.Sn2.Id),
 				},
-			},
-			SecurityGroupIds: pulumi.StringArray{
-				pulumi.String(aws_security_group.Sg1.Id),
-				pulumi.String(aws_security_group.Sg2.Id),
 			},
 			Tags: pulumi.StringMap{
 				"Environment": pulumi.String("Prod"),
@@ -105,18 +105,18 @@ import pulumi_aws as aws
 
 foo = aws.route53.ResolverEndpoint("foo",
     direction="INBOUND",
+    security_group_ids=[
+        aws_security_group["sg1"]["id"],
+        aws_security_group["sg2"]["id"],
+    ],
     ip_addresses=[
         {
             "subnet_id": aws_subnet["sn1"]["id"],
         },
         {
-            "ip": "10.0.64.4",
             "subnet_id": aws_subnet["sn2"]["id"],
+            "ip": "10.0.64.4",
         },
-    ],
-    security_group_ids=[
-        aws_security_group["sg1"]["id"],
-        aws_security_group["sg2"]["id"],
     ],
     tags={
         "Environment": "Prod",
@@ -133,18 +133,18 @@ import * as aws from "@pulumi/aws";
 
 const foo = new aws.route53.ResolverEndpoint("foo", {
     direction: "INBOUND",
+    securityGroupIds: [
+        aws_security_group.sg1.id,
+        aws_security_group.sg2.id,
+    ],
     ipAddresses: [
         {
-            subnetId: aws_subnet_sn1.id,
+            subnetId: aws_subnet.sn1.id,
         },
         {
+            subnetId: aws_subnet.sn2.id,
             ip: "10.0.64.4",
-            subnetId: aws_subnet_sn2.id,
         },
-    ],
-    securityGroupIds: [
-        aws_security_group_sg1.id,
-        aws_security_group_sg2.id,
     ],
     tags: {
         Environment: "Prod",
@@ -170,7 +170,7 @@ const foo = new aws.route53.ResolverEndpoint("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpoint">NewResolverEndpoint</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpointArgs">ResolverEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpoint">ResolverEndpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ResolverEndpoint">NewResolverEndpoint</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ResolverEndpointArgs">ResolverEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ResolverEndpoint">ResolverEndpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -244,7 +244,7 @@ const foo = new aws.route53.ResolverEndpoint("foo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -264,7 +264,7 @@ const foo = new aws.route53.ResolverEndpoint("foo", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpointArgs">ResolverEndpointArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ResolverEndpointArgs">ResolverEndpointArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,7 +274,7 @@ const foo = new aws.route53.ResolverEndpoint("foo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -781,7 +781,7 @@ Get an existing ResolverEndpoint resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResolverEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpointState">ResolverEndpointState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpoint">ResolverEndpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResolverEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ResolverEndpointState">ResolverEndpointState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ResolverEndpoint">ResolverEndpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1253,7 +1253,7 @@ to your network (for outbound endpoints) or on the way from your network to your
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpointIpAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ResolverEndpointIpAddressOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ResolverEndpointIpAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#ResolverEndpointIpAddressOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.ResolverEndpointIpAddressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.ResolverEndpointIpAddress.html">output</a> API doc for this type.

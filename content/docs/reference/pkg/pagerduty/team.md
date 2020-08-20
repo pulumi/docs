@@ -1,8 +1,8 @@
 
 ---
 title: "Team"
-title_tag: "Resource Team | Package pagerduty"
-meta_desc: "Explore the Team resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. A [team](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Teams/get_teams) is a collection of users and escalation policies that represent a group of people within an organization."
+title_tag: "Resource Team | Package PagerDuty"
+meta_desc: "Explore the Team resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [team](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Teams/get_teams) is a collection of users and escalation policies that represent a group of people within an organization."
 ---
 
 
@@ -13,8 +13,6 @@ meta_desc: "Explore the Team resource of the pagerduty package, including exampl
 A [team](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Teams/get_teams) is a collection of users and escalation policies that represent a group of people within an organization.
 
 The account must have the `teams` ability to use the following resource.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -51,9 +50,11 @@ import pulumi_pagerduty as pagerduty
 
 example = pagerduty.Team("example", description="All engineering")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -62,6 +63,7 @@ const example = new pagerduty.Team("example", {
     description: "All engineering",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -76,7 +78,7 @@ const example = new pagerduty.Team("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#Team">Team</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Team">Team</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -495,7 +497,7 @@ Get an existing Team resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>html_url=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>html_url=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

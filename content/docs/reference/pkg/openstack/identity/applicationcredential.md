@@ -53,7 +53,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := identity.NewApplicationCredential(ctx, "swift", &identity.ApplicationCredentialArgs{
+			Description: pulumi.String("Swift technical application credential"),
+			ExpiresAt:   pulumi.String("2019-02-13T12:12:12Z"),
+			Roles: pulumi.StringArray{
+				pulumi.String("swiftoperator"),
+			},
+			Secret: pulumi.String("supersecret"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -112,7 +137,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		unrestricted, err := identity.NewApplicationCredential(ctx, "unrestricted", &identity.ApplicationCredentialArgs{
+			Description:  pulumi.String("Unrestricted application credential"),
+			Unrestricted: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("applicationCredentialSecret", unrestricted.Secret)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -181,7 +228,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/identity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := identity.NewApplicationCredential(ctx, "monitoring", &identity.ApplicationCredentialArgs{
+			AccessRules: identity.ApplicationCredentialAccessRuleArray{
+				&identity.ApplicationCredentialAccessRuleArgs{
+					Method:  pulumi.String("GET"),
+					Path:    pulumi.String("/v2.0/metrics"),
+					Service: pulumi.String("monitoring"),
+				},
+				&identity.ApplicationCredentialAccessRuleArgs{
+					Method:  pulumi.String("PUT"),
+					Path:    pulumi.String("/v2.0/metrics"),
+					Service: pulumi.String("monitoring"),
+				},
+			},
+			ExpiresAt: pulumi.String("2019-02-13T12:12:12Z"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -244,7 +323,7 @@ const monitoring = new openstack.identity.ApplicationCredential("monitoring", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/identity/#ApplicationCredential">ApplicationCredential</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_rules=None<span class="p">, </span>description=None<span class="p">, </span>expires_at=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>roles=None<span class="p">, </span>secret=None<span class="p">, </span>unrestricted=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/identity/#pulumi_openstack.identity.ApplicationCredential">ApplicationCredential</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_rules=None<span class="p">, </span>description=None<span class="p">, </span>expires_at=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>roles=None<span class="p">, </span>secret=None<span class="p">, </span>unrestricted=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1007,7 +1086,7 @@ Get an existing ApplicationCredential resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_rules=None<span class="p">, </span>description=None<span class="p">, </span>expires_at=None<span class="p">, </span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>roles=None<span class="p">, </span>secret=None<span class="p">, </span>unrestricted=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_rules=None<span class="p">, </span>description=None<span class="p">, </span>expires_at=None<span class="p">, </span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>region=None<span class="p">, </span>roles=None<span class="p">, </span>secret=None<span class="p">, </span>unrestricted=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

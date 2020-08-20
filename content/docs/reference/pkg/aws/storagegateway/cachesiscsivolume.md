@@ -50,15 +50,15 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
-			GatewayArn:         pulumi.String(aws_storagegateway_cache.Example.Gateway_arn),
-			NetworkInterfaceId: pulumi.String(aws_instance.Example.Private_ip),
+			GatewayArn:         pulumi.Any(aws_storagegateway_cache.Example.Gateway_arn),
+			NetworkInterfaceId: pulumi.Any(aws_instance.Example.Private_ip),
 			TargetName:         pulumi.String("example"),
 			VolumeSizeInBytes:  pulumi.Int(5368709120),
 		})
@@ -94,11 +94,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.storagegateway.CachesIscsiVolume("example", {
-    gatewayArn: aws_storagegateway_cache_example.gatewayArn,
-    networkInterfaceId: aws_instance_example.privateIp,
+    gatewayArn: aws_storagegateway_cache.example.gateway_arn,
+    networkInterfaceId: aws_instance.example.private_ip,
     targetName: "example",
-    volumeSizeInBytes: 5368709120, // 5 GB
+    volumeSizeInBytes: 5368709120,
 });
+// 5 GB
 ```
 
 {{% /example %}}
@@ -133,16 +134,16 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
-			GatewayArn:         pulumi.String(aws_storagegateway_cache.Example.Gateway_arn),
-			NetworkInterfaceId: pulumi.String(aws_instance.Example.Private_ip),
-			SnapshotId:         pulumi.String(aws_ebs_snapshot.Example.Id),
+			GatewayArn:         pulumi.Any(aws_storagegateway_cache.Example.Gateway_arn),
+			NetworkInterfaceId: pulumi.Any(aws_instance.Example.Private_ip),
+			SnapshotId:         pulumi.Any(aws_ebs_snapshot.Example.Id),
 			TargetName:         pulumi.String("example"),
 			VolumeSizeInBytes:  pulumi.Int(aws_ebs_snapshot.Example.Volume_size * 1024 * 1024 * 1024),
 		})
@@ -178,11 +179,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.storagegateway.CachesIscsiVolume("example", {
-    gatewayArn: aws_storagegateway_cache_example.gatewayArn,
-    networkInterfaceId: aws_instance_example.privateIp,
-    snapshotId: aws_ebs_snapshot_example.id,
+    gatewayArn: aws_storagegateway_cache.example.gateway_arn,
+    networkInterfaceId: aws_instance.example.private_ip,
+    snapshotId: aws_ebs_snapshot.example.id,
     targetName: "example",
-    volumeSizeInBytes: aws_ebs_snapshot_example.volumeSize.apply(volumeSize => (((volumeSize * 1024) * 1024) * 1024)),
+    volumeSizeInBytes: aws_ebs_snapshot.example.volume_size * 1024 * 1024 * 1024,
 });
 ```
 
@@ -218,18 +219,18 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := storagegateway.NewCachesIscsiVolume(ctx, "example", &storagegateway.CachesIscsiVolumeArgs{
-			GatewayArn:         pulumi.String(aws_storagegateway_cache.Example.Gateway_arn),
-			NetworkInterfaceId: pulumi.String(aws_instance.Example.Private_ip),
-			SourceVolumeArn:    pulumi.String(aws_storagegateway_cached_iscsi_volume.Existing.Arn),
+			GatewayArn:         pulumi.Any(aws_storagegateway_cache.Example.Gateway_arn),
+			NetworkInterfaceId: pulumi.Any(aws_instance.Example.Private_ip),
+			SourceVolumeArn:    pulumi.Any(aws_storagegateway_cached_iscsi_volume.Existing.Arn),
 			TargetName:         pulumi.String("example"),
-			VolumeSizeInBytes:  pulumi.String(aws_storagegateway_cached_iscsi_volume.Existing.Volume_size_in_bytes),
+			VolumeSizeInBytes:  pulumi.Any(aws_storagegateway_cached_iscsi_volume.Existing.Volume_size_in_bytes),
 		})
 		if err != nil {
 			return err
@@ -263,11 +264,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.storagegateway.CachesIscsiVolume("example", {
-    gatewayArn: aws_storagegateway_cache_example.gatewayArn,
-    networkInterfaceId: aws_instance_example.privateIp,
-    sourceVolumeArn: aws_storagegateway_cached_iscsi_volume_existing.arn,
+    gatewayArn: aws_storagegateway_cache.example.gateway_arn,
+    networkInterfaceId: aws_instance.example.private_ip,
+    sourceVolumeArn: aws_storagegateway_cached_iscsi_volume.existing.arn,
     targetName: "example",
-    volumeSizeInBytes: aws_storagegateway_cached_iscsi_volume_existing.volumeSizeInBytes,
+    volumeSizeInBytes: aws_storagegateway_cached_iscsi_volume.existing.volume_size_in_bytes,
 });
 ```
 
@@ -289,7 +290,7 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#CachesIscsiVolume">NewCachesIscsiVolume</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#CachesIscsiVolumeArgs">CachesIscsiVolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#CachesIscsiVolume">CachesIscsiVolume</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#CachesIscsiVolume">NewCachesIscsiVolume</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#CachesIscsiVolumeArgs">CachesIscsiVolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#CachesIscsiVolume">CachesIscsiVolume</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -363,7 +364,7 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -383,7 +384,7 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#CachesIscsiVolumeArgs">CachesIscsiVolumeArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#CachesIscsiVolumeArgs">CachesIscsiVolumeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -393,7 +394,7 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1196,7 +1197,7 @@ Get an existing CachesIscsiVolume resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCachesIscsiVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#CachesIscsiVolumeState">CachesIscsiVolumeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#CachesIscsiVolume">CachesIscsiVolume</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCachesIscsiVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#CachesIscsiVolumeState">CachesIscsiVolumeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#CachesIscsiVolume">CachesIscsiVolume</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

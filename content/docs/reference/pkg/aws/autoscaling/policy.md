@@ -38,19 +38,19 @@ class MyStack : Stack
             {
                 "us-east-1a",
             },
-            ForceDelete = true,
-            HealthCheckGracePeriod = 300,
-            HealthCheckType = "ELB",
-            LaunchConfiguration = aws_launch_configuration.Foo.Name,
             MaxSize = 5,
             MinSize = 2,
+            HealthCheckGracePeriod = 300,
+            HealthCheckType = "ELB",
+            ForceDelete = true,
+            LaunchConfiguration = aws_launch_configuration.Foo.Name,
         });
         var bat = new Aws.AutoScaling.Policy("bat", new Aws.AutoScaling.PolicyArgs
         {
-            AdjustmentType = "ChangeInCapacity",
-            AutoscalingGroupName = bar.Name,
-            Cooldown = 300,
             ScalingAdjustment = 4,
+            AdjustmentType = "ChangeInCapacity",
+            Cooldown = 300,
+            AutoscalingGroupName = bar.Name,
         });
     }
 
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -74,21 +74,21 @@ func main() {
 			AvailabilityZones: pulumi.StringArray{
 				pulumi.String("us-east-1a"),
 			},
-			ForceDelete:            pulumi.Bool(true),
-			HealthCheckGracePeriod: pulumi.Int(300),
-			HealthCheckType:        pulumi.String("ELB"),
-			LaunchConfiguration:    pulumi.String(aws_launch_configuration.Foo.Name),
 			MaxSize:                pulumi.Int(5),
 			MinSize:                pulumi.Int(2),
+			HealthCheckGracePeriod: pulumi.Int(300),
+			HealthCheckType:        pulumi.String("ELB"),
+			ForceDelete:            pulumi.Bool(true),
+			LaunchConfiguration:    pulumi.Any(aws_launch_configuration.Foo.Name),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = autoscaling.NewPolicy(ctx, "bat", &autoscaling.PolicyArgs{
-			AdjustmentType:       pulumi.String("ChangeInCapacity"),
-			AutoscalingGroupName: bar.Name,
-			Cooldown:             pulumi.Int(300),
 			ScalingAdjustment:    pulumi.Int(4),
+			AdjustmentType:       pulumi.String("ChangeInCapacity"),
+			Cooldown:             pulumi.Int(300),
+			AutoscalingGroupName: bar.Name,
 		})
 		if err != nil {
 			return err
@@ -107,17 +107,17 @@ import pulumi_aws as aws
 
 bar = aws.autoscaling.Group("bar",
     availability_zones=["us-east-1a"],
-    force_delete=True,
+    max_size=5,
+    min_size=2,
     health_check_grace_period=300,
     health_check_type="ELB",
-    launch_configuration=aws_launch_configuration["foo"]["name"],
-    max_size=5,
-    min_size=2)
+    force_delete=True,
+    launch_configuration=aws_launch_configuration["foo"]["name"])
 bat = aws.autoscaling.Policy("bat",
+    scaling_adjustment=4,
     adjustment_type="ChangeInCapacity",
-    autoscaling_group_name=bar.name,
     cooldown=300,
-    scaling_adjustment=4)
+    autoscaling_group_name=bar.name)
 ```
 
 {{% /example %}}
@@ -130,18 +130,18 @@ import * as aws from "@pulumi/aws";
 
 const bar = new aws.autoscaling.Group("bar", {
     availabilityZones: ["us-east-1a"],
-    forceDelete: true,
-    healthCheckGracePeriod: 300,
-    healthCheckType: "ELB",
-    launchConfiguration: aws_launch_configuration_foo.name,
     maxSize: 5,
     minSize: 2,
+    healthCheckGracePeriod: 300,
+    healthCheckType: "ELB",
+    forceDelete: true,
+    launchConfiguration: aws_launch_configuration.foo.name,
 });
 const bat = new aws.autoscaling.Policy("bat", {
-    adjustmentType: "ChangeInCapacity",
-    autoscalingGroupName: bar.name,
-    cooldown: 300,
     scalingAdjustment: 4,
+    adjustmentType: "ChangeInCapacity",
+    cooldown: 300,
+    autoscalingGroupName: bar.name,
 });
 ```
 
@@ -163,7 +163,7 @@ const bat = new aws.autoscaling.Policy("bat", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#Policy">NewPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#Policy">NewPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -237,7 +237,7 @@ const bat = new aws.autoscaling.Policy("bat", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -257,7 +257,7 @@ const bat = new aws.autoscaling.Policy("bat", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -267,7 +267,7 @@ const bat = new aws.autoscaling.Policy("bat", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -990,7 +990,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1678,7 +1678,7 @@ group scaling. These have the following structure:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyStepAdjustmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyStepAdjustmentOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyStepAdjustmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyStepAdjustmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.PolicyStepAdjustmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.PolicyStepAdjustment.html">output</a> API doc for this type.
@@ -1884,7 +1884,7 @@ must be greater than the lower bound.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.PolicyTargetTrackingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.PolicyTargetTrackingConfiguration.html">output</a> API doc for this type.
@@ -2106,7 +2106,7 @@ must be greater than the lower bound.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecification.html">output</a> API doc for this type.
@@ -2372,7 +2372,7 @@ must be greater than the lower bound.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension.html">output</a> API doc for this type.
@@ -2506,7 +2506,7 @@ must be greater than the lower bound.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationPredefinedMetricSpecificationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#PolicyTargetTrackingConfigurationPredefinedMetricSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.PolicyTargetTrackingConfigurationPredefinedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.PolicyTargetTrackingConfigurationPredefinedMetricSpecification.html">output</a> API doc for this type.

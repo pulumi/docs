@@ -43,3 +43,6 @@ cypress/screenshots
 # Ignore the files we generate during the build and deployment process.
 origin-bucket-metadata.json
 redirects.txt
+
+# Ignore the temporary directory created for Sentry releases.
+sentry-release

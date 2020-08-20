@@ -71,7 +71,7 @@ const iamEmrProfileRole = new aws.iam.Role("iamEmrProfileRole", {assumeRolePolic
   ]
 }
 `});
-const emrProfile = new aws.iam.InstanceProfile("emrProfile", {roles: [iamEmrProfileRole.name]});
+const emrProfile = new aws.iam.InstanceProfile("emrProfile", {role: iamEmrProfileRole.name});
 const cluster = new aws.emr.Cluster("cluster", {
     releaseLabel: "emr-4.6.0",
     applications: ["Spark"],
@@ -81,9 +81,13 @@ const cluster = new aws.emr.Cluster("cluster", {
         emrManagedSlaveSecurityGroup: aws_security_group.allow_all.id,
         instanceProfile: emrProfile.arn,
     },
-    masterInstanceType: "m5.xlarge",
-    coreInstanceType: "m5.xlarge",
-    coreInstanceCount: 1,
+    masterInstanceGroup: {
+        instanceType: "m5.xlarge",
+    },
+    coreInstanceGroup: {
+        instanceCount: 1,
+        instanceType: "m5.xlarge",
+    },
     tags: {
         role: "rolename",
         dns_zone: "env_zone",
@@ -146,7 +150,7 @@ const allowAccess = new aws.ec2.SecurityGroup("allowAccess", {
         name: "emr_test",
     },
 }, {
-    dependsOn: ["aws_subnet.main"],
+    dependsOn: [mainSubnet],
 });
 const gw = new aws.ec2.InternetGateway("gw", {vpcId: mainVpc.id});
 const routeTable = new aws.ec2.RouteTable("routeTable", {
@@ -309,7 +313,7 @@ iam_emr_profile_role = aws.iam.Role("iamEmrProfileRole", assume_role_policy="""{
   ]
 }
 """)
-emr_profile = aws.iam.InstanceProfile("emrProfile", roles=[iam_emr_profile_role.name])
+emr_profile = aws.iam.InstanceProfile("emrProfile", role=iam_emr_profile_role.name)
 cluster = aws.emr.Cluster("cluster",
     release_label="emr-4.6.0",
     applications=["Spark"],
@@ -319,9 +323,13 @@ cluster = aws.emr.Cluster("cluster",
         "emrManagedSlaveSecurityGroup": aws_security_group["allow_all"]["id"],
         "instanceProfile": emr_profile.arn,
     },
-    master_instance_type="m5.xlarge",
-    core_instance_type="m5.xlarge",
-    core_instance_count=1,
+    master_instance_group={
+        "instance_type": "m5.xlarge",
+    },
+    core_instance_group={
+        "instance_count": 1,
+        "instance_type": "m5.xlarge",
+    },
     tags={
         "role": "rolename",
         "dns_zone": "env_zone",
@@ -382,7 +390,7 @@ allow_access = aws.ec2.SecurityGroup("allowAccess",
     tags={
         "name": "emr_test",
     },
-    opts=ResourceOptions(depends_on=["aws_subnet.main"]))
+    opts=ResourceOptions(depends_on=[main_subnet]))
 gw = aws.ec2.InternetGateway("gw", vpc_id=main_vpc.id)
 route_table = aws.ec2.RouteTable("routeTable",
     vpc_id=main_vpc.id,
@@ -558,10 +566,7 @@ class MyStack : Stack
         });
         var emrProfile = new Aws.Iam.InstanceProfile("emrProfile", new Aws.Iam.InstanceProfileArgs
         {
-            Roles = 
-            {
-                iamEmrProfileRole.Name,
-            },
+            Role = iamEmrProfileRole.Name,
         });
         var cluster = new Aws.Emr.Cluster("cluster", new Aws.Emr.ClusterArgs
         {
@@ -577,9 +582,15 @@ class MyStack : Stack
                 EmrManagedSlaveSecurityGroup = aws_security_group.Allow_all.Id,
                 InstanceProfile = emrProfile.Arn,
             },
-            MasterInstanceType = "m5.xlarge",
-            CoreInstanceType = "m5.xlarge",
-            CoreInstanceCount = 1,
+            MasterInstanceGroup = new Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs
+            {
+                InstanceType = "m5.xlarge",
+            },
+            CoreInstanceGroup = new Aws.Emr.Inputs.ClusterCoreInstanceGroupArgs
+            {
+                InstanceCount = 1,
+                InstanceType = "m5.xlarge",
+            },
             Tags = 
             {
                 { "role", "rolename" },
@@ -664,7 +675,7 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "aws_subnet.main",
+                mainSubnet,
             },
         });
         var gw = new Aws.Ec2.InternetGateway("gw", new Aws.Ec2.InternetGatewayArgs
@@ -802,9 +813,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -843,9 +854,7 @@ func main() {
 			return err
 		}
 		emrProfile, err := iam.NewInstanceProfile(ctx, "emrProfile", &iam.InstanceProfileArgs{
-			Roles: pulumi.StringArray{
-				iamEmrProfileRole.Name,
-			},
+			Role: iamEmrProfileRole.Name,
 		})
 		if err != nil {
 			return err
@@ -857,13 +866,17 @@ func main() {
 			},
 			Ec2Attributes: &emr.ClusterEc2AttributesArgs{
 				SubnetId:                      mainSubnet.ID(),
-				EmrManagedMasterSecurityGroup: pulumi.String(aws_security_group.Allow_all.Id),
-				EmrManagedSlaveSecurityGroup:  pulumi.String(aws_security_group.Allow_all.Id),
+				EmrManagedMasterSecurityGroup: pulumi.Any(aws_security_group.Allow_all.Id),
+				EmrManagedSlaveSecurityGroup:  pulumi.Any(aws_security_group.Allow_all.Id),
 				InstanceProfile:               emrProfile.Arn,
 			},
-			MasterInstanceType: pulumi.String("m5.xlarge"),
-			CoreInstanceType:   pulumi.String("m5.xlarge"),
-			CoreInstanceCount:  pulumi.Int(1),
+			MasterInstanceGroup: &emr.ClusterMasterInstanceGroupArgs{
+				InstanceType: pulumi.String("m5.xlarge"),
+			},
+			CoreInstanceGroup: &emr.ClusterCoreInstanceGroupArgs{
+				InstanceCount: pulumi.Int(1),
+				InstanceType:  pulumi.String("m5.xlarge"),
+			},
 			Tags: pulumi.StringMap{
 				"role":     pulumi.String("rolename"),
 				"dns_zone": pulumi.String("env_zone"),
@@ -911,7 +924,7 @@ func main() {
 				"name": pulumi.String("emr_test"),
 			},
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_subnet.main",
+			mainSubnet,
 		}))
 		if err != nil {
 			return err
@@ -976,61 +989,45 @@ class MyStack : Stack
     {
         var cluster = new Aws.Emr.Cluster("cluster", new Aws.Emr.ClusterArgs
         {
+            ReleaseLabel = "emr-4.6.0",
+            Applications = 
+            {
+                "Spark",
+            },
             AdditionalInfo = @"{
   ""instanceAwsClientConfiguration"": {
     ""proxyPort"": 8099,
     ""proxyHost"": ""myproxy.example.com""
   }
 }
-
 ",
-            Applications = 
+            TerminationProtection = false,
+            KeepJobFlowAliveWhenNoSteps = true,
+            Ec2Attributes = new Aws.Emr.Inputs.ClusterEc2AttributesArgs
             {
-                "Spark",
+                SubnetId = aws_subnet.Main.Id,
+                EmrManagedMasterSecurityGroup = aws_security_group.Sg.Id,
+                EmrManagedSlaveSecurityGroup = aws_security_group.Sg.Id,
+                InstanceProfile = aws_iam_instance_profile.Emr_profile.Arn,
             },
-            BootstrapActions = 
+            MasterInstanceGroup = new Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs
             {
-                new Aws.Emr.Inputs.ClusterBootstrapActionArgs
-                {
-                    Args = 
-                    {
-                        "instance.isMaster=true",
-                        "echo running on master node",
-                    },
-                    Name = "runif",
-                    Path = "s3://elasticmapreduce/bootstrap-actions/run-if",
-                },
+                InstanceType = "m4.large",
             },
-            ConfigurationsJson = @"  [
-    {
-      ""Classification"": ""hadoop-env"",
-      ""Configurations"": [
-        {
-          ""Classification"": ""export"",
-          ""Properties"": {
-            ""JAVA_HOME"": ""/usr/lib/jvm/java-1.8.0""
-          }
-        }
-      ],
-      ""Properties"": {}
-    },
-    {
-      ""Classification"": ""spark-env"",
-      ""Configurations"": [
-        {
-          ""Classification"": ""export"",
-          ""Properties"": {
-            ""JAVA_HOME"": ""/usr/lib/jvm/java-1.8.0""
-          }
-        }
-      ],
-      ""Properties"": {}
-    }
-  ]
-
-",
             CoreInstanceGroup = new Aws.Emr.Inputs.ClusterCoreInstanceGroupArgs
             {
+                InstanceType = "c4.large",
+                InstanceCount = 1,
+                EbsConfigs = 
+                {
+                    new Aws.Emr.Inputs.ClusterCoreInstanceGroupEbsConfigArgs
+                    {
+                        Size = 40,
+                        Type = "gp2",
+                        VolumesPerInstance = 1,
+                    },
+                },
+                BidPrice = "0.30",
                 AutoscalingPolicy = @"{
 ""Constraints"": {
   ""MinCapacity"": 1,
@@ -1062,42 +1059,55 @@ class MyStack : Stack
   }
 ]
 }
-
 ",
-                BidPrice = "0.30",
-                EbsConfigs = 
-                {
-                    new Aws.Emr.Inputs.ClusterCoreInstanceGroupEbsConfigArgs
-                    {
-                        Size = 40,
-                        Type = "gp2",
-                        VolumesPerInstance = 1,
-                    },
-                },
-                InstanceCount = 1,
-                InstanceType = "c4.large",
             },
             EbsRootVolumeSize = 100,
-            Ec2Attributes = new Aws.Emr.Inputs.ClusterEc2AttributesArgs
-            {
-                EmrManagedMasterSecurityGroup = aws_security_group.Sg.Id,
-                EmrManagedSlaveSecurityGroup = aws_security_group.Sg.Id,
-                InstanceProfile = aws_iam_instance_profile.Emr_profile.Arn,
-                SubnetId = aws_subnet.Main.Id,
-            },
-            KeepJobFlowAliveWhenNoSteps = true,
-            MasterInstanceGroup = new Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs
-            {
-                InstanceType = "m4.large",
-            },
-            ReleaseLabel = "emr-4.6.0",
-            ServiceRole = aws_iam_role.Iam_emr_service_role.Arn,
             Tags = 
             {
-                { "env", "env" },
                 { "role", "rolename" },
+                { "env", "env" },
             },
-            TerminationProtection = false,
+            BootstrapActions = 
+            {
+                new Aws.Emr.Inputs.ClusterBootstrapActionArgs
+                {
+                    Path = "s3://elasticmapreduce/bootstrap-actions/run-if",
+                    Name = "runif",
+                    Args = 
+                    {
+                        "instance.isMaster=true",
+                        "echo running on master node",
+                    },
+                },
+            },
+            ConfigurationsJson = @"  [
+    {
+      ""Classification"": ""hadoop-env"",
+      ""Configurations"": [
+        {
+          ""Classification"": ""export"",
+          ""Properties"": {
+            ""JAVA_HOME"": ""/usr/lib/jvm/java-1.8.0""
+          }
+        }
+      ],
+      ""Properties"": {}
+    },
+    {
+      ""Classification"": ""spark-env"",
+      ""Configurations"": [
+        {
+          ""Classification"": ""export"",
+          ""Properties"": {
+            ""JAVA_HOME"": ""/usr/lib/jvm/java-1.8.0""
+          }
+        }
+      ],
+      ""Properties"": {}
+    }
+  ]
+",
+            ServiceRole = aws_iam_role.Iam_emr_service_role.Arn,
         });
     }
 
@@ -1113,31 +1123,32 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := emr.NewCluster(ctx, "cluster", &emr.ClusterArgs{
-			AdditionalInfo: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v", "{\n", "  \"instanceAwsClientConfiguration\": {\n", "    \"proxyPort\": 8099,\n", "    \"proxyHost\": \"myproxy.example.com\"\n", "  }\n", "}\n", "\n")),
+			ReleaseLabel: pulumi.String("emr-4.6.0"),
 			Applications: pulumi.StringArray{
 				pulumi.String("Spark"),
 			},
-			BootstrapActions: emr.ClusterBootstrapActionArray{
-				&emr.ClusterBootstrapActionArgs{
-					Args: pulumi.StringArray{
-						pulumi.String("instance.isMaster=true"),
-						pulumi.String("echo running on master node"),
-					},
-					Name: pulumi.String("runif"),
-					Path: pulumi.String("s3://elasticmapreduce/bootstrap-actions/run-if"),
-				},
+			AdditionalInfo:              pulumi.String(fmt.Sprintf("%v%v%v%v%v%v", "{\n", "  \"instanceAwsClientConfiguration\": {\n", "    \"proxyPort\": 8099,\n", "    \"proxyHost\": \"myproxy.example.com\"\n", "  }\n", "}\n")),
+			TerminationProtection:       pulumi.Bool(false),
+			KeepJobFlowAliveWhenNoSteps: pulumi.Bool(true),
+			Ec2Attributes: &emr.ClusterEc2AttributesArgs{
+				SubnetId:                      pulumi.Any(aws_subnet.Main.Id),
+				EmrManagedMasterSecurityGroup: pulumi.Any(aws_security_group.Sg.Id),
+				EmrManagedSlaveSecurityGroup:  pulumi.Any(aws_security_group.Sg.Id),
+				InstanceProfile:               pulumi.Any(aws_iam_instance_profile.Emr_profile.Arn),
 			},
-			ConfigurationsJson: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  [\n", "    {\n", "      \"Classification\": \"hadoop-env\",\n", "      \"Configurations\": [\n", "        {\n", "          \"Classification\": \"export\",\n", "          \"Properties\": {\n", "            \"JAVA_HOME\": \"/usr/lib/jvm/java-1.8.0\"\n", "          }\n", "        }\n", "      ],\n", "      \"Properties\": {}\n", "    },\n", "    {\n", "      \"Classification\": \"spark-env\",\n", "      \"Configurations\": [\n", "        {\n", "          \"Classification\": \"export\",\n", "          \"Properties\": {\n", "            \"JAVA_HOME\": \"/usr/lib/jvm/java-1.8.0\"\n", "          }\n", "        }\n", "      ],\n", "      \"Properties\": {}\n", "    }\n", "  ]\n", "\n")),
+			MasterInstanceGroup: &emr.ClusterMasterInstanceGroupArgs{
+				InstanceType: pulumi.String("m4.large"),
+			},
 			CoreInstanceGroup: &emr.ClusterCoreInstanceGroupArgs{
-				AutoscalingPolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "\"Constraints\": {\n", "  \"MinCapacity\": 1,\n", "  \"MaxCapacity\": 2\n", "},\n", "\"Rules\": [\n", "  {\n", "    \"Name\": \"ScaleOutMemoryPercentage\",\n", "    \"Description\": \"Scale out if YARNMemoryAvailablePercentage is less than 15\",\n", "    \"Action\": {\n", "      \"SimpleScalingPolicyConfiguration\": {\n", "        \"AdjustmentType\": \"CHANGE_IN_CAPACITY\",\n", "        \"ScalingAdjustment\": 1,\n", "        \"CoolDown\": 300\n", "      }\n", "    },\n", "    \"Trigger\": {\n", "      \"CloudWatchAlarmDefinition\": {\n", "        \"ComparisonOperator\": \"LESS_THAN\",\n", "        \"EvaluationPeriods\": 1,\n", "        \"MetricName\": \"YARNMemoryAvailablePercentage\",\n", "        \"Namespace\": \"AWS/ElasticMapReduce\",\n", "        \"Period\": 300,\n", "        \"Statistic\": \"AVERAGE\",\n", "        \"Threshold\": 15.0,\n", "        \"Unit\": \"PERCENT\"\n", "      }\n", "    }\n", "  }\n", "]\n", "}\n", "\n")),
-				BidPrice:          pulumi.String("0.30"),
+				InstanceType:  pulumi.String("c4.large"),
+				InstanceCount: pulumi.Int(1),
 				EbsConfigs: emr.ClusterCoreInstanceGroupEbsConfigArray{
 					&emr.ClusterCoreInstanceGroupEbsConfigArgs{
 						Size:               pulumi.Int(40),
@@ -1145,27 +1156,26 @@ func main() {
 						VolumesPerInstance: pulumi.Int(1),
 					},
 				},
-				InstanceCount: pulumi.Int(1),
-				InstanceType:  pulumi.String("c4.large"),
+				BidPrice:          pulumi.String("0.30"),
+				AutoscalingPolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "\"Constraints\": {\n", "  \"MinCapacity\": 1,\n", "  \"MaxCapacity\": 2\n", "},\n", "\"Rules\": [\n", "  {\n", "    \"Name\": \"ScaleOutMemoryPercentage\",\n", "    \"Description\": \"Scale out if YARNMemoryAvailablePercentage is less than 15\",\n", "    \"Action\": {\n", "      \"SimpleScalingPolicyConfiguration\": {\n", "        \"AdjustmentType\": \"CHANGE_IN_CAPACITY\",\n", "        \"ScalingAdjustment\": 1,\n", "        \"CoolDown\": 300\n", "      }\n", "    },\n", "    \"Trigger\": {\n", "      \"CloudWatchAlarmDefinition\": {\n", "        \"ComparisonOperator\": \"LESS_THAN\",\n", "        \"EvaluationPeriods\": 1,\n", "        \"MetricName\": \"YARNMemoryAvailablePercentage\",\n", "        \"Namespace\": \"AWS/ElasticMapReduce\",\n", "        \"Period\": 300,\n", "        \"Statistic\": \"AVERAGE\",\n", "        \"Threshold\": 15.0,\n", "        \"Unit\": \"PERCENT\"\n", "      }\n", "    }\n", "  }\n", "]\n", "}\n")),
 			},
 			EbsRootVolumeSize: pulumi.Int(100),
-			Ec2Attributes: &emr.ClusterEc2AttributesArgs{
-				EmrManagedMasterSecurityGroup: pulumi.String(aws_security_group.Sg.Id),
-				EmrManagedSlaveSecurityGroup:  pulumi.String(aws_security_group.Sg.Id),
-				InstanceProfile:               pulumi.String(aws_iam_instance_profile.Emr_profile.Arn),
-				SubnetId:                      pulumi.String(aws_subnet.Main.Id),
-			},
-			KeepJobFlowAliveWhenNoSteps: pulumi.Bool(true),
-			MasterInstanceGroup: &emr.ClusterMasterInstanceGroupArgs{
-				InstanceType: pulumi.String("m4.large"),
-			},
-			ReleaseLabel: pulumi.String("emr-4.6.0"),
-			ServiceRole:  pulumi.String(aws_iam_role.Iam_emr_service_role.Arn),
 			Tags: pulumi.StringMap{
-				"env":  pulumi.String("env"),
 				"role": pulumi.String("rolename"),
+				"env":  pulumi.String("env"),
 			},
-			TerminationProtection: pulumi.Bool(false),
+			BootstrapActions: emr.ClusterBootstrapActionArray{
+				&emr.ClusterBootstrapActionArgs{
+					Path: pulumi.String("s3://elasticmapreduce/bootstrap-actions/run-if"),
+					Name: pulumi.String("runif"),
+					Args: pulumi.StringArray{
+						pulumi.String("instance.isMaster=true"),
+						pulumi.String("echo running on master node"),
+					},
+				},
+			},
+			ConfigurationsJson: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  [\n", "    {\n", "      \"Classification\": \"hadoop-env\",\n", "      \"Configurations\": [\n", "        {\n", "          \"Classification\": \"export\",\n", "          \"Properties\": {\n", "            \"JAVA_HOME\": \"/usr/lib/jvm/java-1.8.0\"\n", "          }\n", "        }\n", "      ],\n", "      \"Properties\": {}\n", "    },\n", "    {\n", "      \"Classification\": \"spark-env\",\n", "      \"Configurations\": [\n", "        {\n", "          \"Classification\": \"export\",\n", "          \"Properties\": {\n", "            \"JAVA_HOME\": \"/usr/lib/jvm/java-1.8.0\"\n", "          }\n", "        }\n", "      ],\n", "      \"Properties\": {}\n", "    }\n", "  ]\n")),
+			ServiceRole:        pulumi.Any(aws_iam_role.Iam_emr_service_role.Arn),
 		})
 		if err != nil {
 			return err
@@ -1183,52 +1193,35 @@ import pulumi
 import pulumi_aws as aws
 
 cluster = aws.emr.Cluster("cluster",
+    release_label="emr-4.6.0",
+    applications=["Spark"],
     additional_info="""{
   "instanceAwsClientConfiguration": {
     "proxyPort": 8099,
     "proxyHost": "myproxy.example.com"
   }
 }
-
 """,
-    applications=["Spark"],
-    bootstrap_actions=[{
-        "args": [
-            "instance.isMaster=true",
-            "echo running on master node",
-        ],
-        "name": "runif",
-        "path": "s3://elasticmapreduce/bootstrap-actions/run-if",
-    }],
-    configurations_json="""  [
-    {
-      "Classification": "hadoop-env",
-      "Configurations": [
-        {
-          "Classification": "export",
-          "Properties": {
-            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
-          }
-        }
-      ],
-      "Properties": {}
+    termination_protection=False,
+    keep_job_flow_alive_when_no_steps=True,
+    ec2_attributes={
+        "subnet_id": aws_subnet["main"]["id"],
+        "emrManagedMasterSecurityGroup": aws_security_group["sg"]["id"],
+        "emrManagedSlaveSecurityGroup": aws_security_group["sg"]["id"],
+        "instanceProfile": aws_iam_instance_profile["emr_profile"]["arn"],
     },
-    {
-      "Classification": "spark-env",
-      "Configurations": [
-        {
-          "Classification": "export",
-          "Properties": {
-            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
-          }
-        }
-      ],
-      "Properties": {}
-    }
-  ]
-
-""",
+    master_instance_group={
+        "instance_type": "m4.large",
+    },
     core_instance_group={
+        "instance_type": "c4.large",
+        "instance_count": 1,
+        "ebs_configs": [{
+            "size": "40",
+            "type": "gp2",
+            "volumesPerInstance": 1,
+        }],
+        "bid_price": "0.30",
         "autoscaling_policy": """{
 "Constraints": {
   "MinCapacity": 1,
@@ -1260,63 +1253,22 @@ cluster = aws.emr.Cluster("cluster",
   }
 ]
 }
-
 """,
-        "bid_price": "0.30",
-        "ebs_configs": [{
-            "size": "40",
-            "type": "gp2",
-            "volumesPerInstance": 1,
-        }],
-        "instance_count": 1,
-        "instance_type": "c4.large",
     },
     ebs_root_volume_size=100,
-    ec2_attributes={
-        "emrManagedMasterSecurityGroup": aws_security_group["sg"]["id"],
-        "emrManagedSlaveSecurityGroup": aws_security_group["sg"]["id"],
-        "instanceProfile": aws_iam_instance_profile["emr_profile"]["arn"],
-        "subnet_id": aws_subnet["main"]["id"],
-    },
-    keep_job_flow_alive_when_no_steps=True,
-    master_instance_group={
-        "instance_type": "m4.large",
-    },
-    release_label="emr-4.6.0",
-    service_role=aws_iam_role["iam_emr_service_role"]["arn"],
     tags={
-        "env": "env",
         "role": "rolename",
+        "env": "env",
     },
-    termination_protection=False)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const cluster = new aws.emr.Cluster("cluster", {
-    additionalInfo: `{
-  "instanceAwsClientConfiguration": {
-    "proxyPort": 8099,
-    "proxyHost": "myproxy.example.com"
-  }
-}
-`,
-    applications: ["Spark"],
-    bootstrapActions: [{
-        args: [
+    bootstrap_actions=[{
+        "path": "s3://elasticmapreduce/bootstrap-actions/run-if",
+        "name": "runif",
+        "args": [
             "instance.isMaster=true",
             "echo running on master node",
         ],
-        name: "runif",
-        path: "s3://elasticmapreduce/bootstrap-actions/run-if",
     }],
-    configurationsJson: `  [
+    configurations_json="""  [
     {
       "Classification": "hadoop-env",
       "Configurations": [
@@ -1342,8 +1294,48 @@ const cluster = new aws.emr.Cluster("cluster", {
       "Properties": {}
     }
   ]
+""",
+    service_role=aws_iam_role["iam_emr_service_role"]["arn"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const cluster = new aws.emr.Cluster("cluster", {
+    releaseLabel: "emr-4.6.0",
+    applications: ["Spark"],
+    additionalInfo: `{
+  "instanceAwsClientConfiguration": {
+    "proxyPort": 8099,
+    "proxyHost": "myproxy.example.com"
+  }
+}
 `,
+    terminationProtection: false,
+    keepJobFlowAliveWhenNoSteps: true,
+    ec2Attributes: {
+        subnetId: aws_subnet.main.id,
+        emrManagedMasterSecurityGroup: aws_security_group.sg.id,
+        emrManagedSlaveSecurityGroup: aws_security_group.sg.id,
+        instanceProfile: aws_iam_instance_profile.emr_profile.arn,
+    },
+    masterInstanceGroup: {
+        instanceType: "m4.large",
+    },
     coreInstanceGroup: {
+        instanceType: "c4.large",
+        instanceCount: 1,
+        ebsConfigs: [{
+            size: "40",
+            type: "gp2",
+            volumesPerInstance: 1,
+        }],
+        bidPrice: "0.30",
         autoscalingPolicy: `{
 "Constraints": {
   "MinCapacity": 1,
@@ -1376,92 +1368,54 @@ const cluster = new aws.emr.Cluster("cluster", {
 ]
 }
 `,
-        bidPrice: "0.30",
-        ebsConfigs: [{
-            size: 40,
-            type: "gp2",
-            volumesPerInstance: 1,
-        }],
-        instanceCount: 1,
-        instanceType: "c4.large",
     },
     ebsRootVolumeSize: 100,
-    ec2Attributes: {
-        emrManagedMasterSecurityGroup: aws_security_group_sg.id,
-        emrManagedSlaveSecurityGroup: aws_security_group_sg.id,
-        instanceProfile: aws_iam_instance_profile_emr_profile.arn,
-        subnetId: aws_subnet_main.id,
-    },
-    keepJobFlowAliveWhenNoSteps: true,
-    masterInstanceGroup: {
-        instanceType: "m4.large",
-    },
-    releaseLabel: "emr-4.6.0",
-    serviceRole: aws_iam_role_iam_emr_service_role.arn,
     tags: {
-        env: "env",
         role: "rolename",
+        env: "env",
     },
-    terminationProtection: false,
+    bootstrapActions: [{
+        path: "s3://elasticmapreduce/bootstrap-actions/run-if",
+        name: "runif",
+        args: [
+            "instance.isMaster=true",
+            "echo running on master node",
+        ],
+    }],
+    configurationsJson: `  [
+    {
+      "Classification": "hadoop-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    },
+    {
+      "Classification": "spark-env",
+      "Configurations": [
+        {
+          "Classification": "export",
+          "Properties": {
+            "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+          }
+        }
+      ],
+      "Properties": {}
+    }
+  ]
+`,
+    serviceRole: aws_iam_role.iam_emr_service_role.arn,
 });
 ```
 
 {{% /example %}}
 
 ### Enable Debug Logging
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.emr.Cluster("example",
-    lifecycle={
-        "ignoreChanges": [
-            "stepConcurrencyLevel",
-            "steps",
-        ],
-    },
-    steps=[{
-        "actionOnFailure": "TERMINATE_CLUSTER",
-        "hadoopJarStep": {
-            "args": ["state-pusher-script"],
-            "jar": "command-runner.jar",
-        },
-        "name": "Setup Hadoop Debugging",
-    }])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const example = new aws.emr.Cluster("example", {
-    steps: [{
-        actionOnFailure: "TERMINATE_CLUSTER",
-        hadoopJarStep: {
-            args: ["state-pusher-script"],
-            jar: "command-runner.jar",
-        },
-        name: "Setup Hadoop Debugging",
-    }],
-}, { ignoreChanges: ["stepConcurrencyLevel", "steps"] });
-```
-
-{{% /example %}}
-
-### Multiple Node Master Instance Group
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -1471,24 +1425,25 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        // Map public IP on launch must be enabled for public (Internet accessible) subnets
-        var exampleSubnet = new Aws.Ec2.Subnet("exampleSubnet", new Aws.Ec2.SubnetArgs
+        // ... other configuration ...
+        var example = new Aws.Emr.Cluster("example", new Aws.Emr.ClusterArgs
         {
-            MapPublicIpOnLaunch = true,
-        });
-        var exampleCluster = new Aws.Emr.Cluster("exampleCluster", new Aws.Emr.ClusterArgs
-        {
-            CoreInstanceGroup = ,
-            Ec2Attributes = new Aws.Emr.Inputs.ClusterEc2AttributesArgs
+            Steps = 
             {
-                SubnetId = exampleSubnet.Id,
+                new Aws.Emr.Inputs.ClusterStepArgs
+                {
+                    ActionOnFailure = "TERMINATE_CLUSTER",
+                    Name = "Setup Hadoop Debugging",
+                    HadoopJarStep = new Aws.Emr.Inputs.ClusterStepHadoopJarStepArgs
+                    {
+                        Jar = "command-runner.jar",
+                        Args = 
+                        {
+                            "state-pusher-script",
+                        },
+                    },
+                },
             },
-            MasterInstanceGroup = new Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs
-            {
-                InstanceCount = 3,
-            },
-            ReleaseLabel = "emr-5.24.1",
-            TerminationProtection = true,
         });
     }
 
@@ -1502,29 +1457,25 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleSubnet, err := ec2.NewSubnet(ctx, "exampleSubnet", &ec2.SubnetArgs{
-			MapPublicIpOnLaunch: pulumi.Bool(true),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = emr.NewCluster(ctx, "exampleCluster", &emr.ClusterArgs{
-			CoreInstanceGroup: nil,
-			Ec2Attributes: &emr.ClusterEc2AttributesArgs{
-				SubnetId: exampleSubnet.ID(),
+		_, err := emr.NewCluster(ctx, "example", &emr.ClusterArgs{
+			Steps: emr.ClusterStepArray{
+				&emr.ClusterStepArgs{
+					ActionOnFailure: pulumi.String("TERMINATE_CLUSTER"),
+					Name:            pulumi.String("Setup Hadoop Debugging"),
+					HadoopJarStep: &emr.ClusterStepHadoopJarStepArgs{
+						Jar: pulumi.String("command-runner.jar"),
+						Args: pulumi.StringArray{
+							pulumi.String("state-pusher-script"),
+						},
+					},
+				},
 			},
-			MasterInstanceGroup: &emr.ClusterMasterInstanceGroupArgs{
-				InstanceCount: pulumi.Int(3),
-			},
-			ReleaseLabel:          pulumi.String("emr-5.24.1"),
-			TerminationProtection: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -1541,18 +1492,15 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-# Map public IP on launch must be enabled for public (Internet accessible) subnets
-example_subnet = aws.ec2.Subnet("exampleSubnet", map_public_ip_on_launch=True)
-example_cluster = aws.emr.Cluster("exampleCluster",
-    core_instance_group={},
-    ec2_attributes={
-        "subnet_id": example_subnet.id,
+# ... other configuration ...
+example = aws.emr.Cluster("example", steps=[{
+    "actionOnFailure": "TERMINATE_CLUSTER",
+    "name": "Setup Hadoop Debugging",
+    "hadoopJarStep": {
+        "jar": "command-runner.jar",
+        "args": ["state-pusher-script"],
     },
-    master_instance_group={
-        "instance_count": 3,
-    },
-    release_label="emr-5.24.1",
-    termination_protection=True)
+}])
 ```
 
 {{% /example %}}
@@ -1563,25 +1511,145 @@ example_cluster = aws.emr.Cluster("exampleCluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+// ... other configuration ...
+const example = new aws.emr.Cluster("example", {steps: [{
+    actionOnFailure: "TERMINATE_CLUSTER",
+    name: "Setup Hadoop Debugging",
+    hadoopJarStep: {
+        jar: "command-runner.jar",
+        args: ["state-pusher-script"],
+    },
+}]});
+```
+
+{{% /example %}}
+
+### Multiple Node Master Instance Group
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // This configuration is for illustrative purposes and highlights
+        // only relevant configurations for working with this functionality.
+        // Map public IP on launch must be enabled for public (Internet accessible) subnets
+        // ... other configuration ...
+        var exampleSubnet = new Aws.Ec2.Subnet("exampleSubnet", new Aws.Ec2.SubnetArgs
+        {
+            MapPublicIpOnLaunch = true,
+        });
+        // ... other configuration ...
+        var exampleCluster = new Aws.Emr.Cluster("exampleCluster", new Aws.Emr.ClusterArgs
+        {
+            ReleaseLabel = "emr-5.24.1",
+            TerminationProtection = true,
+            Ec2Attributes = new Aws.Emr.Inputs.ClusterEc2AttributesArgs
+            {
+                SubnetId = exampleSubnet.Id,
+            },
+            MasterInstanceGroup = new Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs
+            {
+                InstanceCount = 3,
+            },
+            CoreInstanceGroup = ,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleSubnet, err := ec2.NewSubnet(ctx, "exampleSubnet", &ec2.SubnetArgs{
+			MapPublicIpOnLaunch: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = emr.NewCluster(ctx, "exampleCluster", &emr.ClusterArgs{
+			ReleaseLabel:          pulumi.String("emr-5.24.1"),
+			TerminationProtection: pulumi.Bool(true),
+			Ec2Attributes: &emr.ClusterEc2AttributesArgs{
+				SubnetId: exampleSubnet.ID(),
+			},
+			MasterInstanceGroup: &emr.ClusterMasterInstanceGroupArgs{
+				InstanceCount: pulumi.Int(3),
+			},
+			CoreInstanceGroup: nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+# This configuration is for illustrative purposes and highlights
+# only relevant configurations for working with this functionality.
+# Map public IP on launch must be enabled for public (Internet accessible) subnets
+# ... other configuration ...
+example_subnet = aws.ec2.Subnet("exampleSubnet", map_public_ip_on_launch=True)
+# ... other configuration ...
+example_cluster = aws.emr.Cluster("exampleCluster",
+    release_label="emr-5.24.1",
+    termination_protection=True,
+    ec2_attributes={
+        "subnet_id": example_subnet.id,
+    },
+    master_instance_group={
+        "instance_count": 3,
+    },
+    core_instance_group={})
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// This configuration is for illustrative purposes and highlights
+// only relevant configurations for working with this functionality.
 // Map public IP on launch must be enabled for public (Internet accessible) subnets
-const exampleSubnet = new aws.ec2.Subnet("example", {
-    mapPublicIpOnLaunch: true,
-});
-const exampleCluster = new aws.emr.Cluster("example", {
-    // core_instance_group must be configured
-    coreInstanceGroup: {},
+// ... other configuration ...
+const exampleSubnet = new aws.ec2.Subnet("exampleSubnet", {mapPublicIpOnLaunch: true});
+// ... other configuration ...
+const exampleCluster = new aws.emr.Cluster("exampleCluster", {
+    releaseLabel: "emr-5.24.1",
+    terminationProtection: true,
     ec2Attributes: {
         subnetId: exampleSubnet.id,
     },
     masterInstanceGroup: {
-        // Master instance count must be set to 3
         instanceCount: 3,
     },
-    // EMR version must be 5.23.0 or later
-    releaseLabel: "emr-5.24.1",
-    // Termination protection is automatically enabled for multiple masters
-    // To destroy the cluster, this must be configured to false and applied first
-    terminationProtection: true,
+    coreInstanceGroup: {},
 });
 ```
 
@@ -1599,11 +1667,11 @@ const exampleCluster = new aws.emr.Cluster("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/emr/#pulumi_aws.emr.Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_info=None<span class="p">, </span>applications=None<span class="p">, </span>autoscaling_role=None<span class="p">, </span>bootstrap_actions=None<span class="p">, </span>configurations=None<span class="p">, </span>configurations_json=None<span class="p">, </span>core_instance_count=None<span class="p">, </span>core_instance_group=None<span class="p">, </span>core_instance_type=None<span class="p">, </span>custom_ami_id=None<span class="p">, </span>ebs_root_volume_size=None<span class="p">, </span>ec2_attributes=None<span class="p">, </span>instance_groups=None<span class="p">, </span>keep_job_flow_alive_when_no_steps=None<span class="p">, </span>kerberos_attributes=None<span class="p">, </span>log_uri=None<span class="p">, </span>master_instance_group=None<span class="p">, </span>master_instance_type=None<span class="p">, </span>name=None<span class="p">, </span>release_label=None<span class="p">, </span>scale_down_behavior=None<span class="p">, </span>security_configuration=None<span class="p">, </span>service_role=None<span class="p">, </span>step_concurrency_level=None<span class="p">, </span>steps=None<span class="p">, </span>tags=None<span class="p">, </span>termination_protection=None<span class="p">, </span>visible_to_all_users=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/emr/#pulumi_aws.emr.Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_info=None<span class="p">, </span>applications=None<span class="p">, </span>autoscaling_role=None<span class="p">, </span>bootstrap_actions=None<span class="p">, </span>configurations=None<span class="p">, </span>configurations_json=None<span class="p">, </span>core_instance_group=None<span class="p">, </span>custom_ami_id=None<span class="p">, </span>ebs_root_volume_size=None<span class="p">, </span>ec2_attributes=None<span class="p">, </span>keep_job_flow_alive_when_no_steps=None<span class="p">, </span>kerberos_attributes=None<span class="p">, </span>log_uri=None<span class="p">, </span>master_instance_group=None<span class="p">, </span>name=None<span class="p">, </span>release_label=None<span class="p">, </span>scale_down_behavior=None<span class="p">, </span>security_configuration=None<span class="p">, </span>service_role=None<span class="p">, </span>step_concurrency_level=None<span class="p">, </span>steps=None<span class="p">, </span>tags=None<span class="p">, </span>termination_protection=None<span class="p">, </span>visible_to_all_users=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#Cluster">NewCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#Cluster">NewCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1677,7 +1745,7 @@ const exampleCluster = new aws.emr.Cluster("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1697,7 +1765,7 @@ const exampleCluster = new aws.emr.Cluster("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterArgs">ClusterArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterArgs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1707,7 +1775,7 @@ const exampleCluster = new aws.emr.Cluster("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1859,17 +1927,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="coreinstancecount_csharp">
-<a href="#coreinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="coreinstancegroup_csharp">
@@ -1878,19 +1935,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="coreinstancetype_csharp">
-<a href="#coreinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1924,17 +1970,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="instancegroups_csharp">
-<a href="#instancegroups_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">List&lt;Cluster<wbr>Instance<wbr>Group<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and `aws.emr.InstanceGroup` resource(s) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1977,19 +2012,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="masterinstancetype_csharp">
-<a href="#masterinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2174,17 +2198,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="coreinstancecount_go">
-<a href="#coreinstancecount_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="coreinstancegroup_go">
@@ -2193,19 +2206,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="coreinstancetype_go">
-<a href="#coreinstancetype_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2239,17 +2241,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="instancegroups_go">
-<a href="#instancegroups_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">[]Cluster<wbr>Instance<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and `aws.emr.InstanceGroup` resource(s) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2292,19 +2283,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="masterinstancetype_go">
-<a href="#masterinstancetype_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2489,17 +2469,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="coreinstancecount_nodejs">
-<a href="#coreinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="coreinstancegroup_nodejs">
@@ -2508,19 +2477,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="coreinstancetype_nodejs">
-<a href="#coreinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2554,17 +2512,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="instancegroups_nodejs">
-<a href="#instancegroups_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">Cluster<wbr>Instance<wbr>Group[]</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and `aws.emr.InstanceGroup` resource(s) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2607,19 +2554,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="masterinstancetype_nodejs">
-<a href="#masterinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2804,17 +2740,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="core_instance_count_python">
-<a href="#core_instance_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="core_instance_group_python">
@@ -2823,19 +2748,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercoreinstancegroup">Dict[Cluster<wbr>Core<wbr>Instance<wbr>Group]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="core_instance_type_python">
-<a href="#core_instance_type_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2869,17 +2783,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="instance_groups_python">
-<a href="#instance_groups_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">List[Cluster<wbr>Instance<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and `aws.emr.InstanceGroup` resource(s) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2922,19 +2825,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterinstancegroup">Dict[Cluster<wbr>Master<wbr>Instance<wbr>Group]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="master_instance_type_python">
-<a href="#master_instance_type_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3250,11 +3142,11 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_info=None<span class="p">, </span>applications=None<span class="p">, </span>arn=None<span class="p">, </span>autoscaling_role=None<span class="p">, </span>bootstrap_actions=None<span class="p">, </span>cluster_state=None<span class="p">, </span>configurations=None<span class="p">, </span>configurations_json=None<span class="p">, </span>core_instance_count=None<span class="p">, </span>core_instance_group=None<span class="p">, </span>core_instance_type=None<span class="p">, </span>custom_ami_id=None<span class="p">, </span>ebs_root_volume_size=None<span class="p">, </span>ec2_attributes=None<span class="p">, </span>instance_groups=None<span class="p">, </span>keep_job_flow_alive_when_no_steps=None<span class="p">, </span>kerberos_attributes=None<span class="p">, </span>log_uri=None<span class="p">, </span>master_instance_group=None<span class="p">, </span>master_instance_type=None<span class="p">, </span>master_public_dns=None<span class="p">, </span>name=None<span class="p">, </span>release_label=None<span class="p">, </span>scale_down_behavior=None<span class="p">, </span>security_configuration=None<span class="p">, </span>service_role=None<span class="p">, </span>step_concurrency_level=None<span class="p">, </span>steps=None<span class="p">, </span>tags=None<span class="p">, </span>termination_protection=None<span class="p">, </span>visible_to_all_users=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_info=None<span class="p">, </span>applications=None<span class="p">, </span>arn=None<span class="p">, </span>autoscaling_role=None<span class="p">, </span>bootstrap_actions=None<span class="p">, </span>cluster_state=None<span class="p">, </span>configurations=None<span class="p">, </span>configurations_json=None<span class="p">, </span>core_instance_group=None<span class="p">, </span>custom_ami_id=None<span class="p">, </span>ebs_root_volume_size=None<span class="p">, </span>ec2_attributes=None<span class="p">, </span>keep_job_flow_alive_when_no_steps=None<span class="p">, </span>kerberos_attributes=None<span class="p">, </span>log_uri=None<span class="p">, </span>master_instance_group=None<span class="p">, </span>master_public_dns=None<span class="p">, </span>name=None<span class="p">, </span>release_label=None<span class="p">, </span>scale_down_behavior=None<span class="p">, </span>security_configuration=None<span class="p">, </span>service_role=None<span class="p">, </span>step_concurrency_level=None<span class="p">, </span>steps=None<span class="p">, </span>tags=None<span class="p">, </span>termination_protection=None<span class="p">, </span>visible_to_all_users=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -3440,17 +3332,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_coreinstancecount_csharp">
-<a href="#state_coreinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancegroup_csharp">
@@ -3459,19 +3340,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_coreinstancetype_csharp">
-<a href="#state_coreinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3505,17 +3375,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_instancegroups_csharp">
-<a href="#state_instancegroups_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">List&lt;Cluster<wbr>Instance<wbr>Group<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and `aws.emr.InstanceGroup` resource(s) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3558,19 +3417,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_masterinstancetype_csharp">
-<a href="#state_masterinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3797,17 +3645,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_coreinstancecount_go">
-<a href="#state_coreinstancecount_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancegroup_go">
@@ -3816,19 +3653,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_coreinstancetype_go">
-<a href="#state_coreinstancetype_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3862,17 +3688,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_instancegroups_go">
-<a href="#state_instancegroups_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">[]Cluster<wbr>Instance<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and `aws.emr.InstanceGroup` resource(s) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3915,19 +3730,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_masterinstancetype_go">
-<a href="#state_masterinstancetype_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4144,17 +3948,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_coreinstancecount_nodejs">
-<a href="#state_coreinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancegroup_nodejs">
@@ -4163,19 +3956,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_coreinstancetype_nodejs">
-<a href="#state_coreinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4209,17 +3991,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_instancegroups_nodejs">
-<a href="#state_instancegroups_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">Cluster<wbr>Instance<wbr>Group[]</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and `aws.emr.InstanceGroup` resource(s) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4262,19 +4033,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_masterinstancetype_nodejs">
-<a href="#state_masterinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4491,17 +4251,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_core_instance_count_python">
-<a href="#state_core_instance_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_core_instance_group_python">
@@ -4510,19 +4259,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustercoreinstancegroup">Dict[Cluster<wbr>Core<wbr>Instance<wbr>Group]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_core_instance_type_python">
-<a href="#state_core_instance_type_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4556,17 +4294,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_instance_groups_python">
-<a href="#state_instance_groups_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">List[Cluster<wbr>Instance<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and `aws.emr.InstanceGroup` resource(s) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4609,19 +4336,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustermasterinstancegroup">Dict[Cluster<wbr>Master<wbr>Instance<wbr>Group]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_master_instance_type_python">
-<a href="#state_master_instance_type_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4766,7 +4482,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterBootstrapActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterBootstrapActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterBootstrapActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterBootstrapActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterBootstrapActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterBootstrapAction.html">output</a> API doc for this type.
@@ -4944,7 +4660,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterCoreInstanceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterCoreInstanceGroupOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceGroup.html">output</a> API doc for this type.
@@ -4975,7 +4691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
+    <dd>{{% md %}}String containing the [EMR Auto Scaling Policy](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html) JSON.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5059,7 +4775,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
+    <dd>{{% md %}}String containing the [EMR Auto Scaling Policy](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html) JSON.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5143,7 +4859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
+    <dd>{{% md %}}String containing the [EMR Auto Scaling Policy](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html) JSON.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5227,7 +4943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
+    <dd>{{% md %}}String containing the [EMR Auto Scaling Policy](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html) JSON.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5298,7 +5014,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterCoreInstanceGroupEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterCoreInstanceGroupEbsConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceGroupEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterCoreInstanceGroupEbsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterCoreInstanceGroupEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterCoreInstanceGroupEbsConfig.html">output</a> API doc for this type.
@@ -5520,7 +5236,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterEc2AttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterEc2AttributesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterEc2AttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterEc2AttributesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterEc2AttributesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterEc2Attributes.html">output</a> API doc for this type.
@@ -5912,633 +5628,13 @@ The following state arguments are supported:
 
 
 
-<h4 id="clusterinstancegroup">Cluster<wbr>Instance<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterInstanceGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterInstanceGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterInstanceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterInstanceGroupOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterInstanceGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterInstanceGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancerole_csharp">
-<a href="#instancerole_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The role of the instance group in the cluster. Valid values are: `MASTER`, `CORE`, and `TASK`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancetype_csharp">
-<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="autoscalingpolicy_csharp">
-<a href="#autoscalingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="bidprice_csharp">
-<a href="#bidprice_csharp" style="color: inherit; text-decoration: inherit;">Bid<wbr>Price</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ebsconfigs_csharp">
-<a href="#ebsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroupebsconfig">List&lt;Cluster<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="instancecount_csharp">
-<a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have `map public IP on launch` enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the step.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancerole_go">
-<a href="#instancerole_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Role</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The role of the instance group in the cluster. Valid values are: `MASTER`, `CORE`, and `TASK`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancetype_go">
-<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="autoscalingpolicy_go">
-<a href="#autoscalingpolicy_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="bidprice_go">
-<a href="#bidprice_go" style="color: inherit; text-decoration: inherit;">Bid<wbr>Price</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ebsconfigs_go">
-<a href="#ebsconfigs_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Configs</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroupebsconfig">[]Cluster<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="instancecount_go">
-<a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have `map public IP on launch` enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the step.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancerole_nodejs">
-<a href="#instancerole_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Role</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The role of the instance group in the cluster. Valid values are: `MASTER`, `CORE`, and `TASK`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancetype_nodejs">
-<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="autoscalingpolicy_nodejs">
-<a href="#autoscalingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="bidprice_nodejs">
-<a href="#bidprice_nodejs" style="color: inherit; text-decoration: inherit;">bid<wbr>Price</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ebsconfigs_nodejs">
-<a href="#ebsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Configs</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroupebsconfig">Cluster<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="instancecount_nodejs">
-<a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have `map public IP on launch` enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the step.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancerole_python">
-<a href="#instancerole_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Role</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The role of the instance group in the cluster. Valid values are: `MASTER`, `CORE`, and `TASK`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instance_type_python">
-<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}EC2 instance type for all instances in the instance group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="autoscaling_policy_python">
-<a href="#autoscaling_policy_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>policy</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="bid_price_python">
-<a href="#bid_price_python" style="color: inherit; text-decoration: inherit;">bid_<wbr>price</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ebs_configs_python">
-<a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroupebsconfig">List[Cluster<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="instance_count_python">
-<a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have `map public IP on launch` enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of the step.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="clusterinstancegroupebsconfig">Cluster<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterInstanceGroupEbsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterInstanceGroupEbsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterInstanceGroupEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterInstanceGroupEbsConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterInstanceGroupEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterInstanceGroupEbsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="size_csharp">
-<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The volume size, in gibibytes (GiB).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="iops_csharp">
-<a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="volumesperinstance_csharp">
-<a href="#volumesperinstance_csharp" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Per<wbr>Instance</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="size_go">
-<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}The volume size, in gibibytes (GiB).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="iops_go">
-<a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="volumesperinstance_go">
-<a href="#volumesperinstance_go" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Per<wbr>Instance</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="size_nodejs">
-<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}The volume size, in gibibytes (GiB).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="iops_nodejs">
-<a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="volumesperinstance_nodejs">
-<a href="#volumesperinstance_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="size_python">
-<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The volume size, in gibibytes (GiB).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The volume type. Valid options are `gp2`, `io1`, `standard` and `st1`. See [EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="iops_python">
-<a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The number of I/O operations per second (IOPS) that the volume supports
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="volumesperinstance_python">
-<a href="#volumesperinstance_python" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
 <h4 id="clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterKerberosAttributes">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterKerberosAttributes">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterKerberosAttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterKerberosAttributesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterKerberosAttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterKerberosAttributesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterKerberosAttributesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterKerberosAttributes.html">output</a> API doc for this type.
@@ -6804,7 +5900,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterMasterInstanceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterMasterInstanceGroupOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceGroup.html">output</a> API doc for this type.
@@ -7114,7 +6210,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterMasterInstanceGroupEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterMasterInstanceGroupEbsConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceGroupEbsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterMasterInstanceGroupEbsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterMasterInstanceGroupEbsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterMasterInstanceGroupEbsConfig.html">output</a> API doc for this type.
@@ -7336,7 +6432,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterStepOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterStep.html">output</a> API doc for this type.
@@ -7514,7 +6610,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterStepHadoopJarStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/emr?tab=doc#ClusterStepHadoopJarStepOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterStepHadoopJarStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/emr?tab=doc#ClusterStepHadoopJarStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Inputs.ClusterStepHadoopJarStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Outputs.ClusterStepHadoopJarStep.html">output</a> API doc for this type.

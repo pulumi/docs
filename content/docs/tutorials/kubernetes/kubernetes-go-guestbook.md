@@ -33,7 +33,7 @@ this example. If this is your first time using Pulumi for Kubernetes, we recomme
 In this directory, you will find two variants of the Guestbook:
 
 1. [simple/](https://github.com/pulumi/examples/blob/master/kubernetes-go-guestbook/simple) is a direct port of the original YAML.
-2. [components](https://github.com/pulumi/examples/blob/master/kubernetes-go-guestbook/components) demonstrates the benefits of using a real language, namely eliminating boilerplate through
+2. [components](https://github.com/pulumi/examples/blob/master/kubernetes-go-guestbook/components) demonstrates the benefits of using a familiar language, namely eliminating boilerplate through
    the use of real component abstractions.
 
 Both examples provision the exact same Kubernetes Guestbook application, but showcase different aspects of Pulumi.

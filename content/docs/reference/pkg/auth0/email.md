@@ -1,8 +1,8 @@
 
 ---
 title: "Email"
-title_tag: "Resource Email | Package auth0"
-meta_desc: "Explore the Email resource of the auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can have standard welcome, password reset, and account verification email-based workflows built right into Auth0. This resource allows you to configure email providers so you can route all emails that are part of Auth0&#39;s authentication workflows through the supported high-volume email service of your choice."
+title_tag: "Resource Email | Package Auth0"
+meta_desc: "Explore the Email resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can have standard welcome, password reset, and account verification email-based workflows built right into Auth0. This resource allows you to configure email providers so you can route all emails that are part of Auth0&#39;s authentication workflows through the supported high-volume email service of your choice."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the Email resource of the auth0 package, including examples,
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 With Auth0, you can have standard welcome, password reset, and account verification email-based workflows built right into Auth0. This resource allows you to configure email providers so you can route all emails that are part of Auth0's authentication workflows through the supported high-volume email service of your choice.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -43,6 +41,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -63,9 +62,11 @@ my_email_provider = auth0.Email("myEmailProvider",
     default_from_address="accounts@example.com",
     enabled=True)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as auth0 from "@pulumi/auth0";
@@ -80,6 +81,7 @@ const myEmailProvider = new auth0.Email("my_email_provider", {
     enabled: true,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -94,7 +96,7 @@ const myEmailProvider = new auth0.Email("my_email_provider", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#Email">Email</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>credentials=None<span class="p">, </span>default_from_address=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.Email">Email</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>credentials=None<span class="p">, </span>default_from_address=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -561,7 +563,7 @@ Get an existing Email resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>credentials=None<span class="p">, </span>default_from_address=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>credentials=None<span class="p">, </span>default_from_address=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

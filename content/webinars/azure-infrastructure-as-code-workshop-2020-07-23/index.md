@@ -4,7 +4,7 @@ title: "Azure Infrastructure as Code Workshop"
 meta_desc: "In this workshop, Paul Stack and Mikhail Shilkov show you how to tackle common challenges using Infrastructure as Code through a series of hands-on labs."
 
 # A featured webinar will display first in the list.
-featured: true
+featured: false
 
 # If the video is pre-recorded or live.
 pre_recorded: false
@@ -16,7 +16,7 @@ pulumi_tv: false
 preview_image: "/images/webinar/pulumi_workshop.jpg"
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: false
+unlisted: true
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.

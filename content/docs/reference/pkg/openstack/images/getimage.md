@@ -43,7 +43,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/images"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := true
+		opt1 := "Ubuntu 16.04"
+		_, err := images.LookupImage(ctx, &images.LookupImageArgs{
+			MostRecent: &opt0,
+			Name:       &opt1,
+			Properties: map[string]interface{}{
+				"key": "value",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -173,7 +199,10 @@ recent image.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}a map of key/value pairs to match an image with.
-All specified properties must be matched.
+All specified properties must be matched. Unlike other options filtering
+by `properties` does by client on the result of OpenStack search query.
+Filtering is applied if server responce contains at least 2 images. In
+case there is only one image the `properties` ignores.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -319,7 +348,10 @@ recent image.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}a map of key/value pairs to match an image with.
-All specified properties must be matched.
+All specified properties must be matched. Unlike other options filtering
+by `properties` does by client on the result of OpenStack search query.
+Filtering is applied if server responce contains at least 2 images. In
+case there is only one image the `properties` ignores.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -465,7 +497,10 @@ recent image.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}a map of key/value pairs to match an image with.
-All specified properties must be matched.
+All specified properties must be matched. Unlike other options filtering
+by `properties` does by client on the result of OpenStack search query.
+Filtering is applied if server responce contains at least 2 images. In
+case there is only one image the `properties` ignores.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -611,7 +646,10 @@ recent image.
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}a map of key/value pairs to match an image with.
-All specified properties must be matched.
+All specified properties must be matched. Unlike other options filtering
+by `properties` does by client on the result of OpenStack search query.
+Filtering is applied if server responce contains at least 2 images. In
+case there is only one image the `properties` ignores.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

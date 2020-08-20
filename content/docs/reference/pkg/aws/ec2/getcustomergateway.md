@@ -42,15 +42,15 @@ class MyStack : Stack
         }));
         var main = new Aws.Ec2.VpnGateway("main", new Aws.Ec2.VpnGatewayArgs
         {
-            AmazonSideAsn = "7224",
             VpcId = aws_vpc.Main.Id,
+            AmazonSideAsn = "7224",
         });
         var transit = new Aws.Ec2.VpnConnection("transit", new Aws.Ec2.VpnConnectionArgs
         {
-            CustomerGatewayId = foo.Apply(foo => foo.Id),
-            StaticRoutesOnly = false,
-            Type = foo.Apply(foo => foo.Type),
             VpnGatewayId = main.Id,
+            CustomerGatewayId = foo.Apply(foo => foo.Id),
+            Type = foo.Apply(foo => foo.Type),
+            StaticRoutesOnly = false,
         });
     }
 
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,17 +84,17 @@ func main() {
 			return err
 		}
 		main, err := ec2.NewVpnGateway(ctx, "main", &ec2.VpnGatewayArgs{
+			VpcId:         pulumi.Any(aws_vpc.Main.Id),
 			AmazonSideAsn: pulumi.String("7224"),
-			VpcId:         pulumi.String(aws_vpc.Main.Id),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ec2.NewVpnConnection(ctx, "transit", &ec2.VpnConnectionArgs{
-			CustomerGatewayId: pulumi.String(foo.Id),
-			StaticRoutesOnly:  pulumi.Bool(false),
-			Type:              pulumi.String(foo.Type),
 			VpnGatewayId:      main.ID(),
+			CustomerGatewayId: pulumi.String(foo.Id),
+			Type:              pulumi.String(foo.Type),
+			StaticRoutesOnly:  pulumi.Bool(false),
 		})
 		if err != nil {
 			return err
@@ -116,13 +116,13 @@ foo = aws.ec2.get_customer_gateway(filters=[{
     "values": ["foo-prod"],
 }])
 main = aws.ec2.VpnGateway("main",
-    amazon_side_asn=7224,
-    vpc_id=aws_vpc["main"]["id"])
+    vpc_id=aws_vpc["main"]["id"],
+    amazon_side_asn=7224)
 transit = aws.ec2.VpnConnection("transit",
+    vpn_gateway_id=main.id,
     customer_gateway_id=foo.id,
-    static_routes_only=False,
     type=foo.type,
-    vpn_gateway_id=main.id)
+    static_routes_only=False)
 ```
 
 {{% /example %}}
@@ -133,21 +133,21 @@ transit = aws.ec2.VpnConnection("transit",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = pulumi.output(aws.ec2.getCustomerGateway({
+const foo = aws.ec2.getCustomerGateway({
     filters: [{
         name: "tag:Name",
         values: ["foo-prod"],
     }],
-}, { async: true }));
+});
 const main = new aws.ec2.VpnGateway("main", {
-    amazonSideAsn: "7224",
-    vpcId: aws_vpc_main.id,
+    vpcId: aws_vpc.main.id,
+    amazonSideAsn: 7224,
 });
 const transit = new aws.ec2.VpnConnection("transit", {
-    customerGatewayId: foo.id!,
-    staticRoutesOnly: false,
-    type: foo.type,
     vpnGatewayId: main.id,
+    customerGatewayId: foo.then(foo => foo.id),
+    type: foo.then(foo => foo.type),
+    staticRoutesOnly: false,
 });
 ```
 
@@ -172,7 +172,7 @@ const transit = new aws.ec2.VpnConnection("transit", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCustomerGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupCustomerGatewayArgs">LookupCustomerGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupCustomerGatewayResult">LookupCustomerGatewayResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCustomerGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupCustomerGatewayArgs">LookupCustomerGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupCustomerGatewayResult">LookupCustomerGatewayResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCustomerGateway` in the Go SDK.
 
@@ -707,7 +707,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetCustomerGatewayFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetCustomerGatewayFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetCustomerGatewayFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetCustomerGatewayFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetCustomerGatewayFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetCustomerGatewayFilter.html">output</a> API doc for this type.

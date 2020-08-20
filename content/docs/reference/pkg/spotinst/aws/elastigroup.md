@@ -9167,7 +9167,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#maxscaledownpercentage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scale<wbr>Down<wbr>Percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9194,7 +9194,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#maxscaledownpercentage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Scale<wbr>Down<wbr>Percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9221,7 +9221,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 <a href="#maxscaledownpercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scale<wbr>Down<wbr>Percentage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11669,6 +11669,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="recordsettype_csharp">
+<a href="#recordsettype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Set<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="spotinstacctid_csharp">
 <a href="#spotinstacctid_csharp" style="color: inherit; text-decoration: inherit;">Spotinst<wbr>Acct<wbr>Id</a>
 </span> 
@@ -11701,6 +11711,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">[]Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recordsettype_go">
+<a href="#recordsettype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Set<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11743,6 +11763,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="recordsettype_nodejs">
+<a href="#recordsettype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Set<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="spotinstacctid_nodejs">
 <a href="#spotinstacctid_nodejs" style="color: inherit; text-decoration: inherit;">spotinst<wbr>Acct<wbr>Id</a>
 </span> 
@@ -11775,6 +11805,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationroute53domainrecordset">List[Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="recordsettype_python">
+<a href="#recordsettype_python" style="color: inherit; text-decoration: inherit;">record<wbr>Set<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11826,6 +11866,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="usepublicdns_csharp">
+<a href="#usepublicdns_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usepublicip_csharp">
 <a href="#usepublicip_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Ip</a>
 </span> 
@@ -11851,6 +11901,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     </dt>
     <dd>{{% md %}}The group name.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usepublicdns_go">
+<a href="#usepublicdns_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Public<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -11882,6 +11942,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="usepublicdns_nodejs">
+<a href="#usepublicdns_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="usepublicip_nodejs">
 <a href="#usepublicip_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Ip</a>
 </span> 
@@ -11907,6 +11977,16 @@ Note: When this parameter is set, `availability_zones` should be left unused.
     </dt>
     <dd>{{% md %}}The group name.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usepublicdns_python">
+<a href="#usepublicdns_python" style="color: inherit; text-decoration: inherit;">use<wbr>Public<wbr>Dns</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

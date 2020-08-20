@@ -1,8 +1,8 @@
 
 ---
 title: "GetSpacesBucketObjects"
-title_tag: "Function GetSpacesBucketObjects | Package Digital Ocean"
-meta_desc: "Explore the GetSpacesBucketObjects function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. &gt; **NOTE on `max_keys`:** Retrieving very large numbers of keys can adversely affect this provider&#39;s performance."
+title_tag: "Function GetSpacesBucketObjects | Package DigitalOcean"
+meta_desc: "Explore the GetSpacesBucketObjects function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. &gt; **NOTE on `max_keys`:** Retrieving very large numbers of keys can adversely affect this provider&#39;s performance."
 ---
 
 
@@ -13,8 +13,6 @@ meta_desc: "Explore the GetSpacesBucketObjects function of the Digital Ocean pac
 > **NOTE on `max_keys`:** Retrieving very large numbers of keys can adversely affect this provider's performance.
 
 The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in a Spaces bucket.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -47,6 +45,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -64,9 +63,11 @@ object_info = [digitalocean.get_spaces_bucket_object(key=my_objects.keys[__index
     bucket=my_objects.bucket,
     region=my_objects.region) for __index in range(len(my_objects.keys))]
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -81,6 +82,7 @@ const objectInfo = Promise.all([myObjects.then(myObjects => myObjects.keys).leng
     region: myObjects1.region,
 })));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

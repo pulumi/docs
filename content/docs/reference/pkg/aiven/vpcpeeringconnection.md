@@ -40,7 +40,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.NewVpcPeeringConnection(ctx, "mypeeringconnection", &aiven.VpcPeeringConnectionArgs{
+			PeerCloudAccount: pulumi.String("<PEER_ACCOUNT_ID>"),
+			PeerRegion:       pulumi.String("<PEER_REGION>"),
+			PeerVpc:          pulumi.String("<PEER_VPC_ID/NAME>"),
+			VpcId:            pulumi.Any(aiven_project_vpc.Myvpc.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -85,11 +108,11 @@ const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#VpcPeeringConnection">VpcPeeringConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>client_timeout=None<span class="p">, </span>peer_cloud_account=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_vpc=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.VpcPeeringConnection">VpcPeeringConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>peer_cloud_account=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_vpc=None<span class="p">, </span>vpc_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#VpcPeeringConnection">NewVpcPeeringConnection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#VpcPeeringConnectionArgs">VpcPeeringConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#VpcPeeringConnection">VpcPeeringConnection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#VpcPeeringConnection">NewVpcPeeringConnection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#VpcPeeringConnectionArgs">VpcPeeringConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#VpcPeeringConnection">VpcPeeringConnection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -163,7 +186,7 @@ const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection"
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -183,7 +206,7 @@ const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection"
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#VpcPeeringConnectionArgs">VpcPeeringConnectionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#VpcPeeringConnectionArgs">VpcPeeringConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -193,7 +216,7 @@ const mypeeringconnection = new aiven.VpcPeeringConnection("mypeeringconnection"
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -290,17 +313,6 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The VPC the peering connection belongs to
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="clienttimeout_csharp">
-<a href="#clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionclienttimeout">Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peerregion_csharp">
@@ -351,17 +363,6 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}The VPC the peering connection belongs to
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="clienttimeout_go">
-<a href="#clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionclienttimeout">Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -414,17 +415,6 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The VPC the peering connection belongs to
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="clienttimeout_nodejs">
-<a href="#clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionclienttimeout">Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peerregion_nodejs">
@@ -476,17 +466,6 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The VPC the peering connection belongs to
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="client_timeout_python">
-<a href="#client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionclienttimeout">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout]</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peer_region_python">
@@ -525,6 +504,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerazureappid_csharp">
+<a href="#peerazureappid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerazuretenantid_csharp">
+<a href="#peerazuretenantid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerresourcegroup_csharp">
+<a href="#peerresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -578,6 +590,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="peerazureappid_go">
+<a href="#peerazureappid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerazuretenantid_go">
+<a href="#peerazuretenantid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerresourcegroup_go">
+<a href="#peerresourcegroup_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="peeringconnectionid_go">
 <a href="#peeringconnectionid_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Connection<wbr>Id</a>
 </span> 
@@ -625,6 +670,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerazureappid_nodejs">
+<a href="#peerazureappid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>App<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerazuretenantid_nodejs">
+<a href="#peerazuretenantid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peerresourcegroup_nodejs">
+<a href="#peerresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -678,6 +756,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="peer_azure_app_id_python">
+<a href="#peer_azure_app_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>app_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peer_azure_tenant_id_python">
+<a href="#peer_azure_tenant_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="peer_resource_group_python">
+<a href="#peer_resource_group_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>resource_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="peering_connection_id_python">
 <a href="#peering_connection_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>connection_<wbr>id</a>
 </span> 
@@ -728,11 +839,11 @@ Get an existing VpcPeeringConnection resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>client_timeout=None<span class="p">, </span>peer_cloud_account=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_vpc=None<span class="p">, </span>peering_connection_id=None<span class="p">, </span>state=None<span class="p">, </span>state_info=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>peer_azure_app_id=None<span class="p">, </span>peer_azure_tenant_id=None<span class="p">, </span>peer_cloud_account=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_resource_group=None<span class="p">, </span>peer_vpc=None<span class="p">, </span>peering_connection_id=None<span class="p">, </span>state=None<span class="p">, </span>state_info=None<span class="p">, </span>vpc_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#VpcPeeringConnectionState">VpcPeeringConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#VpcPeeringConnection">VpcPeeringConnection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#VpcPeeringConnectionState">VpcPeeringConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#VpcPeeringConnection">VpcPeeringConnection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -842,16 +953,27 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_clienttimeout_csharp">
-<a href="#state_clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peerazureappid_csharp">
+<a href="#state_peerazureappid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionclienttimeout">Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout<wbr>Args</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peerazuretenantid_csharp">
+<a href="#state_peerazuretenantid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -873,6 +995,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}AWS region of the peered VPC (if not in the same region as Aiven VPC)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peerresourcegroup_csharp">
+<a href="#state_peerresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -937,16 +1070,27 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_clienttimeout_go">
-<a href="#state_clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peerazureappid_go">
+<a href="#state_peerazureappid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionclienttimeout">Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peerazuretenantid_go">
+<a href="#state_peerazuretenantid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -968,6 +1112,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS region of the peered VPC (if not in the same region as Aiven VPC)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peerresourcegroup_go">
+<a href="#state_peerresourcegroup_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1032,16 +1187,27 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_clienttimeout_nodejs">
-<a href="#state_clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peerazureappid_nodejs">
+<a href="#state_peerazureappid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>App<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionclienttimeout">Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peerazuretenantid_nodejs">
+<a href="#state_peerazuretenantid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1063,6 +1229,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS region of the peered VPC (if not in the same region as Aiven VPC)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peerresourcegroup_nodejs">
+<a href="#state_peerresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Resource<wbr>Group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1127,16 +1304,27 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_client_timeout_python">
-<a href="#state_client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peer_azure_app_id_python">
+<a href="#state_peer_azure_app_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionclienttimeout">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
+    <dd>{{% md %}}Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peer_azure_tenant_id_python">
+<a href="#state_peer_azure_tenant_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>tenant_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure tenant id in UUID4 form
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1158,6 +1346,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}AWS region of the peered VPC (if not in the same region as Aiven VPC)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_peer_resource_group_python">
+<a href="#state_peer_resource_group_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>resource_<wbr>group</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Azure resource group name of the peered VPC
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1219,98 +1418,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
-
-
-
-
-
-
-
-
-## Supporting Types
-
-
-<h4 id="vpcpeeringconnectionclienttimeout">Vpc<wbr>Peering<wbr>Connection<wbr>Client<wbr>Timeout</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#VpcPeeringConnectionClientTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#VpcPeeringConnectionClientTimeout">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#VpcPeeringConnectionClientTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#VpcPeeringConnectionClientTimeoutOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.VpcPeeringConnectionClientTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.VpcPeeringConnectionClientTimeout.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_csharp">
-<a href="#create_csharp" style="color: inherit; text-decoration: inherit;">Create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_go">
-<a href="#create_go" style="color: inherit; text-decoration: inherit;">Create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_nodejs">
-<a href="#create_nodejs" style="color: inherit; text-decoration: inherit;">create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_python">
-<a href="#create_python" style="color: inherit; text-decoration: inherit;">create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 

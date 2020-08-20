@@ -42,7 +42,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -98,12 +98,12 @@ const service = pulumi.output(aws.ecr.getRepository({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_repository(</span>name=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_repository(</span>name=None<span class="p">, </span>registry_id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRepository<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#LookupRepositoryArgs">LookupRepositoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#LookupRepositoryResult">LookupRepositoryResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRepository<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#LookupRepositoryArgs">LookupRepositoryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#LookupRepositoryResult">LookupRepositoryResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRepository` in the Go SDK.
 
@@ -138,6 +138,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="registryid_csharp">
+<a href="#registryid_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The registry ID where the repository was created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -163,6 +174,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECR Repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registryid_go">
+<a href="#registryid_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The registry ID where the repository was created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -196,6 +218,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="registryid_nodejs">
+<a href="#registryid_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The registry ID where the repository was created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -221,6 +254,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECR Repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registry_id_python">
+<a href="#registry_id_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The registry ID where the repository was created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -267,6 +311,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="encryptionconfigurations_csharp">
+<a href="#encryptionconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositoryencryptionconfiguration">List&lt;Get<wbr>Repository<wbr>Encryption<wbr>Configuration&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See Encryption Configuration below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -274,6 +329,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="imagescanningconfigurations_csharp">
+<a href="#imagescanningconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Scanning<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositoryimagescanningconfiguration">List&lt;Get<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block that defines image scanning configuration for the repository. See Image Scanning Configuration below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="imagetagmutability_csharp">
+<a href="#imagetagmutability_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Tag<wbr>Mutability</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tag mutability setting for the repository.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -294,8 +371,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The registry ID where the repository was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -339,6 +415,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="encryptionconfigurations_go">
+<a href="#encryptionconfigurations_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositoryencryptionconfiguration">[]Get<wbr>Repository<wbr>Encryption<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See Encryption Configuration below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -346,6 +433,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="imagescanningconfigurations_go">
+<a href="#imagescanningconfigurations_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Scanning<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositoryimagescanningconfiguration">[]Get<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block that defines image scanning configuration for the repository. See Image Scanning Configuration below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="imagetagmutability_go">
+<a href="#imagetagmutability_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Tag<wbr>Mutability</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tag mutability setting for the repository.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -366,8 +475,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The registry ID where the repository was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -411,6 +519,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="encryptionconfigurations_nodejs">
+<a href="#encryptionconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositoryencryptionconfiguration">Get<wbr>Repository<wbr>Encryption<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See Encryption Configuration below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -418,6 +537,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="imagescanningconfigurations_nodejs">
+<a href="#imagescanningconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Scanning<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositoryimagescanningconfiguration">Get<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block that defines image scanning configuration for the repository. See Image Scanning Configuration below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="imagetagmutability_nodejs">
+<a href="#imagetagmutability_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Tag<wbr>Mutability</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The tag mutability setting for the repository.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -438,8 +579,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The registry ID where the repository was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -483,6 +623,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="encryption_configurations_python">
+<a href="#encryption_configurations_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositoryencryptionconfiguration">List[Get<wbr>Repository<wbr>Encryption<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}Encryption configuration for the repository. See Encryption Configuration below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -490,6 +641,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="image_scanning_configurations_python">
+<a href="#image_scanning_configurations_python" style="color: inherit; text-decoration: inherit;">image_<wbr>scanning_<wbr>configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrepositoryimagescanningconfiguration">List[Get<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block that defines image scanning configuration for the repository. See Image Scanning Configuration below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="image_tag_mutability_python">
+<a href="#image_tag_mutability_python" style="color: inherit; text-decoration: inherit;">image_<wbr>tag_<wbr>mutability</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The tag mutability setting for the repository.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -510,8 +683,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The registry ID where the repository was created.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -533,6 +705,236 @@ The following output properties are available:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getrepositoryencryptionconfiguration">Get<wbr>Repository<wbr>Encryption<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRepositoryEncryptionConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#GetRepositoryEncryptionConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecr.Outputs.GetRepositoryEncryptionConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="encryptiontype_csharp">
+<a href="#encryptiontype_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption type to use for the repository, either `AES256` or `KMS`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kmskey_csharp">
+<a href="#kmskey_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If `encryption_type` is `KMS`, the ARN of the KMS key used.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="encryptiontype_go">
+<a href="#encryptiontype_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption type to use for the repository, either `AES256` or `KMS`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kmskey_go">
+<a href="#kmskey_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If `encryption_type` is `KMS`, the ARN of the KMS key used.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="encryptiontype_nodejs">
+<a href="#encryptiontype_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption type to use for the repository, either `AES256` or `KMS`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kmskey_nodejs">
+<a href="#kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If `encryption_type` is `KMS`, the ARN of the KMS key used.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="encryption_type_python">
+<a href="#encryption_type_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The encryption type to use for the repository, either `AES256` or `KMS`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kmskey_python">
+<a href="#kmskey_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If `encryption_type` is `KMS`, the ARN of the KMS key used.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getrepositoryimagescanningconfiguration">Get<wbr>Repository<wbr>Image<wbr>Scanning<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRepositoryImageScanningConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecr?tab=doc#GetRepositoryImageScanningConfiguration">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecr.Outputs.GetRepositoryImageScanningConfiguration.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scanonpush_csharp">
+<a href="#scanonpush_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>On<wbr>Push</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether images are scanned after being pushed to the repository.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scanonpush_go">
+<a href="#scanonpush_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>On<wbr>Push</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether images are scanned after being pushed to the repository.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scanonpush_nodejs">
+<a href="#scanonpush_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>On<wbr>Push</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether images are scanned after being pushed to the repository.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scanonpush_python">
+<a href="#scanonpush_python" style="color: inherit; text-decoration: inherit;">scan<wbr>On<wbr>Push</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether images are scanned after being pushed to the repository.
 {{% /md %}}</dd>
 
 </dl>

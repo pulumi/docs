@@ -11,8 +11,6 @@ meta_desc: "Explore the GetUser function of the Linode package, including exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides information about a Linode user
-
-
 ## Attributes
 
 The Linode User resource exports the following attributes:
@@ -45,6 +43,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ import pulumi_linode as linode
 
 foo = linode.get_user(username="foo")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -69,6 +70,7 @@ const foo = pulumi.output(linode.getUser({
     username: "foo",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

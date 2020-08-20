@@ -50,7 +50,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network1, err := networking.NewNetwork(ctx, "network1", &networking.NetworkArgs{
+			AdminStateUp: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = networking.NewPort(ctx, "port1", &networking.PortArgs{
+			AdminStateUp: pulumi.Bool(true),
+			NetworkId:    network1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -134,7 +161,43 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network1, err := networking.NewNetwork(ctx, "network1", &networking.NetworkArgs{
+			AdminStateUp: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = networking.NewPort(ctx, "port1", &networking.PortArgs{
+			AdminStateUp: pulumi.Bool(true),
+			Binding: &networking.PortBindingArgs{
+				HostId:   pulumi.String("b080b9cf-46e0-4ce8-ad47-0fd4accc872b"),
+				Profile:  pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"local_link_information\": [\n", "    {\n", "      \"switch_info\": \"info1\",\n", "      \"port_id\": \"Ethernet3/4\",\n", "      \"switch_id\": \"12:34:56:78:9A:BC\"\n", "    },\n", "    {\n", "      \"switch_info\": \"info2\",\n", "      \"port_id\": \"Ethernet3/4\",\n", "      \"switch_id\": \"12:34:56:78:9A:BD\"\n", "    }\n", "  ],\n", "  \"vlan_type\": \"allowed\"\n", "}\n", "\n")),
+				VnicType: pulumi.String("baremetal"),
+			},
+			DeviceId:    pulumi.String("cdf70fcf-c161-4f24-9c70-96b3f5a54b71"),
+			DeviceOwner: pulumi.String("baremetal:none"),
+			NetworkId:   network1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -224,7 +287,7 @@ const port1 = new openstack.networking.Port("port_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#Port">Port</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>allowed_address_pairs=None<span class="p">, </span>binding=None<span class="p">, </span>description=None<span class="p">, </span>device_id=None<span class="p">, </span>device_owner=None<span class="p">, </span>dns_name=None<span class="p">, </span>extra_dhcp_options=None<span class="p">, </span>fixed_ips=None<span class="p">, </span>mac_address=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>no_fixed_ip=None<span class="p">, </span>no_security_groups=None<span class="p">, </span>port_security_enabled=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Port">Port</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>allowed_address_pairs=None<span class="p">, </span>binding=None<span class="p">, </span>description=None<span class="p">, </span>device_id=None<span class="p">, </span>device_owner=None<span class="p">, </span>dns_name=None<span class="p">, </span>extra_dhcp_options=None<span class="p">, </span>fixed_ips=None<span class="p">, </span>mac_address=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>no_fixed_ip=None<span class="p">, </span>no_security_groups=None<span class="p">, </span>port_security_enabled=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1751,7 +1814,7 @@ Get an existing Port resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>all_fixed_ips=None<span class="p">, </span>all_security_group_ids=None<span class="p">, </span>all_tags=None<span class="p">, </span>allowed_address_pairs=None<span class="p">, </span>binding=None<span class="p">, </span>description=None<span class="p">, </span>device_id=None<span class="p">, </span>device_owner=None<span class="p">, </span>dns_assignments=None<span class="p">, </span>dns_name=None<span class="p">, </span>extra_dhcp_options=None<span class="p">, </span>fixed_ips=None<span class="p">, </span>mac_address=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>no_fixed_ip=None<span class="p">, </span>no_security_groups=None<span class="p">, </span>port_security_enabled=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>all_fixed_ips=None<span class="p">, </span>all_security_group_ids=None<span class="p">, </span>all_tags=None<span class="p">, </span>allowed_address_pairs=None<span class="p">, </span>binding=None<span class="p">, </span>description=None<span class="p">, </span>device_id=None<span class="p">, </span>device_owner=None<span class="p">, </span>dns_assignments=None<span class="p">, </span>dns_name=None<span class="p">, </span>extra_dhcp_options=None<span class="p">, </span>fixed_ips=None<span class="p">, </span>mac_address=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>no_fixed_ip=None<span class="p">, </span>no_security_groups=None<span class="p">, </span>port_security_enabled=None<span class="p">, </span>qos_policy_id=None<span class="p">, </span>region=None<span class="p">, </span>security_group_ids=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

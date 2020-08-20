@@ -32,9 +32,9 @@ class MyStack : Stack
         });
         var alphaSubnet = new Aws.Ec2.Subnet("alphaSubnet", new Aws.Ec2.SubnetArgs
         {
+            VpcId = foo.Id,
             AvailabilityZone = "us-west-2a",
             CidrBlock = "10.0.1.0/24",
-            VpcId = foo.Id,
         });
         var alphaMountTarget = new Aws.Efs.MountTarget("alphaMountTarget", new Aws.Efs.MountTargetArgs
         {
@@ -53,8 +53,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -67,15 +67,15 @@ func main() {
 			return err
 		}
 		alphaSubnet, err := ec2.NewSubnet(ctx, "alphaSubnet", &ec2.SubnetArgs{
+			VpcId:            foo.ID(),
 			AvailabilityZone: pulumi.String("us-west-2a"),
 			CidrBlock:        pulumi.String("10.0.1.0/24"),
-			VpcId:            foo.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = efs.NewMountTarget(ctx, "alphaMountTarget", &efs.MountTargetArgs{
-			FileSystemId: pulumi.String(aws_efs_file_system.Foo.Id),
+			FileSystemId: pulumi.Any(aws_efs_file_system.Foo.Id),
 			SubnetId:     alphaSubnet.ID(),
 		})
 		if err != nil {
@@ -95,9 +95,9 @@ import pulumi_aws as aws
 
 foo = aws.ec2.Vpc("foo", cidr_block="10.0.0.0/16")
 alpha_subnet = aws.ec2.Subnet("alphaSubnet",
+    vpc_id=foo.id,
     availability_zone="us-west-2a",
-    cidr_block="10.0.1.0/24",
-    vpc_id=foo.id)
+    cidr_block="10.0.1.0/24")
 alpha_mount_target = aws.efs.MountTarget("alphaMountTarget",
     file_system_id=aws_efs_file_system["foo"]["id"],
     subnet_id=alpha_subnet.id)
@@ -111,16 +111,14 @@ alpha_mount_target = aws.efs.MountTarget("alphaMountTarget",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = new aws.ec2.Vpc("foo", {
-    cidrBlock: "10.0.0.0/16",
-});
-const alphaSubnet = new aws.ec2.Subnet("alpha", {
+const foo = new aws.ec2.Vpc("foo", {cidrBlock: "10.0.0.0/16"});
+const alphaSubnet = new aws.ec2.Subnet("alphaSubnet", {
+    vpcId: foo.id,
     availabilityZone: "us-west-2a",
     cidrBlock: "10.0.1.0/24",
-    vpcId: foo.id,
 });
-const alphaMountTarget = new aws.efs.MountTarget("alpha", {
-    fileSystemId: aws_efs_file_system_foo.id,
+const alphaMountTarget = new aws.efs.MountTarget("alphaMountTarget", {
+    fileSystemId: aws_efs_file_system.foo.id,
     subnetId: alphaSubnet.id,
 });
 ```
@@ -143,7 +141,7 @@ const alphaMountTarget = new aws.efs.MountTarget("alpha", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs?tab=doc#MountTarget">NewMountTarget</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs?tab=doc#MountTargetArgs">MountTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs?tab=doc#MountTarget">MountTarget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs?tab=doc#MountTarget">NewMountTarget</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs?tab=doc#MountTargetArgs">MountTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs?tab=doc#MountTarget">MountTarget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -217,7 +215,7 @@ const alphaMountTarget = new aws.efs.MountTarget("alpha", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -237,7 +235,7 @@ const alphaMountTarget = new aws.efs.MountTarget("alpha", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs?tab=doc#MountTargetArgs">MountTargetArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs?tab=doc#MountTargetArgs">MountTargetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -247,7 +245,7 @@ const alphaMountTarget = new aws.efs.MountTarget("alpha", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -926,7 +924,7 @@ Get an existing MountTarget resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMountTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs?tab=doc#MountTargetState">MountTargetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/efs?tab=doc#MountTarget">MountTarget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMountTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs?tab=doc#MountTargetState">MountTargetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/efs?tab=doc#MountTarget">MountTarget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceDependency"
-title_tag: "Resource ServiceDependency | Package pagerduty"
-meta_desc: "Explore the ServiceDependency resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. A [service dependency](https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/~1service_dependencies~1associate/post) is a relationship between a business service and technical and business services that this service uses, or that are used by this service, and are critical for successful operation."
+title_tag: "Resource ServiceDependency | Package PagerDuty"
+meta_desc: "Explore the ServiceDependency resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [service dependency](https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/~1service_dependencies~1associate/post) is a relationship between a business service and technical and business services that this service uses, or that are used by this service, and are critical for successful operation."
 ---
 
 
@@ -11,10 +11,6 @@ meta_desc: "Explore the ServiceDependency resource of the pagerduty package, inc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A [service dependency](https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/~1service_dependencies~1associate/post) is a relationship between a business service and technical and business services that this service uses, or that are used by this service, and are critical for successful operation.
-
-
-{{% examples %}}
-{{% /examples %}}
 
 
 
@@ -27,7 +23,7 @@ A [service dependency](https://developer.pagerduty.com/api-reference/reference/R
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#ServiceDependency">ServiceDependency</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dependencies=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.ServiceDependency">ServiceDependency</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dependencies=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -362,7 +358,7 @@ Get an existing ServiceDependency resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dependencies=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dependencies=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

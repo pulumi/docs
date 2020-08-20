@@ -38,6 +38,26 @@ class MyStack : Stack
                     NumOfUnits = 5,
                 },
             },
+            BlockDeviceMappings = 
+            {
+                new SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingArgs
+                {
+                    DeviceName = "/dev/xvda1",
+                    Ebs = new SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingEbsArgs
+                    {
+                        DeleteOnTermination = true,
+                        DynamicVolumeSize = new SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeArgs
+                        {
+                            BaseSize = 50,
+                            Resource = "CPU",
+                            SizePerResourceUnit = 20,
+                        },
+                        Encrypted = false,
+                        VolumeSize = 50,
+                        VolumeType = "gp2",
+                    },
+                },
+            },
             ElasticIpPools = 
             {
                 new SpotInst.Aws.Inputs.OceanLaunchSpecElasticIpPoolArgs
@@ -122,6 +142,22 @@ func main() {
 					NumOfUnits:    pulumi.Int(5),
 				},
 			},
+			BlockDeviceMappings: aws.OceanLaunchSpecBlockDeviceMappingArray{
+				&aws.OceanLaunchSpecBlockDeviceMappingArgs{
+					DeviceName: pulumi.String("/dev/xvda1"),
+					Ebs: &aws.OceanLaunchSpecBlockDeviceMappingEbsArgs{
+						DeleteOnTermination: pulumi.Bool(true),
+						DynamicVolumeSize: &aws.OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeArgs{
+							BaseSize:            pulumi.Int(50),
+							Resource:            pulumi.String("CPU"),
+							SizePerResourceUnit: pulumi.Int(20),
+						},
+						Encrypted:  pulumi.Bool(false),
+						VolumeSize: pulumi.Int(50),
+						VolumeType: pulumi.String("gp2"),
+					},
+				},
+			},
 			ElasticIpPools: aws.OceanLaunchSpecElasticIpPoolArray{
 				&aws.OceanLaunchSpecElasticIpPoolArgs{
 					TagSelector: &aws.OceanLaunchSpecElasticIpPoolTagSelectorArgs{
@@ -188,6 +224,20 @@ example = spotinst.aws.OceanLaunchSpec("example",
         "memoryPerUnit": 2048,
         "numOfUnits": 5,
     }],
+    block_device_mappings=[{
+        "deviceName": "/dev/xvda1",
+        "ebs": {
+            "deleteOnTermination": "true",
+            "dynamicVolumeSize": {
+                "baseSize": 50,
+                "resource": "CPU",
+                "sizePerResourceUnit": 20,
+            },
+            "encrypted": "false",
+            "volumeSize": 50,
+            "volumeType": "gp2",
+        },
+    }],
     elastic_ip_pools=[{
         "tagSelector": {
             "tagKey": "key",
@@ -233,6 +283,20 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         gpuPerUnit: 0,
         memoryPerUnit: 2048,
         numOfUnits: 5,
+    }],
+    blockDeviceMappings: [{
+        deviceName: "/dev/xvda1",
+        ebs: {
+            deleteOnTermination: true,
+            dynamicVolumeSize: {
+                baseSize: 50,
+                resource: "CPU",
+                sizePerResourceUnit: 20,
+            },
+            encrypted: false,
+            volumeSize: 50,
+            volumeType: "gp2",
+        },
     }],
     elasticIpPools: [{
         tagSelector: {
@@ -280,7 +344,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>block_device_mappings=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -476,6 +540,17 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span id="blockdevicemappings_csharp">
+<a href="#blockdevicemappings_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="elasticippools_csharp">
 <a href="#elasticippools_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip<wbr>Pools</a>
 </span> 
@@ -632,6 +707,17 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">[]Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blockdevicemappings_go">
+<a href="#blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">[]Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -796,6 +882,17 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span id="blockdevicemappings_nodejs">
+<a href="#blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="elasticippools_nodejs">
 <a href="#elasticippools_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Ip<wbr>Pools</a>
 </span> 
@@ -952,6 +1049,17 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom]</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="block_device_mappings_python">
+<a href="#block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">List[Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1183,7 +1291,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>block_device_mappings=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1306,6 +1414,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_blockdevicemappings_csharp">
+<a href="#state_blockdevicemappings_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1470,6 +1589,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_blockdevicemappings_go">
+<a href="#state_blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">[]Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_elasticippools_go">
 <a href="#state_elasticippools_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip<wbr>Pools</a>
 </span> 
@@ -1630,6 +1760,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_blockdevicemappings_nodejs">
+<a href="#state_blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_elasticippools_nodejs">
 <a href="#state_elasticippools_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Ip<wbr>Pools</a>
 </span> 
@@ -1786,6 +1927,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom]</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_block_device_mappings_python">
+<a href="#state_block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemapping">List[Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2158,6 +2310,800 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="oceanlaunchspecblockdevicemapping">Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecBlockDeviceMapping">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecBlockDeviceMapping">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecBlockDeviceMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecBlockDeviceMappingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.OceanLaunchSpecBlockDeviceMapping.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="devicename_csharp">
+<a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. Set device name. (Example: "/dev/xvda1").
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebs_csharp">
+<a href="#ebs_csharp" style="color: inherit; text-decoration: inherit;">Ebs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebs">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Set Elastic Block Store properties .
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodevice_csharp">
+<a href="#nodevice_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. suppresses the specified device included in the block device mapping of the AMI.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualname_csharp">
+<a href="#virtualname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="devicename_go">
+<a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. Set device name. (Example: "/dev/xvda1").
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebs_go">
+<a href="#ebs_go" style="color: inherit; text-decoration: inherit;">Ebs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebs">Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Set Elastic Block Store properties .
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodevice_go">
+<a href="#nodevice_go" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. suppresses the specified device included in the block device mapping of the AMI.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualname_go">
+<a href="#virtualname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="devicename_nodejs">
+<a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. Set device name. (Example: "/dev/xvda1").
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebs_nodejs">
+<a href="#ebs_nodejs" style="color: inherit; text-decoration: inherit;">ebs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebs">Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Set Elastic Block Store properties .
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodevice_nodejs">
+<a href="#nodevice_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. suppresses the specified device included in the block device mapping of the AMI.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualname_nodejs">
+<a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="devicename_python">
+<a href="#devicename_python" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}String. Set device name. (Example: "/dev/xvda1").
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ebs_python">
+<a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebs">Dict[Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs]</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Set Elastic Block Store properties .
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodevice_python">
+<a href="#nodevice_python" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}String. suppresses the specified device included in the block device mapping of the AMI.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualname_python">
+<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="oceanlaunchspecblockdevicemappingebs">Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecBlockDeviceMappingEbs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecBlockDeviceMappingEbs">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecBlockDeviceMappingEbsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecBlockDeviceMappingEbsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingEbsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.OceanLaunchSpecBlockDeviceMappingEbs.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deleteontermination_csharp">
+<a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean. Flag to delete the EBS on instance termination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamicvolumesize_csharp">
+<a href="#dynamicvolumesize_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebsdynamicvolumesize">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Dynamic<wbr>Volume<wbr>Size<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Set dynamic volume size properties. When using this object, you cannot use volumeSize. You must use one or the other.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_csharp">
+<a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_csharp">
+<a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Int. The number of I/O operations per second (IOPS) that the volume supports.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer managed CMK under which the EBS volume is encrypted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotid_csharp">
+<a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) String. The Snapshot ID to mount by.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_csharp">
+<a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Int. The size, in GB of the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumetype_csharp">
+<a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. The type of the volume (example: "gp2").
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deleteontermination_go">
+<a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean. Flag to delete the EBS on instance termination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamicvolumesize_go">
+<a href="#dynamicvolumesize_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebsdynamicvolumesize">Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Dynamic<wbr>Volume<wbr>Size</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Set dynamic volume size properties. When using this object, you cannot use volumeSize. You must use one or the other.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_go">
+<a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_go">
+<a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Int. The number of I/O operations per second (IOPS) that the volume supports.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer managed CMK under which the EBS volume is encrypted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotid_go">
+<a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) String. The Snapshot ID to mount by.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_go">
+<a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Int. The size, in GB of the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumetype_go">
+<a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. The type of the volume (example: "gp2").
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deleteontermination_nodejs">
+<a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean. Flag to delete the EBS on instance termination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamicvolumesize_nodejs">
+<a href="#dynamicvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebsdynamicvolumesize">Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Dynamic<wbr>Volume<wbr>Size</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Set dynamic volume size properties. When using this object, you cannot use volumeSize. You must use one or the other.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_nodejs">
+<a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_nodejs">
+<a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Int. The number of I/O operations per second (IOPS) that the volume supports.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer managed CMK under which the EBS volume is encrypted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotid_nodejs">
+<a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) String. The Snapshot ID to mount by.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_nodejs">
+<a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Int. The size, in GB of the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumetype_nodejs">
+<a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. The type of the volume (example: "gp2").
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deleteontermination_python">
+<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean. Flag to delete the EBS on instance termination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dynamicvolumesize_python">
+<a href="#dynamicvolumesize_python" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecblockdevicemappingebsdynamicvolumesize">Dict[Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Dynamic<wbr>Volume<wbr>Size]</a></span>
+    </dt>
+    <dd>{{% md %}}Object. Set dynamic volume size properties. When using this object, you cannot use volumeSize. You must use one or the other.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypted_python">
+<a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iops_python">
+<a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Int. The number of I/O operations per second (IOPS) that the volume supports.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_python">
+<a href="#kmskeyid_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}String. Identifier (key ID, key alias, ID ARN, or alias ARN) for a customer managed CMK under which the EBS volume is encrypted.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="snapshotid_python">
+<a href="#snapshotid_python" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) String. The Snapshot ID to mount by.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_python">
+<a href="#volumesize_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Int. The size, in GB of the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumetype_python">
+<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}String. The type of the volume (example: "gp2").
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="oceanlaunchspecblockdevicemappingebsdynamicvolumesize">Ocean<wbr>Launch<wbr>Spec<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Dynamic<wbr>Volume<wbr>Size</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSize.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="basesize_csharp">
+<a href="#basesize_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Int. Initial size for volume. (Example: 50)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_csharp">
+<a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. Resource type to increase volume size dynamically by. (valid values: "CPU")
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizeperresourceunit_csharp">
+<a href="#sizeperresourceunit_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Per<wbr>Resource<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Int. Additional size (in GB) per resource unit. (Example: baseSize= 50, sizePerResourceUnit=20, and instance with 2 CPU is launched - its total disk size will be: 90GB)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="basesize_go">
+<a href="#basesize_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Int. Initial size for volume. (Example: 50)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_go">
+<a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. Resource type to increase volume size dynamically by. (valid values: "CPU")
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizeperresourceunit_go">
+<a href="#sizeperresourceunit_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Per<wbr>Resource<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Int. Additional size (in GB) per resource unit. (Example: baseSize= 50, sizePerResourceUnit=20, and instance with 2 CPU is launched - its total disk size will be: 90GB)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="basesize_nodejs">
+<a href="#basesize_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Int. Initial size for volume. (Example: 50)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_nodejs">
+<a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}String. Resource type to increase volume size dynamically by. (valid values: "CPU")
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizeperresourceunit_nodejs">
+<a href="#sizeperresourceunit_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Per<wbr>Resource<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Int. Additional size (in GB) per resource unit. (Example: baseSize= 50, sizePerResourceUnit=20, and instance with 2 CPU is launched - its total disk size will be: 90GB)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="basesize_python">
+<a href="#basesize_python" style="color: inherit; text-decoration: inherit;">base<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Int. Initial size for volume. (Example: 50)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_python">
+<a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}String. Resource type to increase volume size dynamically by. (valid values: "CPU")
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sizeperresourceunit_python">
+<a href="#sizeperresourceunit_python" style="color: inherit; text-decoration: inherit;">size<wbr>Per<wbr>Resource<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Int. Additional size (in GB) per resource unit. (Example: baseSize= 50, sizePerResourceUnit=20, and instance with 2 CPU is launched - its total disk size will be: 90GB)
 {{% /md %}}</dd>
 
 </dl>

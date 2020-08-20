@@ -42,23 +42,23 @@ class MyStack : Stack
         });
         var example1 = new Aws.Iam.UserGroupMembership("example1", new Aws.Iam.UserGroupMembershipArgs
         {
+            User = user1.Name,
             Groups = 
             {
                 group1.Name,
                 group2.Name,
             },
-            User = user1.Name,
         });
         var group3 = new Aws.Iam.Group("group3", new Aws.Iam.GroupArgs
         {
         });
         var example2 = new Aws.Iam.UserGroupMembership("example2", new Aws.Iam.UserGroupMembershipArgs
         {
+            User = user1.Name,
             Groups = 
             {
                 group3.Name,
             },
-            User = user1.Name,
         });
     }
 
@@ -72,7 +72,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,11 +91,11 @@ func main() {
 			return err
 		}
 		_, err = iam.NewUserGroupMembership(ctx, "example1", &iam.UserGroupMembershipArgs{
+			User: user1.Name,
 			Groups: pulumi.StringArray{
 				group1.Name,
 				group2.Name,
 			},
-			User: user1.Name,
 		})
 		if err != nil {
 			return err
@@ -105,10 +105,10 @@ func main() {
 			return err
 		}
 		_, err = iam.NewUserGroupMembership(ctx, "example2", &iam.UserGroupMembershipArgs{
+			User: user1.Name,
 			Groups: pulumi.StringArray{
 				group3.Name,
 			},
-			User: user1.Name,
 		})
 		if err != nil {
 			return err
@@ -129,15 +129,15 @@ user1 = aws.iam.User("user1")
 group1 = aws.iam.Group("group1")
 group2 = aws.iam.Group("group2")
 example1 = aws.iam.UserGroupMembership("example1",
+    user=user1.name,
     groups=[
         group1.name,
         group2.name,
-    ],
-    user=user1.name)
+    ])
 group3 = aws.iam.Group("group3")
 example2 = aws.iam.UserGroupMembership("example2",
-    groups=[group3.name],
-    user=user1.name)
+    user=user1.name,
+    groups=[group3.name])
 ```
 
 {{% /example %}}
@@ -152,16 +152,16 @@ const user1 = new aws.iam.User("user1", {});
 const group1 = new aws.iam.Group("group1", {});
 const group2 = new aws.iam.Group("group2", {});
 const example1 = new aws.iam.UserGroupMembership("example1", {
+    user: user1.name,
     groups: [
         group1.name,
         group2.name,
     ],
-    user: user1.name,
 });
 const group3 = new aws.iam.Group("group3", {});
 const example2 = new aws.iam.UserGroupMembership("example2", {
-    groups: [group3.name],
     user: user1.name,
+    groups: [group3.name],
 });
 ```
 
@@ -183,7 +183,7 @@ const example2 = new aws.iam.UserGroupMembership("example2", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserGroupMembership">NewUserGroupMembership</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserGroupMembershipArgs">UserGroupMembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserGroupMembership">UserGroupMembership</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserGroupMembership">NewUserGroupMembership</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserGroupMembershipArgs">UserGroupMembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserGroupMembership">UserGroupMembership</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -257,7 +257,7 @@ const example2 = new aws.iam.UserGroupMembership("example2", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -277,7 +277,7 @@ const example2 = new aws.iam.UserGroupMembership("example2", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserGroupMembershipArgs">UserGroupMembershipArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserGroupMembershipArgs">UserGroupMembershipArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -287,7 +287,7 @@ const example2 = new aws.iam.UserGroupMembership("example2", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -562,7 +562,7 @@ Get an existing UserGroupMembership resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserGroupMembership<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserGroupMembershipState">UserGroupMembershipState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#UserGroupMembership">UserGroupMembership</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserGroupMembership<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserGroupMembershipState">UserGroupMembershipState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#UserGroupMembership">UserGroupMembership</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

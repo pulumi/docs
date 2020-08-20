@@ -18,11 +18,72 @@ Provides an IoT role alias.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Effect"": ""Allow"",
+      ""Principal"": {""Service"": ""credentials.iot.amazonaws.com"",
+      ""Action"": ""sts:AssumeRole""
+    }
+  ]
+}
+",
+        });
+        var @alias = new Aws.Iot.RoleAlias("alias", new Aws.Iot.RoleAliasArgs
+        {
+            Alias = "Thermostat-dynamodb-access-role-alias",
+            RoleArn = role.Arn,
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\"Service\": \"credentials.iot.amazonaws.com\",\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iot.NewRoleAlias(ctx, "alias", &iot.RoleAliasArgs{
+			Alias:   pulumi.String("Thermostat-dynamodb-access-role-alias"),
+			RoleArn: role.Arn,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -30,17 +91,16 @@ Coming soon!
 import pulumi
 import pulumi_aws as aws
 
-role = aws.iam.Role("role", policy="""{
+role = aws.iam.Role("role", assume_role_policy="""{
   "Version": "2012-10-17",
   "Statement": [
     {
       "Effect": "Allow",
-      "Principal": {"Service": "credentials.iot.amazonaws.com"},
+      "Principal": {"Service": "credentials.iot.amazonaws.com",
       "Action": "sts:AssumeRole"
     }
   ]
 }
-
 """)
 alias = aws.iot.RoleAlias("alias",
     alias="Thermostat-dynamodb-access-role-alias",
@@ -55,19 +115,17 @@ alias = aws.iot.RoleAlias("alias",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const role = new aws.iam.Role("role", {
-    policy: `{
+const role = new aws.iam.Role("role", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
       "Effect": "Allow",
-      "Principal": {"Service": "credentials.iot.amazonaws.com"},
+      "Principal": {"Service": "credentials.iot.amazonaws.com",
       "Action": "sts:AssumeRole"
     }
   ]
 }
-`,
-});
+`});
 const alias = new aws.iot.RoleAlias("alias", {
     alias: "Thermostat-dynamodb-access-role-alias",
     roleArn: role.arn,
@@ -92,7 +150,7 @@ const alias = new aws.iot.RoleAlias("alias", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#RoleAlias">NewRoleAlias</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#RoleAliasArgs">RoleAliasArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#RoleAlias">RoleAlias</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#RoleAlias">NewRoleAlias</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#RoleAliasArgs">RoleAliasArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#RoleAlias">RoleAlias</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -166,7 +224,7 @@ const alias = new aws.iot.RoleAlias("alias", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -186,7 +244,7 @@ const alias = new aws.iot.RoleAlias("alias", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#RoleAliasArgs">RoleAliasArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#RoleAliasArgs">RoleAliasArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -196,7 +254,7 @@ const alias = new aws.iot.RoleAlias("alias", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -559,7 +617,7 @@ Get an existing RoleAlias resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoleAlias<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#RoleAliasState">RoleAliasState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#RoleAlias">RoleAlias</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoleAlias<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#RoleAliasState">RoleAliasState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#RoleAlias">RoleAlias</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

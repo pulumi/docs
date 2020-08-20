@@ -397,9 +397,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.AccountTeamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeamMember</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accepted</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invited_by_user_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_email</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>During the creation of <code class="docutils literal notranslate"><span class="pre">.AccountTeamMember</span></code> resource, an email invitation will be sent
-to a user using <code class="docutils literal notranslate"><span class="pre">user_email</span></code> address. If the user accepts an invitation, he or she will become a member of the account team. 
-The deletion of <code class="docutils literal notranslate"><span class="pre">.AccountTeamMember</span></code> will not only delete invitation if one was sent but not yet accepted by the 
+<dd><p>During the creation of <code class="docutils literal notranslate"><span class="pre">AccountTeamMember</span></code> resource, an email invitation will be sent
+to a user using <code class="docutils literal notranslate"><span class="pre">user_email</span></code> address. If the user accepts an invitation, he or she will become a member of the account team.
+The deletion of <code class="docutils literal notranslate"><span class="pre">AccountTeamMember</span></code> will not only delete invitation if one was sent but not yet accepted by the
 user, and it will also eliminate an account team member if one has accepted an invitation previously.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
@@ -523,7 +523,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.AccountTeamProject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeamProject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamProject" title="Permalink to this definition">¶</a></dt>
-<dd><p>The account team project is intended to link and existing project to the existing account team. It is important to note 
+<dd><p>The account team project is intended to link and existing project to the existing account team. It is important to note
 that the project should have an <code class="docutils literal notranslate"><span class="pre">account_id</span></code> property set and equal to account team you are trying to link this project.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
@@ -658,6 +658,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aiven.AwaitableGetCassandaResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetCassandaResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetCassandaResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aiven.AwaitableGetConnectionPoolResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetConnectionPoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">connection_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetConnectionPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -673,13 +678,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aiven.AwaitableGetElasticSearchResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetElasticSearchResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetElasticSearchResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.AwaitableGetGrafanaResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetGrafanaResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetGrafanaResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.AwaitableGetInfluxDbResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetInfluxDbResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetInfluxDbResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aiven.AwaitableGetKafkaAclResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetKafkaAclResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permission</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetKafkaAclResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aiven.AwaitableGetKafkaConnectResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetKafkaConnectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetKafkaConnectResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aiven.AwaitableGetKafkaConnectorResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetKafkaConnectorResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connector_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_author</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_doc_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tasks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetKafkaConnectorResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.AwaitableGetKafkaMirrorMakerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetKafkaMirrorMakerResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetKafkaMirrorMakerResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.AwaitableGetKafkaResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetKafkaResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetKafkaResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -694,12 +729,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aiven.AwaitableGetKafkaTopicResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetKafkaTopicResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetKafkaTopicResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetKafkaTopicResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetKafkaTopicResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_aiven.AwaitableGetMirrorMakerReplicationFlowResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetMirrorMakerReplicationFlowResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topics_blacklists</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetMirrorMakerReplicationFlowResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.AwaitableGetMySqlResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetMySqlResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetMySqlResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.AwaitableGetPgResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetPgResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetPgResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -714,7 +759,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aiven.AwaitableGetProjectVpcResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetProjectVpcResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetProjectVpcResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetProjectVpcResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetProjectVpcResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.AwaitableGetRedisResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetRedisResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetRedisResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -729,7 +779,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aiven.AwaitableGetServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -738,9 +788,298 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="py class">
-<dt id="pulumi_aiven.AwaitableGetVpcPeeringConnectionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetVpcPeeringConnectionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetVpcPeeringConnectionResult" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_aiven.AwaitableGetTransitGatewayVpcAttachmentResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetTransitGatewayVpcAttachmentResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_peer_network_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetTransitGatewayVpcAttachmentResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.AwaitableGetVpcPeeringConnectionResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetVpcPeeringConnectionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_azure_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_azure_tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_resource_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetVpcPeeringConnectionResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.Cassandra">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Cassandra</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Cassandra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Cassandra resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[dict] cassandra: Cassandra server provided values
+:param pulumi.Input[dict] cassandra_user_config: Cassandra user configurable settings
+:param pulumi.Input[str] cloud_name: Cloud the service runs in
+:param pulumi.Input[str] maintenance_window_dow: Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.
+:param pulumi.Input[str] maintenance_window_time: Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.
+:param pulumi.Input[str] plan: Subscription plan
+:param pulumi.Input[str] project: Target project
+:param pulumi.Input[str] project_vpc_id: Identifier of the VPC the service should be in, if any
+:param pulumi.Input[list] service_integrations: Service integrations to specify when creating a service. Not applied after initial service creation
+:param pulumi.Input[str] service_name: Service name
+:param pulumi.Input[bool] termination_protection: Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+<p>The <strong>cassandra_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">migrateSstableloader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.cassandra">
+<code class="sig-name descname">cassandra</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.cassandra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cassandra server provided values</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.cassandra_user_config">
+<code class="sig-name descname">cassandra_user_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.cassandra_user_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cassandra user configurable settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">migrateSstableloader</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.cloud_name">
+<code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.cloud_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud the service runs in</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.components">
+<code class="sig-name descname">components</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service component information objects</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.maintenance_window_dow">
+<code class="sig-name descname">maintenance_window_dow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.maintenance_window_time">
+<code class="sig-name descname">maintenance_window_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.maintenance_window_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.plan">
+<code class="sig-name descname">plan</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscription plan</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target project</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.project_vpc_id">
+<code class="sig-name descname">project_vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.project_vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the VPC the service should be in, if any</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.service_host">
+<code class="sig-name descname">service_host</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.service_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service hostname</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.service_integrations">
+<code class="sig-name descname">service_integrations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.service_integrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service integrations to specify when creating a service. Not applied after initial service creation</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.service_name">
+<code class="sig-name descname">service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.service_password">
+<code class="sig-name descname">service_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.service_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.service_port">
+<code class="sig-name descname">service_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.service_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service port</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.service_type">
+<code class="sig-name descname">service_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.service_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aiven internal service type code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.service_uri">
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.service_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.service_username">
+<code class="sig-name descname">service_username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.service_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Cassandra.termination_protection">
+<code class="sig-name descname">termination_protection</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Cassandra.termination_protection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Cassandra.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Cassandra.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Cassandra resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cassandra</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cassandra server provided values</p></li>
+<li><p><strong>cassandra_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cassandra user configurable settings</p></li>
+<li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
+<li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service component information objects</p></li>
+<li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p></li>
+<li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subscription plan</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target project</p></li>
+<li><p><strong>project_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC the service should be in, if any</p></li>
+<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service hostname</p></li>
+<li><p><strong>service_integrations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service integrations to specify when creating a service. Not applied after initial service creation</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service name</p></li>
+<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the service, if applicable</p></li>
+<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Service port</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aiven internal service type code</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p></li>
+<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the service, if applicable</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state</p></li>
+<li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prevent service from being deleted. It is recommended to have this enabled for all services.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>cassandra_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">migrateSstableloader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Cassandra.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Cassandra.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Cassandra.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Cassandra.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="py class">
 <dt id="pulumi_aiven.ConnectionPool">
@@ -1009,6 +1348,448 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aiven.ElasticSearch">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ElasticSearch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ElasticSearch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ElasticSearch resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_name: Cloud the service runs in
+:param pulumi.Input[dict] elasticsearch: Elasticsearch server provided values
+:param pulumi.Input[dict] elasticsearch_user_config: Elasticsearch user configurable settings
+:param pulumi.Input[str] maintenance_window_dow: Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.
+:param pulumi.Input[str] maintenance_window_time: Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.
+:param pulumi.Input[str] plan: Subscription plan
+:param pulumi.Input[str] project: Target project
+:param pulumi.Input[str] project_vpc_id: Identifier of the VPC the service should be in, if any
+:param pulumi.Input[list] service_integrations: Service integrations to specify when creating a service. Not applied after initial service creation
+:param pulumi.Input[str] service_name: Service name
+:param pulumi.Input[bool] termination_protection: Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+<p>The <strong>elasticsearch</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">kibanaUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>elasticsearch_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableReplicationFactorAdjustment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionAutoCreateIndexEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionDestructiveRequiresName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxContentLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxHeaderSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxInitialLineLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesFielddataCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesMemoryIndexBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolGetQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolGetSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolIndexQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolIndexSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchThrottledQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchThrottledSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolWriteQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolWriteSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearchVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexPatterns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIndexCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearchRequestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxOldSpaceSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIndexCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryBasebackupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.cloud_name">
+<code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.cloud_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud the service runs in</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.components">
+<code class="sig-name descname">components</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service component information objects</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.elasticsearch">
+<code class="sig-name descname">elasticsearch</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.elasticsearch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Elasticsearch server provided values</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">kibanaUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.elasticsearch_user_config">
+<code class="sig-name descname">elasticsearch_user_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.elasticsearch_user_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Elasticsearch user configurable settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableReplicationFactorAdjustment</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionAutoCreateIndexEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionDestructiveRequiresName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxContentLength</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxHeaderSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxInitialLineLength</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesFielddataCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesMemoryIndexBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolGetQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolGetSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolIndexQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolIndexSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchThrottledQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchThrottledSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolWriteQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolWriteSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearchVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexPatterns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIndexCount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearchRequestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxOldSpaceSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIndexCount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryBasebackupName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.maintenance_window_dow">
+<code class="sig-name descname">maintenance_window_dow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.maintenance_window_time">
+<code class="sig-name descname">maintenance_window_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.maintenance_window_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.plan">
+<code class="sig-name descname">plan</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscription plan</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target project</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.project_vpc_id">
+<code class="sig-name descname">project_vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.project_vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the VPC the service should be in, if any</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.service_host">
+<code class="sig-name descname">service_host</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.service_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service hostname</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.service_integrations">
+<code class="sig-name descname">service_integrations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.service_integrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service integrations to specify when creating a service. Not applied after initial service creation</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.service_name">
+<code class="sig-name descname">service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.service_password">
+<code class="sig-name descname">service_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.service_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.service_port">
+<code class="sig-name descname">service_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.service_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service port</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.service_type">
+<code class="sig-name descname">service_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.service_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aiven internal service type code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.service_uri">
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.service_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.service_username">
+<code class="sig-name descname">service_username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.service_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.ElasticSearch.termination_protection">
+<code class="sig-name descname">termination_protection</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ElasticSearch.termination_protection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.ElasticSearch.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ElasticSearch.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ElasticSearch resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
+<li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service component information objects</p></li>
+<li><p><strong>elasticsearch</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Elasticsearch server provided values</p></li>
+<li><p><strong>elasticsearch_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Elasticsearch user configurable settings</p></li>
+<li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p></li>
+<li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subscription plan</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target project</p></li>
+<li><p><strong>project_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC the service should be in, if any</p></li>
+<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service hostname</p></li>
+<li><p><strong>service_integrations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service integrations to specify when creating a service. Not applied after initial service creation</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service name</p></li>
+<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the service, if applicable</p></li>
+<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Service port</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aiven internal service type code</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p></li>
+<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the service, if applicable</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state</p></li>
+<li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prevent service from being deleted. It is recommended to have this enabled for all services.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>elasticsearch</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">kibanaUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>elasticsearch_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableReplicationFactorAdjustment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionAutoCreateIndexEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionDestructiveRequiresName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxContentLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxHeaderSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxInitialLineLength</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesFielddataCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesMemoryIndexBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolGetQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolGetSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolIndexQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolIndexSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchThrottledQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchThrottledSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolWriteQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolWriteSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearchVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexPatterns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIndexCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearchRequestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxOldSpaceSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIndexCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryBasebackupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.ElasticSearch.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ElasticSearch.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.ElasticSearch.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ElasticSearch.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aiven.ElasticSearchAcl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ElasticSearchAcl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acls</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ElasticSearchAcl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ElasticSearchAcl resource with the given unique name, props, and options.
@@ -1212,6 +1993,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aiven.GetCassandaResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetCassandaResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetCassandaResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getCassanda.</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.GetCassandaResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetCassandaResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aiven.GetConnectionPoolResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetConnectionPoolResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">connection_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetConnectionPoolResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getConnectionPool.</p>
@@ -1248,6 +2041,42 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aiven.GetElasticSearchResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetElasticSearchResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetElasticSearchResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getElasticSearch.</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.GetElasticSearchResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetElasticSearchResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.GetGrafanaResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetGrafanaResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetGrafanaResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getGrafana.</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.GetGrafanaResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetGrafanaResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.GetInfluxDbResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetInfluxDbResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetInfluxDbResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getInfluxDb.</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.GetInfluxDbResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetInfluxDbResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aiven.GetKafkaAclResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetKafkaAclResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permission</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetKafkaAclResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKafkaAcl.</p>
@@ -1260,12 +2089,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aiven.GetKafkaConnectResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetKafkaConnectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetKafkaConnectResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getKafkaConnect.</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.GetKafkaConnectResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetKafkaConnectResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aiven.GetKafkaConnectorResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetKafkaConnectorResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connector_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_author</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_class</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_doc_url</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_title</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plugin_version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tasks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetKafkaConnectorResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKafkaConnector.</p>
 <dl class="py attribute">
 <dt id="pulumi_aiven.GetKafkaConnectorResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetKafkaConnectorResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.GetKafkaMirrorMakerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetKafkaMirrorMakerResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getKafkaMirrorMaker.</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.GetKafkaMirrorMakerResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.GetKafkaResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetKafkaResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetKafkaResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getKafka.</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.GetKafkaResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetKafkaResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -1297,7 +2162,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aiven.GetKafkaTopicResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetKafkaTopicResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetKafkaTopicResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetKafkaTopicResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetKafkaTopicResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKafkaTopic.</p>
 <dl class="py attribute">
 <dt id="pulumi_aiven.GetKafkaTopicResult.id">
@@ -1314,6 +2179,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py attribute">
 <dt id="pulumi_aiven.GetMirrorMakerReplicationFlowResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetMirrorMakerReplicationFlowResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.GetMySqlResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetMySqlResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetMySqlResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getMySql.</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.GetMySqlResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetMySqlResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.GetPgResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetPgResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetPgResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getPg.</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.GetPgResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetPgResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -1345,11 +2234,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aiven.GetProjectVpcResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetProjectVpcResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetProjectVpcResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetProjectVpcResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetProjectVpcResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProjectVpc.</p>
 <dl class="py attribute">
 <dt id="pulumi_aiven.GetProjectVpcResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetProjectVpcResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.GetRedisResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetRedisResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetRedisResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getRedis.</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.GetRedisResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetRedisResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -1381,7 +2282,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aiven.GetServiceResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getService.</p>
 <dl class="py attribute">
 <dt id="pulumi_aiven.GetServiceResult.id">
@@ -1404,13 +2305,1336 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aiven.GetTransitGatewayVpcAttachmentResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetTransitGatewayVpcAttachmentResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_peer_network_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetTransitGatewayVpcAttachmentResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getTransitGatewayVpcAttachment.</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.GetTransitGatewayVpcAttachmentResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetTransitGatewayVpcAttachmentResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aiven.GetVpcPeeringConnectionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetVpcPeeringConnectionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetVpcPeeringConnectionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetVpcPeeringConnectionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_azure_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_azure_tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_resource_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetVpcPeeringConnectionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVpcPeeringConnection.</p>
 <dl class="py attribute">
 <dt id="pulumi_aiven.GetVpcPeeringConnectionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.GetVpcPeeringConnectionResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.Grafana">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Grafana</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Grafana" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Grafana resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_name: Cloud the service runs in
+:param pulumi.Input[dict] grafana: Grafana server provided values
+:param pulumi.Input[dict] grafana_user_config: Grafana user configurable settings
+:param pulumi.Input[str] maintenance_window_dow: Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.
+:param pulumi.Input[str] maintenance_window_time: Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.
+:param pulumi.Input[str] plan: Subscription plan
+:param pulumi.Input[str] project: Target project
+:param pulumi.Input[str] project_vpc_id: Identifier of the VPC the service should be in, if any
+:param pulumi.Input[list] service_integrations: Service integrations to specify when creating a service. Not applied after initial service creation
+:param pulumi.Input[str] service_name: Service name
+:param pulumi.Input[bool] termination_protection: Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+<p>The <strong>grafana_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingErrorOrTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingNodataOrNullvalues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowEmbedding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authBasicEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGenericOauth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrganizations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apiUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGithub</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrganizations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">teamIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGitlab</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apiUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGoogle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookieSamesite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dashboardsVersionsToKeep</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataproxySendUserHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataproxyTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableGravatar</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">editorsCanAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">externalImageStorage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">googleAnalyticsUaId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">grafana</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">grafana</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smtpServer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skipVerify</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userAutoAssignOrg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userAutoAssignOrgRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">viewersCanEdit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.cloud_name">
+<code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.cloud_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud the service runs in</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.components">
+<code class="sig-name descname">components</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service component information objects</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.grafana">
+<code class="sig-name descname">grafana</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.grafana" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grafana server provided values</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.grafana_user_config">
+<code class="sig-name descname">grafana_user_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.grafana_user_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grafana user configurable settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingErrorOrTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingNodataOrNullvalues</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowEmbedding</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authBasicEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGenericOauth</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrganizations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apiUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGithub</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrganizations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">teamIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGitlab</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apiUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGoogle</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookieSamesite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dashboardsVersionsToKeep</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataproxySendUserHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataproxyTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableGravatar</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">editorsCanAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">externalImageStorage</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">googleAnalyticsUaId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">grafana</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">grafana</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smtpServer</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skipVerify</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userAutoAssignOrg</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userAutoAssignOrgRole</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">viewersCanEdit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.maintenance_window_dow">
+<code class="sig-name descname">maintenance_window_dow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.maintenance_window_time">
+<code class="sig-name descname">maintenance_window_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.maintenance_window_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.plan">
+<code class="sig-name descname">plan</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscription plan</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target project</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.project_vpc_id">
+<code class="sig-name descname">project_vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.project_vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the VPC the service should be in, if any</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.service_host">
+<code class="sig-name descname">service_host</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.service_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service hostname</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.service_integrations">
+<code class="sig-name descname">service_integrations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.service_integrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service integrations to specify when creating a service. Not applied after initial service creation</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.service_name">
+<code class="sig-name descname">service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.service_password">
+<code class="sig-name descname">service_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.service_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.service_port">
+<code class="sig-name descname">service_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.service_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service port</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.service_type">
+<code class="sig-name descname">service_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.service_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aiven internal service type code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.service_uri">
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.service_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.service_username">
+<code class="sig-name descname">service_username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.service_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Grafana.termination_protection">
+<code class="sig-name descname">termination_protection</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Grafana.termination_protection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Grafana.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Grafana.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Grafana resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
+<li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service component information objects</p></li>
+<li><p><strong>grafana</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Grafana server provided values</p></li>
+<li><p><strong>grafana_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Grafana user configurable settings</p></li>
+<li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p></li>
+<li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subscription plan</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target project</p></li>
+<li><p><strong>project_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC the service should be in, if any</p></li>
+<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service hostname</p></li>
+<li><p><strong>service_integrations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service integrations to specify when creating a service. Not applied after initial service creation</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service name</p></li>
+<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the service, if applicable</p></li>
+<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Service port</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aiven internal service type code</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p></li>
+<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the service, if applicable</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state</p></li>
+<li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prevent service from being deleted. It is recommended to have this enabled for all services.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>grafana_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingErrorOrTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingNodataOrNullvalues</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowEmbedding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authBasicEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGenericOauth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrganizations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apiUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGithub</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrganizations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">teamIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGitlab</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apiUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGoogle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookieSamesite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dashboardsVersionsToKeep</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataproxySendUserHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataproxyTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableGravatar</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">editorsCanAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">externalImageStorage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">googleAnalyticsUaId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">grafana</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">grafana</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smtpServer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skipVerify</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userAutoAssignOrg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userAutoAssignOrgRole</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">viewersCanEdit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Grafana.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Grafana.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Grafana.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Grafana.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.InfluxDb">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">InfluxDb</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.InfluxDb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a InfluxDb resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_name: Cloud the service runs in
+:param pulumi.Input[dict] influxdb: InfluxDB server provided values
+:param pulumi.Input[dict] influxdb_user_config: InfluxDB user configurable settings
+:param pulumi.Input[str] maintenance_window_dow: Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.
+:param pulumi.Input[str] maintenance_window_time: Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.
+:param pulumi.Input[str] plan: Subscription plan
+:param pulumi.Input[str] project: Target project
+:param pulumi.Input[str] project_vpc_id: Identifier of the VPC the service should be in, if any
+:param pulumi.Input[list] service_integrations: Service integrations to specify when creating a service. Not applied after initial service creation
+:param pulumi.Input[str] service_name: Service name
+:param pulumi.Input[bool] termination_protection: Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+<p>The <strong>influxdb</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>influxdb_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">influxdb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">influxdb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.cloud_name">
+<code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.cloud_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud the service runs in</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.components">
+<code class="sig-name descname">components</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service component information objects</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.influxdb">
+<code class="sig-name descname">influxdb</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.influxdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>InfluxDB server provided values</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.influxdb_user_config">
+<code class="sig-name descname">influxdb_user_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.influxdb_user_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>InfluxDB user configurable settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">influxdb</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">influxdb</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.maintenance_window_dow">
+<code class="sig-name descname">maintenance_window_dow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.maintenance_window_time">
+<code class="sig-name descname">maintenance_window_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.maintenance_window_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.plan">
+<code class="sig-name descname">plan</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscription plan</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target project</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.project_vpc_id">
+<code class="sig-name descname">project_vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.project_vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the VPC the service should be in, if any</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.service_host">
+<code class="sig-name descname">service_host</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.service_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service hostname</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.service_integrations">
+<code class="sig-name descname">service_integrations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.service_integrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service integrations to specify when creating a service. Not applied after initial service creation</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.service_name">
+<code class="sig-name descname">service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.service_password">
+<code class="sig-name descname">service_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.service_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.service_port">
+<code class="sig-name descname">service_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.service_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service port</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.service_type">
+<code class="sig-name descname">service_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.service_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aiven internal service type code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.service_uri">
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.service_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.service_username">
+<code class="sig-name descname">service_username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.service_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.InfluxDb.termination_protection">
+<code class="sig-name descname">termination_protection</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.InfluxDb.termination_protection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.InfluxDb.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.InfluxDb.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing InfluxDb resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
+<li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service component information objects</p></li>
+<li><p><strong>influxdb</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – InfluxDB server provided values</p></li>
+<li><p><strong>influxdb_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – InfluxDB user configurable settings</p></li>
+<li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p></li>
+<li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subscription plan</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target project</p></li>
+<li><p><strong>project_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC the service should be in, if any</p></li>
+<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service hostname</p></li>
+<li><p><strong>service_integrations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service integrations to specify when creating a service. Not applied after initial service creation</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service name</p></li>
+<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the service, if applicable</p></li>
+<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Service port</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aiven internal service type code</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p></li>
+<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the service, if applicable</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state</p></li>
+<li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prevent service from being deleted. It is recommended to have this enabled for all services.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>influxdb</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>influxdb_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">influxdb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">influxdb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.InfluxDb.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.InfluxDb.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.InfluxDb.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.InfluxDb.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.Kafka">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Kafka</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Kafka" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Kafka resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_name: Cloud the service runs in
+:param pulumi.Input[bool] default_acl: Create default wildcard Kafka ACL
+:param pulumi.Input[dict] kafka: Kafka server provided values
+:param pulumi.Input[dict] kafka_user_config: Kafka user configurable settings
+:param pulumi.Input[str] maintenance_window_dow: Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.
+:param pulumi.Input[str] maintenance_window_time: Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.
+:param pulumi.Input[str] plan: Subscription plan
+:param pulumi.Input[str] project: Target project
+:param pulumi.Input[str] project_vpc_id: Identifier of the VPC the service should be in, if any
+:param pulumi.Input[list] service_integrations: Service integrations to specify when creating a service. Not applied after initial service creation
+:param pulumi.Input[str] service_name: Service name
+:param pulumi.Input[bool] termination_protection: Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+<p>The <strong>kafka</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">access_cert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistryUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>kafka_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoCreateTopicsEnable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compressionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionsMaxIdleMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultReplicationFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupMaxSessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupMinSessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMaxCompactionLagMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMinCleanableRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMinCompactionLagMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanupPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMessageTimestampDifferenceMaxMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMessageTimestampType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logRetentionBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerPurgatoryPurgeIntervalRequests</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaFetchMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaFetchResponseMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">socketRequestMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sasl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaConnectConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRestConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerEnableAutoCommit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerRequestMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerRequestTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerAcks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerLingerMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">simpleconsumerPoolSizeMax</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.cloud_name">
+<code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.cloud_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud the service runs in</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.components">
+<code class="sig-name descname">components</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service component information objects</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.default_acl">
+<code class="sig-name descname">default_acl</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.default_acl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create default wildcard Kafka ACL</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.kafka">
+<code class="sig-name descname">kafka</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.kafka" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kafka server provided values</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">access_cert</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistryUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.kafka_user_config">
+<code class="sig-name descname">kafka_user_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.kafka_user_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kafka user configurable settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoCreateTopicsEnable</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compressionType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionsMaxIdleMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultReplicationFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupMaxSessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupMinSessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMaxCompactionLagMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMinCleanableRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMinCompactionLagMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanupPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMessageTimestampDifferenceMaxMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMessageTimestampType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logRetentionBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerPurgatoryPurgeIntervalRequests</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaFetchMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaFetchResponseMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">socketRequestMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sasl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaConnectConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRestConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerEnableAutoCommit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerRequestMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerRequestTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerAcks</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerLingerMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">simpleconsumerPoolSizeMax</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistry</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistry</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.maintenance_window_dow">
+<code class="sig-name descname">maintenance_window_dow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.maintenance_window_time">
+<code class="sig-name descname">maintenance_window_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.maintenance_window_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.plan">
+<code class="sig-name descname">plan</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscription plan</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target project</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.project_vpc_id">
+<code class="sig-name descname">project_vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.project_vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the VPC the service should be in, if any</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.service_host">
+<code class="sig-name descname">service_host</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.service_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service hostname</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.service_integrations">
+<code class="sig-name descname">service_integrations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.service_integrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service integrations to specify when creating a service. Not applied after initial service creation</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.service_name">
+<code class="sig-name descname">service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.service_password">
+<code class="sig-name descname">service_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.service_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.service_port">
+<code class="sig-name descname">service_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.service_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service port</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.service_type">
+<code class="sig-name descname">service_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.service_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aiven internal service type code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.service_uri">
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.service_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.service_username">
+<code class="sig-name descname">service_username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.service_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Kafka.termination_protection">
+<code class="sig-name descname">termination_protection</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Kafka.termination_protection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Kafka.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Kafka.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Kafka resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
+<li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service component information objects</p></li>
+<li><p><strong>default_acl</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create default wildcard Kafka ACL</p></li>
+<li><p><strong>kafka</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Kafka server provided values</p></li>
+<li><p><strong>kafka_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Kafka user configurable settings</p></li>
+<li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p></li>
+<li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subscription plan</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target project</p></li>
+<li><p><strong>project_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC the service should be in, if any</p></li>
+<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service hostname</p></li>
+<li><p><strong>service_integrations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service integrations to specify when creating a service. Not applied after initial service creation</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service name</p></li>
+<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the service, if applicable</p></li>
+<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Service port</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aiven internal service type code</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p></li>
+<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the service, if applicable</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state</p></li>
+<li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prevent service from being deleted. It is recommended to have this enabled for all services.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>kafka</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">access_cert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistryUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>kafka_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoCreateTopicsEnable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compressionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionsMaxIdleMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultReplicationFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupMaxSessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupMinSessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMaxCompactionLagMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMinCleanableRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMinCompactionLagMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanupPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMessageTimestampDifferenceMaxMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMessageTimestampType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logRetentionBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerPurgatoryPurgeIntervalRequests</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaFetchMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaFetchResponseMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">socketRequestMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sasl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaConnectConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRestConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerEnableAutoCommit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerRequestMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerRequestTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerAcks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerLingerMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">simpleconsumerPoolSizeMax</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Kafka.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Kafka.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Kafka.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Kafka.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -1514,6 +3738,326 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_aiven.KafkaAcl.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaAcl.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.KafkaConnect">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaConnect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaConnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a KafkaConnect resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_name: Cloud the service runs in
+:param pulumi.Input[dict] kafka_connect: Kafka Connect server provided values
+:param pulumi.Input[dict] kafka_connect_user_config: Kafka Connect user configurable settings
+:param pulumi.Input[str] maintenance_window_dow: Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.
+:param pulumi.Input[str] maintenance_window_time: Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.
+:param pulumi.Input[str] plan: Subscription plan
+:param pulumi.Input[str] project: Target project
+:param pulumi.Input[str] project_vpc_id: Identifier of the VPC the service should be in, if any
+:param pulumi.Input[list] service_integrations: Service integrations to specify when creating a service. Not applied after initial service creation
+:param pulumi.Input[str] service_name: Service name
+:param pulumi.Input[bool] termination_protection: Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+<p>The <strong>kafka_connect_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.cloud_name">
+<code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.cloud_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud the service runs in</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.components">
+<code class="sig-name descname">components</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service component information objects</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.kafka_connect">
+<code class="sig-name descname">kafka_connect</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.kafka_connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kafka Connect server provided values</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.kafka_connect_user_config">
+<code class="sig-name descname">kafka_connect_user_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.kafka_connect_user_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kafka Connect user configurable settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.maintenance_window_dow">
+<code class="sig-name descname">maintenance_window_dow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.maintenance_window_time">
+<code class="sig-name descname">maintenance_window_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.maintenance_window_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.plan">
+<code class="sig-name descname">plan</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscription plan</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target project</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.project_vpc_id">
+<code class="sig-name descname">project_vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.project_vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the VPC the service should be in, if any</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.service_host">
+<code class="sig-name descname">service_host</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.service_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service hostname</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.service_integrations">
+<code class="sig-name descname">service_integrations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.service_integrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service integrations to specify when creating a service. Not applied after initial service creation</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.service_name">
+<code class="sig-name descname">service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.service_password">
+<code class="sig-name descname">service_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.service_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.service_port">
+<code class="sig-name descname">service_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.service_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service port</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.service_type">
+<code class="sig-name descname">service_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.service_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aiven internal service type code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.service_uri">
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.service_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.service_username">
+<code class="sig-name descname">service_username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.service_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaConnect.termination_protection">
+<code class="sig-name descname">termination_protection</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaConnect.termination_protection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.KafkaConnect.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaConnect.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing KafkaConnect resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
+<li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service component information objects</p></li>
+<li><p><strong>kafka_connect</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Kafka Connect server provided values</p></li>
+<li><p><strong>kafka_connect_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Kafka Connect user configurable settings</p></li>
+<li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p></li>
+<li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subscription plan</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target project</p></li>
+<li><p><strong>project_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC the service should be in, if any</p></li>
+<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service hostname</p></li>
+<li><p><strong>service_integrations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service integrations to specify when creating a service. Not applied after initial service creation</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service name</p></li>
+<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the service, if applicable</p></li>
+<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Service port</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aiven internal service type code</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p></li>
+<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the service, if applicable</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state</p></li>
+<li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prevent service from being deleted. It is recommended to have this enabled for all services.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>kafka_connect_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.KafkaConnect.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaConnect.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.KafkaConnect.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaConnect.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1664,6 +4208,278 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_aiven.KafkaConnector.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaConnector.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.KafkaMirrorMaker">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaMirrorMaker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a KafkaMirrorMaker resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_name: Cloud the service runs in
+:param pulumi.Input[dict] kafka_mirrormaker: Kafka MirrorMaker 2 server provided values
+:param pulumi.Input[dict] kafka_mirrormaker_user_config: Kafka MirrorMaker 2 specific user configurable settings
+:param pulumi.Input[str] maintenance_window_dow: Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.
+:param pulumi.Input[str] maintenance_window_time: Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.
+:param pulumi.Input[str] plan: Subscription plan
+:param pulumi.Input[str] project: Target project
+:param pulumi.Input[str] project_vpc_id: Identifier of the VPC the service should be in, if any
+:param pulumi.Input[list] service_integrations: Service integrations to specify when creating a service. Not applied after initial service creation
+:param pulumi.Input[str] service_name: Service name
+:param pulumi.Input[bool] termination_protection: Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+<p>The <strong>kafka_mirrormaker_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_mirrormaker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshGroupsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshGroupsIntervalSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshTopicsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshTopicsIntervalSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.cloud_name">
+<code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.cloud_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud the service runs in</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.components">
+<code class="sig-name descname">components</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service component information objects</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.kafka_mirrormaker">
+<code class="sig-name descname">kafka_mirrormaker</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.kafka_mirrormaker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kafka MirrorMaker 2 server provided values</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.kafka_mirrormaker_user_config">
+<code class="sig-name descname">kafka_mirrormaker_user_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.kafka_mirrormaker_user_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kafka MirrorMaker 2 specific user configurable settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_mirrormaker</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshGroupsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshGroupsIntervalSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshTopicsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshTopicsIntervalSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.maintenance_window_dow">
+<code class="sig-name descname">maintenance_window_dow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.maintenance_window_time">
+<code class="sig-name descname">maintenance_window_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.maintenance_window_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.plan">
+<code class="sig-name descname">plan</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscription plan</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target project</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.project_vpc_id">
+<code class="sig-name descname">project_vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.project_vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the VPC the service should be in, if any</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.service_host">
+<code class="sig-name descname">service_host</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service hostname</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.service_integrations">
+<code class="sig-name descname">service_integrations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_integrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service integrations to specify when creating a service. Not applied after initial service creation</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.service_name">
+<code class="sig-name descname">service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.service_password">
+<code class="sig-name descname">service_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.service_port">
+<code class="sig-name descname">service_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service port</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.service_type">
+<code class="sig-name descname">service_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aiven internal service type code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.service_uri">
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.service_username">
+<code class="sig-name descname">service_username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.KafkaMirrorMaker.termination_protection">
+<code class="sig-name descname">termination_protection</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.termination_protection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.KafkaMirrorMaker.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing KafkaMirrorMaker resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
+<li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service component information objects</p></li>
+<li><p><strong>kafka_mirrormaker</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Kafka MirrorMaker 2 server provided values</p></li>
+<li><p><strong>kafka_mirrormaker_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Kafka MirrorMaker 2 specific user configurable settings</p></li>
+<li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p></li>
+<li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subscription plan</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target project</p></li>
+<li><p><strong>project_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC the service should be in, if any</p></li>
+<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service hostname</p></li>
+<li><p><strong>service_integrations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service integrations to specify when creating a service. Not applied after initial service creation</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service name</p></li>
+<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the service, if applicable</p></li>
+<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Service port</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aiven internal service type code</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p></li>
+<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the service, if applicable</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state</p></li>
+<li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prevent service from being deleted. It is recommended to have this enabled for all services.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>kafka_mirrormaker_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_mirrormaker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshGroupsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshGroupsIntervalSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshTopicsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshTopicsIntervalSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.KafkaMirrorMaker.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.KafkaMirrorMaker.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1866,7 +4682,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aiven.KafkaTopic">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaTopic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaTopic" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaTopic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaTopic" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -1888,7 +4704,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cleanup_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Topic cleanup policy. Allowed values: delete, compact</p></li>
-<li><p><strong>client_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom Terraform Client timeouts</p></li>
 <li><p><strong>minimum_in_sync_replicas</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum required nodes in-sync replicas (ISR) to produce to a partition</p></li>
 <li><p><strong>partitions</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of partitions to create in the topic</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Project to link the kafka topic to</p></li>
@@ -1902,25 +4717,10 @@ enable this for any production Kafka topic containing critical data.</p></li>
 </ul>
 </dd>
 </dl>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 <dl class="py attribute">
 <dt id="pulumi_aiven.KafkaTopic.cleanup_policy">
 <code class="sig-name descname">cleanup_policy</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaTopic.cleanup_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Topic cleanup policy. Allowed values: delete, compact</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="pulumi_aiven.KafkaTopic.client_timeout">
-<code class="sig-name descname">client_timeout</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.KafkaTopic.client_timeout" title="Permalink to this definition">¶</a></dt>
-<dd><p>Custom Terraform Client timeouts</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1980,7 +4780,7 @@ enable this for any production Kafka topic containing critical data.</p>
 
 <dl class="py method">
 <dt id="pulumi_aiven.KafkaTopic.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaTopic.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaTopic.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing KafkaTopic resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1990,7 +4790,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cleanup_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Topic cleanup policy. Allowed values: delete, compact</p></li>
-<li><p><strong>client_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom Terraform Client timeouts</p></li>
 <li><p><strong>minimum_in_sync_replicas</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum required nodes in-sync replicas (ISR) to produce to a partition</p></li>
 <li><p><strong>partitions</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of partitions to create in the topic</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Project to link the kafka topic to</p></li>
@@ -2004,11 +4803,6 @@ enable this for any production Kafka topic containing critical data.</p></li>
 </ul>
 </dd>
 </dl>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py method">
@@ -2148,6 +4942,903 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_aiven.MirrorMakerReplicationFlow.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.MirrorMakerReplicationFlow.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.MySql">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">MySql</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.MySql" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a MySql resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_name: Cloud the service runs in
+:param pulumi.Input[str] maintenance_window_dow: Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.
+:param pulumi.Input[str] maintenance_window_time: Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.
+:param pulumi.Input[dict] mysql: MySQL specific server provided values
+:param pulumi.Input[dict] mysql_user_config: MySQL specific user configurable settings
+:param pulumi.Input[str] plan: Subscription plan
+:param pulumi.Input[str] project: Target project
+:param pulumi.Input[str] project_vpc_id: Identifier of the VPC the service should be in, if any
+:param pulumi.Input[list] service_integrations: Service integrations to specify when creating a service. Not applied after initial service creation
+:param pulumi.Input[str] service_name: Service name
+:param pulumi.Input[bool] termination_protection: Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+<p>The <strong>mysql_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupHour</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupMinute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTimeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupConcatMaxLen</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">informationSchemaStatsExpiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbFtMinTokenSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbFtServerStopwordTable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbLockWaitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbLogBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbOnlineAlterLogMaxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbPrintAllDeadlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbRollbackOnTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interactiveTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAllowedPacket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxHeapTableSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netReadTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netWriteTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sortBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlRequirePrimaryKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tmpTableSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysqlVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.cloud_name">
+<code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.cloud_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud the service runs in</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.components">
+<code class="sig-name descname">components</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service component information objects</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.maintenance_window_dow">
+<code class="sig-name descname">maintenance_window_dow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.maintenance_window_time">
+<code class="sig-name descname">maintenance_window_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.maintenance_window_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.mysql">
+<code class="sig-name descname">mysql</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.mysql" title="Permalink to this definition">¶</a></dt>
+<dd><p>MySQL specific server provided values</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.mysql_user_config">
+<code class="sig-name descname">mysql_user_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.mysql_user_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>MySQL specific user configurable settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupHour</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupMinute</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTimeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupConcatMaxLen</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">informationSchemaStatsExpiry</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbFtMinTokenSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbFtServerStopwordTable</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbLockWaitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbLogBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbOnlineAlterLogMaxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbPrintAllDeadlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbRollbackOnTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interactiveTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAllowedPacket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxHeapTableSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netReadTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netWriteTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sortBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlRequirePrimaryKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tmpTableSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysqlVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.plan">
+<code class="sig-name descname">plan</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscription plan</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target project</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.project_vpc_id">
+<code class="sig-name descname">project_vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.project_vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the VPC the service should be in, if any</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.service_host">
+<code class="sig-name descname">service_host</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.service_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service hostname</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.service_integrations">
+<code class="sig-name descname">service_integrations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.service_integrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service integrations to specify when creating a service. Not applied after initial service creation</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.service_name">
+<code class="sig-name descname">service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.service_password">
+<code class="sig-name descname">service_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.service_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.service_port">
+<code class="sig-name descname">service_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.service_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service port</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.service_type">
+<code class="sig-name descname">service_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.service_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aiven internal service type code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.service_uri">
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.service_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.service_username">
+<code class="sig-name descname">service_username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.service_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.MySql.termination_protection">
+<code class="sig-name descname">termination_protection</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.MySql.termination_protection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.MySql.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.MySql.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing MySql resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
+<li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service component information objects</p></li>
+<li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p></li>
+<li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p></li>
+<li><p><strong>mysql</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – MySQL specific server provided values</p></li>
+<li><p><strong>mysql_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – MySQL specific user configurable settings</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subscription plan</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target project</p></li>
+<li><p><strong>project_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC the service should be in, if any</p></li>
+<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service hostname</p></li>
+<li><p><strong>service_integrations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service integrations to specify when creating a service. Not applied after initial service creation</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service name</p></li>
+<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the service, if applicable</p></li>
+<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Service port</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aiven internal service type code</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p></li>
+<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the service, if applicable</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state</p></li>
+<li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prevent service from being deleted. It is recommended to have this enabled for all services.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>mysql_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupHour</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupMinute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTimeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupConcatMaxLen</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">informationSchemaStatsExpiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbFtMinTokenSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbFtServerStopwordTable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbLockWaitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbLogBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbOnlineAlterLogMaxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbPrintAllDeadlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbRollbackOnTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interactiveTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAllowedPacket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxHeapTableSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netReadTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netWriteTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sortBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlRequirePrimaryKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tmpTableSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysqlVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.MySql.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.MySql.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.MySql.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.MySql.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_aiven.Pg">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Pg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Pg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Pg resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_name: Cloud the service runs in
+:param pulumi.Input[str] maintenance_window_dow: Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.
+:param pulumi.Input[str] maintenance_window_time: Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.
+:param pulumi.Input[dict] pg: PostgreSQL specific server provided values
+:param pulumi.Input[dict] pg_user_config: PostgreSQL specific user configurable settings
+:param pulumi.Input[str] plan: Subscription plan
+:param pulumi.Input[str] project: Target project
+:param pulumi.Input[str] project_vpc_id: Identifier of the VPC the service should be in, if any
+:param pulumi.Input[list] service_integrations: Service integrations to specify when creating a service. Not applied after initial service creation
+:param pulumi.Input[str] service_name: Service name
+:param pulumi.Input[bool] termination_protection: Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+<p>The <strong>pg</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dbname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslmode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>pg_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupHour</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupMinute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumAnalyzeScaleFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumAnalyzeThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumFreezeMaxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumMaxWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumNaptime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumCostDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumCostLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumScaleFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadlockTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idleInTransactionSessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logAutovacuumMinDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logErrorVerbosity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMinDurationStatement</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLocksPerTransaction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxParallelWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxParallelWorkersPerGather</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPredLocksPerTransaction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPreparedTransactions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStackDepth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStandbyArchiveDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStandbyStreamingDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxWorkerProcesses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgStatStatementsDotTrack</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tempFileLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackActivityQuerySize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackCommitTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackFunctions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">walSenderTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">walWriterDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgReadReplica</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgServiceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreStartupParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverResetQueryAlways</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pglookout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxFailoverReplicationTimeLag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sharedBuffersPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">synchronousReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timescaledb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackgroundWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workMem</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.cloud_name">
+<code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.cloud_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud the service runs in</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.components">
+<code class="sig-name descname">components</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service component information objects</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.maintenance_window_dow">
+<code class="sig-name descname">maintenance_window_dow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.maintenance_window_time">
+<code class="sig-name descname">maintenance_window_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.maintenance_window_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.pg">
+<code class="sig-name descname">pg</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.pg" title="Permalink to this definition">¶</a></dt>
+<dd><p>PostgreSQL specific server provided values</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dbname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslmode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.pg_user_config">
+<code class="sig-name descname">pg_user_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.pg_user_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>PostgreSQL specific user configurable settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupHour</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupMinute</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumAnalyzeScaleFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumAnalyzeThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumFreezeMaxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumMaxWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumNaptime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumCostDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumCostLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumScaleFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadlockTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idleInTransactionSessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logAutovacuumMinDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logErrorVerbosity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMinDurationStatement</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLocksPerTransaction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxParallelWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxParallelWorkersPerGather</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPredLocksPerTransaction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPreparedTransactions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStackDepth</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStandbyArchiveDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStandbyStreamingDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxWorkerProcesses</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgStatStatementsDotTrack</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tempFileLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackActivityQuerySize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackCommitTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackFunctions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">walSenderTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">walWriterDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgReadReplica</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgServiceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreStartupParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverResetQueryAlways</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pglookout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxFailoverReplicationTimeLag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sharedBuffersPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">synchronousReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timescaledb</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackgroundWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variant</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workMem</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.plan">
+<code class="sig-name descname">plan</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscription plan</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target project</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.project_vpc_id">
+<code class="sig-name descname">project_vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.project_vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the VPC the service should be in, if any</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.service_host">
+<code class="sig-name descname">service_host</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.service_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service hostname</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.service_integrations">
+<code class="sig-name descname">service_integrations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.service_integrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service integrations to specify when creating a service. Not applied after initial service creation</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.service_name">
+<code class="sig-name descname">service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.service_password">
+<code class="sig-name descname">service_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.service_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.service_port">
+<code class="sig-name descname">service_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.service_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service port</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.service_type">
+<code class="sig-name descname">service_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.service_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aiven internal service type code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.service_uri">
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.service_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.service_username">
+<code class="sig-name descname">service_username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.service_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Pg.termination_protection">
+<code class="sig-name descname">termination_protection</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Pg.termination_protection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Pg.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Pg.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Pg resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
+<li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service component information objects</p></li>
+<li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p></li>
+<li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p></li>
+<li><p><strong>pg</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – PostgreSQL specific server provided values</p></li>
+<li><p><strong>pg_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – PostgreSQL specific user configurable settings</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subscription plan</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target project</p></li>
+<li><p><strong>project_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC the service should be in, if any</p></li>
+<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service hostname</p></li>
+<li><p><strong>service_integrations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service integrations to specify when creating a service. Not applied after initial service creation</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service name</p></li>
+<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the service, if applicable</p></li>
+<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Service port</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aiven internal service type code</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p></li>
+<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the service, if applicable</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state</p></li>
+<li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prevent service from being deleted. It is recommended to have this enabled for all services.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>pg</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dbname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslmode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>pg_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupHour</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupMinute</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumAnalyzeScaleFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumAnalyzeThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumFreezeMaxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumMaxWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumNaptime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumCostDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumCostLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumScaleFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadlockTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idleInTransactionSessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logAutovacuumMinDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logErrorVerbosity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMinDurationStatement</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLocksPerTransaction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxParallelWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxParallelWorkersPerGather</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPredLocksPerTransaction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPreparedTransactions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStackDepth</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStandbyArchiveDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStandbyStreamingDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxWorkerProcesses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgStatStatementsDotTrack</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tempFileLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackActivityQuerySize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackCommitTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackFunctions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">walSenderTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">walWriterDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgReadReplica</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgServiceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreStartupParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverResetQueryAlways</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pglookout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxFailoverReplicationTimeLag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sharedBuffersPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">synchronousReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timescaledb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackgroundWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workMem</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Pg.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Pg.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Pg.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Pg.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -2417,7 +6108,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aiven.ProjectVpc">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ProjectVpc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ProjectVpc" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ProjectVpc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ProjectVpc" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -2432,28 +6123,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>client_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom Terraform Client timeouts</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the VPC is in</p></li>
 <li><p><strong>network_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network address range used by the VPC like 192.168.0.0/24</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project the VPC belongs to</p></li>
 </ul>
 </dd>
 </dl>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-<dl class="py attribute">
-<dt id="pulumi_aiven.ProjectVpc.client_timeout">
-<code class="sig-name descname">client_timeout</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ProjectVpc.client_timeout" title="Permalink to this definition">¶</a></dt>
-<dd><p>Custom Terraform Client timeouts</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
-</dd></dl>
-
 <dl class="py attribute">
 <dt id="pulumi_aiven.ProjectVpc.cloud_name">
 <code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.ProjectVpc.cloud_name" title="Permalink to this definition">¶</a></dt>
@@ -2480,7 +6155,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_aiven.ProjectVpc.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ProjectVpc.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ProjectVpc.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ProjectVpc resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2489,7 +6164,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>client_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom Terraform Client timeouts</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the VPC is in</p></li>
 <li><p><strong>network_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network address range used by the VPC like 192.168.0.0/24</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project the VPC belongs to</p></li>
@@ -2497,11 +6171,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py method">
@@ -2597,15 +6266,344 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aiven.Redis">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Redis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Redis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Redis resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cloud_name: Cloud the service runs in
+:param pulumi.Input[str] maintenance_window_dow: Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.
+:param pulumi.Input[str] maintenance_window_time: Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.
+:param pulumi.Input[str] plan: Subscription plan
+:param pulumi.Input[str] project: Target project
+:param pulumi.Input[str] project_vpc_id: Identifier of the VPC the service should be in, if any
+:param pulumi.Input[dict] redis: Redis server provided values
+:param pulumi.Input[dict] redis_user_config: Redis user configurable settings
+:param pulumi.Input[list] service_integrations: Service integrations to specify when creating a service. Not applied after initial service creation
+:param pulumi.Input[str] service_name: Service name
+:param pulumi.Input[bool] termination_protection: Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+<p>The <strong>redis_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">migration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisLfuDecayTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisLfuLogFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisMaxmemoryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisNotifyKeyspaceEvents</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.cloud_name">
+<code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.cloud_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud the service runs in</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.components">
+<code class="sig-name descname">components</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service component information objects</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.maintenance_window_dow">
+<code class="sig-name descname">maintenance_window_dow</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.maintenance_window_time">
+<code class="sig-name descname">maintenance_window_time</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.maintenance_window_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.plan">
+<code class="sig-name descname">plan</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscription plan</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.project">
+<code class="sig-name descname">project</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target project</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.project_vpc_id">
+<code class="sig-name descname">project_vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.project_vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the VPC the service should be in, if any</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.redis">
+<code class="sig-name descname">redis</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.redis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redis server provided values</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.redis_user_config">
+<code class="sig-name descname">redis_user_config</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.redis_user_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redis user configurable settings</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">migration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redis</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redis</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisLfuDecayTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisLfuLogFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisMaxmemoryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisNotifyKeyspaceEvents</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.service_host">
+<code class="sig-name descname">service_host</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.service_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service hostname</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.service_integrations">
+<code class="sig-name descname">service_integrations</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.service_integrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service integrations to specify when creating a service. Not applied after initial service creation</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.service_name">
+<code class="sig-name descname">service_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.service_password">
+<code class="sig-name descname">service_password</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.service_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.service_port">
+<code class="sig-name descname">service_port</code><em class="property">: pulumi.Output[float]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.service_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service port</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.service_type">
+<code class="sig-name descname">service_type</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.service_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aiven internal service type code</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.service_uri">
+<code class="sig-name descname">service_uri</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.service_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.service_username">
+<code class="sig-name descname">service_username</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.service_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Username used for connecting to the service, if applicable</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Service state</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.Redis.termination_protection">
+<code class="sig-name descname">termination_protection</code><em class="property">: pulumi.Output[bool]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Redis.termination_protection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevent service from being deleted. It is recommended to have this enabled for all services.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Redis.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Redis.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Redis resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
+<li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service component information objects</p></li>
+<li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Day of week when maintenance operations should be performed. One monday, tuesday, wednesday, etc.</p></li>
+<li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time of day when maintenance operations should be performed. UTC time in HH:mm:ss format.</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subscription plan</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Target project</p></li>
+<li><p><strong>project_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC the service should be in, if any</p></li>
+<li><p><strong>redis</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Redis server provided values</p></li>
+<li><p><strong>redis_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Redis user configurable settings</p></li>
+<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service hostname</p></li>
+<li><p><strong>service_integrations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service integrations to specify when creating a service. Not applied after initial service creation</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service name</p></li>
+<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the service, if applicable</p></li>
+<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Service port</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aiven internal service type code</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the service. Service specific info is under “kafka”, “pg”, etc.</p></li>
+<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the service, if applicable</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state</p></li>
+<li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Prevent service from being deleted. It is recommended to have this enabled for all services.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>redis_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">migration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisLfuDecayTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisLfuLogFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisMaxmemoryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisNotifyKeyspaceEvents</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Redis.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Redis.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Redis.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Redis.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aiven.Service">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Service" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
 <span class="n">myservice</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s2">&quot;myservice&quot;</span><span class="p">,</span>
     <span class="n">cloud_name</span><span class="o">=</span><span class="s2">&quot;google-europe-west1&quot;</span><span class="p">,</span>
     <span class="n">pg_user_config</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;ipFilter&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;ipFilters&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
         <span class="s2">&quot;pgVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">plan</span><span class="o">=</span><span class="s2">&quot;business-8&quot;</span><span class="p">,</span>
@@ -2623,7 +6621,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cassandra</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cassandra specific server provided values</p></li>
 <li><p><strong>cassandra_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cassandra specific user configurable settings</p></li>
-<li><p><strong>client_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom Terraform Client timeouts</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
 <li><p><strong>elasticsearch</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Elasticsearch specific server provided values</p></li>
 <li><p><strong>elasticsearch_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Elasticsearch specific user configurable settings</p></li>
@@ -2671,11 +6668,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">update</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 <p>The <strong>elasticsearch</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kibanaUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -2696,6 +6688,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -2869,9 +6862,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
@@ -2921,6 +6919,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -2939,9 +6938,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafkaConnectConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -2990,6 +6994,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbLockWaitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbLogBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbOnlineAlterLogMaxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbPrintAllDeadlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbRollbackOnTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interactiveTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxAllowedPacket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -3103,6 +7108,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sharedBuffersPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">synchronousReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timescaledb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
@@ -3110,6 +7116,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">variant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workMem</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>redis_user_config</strong> object supports the following:</p>
 <ul class="simple">
@@ -3175,16 +7182,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="pulumi_aiven.Service.client_timeout">
-<code class="sig-name descname">client_timeout</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Service.client_timeout" title="Permalink to this definition">¶</a></dt>
-<dd><p>Custom Terraform Client timeouts</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">update</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
-</dd></dl>
-
-<dl class="py attribute">
 <dt id="pulumi_aiven.Service.cloud_name">
 <code class="sig-name descname">cloud_name</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.Service.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cloud the service runs in</p>
@@ -3233,6 +7230,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -3443,9 +7441,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
@@ -3511,6 +7514,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -3529,9 +7533,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafkaConnectConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -3603,6 +7612,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbLockWaitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbLogBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbOnlineAlterLogMaxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbPrintAllDeadlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbRollbackOnTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interactiveTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxAllowedPacket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -3726,6 +7736,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sharedBuffersPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">synchronousReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timescaledb</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
@@ -3733,6 +7744,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">variant</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workMem</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -3862,7 +7874,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_aiven.Service.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Service.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Service.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Service resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3873,7 +7885,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cassandra</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cassandra specific server provided values</p></li>
 <li><p><strong>cassandra_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cassandra specific user configurable settings</p></li>
-<li><p><strong>client_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom Terraform Client timeouts</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud the service runs in</p></li>
 <li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Service component information objects</p></li>
 <li><p><strong>elasticsearch</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Elasticsearch specific server provided values</p></li>
@@ -3928,11 +7939,6 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">update</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 <p>The <strong>components</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -3963,6 +7969,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -4136,9 +8143,14 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
@@ -4188,6 +8200,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -4206,9 +8219,14 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafkaConnectConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -4257,6 +8275,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbLockWaitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbLogBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbOnlineAlterLogMaxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbPrintAllDeadlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbRollbackOnTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interactiveTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxAllowedPacket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -4370,6 +8389,7 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sharedBuffersPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">synchronousReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timescaledb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
@@ -4377,6 +8397,7 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">variant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workMem</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>redis_user_config</strong> object supports the following:</p>
 <ul class="simple">
@@ -5038,8 +9059,129 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">TransitGatewayVpcAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_peer_network_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a TransitGatewayVpcAttachment resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] peer_cloud_account: AWS account ID or GCP project ID of the peered VPC
+:param pulumi.Input[str] peer_region: AWS region of the peered VPC (if not in the same region as Aiven VPC)
+:param pulumi.Input[str] peer_vpc: Transit gateway ID
+:param pulumi.Input[list] user_peer_network_cidrs: List of private IPv4 ranges to route through the peering connection
+:param pulumi.Input[str] vpc_id: The VPC the peering connection belongs to</p>
+<dl class="py attribute">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment.peer_cloud_account">
+<code class="sig-name descname">peer_cloud_account</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment.peer_cloud_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWS account ID or GCP project ID of the peered VPC</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment.peer_region">
+<code class="sig-name descname">peer_region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment.peer_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWS region of the peered VPC (if not in the same region as Aiven VPC)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment.peer_vpc">
+<code class="sig-name descname">peer_vpc</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment.peer_vpc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transit gateway ID</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment.peering_connection_id">
+<code class="sig-name descname">peering_connection_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment.peering_connection_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cloud provider identifier for the peering connection if available</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment.state">
+<code class="sig-name descname">state</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>State of the peering connection</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment.state_info">
+<code class="sig-name descname">state_info</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment.state_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>State-specific help or error information</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment.user_peer_network_cidrs">
+<code class="sig-name descname">user_peer_network_cidrs</code><em class="property">: pulumi.Output[list]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment.user_peer_network_cidrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of private IPv4 ranges to route through the peering connection</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment.vpc_id">
+<code class="sig-name descname">vpc_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment.vpc_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The VPC the peering connection belongs to</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_peer_network_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing TransitGatewayVpcAttachment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>peer_cloud_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS account ID or GCP project ID of the peered VPC</p></li>
+<li><p><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS region of the peered VPC (if not in the same region as Aiven VPC)</p></li>
+<li><p><strong>peer_vpc</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Transit gateway ID</p></li>
+<li><p><strong>peering_connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider identifier for the peering connection if available</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – State of the peering connection</p></li>
+<li><p><strong>state_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – State-specific help or error information</p></li>
+<li><p><strong>user_peer_network_cidrs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of private IPv4 ranges to route through the peering connection</p></li>
+<li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC the peering connection belongs to</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.TransitGatewayVpcAttachment.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.TransitGatewayVpcAttachment.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_aiven.VpcPeeringConnection">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">VpcPeeringConnection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.VpcPeeringConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">VpcPeeringConnection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.VpcPeeringConnection" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -5055,7 +9197,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>client_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom Terraform Client timeouts</p></li>
 <li><p><strong>peer_cloud_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS account ID or GCP project ID of the peered VPC</p></li>
 <li><p><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS region of the peered VPC (if not in the same region as Aiven VPC)</p></li>
 <li><p><strong>peer_vpc</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS VPC ID or GCP VPC network name of the peered VPC</p></li>
@@ -5063,17 +9204,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 <dl class="py attribute">
-<dt id="pulumi_aiven.VpcPeeringConnection.client_timeout">
-<code class="sig-name descname">client_timeout</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.VpcPeeringConnection.client_timeout" title="Permalink to this definition">¶</a></dt>
-<dd><p>Custom Terraform Client timeouts</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
+<dt id="pulumi_aiven.VpcPeeringConnection.peer_azure_app_id">
+<code class="sig-name descname">peer_azure_app_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.VpcPeeringConnection.peer_azure_app_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.VpcPeeringConnection.peer_azure_tenant_id">
+<code class="sig-name descname">peer_azure_tenant_id</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.VpcPeeringConnection.peer_azure_tenant_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Azure tenant id in UUID4 form</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -5086,6 +9226,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aiven.VpcPeeringConnection.peer_region">
 <code class="sig-name descname">peer_region</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.VpcPeeringConnection.peer_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>AWS region of the peered VPC (if not in the same region as Aiven VPC)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="pulumi_aiven.VpcPeeringConnection.peer_resource_group">
+<code class="sig-name descname">peer_resource_group</code><em class="property">: pulumi.Output[str]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_aiven.VpcPeeringConnection.peer_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Azure resource group name of the peered VPC</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -5120,7 +9266,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_aiven.VpcPeeringConnection.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.VpcPeeringConnection.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span></em>, <em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_azure_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_azure_tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_resource_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.VpcPeeringConnection.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VpcPeeringConnection resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -5129,9 +9275,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>client_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom Terraform Client timeouts</p></li>
+<li><p><strong>peer_azure_app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet</p></li>
+<li><p><strong>peer_azure_tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Azure tenant id in UUID4 form</p></li>
 <li><p><strong>peer_cloud_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS account ID or GCP project ID of the peered VPC</p></li>
 <li><p><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS region of the peered VPC (if not in the same region as Aiven VPC)</p></li>
+<li><p><strong>peer_resource_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Azure resource group name of the peered VPC</p></li>
 <li><p><strong>peer_vpc</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS VPC ID or GCP VPC network name of the peered VPC</p></li>
 <li><p><strong>peering_connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud provider identifier for the peering connection if available</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – State of the peering connection</p></li>
@@ -5140,10 +9288,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py method">
@@ -5240,13 +9384,50 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_aiven.get_cassanda">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_cassanda</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_cassanda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<p>The <strong>cassandra_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">migrateSstableloader</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_aiven.get_connection_pool">
 <code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_connection_pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">connection_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_mode</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_connection_pool" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">mytestpool</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_connection_pool</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
-    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+<span class="n">mytestpool</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_connection_pool</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
     <span class="n">pool_name</span><span class="o">=</span><span class="s2">&quot;&lt;POOLNAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5258,11 +9439,101 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">mydatabase</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_database</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
-    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+<span class="n">mydatabase</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_database</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
     <span class="n">database_name</span><span class="o">=</span><span class="s2">&quot;&lt;DATABASE_NAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_elastic_search">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_elastic_search</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_elastic_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>elasticsearch</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">kibanaUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>elasticsearch_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableReplicationFactorAdjustment</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionAutoCreateIndexEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionDestructiveRequiresName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxContentLength</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxHeaderSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpMaxInitialLineLength</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesFielddataCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesMemoryIndexBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolGetQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolGetSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolIndexQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolIndexSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchThrottledQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolSearchThrottledSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolWriteQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threadPoolWriteSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearchVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexPatterns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIndexCount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearchRequestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxOldSpaceSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIndexCount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">elasticsearch</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kibana</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryBasebackupName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py function">
@@ -5282,17 +9553,320 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_aiven.get_grafana">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_grafana</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_grafana" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>grafana_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingErrorOrTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alertingNodataOrNullvalues</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowEmbedding</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authBasicEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGenericOauth</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrganizations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apiUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scopes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGithub</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrganizations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">teamIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGitlab</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apiUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tokenUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authGoogle</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowSignUp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookieSamesite</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dashboardsVersionsToKeep</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataproxySendUserHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataproxyTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableGravatar</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">editorsCanAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">externalImageStorage</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">googleAnalyticsUaId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">grafana</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">grafana</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smtpServer</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skipVerify</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userAutoAssignOrg</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userAutoAssignOrgRole</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">viewersCanEdit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_influx_db">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_influx_db</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_influx_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>influxdb</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">database_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>influxdb_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">influxdb</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">influxdb</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_kafka">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_kafka</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_kafka" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>kafka</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">access_cert</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistryUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>kafka_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoCreateTopicsEnable</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compressionType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionsMaxIdleMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultReplicationFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupMaxSessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupMinSessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMaxCompactionLagMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMinCleanableRatio</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanerMinCompactionLagMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logCleanupPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMessageTimestampDifferenceMaxMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMessageTimestampType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logRetentionBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerPurgatoryPurgeIntervalRequests</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaFetchMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaFetchResponseMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">socketRequestMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sasl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaConnectConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRestConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerEnableAutoCommit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerRequestMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerRequestTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerAcks</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">producerLingerMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">simpleconsumerPoolSizeMax</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistry</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schemaRegistry</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_aiven.get_kafka_acl">
 <code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_kafka_acl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">permission</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_kafka_acl" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
+<dd><p>Use this data source to access information about an existing resource.</p>
+</dd></dl>
 
-<span class="n">mytestacl</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_kafka_acl</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
-    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
-    <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;&lt;TOPIC_NAME_PATTERN&gt;&quot;</span><span class="p">,</span>
-    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;&lt;USERNAME_PATTERN&gt;&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
+<dl class="py function">
+<dt id="pulumi_aiven.get_kafka_connect">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_kafka_connect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_kafka_connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>kafka_connect_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py function">
@@ -5303,6 +9877,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connector</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_kafka_mirror_maker">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_kafka_mirror_maker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_kafka_mirror_maker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>kafka_mirrormaker_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafka_mirrormaker</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshGroupsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshGroupsIntervalSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshTopicsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refreshTopicsIntervalSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -5320,26 +9927,205 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py function">
 <dt id="pulumi_aiven.get_kafka_topic">
-<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_kafka_topic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_kafka_topic" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_kafka_topic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cleanup_policy</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_kafka_topic" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">mytesttopic</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_kafka_topic</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
-    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+<span class="n">mytesttopic</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_kafka_topic</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
     <span class="n">topic_name</span><span class="o">=</span><span class="s2">&quot;&lt;TOPIC_NAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_aiven.get_mirror_maker_replication_flow">
 <code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_mirror_maker_replication_flow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_cluster</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topics</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topics_blacklists</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_mirror_maker_replication_flow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_my_sql">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_my_sql</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_my_sql" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>mysql_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupHour</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupMinute</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultTimeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groupConcatMaxLen</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">informationSchemaStatsExpiry</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbFtMinTokenSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbFtServerStopwordTable</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbLockWaitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbLogBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbOnlineAlterLogMaxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbPrintAllDeadlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbRollbackOnTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interactiveTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAllowedPacket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxHeapTableSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netReadTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">netWriteTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sortBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlRequirePrimaryKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tmpTableSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysqlVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mysql</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_pg">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_pg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_pg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<p>The <strong>components</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>pg</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dbname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicaUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslmode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>pg_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminUsername</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupHour</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backupMinute</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumAnalyzeScaleFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumAnalyzeThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumFreezeMaxAge</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumMaxWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumNaptime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumCostDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumCostLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumScaleFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autovacuumVacuumThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadlockTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idleInTransactionSessionTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logAutovacuumMinDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logErrorVerbosity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logMinDurationStatement</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLocksPerTransaction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxParallelWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxParallelWorkersPerGather</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPredLocksPerTransaction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPreparedTransactions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStackDepth</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStandbyArchiveDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxStandbyStreamingDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxWorkerProcesses</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgStatStatementsDotTrack</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tempFileLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackActivityQuerySize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackCommitTimestamp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trackFunctions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">walSenderTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">walWriterDelay</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgReadReplica</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgServiceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreStartupParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverResetQueryAlways</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pglookout</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxFailoverReplicationTimeLag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgbouncer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sharedBuffersPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">synchronousReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timescaledb</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBackgroundWorkers</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variant</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workMem</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py function">
@@ -5359,7 +10145,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">mytestuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_project_user</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+<span class="n">mytestuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_project_user</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
     <span class="n">email</span><span class="o">=</span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5367,28 +10153,75 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py function">
 <dt id="pulumi_aiven.get_project_vpc">
-<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_project_vpc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_project_vpc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_project_vpc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_project_vpc" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">myvpc</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_project_vpc</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+<span class="n">myvpc</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_project_vpc</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
     <span class="n">cloud_name</span><span class="o">=</span><span class="s2">&quot;google-europe-west1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_aiven.get_redis">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_redis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_redis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<p>The <strong>components</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kafkaAuthenticationMethod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>redis_user_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">migration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redis</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redis</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisLfuDecayTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisLfuLogFactor</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisMaxmemoryPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisNotifyKeyspaceEvents</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redisTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+<p>The <strong>service_integrations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">integration_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
 <dl class="py function">
 <dt id="pulumi_aiven.get_service">
-<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_service" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cassandra</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">myservice</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+<span class="n">myservice</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
     <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;&lt;SERVICE_NAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5407,11 +10240,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">update</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 <p>The <strong>components</strong> object supports the following:</p>
 <ul class="simple">
@@ -5443,6 +10271,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueriesCacheSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indicesQueryBoolMaxClauseCount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reindexRemoteWhitelists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">searchMaxBuckets</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeQueueSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolAnalyzeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">threadPoolForceMergeSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5616,9 +10445,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">ipFilters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
@@ -5668,6 +10502,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">logRetentionHours</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logSegmentBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxConnectionsPerIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIncrementalFetchSessionCacheSlots</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">messageMaxBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">numPartitions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetsRetentionMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5686,9 +10521,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">kafka_connect</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafkaConnectConfig</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectorClientConfigOverridePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerAutoOffsetReset</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerIsolationLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">consumerMaxPollRecords</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushIntervalMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offsetFlushTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionTimeoutMs</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kafkaRest</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5737,6 +10577,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbLockWaitTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbLogBufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbOnlineAlterLogMaxSize</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">innodbPrintAllDeadlocks</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">innodbRollbackOnTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interactiveTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxAllowedPacket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5850,6 +10691,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">recoveryTargetTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serviceToForkFrom</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sharedBuffersPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">synchronousReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timescaledb</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
@@ -5857,6 +10699,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">variant</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workMem</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 <p>The <strong>redis_user_config</strong> object supports the following:</p>
 <ul class="simple">
@@ -5932,7 +10775,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">myendpoint</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service_integration_endpoint</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+<span class="n">myendpoint</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service_integration_endpoint</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_project&quot;</span><span class="p">][</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
     <span class="n">endpoint_name</span><span class="o">=</span><span class="s2">&quot;&lt;ENDPOINT_NAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5976,28 +10819,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">myserviceuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service_user</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
-    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.Service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
+<span class="n">myserviceuser</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_service_user</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
+    <span class="n">service_name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_service&quot;</span><span class="p">][</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;&lt;USERNAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py function">
+<dt id="pulumi_aiven.get_transit_gateway_vpc_attachment">
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_transit_gateway_vpc_attachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_peer_network_cidrs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_transit_gateway_vpc_attachment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt id="pulumi_aiven.get_vpc_peering_connection">
-<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_vpc_peering_connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client_timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_vpc_peering_connection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_vpc_peering_connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">peer_azure_app_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_azure_tenant_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_resource_group</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_connection_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state_info</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.get_vpc_peering_connection" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
-<span class="n">mypeeringconnection</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_vpc_peering_connection</span><span class="p">(</span><span class="n">vpc_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;.ProjectVpc&quot;</span><span class="p">][</span><span class="s2">&quot;vpc_id&quot;</span><span class="p">],</span>
+<span class="n">mypeeringconnection</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">get_vpc_peering_connection</span><span class="p">(</span><span class="n">vpc_id</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;aiven_project_vpc&quot;</span><span class="p">][</span><span class="s2">&quot;vpc_id&quot;</span><span class="p">],</span>
     <span class="n">peer_cloud_account</span><span class="o">=</span><span class="s2">&quot;&lt;PEER_ACCOUNT_ID&gt;&quot;</span><span class="p">,</span>
     <span class="n">peer_vpc</span><span class="o">=</span><span class="s2">&quot;&lt;PEER_VPC_ID/NAME&gt;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The <strong>client_timeout</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
 </dd></dl>
 
 </div>

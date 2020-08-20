@@ -18,7 +18,7 @@ More information about Aurora global databases can be found in the [Aurora User 
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
+### New Global Cluster
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -41,7 +41,7 @@ class MyStack : Stack
             GlobalClusterIdentifier = "example",
         }, new CustomResourceOptions
         {
-            Provider = "aws.primary",
+            Provider = aws.Primary,
         });
         var primaryCluster = new Aws.Rds.Cluster("primaryCluster", new Aws.Rds.ClusterArgs
         {
@@ -49,14 +49,14 @@ class MyStack : Stack
             GlobalClusterIdentifier = example.Id,
         }, new CustomResourceOptions
         {
-            Provider = "aws.primary",
+            Provider = aws.Primary,
         });
         var primaryClusterInstance = new Aws.Rds.ClusterInstance("primaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
         {
             ClusterIdentifier = primaryCluster.Id,
         }, new CustomResourceOptions
         {
-            Provider = "aws.primary",
+            Provider = aws.Primary,
         });
         var secondaryCluster = new Aws.Rds.Cluster("secondaryCluster", new Aws.Rds.ClusterArgs
         {
@@ -64,10 +64,10 @@ class MyStack : Stack
             GlobalClusterIdentifier = example.Id,
         }, new CustomResourceOptions
         {
-            Provider = "aws.secondary",
+            Provider = aws.Secondary,
             DependsOn = 
             {
-                "aws_rds_cluster_instance.primary",
+                primaryClusterInstance,
             },
         });
         var secondaryClusterInstance = new Aws.Rds.ClusterInstance("secondaryClusterInstance", new Aws.Rds.ClusterInstanceArgs
@@ -75,7 +75,7 @@ class MyStack : Stack
             ClusterIdentifier = secondaryCluster.Id,
         }, new CustomResourceOptions
         {
-            Provider = "aws.secondary",
+            Provider = aws.Secondary,
         });
     }
 
@@ -89,8 +89,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/providers"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/providers"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,35 +110,35 @@ func main() {
 		}
 		example, err := rds.NewGlobalCluster(ctx, "example", &rds.GlobalClusterArgs{
 			GlobalClusterIdentifier: pulumi.String("example"),
-		}, pulumi.Provider("aws.primary"))
+		}, pulumi.Provider(aws.Primary))
 		if err != nil {
 			return err
 		}
 		primaryCluster, err := rds.NewCluster(ctx, "primaryCluster", &rds.ClusterArgs{
 			EngineMode:              pulumi.String("global"),
 			GlobalClusterIdentifier: example.ID(),
-		}, pulumi.Provider("aws.primary"))
+		}, pulumi.Provider(aws.Primary))
 		if err != nil {
 			return err
 		}
-		_, err = rds.NewClusterInstance(ctx, "primaryClusterInstance", &rds.ClusterInstanceArgs{
+		primaryClusterInstance, err := rds.NewClusterInstance(ctx, "primaryClusterInstance", &rds.ClusterInstanceArgs{
 			ClusterIdentifier: primaryCluster.ID(),
-		}, pulumi.Provider("aws.primary"))
+		}, pulumi.Provider(aws.Primary))
 		if err != nil {
 			return err
 		}
 		secondaryCluster, err := rds.NewCluster(ctx, "secondaryCluster", &rds.ClusterArgs{
 			EngineMode:              pulumi.String("global"),
 			GlobalClusterIdentifier: example.ID(),
-		}, pulumi.Provider("aws.secondary"), pulumi.DependsOn([]pulumi.Resource{
-			"aws_rds_cluster_instance.primary",
+		}, pulumi.Provider(aws.Secondary), pulumi.DependsOn([]pulumi.Resource{
+			primaryClusterInstance,
 		}))
 		if err != nil {
 			return err
 		}
 		_, err = rds.NewClusterInstance(ctx, "secondaryClusterInstance", &rds.ClusterInstanceArgs{
 			ClusterIdentifier: secondaryCluster.ID(),
-		}, pulumi.Provider("aws.secondary"))
+		}, pulumi.Provider(aws.Secondary))
 		if err != nil {
 			return err
 		}
@@ -158,20 +158,20 @@ import pulumi_pulumi as pulumi
 primary = pulumi.providers.Aws("primary", region="us-east-2")
 secondary = pulumi.providers.Aws("secondary", region="us-west-2")
 example = aws.rds.GlobalCluster("example", global_cluster_identifier="example",
-opts=ResourceOptions(provider="aws.primary"))
+opts=ResourceOptions(provider=aws["primary"]))
 primary_cluster = aws.rds.Cluster("primaryCluster",
     engine_mode="global",
     global_cluster_identifier=example.id,
-    opts=ResourceOptions(provider="aws.primary"))
+    opts=ResourceOptions(provider=aws["primary"]))
 primary_cluster_instance = aws.rds.ClusterInstance("primaryClusterInstance", cluster_identifier=primary_cluster.id,
-opts=ResourceOptions(provider="aws.primary"))
+opts=ResourceOptions(provider=aws["primary"]))
 secondary_cluster = aws.rds.Cluster("secondaryCluster",
     engine_mode="global",
     global_cluster_identifier=example.id,
-    opts=ResourceOptions(provider="aws.secondary",
-        depends_on=["aws_rds_cluster_instance.primary"]))
+    opts=ResourceOptions(provider=aws["secondary"],
+        depends_on=[primary_cluster_instance]))
 secondary_cluster_instance = aws.rds.ClusterInstance("secondaryClusterInstance", cluster_identifier=secondary_cluster.id,
-opts=ResourceOptions(provider="aws.secondary"))
+opts=ResourceOptions(provider=aws["secondary"]))
 ```
 
 {{% /example %}}
@@ -182,33 +182,119 @@ opts=ResourceOptions(provider="aws.secondary"))
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const primary = new aws.Provider("primary", {
-    region: "us-east-2",
+const primary = new aws.Provider("primary", {region: "us-east-2"});
+const secondary = new aws.Provider("secondary", {region: "us-west-2"});
+const example = new aws.rds.GlobalCluster("example", {globalClusterIdentifier: "example"}, {
+    provider: aws.primary,
 });
-const secondary = new aws.Provider("secondary", {
-    region: "us-west-2",
+const primaryCluster = new aws.rds.Cluster("primaryCluster", {
+    engineMode: "global",
+    globalClusterIdentifier: example.id,
+}, {
+    provider: aws.primary,
 });
-const example = new aws.rds.GlobalCluster("example", {
+const primaryClusterInstance = new aws.rds.ClusterInstance("primaryClusterInstance", {clusterIdentifier: primaryCluster.id}, {
+    provider: aws.primary,
+});
+const secondaryCluster = new aws.rds.Cluster("secondaryCluster", {
+    engineMode: "global",
+    globalClusterIdentifier: example.id,
+}, {
+    provider: aws.secondary,
+    dependsOn: [primaryClusterInstance],
+});
+const secondaryClusterInstance = new aws.rds.ClusterInstance("secondaryClusterInstance", {clusterIdentifier: secondaryCluster.id}, {
+    provider: aws.secondary,
+});
+```
+
+{{% /example %}}
+
+### New Global Cluster From Existing DB Cluster
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // ... other configuration ...
+        var exampleCluster = new Aws.Rds.Cluster("exampleCluster", new Aws.Rds.ClusterArgs
+        {
+        });
+        var exampleGlobalCluster = new Aws.Rds.GlobalCluster("exampleGlobalCluster", new Aws.Rds.GlobalClusterArgs
+        {
+            ForceDestroy = true,
+            GlobalClusterIdentifier = "example",
+            SourceDbClusterIdentifier = exampleCluster.Arn,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleCluster, err := rds.NewCluster(ctx, "exampleCluster", nil)
+		if err != nil {
+			return err
+		}
+		_, err = rds.NewGlobalCluster(ctx, "exampleGlobalCluster", &rds.GlobalClusterArgs{
+			ForceDestroy:              pulumi.Bool(true),
+			GlobalClusterIdentifier:   pulumi.String("example"),
+			SourceDbClusterIdentifier: exampleCluster.Arn,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+# ... other configuration ...
+example_cluster = aws.rds.Cluster("exampleCluster")
+example_global_cluster = aws.rds.GlobalCluster("exampleGlobalCluster",
+    force_destroy=True,
+    global_cluster_identifier="example",
+    source_db_cluster_identifier=example_cluster.arn)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// ... other configuration ...
+const exampleCluster = new aws.rds.Cluster("exampleCluster", {});
+const exampleGlobalCluster = new aws.rds.GlobalCluster("exampleGlobalCluster", {
+    forceDestroy: true,
     globalClusterIdentifier: "example",
-}, { provider: primary });
-const primaryCluster = new aws.rds.Cluster("primary", {
-    // ... other configuration ...
-    engineMode: "global",
-    globalClusterIdentifier: example.id,
-}, { provider: primary });
-const primaryClusterInstance = new aws.rds.ClusterInstance("primary", {
-    // ... other configuration ...
-    clusterIdentifier: primaryCluster.id,
-}, { provider: primary });
-const secondaryCluster = new aws.rds.Cluster("secondary", {
-    // ... other configuration ...
-    engineMode: "global",
-    globalClusterIdentifier: example.id,
-}, { provider: secondary, dependsOn: [primaryClusterInstance] });
-const secondaryClusterInstance = new aws.rds.ClusterInstance("secondary", {
-    // ... other configuration ...
-    clusterIdentifier: secondaryCluster.id,
-}, { provider: secondary });
+    sourceDbClusterIdentifier: exampleCluster.arn,
+});
 ```
 
 {{% /example %}}
@@ -225,11 +311,11 @@ const secondaryClusterInstance = new aws.rds.ClusterInstance("secondary", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#pulumi_aws.rds.GlobalCluster">GlobalCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>database_name=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>global_cluster_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#pulumi_aws.rds.GlobalCluster">GlobalCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>database_name=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>force_destroy=None<span class="p">, </span>global_cluster_identifier=None<span class="p">, </span>source_db_cluster_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#GlobalCluster">NewGlobalCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#GlobalClusterArgs">GlobalClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#GlobalCluster">GlobalCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#GlobalCluster">NewGlobalCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#GlobalClusterArgs">GlobalClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#GlobalCluster">GlobalCluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -303,7 +389,7 @@ const secondaryClusterInstance = new aws.rds.ClusterInstance("secondary", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -323,7 +409,7 @@ const secondaryClusterInstance = new aws.rds.ClusterInstance("secondary", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#GlobalClusterArgs">GlobalClusterArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#GlobalClusterArgs">GlobalClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -333,7 +419,7 @@ const secondaryClusterInstance = new aws.rds.ClusterInstance("secondary", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -438,8 +524,7 @@ The GlobalCluster resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the database engine to be used for this DB cluster. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -452,6 +537,27 @@ The GlobalCluster resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Engine version of the Aurora global database.
 * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forcedestroy_csharp">
+<a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcedbclusteridentifier_csharp">
+<a href="#sourcedbclusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Db<wbr>Cluster<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -512,8 +618,7 @@ The GlobalCluster resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the database engine to be used for this DB cluster. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -526,6 +631,27 @@ The GlobalCluster resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Engine version of the Aurora global database.
 * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forcedestroy_go">
+<a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcedbclusteridentifier_go">
+<a href="#sourcedbclusteridentifier_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Db<wbr>Cluster<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -586,8 +712,7 @@ The GlobalCluster resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the database engine to be used for this DB cluster. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -600,6 +725,27 @@ The GlobalCluster resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Engine version of the Aurora global database.
 * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forcedestroy_nodejs">
+<a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourcedbclusteridentifier_nodejs">
+<a href="#sourcedbclusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Db<wbr>Cluster<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -660,8 +806,7 @@ The GlobalCluster resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the database engine to be used for this DB cluster. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -674,6 +819,27 @@ The GlobalCluster resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Engine version of the Aurora global database.
 * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="force_destroy_python">
+<a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_db_cluster_identifier_python">
+<a href="#source_db_cluster_identifier_python" style="color: inherit; text-decoration: inherit;">source_<wbr>db_<wbr>cluster_<wbr>identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -717,6 +883,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="globalclustermembers_csharp">
+<a href="#globalclustermembers_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Cluster<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#globalclusterglobalclustermember">List&lt;Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Set of objects containing Global Cluster members.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="globalclusterresourceid_csharp">
 <a href="#globalclusterresourceid_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Cluster<wbr>Resource<wbr>Id</a>
 </span> 
@@ -752,6 +929,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}RDS Global Cluster Amazon Resource Name (ARN)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="globalclustermembers_go">
+<a href="#globalclustermembers_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Cluster<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#globalclusterglobalclustermember">[]Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member</a></span>
+    </dt>
+    <dd>{{% md %}}Set of objects containing Global Cluster members.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -795,6 +983,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="globalclustermembers_nodejs">
+<a href="#globalclustermembers_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Cluster<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#globalclusterglobalclustermember">Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member[]</a></span>
+    </dt>
+    <dd>{{% md %}}Set of objects containing Global Cluster members.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="globalclusterresourceid_nodejs">
 <a href="#globalclusterresourceid_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Cluster<wbr>Resource<wbr>Id</a>
 </span> 
@@ -830,6 +1029,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}RDS Global Cluster Amazon Resource Name (ARN)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="global_cluster_members_python">
+<a href="#global_cluster_members_python" style="color: inherit; text-decoration: inherit;">global_<wbr>cluster_<wbr>members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#globalclusterglobalclustermember">List[Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member]</a></span>
+    </dt>
+    <dd>{{% md %}}Set of objects containing Global Cluster members.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -872,11 +1082,11 @@ Get an existing GlobalCluster resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>database_name=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>global_cluster_identifier=None<span class="p">, </span>global_cluster_resource_id=None<span class="p">, </span>storage_encrypted=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>database_name=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>force_destroy=None<span class="p">, </span>global_cluster_identifier=None<span class="p">, </span>global_cluster_members=None<span class="p">, </span>global_cluster_resource_id=None<span class="p">, </span>source_db_cluster_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#GlobalClusterState">GlobalClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#GlobalCluster">GlobalCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#GlobalClusterState">GlobalClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#GlobalCluster">GlobalCluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1027,8 +1237,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the database engine to be used for this DB cluster. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1044,6 +1253,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_forcedestroy_csharp">
+<a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_globalclusteridentifier_csharp">
 <a href="#state_globalclusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Cluster<wbr>Identifier</a>
 </span> 
@@ -1051,6 +1271,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The global cluster identifier.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_globalclustermembers_csharp">
+<a href="#state_globalclustermembers_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Cluster<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#globalclusterglobalclustermember">List&lt;Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Set of objects containing Global Cluster members.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1063,6 +1294,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sourcedbclusteridentifier_csharp">
+<a href="#state_sourcedbclusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Db<wbr>Cluster<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1123,8 +1364,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the database engine to be used for this DB cluster. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1140,6 +1380,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_forcedestroy_go">
+<a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_globalclusteridentifier_go">
 <a href="#state_globalclusteridentifier_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Cluster<wbr>Identifier</a>
 </span> 
@@ -1147,6 +1398,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The global cluster identifier.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_globalclustermembers_go">
+<a href="#state_globalclustermembers_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Cluster<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#globalclusterglobalclustermember">[]Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member</a></span>
+    </dt>
+    <dd>{{% md %}}Set of objects containing Global Cluster members.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1159,6 +1421,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sourcedbclusteridentifier_go">
+<a href="#state_sourcedbclusteridentifier_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Db<wbr>Cluster<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1219,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the database engine to be used for this DB cluster. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1236,6 +1507,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_forcedestroy_nodejs">
+<a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_globalclusteridentifier_nodejs">
 <a href="#state_globalclusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Cluster<wbr>Identifier</a>
 </span> 
@@ -1243,6 +1525,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The global cluster identifier.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_globalclustermembers_nodejs">
+<a href="#state_globalclustermembers_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Cluster<wbr>Members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#globalclusterglobalclustermember">Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member[]</a></span>
+    </dt>
+    <dd>{{% md %}}Set of objects containing Global Cluster members.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1255,6 +1548,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sourcedbclusteridentifier_nodejs">
+<a href="#state_sourcedbclusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Db<wbr>Cluster<wbr>Identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1315,8 +1618,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the database engine to be used for this DB cluster. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1332,6 +1634,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_force_destroy_python">
+<a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_global_cluster_identifier_python">
 <a href="#state_global_cluster_identifier_python" style="color: inherit; text-decoration: inherit;">global_<wbr>cluster_<wbr>identifier</a>
 </span> 
@@ -1339,6 +1652,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The global cluster identifier.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_global_cluster_members_python">
+<a href="#state_global_cluster_members_python" style="color: inherit; text-decoration: inherit;">global_<wbr>cluster_<wbr>members</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#globalclusterglobalclustermember">List[Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member]</a></span>
+    </dt>
+    <dd>{{% md %}}Set of objects containing Global Cluster members.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1351,6 +1675,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_source_db_cluster_identifier_python">
+<a href="#state_source_db_cluster_identifier_python" style="color: inherit; text-decoration: inherit;">source_<wbr>db_<wbr>cluster_<wbr>identifier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1367,6 +1701,146 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="globalclusterglobalclustermember">Global<wbr>Cluster<wbr>Global<wbr>Cluster<wbr>Member</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GlobalClusterGlobalClusterMember">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#GlobalClusterGlobalClusterMemberOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.Outputs.GlobalClusterGlobalClusterMember.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbclusterarn_csharp">
+<a href="#dbclusterarn_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of member DB Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iswriter_csharp">
+<a href="#iswriter_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Writer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the member is the primary DB Cluster
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbclusterarn_go">
+<a href="#dbclusterarn_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of member DB Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iswriter_go">
+<a href="#iswriter_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Writer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the member is the primary DB Cluster
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbclusterarn_nodejs">
+<a href="#dbclusterarn_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of member DB Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iswriter_nodejs">
+<a href="#iswriter_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Writer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the member is the primary DB Cluster
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbclusterarn_python">
+<a href="#dbclusterarn_python" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of member DB Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iswriter_python">
+<a href="#iswriter_python" style="color: inherit; text-decoration: inherit;">is<wbr>Writer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether the member is the primary DB Cluster
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

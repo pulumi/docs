@@ -20,7 +20,7 @@ exec_summary: |
     company to migrate quickly and easily from Hashicorp Terraform and other legacy
     configuration tools, which limited their teams' ability to scale. Using Pulumi has
     helped Credijusto to migrate from Amazon ECS to Amazon EKS, and to make use of [AWS
-    Lambda](https://aws.amazon.com/lambda/) using real programming languages. This enables
+    Lambda](https://aws.amazon.com/lambda/) using familiar programming languages. This enables
     the company to modernize its infrastructure quickly and cleanly, ensuring reliability
     and accelerating recovery times when needed. Beyond infrastructure configuration and
     deployment, Credijusto is going one step further in using the new Pulumi CrossGuard
@@ -76,7 +76,7 @@ instead of domain-specific tools to manage configuration was a game-changer for
 Credijusto:
 
 > "I think it's even unfair to Terraform to compare Terraform with Pulumi because once you
-> use a real programming language to tackle a problem, you see that you can do way more in
+> use a familiar programming language to tackle a problem, you see that you can do way more in
 > less time. So, Pulumi was a natural choice based on the background and skills of our
 > people in DevOps."
 >

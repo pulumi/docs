@@ -14,8 +14,6 @@ Creates a Bookmark Application.
 
 This resource allows you to create and configure a Bookmark Application.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -39,10 +37,32 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := app.NewBookmark(ctx, "example", &app.BookmarkArgs{
+			Label: pulumi.String("Example"),
+			Url:   pulumi.String("https://example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -54,9 +74,11 @@ example = okta.app.Bookmark("example",
     label="Example",
     url="https://example.com")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -66,6 +88,7 @@ const example = new okta.app.Bookmark("example", {
     url: "https://example.com",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -80,7 +103,7 @@ const example = new okta.app.Bookmark("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#Bookmark">Bookmark</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>request_integration=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/app/#pulumi_okta.app.Bookmark">Bookmark</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>auto_submit_toolbar=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>request_integration=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -855,7 +878,7 @@ Get an existing Bookmark resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_submit_toolbar=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>name=None<span class="p">, </span>request_integration=None<span class="p">, </span>sign_on_mode=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>users=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>auto_submit_toolbar=None<span class="p">, </span>groups=None<span class="p">, </span>hide_ios=None<span class="p">, </span>hide_web=None<span class="p">, </span>label=None<span class="p">, </span>name=None<span class="p">, </span>request_integration=None<span class="p">, </span>sign_on_mode=None<span class="p">, </span>status=None<span class="p">, </span>url=None<span class="p">, </span>users=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

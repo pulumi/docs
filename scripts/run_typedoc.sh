@@ -78,6 +78,7 @@ generate_docs() {
 REPOS=(
     "aiven,pulumi-aiven,sdk/nodejs"
     "alicloud,pulumi-alicloud,sdk/nodejs"
+    "akamai,pulumi-akamai,sdk/nodejs"
     "auth0,pulumi-auth0,sdk/nodejs"
     "aws,pulumi-aws,sdk/nodejs"
     "awsx,pulumi-awsx/nodejs/awsx"
@@ -127,6 +128,7 @@ REPOS=(
     "tls,pulumi-tls,sdk/nodejs"
     "vault,pulumi-vault,sdk/nodejs"
     "vsphere,pulumi-vsphere,sdk/nodejs"
+    "wavefront,pulumi-wavefront,sdk/nodejs"
 )
 
 PIDS=()

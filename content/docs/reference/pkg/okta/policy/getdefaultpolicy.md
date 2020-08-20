@@ -12,8 +12,6 @@ meta_desc: "Explore the GetDefaultPolicy function of the policy module, includin
 
 Use this data source to retrieve a "Default" policy from Okta. This same thing can be achieved using the `okta.policy.getPolicy` with `name = "Default"`, this is simply a shortcut.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,10 +34,31 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := policy.GetDefaultPolicy(ctx, &policy.GetDefaultPolicyArgs{
+			Type: "PASSWORD",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -49,9 +68,11 @@ import pulumi_okta as okta
 
 example = okta.policy.get_default_policy(type="PASSWORD")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -60,6 +81,7 @@ const example = pulumi.output(okta.policy.getDefaultPolicy({
     type: "PASSWORD",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

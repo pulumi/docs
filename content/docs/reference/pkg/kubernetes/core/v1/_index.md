@@ -12,8 +12,6 @@ Explore the resources and functions of the core/v1 module in the Kubernetes pack
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="binding" title="Binding"><span class="symbol resource"></span>Binding</a></li>
-    <li><a href="componentstatus" title="ComponentStatus"><span class="symbol resource"></span>ComponentStatus</a></li>
-    <li><a href="componentstatuslist" title="ComponentStatusList"><span class="symbol resource"></span>ComponentStatusList</a></li>
     <li><a href="configmap" title="ConfigMap"><span class="symbol resource"></span>ConfigMap</a></li>
     <li><a href="configmaplist" title="ConfigMapList"><span class="symbol resource"></span>ConfigMapList</a></li>
     <li><a href="endpoints" title="Endpoints"><span class="symbol resource"></span>Endpoints</a></li>
@@ -53,7 +51,7 @@ Explore the resources and functions of the core/v1 module in the Kubernetes pack
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.4.1</dd>
+	<dd>2.4.3</dd>
 </dl>
 
 

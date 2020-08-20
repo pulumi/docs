@@ -11,8 +11,6 @@ meta_desc: "Explore the GetStackScript function of the Linode package, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides details about a specific Linode StackScript.
-
-
 ## Attributes
 
 This resource exports the following attributes:
@@ -42,17 +40,17 @@ This resource exports the following attributes:
 * `updated` - The date this StackScript was updated.
 
 * `user_defined_fields` - This is a list of fields defined with a special syntax inside this StackScript that allow for supplying customized parameters during deployment.
-
+  
   * `label` - A human-readable label for the field that will serve as the input prompt for entering the value during deployment.
-
+  
   * `name` - The name of the field.
-
+  
   * `example` - An example value for the field.
-
+  
   * `one_of` - A list of acceptable single values for the field.
-
+  
   * `many_of` - A list of acceptable values for the field in any quantity, combination or order.
-
+  
   * `default` - The default value. If not specified, this value will be used.
 
 {{% examples %}}
@@ -72,6 +70,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -82,12 +81,15 @@ Coming soon!
 ```python
 import pulumi
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

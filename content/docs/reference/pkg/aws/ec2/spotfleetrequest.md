@@ -30,25 +30,31 @@ class MyStack : Stack
         // Request a Spot fleet
         var cheapCompute = new Aws.Ec2.SpotFleetRequest("cheapCompute", new Aws.Ec2.SpotFleetRequestArgs
         {
-            AllocationStrategy = "diversified",
             IamFleetRole = "arn:aws:iam::12345678:role/spot-fleet",
+            SpotPrice = "0.03",
+            AllocationStrategy = "diversified",
+            TargetCapacity = 6,
+            ValidUntil = "2019-11-04T20:44:20Z",
             LaunchSpecifications = 
             {
                 new Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationArgs
                 {
-                    Ami = "ami-1234",
-                    IamInstanceProfileArn = aws_iam_instance_profile.Example.Arn,
                     InstanceType = "m4.10xlarge",
-                    PlacementTenancy = "dedicated",
+                    Ami = "ami-1234",
                     SpotPrice = "2.793",
+                    PlacementTenancy = "dedicated",
+                    IamInstanceProfileArn = aws_iam_instance_profile.Example.Arn,
                 },
                 new Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationArgs
                 {
-                    Ami = "ami-5678",
-                    AvailabilityZone = "us-west-1a",
-                    IamInstanceProfileArn = aws_iam_instance_profile.Example.Arn,
                     InstanceType = "m4.4xlarge",
+                    Ami = "ami-5678",
                     KeyName = "my-key",
+                    SpotPrice = "1.117",
+                    IamInstanceProfileArn = aws_iam_instance_profile.Example.Arn,
+                    AvailabilityZone = "us-west-1a",
+                    SubnetId = "subnet-1234",
+                    WeightedCapacity = "35",
                     RootBlockDevices = 
                     {
                         new Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs
@@ -57,18 +63,12 @@ class MyStack : Stack
                             VolumeType = "gp2",
                         },
                     },
-                    SpotPrice = "1.117",
-                    SubnetId = "subnet-1234",
                     Tags = 
                     {
                         { "Name", "spot-fleet-example" },
                     },
-                    WeightedCapacity = "35",
                 },
             },
-            SpotPrice = "0.03",
-            TargetCapacity = 6,
-            ValidUntil = "2019-11-04T20:44:20Z",
         });
     }
 
@@ -82,46 +82,46 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ec2.NewSpotFleetRequest(ctx, "cheapCompute", &ec2.SpotFleetRequestArgs{
-			AllocationStrategy: pulumi.String("diversified"),
 			IamFleetRole:       pulumi.String("arn:aws:iam::12345678:role/spot-fleet"),
+			SpotPrice:          pulumi.String("0.03"),
+			AllocationStrategy: pulumi.String("diversified"),
+			TargetCapacity:     pulumi.Int(6),
+			ValidUntil:         pulumi.String("2019-11-04T20:44:20Z"),
 			LaunchSpecifications: ec2.SpotFleetRequestLaunchSpecificationArray{
 				&ec2.SpotFleetRequestLaunchSpecificationArgs{
-					Ami:                   pulumi.String("ami-1234"),
-					IamInstanceProfileArn: pulumi.String(aws_iam_instance_profile.Example.Arn),
 					InstanceType:          pulumi.String("m4.10xlarge"),
-					PlacementTenancy:      pulumi.String("dedicated"),
+					Ami:                   pulumi.String("ami-1234"),
 					SpotPrice:             pulumi.String("2.793"),
+					PlacementTenancy:      pulumi.String("dedicated"),
+					IamInstanceProfileArn: pulumi.Any(aws_iam_instance_profile.Example.Arn),
 				},
 				&ec2.SpotFleetRequestLaunchSpecificationArgs{
-					Ami:                   pulumi.String("ami-5678"),
-					AvailabilityZone:      pulumi.String("us-west-1a"),
-					IamInstanceProfileArn: pulumi.String(aws_iam_instance_profile.Example.Arn),
 					InstanceType:          pulumi.String("m4.4xlarge"),
+					Ami:                   pulumi.String("ami-5678"),
 					KeyName:               pulumi.String("my-key"),
+					SpotPrice:             pulumi.String("1.117"),
+					IamInstanceProfileArn: pulumi.Any(aws_iam_instance_profile.Example.Arn),
+					AvailabilityZone:      pulumi.String("us-west-1a"),
+					SubnetId:              pulumi.String("subnet-1234"),
+					WeightedCapacity:      pulumi.String("35"),
 					RootBlockDevices: ec2.SpotFleetRequestLaunchSpecificationRootBlockDeviceArray{
 						&ec2.SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs{
 							VolumeSize: pulumi.Int(300),
 							VolumeType: pulumi.String("gp2"),
 						},
 					},
-					SpotPrice: pulumi.String("1.117"),
-					SubnetId:  pulumi.String("subnet-1234"),
 					Tags: pulumi.StringMap{
 						"Name": pulumi.String("spot-fleet-example"),
 					},
-					WeightedCapacity: pulumi.String("35"),
 				},
 			},
-			SpotPrice:      pulumi.String("0.03"),
-			TargetCapacity: pulumi.Int(6),
-			ValidUntil:     pulumi.String("2019-11-04T20:44:20Z"),
 		})
 		if err != nil {
 			return err
@@ -140,37 +140,37 @@ import pulumi_aws as aws
 
 # Request a Spot fleet
 cheap_compute = aws.ec2.SpotFleetRequest("cheapCompute",
-    allocation_strategy="diversified",
     iam_fleet_role="arn:aws:iam::12345678:role/spot-fleet",
+    spot_price="0.03",
+    allocation_strategy="diversified",
+    target_capacity=6,
+    valid_until="2019-11-04T20:44:20Z",
     launch_specifications=[
         {
-            "ami": "ami-1234",
-            "iamInstanceProfileArn": aws_iam_instance_profile["example"]["arn"],
             "instance_type": "m4.10xlarge",
-            "placement_tenancy": "dedicated",
+            "ami": "ami-1234",
             "spot_price": "2.793",
+            "placement_tenancy": "dedicated",
+            "iamInstanceProfileArn": aws_iam_instance_profile["example"]["arn"],
         },
         {
-            "ami": "ami-5678",
-            "availability_zone": "us-west-1a",
-            "iamInstanceProfileArn": aws_iam_instance_profile["example"]["arn"],
             "instance_type": "m4.4xlarge",
+            "ami": "ami-5678",
             "key_name": "my-key",
+            "spot_price": "1.117",
+            "iamInstanceProfileArn": aws_iam_instance_profile["example"]["arn"],
+            "availability_zone": "us-west-1a",
+            "subnet_id": "subnet-1234",
+            "weightedCapacity": 35,
             "root_block_devices": [{
                 "volume_size": "300",
                 "volumeType": "gp2",
             }],
-            "spot_price": "1.117",
-            "subnet_id": "subnet-1234",
             "tags": {
                 "Name": "spot-fleet-example",
             },
-            "weightedCapacity": 35,
         },
-    ],
-    spot_price="0.03",
-    target_capacity=6,
-    valid_until="2019-11-04T20:44:20Z")
+    ])
 ```
 
 {{% /example %}}
@@ -182,38 +182,38 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 // Request a Spot fleet
-const cheapCompute = new aws.ec2.SpotFleetRequest("cheap_compute", {
-    allocationStrategy: "diversified",
+const cheapCompute = new aws.ec2.SpotFleetRequest("cheapCompute", {
     iamFleetRole: "arn:aws:iam::12345678:role/spot-fleet",
+    spotPrice: "0.03",
+    allocationStrategy: "diversified",
+    targetCapacity: 6,
+    validUntil: "2019-11-04T20:44:20Z",
     launchSpecifications: [
         {
-            ami: "ami-1234",
-            iamInstanceProfileArn: aws_iam_instance_profile_example.arn,
             instanceType: "m4.10xlarge",
-            placementTenancy: "dedicated",
+            ami: "ami-1234",
             spotPrice: "2.793",
+            placementTenancy: "dedicated",
+            iamInstanceProfileArn: aws_iam_instance_profile.example.arn,
         },
         {
-            ami: "ami-5678",
-            availabilityZone: "us-west-1a",
-            iamInstanceProfileArn: aws_iam_instance_profile_example.arn,
             instanceType: "m4.4xlarge",
+            ami: "ami-5678",
             keyName: "my-key",
+            spotPrice: "1.117",
+            iamInstanceProfileArn: aws_iam_instance_profile.example.arn,
+            availabilityZone: "us-west-1a",
+            subnetId: "subnet-1234",
+            weightedCapacity: 35,
             rootBlockDevices: [{
-                volumeSize: 300,
+                volumeSize: "300",
                 volumeType: "gp2",
             }],
-            spotPrice: "1.117",
-            subnetId: "subnet-1234",
             tags: {
                 Name: "spot-fleet-example",
             },
-            weightedCapacity: "35",
         },
     ],
-    spotPrice: "0.03",
-    targetCapacity: 6,
-    validUntil: "2019-11-04T20:44:20Z",
 });
 ```
 
@@ -221,11 +221,94 @@ const cheapCompute = new aws.ec2.SpotFleetRequest("cheap_compute", {
 
 ### Using launch templates
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fooLaunchTemplate = new Aws.Ec2.LaunchTemplate("fooLaunchTemplate", new Aws.Ec2.LaunchTemplateArgs
+        {
+            ImageId = "ami-516b9131",
+            InstanceType = "m1.small",
+            KeyName = "some-key",
+        });
+        var fooSpotFleetRequest = new Aws.Ec2.SpotFleetRequest("fooSpotFleetRequest", new Aws.Ec2.SpotFleetRequestArgs
+        {
+            IamFleetRole = "arn:aws:iam::12345678:role/spot-fleet",
+            SpotPrice = "0.005",
+            TargetCapacity = 2,
+            ValidUntil = "2019-11-04T20:44:20Z",
+            LaunchTemplateConfigs = 
+            {
+                new Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigArgs
+                {
+                    LaunchTemplateSpecification = new Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs
+                    {
+                        Id = fooLaunchTemplate.Id,
+                        Version = fooLaunchTemplate.LatestVersion,
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                aws_iam_policy_attachment.Test_attach,
+            },
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		fooLaunchTemplate, err := ec2.NewLaunchTemplate(ctx, "fooLaunchTemplate", &ec2.LaunchTemplateArgs{
+			ImageId:      pulumi.String("ami-516b9131"),
+			InstanceType: pulumi.String("m1.small"),
+			KeyName:      pulumi.String("some-key"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewSpotFleetRequest(ctx, "fooSpotFleetRequest", &ec2.SpotFleetRequestArgs{
+			IamFleetRole:   pulumi.String("arn:aws:iam::12345678:role/spot-fleet"),
+			SpotPrice:      pulumi.String("0.005"),
+			TargetCapacity: pulumi.Int(2),
+			ValidUntil:     pulumi.String("2019-11-04T20:44:20Z"),
+			LaunchTemplateConfigs: ec2.SpotFleetRequestLaunchTemplateConfigArray{
+				&ec2.SpotFleetRequestLaunchTemplateConfigArgs{
+					LaunchTemplateSpecification: &ec2.SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs{
+						Id:      fooLaunchTemplate.ID(),
+						Version: fooLaunchTemplate.LatestVersion,
+					},
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			aws_iam_policy_attachment.Test - attach,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -236,8 +319,7 @@ import pulumi_aws as aws
 foo_launch_template = aws.ec2.LaunchTemplate("fooLaunchTemplate",
     image_id="ami-516b9131",
     instance_type="m1.small",
-    key_name="some-key",
-    spot_price="0.05")
+    key_name="some-key")
 foo_spot_fleet_request = aws.ec2.SpotFleetRequest("fooSpotFleetRequest",
     iam_fleet_role="arn:aws:iam::12345678:role/spot-fleet",
     spot_price="0.005",
@@ -249,7 +331,7 @@ foo_spot_fleet_request = aws.ec2.SpotFleetRequest("fooSpotFleetRequest",
             "version": foo_launch_template.latest_version,
         },
     }],
-    opts=ResourceOptions(depends_on=["aws_iam_policy_attachment.test-attach"]))
+    opts=ResourceOptions(depends_on=[aws_iam_policy_attachment["test-attach"]]))
 ```
 
 {{% /example %}}
@@ -264,7 +346,6 @@ const fooLaunchTemplate = new aws.ec2.LaunchTemplate("fooLaunchTemplate", {
     imageId: "ami-516b9131",
     instanceType: "m1.small",
     keyName: "some-key",
-    spotPrice: "0.05",
 });
 const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", {
     iamFleetRole: "arn:aws:iam::12345678:role/spot-fleet",
@@ -278,7 +359,7 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
         },
     }],
 }, {
-    dependsOn: ["aws_iam_policy_attachment.test-attach"],
+    dependsOn: [aws_iam_policy_attachment["test-attach"]],
 });
 ```
 
@@ -330,7 +411,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -426,11 +507,130 @@ const foo = new aws.ec2.SpotFleetRequest("foo", {
 
 ### Using multiple launch configurations
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2.GetSubnetIds.InvokeAsync(new Aws.Ec2.GetSubnetIdsArgs
+        {
+            VpcId = @var.Vpc_id,
+        }));
+        var fooLaunchTemplate = new Aws.Ec2.LaunchTemplate("fooLaunchTemplate", new Aws.Ec2.LaunchTemplateArgs
+        {
+            ImageId = "ami-516b9131",
+            InstanceType = "m1.small",
+            KeyName = "some-key",
+        });
+        var fooSpotFleetRequest = new Aws.Ec2.SpotFleetRequest("fooSpotFleetRequest", new Aws.Ec2.SpotFleetRequestArgs
+        {
+            IamFleetRole = "arn:aws:iam::12345678:role/spot-fleet",
+            SpotPrice = "0.005",
+            TargetCapacity = 2,
+            ValidUntil = "2019-11-04T20:44:20Z",
+            LaunchTemplateConfigs = 
+            {
+                new Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigArgs
+                {
+                    LaunchTemplateSpecification = new Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs
+                    {
+                        Id = fooLaunchTemplate.Id,
+                        Version = fooLaunchTemplate.LatestVersion,
+                    },
+                    Overrides = 
+                    {
+                        new Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigOverrideArgs
+                        {
+                            SubnetId = data.Aws_subnets.Example.Ids[0],
+                        },
+                        new Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigOverrideArgs
+                        {
+                            SubnetId = data.Aws_subnets.Example.Ids[1],
+                        },
+                        new Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigOverrideArgs
+                        {
+                            SubnetId = data.Aws_subnets.Example.Ids[2],
+                        },
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                aws_iam_policy_attachment.Test_attach,
+            },
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.GetSubnetIds(ctx, &ec2.GetSubnetIdsArgs{
+			VpcId: _var.Vpc_id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		fooLaunchTemplate, err := ec2.NewLaunchTemplate(ctx, "fooLaunchTemplate", &ec2.LaunchTemplateArgs{
+			ImageId:      pulumi.String("ami-516b9131"),
+			InstanceType: pulumi.String("m1.small"),
+			KeyName:      pulumi.String("some-key"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewSpotFleetRequest(ctx, "fooSpotFleetRequest", &ec2.SpotFleetRequestArgs{
+			IamFleetRole:   pulumi.String("arn:aws:iam::12345678:role/spot-fleet"),
+			SpotPrice:      pulumi.String("0.005"),
+			TargetCapacity: pulumi.Int(2),
+			ValidUntil:     pulumi.String("2019-11-04T20:44:20Z"),
+			LaunchTemplateConfigs: ec2.SpotFleetRequestLaunchTemplateConfigArray{
+				&ec2.SpotFleetRequestLaunchTemplateConfigArgs{
+					LaunchTemplateSpecification: &ec2.SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs{
+						Id:      fooLaunchTemplate.ID(),
+						Version: fooLaunchTemplate.LatestVersion,
+					},
+					Overrides: ec2.SpotFleetRequestLaunchTemplateConfigOverrideArray{
+						&ec2.SpotFleetRequestLaunchTemplateConfigOverrideArgs{
+							SubnetId: pulumi.Any(data.Aws_subnets.Example.Ids[0]),
+						},
+						&ec2.SpotFleetRequestLaunchTemplateConfigOverrideArgs{
+							SubnetId: pulumi.Any(data.Aws_subnets.Example.Ids[1]),
+						},
+						&ec2.SpotFleetRequestLaunchTemplateConfigOverrideArgs{
+							SubnetId: pulumi.Any(data.Aws_subnets.Example.Ids[2]),
+						},
+					},
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			aws_iam_policy_attachment.Test - attach,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -442,8 +642,7 @@ example = aws.ec2.get_subnet_ids(vpc_id=var["vpc_id"])
 foo_launch_template = aws.ec2.LaunchTemplate("fooLaunchTemplate",
     image_id="ami-516b9131",
     instance_type="m1.small",
-    key_name="some-key",
-    spot_price="0.05")
+    key_name="some-key")
 foo_spot_fleet_request = aws.ec2.SpotFleetRequest("fooSpotFleetRequest",
     iam_fleet_role="arn:aws:iam::12345678:role/spot-fleet",
     spot_price="0.005",
@@ -466,7 +665,7 @@ foo_spot_fleet_request = aws.ec2.SpotFleetRequest("fooSpotFleetRequest",
             },
         ],
     }],
-    opts=ResourceOptions(depends_on=["aws_iam_policy_attachment.test-attach"]))
+    opts=ResourceOptions(depends_on=[aws_iam_policy_attachment["test-attach"]]))
 ```
 
 {{% /example %}}
@@ -484,7 +683,6 @@ const fooLaunchTemplate = new aws.ec2.LaunchTemplate("fooLaunchTemplate", {
     imageId: "ami-516b9131",
     instanceType: "m1.small",
     keyName: "some-key",
-    spotPrice: "0.05",
 });
 const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", {
     iamFleetRole: "arn:aws:iam::12345678:role/spot-fleet",
@@ -509,7 +707,7 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
         ],
     }],
 }, {
-    dependsOn: ["aws_iam_policy_attachment.test-attach"],
+    dependsOn: [aws_iam_policy_attachment["test-attach"]],
 });
 ```
 
@@ -531,7 +729,7 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequest">NewSpotFleetRequest</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestArgs">SpotFleetRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequest">SpotFleetRequest</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequest">NewSpotFleetRequest</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestArgs">SpotFleetRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequest">SpotFleetRequest</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -605,7 +803,7 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -625,7 +823,7 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestArgs">SpotFleetRequestArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestArgs">SpotFleetRequestArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -635,7 +833,7 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -901,7 +1099,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.
+    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1126,7 +1324,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.
+    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1351,7 +1549,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.
+    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1576,7 +1774,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.
+    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1778,7 +1976,7 @@ Get an existing SpotFleetRequest resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotFleetRequest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestState">SpotFleetRequestState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequest">SpotFleetRequest</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotFleetRequest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestState">SpotFleetRequestState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequest">SpotFleetRequest</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2111,7 +2309,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.
+    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2357,7 +2555,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.
+    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2603,7 +2801,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.
+    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2849,7 +3047,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.
+    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2886,7 +3084,7 @@ timeout of 10m is reached.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchSpecification.html">output</a> API doc for this type.
@@ -3756,7 +3954,7 @@ timeout of 10m is reached.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEbsBlockDeviceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEbsBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchSpecificationEbsBlockDevice.html">output</a> API doc for this type.
@@ -4122,7 +4320,7 @@ timeout of 10m is reached.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchSpecificationEphemeralBlockDevice.html">output</a> API doc for this type.
@@ -4248,7 +4446,7 @@ timeout of 10m is reached.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationRootBlockDeviceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchSpecificationRootBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchSpecificationRootBlockDevice.html">output</a> API doc for this type.
@@ -4534,7 +4732,7 @@ timeout of 10m is reached.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchTemplateConfig.html">output</a> API doc for this type.
@@ -4668,7 +4866,7 @@ timeout of 10m is reached.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecification.html">output</a> API doc for this type.
@@ -4846,7 +5044,7 @@ timeout of 10m is reached.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigOverrideOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestLaunchTemplateConfigOverrideOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestLaunchTemplateConfigOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestLaunchTemplateConfigOverride.html">output</a> API doc for this type.

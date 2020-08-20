@@ -60,6 +60,10 @@ within a [generic CI/CD system]({{< relref "other" >}}).
         <img src="/logos/tech/ci-cd/octopus-deploy.svg" alt="Octopus Deploy">
         <h4 class="no-anchor">Octopus Deploy</h4>
     </a>
+    <a href="{{< relref pulumi-kubernetes-operator >}}">
+        <img src="/logos/tech/ci-cd/kubernetes.png" alt="Pulumi Kubernetes Operator">
+        <h4 class="no-anchor">Pulumi Kubernetes Operator</h4>
+    </a>
     <a href="{{< relref teamcity >}}">
             <img src="/logos/tech/ci-cd/teamcity.svg" alt="JetBrains TeamCity">
             <h4 class="no-anchor">JetBrains TeamCity</h4>

@@ -29,15 +29,15 @@ class MyStack : Stack
         var bar = new Aws.Rds.Instance("bar", new Aws.Rds.InstanceArgs
         {
             AllocatedStorage = 10,
-            BackupRetentionPeriod = 0,
             Engine = "MySQL",
             EngineVersion = "5.6.21",
             InstanceClass = "db.t2.micro",
-            MaintenanceWindow = "Fri:09:00-Fri:09:30",
             Name = "baz",
-            ParameterGroupName = "default.mysql5.6",
             Password = "barbarbarbar",
             Username = "foo",
+            MaintenanceWindow = "Fri:09:00-Fri:09:30",
+            BackupRetentionPeriod = 0,
+            ParameterGroupName = "default.mysql5.6",
         });
         var test = new Aws.Rds.Snapshot("test", new Aws.Rds.SnapshotArgs
         {
@@ -56,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -64,15 +64,15 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		bar, err := rds.NewInstance(ctx, "bar", &rds.InstanceArgs{
 			AllocatedStorage:      pulumi.Int(10),
-			BackupRetentionPeriod: pulumi.Int(0),
 			Engine:                pulumi.String("MySQL"),
 			EngineVersion:         pulumi.String("5.6.21"),
 			InstanceClass:         pulumi.String("db.t2.micro"),
-			MaintenanceWindow:     pulumi.String("Fri:09:00-Fri:09:30"),
 			Name:                  pulumi.String("baz"),
-			ParameterGroupName:    pulumi.String("default.mysql5.6"),
 			Password:              pulumi.String("barbarbarbar"),
 			Username:              pulumi.String("foo"),
+			MaintenanceWindow:     pulumi.String("Fri:09:00-Fri:09:30"),
+			BackupRetentionPeriod: pulumi.Int(0),
+			ParameterGroupName:    pulumi.String("default.mysql5.6"),
 		})
 		if err != nil {
 			return err
@@ -98,15 +98,15 @@ import pulumi_aws as aws
 
 bar = aws.rds.Instance("bar",
     allocated_storage=10,
-    backup_retention_period=0,
     engine="MySQL",
     engine_version="5.6.21",
     instance_class="db.t2.micro",
-    maintenance_window="Fri:09:00-Fri:09:30",
     name="baz",
-    parameter_group_name="default.mysql5.6",
     password="barbarbarbar",
-    username="foo")
+    username="foo",
+    maintenance_window="Fri:09:00-Fri:09:30",
+    backup_retention_period=0,
+    parameter_group_name="default.mysql5.6")
 test = aws.rds.Snapshot("test",
     db_instance_identifier=bar.id,
     db_snapshot_identifier="testsnapshot1234")
@@ -122,15 +122,15 @@ import * as aws from "@pulumi/aws";
 
 const bar = new aws.rds.Instance("bar", {
     allocatedStorage: 10,
-    backupRetentionPeriod: 0,
     engine: "MySQL",
     engineVersion: "5.6.21",
     instanceClass: "db.t2.micro",
-    maintenanceWindow: "Fri:09:00-Fri:09:30",
     name: "baz",
-    parameterGroupName: "default.mysql5.6",
     password: "barbarbarbar",
     username: "foo",
+    maintenanceWindow: "Fri:09:00-Fri:09:30",
+    backupRetentionPeriod: 0,
+    parameterGroupName: "default.mysql5.6",
 });
 const test = new aws.rds.Snapshot("test", {
     dbInstanceIdentifier: bar.id,
@@ -156,7 +156,7 @@ const test = new aws.rds.Snapshot("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#Snapshot">NewSnapshot</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#SnapshotArgs">SnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#Snapshot">Snapshot</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#Snapshot">NewSnapshot</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#SnapshotArgs">SnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#Snapshot">Snapshot</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -230,7 +230,7 @@ const test = new aws.rds.Snapshot("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -250,7 +250,7 @@ const test = new aws.rds.Snapshot("test", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#SnapshotArgs">SnapshotArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#SnapshotArgs">SnapshotArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -260,7 +260,7 @@ const test = new aws.rds.Snapshot("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1319,7 +1319,7 @@ Get an existing Snapshot resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#SnapshotState">SnapshotState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#Snapshot">Snapshot</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#SnapshotState">SnapshotState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#Snapshot">Snapshot</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

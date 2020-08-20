@@ -3,7 +3,7 @@ title: "Module keyvault"
 title_tag: "Module keyvault | Package @pulumi/azure | Node.js SDK"
 linktitle: "keyvault"
 meta_desc: "Explore members of the keyvault module in the @pulumi/azure package."
-git_sha: "38f39deade34d0e187626f1cb68bf0835bc2c2d0"
+git_sha: "1ab68fc895391745ca99e4edaaef6ceeea643c4a"
 block_external_search_index: true
 ---
 
@@ -20,6 +20,7 @@ block_external_search_index: true
     <li><a href="#AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
     <li><a href="#Certifiate"><span class="symbol resource"></span>Certifiate</a></li>
     <li><a href="#Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="#CertificateIssuer"><span class="symbol resource"></span>CertificateIssuer</a></li>
     <li><a href="#Key"><span class="symbol resource"></span>Key</a></li>
     <li><a href="#KeyVault"><span class="symbol resource"></span>KeyVault</a></li>
     <li><a href="#Secret"><span class="symbol resource"></span>Secret</a></li>
@@ -29,6 +30,7 @@ block_external_search_index: true
 <ul class="api">
     <li><a href="#getAccessPolicy"><span class="symbol function"></span>getAccessPolicy</a></li>
     <li><a href="#getCertificate"><span class="symbol function"></span>getCertificate</a></li>
+    <li><a href="#getCertificateIssuer"><span class="symbol function"></span>getCertificateIssuer</a></li>
     <li><a href="#getKey"><span class="symbol function"></span>getKey</a></li>
     <li><a href="#getKeyVault"><span class="symbol function"></span>getKeyVault</a></li>
     <li><a href="#getSecret"><span class="symbol function"></span>getSecret</a></li>
@@ -41,10 +43,14 @@ block_external_search_index: true
     <li><a href="#CertifiateArgs"><span class="symbol api"></span>CertifiateArgs</a></li>
     <li><a href="#CertifiateState"><span class="symbol api"></span>CertifiateState</a></li>
     <li><a href="#CertificateArgs"><span class="symbol api"></span>CertificateArgs</a></li>
+    <li><a href="#CertificateIssuerArgs"><span class="symbol api"></span>CertificateIssuerArgs</a></li>
+    <li><a href="#CertificateIssuerState"><span class="symbol api"></span>CertificateIssuerState</a></li>
     <li><a href="#CertificateState"><span class="symbol api"></span>CertificateState</a></li>
     <li><a href="#GetAccessPolicyArgs"><span class="symbol api"></span>GetAccessPolicyArgs</a></li>
     <li><a href="#GetAccessPolicyResult"><span class="symbol api"></span>GetAccessPolicyResult</a></li>
     <li><a href="#GetCertificateArgs"><span class="symbol api"></span>GetCertificateArgs</a></li>
+    <li><a href="#GetCertificateIssuerArgs"><span class="symbol api"></span>GetCertificateIssuerArgs</a></li>
+    <li><a href="#GetCertificateIssuerResult"><span class="symbol api"></span>GetCertificateIssuerResult</a></li>
     <li><a href="#GetCertificateResult"><span class="symbol api"></span>GetCertificateResult</a></li>
     <li><a href="#GetKeyArgs"><span class="symbol api"></span>GetKeyArgs</a></li>
     <li><a href="#GetKeyResult"><span class="symbol api"></span>GetKeyResult</a></li>
@@ -63,7 +69,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AccessPolicy" data-link-title="AccessPolicy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L14">
         Resource <strong>AccessPolicy</strong>
     </a>
 </h3>
@@ -77,7 +83,7 @@ Manages a Key Vault Access Policy.
 > **NOTE:** Azure permits a maximum of 1024 Access Policies per Key Vault - [more information can be found in this document](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault#data-plane-access-control).
 
 <h4 class="pdoc-member-header" id="AccessPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -91,7 +97,7 @@ Create a AccessPolicy resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L24">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L24">method <b>get</b></a>
 </h4>
 
 
@@ -102,14 +108,14 @@ Get an existing AccessPolicy resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AccessPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L35">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L35">method <b>isInstance</b></a>
 </h4>
 
 
@@ -120,7 +126,7 @@ Returns true if the given object is an instance of AccessPolicy.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L45">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L45">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -128,7 +134,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The object ID of an Application in Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-certificatePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L51">property <b>certificatePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L51">property <b>certificatePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificatePermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -138,7 +144,7 @@ the following: `backup`, `create`, `delete`, `deleteissuers`, `get`, `getissuers
 `managecontacts`, `manageissuers`, `purge`, `recover`, `restore`, `setissuers` and `update`.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -147,7 +153,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-keyPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L57">property <b>keyPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L57">property <b>keyPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -157,7 +163,7 @@ the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `impor
 `recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L62">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L62">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -166,7 +172,7 @@ Specifies the id of the Key Vault resource. Changing this
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L69">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L69">property <b>objectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +183,7 @@ be unique for the list of access policies. Changing this forces a new resource
 to be created.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-secretPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L74">property <b>secretPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L74">property <b>secretPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretPermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -186,7 +192,7 @@ List of secret permissions, must be one or more
 from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-storagePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L78">property <b>storagePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L78">property <b>storagePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storagePermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -194,7 +200,7 @@ from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `rest
 List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L84">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L84">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -204,7 +210,7 @@ for authenticating requests to the key vault. Changing this forces a new resourc
 to be created.
 
 <h4 class="pdoc-member-header" id="AccessPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -213,7 +219,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Certifiate" data-link-title="Certifiate">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L124">
         Resource <strong>Certifiate</strong>
     </a>
 </h3>
@@ -227,7 +233,6 @@ azure.keyvault.Certifiate has been deprecated in favor of azure.keyvault.Certifi
 Manages a Key Vault Certificate.
 
 #### Example Usage
-
 ##### Generating A New Certificate)
 
 ```typescript
@@ -241,7 +246,7 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
     resourceGroupName: exampleResourceGroup.name,
     tenantId: current.then(current => current.tenantId),
     skuName: "standard",
-    access_policy: [{
+    accessPolicies: [{
         tenantId: current.then(current => current.tenantId),
         objectId: current.then(current => current.objectId),
         certificatePermissions: [
@@ -293,17 +298,17 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
 });
 const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", {
     keyVaultId: exampleKeyVault.id,
-    certificate_policy: {
-        issuer_parameters: {
+    certificatePolicy: {
+        issuerParameters: {
             name: "Self",
         },
-        key_properties: {
+        keyProperties: {
             exportable: true,
             keySize: 2048,
             keyType: "RSA",
             reuseKey: true,
         },
-        lifetime_action: [{
+        lifetimeActions: [{
             action: {
                 actionType: "AutoRenew",
             },
@@ -311,10 +316,10 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
                 daysBeforeExpiry: 30,
             },
         }],
-        secret_properties: {
+        secretProperties: {
             contentType: "application/x-pkcs12",
         },
-        x509_certificate_properties: {
+        x509CertificateProperties: {
             extendedKeyUsages: ["1.3.6.1.5.5.7.3.1"],
             keyUsages: [
                 "cRLSign",
@@ -324,7 +329,7 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
                 "keyCertSign",
                 "keyEncipherment",
             ],
-            subject_alternative_names: {
+            subjectAlternativeNames: {
                 dnsNames: [
                     "internal.contoso.com",
                     "domain.hello.world",
@@ -338,7 +343,7 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
 ```
 
 <h4 class="pdoc-member-header" id="Certifiate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L189"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L192"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -353,7 +358,7 @@ azure.keyvault.Certifiate has been deprecated in favor of azure.keyvault.Certifi
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Certifiate(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CertifiateArgs'>CertifiateArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Certifiate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L135">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L134">method <b>get</b></a>
 </h4>
 
 
@@ -364,14 +369,14 @@ Get an existing Certifiate resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Certifiate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L125">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L124">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Certifiate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L147">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L146">method <b>isInstance</b></a>
 </h4>
 
 
@@ -382,15 +387,23 @@ Returns true if the given object is an instance of Certifiate.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Certifiate-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L157">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L156">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificate'>CertifiateCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `certificate` block as defined below, used to Import an existing certificate.
 
+<h4 class="pdoc-member-header" id="Certifiate-certificateAttributes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L160">property <b>certificateAttributes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>certificateAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificateAttribute'>CertifiateCertificateAttribute</a>[]&gt;;</code></pre>
+
+A `certificateAttribute` block as defined below.
+
 <h4 class="pdoc-member-header" id="Certifiate-certificateData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L161">property <b>certificateData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L164">property <b>certificateData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -398,7 +411,7 @@ A `certificate` block as defined below, used to Import an existing certificate.
 The raw Key Vault Certificate data represented as a hexadecimal string.
 
 <h4 class="pdoc-member-header" id="Certifiate-certificatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L165">property <b>certificatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L168">property <b>certificatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicy'>CertifiateCertificatePolicy</a>&gt;;</code></pre>
@@ -406,7 +419,7 @@ The raw Key Vault Certificate data represented as a hexadecimal string.
 A `certificatePolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="Certifiate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L125">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L124">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -415,7 +428,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Certifiate-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L169">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L172">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -423,7 +436,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Key Vault where the Certificate should be created.
 
 <h4 class="pdoc-member-header" id="Certifiate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L173">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -431,7 +444,7 @@ The ID of the Key Vault where the Certificate should be created.
 Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Certifiate-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L177">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L180">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -439,7 +452,7 @@ Specifies the name of the Key Vault Certificate. Changing this forces a new reso
 The ID of the associated Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="Certifiate-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L181">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L184">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -447,7 +460,7 @@ The ID of the associated Key Vault Secret.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Certifiate-thumbprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L185">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L188">property <b>thumbprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thumbprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -455,7 +468,7 @@ A mapping of tags to assign to the resource.
 The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
 
 <h4 class="pdoc-member-header" id="Certifiate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L125">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L124">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -464,7 +477,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Certifiate-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L189">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L192">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -472,7 +485,7 @@ deployments.
 The current version of the Key Vault Certificate.
 
 <h3 class="pdoc-module-header" id="Certificate" data-link-title="Certificate">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L122">
         Resource <strong>Certificate</strong>
     </a>
 </h3>
@@ -482,7 +495,6 @@ The current version of the Key Vault Certificate.
 Manages a Key Vault Certificate.
 
 #### Example Usage
-
 ##### Generating A New Certificate)
 
 ```typescript
@@ -496,7 +508,7 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
     resourceGroupName: exampleResourceGroup.name,
     tenantId: current.then(current => current.tenantId),
     skuName: "standard",
-    access_policy: [{
+    accessPolicies: [{
         tenantId: current.then(current => current.tenantId),
         objectId: current.then(current => current.objectId),
         certificatePermissions: [
@@ -548,17 +560,17 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
 });
 const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", {
     keyVaultId: exampleKeyVault.id,
-    certificate_policy: {
-        issuer_parameters: {
+    certificatePolicy: {
+        issuerParameters: {
             name: "Self",
         },
-        key_properties: {
+        keyProperties: {
             exportable: true,
             keySize: 2048,
             keyType: "RSA",
             reuseKey: true,
         },
-        lifetime_action: [{
+        lifetimeActions: [{
             action: {
                 actionType: "AutoRenew",
             },
@@ -566,10 +578,10 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
                 daysBeforeExpiry: 30,
             },
         }],
-        secret_properties: {
+        secretProperties: {
             contentType: "application/x-pkcs12",
         },
-        x509_certificate_properties: {
+        x509CertificateProperties: {
             extendedKeyUsages: ["1.3.6.1.5.5.7.3.1"],
             keyUsages: [
                 "cRLSign",
@@ -579,7 +591,7 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
                 "keyCertSign",
                 "keyEncipherment",
             ],
-            subject_alternative_names: {
+            subjectAlternativeNames: {
                 dnsNames: [
                     "internal.contoso.com",
                     "domain.hello.world",
@@ -593,7 +605,7 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
 ```
 
 <h4 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L186"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L189"> <b>constructor</b></a>
 </h4>
 
 
@@ -607,7 +619,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L133">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L132">method <b>get</b></a>
 </h4>
 
 
@@ -618,14 +630,14 @@ Get an existing Certificate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L123">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L122">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L144">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L143">method <b>isInstance</b></a>
 </h4>
 
 
@@ -636,15 +648,23 @@ Returns true if the given object is an instance of Certificate.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Certificate-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L154">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L153">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificate'>CertificateCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A `certificate` block as defined below, used to Import an existing certificate.
 
+<h4 class="pdoc-member-header" id="Certificate-certificateAttributes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L157">property <b>certificateAttributes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>certificateAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificateAttribute'>CertificateCertificateAttribute</a>[]&gt;;</code></pre>
+
+A `certificateAttribute` block as defined below.
+
 <h4 class="pdoc-member-header" id="Certificate-certificateData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L158">property <b>certificateData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L161">property <b>certificateData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -652,7 +672,7 @@ A `certificate` block as defined below, used to Import an existing certificate.
 The raw Key Vault Certificate data represented as a hexadecimal string.
 
 <h4 class="pdoc-member-header" id="Certificate-certificatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L162">property <b>certificatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L165">property <b>certificatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicy'>CertificateCertificatePolicy</a>&gt;;</code></pre>
@@ -660,7 +680,7 @@ The raw Key Vault Certificate data represented as a hexadecimal string.
 A `certificatePolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L123">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L122">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -669,7 +689,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Certificate-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L166">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L169">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -677,7 +697,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Key Vault where the Certificate should be created.
 
 <h4 class="pdoc-member-header" id="Certificate-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L173">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -685,7 +705,7 @@ The ID of the Key Vault where the Certificate should be created.
 Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Certificate-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L174">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L177">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -693,7 +713,7 @@ Specifies the name of the Key Vault Certificate. Changing this forces a new reso
 The ID of the associated Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="Certificate-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L178">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L181">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -701,7 +721,7 @@ The ID of the associated Key Vault Secret.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Certificate-thumbprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L182">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L185">property <b>thumbprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thumbprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -709,7 +729,7 @@ A mapping of tags to assign to the resource.
 The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
 
 <h4 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L123">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L122">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -718,15 +738,165 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Certificate-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L186">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L189">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The current version of the Key Vault Certificate.
 
+<h3 class="pdoc-module-header" id="CertificateIssuer" data-link-title="CertificateIssuer">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L35">
+        Resource <strong>CertificateIssuer</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>CertificateIssuer</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Manages a Key Vault Certificate Issuer.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const current = azure.core.getClientConfig({});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    skuName: "standard",
+    tenantId: current.then(current => current.tenantId),
+});
+const exampleCertificateIssuer = new azure.keyvault.CertificateIssuer("exampleCertificateIssuer", {
+    orgId: "ExampleOrgName",
+    keyVaultId: exampleKeyVault.id,
+    providerName: "DigiCert",
+    accountId: "0000",
+    password: "example-password",
+});
+```
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L90"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> CertificateIssuer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CertificateIssuerArgs'>CertificateIssuerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a CertificateIssuer resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L45">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#CertificateIssuerState'>CertificateIssuerState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#CertificateIssuer'>CertificateIssuer</a></code></pre>
+
+
+Get an existing CertificateIssuer resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L35">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L56">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CertificateIssuer</code></pre>
+
+
+Returns true if the given object is an instance of CertificateIssuer.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-accountId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L66">property <b>accountId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The account number with the third-party Certificate Issuer.
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-admins">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L70">property <b>admins</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>admins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateIssuerAdmin'>CertificateIssuerAdmin</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+One or more `admin` blocks as defined below.
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L35">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-keyVaultId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L74">property <b>keyVaultId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Key Vault in which to create the Certificate Issuer.
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L78">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name which should be used for this Key Vault Certificate Issuer. Changing this forces a new Key Vault Certificate Issuer to be created.
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-orgId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L82">property <b>orgId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>orgId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the organization as provided to the issuer.
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-password">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L86">property <b>password</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The password associated with the account and organization ID at the third-party Certificate Issuer. If not specified, will not overwrite any previous value.
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-providerName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L90">property <b>providerName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>providerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`.
+
+<h4 class="pdoc-member-header" id="CertificateIssuer-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L35">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h3 class="pdoc-module-header" id="Key" data-link-title="Key">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L58">
         Resource <strong>Key</strong>
     </a>
 </h3>
@@ -736,8 +906,6 @@ The current version of the Key Vault Certificate.
 Manages a Key Vault Key.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -757,7 +925,7 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
     resourceGroupName: exampleResourceGroup.name,
     tenantId: current.then(current => current.tenantId),
     skuName: "premium",
-    access_policy: [{
+    accessPolicies: [{
         tenantId: current.then(current => current.tenantId),
         objectId: current.then(current => current.objectId),
         keyPermissions: [
@@ -786,7 +954,7 @@ const generated = new azure.keyvault.Key("generated", {
 ```
 
 <h4 class="pdoc-member-header" id="Key-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L143"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L141"> <b>constructor</b></a>
 </h4>
 
 
@@ -800,7 +968,7 @@ Create a Key resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Key-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L68">method <b>get</b></a>
 </h4>
 
 
@@ -811,14 +979,14 @@ Get an existing Key resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Key-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L60">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Key-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L81">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -829,7 +997,7 @@ Returns true if the given object is an instance of Key.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Key-curve">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L91">property <b>curve</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L89">property <b>curve</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>curve: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -837,7 +1005,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the curve to use when creating an `EC` key. Possible values are `P-256`, `P-384`, `P-521`, and `SECP256K1`. This field will be required in a future release if `keyType` is `EC` or `EC-HSM`. The API will default to `P-256` if nothing is specified. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Key-e">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L95">property <b>e</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L93">property <b>e</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>e: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -845,7 +1013,7 @@ Specifies the curve to use when creating an `EC` key. Possible values are `P-256
 The RSA public exponent of this Key Vault Key.
 
 <h4 class="pdoc-member-header" id="Key-expirationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L99">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L97">property <b>expirationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expirationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -853,7 +1021,7 @@ The RSA public exponent of this Key Vault Key.
 Expiration UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="Key-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -862,7 +1030,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Key-keyOpts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L103">property <b>keyOpts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L101">property <b>keyOpts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyOpts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -870,7 +1038,7 @@ deployments and may be missing (undefined) during planning phases.
 A list of JSON web key operations. Possible values include: `decrypt`, `encrypt`, `sign`, `unwrapKey`, `verify` and `wrapKey`. Please note these values are case sensitive.
 
 <h4 class="pdoc-member-header" id="Key-keySize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L107">property <b>keySize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L105">property <b>keySize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keySize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -878,7 +1046,7 @@ A list of JSON web key operations. Possible values include: `decrypt`, `encrypt`
 Specifies the Size of the RSA key to create in bytes. For example, 1024 or 2048. *Note*: This field is required if `keyType` is `RSA` or `RSA-HSM`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Key-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L111">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L109">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -886,7 +1054,7 @@ Specifies the Size of the RSA key to create in bytes. For example, 1024 or 2048.
 Specifies the Key Type to use for this Key Vault Key. Possible values are `EC` (Elliptic Curve), `EC-HSM`, `Oct` (Octet), `RSA` and `RSA-HSM`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Key-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L115">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L113">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -894,7 +1062,7 @@ Specifies the Key Type to use for this Key Vault Key. Possible values are `EC` (
 The ID of the Key Vault where the Key should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Key-n">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L119">property <b>n</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L117">property <b>n</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>n: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -902,7 +1070,7 @@ The ID of the Key Vault where the Key should be created. Changing this forces a 
 The RSA modulus of this Key Vault Key.
 
 <h4 class="pdoc-member-header" id="Key-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L123">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L121">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -910,7 +1078,7 @@ The RSA modulus of this Key Vault Key.
 Specifies the name of the Key Vault Key. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Key-notBeforeDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L127">property <b>notBeforeDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L125">property <b>notBeforeDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notBeforeDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -918,7 +1086,7 @@ Specifies the name of the Key Vault Key. Changing this forces a new resource to 
 Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="Key-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L131">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L129">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -926,7 +1094,7 @@ Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Key-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L60">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -935,7 +1103,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Key-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L135">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L133">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -943,7 +1111,7 @@ deployments.
 The current version of the Key Vault Key.
 
 <h4 class="pdoc-member-header" id="Key-x">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L139">property <b>x</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L137">property <b>x</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>x: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -951,7 +1119,7 @@ The current version of the Key Vault Key.
 The EC X component of this Key Vault Key.
 
 <h4 class="pdoc-member-header" id="Key-y">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L143">property <b>y</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L141">property <b>y</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>y: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -959,7 +1127,7 @@ The EC X component of this Key Vault Key.
 The EC Y component of this Key Vault Key.
 
 <h3 class="pdoc-module-header" id="KeyVault" data-link-title="KeyVault">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L51">
         Resource <strong>KeyVault</strong>
     </a>
 </h3>
@@ -976,8 +1144,6 @@ Manages a Key Vault.
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -992,14 +1158,14 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
     softDeleteEnabled: true,
     purgeProtectionEnabled: false,
     skuName: "standard",
-    access_policy: [{
+    accessPolicies: [{
         tenantId: current.then(current => current.tenantId),
         objectId: current.then(current => current.objectId),
         keyPermissions: ["get"],
         secretPermissions: ["get"],
         storagePermissions: ["get"],
     }],
-    network_acls: {
+    networkAcls: {
         defaultAction: "Deny",
         bypass: "AzureServices",
     },
@@ -1010,7 +1176,7 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
 ```
 
 <h4 class="pdoc-member-header" id="KeyVault-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L136"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L134"> <b>constructor</b></a>
 </h4>
 
 
@@ -1024,7 +1190,7 @@ Create a KeyVault resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KeyVault-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L63">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -1035,14 +1201,14 @@ Get an existing KeyVault resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KeyVault-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L53">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KeyVault-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L74">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1053,7 +1219,7 @@ Returns true if the given object is an instance of KeyVault.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KeyVault-accessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L84">property <b>accessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L82">property <b>accessPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultAccessPolicy'>KeyVaultAccessPolicy</a>[]&gt;;</code></pre>
@@ -1061,7 +1227,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of up to 16 objects describing access policies, as described below.
 
 <h4 class="pdoc-member-header" id="KeyVault-enabledForDeployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L88">property <b>enabledForDeployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L86">property <b>enabledForDeployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabledForDeployment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1069,7 +1235,7 @@ A list of up to 16 objects describing access policies, as described below.
 Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVault-enabledForDiskEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L92">property <b>enabledForDiskEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L90">property <b>enabledForDiskEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabledForDiskEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1077,7 +1243,7 @@ Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve
 Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVault-enabledForTemplateDeployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L96">property <b>enabledForTemplateDeployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L94">property <b>enabledForTemplateDeployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabledForTemplateDeployment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1085,7 +1251,7 @@ Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve s
 Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVault-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1094,7 +1260,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KeyVault-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L100">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L98">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1102,7 +1268,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyVault-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1110,7 +1276,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Key Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyVault-networkAcls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L108">property <b>networkAcls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L106">property <b>networkAcls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkAcls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultNetworkAcls'>KeyVaultNetworkAcls</a>&gt;;</code></pre>
@@ -1118,7 +1284,7 @@ Specifies the name of the Key Vault. Changing this forces a new resource to be c
 A `networkAcls` block as defined below.
 
 <h4 class="pdoc-member-header" id="KeyVault-purgeProtectionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L112">property <b>purgeProtectionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L110">property <b>purgeProtectionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>purgeProtectionEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1126,7 +1292,7 @@ A `networkAcls` block as defined below.
 Is Purge Protection enabled for this Key Vault? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVault-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L116">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L114">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1134,7 +1300,7 @@ Is Purge Protection enabled for this Key Vault? Defaults to `false`.
 The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyVault-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L120">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L118">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1142,7 +1308,7 @@ The name of the resource group in which to create the Key Vault. Changing this f
 The Name of the SKU used for this Key Vault. Possible values are `standard` and `premium`.
 
 <h4 class="pdoc-member-header" id="KeyVault-softDeleteEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L124">property <b>softDeleteEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L122">property <b>softDeleteEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>softDeleteEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1150,7 +1316,7 @@ The Name of the SKU used for this Key Vault. Possible values are `standard` and 
 Should Soft Delete be enabled for this Key Vault? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVault-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L128">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L126">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1158,7 +1324,7 @@ Should Soft Delete be enabled for this Key Vault? Defaults to `false`.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="KeyVault-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L132">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L130">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1166,7 +1332,7 @@ A mapping of tags to assign to the resource.
 The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 
 <h4 class="pdoc-member-header" id="KeyVault-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L53">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1175,7 +1341,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="KeyVault-vaultUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L136">property <b>vaultUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L134">property <b>vaultUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vaultUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1183,7 +1349,7 @@ deployments.
 The URI of the Key Vault, used for performing operations on keys and secrets.
 
 <h3 class="pdoc-module-header" id="Secret" data-link-title="Secret">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L10">
         Resource <strong>Secret</strong>
     </a>
 </h3>
@@ -1193,7 +1359,7 @@ The URI of the Key Vault, used for performing operations on keys and secrets.
 Manages a Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="Secret-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -1207,7 +1373,7 @@ Create a Secret resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Secret-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -1218,14 +1384,14 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Secret-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Secret-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1236,7 +1402,7 @@ Returns true if the given object is an instance of Secret.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Secret-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L41">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L41">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1244,7 +1410,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the content type for the Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="Secret-expirationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L45">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L45">property <b>expirationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expirationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1252,7 +1418,7 @@ Specifies the content type for the Key Vault Secret.
 Expiration UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="Secret-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1261,7 +1427,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Secret-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L49">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L49">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1269,7 +1435,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Key Vault where the Secret should be created.
 
 <h4 class="pdoc-member-header" id="Secret-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L53">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1277,7 +1443,7 @@ The ID of the Key Vault where the Secret should be created.
 Specifies the name of the Key Vault Secret. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Secret-notBeforeDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L57">property <b>notBeforeDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L57">property <b>notBeforeDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notBeforeDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1285,7 +1451,7 @@ Specifies the name of the Key Vault Secret. Changing this forces a new resource 
 Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="Secret-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L61">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L61">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1293,7 +1459,7 @@ Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Secret-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1302,7 +1468,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Secret-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L65">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L65">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1310,7 +1476,7 @@ deployments.
 Specifies the value of the Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="Secret-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L69">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L69">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1320,7 +1486,7 @@ The current version of the Key Vault Secret.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAccessPolicy" data-link-title="getAccessPolicy">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getAccessPolicy.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getAccessPolicy.ts#L24">
         Function <strong>getAccessPolicy</strong>
     </a>
 </h3>
@@ -1333,8 +1499,6 @@ Use this data source to access information about the permissions from the Manage
 
 #### Example Usage
 
-
-
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
@@ -1346,7 +1510,7 @@ export const accessPolicyKeyPermissions = contributor.then(contributor => contri
 ```
 
 <h3 class="pdoc-module-header" id="getCertificate" data-link-title="getCertificate">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L32">
         Function <strong>getCertificate</strong>
     </a>
 </h3>
@@ -1361,8 +1525,6 @@ Use this data source to access information about an existing Key Vault Certifica
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1379,8 +1541,37 @@ const exampleCertificate = exampleKeyVault.then(exampleKeyVault => azure.keyvaul
 export const certificateThumbprint = exampleCertificate.then(exampleCertificate => exampleCertificate.thumbprint);
 ```
 
+<h3 class="pdoc-module-header" id="getCertificateIssuer" data-link-title="getCertificateIssuer">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L29">
+        Function <strong>getCertificateIssuer</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getCertificateIssuer(args: <a href='#GetCertificateIssuerArgs'>GetCertificateIssuerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetCertificateIssuerResult'>GetCertificateIssuerResult</a>&gt;</code></pre>
+
+
+Use this data source to access information about an existing Key Vault Certificate Issuer.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleKeyVault = azure.keyvault.getKeyVault({
+    name: "mykeyvault",
+    resourceGroupName: "some-resource-group",
+});
+const exampleCertificateIssuer = exampleKeyVault.then(exampleKeyVault => azure.keyvault.getCertificateIssuer({
+    name: "existing",
+    keyVaultId: exampleKeyVault.id,
+}));
+export const id = exampleCertificateIssuer.then(exampleCertificateIssuer => exampleCertificateIssuer.id);
+```
+
 <h3 class="pdoc-module-header" id="getKey" data-link-title="getKey">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L25">
         Function <strong>getKey</strong>
     </a>
 </h3>
@@ -1392,8 +1583,6 @@ export const certificateThumbprint = exampleCertificate.then(exampleCertificate 
 Use this data source to access information about an existing Key Vault Key.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1407,7 +1596,7 @@ export const keyType = example.then(example => example.keyType);
 ```
 
 <h3 class="pdoc-module-header" id="getKeyVault" data-link-title="getKeyVault">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L25">
         Function <strong>getKeyVault</strong>
     </a>
 </h3>
@@ -1419,8 +1608,6 @@ export const keyType = example.then(example => example.keyType);
 Use this data source to access information about an existing Key Vault.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1434,7 +1621,7 @@ export const vaultUri = example.then(example => example.vaultUri);
 ```
 
 <h3 class="pdoc-module-header" id="getSecret" data-link-title="getSecret">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L25">
         Function <strong>getSecret</strong>
     </a>
 </h3>
@@ -1446,8 +1633,6 @@ export const vaultUri = example.then(example => example.vaultUri);
 Use this data source to access information about an existing Key Vault Secret.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1463,7 +1648,7 @@ export const secretValue = example.then(example => example.value);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccessPolicyArgs" data-link-title="AccessPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L189">
         interface <strong>AccessPolicyArgs</strong>
     </a>
 </h3>
@@ -1473,7 +1658,7 @@ export const secretValue = example.then(example => example.value);
 The set of arguments for constructing a AccessPolicy resource.
 
 <h4 class="pdoc-member-header" id="AccessPolicyArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L193">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L193">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1481,7 +1666,7 @@ The set of arguments for constructing a AccessPolicy resource.
 The object ID of an Application in Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="AccessPolicyArgs-certificatePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L199">property <b>certificatePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L199">property <b>certificatePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificatePermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1491,7 +1676,7 @@ the following: `backup`, `create`, `delete`, `deleteissuers`, `get`, `getissuers
 `managecontacts`, `manageissuers`, `purge`, `recover`, `restore`, `setissuers` and `update`.
 
 <h4 class="pdoc-member-header" id="AccessPolicyArgs-keyPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L205">property <b>keyPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L205">property <b>keyPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1501,7 +1686,7 @@ the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `impor
 `recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 
 <h4 class="pdoc-member-header" id="AccessPolicyArgs-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L210">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L210">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1510,7 +1695,7 @@ Specifies the id of the Key Vault resource. Changing this
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccessPolicyArgs-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L217">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L217">property <b>objectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1521,7 +1706,7 @@ be unique for the list of access policies. Changing this forces a new resource
 to be created.
 
 <h4 class="pdoc-member-header" id="AccessPolicyArgs-secretPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L222">property <b>secretPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L222">property <b>secretPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1530,7 +1715,7 @@ List of secret permissions, must be one or more
 from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 
 <h4 class="pdoc-member-header" id="AccessPolicyArgs-storagePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L226">property <b>storagePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L226">property <b>storagePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storagePermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1538,7 +1723,7 @@ from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `rest
 List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
 
 <h4 class="pdoc-member-header" id="AccessPolicyArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L232">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L232">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1548,7 +1733,7 @@ for authenticating requests to the key vault. Changing this forces a new resourc
 to be created.
 
 <h3 class="pdoc-module-header" id="AccessPolicyState" data-link-title="AccessPolicyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L140">
         interface <strong>AccessPolicyState</strong>
     </a>
 </h3>
@@ -1558,7 +1743,7 @@ to be created.
 Input properties used for looking up and filtering AccessPolicy resources.
 
 <h4 class="pdoc-member-header" id="AccessPolicyState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L144">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L144">property <b>applicationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1566,7 +1751,7 @@ Input properties used for looking up and filtering AccessPolicy resources.
 The object ID of an Application in Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="AccessPolicyState-certificatePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L150">property <b>certificatePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L150">property <b>certificatePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificatePermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1576,7 +1761,7 @@ the following: `backup`, `create`, `delete`, `deleteissuers`, `get`, `getissuers
 `managecontacts`, `manageissuers`, `purge`, `recover`, `restore`, `setissuers` and `update`.
 
 <h4 class="pdoc-member-header" id="AccessPolicyState-keyPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L156">property <b>keyPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L156">property <b>keyPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1586,7 +1771,7 @@ the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `impor
 `recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 
 <h4 class="pdoc-member-header" id="AccessPolicyState-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L161">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L161">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1595,7 +1780,7 @@ Specifies the id of the Key Vault resource. Changing this
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccessPolicyState-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L168">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L168">property <b>objectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1606,7 +1791,7 @@ be unique for the list of access policies. Changing this forces a new resource
 to be created.
 
 <h4 class="pdoc-member-header" id="AccessPolicyState-secretPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L173">property <b>secretPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L173">property <b>secretPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretPermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1615,7 +1800,7 @@ List of secret permissions, must be one or more
 from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 
 <h4 class="pdoc-member-header" id="AccessPolicyState-storagePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L177">property <b>storagePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L177">property <b>storagePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storagePermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1623,7 +1808,7 @@ from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `rest
 List of storage permissions, must be one or more from the following: `backup`, `delete`, `deletesas`, `get`, `getsas`, `list`, `listsas`, `purge`, `recover`, `regeneratekey`, `restore`, `set`, `setsas` and `update`.
 
 <h4 class="pdoc-member-header" id="AccessPolicyState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/accessPolicy.ts#L183">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/accessPolicy.ts#L183">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1633,7 +1818,7 @@ for authenticating requests to the key vault. Changing this forces a new resourc
 to be created.
 
 <h3 class="pdoc-module-header" id="CertifiateArgs" data-link-title="CertifiateArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L289">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L298">
         interface <strong>CertifiateArgs</strong>
     </a>
 </h3>
@@ -1643,7 +1828,7 @@ to be created.
 The set of arguments for constructing a Certifiate resource.
 
 <h4 class="pdoc-member-header" id="CertifiateArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L293">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L302">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificate'>CertifiateCertificate</a>&gt;;</code></pre>
@@ -1651,7 +1836,7 @@ The set of arguments for constructing a Certifiate resource.
 A `certificate` block as defined below, used to Import an existing certificate.
 
 <h4 class="pdoc-member-header" id="CertifiateArgs-certificatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L297">property <b>certificatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L306">property <b>certificatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicy'>CertifiateCertificatePolicy</a>&gt;;</code></pre>
@@ -1659,7 +1844,7 @@ A `certificate` block as defined below, used to Import an existing certificate.
 A `certificatePolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="CertifiateArgs-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L301">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L310">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1667,7 +1852,7 @@ A `certificatePolicy` block as defined below.
 The ID of the Key Vault where the Certificate should be created.
 
 <h4 class="pdoc-member-header" id="CertifiateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L305">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L314">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1675,7 +1860,7 @@ The ID of the Key Vault where the Certificate should be created.
 Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertifiateArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L309">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L318">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1683,7 +1868,7 @@ Specifies the name of the Key Vault Certificate. Changing this forces a new reso
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="CertifiateState" data-link-title="CertifiateState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L252">
         interface <strong>CertifiateState</strong>
     </a>
 </h3>
@@ -1693,15 +1878,23 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Certifiate resources.
 
 <h4 class="pdoc-member-header" id="CertifiateState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L251">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L256">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificate'>CertifiateCertificate</a>&gt;;</code></pre>
 
 A `certificate` block as defined below, used to Import an existing certificate.
 
+<h4 class="pdoc-member-header" id="CertifiateState-certificateAttributes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L260">property <b>certificateAttributes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>certificateAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificateAttribute'>CertifiateCertificateAttribute</a>&gt;[]&gt;;</code></pre>
+
+A `certificateAttribute` block as defined below.
+
 <h4 class="pdoc-member-header" id="CertifiateState-certificateData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L255">property <b>certificateData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L264">property <b>certificateData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1709,7 +1902,7 @@ A `certificate` block as defined below, used to Import an existing certificate.
 The raw Key Vault Certificate data represented as a hexadecimal string.
 
 <h4 class="pdoc-member-header" id="CertifiateState-certificatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L259">property <b>certificatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L268">property <b>certificatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicy'>CertifiateCertificatePolicy</a>&gt;;</code></pre>
@@ -1717,7 +1910,7 @@ The raw Key Vault Certificate data represented as a hexadecimal string.
 A `certificatePolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="CertifiateState-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L263">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L272">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1725,7 +1918,7 @@ A `certificatePolicy` block as defined below.
 The ID of the Key Vault where the Certificate should be created.
 
 <h4 class="pdoc-member-header" id="CertifiateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L267">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L276">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1733,7 +1926,7 @@ The ID of the Key Vault where the Certificate should be created.
 Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertifiateState-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L271">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L280">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1741,7 +1934,7 @@ Specifies the name of the Key Vault Certificate. Changing this forces a new reso
 The ID of the associated Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="CertifiateState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L275">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L284">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1749,7 +1942,7 @@ The ID of the associated Key Vault Secret.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CertifiateState-thumbprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L279">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L288">property <b>thumbprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thumbprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1757,7 +1950,7 @@ A mapping of tags to assign to the resource.
 The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
 
 <h4 class="pdoc-member-header" id="CertifiateState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certifiate.ts#L283">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certifiate.ts#L292">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1765,7 +1958,7 @@ The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal st
 The current version of the Key Vault Certificate.
 
 <h3 class="pdoc-module-header" id="CertificateArgs" data-link-title="CertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L285">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L294">
         interface <strong>CertificateArgs</strong>
     </a>
 </h3>
@@ -1775,7 +1968,7 @@ The current version of the Key Vault Certificate.
 The set of arguments for constructing a Certificate resource.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L289">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L298">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificate'>CertificateCertificate</a>&gt;;</code></pre>
@@ -1783,7 +1976,7 @@ The set of arguments for constructing a Certificate resource.
 A `certificate` block as defined below, used to Import an existing certificate.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-certificatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L293">property <b>certificatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L302">property <b>certificatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificatePolicy'>CertificateCertificatePolicy</a>&gt;;</code></pre>
@@ -1791,7 +1984,7 @@ A `certificate` block as defined below, used to Import an existing certificate.
 A `certificatePolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L297">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L306">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1799,7 +1992,7 @@ A `certificatePolicy` block as defined below.
 The ID of the Key Vault where the Certificate should be created.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L301">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L310">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1807,15 +2000,147 @@ The ID of the Key Vault where the Certificate should be created.
 Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L305">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L314">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A mapping of tags to assign to the resource.
 
+<h3 class="pdoc-module-header" id="CertificateIssuerArgs" data-link-title="CertificateIssuerArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L178">
+        interface <strong>CertificateIssuerArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CertificateIssuerArgs</span></code></pre>
+
+The set of arguments for constructing a CertificateIssuer resource.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerArgs-accountId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L182">property <b>accountId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The account number with the third-party Certificate Issuer.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerArgs-admins">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L186">property <b>admins</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>admins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateIssuerAdmin'>CertificateIssuerAdmin</a>&gt;[]&gt;;</code></pre>
+
+One or more `admin` blocks as defined below.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerArgs-keyVaultId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L190">property <b>keyVaultId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Key Vault in which to create the Certificate Issuer.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L194">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name which should be used for this Key Vault Certificate Issuer. Changing this forces a new Key Vault Certificate Issuer to be created.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerArgs-orgId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L198">property <b>orgId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>orgId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the organization as provided to the issuer.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerArgs-password">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L202">property <b>password</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The password associated with the account and organization ID at the third-party Certificate Issuer. If not specified, will not overwrite any previous value.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerArgs-providerName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L206">property <b>providerName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>providerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`.
+
+<h3 class="pdoc-module-header" id="CertificateIssuerState" data-link-title="CertificateIssuerState">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L144">
+        interface <strong>CertificateIssuerState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CertificateIssuerState</span></code></pre>
+
+Input properties used for looking up and filtering CertificateIssuer resources.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerState-accountId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L148">property <b>accountId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The account number with the third-party Certificate Issuer.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerState-admins">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L152">property <b>admins</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>admins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateIssuerAdmin'>CertificateIssuerAdmin</a>&gt;[]&gt;;</code></pre>
+
+One or more `admin` blocks as defined below.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerState-keyVaultId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L156">property <b>keyVaultId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>keyVaultId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Key Vault in which to create the Certificate Issuer.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerState-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L160">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name which should be used for this Key Vault Certificate Issuer. Changing this forces a new Key Vault Certificate Issuer to be created.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerState-orgId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L164">property <b>orgId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>orgId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the organization as provided to the issuer.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerState-password">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L168">property <b>password</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The password associated with the account and organization ID at the third-party Certificate Issuer. If not specified, will not overwrite any previous value.
+
+<h4 class="pdoc-member-header" id="CertificateIssuerState-providerName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificateIssuer.ts#L172">property <b>providerName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>providerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the third-party Certificate Issuer. Possible values are: `DigiCert`, `GlobalSign`.
+
 <h3 class="pdoc-module-header" id="CertificateState" data-link-title="CertificateState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L248">
         interface <strong>CertificateState</strong>
     </a>
 </h3>
@@ -1825,15 +2150,23 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Certificate resources.
 
 <h4 class="pdoc-member-header" id="CertificateState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L247">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L252">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificate'>CertificateCertificate</a>&gt;;</code></pre>
 
 A `certificate` block as defined below, used to Import an existing certificate.
 
+<h4 class="pdoc-member-header" id="CertificateState-certificateAttributes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L256">property <b>certificateAttributes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>certificateAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificateAttribute'>CertificateCertificateAttribute</a>&gt;[]&gt;;</code></pre>
+
+A `certificateAttribute` block as defined below.
+
 <h4 class="pdoc-member-header" id="CertificateState-certificateData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L251">property <b>certificateData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L260">property <b>certificateData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1841,7 +2174,7 @@ A `certificate` block as defined below, used to Import an existing certificate.
 The raw Key Vault Certificate data represented as a hexadecimal string.
 
 <h4 class="pdoc-member-header" id="CertificateState-certificatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L255">property <b>certificatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L264">property <b>certificatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificatePolicy'>CertificateCertificatePolicy</a>&gt;;</code></pre>
@@ -1849,7 +2182,7 @@ The raw Key Vault Certificate data represented as a hexadecimal string.
 A `certificatePolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="CertificateState-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L259">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L268">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1857,7 +2190,7 @@ A `certificatePolicy` block as defined below.
 The ID of the Key Vault where the Certificate should be created.
 
 <h4 class="pdoc-member-header" id="CertificateState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L263">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L272">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1865,7 +2198,7 @@ The ID of the Key Vault where the Certificate should be created.
 Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CertificateState-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L267">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L276">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1873,7 +2206,7 @@ Specifies the name of the Key Vault Certificate. Changing this forces a new reso
 The ID of the associated Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="CertificateState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L271">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L280">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1881,7 +2214,7 @@ The ID of the associated Key Vault Secret.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CertificateState-thumbprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L275">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L284">property <b>thumbprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thumbprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1889,7 +2222,7 @@ A mapping of tags to assign to the resource.
 The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
 
 <h4 class="pdoc-member-header" id="CertificateState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/certificate.ts#L279">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/certificate.ts#L288">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1897,7 +2230,7 @@ The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal st
 The current version of the Key Vault Certificate.
 
 <h3 class="pdoc-module-header" id="GetAccessPolicyArgs" data-link-title="GetAccessPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getAccessPolicy.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getAccessPolicy.ts#L40">
         interface <strong>GetAccessPolicyArgs</strong>
     </a>
 </h3>
@@ -1907,7 +2240,7 @@ The current version of the Key Vault Certificate.
 A collection of arguments for invoking getAccessPolicy.
 
 <h4 class="pdoc-member-header" id="GetAccessPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getAccessPolicy.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getAccessPolicy.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1917,7 +2250,7 @@ Specifies the name of the Management Template. Possible values are: `Key Managem
 `Secret & Certificate Management`,  `Key, Secret, & Certificate Management`
 
 <h3 class="pdoc-module-header" id="GetAccessPolicyResult" data-link-title="GetAccessPolicyResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getAccessPolicy.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getAccessPolicy.ts#L52">
         interface <strong>GetAccessPolicyResult</strong>
     </a>
 </h3>
@@ -1927,7 +2260,7 @@ Specifies the name of the Management Template. Possible values are: `Key Managem
 A collection of values returned by getAccessPolicy.
 
 <h4 class="pdoc-member-header" id="GetAccessPolicyResult-certificatePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getAccessPolicy.ts#L58">property <b>certificatePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getAccessPolicy.ts#L56">property <b>certificatePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificatePermissions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1935,7 +2268,7 @@ A collection of values returned by getAccessPolicy.
 the certificate permissions for the access policy
 
 <h4 class="pdoc-member-header" id="GetAccessPolicyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getAccessPolicy.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getAccessPolicy.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1943,7 +2276,7 @@ the certificate permissions for the access policy
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccessPolicyResult-keyPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getAccessPolicy.ts#L66">property <b>keyPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getAccessPolicy.ts#L64">property <b>keyPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPermissions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1951,12 +2284,12 @@ The provider-assigned unique ID for this managed resource.
 the key permissions for the access policy
 
 <h4 class="pdoc-member-header" id="GetAccessPolicyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getAccessPolicy.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getAccessPolicy.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessPolicyResult-secretPermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getAccessPolicy.ts#L71">property <b>secretPermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getAccessPolicy.ts#L69">property <b>secretPermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretPermissions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1964,7 +2297,7 @@ the key permissions for the access policy
 the secret permissions for the access policy
 
 <h3 class="pdoc-module-header" id="GetCertificateArgs" data-link-title="GetCertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L50">
         interface <strong>GetCertificateArgs</strong>
     </a>
 </h3>
@@ -1974,7 +2307,7 @@ the secret permissions for the access policy
 A collection of arguments for invoking getCertificate.
 
 <h4 class="pdoc-member-header" id="GetCertificateArgs-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L56">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L54">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1982,7 +2315,7 @@ A collection of arguments for invoking getCertificate.
 Specifies the ID of the Key Vault instance where the Secret resides, available on the `azure.keyvault.KeyVault` Data Source / Resource.
 
 <h4 class="pdoc-member-header" id="GetCertificateArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L60">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1990,15 +2323,101 @@ Specifies the ID of the Key Vault instance where the Secret resides, available o
 Specifies the name of the Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="GetCertificateArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L64">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L62">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 Specifies the version of the certificate to look up.  (Defaults to latest)
 
+<h3 class="pdoc-module-header" id="GetCertificateIssuerArgs" data-link-title="GetCertificateIssuerArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L46">
+        interface <strong>GetCertificateIssuerArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCertificateIssuerArgs</span></code></pre>
+
+A collection of arguments for invoking getCertificateIssuer.
+
+<h4 class="pdoc-member-header" id="GetCertificateIssuerArgs-keyVaultId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L50">property <b>keyVaultId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>keyVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The ID of the Key Vault in which to locate the Certificate Issuer.
+
+<h4 class="pdoc-member-header" id="GetCertificateIssuerArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L54">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The name of the Key Vault Certificate Issuer.
+
+<h3 class="pdoc-module-header" id="GetCertificateIssuerResult" data-link-title="GetCertificateIssuerResult">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L60">
+        interface <strong>GetCertificateIssuerResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCertificateIssuerResult</span></code></pre>
+
+A collection of values returned by getCertificateIssuer.
+
+<h4 class="pdoc-member-header" id="GetCertificateIssuerResult-accountId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L64">property <b>accountId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The account number with the third-party Certificate Issuer.
+
+<h4 class="pdoc-member-header" id="GetCertificateIssuerResult-admins">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L68">property <b>admins</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>admins: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateIssuerAdmin'>GetCertificateIssuerAdmin</a>[];</code></pre>
+
+A list of `admin` blocks as defined below.
+
+<h4 class="pdoc-member-header" id="GetCertificateIssuerResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L72">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetCertificateIssuerResult-keyVaultId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L73">property <b>keyVaultId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>keyVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetCertificateIssuerResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L74">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetCertificateIssuerResult-orgId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L78">property <b>orgId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>orgId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The organization ID with the third-party Certificate Issuer.
+
+<h4 class="pdoc-member-header" id="GetCertificateIssuerResult-providerName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificateIssuer.ts#L82">property <b>providerName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>providerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The name of the third-party Certificate Issuer.
+
 <h3 class="pdoc-module-header" id="GetCertificateResult" data-link-title="GetCertificateResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L68">
         interface <strong>GetCertificateResult</strong>
     </a>
 </h3>
@@ -2008,12 +2427,12 @@ Specifies the version of the certificate to look up.  (Defaults to latest)
 A collection of values returned by getCertificate.
 
 <h4 class="pdoc-member-header" id="GetCertificateResult-certificateData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L71">property <b>certificateData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L69">property <b>certificateData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-certificatePolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L75">property <b>certificatePolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L73">property <b>certificatePolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificatePolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateCertificatePolicy'>GetCertificateCertificatePolicy</a>[];</code></pre>
@@ -2021,7 +2440,7 @@ A collection of values returned by getCertificate.
 A `certificatePolicy` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetCertificateResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2029,12 +2448,12 @@ A `certificatePolicy` block as defined below.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetCertificateResult-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L80">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L78">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2042,12 +2461,12 @@ The provider-assigned unique ID for this managed resource.
 The name of the Certificate Issuer.
 
 <h4 class="pdoc-member-header" id="GetCertificateResult-secretId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L85">property <b>secretId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L83">property <b>secretId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L89">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2055,17 +2474,17 @@ The name of the Certificate Issuer.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="GetCertificateResult-thumbprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L90">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L88">property <b>thumbprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thumbprint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getCertificate.ts#L91">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getCertificate.ts#L89">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetKeyArgs" data-link-title="GetKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L42">
         interface <strong>GetKeyArgs</strong>
     </a>
 </h3>
@@ -2075,7 +2494,7 @@ A mapping of tags to assign to the resource.
 A collection of arguments for invoking getKey.
 
 <h4 class="pdoc-member-header" id="GetKeyArgs-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L48">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L46">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2083,7 +2502,7 @@ A collection of arguments for invoking getKey.
 Specifies the ID of the Key Vault instance where the Secret resides, available on the `azure.keyvault.KeyVault` Data Source / Resource.
 
 <h4 class="pdoc-member-header" id="GetKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2091,7 +2510,7 @@ Specifies the ID of the Key Vault instance where the Secret resides, available o
 Specifies the name of the Key Vault Key.
 
 <h3 class="pdoc-module-header" id="GetKeyResult" data-link-title="GetKeyResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L56">
         interface <strong>GetKeyResult</strong>
     </a>
 </h3>
@@ -2101,7 +2520,7 @@ Specifies the name of the Key Vault Key.
 A collection of values returned by getKey.
 
 <h4 class="pdoc-member-header" id="GetKeyResult-e">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L62">property <b>e</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L60">property <b>e</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>e: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2109,7 +2528,7 @@ A collection of values returned by getKey.
 The RSA public exponent of this Key Vault Key.
 
 <h4 class="pdoc-member-header" id="GetKeyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2117,7 +2536,7 @@ The RSA public exponent of this Key Vault Key.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKeyResult-keyOpts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L70">property <b>keyOpts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L68">property <b>keyOpts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyOpts: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2125,7 +2544,7 @@ The provider-assigned unique ID for this managed resource.
 A list of JSON web key operations assigned to this Key Vault Key
 
 <h4 class="pdoc-member-header" id="GetKeyResult-keySize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L74">property <b>keySize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L72">property <b>keySize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keySize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2133,7 +2552,7 @@ A list of JSON web key operations assigned to this Key Vault Key
 Specifies the Size of this Key Vault Key.
 
 <h4 class="pdoc-member-header" id="GetKeyResult-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L78">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L76">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2141,12 +2560,12 @@ Specifies the Size of this Key Vault Key.
 Specifies the Key Type of this Key Vault Key
 
 <h4 class="pdoc-member-header" id="GetKeyResult-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L79">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L77">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-n">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L83">property <b>n</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L81">property <b>n</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>n: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2154,12 +2573,12 @@ Specifies the Key Type of this Key Vault Key
 The RSA modulus of this Key Vault Key.
 
 <h4 class="pdoc-member-header" id="GetKeyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L88">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L86">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2167,7 +2586,7 @@ The RSA modulus of this Key Vault Key.
 A mapping of tags assigned to this Key Vault Key.
 
 <h4 class="pdoc-member-header" id="GetKeyResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKey.ts#L92">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKey.ts#L90">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2175,7 +2594,7 @@ A mapping of tags assigned to this Key Vault Key.
 The current version of the Key Vault Key.
 
 <h3 class="pdoc-module-header" id="GetKeyVaultArgs" data-link-title="GetKeyVaultArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L42">
         interface <strong>GetKeyVaultArgs</strong>
     </a>
 </h3>
@@ -2185,7 +2604,7 @@ The current version of the Key Vault Key.
 A collection of arguments for invoking getKeyVault.
 
 <h4 class="pdoc-member-header" id="GetKeyVaultArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2193,7 +2612,7 @@ A collection of arguments for invoking getKeyVault.
 Specifies the name of the Key Vault.
 
 <h4 class="pdoc-member-header" id="GetKeyVaultArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L52">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L50">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2201,7 +2620,7 @@ Specifies the name of the Key Vault.
 The name of the Resource Group in which the Key Vault exists.
 
 <h3 class="pdoc-module-header" id="GetKeyVaultResult" data-link-title="GetKeyVaultResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L56">
         interface <strong>GetKeyVaultResult</strong>
     </a>
 </h3>
@@ -2211,7 +2630,7 @@ The name of the Resource Group in which the Key Vault exists.
 A collection of values returned by getKeyVault.
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-accessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L62">property <b>accessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L60">property <b>accessPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKeyVaultAccessPolicy'>GetKeyVaultAccessPolicy</a>[];</code></pre>
@@ -2219,7 +2638,7 @@ A collection of values returned by getKeyVault.
 One or more `accessPolicy` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-enabledForDeployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L66">property <b>enabledForDeployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L64">property <b>enabledForDeployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledForDeployment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2227,7 +2646,7 @@ One or more `accessPolicy` blocks as defined below.
 Can Azure Virtual Machines retrieve certificates stored as secrets from the Key Vault?
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-enabledForDiskEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L70">property <b>enabledForDiskEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L68">property <b>enabledForDiskEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledForDiskEncryption: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2235,7 +2654,7 @@ Can Azure Virtual Machines retrieve certificates stored as secrets from the Key 
 Can Azure Disk Encryption retrieve secrets from the Key Vault?
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-enabledForTemplateDeployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L74">property <b>enabledForTemplateDeployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L72">property <b>enabledForTemplateDeployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledForTemplateDeployment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2243,7 +2662,7 @@ Can Azure Disk Encryption retrieve secrets from the Key Vault?
 Can Azure Resource Manager retrieve secrets from the Key Vault?
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2251,7 +2670,7 @@ Can Azure Resource Manager retrieve secrets from the Key Vault?
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L82">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L80">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2259,17 +2678,17 @@ The provider-assigned unique ID for this managed resource.
 The Azure Region in which the Key Vault exists.
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-networkAcls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L84">property <b>networkAcls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L82">property <b>networkAcls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkAcls: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKeyVaultNetworkAcl'>GetKeyVaultNetworkAcl</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-purgeProtectionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L88">property <b>purgeProtectionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L86">property <b>purgeProtectionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>purgeProtectionEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2277,12 +2696,12 @@ The Azure Region in which the Key Vault exists.
 Is purge protection enabled on this Key Vault?
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L89">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L87">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L93">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L91">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2290,7 +2709,7 @@ Is purge protection enabled on this Key Vault?
 The Name of the SKU used for this Key Vault.
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-softDeleteEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L97">property <b>softDeleteEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L95">property <b>softDeleteEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>softDeleteEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2298,7 +2717,7 @@ The Name of the SKU used for this Key Vault.
 Is soft delete enabled on this Key Vault?
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L101">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L99">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2306,7 +2725,7 @@ Is soft delete enabled on this Key Vault?
 A mapping of tags assigned to the Key Vault.
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L105">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L103">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2314,7 +2733,7 @@ A mapping of tags assigned to the Key Vault.
 The Azure Active Directory Tenant ID used to authenticate requests for this Key Vault.
 
 <h4 class="pdoc-member-header" id="GetKeyVaultResult-vaultUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getKeyVault.ts#L109">property <b>vaultUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getKeyVault.ts#L107">property <b>vaultUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vaultUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2322,7 +2741,7 @@ The Azure Active Directory Tenant ID used to authenticate requests for this Key 
 The URI of the vault for performing operations on keys and secrets.
 
 <h3 class="pdoc-module-header" id="GetSecretArgs" data-link-title="GetSecretArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L42">
         interface <strong>GetSecretArgs</strong>
     </a>
 </h3>
@@ -2332,7 +2751,7 @@ The URI of the vault for performing operations on keys and secrets.
 A collection of arguments for invoking getSecret.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L48">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L46">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2340,7 +2759,7 @@ A collection of arguments for invoking getSecret.
 Specifies the ID of the Key Vault instance where the Secret resides, available on the `azure.keyvault.KeyVault` Data Source / Resource.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L52">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2348,7 +2767,7 @@ Specifies the ID of the Key Vault instance where the Secret resides, available o
 Specifies the name of the Key Vault Secret.
 
 <h3 class="pdoc-module-header" id="GetSecretResult" data-link-title="GetSecretResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L56">
         interface <strong>GetSecretResult</strong>
     </a>
 </h3>
@@ -2358,7 +2777,7 @@ Specifies the name of the Key Vault Secret.
 A collection of values returned by getSecret.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L62">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L60">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2366,7 +2785,7 @@ A collection of values returned by getSecret.
 The content type for the Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2374,17 +2793,17 @@ The content type for the Key Vault Secret.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L67">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L65">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSecretResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSecretResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L72">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L70">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2392,7 +2811,7 @@ The provider-assigned unique ID for this managed resource.
 Any tags assigned to this resource.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L76">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L74">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2400,7 +2819,7 @@ Any tags assigned to this resource.
 The value of the Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/getSecret.ts#L80">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/getSecret.ts#L78">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2408,7 +2827,7 @@ The value of the Key Vault Secret.
 The current version of the Key Vault Secret.
 
 <h3 class="pdoc-module-header" id="KeyArgs" data-link-title="KeyArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L273">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L271">
         interface <strong>KeyArgs</strong>
     </a>
 </h3>
@@ -2418,7 +2837,7 @@ The current version of the Key Vault Secret.
 The set of arguments for constructing a Key resource.
 
 <h4 class="pdoc-member-header" id="KeyArgs-curve">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L277">property <b>curve</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L275">property <b>curve</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>curve?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2426,7 +2845,7 @@ The set of arguments for constructing a Key resource.
 Specifies the curve to use when creating an `EC` key. Possible values are `P-256`, `P-384`, `P-521`, and `SECP256K1`. This field will be required in a future release if `keyType` is `EC` or `EC-HSM`. The API will default to `P-256` if nothing is specified. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyArgs-expirationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L281">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L279">property <b>expirationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2434,7 +2853,7 @@ Specifies the curve to use when creating an `EC` key. Possible values are `P-256
 Expiration UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="KeyArgs-keyOpts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L285">property <b>keyOpts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L283">property <b>keyOpts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyOpts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2442,7 +2861,7 @@ Expiration UTC datetime (Y-m-d'T'H:M:S'Z').
 A list of JSON web key operations. Possible values include: `decrypt`, `encrypt`, `sign`, `unwrapKey`, `verify` and `wrapKey`. Please note these values are case sensitive.
 
 <h4 class="pdoc-member-header" id="KeyArgs-keySize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L289">property <b>keySize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L287">property <b>keySize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keySize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2450,7 +2869,7 @@ A list of JSON web key operations. Possible values include: `decrypt`, `encrypt`
 Specifies the Size of the RSA key to create in bytes. For example, 1024 or 2048. *Note*: This field is required if `keyType` is `RSA` or `RSA-HSM`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyArgs-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L293">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L291">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2458,7 +2877,7 @@ Specifies the Size of the RSA key to create in bytes. For example, 1024 or 2048.
 Specifies the Key Type to use for this Key Vault Key. Possible values are `EC` (Elliptic Curve), `EC-HSM`, `Oct` (Octet), `RSA` and `RSA-HSM`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyArgs-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L297">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L295">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2466,7 +2885,7 @@ Specifies the Key Type to use for this Key Vault Key. Possible values are `EC` (
 The ID of the Key Vault where the Key should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L301">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L299">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2474,7 +2893,7 @@ The ID of the Key Vault where the Key should be created. Changing this forces a 
 Specifies the name of the Key Vault Key. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyArgs-notBeforeDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L305">property <b>notBeforeDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L303">property <b>notBeforeDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notBeforeDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2482,7 +2901,7 @@ Specifies the name of the Key Vault Key. Changing this forces a new resource to 
 Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="KeyArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L309">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L307">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2490,7 +2909,7 @@ Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="KeyState" data-link-title="KeyState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L211">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L209">
         interface <strong>KeyState</strong>
     </a>
 </h3>
@@ -2500,7 +2919,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Key resources.
 
 <h4 class="pdoc-member-header" id="KeyState-curve">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L215">property <b>curve</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L213">property <b>curve</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>curve?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2508,7 +2927,7 @@ Input properties used for looking up and filtering Key resources.
 Specifies the curve to use when creating an `EC` key. Possible values are `P-256`, `P-384`, `P-521`, and `SECP256K1`. This field will be required in a future release if `keyType` is `EC` or `EC-HSM`. The API will default to `P-256` if nothing is specified. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyState-e">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L219">property <b>e</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L217">property <b>e</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>e?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2516,7 +2935,7 @@ Specifies the curve to use when creating an `EC` key. Possible values are `P-256
 The RSA public exponent of this Key Vault Key.
 
 <h4 class="pdoc-member-header" id="KeyState-expirationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L223">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L221">property <b>expirationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2524,7 +2943,7 @@ The RSA public exponent of this Key Vault Key.
 Expiration UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="KeyState-keyOpts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L227">property <b>keyOpts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L225">property <b>keyOpts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyOpts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2532,7 +2951,7 @@ Expiration UTC datetime (Y-m-d'T'H:M:S'Z').
 A list of JSON web key operations. Possible values include: `decrypt`, `encrypt`, `sign`, `unwrapKey`, `verify` and `wrapKey`. Please note these values are case sensitive.
 
 <h4 class="pdoc-member-header" id="KeyState-keySize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L231">property <b>keySize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L229">property <b>keySize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keySize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2540,7 +2959,7 @@ A list of JSON web key operations. Possible values include: `decrypt`, `encrypt`
 Specifies the Size of the RSA key to create in bytes. For example, 1024 or 2048. *Note*: This field is required if `keyType` is `RSA` or `RSA-HSM`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyState-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L235">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L233">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2548,7 +2967,7 @@ Specifies the Size of the RSA key to create in bytes. For example, 1024 or 2048.
 Specifies the Key Type to use for this Key Vault Key. Possible values are `EC` (Elliptic Curve), `EC-HSM`, `Oct` (Octet), `RSA` and `RSA-HSM`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyState-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L239">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L237">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2556,7 +2975,7 @@ Specifies the Key Type to use for this Key Vault Key. Possible values are `EC` (
 The ID of the Key Vault where the Key should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyState-n">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L243">property <b>n</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L241">property <b>n</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>n?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2564,7 +2983,7 @@ The ID of the Key Vault where the Key should be created. Changing this forces a 
 The RSA modulus of this Key Vault Key.
 
 <h4 class="pdoc-member-header" id="KeyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L247">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L245">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2572,7 +2991,7 @@ The RSA modulus of this Key Vault Key.
 Specifies the name of the Key Vault Key. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyState-notBeforeDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L251">property <b>notBeforeDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L249">property <b>notBeforeDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notBeforeDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2580,7 +2999,7 @@ Specifies the name of the Key Vault Key. Changing this forces a new resource to 
 Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="KeyState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L255">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L253">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2588,7 +3007,7 @@ Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="KeyState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L259">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L257">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2596,7 +3015,7 @@ A mapping of tags to assign to the resource.
 The current version of the Key Vault Key.
 
 <h4 class="pdoc-member-header" id="KeyState-x">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L263">property <b>x</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L261">property <b>x</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>x?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2604,7 +3023,7 @@ The current version of the Key Vault Key.
 The EC X component of this Key Vault Key.
 
 <h4 class="pdoc-member-header" id="KeyState-y">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/key.ts#L267">property <b>y</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/key.ts#L265">property <b>y</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>y?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2612,7 +3031,7 @@ The EC X component of this Key Vault Key.
 The EC Y component of this Key Vault Key.
 
 <h3 class="pdoc-module-header" id="KeyVaultArgs" data-link-title="KeyVaultArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L266">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L264">
         interface <strong>KeyVaultArgs</strong>
     </a>
 </h3>
@@ -2622,7 +3041,7 @@ The EC Y component of this Key Vault Key.
 The set of arguments for constructing a KeyVault resource.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-accessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L270">property <b>accessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L268">property <b>accessPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultAccessPolicy'>KeyVaultAccessPolicy</a>&gt;[]&gt;;</code></pre>
@@ -2630,7 +3049,7 @@ The set of arguments for constructing a KeyVault resource.
 A list of up to 16 objects describing access policies, as described below.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-enabledForDeployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L274">property <b>enabledForDeployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L272">property <b>enabledForDeployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledForDeployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2638,7 +3057,7 @@ A list of up to 16 objects describing access policies, as described below.
 Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-enabledForDiskEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L278">property <b>enabledForDiskEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L276">property <b>enabledForDiskEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledForDiskEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2646,7 +3065,7 @@ Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve
 Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-enabledForTemplateDeployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L282">property <b>enabledForTemplateDeployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L280">property <b>enabledForTemplateDeployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledForTemplateDeployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2654,7 +3073,7 @@ Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve s
 Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L286">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L284">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2662,7 +3081,7 @@ Boolean flag to specify whether Azure Resource Manager is permitted to retrieve 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L290">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L288">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2670,7 +3089,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Key Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-networkAcls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L294">property <b>networkAcls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L292">property <b>networkAcls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultNetworkAcls'>KeyVaultNetworkAcls</a>&gt;;</code></pre>
@@ -2678,7 +3097,7 @@ Specifies the name of the Key Vault. Changing this forces a new resource to be c
 A `networkAcls` block as defined below.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-purgeProtectionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L298">property <b>purgeProtectionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L296">property <b>purgeProtectionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>purgeProtectionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2686,7 +3105,7 @@ A `networkAcls` block as defined below.
 Is Purge Protection enabled for this Key Vault? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L302">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L300">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2694,7 +3113,7 @@ Is Purge Protection enabled for this Key Vault? Defaults to `false`.
 The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L306">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L304">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2702,7 +3121,7 @@ The name of the resource group in which to create the Key Vault. Changing this f
 The Name of the SKU used for this Key Vault. Possible values are `standard` and `premium`.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-softDeleteEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L310">property <b>softDeleteEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L308">property <b>softDeleteEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>softDeleteEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2710,7 +3129,7 @@ The Name of the SKU used for this Key Vault. Possible values are `standard` and 
 Should Soft Delete be enabled for this Key Vault? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L314">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L312">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2718,7 +3137,7 @@ Should Soft Delete be enabled for this Key Vault? Defaults to `false`.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="KeyVaultArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L318">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L316">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2726,7 +3145,7 @@ A mapping of tags to assign to the resource.
 The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 
 <h3 class="pdoc-module-header" id="KeyVaultState" data-link-title="KeyVaultState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L202">
         interface <strong>KeyVaultState</strong>
     </a>
 </h3>
@@ -2736,7 +3155,7 @@ The Azure Active Directory tenant ID that should be used for authenticating requ
 Input properties used for looking up and filtering KeyVault resources.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-accessPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L208">property <b>accessPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L206">property <b>accessPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultAccessPolicy'>KeyVaultAccessPolicy</a>&gt;[]&gt;;</code></pre>
@@ -2744,7 +3163,7 @@ Input properties used for looking up and filtering KeyVault resources.
 A list of up to 16 objects describing access policies, as described below.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-enabledForDeployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L212">property <b>enabledForDeployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L210">property <b>enabledForDeployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledForDeployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2752,7 +3171,7 @@ A list of up to 16 objects describing access policies, as described below.
 Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-enabledForDiskEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L216">property <b>enabledForDiskEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L214">property <b>enabledForDiskEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledForDiskEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2760,7 +3179,7 @@ Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve
 Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-enabledForTemplateDeployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L220">property <b>enabledForTemplateDeployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L218">property <b>enabledForTemplateDeployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabledForTemplateDeployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2768,7 +3187,7 @@ Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve s
 Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L224">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L222">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2776,7 +3195,7 @@ Boolean flag to specify whether Azure Resource Manager is permitted to retrieve 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L228">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L226">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2784,7 +3203,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Key Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-networkAcls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L232">property <b>networkAcls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L230">property <b>networkAcls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultNetworkAcls'>KeyVaultNetworkAcls</a>&gt;;</code></pre>
@@ -2792,7 +3211,7 @@ Specifies the name of the Key Vault. Changing this forces a new resource to be c
 A `networkAcls` block as defined below.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-purgeProtectionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L236">property <b>purgeProtectionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L234">property <b>purgeProtectionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>purgeProtectionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2800,7 +3219,7 @@ A `networkAcls` block as defined below.
 Is Purge Protection enabled for this Key Vault? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L240">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L238">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2808,7 +3227,7 @@ Is Purge Protection enabled for this Key Vault? Defaults to `false`.
 The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L244">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L242">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2816,7 +3235,7 @@ The name of the resource group in which to create the Key Vault. Changing this f
 The Name of the SKU used for this Key Vault. Possible values are `standard` and `premium`.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-softDeleteEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L248">property <b>softDeleteEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L246">property <b>softDeleteEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>softDeleteEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2824,7 +3243,7 @@ The Name of the SKU used for this Key Vault. Possible values are `standard` and 
 Should Soft Delete be enabled for this Key Vault? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L252">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L250">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2832,7 +3251,7 @@ Should Soft Delete be enabled for this Key Vault? Defaults to `false`.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L256">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L254">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2840,7 +3259,7 @@ A mapping of tags to assign to the resource.
 The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 
 <h4 class="pdoc-member-header" id="KeyVaultState-vaultUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/keyVault.ts#L260">property <b>vaultUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/keyVault.ts#L258">property <b>vaultUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vaultUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2848,7 +3267,7 @@ The Azure Active Directory tenant ID that should be used for authenticating requ
 The URI of the Key Vault, used for performing operations on keys and secrets.
 
 <h3 class="pdoc-module-header" id="SecretArgs" data-link-title="SecretArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L160">
         interface <strong>SecretArgs</strong>
     </a>
 </h3>
@@ -2858,7 +3277,7 @@ The URI of the Key Vault, used for performing operations on keys and secrets.
 The set of arguments for constructing a Secret resource.
 
 <h4 class="pdoc-member-header" id="SecretArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L164">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L164">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2866,7 +3285,7 @@ The set of arguments for constructing a Secret resource.
 Specifies the content type for the Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="SecretArgs-expirationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L168">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L168">property <b>expirationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2874,7 +3293,7 @@ Specifies the content type for the Key Vault Secret.
 Expiration UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="SecretArgs-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L172">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L172">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2882,7 +3301,7 @@ Expiration UTC datetime (Y-m-d'T'H:M:S'Z').
 The ID of the Key Vault where the Secret should be created.
 
 <h4 class="pdoc-member-header" id="SecretArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L176">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2890,7 +3309,7 @@ The ID of the Key Vault where the Secret should be created.
 Specifies the name of the Key Vault Secret. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SecretArgs-notBeforeDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L180">property <b>notBeforeDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L180">property <b>notBeforeDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notBeforeDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2898,7 +3317,7 @@ Specifies the name of the Key Vault Secret. Changing this forces a new resource 
 Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="SecretArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L184">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L184">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2906,7 +3325,7 @@ Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SecretArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L188">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L188">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2914,7 +3333,7 @@ A mapping of tags to assign to the resource.
 Specifies the value of the Key Vault Secret.
 
 <h3 class="pdoc-module-header" id="SecretState" data-link-title="SecretState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L122">
         interface <strong>SecretState</strong>
     </a>
 </h3>
@@ -2924,7 +3343,7 @@ Specifies the value of the Key Vault Secret.
 Input properties used for looking up and filtering Secret resources.
 
 <h4 class="pdoc-member-header" id="SecretState-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L126">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L126">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2932,7 +3351,7 @@ Input properties used for looking up and filtering Secret resources.
 Specifies the content type for the Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="SecretState-expirationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L130">property <b>expirationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L130">property <b>expirationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2940,7 +3359,7 @@ Specifies the content type for the Key Vault Secret.
 Expiration UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="SecretState-keyVaultId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L134">property <b>keyVaultId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L134">property <b>keyVaultId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVaultId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2948,7 +3367,7 @@ Expiration UTC datetime (Y-m-d'T'H:M:S'Z').
 The ID of the Key Vault where the Secret should be created.
 
 <h4 class="pdoc-member-header" id="SecretState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2956,7 +3375,7 @@ The ID of the Key Vault where the Secret should be created.
 Specifies the name of the Key Vault Secret. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SecretState-notBeforeDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L142">property <b>notBeforeDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L142">property <b>notBeforeDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notBeforeDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2964,7 +3383,7 @@ Specifies the name of the Key Vault Secret. Changing this forces a new resource 
 Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 
 <h4 class="pdoc-member-header" id="SecretState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L146">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L146">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2972,7 +3391,7 @@ Key not usable before the provided UTC datetime (Y-m-d'T'H:M:S'Z').
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SecretState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L150">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L150">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2980,7 +3399,7 @@ A mapping of tags to assign to the resource.
 Specifies the value of the Key Vault Secret.
 
 <h4 class="pdoc-member-header" id="SecretState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/38f39deade34d0e187626f1cb68bf0835bc2c2d0/sdk/nodejs/keyvault/secret.ts#L154">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/keyvault/secret.ts#L154">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

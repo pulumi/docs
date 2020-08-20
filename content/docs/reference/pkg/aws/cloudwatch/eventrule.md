@@ -34,7 +34,6 @@ class MyStack : Stack
     ""AWS Console Sign In via CloudTrail""
   ]
 }
-
 ",
         });
         var awsLogins = new Aws.Sns.Topic("awsLogins", new Aws.Sns.TopicArgs
@@ -42,8 +41,8 @@ class MyStack : Stack
         });
         var sns = new Aws.CloudWatch.EventTarget("sns", new Aws.CloudWatch.EventTargetArgs
         {
-            Arn = awsLogins.Arn,
             Rule = console.Name,
+            Arn = awsLogins.Arn,
         });
         var snsTopicPolicy = awsLogins.Arn.Apply(arn => Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
         {
@@ -51,20 +50,20 @@ class MyStack : Stack
             {
                 new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
                 {
+                    Effect = "Allow",
                     Actions = 
                     {
                         "SNS:Publish",
                     },
-                    Effect = "Allow",
                     Principals = 
                     {
                         new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
                         {
+                            Type = "Service",
                             Identifiers = 
                             {
                                 "events.amazonaws.com",
                             },
-                            Type = "Service",
                         },
                     },
                     Resources = 
@@ -93,9 +92,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,7 +102,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		console, err := cloudwatch.NewEventRule(ctx, "console", &cloudwatch.EventRuleArgs{
 			Description:  pulumi.String("Capture each AWS Console Sign In"),
-			EventPattern: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v", "{\n", "  \"detail-type\": [\n", "    \"AWS Console Sign In via CloudTrail\"\n", "  ]\n", "}\n", "\n")),
+			EventPattern: pulumi.String(fmt.Sprintf("%v%v%v%v%v", "{\n", "  \"detail-type\": [\n", "    \"AWS Console Sign In via CloudTrail\"\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -113,8 +112,8 @@ func main() {
 			return err
 		}
 		_, err = cloudwatch.NewEventTarget(ctx, "sns", &cloudwatch.EventTargetArgs{
-			Arn:  awsLogins.Arn,
 			Rule: console.Name,
+			Arn:  awsLogins.Arn,
 		})
 		if err != nil {
 			return err
@@ -147,18 +146,17 @@ console = aws.cloudwatch.EventRule("console",
     "AWS Console Sign In via CloudTrail"
   ]
 }
-
 """)
 aws_logins = aws.sns.Topic("awsLogins")
 sns = aws.cloudwatch.EventTarget("sns",
-    arn=aws_logins.arn,
-    rule=console.name)
+    rule=console.name,
+    arn=aws_logins.arn)
 sns_topic_policy = aws_logins.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[{
-    "actions": ["SNS:Publish"],
     "effect": "Allow",
+    "actions": ["SNS:Publish"],
     "principals": [{
-        "identifiers": ["events.amazonaws.com"],
         "type": "Service",
+        "identifiers": ["events.amazonaws.com"],
     }],
     "resources": [arn],
 }]))
@@ -184,23 +182,23 @@ const console = new aws.cloudwatch.EventRule("console", {
 }
 `,
 });
-const awsLogins = new aws.sns.Topic("aws_logins", {});
+const awsLogins = new aws.sns.Topic("awsLogins", {});
 const sns = new aws.cloudwatch.EventTarget("sns", {
-    arn: awsLogins.arn,
     rule: console.name,
+    arn: awsLogins.arn,
 });
 const snsTopicPolicy = awsLogins.arn.apply(arn => aws.iam.getPolicyDocument({
     statements: [{
-        actions: ["SNS:Publish"],
         effect: "Allow",
+        actions: ["SNS:Publish"],
         principals: [{
-            identifiers: ["events.amazonaws.com"],
             type: "Service",
+            identifiers: ["events.amazonaws.com"],
         }],
         resources: [arn],
     }],
-}, { async: true }));
-const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
+}));
+const _default = new aws.sns.TopicPolicy("default", {
     arn: awsLogins.arn,
     policy: snsTopicPolicy.json,
 });
@@ -224,7 +222,7 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventRule">NewEventRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventRuleArgs">EventRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventRule">EventRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventRule">NewEventRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventRuleArgs">EventRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventRule">EventRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -298,7 +296,7 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -318,7 +316,7 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventRuleArgs">EventRuleArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventRuleArgs">EventRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -328,7 +326,7 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -923,7 +921,7 @@ Get an existing EventRule resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventRuleState">EventRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventRule">EventRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventRuleState">EventRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventRule">EventRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

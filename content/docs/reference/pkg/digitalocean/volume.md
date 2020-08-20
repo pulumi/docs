@@ -1,8 +1,8 @@
 
 ---
 title: "Volume"
-title_tag: "Resource Volume | Package Digital Ocean"
-meta_desc: "Explore the Volume resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage."
+title_tag: "Resource Volume | Package DigitalOcean"
+meta_desc: "Explore the Volume resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the Volume resource of the Digital Ocean package, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -74,9 +73,11 @@ foobar_volume_attachment = digitalocean.VolumeAttachment("foobarVolumeAttachment
     droplet_id=foobar_droplet.id,
     volume_id=foobar_volume.id)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -97,6 +98,7 @@ const foobarVolumeAttachment = new digitalocean.VolumeAttachment("foobarVolumeAt
     volumeId: foobarVolume.id,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -111,7 +113,7 @@ const foobarVolumeAttachment = new digitalocean.VolumeAttachment("foobarVolumeAt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#Volume">Volume</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>filesystem_type=None<span class="p">, </span>initial_filesystem_label=None<span class="p">, </span>initial_filesystem_type=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.Volume">Volume</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>filesystem_type=None<span class="p">, </span>initial_filesystem_label=None<span class="p">, </span>initial_filesystem_type=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -930,7 +932,7 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>filesystem_label=None<span class="p">, </span>filesystem_type=None<span class="p">, </span>initial_filesystem_label=None<span class="p">, </span>initial_filesystem_type=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>tags=None<span class="p">, </span>volume_urn=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>filesystem_label=None<span class="p">, </span>filesystem_type=None<span class="p">, </span>initial_filesystem_label=None<span class="p">, </span>initial_filesystem_type=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>size=None<span class="p">, </span>snapshot_id=None<span class="p">, </span>tags=None<span class="p">, </span>volume_urn=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

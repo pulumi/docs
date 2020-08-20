@@ -28,13 +28,9 @@ class MyStack : Stack
     {
         var example = Output.Create(Aws.Route53.GetResolverRules.InvokeAsync(new Aws.Route53.GetResolverRulesArgs
         {
-            Tags = 
-            {
-                
-                {
-                    { "Environment", "dev" },
-                },
-            },
+            OwnerId = "Route 53 Resolver",
+            RuleType = "RECURSIVE",
+            ShareStatus = "NOT_SHARED",
         }));
     }
 
@@ -48,18 +44,19 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "Route 53 Resolver"
+		opt1 := "RECURSIVE"
+		opt2 := "NOT_SHARED"
 		_, err := route53.GetResolverRules(ctx, &route53.GetResolverRulesArgs{
-			Tags: []map[string]interface{}{
-				map[string]interface{}{
-					"Environment": "dev",
-				},
-			},
+			OwnerId:     &opt0,
+			RuleType:    &opt1,
+			ShareStatus: &opt2,
 		}, nil)
 		if err != nil {
 			return err
@@ -76,9 +73,9 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.route53.get_resolver_rules(tags=[{
-    "Environment": "dev",
-}])
+example = aws.route53.get_resolver_rules(owner_id="Route 53 Resolver",
+    rule_type="RECURSIVE",
+    share_status="NOT_SHARED")
 ```
 
 {{% /example %}}
@@ -90,9 +87,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = pulumi.output(aws.route53.getResolverRules({
-    tags: [{
-        Environment: "dev",
-    }],
+    ownerId: "Route 53 Resolver",
+    ruleType: "RECURSIVE",
+    shareStatus: "NOT_SHARED",
 }, { async: true }));
 ```
 
@@ -117,7 +114,7 @@ const example = pulumi.output(aws.route53.getResolverRules({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResolverRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#GetResolverRulesArgs">GetResolverRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#GetResolverRulesResult">GetResolverRulesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResolverRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#GetResolverRulesArgs">GetResolverRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#GetResolverRulesResult">GetResolverRulesResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -178,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account.
-Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
+    <dd>{{% md %}}Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account. Valid values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 {{% /md %}}</dd>
 
 </dl>
@@ -230,8 +226,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account.
-Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
+    <dd>{{% md %}}Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account. Valid values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 {{% /md %}}</dd>
 
 </dl>
@@ -282,8 +277,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account.
-Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
+    <dd>{{% md %}}Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account. Valid values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 {{% /md %}}</dd>
 
 </dl>
@@ -334,8 +328,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account.
-Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
+    <dd>{{% md %}}Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account. Valid values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 {{% /md %}}</dd>
 
 </dl>

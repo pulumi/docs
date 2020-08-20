@@ -65,7 +65,39 @@ resources:
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := orchestration.NewStackV1(ctx, "stack1", &orchestration.StackV1Args{
+			DisableRollback: pulumi.Bool(true),
+			EnvironmentOpts: pulumi.StringMap{
+				"Bin": pulumi.String(fmt.Sprintf("%v%v", "\n", "\n")),
+			},
+			Parameters: pulumi.Float64Map{
+				"length": pulumi.Float64(4),
+			},
+			TemplateOpts: pulumi.StringMap{
+				"Bin": pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "heat_template_version: 2013-05-23\n", "parameters:\n", "  length:\n", "    type: number\n", "resources:\n", "  test_res:\n", "    type: OS::Heat::TestResource\n", "  random:\n", "    type: OS::Heat::RandomString\n", "    properties:\n", "      length: {get_param: length}\n", "\n")),
+			},
+			Timeout: pulumi.Int(30),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -147,7 +179,7 @@ resources:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/orchestration/#StackV1">StackV1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capabilities=None<span class="p">, </span>creation_time=None<span class="p">, </span>description=None<span class="p">, </span>disable_rollback=None<span class="p">, </span>environment_opts=None<span class="p">, </span>name=None<span class="p">, </span>notification_topics=None<span class="p">, </span>outputs=None<span class="p">, </span>parameters=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>status_reason=None<span class="p">, </span>tags=None<span class="p">, </span>template_description=None<span class="p">, </span>template_opts=None<span class="p">, </span>timeout=None<span class="p">, </span>updated_time=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/orchestration/#pulumi_openstack.orchestration.StackV1">StackV1</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capabilities=None<span class="p">, </span>creation_time=None<span class="p">, </span>description=None<span class="p">, </span>disable_rollback=None<span class="p">, </span>environment_opts=None<span class="p">, </span>name=None<span class="p">, </span>notification_topics=None<span class="p">, </span>outputs=None<span class="p">, </span>parameters=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>status_reason=None<span class="p">, </span>tags=None<span class="p">, </span>template_description=None<span class="p">, </span>template_opts=None<span class="p">, </span>timeout=None<span class="p">, </span>updated_time=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1258,7 +1290,7 @@ Get an existing StackV1 resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>capabilities=None<span class="p">, </span>creation_time=None<span class="p">, </span>description=None<span class="p">, </span>disable_rollback=None<span class="p">, </span>environment_opts=None<span class="p">, </span>name=None<span class="p">, </span>notification_topics=None<span class="p">, </span>outputs=None<span class="p">, </span>parameters=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>status_reason=None<span class="p">, </span>tags=None<span class="p">, </span>template_description=None<span class="p">, </span>template_opts=None<span class="p">, </span>timeout=None<span class="p">, </span>updated_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>capabilities=None<span class="p">, </span>creation_time=None<span class="p">, </span>description=None<span class="p">, </span>disable_rollback=None<span class="p">, </span>environment_opts=None<span class="p">, </span>name=None<span class="p">, </span>notification_topics=None<span class="p">, </span>outputs=None<span class="p">, </span>parameters=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>status_reason=None<span class="p">, </span>tags=None<span class="p">, </span>template_description=None<span class="p">, </span>template_opts=None<span class="p">, </span>timeout=None<span class="p">, </span>updated_time=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -40,7 +40,7 @@ Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open sou
     <div class="md:w-1/3">
         <h3 class="no-anchor">Why Pulumi?</h3>
         <p class="text-sm text-gray-600">
-            By using <a href="{{< relref "/docs/intro/languages" >}}">real languages</a>
+            By using <a href="{{< relref "/docs/intro/languages" >}}">familiar languages</a>
             for infrastructure as code, you get many benefits: IDEs, abstractions including functions, classes,
             and packages, existing debugging and testing tools, and more. The result is greater productivity
             with far less copy and paste, and it works the same way no matter which cloud you're targeting.

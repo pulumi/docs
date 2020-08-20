@@ -34,24 +34,22 @@ The `setting` and `all_settings` mappings support the following format:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const tftest = new aws.elasticbeanstalk.Application("tftest", {
-    description: "tf-test-desc",
-});
+const tftest = new aws.elasticbeanstalk.Application("tftest", {description: "tf-test-desc"});
 const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     application: tftest.name,
+    solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
     settings: [
         {
-            name: "VPCId",
             namespace: "aws:ec2:vpc",
+            name: "VPCId",
             value: "vpc-xxxxxxxx",
         },
         {
-            name: "Subnets",
             namespace: "aws:ec2:vpc",
+            name: "Subnets",
             value: "subnet-xxxxxxxx",
         },
     ],
-    solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
 });
 ```
 ```python
@@ -61,19 +59,19 @@ import pulumi_aws as aws
 tftest = aws.elasticbeanstalk.Application("tftest", description="tf-test-desc")
 tfenvtest = aws.elasticbeanstalk.Environment("tfenvtest",
     application=tftest.name,
+    solution_stack_name="64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
     settings=[
         {
-            "name": "VPCId",
             "namespace": "aws:ec2:vpc",
+            "name": "VPCId",
             "value": "vpc-xxxxxxxx",
         },
         {
-            "name": "Subnets",
             "namespace": "aws:ec2:vpc",
+            "name": "Subnets",
             "value": "subnet-xxxxxxxx",
         },
-    ],
-    solution_stack_name="64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4")
+    ])
 ```
 ```csharp
 using Pulumi;
@@ -90,22 +88,22 @@ class MyStack : Stack
         var tfenvtest = new Aws.ElasticBeanstalk.Environment("tfenvtest", new Aws.ElasticBeanstalk.EnvironmentArgs
         {
             Application = tftest.Name,
+            SolutionStackName = "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
             Settings = 
             {
                 new Aws.ElasticBeanstalk.Inputs.EnvironmentSettingArgs
                 {
-                    Name = "VPCId",
                     Namespace = "aws:ec2:vpc",
+                    Name = "VPCId",
                     Value = "vpc-xxxxxxxx",
                 },
                 new Aws.ElasticBeanstalk.Inputs.EnvironmentSettingArgs
                 {
-                    Name = "Subnets",
                     Namespace = "aws:ec2:vpc",
+                    Name = "Subnets",
                     Value = "subnet-xxxxxxxx",
                 },
             },
-            SolutionStackName = "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
         });
     }
 
@@ -115,7 +113,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -128,20 +126,20 @@ func main() {
 			return err
 		}
 		_, err = elasticbeanstalk.NewEnvironment(ctx, "tfenvtest", &elasticbeanstalk.EnvironmentArgs{
-			Application: tftest.Name,
+			Application:       tftest.Name,
+			SolutionStackName: pulumi.String("64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4"),
 			Settings: elasticbeanstalk.EnvironmentSettingArray{
 				&elasticbeanstalk.EnvironmentSettingArgs{
-					Name:      pulumi.String("VPCId"),
 					Namespace: pulumi.String("aws:ec2:vpc"),
+					Name:      pulumi.String("VPCId"),
 					Value:     pulumi.String("vpc-xxxxxxxx"),
 				},
 				&elasticbeanstalk.EnvironmentSettingArgs{
-					Name:      pulumi.String("Subnets"),
 					Namespace: pulumi.String("aws:ec2:vpc"),
+					Name:      pulumi.String("Subnets"),
 					Value:     pulumi.String("subnet-xxxxxxxx"),
 				},
 			},
-			SolutionStackName: pulumi.String("64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4"),
 		})
 		if err != nil {
 			return err
@@ -186,7 +184,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -231,9 +229,7 @@ tfenvtest = aws.elasticbeanstalk.Environment("tfenvtest",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const tftest = new aws.elasticbeanstalk.Application("tftest", {
-    description: "tf-test-desc",
-});
+const tftest = new aws.elasticbeanstalk.Application("tftest", {description: "tf-test-desc"});
 const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     application: tftest.name,
     solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
@@ -258,7 +254,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#Environment">NewEnvironment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#EnvironmentArgs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#Environment">Environment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk?tab=doc#Environment">NewEnvironment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk?tab=doc#EnvironmentArgs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk?tab=doc#Environment">Environment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -332,7 +328,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -352,7 +348,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#EnvironmentArgs">EnvironmentArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk?tab=doc#EnvironmentArgs">EnvironmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -362,7 +358,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1629,7 +1625,7 @@ Get an existing Environment resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#EnvironmentState">EnvironmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#Environment">Environment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnvironment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk?tab=doc#EnvironmentState">EnvironmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk?tab=doc#Environment">Environment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2861,7 +2857,7 @@ out.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#EnvironmentAllSettingOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk?tab=doc#EnvironmentAllSettingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Outputs.EnvironmentAllSetting.html">output</a> API doc for this type.
@@ -3075,7 +3071,7 @@ in the application URL
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#EnvironmentSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#EnvironmentSettingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk?tab=doc#EnvironmentSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk?tab=doc#EnvironmentSettingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Inputs.EnvironmentSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Outputs.EnvironmentSetting.html">output</a> API doc for this type.

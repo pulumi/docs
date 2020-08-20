@@ -28,20 +28,6 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var rule = new Aws.Cfg.Rule("rule", new Aws.Cfg.RuleArgs
-        {
-            Source = new Aws.Cfg.Inputs.RuleSourceArgs
-            {
-                Owner = "AWS",
-                SourceIdentifier = "S3_BUCKET_VERSIONING_ENABLED",
-            },
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                "aws_config_configuration_recorder.foo",
-            },
-        });
         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
         {
             AssumeRolePolicy = @"{
@@ -57,15 +43,29 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var foo = new Aws.Cfg.Recorder("foo", new Aws.Cfg.RecorderArgs
         {
             RoleArn = role.Arn,
         });
+        var rule = new Aws.Cfg.Rule("rule", new Aws.Cfg.RuleArgs
+        {
+            Source = new Aws.Cfg.Inputs.RuleSourceArgs
+            {
+                Owner = "AWS",
+                SourceIdentifier = "S3_BUCKET_VERSIONING_ENABLED",
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                foo,
+            },
+        });
         var rolePolicy = new Aws.Iam.RolePolicy("rolePolicy", new Aws.Iam.RolePolicyArgs
         {
+            Role = role.Id,
             Policy = @"{
   ""Version"": ""2012-10-17"",
   ""Statement"": [
@@ -77,9 +77,7 @@ class MyStack : Stack
   	}
   ]
 }
-
 ",
-            Role = role.Id,
         });
     }
 
@@ -95,39 +93,39 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cfg.NewRule(ctx, "rule", &cfg.RuleArgs{
-			Source: &cfg.RuleSourceArgs{
-				Owner:            pulumi.String("AWS"),
-				SourceIdentifier: pulumi.String("S3_BUCKET_VERSIONING_ENABLED"),
-			},
-		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_config_configuration_recorder.foo",
-		}))
-		if err != nil {
-			return err
-		}
 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"config.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"config.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = cfg.NewRecorder(ctx, "foo", &cfg.RecorderArgs{
+		foo, err := cfg.NewRecorder(ctx, "foo", &cfg.RecorderArgs{
 			RoleArn: role.Arn,
 		})
 		if err != nil {
 			return err
 		}
+		_, err = cfg.NewRule(ctx, "rule", &cfg.RuleArgs{
+			Source: &cfg.RuleSourceArgs{
+				Owner:            pulumi.String("AWS"),
+				SourceIdentifier: pulumi.String("S3_BUCKET_VERSIONING_ENABLED"),
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			foo,
+		}))
+		if err != nil {
+			return err
+		}
 		_, err = iam.NewRolePolicy(ctx, "rolePolicy", &iam.RolePolicyArgs{
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "  	{\n", "  		\"Action\": \"config:Put*\",\n", "  		\"Effect\": \"Allow\",\n", "  		\"Resource\": \"*\"\n", "\n", "  	}\n", "  ]\n", "}\n", "\n")),
 			Role: role.ID(),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "  	{\n", "  		\"Action\": \"config:Put*\",\n", "  		\"Effect\": \"Allow\",\n", "  		\"Resource\": \"*\"\n", "\n", "  	}\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -144,11 +142,6 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-rule = aws.cfg.Rule("rule", source={
-    "owner": "AWS",
-    "sourceIdentifier": "S3_BUCKET_VERSIONING_ENABLED",
-},
-opts=ResourceOptions(depends_on=["aws_config_configuration_recorder.foo"]))
 role = aws.iam.Role("role", assume_role_policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -162,10 +155,15 @@ role = aws.iam.Role("role", assume_role_policy="""{
     }
   ]
 }
-
 """)
 foo = aws.cfg.Recorder("foo", role_arn=role.arn)
+rule = aws.cfg.Rule("rule", source={
+    "owner": "AWS",
+    "sourceIdentifier": "S3_BUCKET_VERSIONING_ENABLED",
+},
+opts=ResourceOptions(depends_on=[foo]))
 role_policy = aws.iam.RolePolicy("rolePolicy",
+    role=role.id,
     policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -177,9 +175,7 @@ role_policy = aws.iam.RolePolicy("rolePolicy",
   	}
   ]
 }
-
-""",
-    role=role.id)
+""")
 ```
 
 {{% /example %}}
@@ -190,8 +186,7 @@ role_policy = aws.iam.RolePolicy("rolePolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const role = new aws.iam.Role("r", {
-    assumeRolePolicy: `{
+const role = new aws.iam.Role("role", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -204,18 +199,16 @@ const role = new aws.iam.Role("r", {
     }
   ]
 }
-`,
+`});
+const foo = new aws.cfg.Recorder("foo", {roleArn: role.arn});
+const rule = new aws.cfg.Rule("rule", {source: {
+    owner: "AWS",
+    sourceIdentifier: "S3_BUCKET_VERSIONING_ENABLED",
+}}, {
+    dependsOn: [foo],
 });
-const foo = new aws.cfg.Recorder("foo", {
-    roleArn: role.arn,
-});
-const rule = new aws.cfg.Rule("r", {
-    source: {
-        owner: "AWS",
-        sourceIdentifier: "S3_BUCKET_VERSIONING_ENABLED",
-    },
-}, { dependsOn: [foo] });
-const rolePolicy = new aws.iam.RolePolicy("p", {
+const rolePolicy = new aws.iam.RolePolicy("rolePolicy", {
+    role: role.id,
     policy: `{
   "Version": "2012-10-17",
   "Statement": [
@@ -228,7 +221,6 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
   ]
 }
 `,
-    role: role.id,
 });
 ```
 
@@ -247,15 +239,18 @@ class MyStack : Stack
         var exampleRecorder = new Aws.Cfg.Recorder("exampleRecorder", new Aws.Cfg.RecorderArgs
         {
         });
+        // ... other configuration ...
         var exampleFunction = new Aws.Lambda.Function("exampleFunction", new Aws.Lambda.FunctionArgs
         {
         });
+        // ... other configuration ...
         var examplePermission = new Aws.Lambda.Permission("examplePermission", new Aws.Lambda.PermissionArgs
         {
             Action = "lambda:InvokeFunction",
             Function = exampleFunction.Arn,
             Principal = "config.amazonaws.com",
         });
+        // ... other configuration ...
         var exampleRule = new Aws.Cfg.Rule("exampleRule", new Aws.Cfg.RuleArgs
         {
             Source = new Aws.Cfg.Inputs.RuleSourceArgs
@@ -267,8 +262,8 @@ class MyStack : Stack
         {
             DependsOn = 
             {
-                "aws_config_configuration_recorder.example",
-                "aws_lambda_permission.example",
+                exampleRecorder,
+                examplePermission,
             },
         });
     }
@@ -283,14 +278,14 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cfg.NewRecorder(ctx, "exampleRecorder", nil)
+		exampleRecorder, err := cfg.NewRecorder(ctx, "exampleRecorder", nil)
 		if err != nil {
 			return err
 		}
@@ -298,7 +293,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
+		examplePermission, err := lambda.NewPermission(ctx, "examplePermission", &lambda.PermissionArgs{
 			Action:    pulumi.String("lambda:InvokeFunction"),
 			Function:  exampleFunction.Arn,
 			Principal: pulumi.String("config.amazonaws.com"),
@@ -312,8 +307,8 @@ func main() {
 				SourceIdentifier: exampleFunction.Arn,
 			},
 		}, pulumi.DependsOn([]pulumi.Resource{
-			"aws_config_configuration_recorder.example",
-			"aws_lambda_permission.example",
+			exampleRecorder,
+			examplePermission,
 		}))
 		if err != nil {
 			return err
@@ -331,18 +326,21 @@ import pulumi
 import pulumi_aws as aws
 
 example_recorder = aws.cfg.Recorder("exampleRecorder")
+# ... other configuration ...
 example_function = aws.lambda_.Function("exampleFunction")
+# ... other configuration ...
 example_permission = aws.lambda_.Permission("examplePermission",
     action="lambda:InvokeFunction",
     function=example_function.arn,
     principal="config.amazonaws.com")
+# ... other configuration ...
 example_rule = aws.cfg.Rule("exampleRule", source={
     "owner": "CUSTOM_LAMBDA",
     "sourceIdentifier": example_function.arn,
 },
 opts=ResourceOptions(depends_on=[
-        "aws_config_configuration_recorder.example",
-        "aws_lambda_permission.example",
+        example_recorder,
+        example_permission,
     ]))
 ```
 
@@ -354,19 +352,25 @@ opts=ResourceOptions(depends_on=[
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleRecorder = new aws.cfg.Recorder("example", {});
-const exampleFunction = new aws.lambda.Function("example", {});
-const examplePermission = new aws.lambda.Permission("example", {
+const exampleRecorder = new aws.cfg.Recorder("exampleRecorder", {});
+// ... other configuration ...
+const exampleFunction = new aws.lambda.Function("exampleFunction", {});
+// ... other configuration ...
+const examplePermission = new aws.lambda.Permission("examplePermission", {
     action: "lambda:InvokeFunction",
-    function: exampleFunction.arn,
+    "function": exampleFunction.arn,
     principal: "config.amazonaws.com",
 });
-const exampleRule = new aws.cfg.Rule("example", {
-    source: {
-        owner: "CUSTOM_LAMBDA",
-        sourceIdentifier: exampleFunction.arn,
-    },
-}, { dependsOn: [exampleRecorder, examplePermission] });
+// ... other configuration ...
+const exampleRule = new aws.cfg.Rule("exampleRule", {source: {
+    owner: "CUSTOM_LAMBDA",
+    sourceIdentifier: exampleFunction.arn,
+}}, {
+    dependsOn: [
+        exampleRecorder,
+        examplePermission,
+    ],
+});
 ```
 
 {{% /example %}}
@@ -387,7 +391,7 @@ const exampleRule = new aws.cfg.Rule("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#Rule">NewRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleArgs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#Rule">Rule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#Rule">NewRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#RuleArgs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#Rule">Rule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -461,7 +465,7 @@ const exampleRule = new aws.cfg.Rule("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -481,7 +485,7 @@ const exampleRule = new aws.cfg.Rule("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleArgs">RuleArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#RuleArgs">RuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -491,7 +495,7 @@ const exampleRule = new aws.cfg.Rule("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1082,7 +1086,7 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleState">RuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#Rule">Rule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#RuleState">RuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#Rule">Rule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1638,7 +1642,7 @@ the function to evaluate your AWS resources as documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleScopeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#RuleScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#RuleScopeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Inputs.RuleScopeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Outputs.RuleScope.html">output</a> API doc for this type.
@@ -1876,7 +1880,7 @@ want to trigger an evaluation for the rule.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#RuleSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#RuleSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Inputs.RuleSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Outputs.RuleSource.html">output</a> API doc for this type.
@@ -2054,7 +2058,7 @@ want to trigger an evaluation for the rule.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceSourceDetailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceSourceDetailOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#RuleSourceSourceDetailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#RuleSourceSourceDetailOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Inputs.RuleSourceSourceDetailArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Outputs.RuleSourceSourceDetail.html">output</a> API doc for this type.

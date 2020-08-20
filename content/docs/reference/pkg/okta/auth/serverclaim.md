@@ -16,70 +16,6 @@ This resource allows you to create and configure an Authorization Server Claim.
 
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Okta = Pulumi.Okta;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new Okta.Auth.ServerClaim("example", new Okta.Auth.ServerClaimArgs
-        {
-            AuthServerId = "<auth server id>",
-            ClaimType = "IDENTITY",
-            Scopes = 
-            {
-                okta_auth_server_scope.Example.Name,
-            },
-            Value = "String.substringAfter(user.email, \"@\") == \"example.com\"",
-        });
-    }
-
-}
-```
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_okta as okta
-
-example = okta.auth.ServerClaim("example",
-    auth_server_id="<auth server id>",
-    claim_type="IDENTITY",
-    scopes=[okta_auth_server_scope["example"]["name"]],
-    value="String.substringAfter(user.email, \"@\") == \"example.com\"")
-```
-{{% /example %}}
-
-{{% example typescript %}}
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as okta from "@pulumi/okta";
-
-const example = new okta.auth.ServerClaim("example", {
-    authServerId: "<auth server id>",
-    claimType: "IDENTITY",
-    scopes: [okta_auth_server_scope_example.name],
-    value: "String.substringAfter(user.email, \"@\") == \"example.com\"",
-});
-```
-{{% /example %}}
-
-{{% /examples %}}
-
-
 ## Create a ServerClaim Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -89,7 +25,7 @@ const example = new okta.auth.ServerClaim("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/auth/#ServerClaim">ServerClaim</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_include_in_token=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>claim_type=None<span class="p">, </span>group_filter_type=None<span class="p">, </span>name=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>value=None<span class="p">, </span>value_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/auth/#pulumi_okta.auth.ServerClaim">ServerClaim</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>always_include_in_token=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>claim_type=None<span class="p">, </span>group_filter_type=None<span class="p">, </span>name=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>value=None<span class="p">, </span>value_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -776,7 +712,7 @@ Get an existing ServerClaim resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>always_include_in_token=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>claim_type=None<span class="p">, </span>group_filter_type=None<span class="p">, </span>name=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>value=None<span class="p">, </span>value_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>always_include_in_token=None<span class="p">, </span>auth_server_id=None<span class="p">, </span>claim_type=None<span class="p">, </span>group_filter_type=None<span class="p">, </span>name=None<span class="p">, </span>scopes=None<span class="p">, </span>status=None<span class="p">, </span>value=None<span class="p">, </span>value_type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

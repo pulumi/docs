@@ -30,7 +30,7 @@ class MyStack : Stack
             CloudName = "google-europe-west1",
             PgUserConfig = new Aiven.Inputs.ServicePgUserConfigArgs
             {
-                IpFilter = 
+                IpFilters = 
                 {
                     "0.0.0.0/0",
                 },
@@ -51,7 +51,39 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aiven.NewService(ctx, "myservice", &aiven.ServiceArgs{
+			CloudName: pulumi.String("google-europe-west1"),
+			PgUserConfig: &aiven.ServicePgUserConfigArgs{
+				IpFilters: pulumi.StringArray{
+					pulumi.String("0.0.0.0/0"),
+				},
+				PgVersion: pulumi.String("10"),
+			},
+			Plan:                  pulumi.String("business-8"),
+			Project:               pulumi.Any(aiven_project.Myproject.Project),
+			ProjectVpcId:          pulumi.Any(aiven_project_vpc.Vpc_gcp_europe_west1.Id),
+			ServiceName:           pulumi.String("<SERVICE_NAME>"),
+			ServiceType:           pulumi.String("pg"),
+			TerminationProtection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -62,7 +94,7 @@ import pulumi_aiven as aiven
 myservice = aiven.Service("myservice",
     cloud_name="google-europe-west1",
     pg_user_config={
-        "ipFilter": ["0.0.0.0/0"],
+        "ipFilters": ["0.0.0.0/0"],
         "pgVersion": "10",
     },
     plan="business-8",
@@ -110,11 +142,11 @@ const myservice = new aiven.Service("myservice", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/aiven/#Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cassandra=None<span class="p">, </span>cassandra_user_config=None<span class="p">, </span>client_timeout=None<span class="p">, </span>cloud_name=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>elasticsearch_user_config=None<span class="p">, </span>grafana=None<span class="p">, </span>grafana_user_config=None<span class="p">, </span>influxdb=None<span class="p">, </span>influxdb_user_config=None<span class="p">, </span>kafka=None<span class="p">, </span>kafka_connect=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>kafka_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>mysql=None<span class="p">, </span>mysql_user_config=None<span class="p">, </span>pg=None<span class="p">, </span>pg_user_config=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>redis=None<span class="p">, </span>redis_user_config=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_type=None<span class="p">, </span>termination_protection=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cassandra=None<span class="p">, </span>cassandra_user_config=None<span class="p">, </span>cloud_name=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>elasticsearch_user_config=None<span class="p">, </span>grafana=None<span class="p">, </span>grafana_user_config=None<span class="p">, </span>influxdb=None<span class="p">, </span>influxdb_user_config=None<span class="p">, </span>kafka=None<span class="p">, </span>kafka_connect=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>kafka_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>mysql=None<span class="p">, </span>mysql_user_config=None<span class="p">, </span>pg=None<span class="p">, </span>pg_user_config=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>redis=None<span class="p">, </span>redis_user_config=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_type=None<span class="p">, </span>termination_protection=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#Service">NewService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#Service">NewService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -188,7 +220,7 @@ const myservice = new aiven.Service("myservice", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -208,7 +240,7 @@ const myservice = new aiven.Service("myservice", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceArgs">ServiceArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceArgs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -218,7 +250,7 @@ const myservice = new aiven.Service("myservice", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -336,17 +368,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="clienttimeout_csharp">
-<a href="#clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceclienttimeout">Service<wbr>Client<wbr>Timeout<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -685,17 +706,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="clienttimeout_go">
-<a href="#clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceclienttimeout">Service<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudname_go">
@@ -1033,17 +1043,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="clienttimeout_nodejs">
-<a href="#clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceclienttimeout">Service<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudname_nodejs">
@@ -1380,17 +1379,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="client_timeout_python">
-<a href="#client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceclienttimeout">Dict[Service<wbr>Client<wbr>Timeout]</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2073,11 +2061,11 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cassandra=None<span class="p">, </span>cassandra_user_config=None<span class="p">, </span>client_timeout=None<span class="p">, </span>cloud_name=None<span class="p">, </span>components=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>elasticsearch_user_config=None<span class="p">, </span>grafana=None<span class="p">, </span>grafana_user_config=None<span class="p">, </span>influxdb=None<span class="p">, </span>influxdb_user_config=None<span class="p">, </span>kafka=None<span class="p">, </span>kafka_connect=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>kafka_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>mysql=None<span class="p">, </span>mysql_user_config=None<span class="p">, </span>pg=None<span class="p">, </span>pg_user_config=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>redis=None<span class="p">, </span>redis_user_config=None<span class="p">, </span>service_host=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_password=None<span class="p">, </span>service_port=None<span class="p">, </span>service_type=None<span class="p">, </span>service_uri=None<span class="p">, </span>service_username=None<span class="p">, </span>state=None<span class="p">, </span>termination_protection=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cassandra=None<span class="p">, </span>cassandra_user_config=None<span class="p">, </span>cloud_name=None<span class="p">, </span>components=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>elasticsearch_user_config=None<span class="p">, </span>grafana=None<span class="p">, </span>grafana_user_config=None<span class="p">, </span>influxdb=None<span class="p">, </span>influxdb_user_config=None<span class="p">, </span>kafka=None<span class="p">, </span>kafka_connect=None<span class="p">, </span>kafka_connect_user_config=None<span class="p">, </span>kafka_mirrormaker=None<span class="p">, </span>kafka_mirrormaker_user_config=None<span class="p">, </span>kafka_user_config=None<span class="p">, </span>maintenance_window_dow=None<span class="p">, </span>maintenance_window_time=None<span class="p">, </span>mysql=None<span class="p">, </span>mysql_user_config=None<span class="p">, </span>pg=None<span class="p">, </span>pg_user_config=None<span class="p">, </span>plan=None<span class="p">, </span>project=None<span class="p">, </span>project_vpc_id=None<span class="p">, </span>redis=None<span class="p">, </span>redis_user_config=None<span class="p">, </span>service_host=None<span class="p">, </span>service_integrations=None<span class="p">, </span>service_name=None<span class="p">, </span>service_password=None<span class="p">, </span>service_port=None<span class="p">, </span>service_type=None<span class="p">, </span>service_uri=None<span class="p">, </span>service_username=None<span class="p">, </span>state=None<span class="p">, </span>termination_protection=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2208,17 +2196,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_clienttimeout_csharp">
-<a href="#state_clienttimeout_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceclienttimeout">Service<wbr>Client<wbr>Timeout<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2634,17 +2611,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_clienttimeout_go">
-<a href="#state_clienttimeout_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceclienttimeout">Service<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_go">
@@ -3058,17 +3024,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_clienttimeout_nodejs">
-<a href="#state_clienttimeout_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceclienttimeout">Service<wbr>Client<wbr>Timeout</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3484,17 +3439,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Cassandra specific user configurable settings
 {{% /md %}}</dd>
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_client_timeout_python">
-<a href="#state_client_timeout_python" style="color: inherit; text-decoration: inherit;">client_<wbr>timeout</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceclienttimeout">Dict[Service<wbr>Client<wbr>Timeout]</a></span>
-    </dt>
-    <dd>{{% md %}}Custom Terraform Client timeouts
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use timeouts instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloud_name_python">
@@ -3901,7 +3845,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceCassandraUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceCassandraUserConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceCassandraUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceCassandraUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceCassandraUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceCassandraUserConfig.html">output</a> API doc for this type.
@@ -4147,7 +4091,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceCassandraUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceCassandraUserConfigPrivateAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceCassandraUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceCassandraUserConfigPrivateAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceCassandraUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceCassandraUserConfigPrivateAccess.html">output</a> API doc for this type.
@@ -4233,7 +4177,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceCassandraUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceCassandraUserConfigPublicAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceCassandraUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceCassandraUserConfigPublicAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceCassandraUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceCassandraUserConfigPublicAccess.html">output</a> API doc for this type.
@@ -4313,139 +4257,13 @@ The following state arguments are supported:
 
 
 
-<h4 id="serviceclienttimeout">Service<wbr>Client<wbr>Timeout</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ServiceClientTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceClientTimeout">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceClientTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceClientTimeoutOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceClientTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceClientTimeout.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_csharp">
-<a href="#create_csharp" style="color: inherit; text-decoration: inherit;">Create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="update_csharp">
-<a href="#update_csharp" style="color: inherit; text-decoration: inherit;">Update</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_go">
-<a href="#create_go" style="color: inherit; text-decoration: inherit;">Create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="update_go">
-<a href="#update_go" style="color: inherit; text-decoration: inherit;">Update</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_nodejs">
-<a href="#create_nodejs" style="color: inherit; text-decoration: inherit;">create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="update_nodejs">
-<a href="#update_nodejs" style="color: inherit; text-decoration: inherit;">update</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="create_python">
-<a href="#create_python" style="color: inherit; text-decoration: inherit;">create</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="update_python">
-<a href="#update_python" style="color: inherit; text-decoration: inherit;">update</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
 <h4 id="servicecomponent">Service<wbr>Component</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ServiceComponent">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceComponentOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceComponentOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceComponent.html">output</a> API doc for this type.
@@ -4771,7 +4589,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceElasticsearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceElasticsearch.html">output</a> API doc for this type.
@@ -4857,7 +4675,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceElasticsearchUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceElasticsearchUserConfig.html">output</a> API doc for this type.
@@ -5383,7 +5201,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigElasticsearchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigElasticsearchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceElasticsearchUserConfigElasticsearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceElasticsearchUserConfigElasticsearch.html">output</a> API doc for this type.
@@ -5492,6 +5310,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="searchmaxbuckets_csharp">
+<a href="#searchmaxbuckets_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Max<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5734,6 +5562,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="searchmaxbuckets_go">
+<a href="#searchmaxbuckets_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Max<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="threadpoolanalyzequeuesize_go">
 <a href="#threadpoolanalyzequeuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
 </span> 
@@ -5966,6 +5804,16 @@ The following state arguments are supported:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="searchmaxbuckets_nodejs">
+<a href="#searchmaxbuckets_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Max<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6208,6 +6056,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="searchmaxbuckets_python">
+<a href="#searchmaxbuckets_python" style="color: inherit; text-decoration: inherit;">search<wbr>Max<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="threadpoolanalyzequeuesize_python">
 <a href="#threadpoolanalyzequeuesize_python" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
 </span> 
@@ -6349,7 +6207,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigIndexPatternArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigIndexPatternOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigIndexPatternArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigIndexPatternOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceElasticsearchUserConfigIndexPatternArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceElasticsearchUserConfigIndexPattern.html">output</a> API doc for this type.
@@ -6475,7 +6333,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigKibanaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigKibanaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigKibanaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigKibanaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceElasticsearchUserConfigKibanaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceElasticsearchUserConfigKibana.html">output</a> API doc for this type.
@@ -6641,7 +6499,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigPrivateAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigPrivateAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceElasticsearchUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceElasticsearchUserConfigPrivateAccess.html">output</a> API doc for this type.
@@ -6807,7 +6665,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceElasticsearchUserConfigPublicAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceElasticsearchUserConfigPublicAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceElasticsearchUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceElasticsearchUserConfigPublicAccess.html">output</a> API doc for this type.
@@ -6973,7 +6831,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceGrafanaUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceGrafanaUserConfig.html">output</a> API doc for this type.
@@ -8059,7 +7917,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGenericOauthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGenericOauthOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGenericOauthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGenericOauthOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceGrafanaUserConfigAuthGenericOauthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceGrafanaUserConfigAuthGenericOauth.html">output</a> API doc for this type.
@@ -8505,7 +8363,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGithubOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGithubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGithubOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceGrafanaUserConfigAuthGithubArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceGrafanaUserConfigAuthGithub.html">output</a> API doc for this type.
@@ -8563,7 +8421,7 @@ The following state arguments are supported:
 <a href="#teamids_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8620,7 +8478,7 @@ The following state arguments are supported:
 <a href="#teamids_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8677,7 +8535,7 @@ The following state arguments are supported:
 <a href="#teamids_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8734,7 +8592,7 @@ The following state arguments are supported:
 <a href="#teamids_python" style="color: inherit; text-decoration: inherit;">team<wbr>Ids</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8751,7 +8609,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGitlabArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGitlabOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGitlabArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGitlabOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceGrafanaUserConfigAuthGitlabArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceGrafanaUserConfigAuthGitlab.html">output</a> API doc for this type.
@@ -9077,7 +8935,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGoogleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGoogleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGoogleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigAuthGoogleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceGrafanaUserConfigAuthGoogleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceGrafanaUserConfigAuthGoogle.html">output</a> API doc for this type.
@@ -9283,7 +9141,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigExternalImageStorageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigExternalImageStorageOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigExternalImageStorageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigExternalImageStorageOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceGrafanaUserConfigExternalImageStorageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceGrafanaUserConfigExternalImageStorage.html">output</a> API doc for this type.
@@ -9489,7 +9347,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigPrivateAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigPrivateAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceGrafanaUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceGrafanaUserConfigPrivateAccess.html">output</a> API doc for this type.
@@ -9575,7 +9433,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigPublicAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigPublicAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceGrafanaUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceGrafanaUserConfigPublicAccess.html">output</a> API doc for this type.
@@ -9661,7 +9519,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigSmtpServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceGrafanaUserConfigSmtpServerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigSmtpServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceGrafanaUserConfigSmtpServerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceGrafanaUserConfigSmtpServerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceGrafanaUserConfigSmtpServer.html">output</a> API doc for this type.
@@ -9987,7 +9845,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceInfluxdbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceInfluxdbOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceInfluxdbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceInfluxdbOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceInfluxdbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceInfluxdb.html">output</a> API doc for this type.
@@ -10073,7 +9931,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceInfluxdbUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceInfluxdbUserConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceInfluxdbUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceInfluxdbUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceInfluxdbUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceInfluxdbUserConfig.html">output</a> API doc for this type.
@@ -10319,7 +10177,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceInfluxdbUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceInfluxdbUserConfigPrivateAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceInfluxdbUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceInfluxdbUserConfigPrivateAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceInfluxdbUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceInfluxdbUserConfigPrivateAccess.html">output</a> API doc for this type.
@@ -10405,7 +10263,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceInfluxdbUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceInfluxdbUserConfigPublicAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceInfluxdbUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceInfluxdbUserConfigPublicAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceInfluxdbUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceInfluxdbUserConfigPublicAccess.html">output</a> API doc for this type.
@@ -10491,7 +10349,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafka.html">output</a> API doc for this type.
@@ -10737,7 +10595,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaConnectUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaConnectUserConfig.html">output</a> API doc for this type.
@@ -10943,7 +10801,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigKafkaConnectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigKafkaConnectOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigKafkaConnectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigKafkaConnectOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaConnectUserConfigKafkaConnectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaConnectUserConfigKafkaConnect.html">output</a> API doc for this type.
@@ -10957,8 +10815,38 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectorclientconfigoverridepolicy_csharp">
+<a href="#connectorclientconfigoverridepolicy_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumerautooffsetreset_csharp">
+<a href="#consumerautooffsetreset_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumerisolationlevel_csharp">
 <a href="#consumerisolationlevel_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Isolation<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpollintervalms_csharp">
+<a href="#consumermaxpollintervalms_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -10985,6 +10873,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offsetflushtimeoutms_csharp">
+<a href="#offsetflushtimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sessiontimeoutms_csharp">
+<a href="#sessiontimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -10994,8 +10902,38 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectorclientconfigoverridepolicy_go">
+<a href="#connectorclientconfigoverridepolicy_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumerautooffsetreset_go">
+<a href="#consumerautooffsetreset_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumerisolationlevel_go">
 <a href="#consumerisolationlevel_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Isolation<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpollintervalms_go">
+<a href="#consumermaxpollintervalms_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -11022,6 +10960,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offsetflushtimeoutms_go">
+<a href="#offsetflushtimeoutms_go" style="color: inherit; text-decoration: inherit;">Offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sessiontimeoutms_go">
+<a href="#sessiontimeoutms_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -11031,8 +10989,38 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectorclientconfigoverridepolicy_nodejs">
+<a href="#connectorclientconfigoverridepolicy_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumerautooffsetreset_nodejs">
+<a href="#consumerautooffsetreset_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumerisolationlevel_nodejs">
 <a href="#consumerisolationlevel_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Isolation<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpollintervalms_nodejs">
+<a href="#consumermaxpollintervalms_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -11059,6 +11047,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offsetflushtimeoutms_nodejs">
+<a href="#offsetflushtimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sessiontimeoutms_nodejs">
+<a href="#sessiontimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -11068,8 +11076,38 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectorclientconfigoverridepolicy_python">
+<a href="#connectorclientconfigoverridepolicy_python" style="color: inherit; text-decoration: inherit;">connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumerautooffsetreset_python">
+<a href="#consumerautooffsetreset_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumerisolationlevel_python">
 <a href="#consumerisolationlevel_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Isolation<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpollintervalms_python">
+<a href="#consumermaxpollintervalms_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11096,6 +11134,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offsetflushtimeoutms_python">
+<a href="#offsetflushtimeoutms_python" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sessiontimeoutms_python">
+<a href="#sessiontimeoutms_python" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -11109,7 +11167,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigPrivateAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigPrivateAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaConnectUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaConnectUserConfigPrivateAccess.html">output</a> API doc for this type.
@@ -11235,7 +11293,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigPublicAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaConnectUserConfigPublicAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaConnectUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaConnectUserConfigPublicAccess.html">output</a> API doc for this type.
@@ -11361,7 +11419,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaMirrormakerUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaMirrormakerUserConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaMirrormakerUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaMirrormakerUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaMirrormakerUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaMirrormakerUserConfig.html">output</a> API doc for this type.
@@ -11487,7 +11545,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaMirrormakerUserConfigKafkaMirrormakerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaMirrormakerUserConfigKafkaMirrormakerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaMirrormakerUserConfigKafkaMirrormakerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaMirrormakerUserConfigKafkaMirrormakerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaMirrormakerUserConfigKafkaMirrormakerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaMirrormakerUserConfigKafkaMirrormaker.html">output</a> API doc for this type.
@@ -11693,7 +11751,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaUserConfig.html">output</a> API doc for this type.
@@ -12219,7 +12277,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaUserConfigKafkaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaUserConfigKafka.html">output</a> API doc for this type.
@@ -12385,6 +12443,16 @@ The following state arguments are supported:
             title="Optional">
         <span id="maxconnectionsperip_csharp">
 <a href="#maxconnectionsperip_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections<wbr>Per<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxincrementalfetchsessioncacheslots_csharp">
+<a href="#maxincrementalfetchsessioncacheslots_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -12630,6 +12698,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxincrementalfetchsessioncacheslots_go">
+<a href="#maxincrementalfetchsessioncacheslots_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="messagemaxbytes_go">
 <a href="#messagemaxbytes_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Max<wbr>Bytes</a>
 </span> 
@@ -12859,6 +12937,16 @@ The following state arguments are supported:
             title="Optional">
         <span id="maxconnectionsperip_nodejs">
 <a href="#maxconnectionsperip_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxincrementalfetchsessioncacheslots_nodejs">
+<a href="#maxincrementalfetchsessioncacheslots_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -13104,6 +13192,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="maxincrementalfetchsessioncacheslots_python">
+<a href="#maxincrementalfetchsessioncacheslots_python" style="color: inherit; text-decoration: inherit;">max<wbr>Incremental<wbr>Fetch<wbr>Session<wbr>Cache<wbr>Slots</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="messagemaxbytes_python">
 <a href="#messagemaxbytes_python" style="color: inherit; text-decoration: inherit;">message<wbr>Max<wbr>Bytes</a>
 </span> 
@@ -13185,7 +13283,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaAuthenticationMethodsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaAuthenticationMethodsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaAuthenticationMethodsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaAuthenticationMethodsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaUserConfigKafkaAuthenticationMethodsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaUserConfigKafkaAuthenticationMethods.html">output</a> API doc for this type.
@@ -13311,7 +13409,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaConnectConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaConnectConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaConnectConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaConnectConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaUserConfigKafkaConnectConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaUserConfigKafkaConnectConfig.html">output</a> API doc for this type.
@@ -13325,8 +13423,38 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectorclientconfigoverridepolicy_csharp">
+<a href="#connectorclientconfigoverridepolicy_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumerautooffsetreset_csharp">
+<a href="#consumerautooffsetreset_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumerisolationlevel_csharp">
 <a href="#consumerisolationlevel_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Isolation<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpollintervalms_csharp">
+<a href="#consumermaxpollintervalms_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -13353,6 +13481,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offsetflushtimeoutms_csharp">
+<a href="#offsetflushtimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sessiontimeoutms_csharp">
+<a href="#sessiontimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -13362,8 +13510,38 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectorclientconfigoverridepolicy_go">
+<a href="#connectorclientconfigoverridepolicy_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumerautooffsetreset_go">
+<a href="#consumerautooffsetreset_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumerisolationlevel_go">
 <a href="#consumerisolationlevel_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Isolation<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpollintervalms_go">
+<a href="#consumermaxpollintervalms_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -13390,6 +13568,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offsetflushtimeoutms_go">
+<a href="#offsetflushtimeoutms_go" style="color: inherit; text-decoration: inherit;">Offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sessiontimeoutms_go">
+<a href="#sessiontimeoutms_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -13399,8 +13597,38 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectorclientconfigoverridepolicy_nodejs">
+<a href="#connectorclientconfigoverridepolicy_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumerautooffsetreset_nodejs">
+<a href="#consumerautooffsetreset_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumerisolationlevel_nodejs">
 <a href="#consumerisolationlevel_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Isolation<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpollintervalms_nodejs">
+<a href="#consumermaxpollintervalms_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -13427,6 +13655,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offsetflushtimeoutms_nodejs">
+<a href="#offsetflushtimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sessiontimeoutms_nodejs">
+<a href="#sessiontimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -13436,8 +13684,38 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectorclientconfigoverridepolicy_python">
+<a href="#connectorclientconfigoverridepolicy_python" style="color: inherit; text-decoration: inherit;">connector<wbr>Client<wbr>Config<wbr>Override<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumerautooffsetreset_python">
+<a href="#consumerautooffsetreset_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Auto<wbr>Offset<wbr>Reset</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="consumerisolationlevel_python">
 <a href="#consumerisolationlevel_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Isolation<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="consumermaxpollintervalms_python">
+<a href="#consumermaxpollintervalms_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Max<wbr>Poll<wbr>Interval<wbr>Ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -13464,6 +13742,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offsetflushtimeoutms_python">
+<a href="#offsetflushtimeoutms_python" style="color: inherit; text-decoration: inherit;">offset<wbr>Flush<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sessiontimeoutms_python">
+<a href="#sessiontimeoutms_python" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -13477,7 +13775,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaRestConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaRestConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaRestConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigKafkaRestConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaUserConfigKafkaRestConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaUserConfigKafkaRestConfig.html">output</a> API doc for this type.
@@ -13763,7 +14061,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigPrivateAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigPrivateAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaUserConfigPrivateAccess.html">output</a> API doc for this type.
@@ -13849,7 +14147,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceKafkaUserConfigPublicAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceKafkaUserConfigPublicAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceKafkaUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceKafkaUserConfigPublicAccess.html">output</a> API doc for this type.
@@ -14095,7 +14393,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceMysqlUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceMysqlUserConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceMysqlUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceMysqlUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceMysqlUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceMysqlUserConfig.html">output</a> API doc for this type.
@@ -14581,7 +14879,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceMysqlUserConfigMysqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceMysqlUserConfigMysqlOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceMysqlUserConfigMysqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceMysqlUserConfigMysqlOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceMysqlUserConfigMysqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceMysqlUserConfigMysql.html">output</a> API doc for this type.
@@ -14677,6 +14975,16 @@ The following state arguments are supported:
             title="Optional">
         <span id="innodbonlinealterlogmaxsize_csharp">
 <a href="#innodbonlinealterlogmaxsize_csharp" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Online<wbr>Alter<wbr>Log<wbr>Max<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="innodbprintalldeadlocks_csharp">
+<a href="#innodbprintalldeadlocks_csharp" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Print<wbr>All<wbr>Deadlocks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -14892,6 +15200,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="innodbprintalldeadlocks_go">
+<a href="#innodbprintalldeadlocks_go" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Print<wbr>All<wbr>Deadlocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="innodbrollbackontimeout_go">
 <a href="#innodbrollbackontimeout_go" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Rollback<wbr>On<wbr>Timeout</a>
 </span> 
@@ -15091,6 +15409,16 @@ The following state arguments are supported:
             title="Optional">
         <span id="innodbonlinealterlogmaxsize_nodejs">
 <a href="#innodbonlinealterlogmaxsize_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Online<wbr>Alter<wbr>Log<wbr>Max<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="innodbprintalldeadlocks_nodejs">
+<a href="#innodbprintalldeadlocks_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Print<wbr>All<wbr>Deadlocks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -15306,6 +15634,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="innodbprintalldeadlocks_python">
+<a href="#innodbprintalldeadlocks_python" style="color: inherit; text-decoration: inherit;">innodb<wbr>Print<wbr>All<wbr>Deadlocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="innodbrollbackontimeout_python">
 <a href="#innodbrollbackontimeout_python" style="color: inherit; text-decoration: inherit;">innodb<wbr>Rollback<wbr>On<wbr>Timeout</a>
 </span> 
@@ -15427,7 +15765,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceMysqlUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceMysqlUserConfigPrivateAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceMysqlUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceMysqlUserConfigPrivateAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceMysqlUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceMysqlUserConfigPrivateAccess.html">output</a> API doc for this type.
@@ -15553,7 +15891,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceMysqlUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceMysqlUserConfigPublicAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceMysqlUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceMysqlUserConfigPublicAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceMysqlUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceMysqlUserConfigPublicAccess.html">output</a> API doc for this type.
@@ -15679,7 +16017,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServicePgArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServicePg.html">output</a> API doc for this type.
@@ -16045,7 +16383,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServicePgUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServicePgUserConfig.html">output</a> API doc for this type.
@@ -16209,6 +16547,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sharedbufferspercentage_csharp">
+<a href="#sharedbufferspercentage_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Buffers<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="synchronousreplication_csharp">
 <a href="#synchronousreplication_csharp" style="color: inherit; text-decoration: inherit;">Synchronous<wbr>Replication</a>
 </span> 
@@ -16231,6 +16579,16 @@ The following state arguments are supported:
             title="Optional">
         <span id="variant_csharp">
 <a href="#variant_csharp" style="color: inherit; text-decoration: inherit;">Variant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workmem_csharp">
+<a href="#workmem_csharp" style="color: inherit; text-decoration: inherit;">Work<wbr>Mem</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -16396,6 +16754,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sharedbufferspercentage_go">
+<a href="#sharedbufferspercentage_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Buffers<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="synchronousreplication_go">
 <a href="#synchronousreplication_go" style="color: inherit; text-decoration: inherit;">Synchronous<wbr>Replication</a>
 </span> 
@@ -16418,6 +16786,16 @@ The following state arguments are supported:
             title="Optional">
         <span id="variant_go">
 <a href="#variant_go" style="color: inherit; text-decoration: inherit;">Variant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workmem_go">
+<a href="#workmem_go" style="color: inherit; text-decoration: inherit;">Work<wbr>Mem</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -16583,6 +16961,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sharedbufferspercentage_nodejs">
+<a href="#sharedbufferspercentage_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Buffers<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="synchronousreplication_nodejs">
 <a href="#synchronousreplication_nodejs" style="color: inherit; text-decoration: inherit;">synchronous<wbr>Replication</a>
 </span> 
@@ -16605,6 +16993,16 @@ The following state arguments are supported:
             title="Optional">
         <span id="variant_nodejs">
 <a href="#variant_nodejs" style="color: inherit; text-decoration: inherit;">variant</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workmem_nodejs">
+<a href="#workmem_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Mem</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -16770,6 +17168,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sharedbufferspercentage_python">
+<a href="#sharedbufferspercentage_python" style="color: inherit; text-decoration: inherit;">shared<wbr>Buffers<wbr>Percentage</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="synchronousreplication_python">
 <a href="#synchronousreplication_python" style="color: inherit; text-decoration: inherit;">synchronous<wbr>Replication</a>
 </span> 
@@ -16798,6 +17206,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workmem_python">
+<a href="#workmem_python" style="color: inherit; text-decoration: inherit;">work<wbr>Mem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -16811,7 +17229,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigPgArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigPgOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigPgArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigPgOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServicePgUserConfigPgArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServicePgUserConfigPg.html">output</a> API doc for this type.
@@ -18137,7 +18555,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigPgbouncerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigPgbouncerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigPgbouncerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigPgbouncerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServicePgUserConfigPgbouncerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServicePgUserConfigPgbouncer.html">output</a> API doc for this type.
@@ -18263,7 +18681,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigPglookoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigPglookoutOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigPglookoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigPglookoutOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServicePgUserConfigPglookoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServicePgUserConfigPglookout.html">output</a> API doc for this type.
@@ -18349,7 +18767,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigPrivateAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigPrivateAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServicePgUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServicePgUserConfigPrivateAccess.html">output</a> API doc for this type.
@@ -18515,7 +18933,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigPublicAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigPublicAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServicePgUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServicePgUserConfigPublicAccess.html">output</a> API doc for this type.
@@ -18681,7 +19099,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigTimescaledbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServicePgUserConfigTimescaledbOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigTimescaledbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServicePgUserConfigTimescaledbOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServicePgUserConfigTimescaledbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServicePgUserConfigTimescaledb.html">output</a> API doc for this type.
@@ -18767,7 +19185,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceRedisUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceRedisUserConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceRedisUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceRedisUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceRedisUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceRedisUserConfig.html">output</a> API doc for this type.
@@ -19213,7 +19631,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceRedisUserConfigMigrationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceRedisUserConfigMigrationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceRedisUserConfigMigrationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceRedisUserConfigMigrationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceRedisUserConfigMigrationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceRedisUserConfigMigration.html">output</a> API doc for this type.
@@ -19459,7 +19877,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceRedisUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceRedisUserConfigPrivateAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceRedisUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceRedisUserConfigPrivateAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceRedisUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceRedisUserConfigPrivateAccess.html">output</a> API doc for this type.
@@ -19585,7 +20003,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceRedisUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceRedisUserConfigPublicAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceRedisUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceRedisUserConfigPublicAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceRedisUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceRedisUserConfigPublicAccess.html">output</a> API doc for this type.
@@ -19711,7 +20129,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceServiceIntegrationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#ServiceServiceIntegrationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceServiceIntegrationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceServiceIntegrationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceServiceIntegrationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceServiceIntegration.html">output</a> API doc for this type.

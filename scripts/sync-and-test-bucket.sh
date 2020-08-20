@@ -3,7 +3,7 @@
 set -o errexit -o pipefail
 
 # This script takes the built Hugo site and:
-#   - creates a new S3 bucket named with either the current PR number or Git SHA
+#   - creates a new S3 bucket named according to whether the action is a push or pull_request.
 #   - creates a list of all Hugo-generated client-side ("meta-refresh") redirects that
 #   - we'll use to produce proper 301s later.
 #   - pushes the content of the website into the new S3 bucket.
@@ -31,22 +31,23 @@ fi
 
 # For previews, name the destination bucket with the PR number, to reduce the number of
 # buckets we create and to facilitate shorter sync times.
-destination_bucket="$(origin_bucket_prefix)-$(pr_number_or_git_sha)"
+destination_bucket="$(origin_bucket_prefix)-$(build_identifier)"
 destination_bucket_uri="s3://${destination_bucket}"
 
 # Translate Hugo redirects into a file we'll use for making 301 redirects later. Note that
 # we do this before syncing the site, as having the redirects file available for reference
 # can be helpful for debugging purposes.
-node scripts/translate-redirects.js "$build_dir" "$(pulumi -C infrastructure config get redirectDomain || echo '')"
+node scripts/translate-redirects.js "$build_dir" "$(pulumi -C infrastructure config get redirectDomain 2>/dev/null || echo '')"
 
 # Read the region from the stack's config -- we use it below.
 aws_region="$(pulumi -C infrastructure config get 'aws:region')"
 
-# Push site content to the bucket.
-echo "Synchronizing to $destination_bucket_uri..."
-
-# Make the bucket. If this fails, assume that means we've already made it.
-aws s3 mb $destination_bucket_uri --region $aws_region || echo "Bucket already exists. Continuing..."
+# Make the bucket. If this fails, there are two explanations, given the way we're naming
+# our buckets: either a previous run failed at some point after creating the bucket, in
+# which case we should simply proceed (to repopulate it), or the bucket was somehow
+# created in another account, in which case subsequent operations on the bucket will also
+# fail, causing this script to exit nonzero. In either case, it's okay to continue.
+aws s3 mb $destination_bucket_uri --region $aws_region || true
 
 # Make the bucket an S3 website.
 aws s3 website $destination_bucket_uri --index-document index.html --error-document 404.html
@@ -54,6 +55,7 @@ aws s3 website $destination_bucket_uri --index-document index.html --error-docum
 # Sync the local build directory to the bucket. Note that we do pass the --delete option
 # here, since in most cases, we'll be continually updating a bucket associated with a PR;
 # passing this option keeps the destination bucket clean.
+echo "Synchronizing to $destination_bucket_uri..."
 aws s3 sync "$build_dir" "$destination_bucket_uri" --acl public-read --delete --quiet
 
 echo "Sync complete."
@@ -90,18 +92,13 @@ metadata='{
     "bucket": "%s",
     "url": "%s"
 }'
-printf "$metadata" "$(node -e 'console.log(Date.now())')" "$(git_sha)" "$destination_bucket" "$s3_website_url" > "$metadata_file"
+printf "$metadata" "$(current_time_in_ms)" "$(git_sha)" "$destination_bucket" "$s3_website_url" > "$metadata_file"
 
 # Copy the file to the destination bucket, for future reference.
 aws s3 cp "$metadata_file" "${destination_bucket_uri}/metadata.json" --region $aws_region --acl public-read
 
 # Persist an association between the current commit and the bucket we just deployed to.
-aws ssm put-parameter \
-    --name "$(ssm_parameter_key_for_commit $(git_sha))" \
-    --value "$destination_bucket" \
-    --type String \
-    --region $aws_region \
-    --overwrite
+set_bucket_for_commit "$(git_sha)" "$destination_bucket" "$aws_region"
 
 # Finally, if it's a preview, post a comment to the PR that directs the user to the resulting bucket URL.
 if [ "$1" == "preview" ]; then

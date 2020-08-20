@@ -9,12 +9,12 @@ menu:
 aliases: ["/docs/reference/stack/"]
 ---
 
-Every Pulumi program is deployed to a **stack**.  A stack is an isolated, independently configurable
+Every Pulumi program is deployed to a **stack**.  A stack is an isolated, independently [configurable]({{< relref "config" >}})
 instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as **development**, **staging** and **production**) or feature branches (such as **feature-x-dev**, **jane-feature-x-dev**).
 
 ## Create a stack {#create-stack}
 
-To create a new stack, use `pulumi stack init stackName`. This creates an empty stack `stackName` and sets it as the *active* stack.  The project that the stack is associated with is determined by finding the nearest `Pulumi.yaml` file.
+To create a new stack, use `pulumi stack init stackName`. This creates an empty stack `stackName` and sets it as the *active* stack. The project that the stack is associated with is determined by finding the nearest `Pulumi.yaml` file.
 
 The stack name must be unique within a project.
 
@@ -27,6 +27,8 @@ If you are using Pulumi in your organization, by default the stack will be creat
 ```bash
 $ pulumi stack init broomllc/staging
 ```
+
+Note that while stacks with applied configuration settings will often be accompanied by `Pulumi.<stack-name>.yaml` files, these files are not created by `pulumi stack init`. They are created and managed [with `pulumi config`]({{< relref "/docs/reference/cli/pulumi_config" >}}).
 
 ## Listing stacks
 

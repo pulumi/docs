@@ -44,7 +44,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := loadbalancer.NewListener(ctx, "listener1", &loadbalancer.ListenerArgs{
+			InsertHeaders: pulumi.StringMap{
+				"X-Forwarded-For": pulumi.String("true"),
+			},
+			LoadbalancerId: pulumi.String("d9415786-5f1a-428b-b35f-2f1523e146d2"),
+			Protocol:       pulumi.String("HTTP"),
+			ProtocolPort:   pulumi.Int(8080),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -93,7 +118,7 @@ const listener1 = new openstack.loadbalancer.Listener("listener_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/loadbalancer/#Listener">Listener</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>connection_limit=None<span class="p">, </span>default_pool_id=None<span class="p">, </span>default_tls_container_ref=None<span class="p">, </span>description=None<span class="p">, </span>insert_headers=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>protocol_port=None<span class="p">, </span>region=None<span class="p">, </span>sni_container_refs=None<span class="p">, </span>tenant_id=None<span class="p">, </span>timeout_client_data=None<span class="p">, </span>timeout_member_connect=None<span class="p">, </span>timeout_member_data=None<span class="p">, </span>timeout_tcp_inspect=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/loadbalancer/#pulumi_openstack.loadbalancer.Listener">Listener</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>allowed_cidrs=None<span class="p">, </span>connection_limit=None<span class="p">, </span>default_pool_id=None<span class="p">, </span>default_tls_container_ref=None<span class="p">, </span>description=None<span class="p">, </span>insert_headers=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>protocol_port=None<span class="p">, </span>region=None<span class="p">, </span>sni_container_refs=None<span class="p">, </span>tenant_id=None<span class="p">, </span>timeout_client_data=None<span class="p">, </span>timeout_member_connect=None<span class="p">, </span>timeout_member_data=None<span class="p">, </span>timeout_tcp_inspect=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -316,6 +341,18 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="allowedcidrs_csharp">
+<a href="#allowedcidrs_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
+all other source addresses. If not present, defaults to allow all.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="connectionlimit_csharp">
 <a href="#connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
 </span> 
@@ -529,6 +566,18 @@ Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedcidrs_go">
+<a href="#allowedcidrs_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
+all other source addresses. If not present, defaults to allow all.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -750,6 +799,18 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="allowedcidrs_nodejs">
+<a href="#allowedcidrs_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
+all other source addresses. If not present, defaults to allow all.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="connectionlimit_nodejs">
 <a href="#connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
 </span> 
@@ -963,6 +1024,18 @@ Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowed_cidrs_python">
+<a href="#allowed_cidrs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
+all other source addresses. If not present, defaults to allow all.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1224,7 +1297,7 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>connection_limit=None<span class="p">, </span>default_pool_id=None<span class="p">, </span>default_tls_container_ref=None<span class="p">, </span>description=None<span class="p">, </span>insert_headers=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>protocol_port=None<span class="p">, </span>region=None<span class="p">, </span>sni_container_refs=None<span class="p">, </span>tenant_id=None<span class="p">, </span>timeout_client_data=None<span class="p">, </span>timeout_member_connect=None<span class="p">, </span>timeout_member_data=None<span class="p">, </span>timeout_tcp_inspect=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>allowed_cidrs=None<span class="p">, </span>connection_limit=None<span class="p">, </span>default_pool_id=None<span class="p">, </span>default_tls_container_ref=None<span class="p">, </span>description=None<span class="p">, </span>insert_headers=None<span class="p">, </span>loadbalancer_id=None<span class="p">, </span>name=None<span class="p">, </span>protocol=None<span class="p">, </span>protocol_port=None<span class="p">, </span>region=None<span class="p">, </span>sni_container_refs=None<span class="p">, </span>tenant_id=None<span class="p">, </span>timeout_client_data=None<span class="p">, </span>timeout_member_connect=None<span class="p">, </span>timeout_member_data=None<span class="p">, </span>timeout_tcp_inspect=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1348,6 +1421,18 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allowedcidrs_csharp">
+<a href="#state_allowedcidrs_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
+all other source addresses. If not present, defaults to allow all.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1569,6 +1654,18 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_allowedcidrs_go">
+<a href="#state_allowedcidrs_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
+all other source addresses. If not present, defaults to allow all.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_connectionlimit_go">
 <a href="#state_connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
 </span> 
@@ -1786,6 +1883,18 @@ A valid value is true (UP) or false (DOWN).
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_allowedcidrs_nodejs">
+<a href="#state_allowedcidrs_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
+all other source addresses. If not present, defaults to allow all.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_connectionlimit_nodejs">
 <a href="#state_connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
 </span> 
@@ -1999,6 +2108,18 @@ TCP packets for content inspection.
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allowed_cidrs_python">
+<a href="#state_allowed_cidrs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>cidrs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
+all other source addresses. If not present, defaults to allow all.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

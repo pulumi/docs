@@ -24,7 +24,7 @@ Today we are excited to announce Pulumi 2.0, the next major stage in our journey
 
 We call Pulumi's unique approach _Modern Infrastructure as Code_:
 
-* **Real Languages**. Use the best languages and tools to declare infrastructure and gain best-in-class productivity and engineering capabilities. Connect to existing communities and ecosystems and leverage world-class language and tooling innovation.
+* **Familiar Languages**. Use the best languages and tools to declare infrastructure and gain best-in-class productivity and engineering capabilities. Connect to existing communities and ecosystems and leverage world-class language and tooling innovation.
 
 * **Multi-Cloud**. Adopt consistent workflows across any cloud(s) &mdash; public, private, or hybrid &mdash; while still using the full breadth and depth of your target cloud's services.
 
@@ -50,7 +50,7 @@ After [shipping 1.0 last year]({{< relref "/blog/pulumi-1-0" >}}), we've been ha
 
 * **Architecture**. Customers are [building their own platforms]({{< relref "/webinars/building-self-service-clouds" >}}) that use abstraction and packaging mechanisms, including our component model, to codify their own best practices. [New coexistence and migration options]({{< relref "/docs/guides/adopting" >}}) help to build larger systems out of many component parts, including those you haven't been able to port to Pulumi yet.
 
-* **Policy**. [Our new policy as code framework, CrossGuard]({{< relref "/docs/guides/crossguard" >}}), lets you define policies using real languages and then apply those policies at deployment-time. This prevents mistakes from ever getting out the door, including cost, security, and compliance. [Configurable policy packs]({{< relref "/docs/guides/crossguard/configuration" >}}) let you write a single policy and apply it flexibly across your projects.
+* **Policy**. [Our new policy as code framework, CrossGuard]({{< relref "/docs/guides/crossguard" >}}), lets you define policies using familiar languages and then apply those policies at deployment-time. This prevents mistakes from ever getting out the door, including cost, security, and compliance. [Configurable policy packs]({{< relref "/docs/guides/crossguard/configuration" >}}) let you write a single policy and apply it flexibly across your projects.
 
 * **Testing**. Many customers are using a spectrum of techniques to [validate their infrastructure in new ways]({{< relref "/docs/guides/testing" >}}). This includes [unit testing using familiar frameworks and new mocking capabilities]({{< relref "/docs/guides/testing/unit" >}}) through [integration testing for short- and long-lived environments]({{< relref "/docs/guides/testing/integration" >}}).
 

@@ -287,9 +287,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs _cannot_ be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -340,9 +338,7 @@ imported via terraform import.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs _cannot_ be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -393,9 +389,7 @@ imported via terraform import.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs _cannot_ be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -446,9 +440,7 @@ imported via terraform import.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs _cannot_ be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -704,9 +696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs _cannot_ be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -757,9 +747,7 @@ imported via terraform import.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs _cannot_ be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -810,9 +798,7 @@ imported via terraform import.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs _cannot_ be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -863,9 +849,7 @@ imported via terraform import.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
-    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result
-in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs cannot be
-imported via terraform import.
+    <dd>{{% md %}}An array of channel IDs (integers) to assign to the policy. Adding or removing channel IDs from this array will result in a new alert policy resource being created and the old one being destroyed. Also note that channel IDs _cannot_ be imported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

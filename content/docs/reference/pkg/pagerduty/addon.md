@@ -1,8 +1,8 @@
 
 ---
 title: "Addon"
-title_tag: "Resource Addon | Package pagerduty"
-meta_desc: "Explore the Addon resource of the pagerduty package, including examples, input properties, output properties, lookup functions, and supporting types. With [add-ons](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Add-ons/get_addons), third-party developers can write their own add-ons to PagerDuty&#39;s UI. Given a configuration containing a src parameter, that URL will be embedded in an iframe on a page that&#39;s available to users from a drop-down menu."
+title_tag: "Resource Addon | Package PagerDuty"
+meta_desc: "Explore the Addon resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. With [add-ons](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Add-ons/get_addons), third-party developers can write their own add-ons to PagerDuty&#39;s UI. Given a configuration containing a src parameter, that URL will be embedded in an iframe on a page that&#39;s available to users from a drop-down menu."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the Addon resource of the pagerduty package, including examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 With [add-ons](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Add-ons/get_addons), third-party developers can write their own add-ons to PagerDuty's UI. Given a configuration containing a src parameter, that URL will be embedded in an iframe on a page that's available to users from a drop-down menu.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -36,6 +34,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -49,9 +48,11 @@ import pulumi_pagerduty as pagerduty
 
 example = pagerduty.Addon("example", src="https://intranet.example.com/status")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as pagerduty from "@pulumi/pagerduty";
@@ -60,6 +61,7 @@ const example = new pagerduty.Addon("example", {
     src: "https://intranet.example.com/status",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -74,7 +76,7 @@ const example = new pagerduty.Addon("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pagerduty/#Addon">Addon</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>src=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.Addon">Addon</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>src=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -453,7 +455,7 @@ Get an existing Addon resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>src=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>src=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

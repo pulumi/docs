@@ -12,8 +12,6 @@ meta_desc: "Explore the Domain resource of the Linode package, including example
 
 Provides a Linode Domain resource.  This can be used to create, modify, and delete Linode Domains through Linode's managed DNS service.
 For more information, see [DNS Manager](https://www.linode.com/docs/platform/manager/dns-manager/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createDomain).
-
-
 ## Attributes
 
 This resource exports no additional attributes, however `status` may reflect degraded states.
@@ -54,6 +52,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -79,9 +78,11 @@ foobar_domain_record = linode.DomainRecord("foobarDomainRecord",
     record_type="CNAME",
     target="foobar.example")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
@@ -102,6 +103,7 @@ const foobarDomainRecord = new linode.DomainRecord("foobar", {
     target: "foobar.example",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -116,7 +118,7 @@ const foobarDomainRecord = new linode.DomainRecord("foobar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/linode/#Domain">Domain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>axfr_ips=None<span class="p">, </span>description=None<span class="p">, </span>domain=None<span class="p">, </span>expire_sec=None<span class="p">, </span>group=None<span class="p">, </span>master_ips=None<span class="p">, </span>refresh_sec=None<span class="p">, </span>retry_sec=None<span class="p">, </span>soa_email=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>ttl_sec=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Domain">Domain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>axfr_ips=None<span class="p">, </span>description=None<span class="p">, </span>domain=None<span class="p">, </span>expire_sec=None<span class="p">, </span>group=None<span class="p">, </span>master_ips=None<span class="p">, </span>refresh_sec=None<span class="p">, </span>retry_sec=None<span class="p">, </span>soa_email=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>ttl_sec=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -979,7 +981,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>axfr_ips=None<span class="p">, </span>description=None<span class="p">, </span>domain=None<span class="p">, </span>expire_sec=None<span class="p">, </span>group=None<span class="p">, </span>master_ips=None<span class="p">, </span>refresh_sec=None<span class="p">, </span>retry_sec=None<span class="p">, </span>soa_email=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>ttl_sec=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>axfr_ips=None<span class="p">, </span>description=None<span class="p">, </span>domain=None<span class="p">, </span>expire_sec=None<span class="p">, </span>group=None<span class="p">, </span>master_ips=None<span class="p">, </span>refresh_sec=None<span class="p">, </span>retry_sec=None<span class="p">, </span>soa_email=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>ttl_sec=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

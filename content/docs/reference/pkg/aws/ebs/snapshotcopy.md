@@ -37,16 +37,16 @@ class MyStack : Stack
         });
         var exampleSnapshot = new Aws.Ebs.Snapshot("exampleSnapshot", new Aws.Ebs.SnapshotArgs
         {
+            VolumeId = example.Id,
             Tags = 
             {
                 { "Name", "HelloWorld_snap" },
             },
-            VolumeId = example.Id,
         });
         var exampleCopy = new Aws.Ebs.SnapshotCopy("exampleCopy", new Aws.Ebs.SnapshotCopyArgs
         {
-            SourceRegion = "us-west-2",
             SourceSnapshotId = exampleSnapshot.Id,
+            SourceRegion = "us-west-2",
             Tags = 
             {
                 { "Name", "HelloWorld_copy_snap" },
@@ -64,7 +64,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,17 +81,17 @@ func main() {
 			return err
 		}
 		exampleSnapshot, err := ebs.NewSnapshot(ctx, "exampleSnapshot", &ebs.SnapshotArgs{
+			VolumeId: example.ID(),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("HelloWorld_snap"),
 			},
-			VolumeId: example.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = ebs.NewSnapshotCopy(ctx, "exampleCopy", &ebs.SnapshotCopyArgs{
-			SourceRegion:     pulumi.String("us-west-2"),
 			SourceSnapshotId: exampleSnapshot.ID(),
+			SourceRegion:     pulumi.String("us-west-2"),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("HelloWorld_copy_snap"),
 			},
@@ -118,13 +118,13 @@ example = aws.ebs.Volume("example",
         "Name": "HelloWorld",
     })
 example_snapshot = aws.ebs.Snapshot("exampleSnapshot",
+    volume_id=example.id,
     tags={
         "Name": "HelloWorld_snap",
-    },
-    volume_id=example.id)
+    })
 example_copy = aws.ebs.SnapshotCopy("exampleCopy",
-    source_region="us-west-2",
     source_snapshot_id=example_snapshot.id,
+    source_region="us-west-2",
     tags={
         "Name": "HelloWorld_copy_snap",
     })
@@ -145,15 +145,15 @@ const example = new aws.ebs.Volume("example", {
         Name: "HelloWorld",
     },
 });
-const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
+const exampleSnapshot = new aws.ebs.Snapshot("exampleSnapshot", {
+    volumeId: example.id,
     tags: {
         Name: "HelloWorld_snap",
     },
-    volumeId: example.id,
 });
-const exampleCopy = new aws.ebs.SnapshotCopy("example_copy", {
-    sourceRegion: "us-west-2",
+const exampleCopy = new aws.ebs.SnapshotCopy("exampleCopy", {
     sourceSnapshotId: exampleSnapshot.id,
+    sourceRegion: "us-west-2",
     tags: {
         Name: "HelloWorld_copy_snap",
     },
@@ -178,7 +178,7 @@ const exampleCopy = new aws.ebs.SnapshotCopy("example_copy", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#SnapshotCopy">NewSnapshotCopy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#SnapshotCopyArgs">SnapshotCopyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#SnapshotCopy">SnapshotCopy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs?tab=doc#SnapshotCopy">NewSnapshotCopy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs?tab=doc#SnapshotCopyArgs">SnapshotCopyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs?tab=doc#SnapshotCopy">SnapshotCopy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -252,7 +252,7 @@ const exampleCopy = new aws.ebs.SnapshotCopy("example_copy", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -272,7 +272,7 @@ const exampleCopy = new aws.ebs.SnapshotCopy("example_copy", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#SnapshotCopyArgs">SnapshotCopyArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs?tab=doc#SnapshotCopyArgs">SnapshotCopyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -282,7 +282,7 @@ const exampleCopy = new aws.ebs.SnapshotCopy("example_copy", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1001,7 +1001,7 @@ Get an existing SnapshotCopy resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshotCopy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#SnapshotCopyState">SnapshotCopyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#SnapshotCopy">SnapshotCopy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshotCopy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs?tab=doc#SnapshotCopyState">SnapshotCopyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs?tab=doc#SnapshotCopy">SnapshotCopy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

@@ -1,8 +1,8 @@
 
 ---
 title: "GetProjects"
-title_tag: "Function GetProjects | Package Digital Ocean"
-meta_desc: "Explore the GetProjects function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Retrieve information about all DigitalOcean projects associated with an account, with"
+title_tag: "Function GetProjects | Package DigitalOcean"
+meta_desc: "Explore the GetProjects function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Retrieve information about all DigitalOcean projects associated with an account, with"
 ---
 
 
@@ -17,8 +17,6 @@ will be returned.
 Note: You can use the `digitalocean..Project` data source to
 obtain metadata about a single project if you already know the `id` to retrieve or the unique
 `name` of the project.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -52,6 +50,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ staging = digitalocean.get_projects(filters=[{
     "values": ["Staging"],
 }])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -82,6 +83,7 @@ const staging = pulumi.output(digitalocean.getProjects({
     }],
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

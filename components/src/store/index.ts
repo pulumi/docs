@@ -15,7 +15,15 @@ export const rootReducer = combineReducers({
 export const configureStore = () => {
 
     // Deserialize from localStorage.
-    const local = localStorage.getItem("pulumi_state");
+    let local: string | null;
+
+    try {
+        // localStorage.getItem can fail when cookies are blocked.
+        local = localStorage.getItem("pulumi_state");
+    } catch (e){
+        console.error("Failed to read pulumi_state from localStorage:", e);
+    }
+
     const persistedState: Partial<AppState> = local ? JSON.parse(local) : {};
 
     const store = createStore(
@@ -28,7 +36,7 @@ export const configureStore = () => {
     store.subscribe(() => {
         const state = store.getState();
 
-        // localStorage.setItem can fail when the user's settings prevent it or when the
+        // localStorage.setItem can fail when cookies are blocked or when the
         // the browser's storage limit has been exceeded.
         try {
             localStorage.setItem("pulumi_state", JSON.stringify(state));

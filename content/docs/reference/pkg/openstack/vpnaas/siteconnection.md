@@ -44,7 +44,33 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/vpnaas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := vpnaas.NewSiteConnection(ctx, "conn1", &vpnaas.SiteConnectionArgs{
+			IkepolicyId:    pulumi.Any(openstack_vpnaas_ike_policy_v2.Policy_2.Id),
+			IpsecpolicyId:  pulumi.Any(openstack_vpnaas_ipsec_policy_v2.Policy_1.Id),
+			LocalEpGroupId: pulumi.Any(openstack_vpnaas_endpoint_group_v2.Group_2.Id),
+			PeerAddress:    pulumi.String("192.168.10.1"),
+			PeerEpGroupId:  pulumi.Any(openstack_vpnaas_endpoint_group_v2.Group_1.Id),
+			Psk:            pulumi.String("secret"),
+			VpnserviceId:   pulumi.Any(openstack_vpnaas_service_v2.Service_1.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -95,7 +121,7 @@ const conn1 = new openstack.vpnaas.SiteConnection("conn_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/vpnaas/#SiteConnection">SiteConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>dpds=None<span class="p">, </span>ikepolicy_id=None<span class="p">, </span>initiator=None<span class="p">, </span>ipsecpolicy_id=None<span class="p">, </span>local_ep_group_id=None<span class="p">, </span>local_id=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>peer_address=None<span class="p">, </span>peer_cidrs=None<span class="p">, </span>peer_ep_group_id=None<span class="p">, </span>peer_id=None<span class="p">, </span>psk=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>vpnservice_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/vpnaas/#pulumi_openstack.vpnaas.SiteConnection">SiteConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>dpds=None<span class="p">, </span>ikepolicy_id=None<span class="p">, </span>initiator=None<span class="p">, </span>ipsecpolicy_id=None<span class="p">, </span>local_ep_group_id=None<span class="p">, </span>local_id=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>peer_address=None<span class="p">, </span>peer_cidrs=None<span class="p">, </span>peer_ep_group_id=None<span class="p">, </span>peer_id=None<span class="p">, </span>psk=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>vpnservice_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -368,9 +394,6 @@ Changing this updates the description of the existing connection.
         <span class="property-type"><a href="#siteconnectiondpd">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Site<wbr>Connection<wbr>Dpd<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -604,9 +627,6 @@ Changing this updates the description of the existing connection.
         <span class="property-type"><a href="#siteconnectiondpd">[]Site<wbr>Connection<wbr>Dpd</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -840,9 +860,6 @@ Changing this updates the description of the existing connection.
         <span class="property-type"><a href="#siteconnectiondpd">Site<wbr>Connection<wbr>Dpd[]</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1076,9 +1093,6 @@ Changing this updates the description of the existing connection.
         <span class="property-type"><a href="#siteconnectiondpd">List[Site<wbr>Connection<wbr>Dpd]</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1302,7 +1316,7 @@ Get an existing SiteConnection resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>dpds=None<span class="p">, </span>ikepolicy_id=None<span class="p">, </span>initiator=None<span class="p">, </span>ipsecpolicy_id=None<span class="p">, </span>local_ep_group_id=None<span class="p">, </span>local_id=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>peer_address=None<span class="p">, </span>peer_cidrs=None<span class="p">, </span>peer_ep_group_id=None<span class="p">, </span>peer_id=None<span class="p">, </span>psk=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>vpnservice_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>dpds=None<span class="p">, </span>ikepolicy_id=None<span class="p">, </span>initiator=None<span class="p">, </span>ipsecpolicy_id=None<span class="p">, </span>local_ep_group_id=None<span class="p">, </span>local_id=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>peer_address=None<span class="p">, </span>peer_cidrs=None<span class="p">, </span>peer_ep_group_id=None<span class="p">, </span>peer_id=None<span class="p">, </span>psk=None<span class="p">, </span>region=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>vpnservice_id=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1449,9 +1463,6 @@ Changing this updates the description of the existing connection.
         <span class="property-type"><a href="#siteconnectiondpd">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Site<wbr>Connection<wbr>Dpd<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1685,9 +1696,6 @@ Changing this updates the description of the existing connection.
         <span class="property-type"><a href="#siteconnectiondpd">[]Site<wbr>Connection<wbr>Dpd</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1921,9 +1929,6 @@ Changing this updates the description of the existing connection.
         <span class="property-type"><a href="#siteconnectiondpd">Site<wbr>Connection<wbr>Dpd[]</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2157,9 +2162,6 @@ Changing this updates the description of the existing connection.
         <span class="property-type"><a href="#siteconnectiondpd">List[Site<wbr>Connection<wbr>Dpd]</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2394,7 +2396,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) action.
+A valid value is clear, hold, restart, disabled, or restart-by-peer.
+Default value is hold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2404,7 +2409,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) interval, in seconds.
+A valid value is a positive integer.
+Default is 30.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2414,7 +2422,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) timeout in seconds.
+A valid value is a positive integer that is greater than the DPD interval value.
+Default is 120.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2431,7 +2442,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) action.
+A valid value is clear, hold, restart, disabled, or restart-by-peer.
+Default value is hold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2441,7 +2455,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) interval, in seconds.
+A valid value is a positive integer.
+Default is 30.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2451,7 +2468,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) timeout in seconds.
+A valid value is a positive integer that is greater than the DPD interval value.
+Default is 120.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2468,7 +2488,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) action.
+A valid value is clear, hold, restart, disabled, or restart-by-peer.
+Default value is hold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2478,7 +2501,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) interval, in seconds.
+A valid value is a positive integer.
+Default is 30.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2488,7 +2514,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) timeout in seconds.
+A valid value is a positive integer that is greater than the DPD interval value.
+Default is 120.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2505,7 +2534,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) action.
+A valid value is clear, hold, restart, disabled, or restart-by-peer.
+Default value is hold.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2515,7 +2547,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) interval, in seconds.
+A valid value is a positive integer.
+Default is 30.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2525,7 +2560,10 @@ create a connection for another project. Changing this creates a new connection.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dead peer detection (DPD) timeout in seconds.
+A valid value is a positive integer that is greater than the DPD interval value.
+Default is 120.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

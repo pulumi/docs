@@ -3,7 +3,7 @@ title: "Module scheduling"
 title_tag: "Module scheduling | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "scheduling"
 meta_desc: "Explore members of the scheduling module in the @pulumi/kubernetes package."
-git_sha: "ffb56cbd66a23d2c0ce121749832115f40ec831a"
+git_sha: "2d5f66dff2f98c399f6df3e47fdd05918ad66597"
 block_external_search_index: true
 ---
 

@@ -21,11 +21,81 @@ See the `aws.rds.Snapshot` data source for DB Instance snapshots.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var developmentFinalSnapshot = Output.Create(Aws.Rds.GetClusterSnapshot.InvokeAsync(new Aws.Rds.GetClusterSnapshotArgs
+        {
+            DbClusterIdentifier = "development_cluster",
+            MostRecent = true,
+        }));
+        // Use the last snapshot of the dev database before it was destroyed to create
+        // a new dev database.
+        var auroraCluster = new Aws.Rds.Cluster("auroraCluster", new Aws.Rds.ClusterArgs
+        {
+            ClusterIdentifier = "development_cluster",
+            SnapshotIdentifier = developmentFinalSnapshot.Apply(developmentFinalSnapshot => developmentFinalSnapshot.Id),
+            DbSubnetGroupName = "my_db_subnet_group",
+        });
+        var auroraClusterInstance = new Aws.Rds.ClusterInstance("auroraClusterInstance", new Aws.Rds.ClusterInstanceArgs
+        {
+            ClusterIdentifier = auroraCluster.Id,
+            InstanceClass = "db.t2.small",
+            DbSubnetGroupName = "my_db_subnet_group",
+        });
+    }
+
+}
+```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "development_cluster"
+		opt1 := true
+		developmentFinalSnapshot, err := rds.LookupClusterSnapshot(ctx, &rds.LookupClusterSnapshotArgs{
+			DbClusterIdentifier: &opt0,
+			MostRecent:          &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		auroraCluster, err := rds.NewCluster(ctx, "auroraCluster", &rds.ClusterArgs{
+			ClusterIdentifier:  pulumi.String("development_cluster"),
+			SnapshotIdentifier: pulumi.String(developmentFinalSnapshot.Id),
+			DbSubnetGroupName:  pulumi.String("my_db_subnet_group"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rds.NewClusterInstance(ctx, "auroraClusterInstance", &rds.ClusterInstanceArgs{
+			ClusterIdentifier: auroraCluster.ID(),
+			InstanceClass:     pulumi.String("db.t2.small"),
+			DbSubnetGroupName: pulumi.String("my_db_subnet_group"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -39,15 +109,12 @@ development_final_snapshot = aws.rds.get_cluster_snapshot(db_cluster_identifier=
 # a new dev database.
 aurora_cluster = aws.rds.Cluster("auroraCluster",
     cluster_identifier="development_cluster",
-    db_subnet_group_name="my_db_subnet_group",
-    lifecycle={
-        "ignoreChanges": ["snapshotIdentifier"],
-    },
-    snapshot_identifier=development_final_snapshot.id)
+    snapshot_identifier=development_final_snapshot.id,
+    db_subnet_group_name="my_db_subnet_group")
 aurora_cluster_instance = aws.rds.ClusterInstance("auroraClusterInstance",
     cluster_identifier=aurora_cluster.id,
-    db_subnet_group_name="my_db_subnet_group",
-    instance_class="db.t2.small")
+    instance_class="db.t2.small",
+    db_subnet_group_name="my_db_subnet_group")
 ```
 
 {{% /example %}}
@@ -58,21 +125,21 @@ aurora_cluster_instance = aws.rds.ClusterInstance("auroraClusterInstance",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const developmentFinalSnapshot = pulumi.output(aws.rds.getClusterSnapshot({
+const developmentFinalSnapshot = aws.rds.getClusterSnapshot({
     dbClusterIdentifier: "development_cluster",
     mostRecent: true,
-}, { async: true }));
+});
 // Use the last snapshot of the dev database before it was destroyed to create
 // a new dev database.
-const auroraCluster = new aws.rds.Cluster("aurora", {
+const auroraCluster = new aws.rds.Cluster("auroraCluster", {
     clusterIdentifier: "development_cluster",
+    snapshotIdentifier: developmentFinalSnapshot.then(developmentFinalSnapshot => developmentFinalSnapshot.id),
     dbSubnetGroupName: "my_db_subnet_group",
-    snapshotIdentifier: developmentFinalSnapshot.id,
-}, { ignoreChanges: ["snapshotIdentifier"] });
-const auroraClusterInstance = new aws.rds.ClusterInstance("aurora", {
+});
+const auroraClusterInstance = new aws.rds.ClusterInstance("auroraClusterInstance", {
     clusterIdentifier: auroraCluster.id,
-    dbSubnetGroupName: "my_db_subnet_group",
     instanceClass: "db.t2.small",
+    dbSubnetGroupName: "my_db_subnet_group",
 });
 ```
 
@@ -97,7 +164,7 @@ const auroraClusterInstance = new aws.rds.ClusterInstance("aurora", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupClusterSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#LookupClusterSnapshotArgs">LookupClusterSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/rds?tab=doc#LookupClusterSnapshotResult">LookupClusterSnapshotResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupClusterSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#LookupClusterSnapshotArgs">LookupClusterSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#LookupClusterSnapshotResult">LookupClusterSnapshotResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupClusterSnapshot` in the Go SDK.
 

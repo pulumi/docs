@@ -1,8 +1,8 @@
 
 ---
 title: "Droplet"
-title_tag: "Resource Droplet | Package Digital Ocean"
-meta_desc: "Explore the Droplet resource of the Digital Ocean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Droplet resource. This can be used to create,"
+title_tag: "Resource Droplet | Package DigitalOcean"
+meta_desc: "Explore the Droplet resource of the DigitalOcean package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a DigitalOcean Droplet resource. This can be used to create,"
 ---
 
 
@@ -13,8 +13,6 @@ meta_desc: "Explore the Droplet resource of the Digital Ocean package, including
 Provides a DigitalOcean Droplet resource. This can be used to create,
 modify, and delete Droplets. Droplets also support
 [provisioning](https://www.terraform.io/docs/provisioners/index.html).
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -41,6 +39,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -58,9 +57,11 @@ web = digitalocean.Droplet("web",
     region="nyc2",
     size="s-1vcpu-1gb")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -72,6 +73,7 @@ const web = new digitalocean.Droplet("web", {
     size: "s-1vcpu-1gb",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -86,7 +88,7 @@ const web = new digitalocean.Droplet("web", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/digitalocean/#Droplet">Droplet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backups=None<span class="p">, </span>image=None<span class="p">, </span>ipv6=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>private_networking=None<span class="p">, </span>region=None<span class="p">, </span>resize_disk=None<span class="p">, </span>size=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>volume_ids=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_digitalocean/#pulumi_digitalocean.Droplet">Droplet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backups=None<span class="p">, </span>image=None<span class="p">, </span>ipv6=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>private_networking=None<span class="p">, </span>region=None<span class="p">, </span>resize_disk=None<span class="p">, </span>size=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>volume_ids=None<span class="p">, </span>vpc_uuid=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1561,7 +1563,7 @@ Get an existing Droplet resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backups=None<span class="p">, </span>created_at=None<span class="p">, </span>disk=None<span class="p">, </span>droplet_urn=None<span class="p">, </span>image=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>ipv4_address_private=None<span class="p">, </span>ipv6=None<span class="p">, </span>ipv6_address=None<span class="p">, </span>locked=None<span class="p">, </span>memory=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>price_hourly=None<span class="p">, </span>price_monthly=None<span class="p">, </span>private_networking=None<span class="p">, </span>region=None<span class="p">, </span>resize_disk=None<span class="p">, </span>size=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vcpus=None<span class="p">, </span>volume_ids=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backups=None<span class="p">, </span>created_at=None<span class="p">, </span>disk=None<span class="p">, </span>droplet_urn=None<span class="p">, </span>image=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>ipv4_address_private=None<span class="p">, </span>ipv6=None<span class="p">, </span>ipv6_address=None<span class="p">, </span>locked=None<span class="p">, </span>memory=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>price_hourly=None<span class="p">, </span>price_monthly=None<span class="p">, </span>private_networking=None<span class="p">, </span>region=None<span class="p">, </span>resize_disk=None<span class="p">, </span>size=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vcpus=None<span class="p">, </span>volume_ids=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

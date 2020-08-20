@@ -3,7 +3,7 @@ title: "Module acm"
 title_tag: "Module acm | Package @pulumi/aws | Node.js SDK"
 linktitle: "acm"
 meta_desc: "Explore members of the acm module in the @pulumi/aws package."
-git_sha: "e07f1c21047146459fa7794a69555b4dd80e2222"
+git_sha: "0a2e76f947fd9ea3ee41beab30d2121c4b385e5c"
 block_external_search_index: true
 ---
 
@@ -11,13 +11,6 @@ block_external_search_index: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
 
 {{< resource-docs-alert "aws" >}}
-
-
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-aws` repo](https://github.com/pulumi/pulumi-aws/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-aws` repo](https://github.com/terraform-providers/terraform-provider-aws/issues).
-
 
 
 
@@ -46,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Certificate" data-link-title="Certificate">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L95">
         Resource <strong>Certificate</strong>
     </a>
 </h3>
@@ -72,7 +65,6 @@ It's recommended to specify `createBeforeDestroy = true` in a [lifecycle](https:
 which is currently in use (eg, by `aws.lb.Listener`).
 
 #### Example Usage
-
 ##### Certificate creation
 
 ```typescript
@@ -87,7 +79,6 @@ const cert = new aws.acm.Certificate("cert", {
     validationMethod: "DNS",
 });
 ```
-
 ##### Importing an existing certificate
 
 ```typescript
@@ -95,15 +86,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as tls from "@pulumi/tls";
 
-const examplePrivateKey = new tls.PrivateKey("example", {
-    algorithm: "RSA",
-});
-const exampleSelfSignedCert = new tls.SelfSignedCert("example", {
-    allowedUses: [
-        "key_encipherment",
-        "digital_signature",
-        "server_auth",
-    ],
+const examplePrivateKey = new tls.PrivateKey("examplePrivateKey", {algorithm: "RSA"});
+const exampleSelfSignedCert = new tls.SelfSignedCert("exampleSelfSignedCert", {
     keyAlgorithm: "RSA",
     privateKeyPem: examplePrivateKey.privateKeyPem,
     subjects: [{
@@ -111,15 +95,44 @@ const exampleSelfSignedCert = new tls.SelfSignedCert("example", {
         organization: "ACME Examples, Inc",
     }],
     validityPeriodHours: 12,
+    allowedUses: [
+        "key_encipherment",
+        "digital_signature",
+        "server_auth",
+    ],
 });
 const cert = new aws.acm.Certificate("cert", {
-    certificateBody: exampleSelfSignedCert.certPem,
     privateKey: examplePrivateKey.privateKeyPem,
+    certificateBody: exampleSelfSignedCert.certPem,
 });
+```
+##### Referencing domainValidationOptions With forEach Based Resources
+
+See the `aws.acm.CertificateValidation` resource for a full example of performing DNS validation.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example: aws.route53.Record[];
+for (const range of Object.entries(.reduce((__obj, dvo) => { ...__obj, [dvo.domainName]: {
+    name: dvo.resourceRecordName,
+    record: dvo.resourceRecordValue,
+    type: dvo.resourceRecordType,
+} })).map(([k, v]) => {key: k, value: v})) {
+    example.push(new aws.route53.Record(`example-${range.key}`, {
+        allowOverwrite: true,
+        name: range.value.name,
+        records: [range.value.record],
+        ttl: 60,
+        type: range.value.type,
+        zoneId: aws_route53_zone.example.zone_id,
+    }));
+}
 ```
 
 <h4 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L156"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L176"> <b>constructor</b></a>
 </h4>
 
 
@@ -133,7 +146,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L85">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L105">method <b>get</b></a>
 </h4>
 
 
@@ -144,14 +157,14 @@ Get an existing Certificate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L75">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L95">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L96">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L116">method <b>isInstance</b></a>
 </h4>
 
 
@@ -162,7 +175,7 @@ Returns true if the given object is an instance of Certificate.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Certificate-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L106">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L126">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +183,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the certificate
 
 <h4 class="pdoc-member-header" id="Certificate-certificateAuthorityArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L110">property <b>certificateAuthorityArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L130">property <b>certificateAuthorityArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateAuthorityArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -178,7 +191,7 @@ The ARN of the certificate
 ARN of an ACMPCA
 
 <h4 class="pdoc-member-header" id="Certificate-certificateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L114">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L134">property <b>certificateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -186,7 +199,7 @@ ARN of an ACMPCA
 The certificate's PEM-formatted public key
 
 <h4 class="pdoc-member-header" id="Certificate-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L119">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L139">property <b>certificateChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateChain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -195,7 +208,7 @@ The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
 
 <h4 class="pdoc-member-header" id="Certificate-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L123">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L143">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -203,15 +216,15 @@ The certificate's PEM-formatted chain
 A domain name for which the certificate should be issued
 
 <h4 class="pdoc-member-header" id="Certificate-domainValidationOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L127">property <b>domainValidationOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L147">property <b>domainValidationOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainValidationOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateDomainValidationOption'>CertificateDomainValidationOption</a>[]&gt;;</code></pre>
 
-A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
+Set of domain validation objects which can be used to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
 
 <h4 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L95">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -220,7 +233,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Certificate-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L132">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L152">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateOptions'>CertificateOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -229,7 +242,7 @@ Configuration block used to set certificate options. Detailed below.
 * Importing an existing certificate
 
 <h4 class="pdoc-member-header" id="Certificate-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L136">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L156">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -237,7 +250,7 @@ Configuration block used to set certificate options. Detailed below.
 The certificate's PEM-formatted private key
 
 <h4 class="pdoc-member-header" id="Certificate-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L140">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L160">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -245,23 +258,23 @@ The certificate's PEM-formatted private key
 Status of the certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-subjectAlternativeNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L144">property <b>subjectAlternativeNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L164">property <b>subjectAlternativeNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subjectAlternativeNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 
-A list of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`).
+Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`) to trigger recreation.
 
 <h4 class="pdoc-member-header" id="Certificate-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L148">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L168">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L75">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L95">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -270,7 +283,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Certificate-validationEmails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L152">property <b>validationEmails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L172">property <b>validationEmails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validationEmails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -278,15 +291,15 @@ deployments.
 A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 
 <h4 class="pdoc-member-header" id="Certificate-validationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L156">property <b>validationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L176">property <b>validationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validationMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
+Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into the provider.
 
 <h3 class="pdoc-module-header" id="CertificateValidation" data-link-title="CertificateValidation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L69">
         Resource <strong>CertificateValidation</strong>
     </a>
 </h3>
@@ -302,114 +315,60 @@ deploy the required validation records and wait for validation to complete.
 
 > **WARNING:** This resource implements a part of the validation workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
 
-
 #### Example Usage
-
 ##### DNS Validation with Route 53
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const certCertificate = new aws.acm.Certificate("cert", {
+const exampleCertificate = new aws.acm.Certificate("exampleCertificate", {
     domainName: "example.com",
     validationMethod: "DNS",
 });
-const zone = pulumi.output(aws.route53.getZone({
-    name: "example.com.",
+const exampleZone = aws.route53.getZone({
+    name: "example.com",
     privateZone: false,
-}, { async: true }));
-const certValidation = new aws.route53.Record("cert_validation", {
-    name: certCertificate.domainValidationOptions[0].resourceRecordName,
-    records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
-    ttl: 60,
-    type: certCertificate.domainValidationOptions[0].resourceRecordType,
-    zoneId: zone.zoneId!,
 });
-const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
-    certificateArn: certCertificate.arn,
-    validationRecordFqdns: [certValidation.fqdn],
+const exampleRecord: aws.route53.Record[];
+for (const range of Object.entries(exampleCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions.reduce((__obj, dvo) => { ...__obj, [dvo.domainName]: {
+    name: dvo.resourceRecordName,
+    record: dvo.resourceRecordValue,
+    type: dvo.resourceRecordType,
+} }))).map(([k, v]) => {key: k, value: v})) {
+    exampleRecord.push(new aws.route53.Record(`exampleRecord-${range.key}`, {
+        allowOverwrite: true,
+        name: range.value.name,
+        records: [range.value.record],
+        ttl: 60,
+        type: range.value.type,
+        zoneId: exampleZone.then(exampleZone => exampleZone.zoneId),
+    }));
+}
+const exampleCertificateValidation = new aws.acm.CertificateValidation("exampleCertificateValidation", {
+    certificateArn: exampleCertificate.arn,
+    validationRecordFqdns: exampleRecord.apply(exampleRecord => exampleRecord.map(record => record.fqdn)),
 });
-const frontEnd = new aws.lb.Listener("front_end", {
-    // [...]
-    certificateArn: certCertificateValidation.certificateArn,
-});
+// ... other configuration ...
+const exampleListener = new aws.lb.Listener("exampleListener", {certificateArn: exampleCertificateValidation.certificateArn});
 ```
-
-##### Alternative Domains DNS Validation with Route 53
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const certCertificate = new aws.acm.Certificate("cert", {
-    domainName: "example.com",
-    subjectAlternativeNames: [
-        "www.example.com",
-        "example.org",
-    ],
-    validationMethod: "DNS",
-});
-const zone = pulumi.output(aws.route53.getZone({
-    name: "example.com.",
-    privateZone: false,
-}, { async: true }));
-const zoneAlt = pulumi.output(aws.route53.getZone({
-    name: "example.org.",
-    privateZone: false,
-}, { async: true }));
-const certValidation = new aws.route53.Record("cert_validation", {
-    name: certCertificate.domainValidationOptions[0].resourceRecordName,
-    records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
-    ttl: 60,
-    type: certCertificate.domainValidationOptions[0].resourceRecordType,
-    zoneId: zone.zoneId!,
-});
-const certValidationAlt1 = new aws.route53.Record("cert_validation_alt1", {
-    name: certCertificate.domainValidationOptions[1].resourceRecordName,
-    records: [certCertificate.domainValidationOptions[1].resourceRecordValue],
-    ttl: 60,
-    type: certCertificate.domainValidationOptions[1].resourceRecordType,
-    zoneId: zone.zoneId!,
-});
-const certValidationAlt2 = new aws.route53.Record("cert_validation_alt2", {
-    name: certCertificate.domainValidationOptions[2].resourceRecordName,
-    records: [certCertificate.domainValidationOptions[2].resourceRecordValue],
-    ttl: 60,
-    type: certCertificate.domainValidationOptions[2].resourceRecordType,
-    zoneId: zoneAlt.zoneId!,
-});
-const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
-    certificateArn: certCertificate.arn,
-    validationRecordFqdns: [
-        certValidation.fqdn,
-        certValidationAlt1.fqdn,
-        certValidationAlt2.fqdn,
-    ],
-});
-const frontEnd = new aws.lb.Listener("front_end", {
-    // [...]
-    certificateArn: certCertificateValidation.certificateArn,
-});
-```
-
 ##### Email Validation
 
+In this situation, the resource is simply a waiter for manual email approval of ACM certificates.
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const certCertificate = new aws.acm.Certificate("cert", {
+const exampleCertificate = new aws.acm.Certificate("exampleCertificate", {
     domainName: "example.com",
     validationMethod: "EMAIL",
 });
-const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
-    certificateArn: certCertificate.arn,
-});
+const exampleCertificateValidation = new aws.acm.CertificateValidation("exampleCertificateValidation", {certificateArn: exampleCertificate.arn});
 ```
 
 <h4 class="pdoc-member-header" id="CertificateValidation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L158"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L104"> <b>constructor</b></a>
 </h4>
 
 
@@ -423,7 +382,7 @@ Create a CertificateValidation resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CertificateValidation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L133">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L79">method <b>get</b></a>
 </h4>
 
 
@@ -434,14 +393,14 @@ Get an existing CertificateValidation resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CertificateValidation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L123">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L69">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CertificateValidation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L144">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L90">method <b>isInstance</b></a>
 </h4>
 
 
@@ -452,7 +411,7 @@ Returns true if the given object is an instance of CertificateValidation.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CertificateValidation-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L154">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L100">property <b>certificateArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -460,7 +419,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the certificate that is being validated.
 
 <h4 class="pdoc-member-header" id="CertificateValidation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L123">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -469,7 +428,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CertificateValidation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L123">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L69">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -478,7 +437,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="CertificateValidation-validationRecordFqdns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L158">property <b>validationRecordFqdns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L104">property <b>validationRecordFqdns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validationRecordFqdns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -488,7 +447,7 @@ List of FQDNs that implement the validation. Only valid for DNS validation metho
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCertificate" data-link-title="getCertificate">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L27">
         Function <strong>getCertificate</strong>
     </a>
 </h3>
@@ -502,8 +461,6 @@ Manager (ACM), you can reference
 it by domain without having to hard code the ARNs as input.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -519,7 +476,7 @@ const example = pulumi.output(aws.acm.getCertificate({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CertificateArgs" data-link-title="CertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L273">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L293">
         interface <strong>CertificateArgs</strong>
     </a>
 </h3>
@@ -529,7 +486,7 @@ const example = pulumi.output(aws.acm.getCertificate({
 The set of arguments for constructing a Certificate resource.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-certificateAuthorityArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L277">property <b>certificateAuthorityArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L297">property <b>certificateAuthorityArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateAuthorityArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -537,7 +494,7 @@ The set of arguments for constructing a Certificate resource.
 ARN of an ACMPCA
 
 <h4 class="pdoc-member-header" id="CertificateArgs-certificateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L281">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L301">property <b>certificateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -545,7 +502,7 @@ ARN of an ACMPCA
 The certificate's PEM-formatted public key
 
 <h4 class="pdoc-member-header" id="CertificateArgs-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L286">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L306">property <b>certificateChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -554,7 +511,7 @@ The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
 
 <h4 class="pdoc-member-header" id="CertificateArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L290">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L310">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -562,7 +519,7 @@ The certificate's PEM-formatted chain
 A domain name for which the certificate should be issued
 
 <h4 class="pdoc-member-header" id="CertificateArgs-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L295">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L315">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateOptions'>CertificateOptions</a>&gt;;</code></pre>
@@ -571,7 +528,7 @@ Configuration block used to set certificate options. Detailed below.
 * Importing an existing certificate
 
 <h4 class="pdoc-member-header" id="CertificateArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L299">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L319">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -579,31 +536,31 @@ Configuration block used to set certificate options. Detailed below.
 The certificate's PEM-formatted private key
 
 <h4 class="pdoc-member-header" id="CertificateArgs-subjectAlternativeNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L303">property <b>subjectAlternativeNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L323">property <b>subjectAlternativeNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectAlternativeNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-A list of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`).
+Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`) to trigger recreation.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L307">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L327">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-validationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L311">property <b>validationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L331">property <b>validationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
+Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into the provider.
 
 <h3 class="pdoc-module-header" id="CertificateState" data-link-title="CertificateState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L213">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L233">
         interface <strong>CertificateState</strong>
     </a>
 </h3>
@@ -613,7 +570,7 @@ Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be us
 Input properties used for looking up and filtering Certificate resources.
 
 <h4 class="pdoc-member-header" id="CertificateState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L217">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L237">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -621,7 +578,7 @@ Input properties used for looking up and filtering Certificate resources.
 The ARN of the certificate
 
 <h4 class="pdoc-member-header" id="CertificateState-certificateAuthorityArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L221">property <b>certificateAuthorityArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L241">property <b>certificateAuthorityArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateAuthorityArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -629,7 +586,7 @@ The ARN of the certificate
 ARN of an ACMPCA
 
 <h4 class="pdoc-member-header" id="CertificateState-certificateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L225">property <b>certificateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L245">property <b>certificateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -637,7 +594,7 @@ ARN of an ACMPCA
 The certificate's PEM-formatted public key
 
 <h4 class="pdoc-member-header" id="CertificateState-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L230">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L250">property <b>certificateChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -646,7 +603,7 @@ The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
 
 <h4 class="pdoc-member-header" id="CertificateState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L234">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L254">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -654,15 +611,15 @@ The certificate's PEM-formatted chain
 A domain name for which the certificate should be issued
 
 <h4 class="pdoc-member-header" id="CertificateState-domainValidationOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L238">property <b>domainValidationOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L258">property <b>domainValidationOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainValidationOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateDomainValidationOption'>CertificateDomainValidationOption</a>&gt;[]&gt;;</code></pre>
 
-A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
+Set of domain validation objects which can be used to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
 
 <h4 class="pdoc-member-header" id="CertificateState-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L243">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L263">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateOptions'>CertificateOptions</a>&gt;;</code></pre>
@@ -671,7 +628,7 @@ Configuration block used to set certificate options. Detailed below.
 * Importing an existing certificate
 
 <h4 class="pdoc-member-header" id="CertificateState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L247">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L267">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -679,7 +636,7 @@ Configuration block used to set certificate options. Detailed below.
 The certificate's PEM-formatted private key
 
 <h4 class="pdoc-member-header" id="CertificateState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L251">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L271">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -687,23 +644,23 @@ The certificate's PEM-formatted private key
 Status of the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateState-subjectAlternativeNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L255">property <b>subjectAlternativeNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L275">property <b>subjectAlternativeNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subjectAlternativeNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-A list of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`).
+Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`) to trigger recreation.
 
 <h4 class="pdoc-member-header" id="CertificateState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L259">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L279">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CertificateState-validationEmails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L263">property <b>validationEmails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L283">property <b>validationEmails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validationEmails?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -711,15 +668,15 @@ A map of tags to assign to the resource.
 A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 
 <h4 class="pdoc-member-header" id="CertificateState-validationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificate.ts#L267">property <b>validationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificate.ts#L287">property <b>validationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
+Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into the provider.
 
 <h3 class="pdoc-module-header" id="CertificateValidationArgs" data-link-title="CertificateValidationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L210">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L156">
         interface <strong>CertificateValidationArgs</strong>
     </a>
 </h3>
@@ -729,7 +686,7 @@ Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be us
 The set of arguments for constructing a CertificateValidation resource.
 
 <h4 class="pdoc-member-header" id="CertificateValidationArgs-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L214">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L160">property <b>certificateArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -737,7 +694,7 @@ The set of arguments for constructing a CertificateValidation resource.
 The ARN of the certificate that is being validated.
 
 <h4 class="pdoc-member-header" id="CertificateValidationArgs-validationRecordFqdns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L218">property <b>validationRecordFqdns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L164">property <b>validationRecordFqdns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validationRecordFqdns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -745,7 +702,7 @@ The ARN of the certificate that is being validated.
 List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation
 
 <h3 class="pdoc-module-header" id="CertificateValidationState" data-link-title="CertificateValidationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L142">
         interface <strong>CertificateValidationState</strong>
     </a>
 </h3>
@@ -755,7 +712,7 @@ List of FQDNs that implement the validation. Only valid for DNS validation metho
 Input properties used for looking up and filtering CertificateValidation resources.
 
 <h4 class="pdoc-member-header" id="CertificateValidationState-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L200">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L146">property <b>certificateArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -763,7 +720,7 @@ Input properties used for looking up and filtering CertificateValidation resourc
 The ARN of the certificate that is being validated.
 
 <h4 class="pdoc-member-header" id="CertificateValidationState-validationRecordFqdns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/certificateValidation.ts#L204">property <b>validationRecordFqdns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/certificateValidation.ts#L150">property <b>validationRecordFqdns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validationRecordFqdns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -771,7 +728,7 @@ The ARN of the certificate that is being validated.
 List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation
 
 <h3 class="pdoc-module-header" id="GetCertificateArgs" data-link-title="GetCertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L48">
         interface <strong>GetCertificateArgs</strong>
     </a>
 </h3>
@@ -781,7 +738,7 @@ List of FQDNs that implement the validation. Only valid for DNS validation metho
 A collection of arguments for invoking getCertificate.
 
 <h4 class="pdoc-member-header" id="GetCertificateArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L54">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L52">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -789,7 +746,7 @@ A collection of arguments for invoking getCertificate.
 The domain of the certificate to look up. If no certificate is found with this name, an error will be returned.
 
 <h4 class="pdoc-member-header" id="GetCertificateArgs-keyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L58">property <b>keyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L56">property <b>keyTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -797,7 +754,7 @@ The domain of the certificate to look up. If no certificate is found with this n
 A list of key algorithms to filter certificates. By default, ACM does not return all certificate types when searching. Valid values are `RSA_1024`, `RSA_2048`, `RSA_4096`, `EC_prime256v1`, `EC_secp384r1`, and `EC_secp521r1`.
 
 <h4 class="pdoc-member-header" id="GetCertificateArgs-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L62">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L60">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -805,7 +762,7 @@ A list of key algorithms to filter certificates. By default, ACM does not return
 If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.
 
 <h4 class="pdoc-member-header" id="GetCertificateArgs-statuses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L68">property <b>statuses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L66">property <b>statuses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statuses?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -815,15 +772,15 @@ A list of statuses on which to filter the returned list. Valid values are `PENDI
 are returned.
 
 <h4 class="pdoc-member-header" id="GetCertificateArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L72">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L70">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 
 A mapping of tags for the resource.
 
 <h4 class="pdoc-member-header" id="GetCertificateArgs-types">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L76">property <b>types</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L74">property <b>types</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>types?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -831,7 +788,7 @@ A mapping of tags for the resource.
 A list of types on which to filter the returned list. Valid values are `AMAZON_ISSUED` and `IMPORTED`.
 
 <h3 class="pdoc-module-header" id="GetCertificateResult" data-link-title="GetCertificateResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L80">
         interface <strong>GetCertificateResult</strong>
     </a>
 </h3>
@@ -841,7 +798,7 @@ A list of types on which to filter the returned list. Valid values are `AMAZON_I
 A collection of values returned by getCertificate.
 
 <h4 class="pdoc-member-header" id="GetCertificateResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L86">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L84">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -849,12 +806,12 @@ A collection of values returned by getCertificate.
 Set to the ARN of the found certificate, suitable for referencing in other resources that support ACM certificates.
 
 <h4 class="pdoc-member-header" id="GetCertificateResult-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L87">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L85">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L91">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L89">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -862,30 +819,30 @@ Set to the ARN of the found certificate, suitable for referencing in other resou
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetCertificateResult-keyTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L92">property <b>keyTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L90">property <b>keyTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L93">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L91">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-statuses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L94">property <b>statuses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L92">property <b>statuses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statuses?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L98">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L96">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 
 A mapping of tags for the resource.
 
 <h4 class="pdoc-member-header" id="GetCertificateResult-types">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/acm/getCertificate.ts#L99">property <b>types</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acm/getCertificate.ts#L97">property <b>types</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>types?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>

@@ -62,7 +62,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -158,7 +158,7 @@ const foo = pulumi.output(aws.ec2.getInstance({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupInstanceArgs">LookupInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupInstanceResult">LookupInstanceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupInstanceArgs">LookupInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupInstanceResult">LookupInstanceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupInstance` in the Go SDK.
 
@@ -800,6 +800,17 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-"
             title="">
+        <span id="secondaryprivateips_csharp">
+<a href="#secondaryprivateips_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Private<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
 </span> 
@@ -1232,6 +1243,17 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstancerootblockdevice">[]Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}The root block device mappings of the Instance
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="secondaryprivateips_go">
+<a href="#secondaryprivateips_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Private<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1672,6 +1694,17 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-"
             title="">
+        <span id="secondaryprivateips_nodejs">
+<a href="#secondaryprivateips_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Private<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span> 
@@ -2108,6 +2141,17 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-"
             title="">
+        <span id="secondary_private_ips_python">
+<a href="#secondary_private_ips_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>private_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span> 
@@ -2253,7 +2297,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetInstanceCreditSpecification">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceCreditSpecification">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetInstanceCreditSpecification.html">output</a> API doc for this type.
@@ -2339,7 +2383,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetInstanceEbsBlockDevice">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetInstanceEbsBlockDevice.html">output</a> API doc for this type.
@@ -2773,7 +2817,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetInstanceEphemeralBlockDevice">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetInstanceEphemeralBlockDevice.html">output</a> API doc for this type.
@@ -2951,7 +2995,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetInstanceFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetInstanceFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceFilter">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetInstanceFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetInstanceFilter.html">output</a> API doc for this type.
@@ -3077,7 +3121,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetInstanceMetadataOption">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceMetadataOption">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetInstanceMetadataOption.html">output</a> API doc for this type.
@@ -3255,7 +3299,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetInstanceRootBlockDevice">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceRootBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetInstanceRootBlockDevice.html">output</a> API doc for this type.

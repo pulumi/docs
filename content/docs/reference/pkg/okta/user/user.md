@@ -15,8 +15,53 @@ Creates an Okta User.
 This resource allows you to create and configure an Okta User.
 
 {{% examples %}}
-{{% /examples %}}
+## Example Usage
 
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_okta as okta
+
+example = okta.user.User("example",
+    description="My custom property name",
+    index="customPropertyName",
+    master="OKTA",
+    scope="SELF",
+    title="customPropertyName",
+    type="string")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.user.User("example", {
+    description: "My custom property name",
+    index: "customPropertyName",
+    master: "OKTA",
+    scope: "SELF",
+    title: "customPropertyName",
+    type: "string",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a User Resource {#create}
@@ -28,7 +73,7 @@ This resource allows you to create and configure an Okta User.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/user/#User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_roles=None<span class="p">, </span>city=None<span class="p">, </span>cost_center=None<span class="p">, </span>country_code=None<span class="p">, </span>custom_profile_attributes=None<span class="p">, </span>department=None<span class="p">, </span>display_name=None<span class="p">, </span>division=None<span class="p">, </span>email=None<span class="p">, </span>employee_number=None<span class="p">, </span>first_name=None<span class="p">, </span>group_memberships=None<span class="p">, </span>honorific_prefix=None<span class="p">, </span>honorific_suffix=None<span class="p">, </span>last_name=None<span class="p">, </span>locale=None<span class="p">, </span>login=None<span class="p">, </span>manager=None<span class="p">, </span>manager_id=None<span class="p">, </span>middle_name=None<span class="p">, </span>mobile_phone=None<span class="p">, </span>nick_name=None<span class="p">, </span>organization=None<span class="p">, </span>password=None<span class="p">, </span>postal_address=None<span class="p">, </span>preferred_language=None<span class="p">, </span>primary_phone=None<span class="p">, </span>profile_url=None<span class="p">, </span>recovery_answer=None<span class="p">, </span>recovery_question=None<span class="p">, </span>second_email=None<span class="p">, </span>state=None<span class="p">, </span>status=None<span class="p">, </span>street_address=None<span class="p">, </span>timezone=None<span class="p">, </span>title=None<span class="p">, </span>user_type=None<span class="p">, </span>zip_code=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/user/#pulumi_okta.user.User">User</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_roles=None<span class="p">, </span>city=None<span class="p">, </span>cost_center=None<span class="p">, </span>country_code=None<span class="p">, </span>custom_profile_attributes=None<span class="p">, </span>department=None<span class="p">, </span>display_name=None<span class="p">, </span>division=None<span class="p">, </span>email=None<span class="p">, </span>employee_number=None<span class="p">, </span>first_name=None<span class="p">, </span>group_memberships=None<span class="p">, </span>honorific_prefix=None<span class="p">, </span>honorific_suffix=None<span class="p">, </span>last_name=None<span class="p">, </span>locale=None<span class="p">, </span>login=None<span class="p">, </span>manager=None<span class="p">, </span>manager_id=None<span class="p">, </span>middle_name=None<span class="p">, </span>mobile_phone=None<span class="p">, </span>nick_name=None<span class="p">, </span>organization=None<span class="p">, </span>password=None<span class="p">, </span>postal_address=None<span class="p">, </span>preferred_language=None<span class="p">, </span>primary_phone=None<span class="p">, </span>profile_url=None<span class="p">, </span>recovery_answer=None<span class="p">, </span>recovery_question=None<span class="p">, </span>second_email=None<span class="p">, </span>state=None<span class="p">, </span>status=None<span class="p">, </span>street_address=None<span class="p">, </span>timezone=None<span class="p">, </span>title=None<span class="p">, </span>user_type=None<span class="p">, </span>zip_code=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2035,7 +2080,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_roles=None<span class="p">, </span>city=None<span class="p">, </span>cost_center=None<span class="p">, </span>country_code=None<span class="p">, </span>custom_profile_attributes=None<span class="p">, </span>department=None<span class="p">, </span>display_name=None<span class="p">, </span>division=None<span class="p">, </span>email=None<span class="p">, </span>employee_number=None<span class="p">, </span>first_name=None<span class="p">, </span>group_memberships=None<span class="p">, </span>honorific_prefix=None<span class="p">, </span>honorific_suffix=None<span class="p">, </span>last_name=None<span class="p">, </span>locale=None<span class="p">, </span>login=None<span class="p">, </span>manager=None<span class="p">, </span>manager_id=None<span class="p">, </span>middle_name=None<span class="p">, </span>mobile_phone=None<span class="p">, </span>nick_name=None<span class="p">, </span>organization=None<span class="p">, </span>password=None<span class="p">, </span>postal_address=None<span class="p">, </span>preferred_language=None<span class="p">, </span>primary_phone=None<span class="p">, </span>profile_url=None<span class="p">, </span>raw_status=None<span class="p">, </span>recovery_answer=None<span class="p">, </span>recovery_question=None<span class="p">, </span>second_email=None<span class="p">, </span>state=None<span class="p">, </span>status=None<span class="p">, </span>street_address=None<span class="p">, </span>timezone=None<span class="p">, </span>title=None<span class="p">, </span>user_type=None<span class="p">, </span>zip_code=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_roles=None<span class="p">, </span>city=None<span class="p">, </span>cost_center=None<span class="p">, </span>country_code=None<span class="p">, </span>custom_profile_attributes=None<span class="p">, </span>department=None<span class="p">, </span>display_name=None<span class="p">, </span>division=None<span class="p">, </span>email=None<span class="p">, </span>employee_number=None<span class="p">, </span>first_name=None<span class="p">, </span>group_memberships=None<span class="p">, </span>honorific_prefix=None<span class="p">, </span>honorific_suffix=None<span class="p">, </span>last_name=None<span class="p">, </span>locale=None<span class="p">, </span>login=None<span class="p">, </span>manager=None<span class="p">, </span>manager_id=None<span class="p">, </span>middle_name=None<span class="p">, </span>mobile_phone=None<span class="p">, </span>nick_name=None<span class="p">, </span>organization=None<span class="p">, </span>password=None<span class="p">, </span>postal_address=None<span class="p">, </span>preferred_language=None<span class="p">, </span>primary_phone=None<span class="p">, </span>profile_url=None<span class="p">, </span>raw_status=None<span class="p">, </span>recovery_answer=None<span class="p">, </span>recovery_question=None<span class="p">, </span>second_email=None<span class="p">, </span>state=None<span class="p">, </span>status=None<span class="p">, </span>street_address=None<span class="p">, </span>timezone=None<span class="p">, </span>title=None<span class="p">, </span>user_type=None<span class="p">, </span>zip_code=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

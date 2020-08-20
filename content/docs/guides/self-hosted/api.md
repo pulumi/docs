@@ -40,6 +40,10 @@ The Pulumi API is one of the components required for self-hosting Pulumi in your
 
 The API service is a Go-based application. This is a single binary application that has all of the dependencies it needs in order to run.
 
+### Server
+
+This container runs an HTTP server which provides the APIs needed by the Console and the CLI. By default this container will serve using port `8080` over standard HTTP. If [TLS](#tls-environment-variables) is configured the server will instead serve over port `8443` using HTTPS.
+
 ## Primary Environment Variables
 
 | Variable Name | Description |
@@ -66,7 +70,7 @@ The API service is a Go-based application. This is a single binary application t
 
 #### API Service
 
-The service is configurable to serve the API using TLS. The following environment variables are _all_ required in order to enable TLS.
+The service is configurable to serve the API using TLS. The following environment variables are _all_ required in order to enable TLS. The values of the environment variables may either be a filepath or the actual value of the entity. If these variables are set, the service will be served over HTTPS (i.e using TLS) using port `8443`. If the following variables are not set the service will default to serving over HTTP using port `8080`.
 
 | Variable Name       | Description                                                                                               |
 |---------------------|-----------------------------------------------------------------------------------------------------------|
@@ -85,9 +89,9 @@ openssl \
 
 #### Database Connections
 
-The service is configurable to enable connections to the backend SQL database over TLS. The following environment variables are _all_ required to connect to the database using TLS.
+The service is configurable to enable connections to the backend SQL database over TLS. The following environment variables are _all_ required to connect to the database using TLS. If these variables are set the service will establish connections to the database using TLS, otherwise the service will default to connecting without TLS. The same ports will be used for communication to the database regardless of whether TLS is configured or not.
 
 | Variable Name            | Description                                                                                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
-| DATABASE_CA_CERTIFICATE  | The CA certificate used to establish TLS connections with the database. This certificate must be PEM encoded. |
+| DATABASE_CA_CERTIFICATE  | The CA certificate used to establish TLS connections with the database. This certificate must be PEM encoded. This must be set to the value of the certificate itself and _not_ a filepath to the location of the certificate file. |
 | DATABASE_MIN_TLS_VERSION | The minimum TLS version to use for database connections (must be in \<major>.\<minor> format, e.g. `1.2`).    |

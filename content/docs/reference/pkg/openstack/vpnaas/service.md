@@ -39,7 +39,28 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/vpnaas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := vpnaas.NewService(ctx, "service1", &vpnaas.ServiceArgs{
+			AdminStateUp: pulumi.Bool(true),
+			RouterId:     pulumi.String("14a75700-fc03-4602-9294-26ee44f366b3"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -80,7 +101,7 @@ const service1 = new openstack.vpnaas.Service("service_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/vpnaas/#Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/vpnaas/#pulumi_openstack.vpnaas.Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -883,7 +904,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>external_v4_ip=None<span class="p">, </span>external_v6_ip=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, </span>status=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_state_up=None<span class="p">, </span>description=None<span class="p">, </span>external_v4_ip=None<span class="p">, </span>external_v6_ip=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>router_id=None<span class="p">, </span>status=None<span class="p">, </span>subnet_id=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

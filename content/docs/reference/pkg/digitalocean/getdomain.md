@@ -1,8 +1,8 @@
 
 ---
 title: "GetDomain"
-title_tag: "Function GetDomain | Package Digital Ocean"
-meta_desc: "Explore the GetDomain function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on a domain. This data source provides the name, TTL, and zone"
+title_tag: "Function GetDomain | Package DigitalOcean"
+meta_desc: "Explore the GetDomain function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a domain. This data source provides the name, TTL, and zone"
 ---
 
 
@@ -17,8 +17,6 @@ file data.
 
 An error is triggered if the provided domain name is not managed with your
 DigitalOcean account.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -45,6 +43,7 @@ class MyStack : Stack
     public Output<string> DomainOutput { get; set; }
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -59,9 +58,11 @@ import pulumi_digitalocean as digitalocean
 example = digitalocean.get_domain(name="example.com")
 pulumi.export("domainOutput", example.zone_file)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -71,6 +72,7 @@ const example = digitalocean.getDomain({
 });
 export const domainOutput = example.then(example => example.zoneFile);
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

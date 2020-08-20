@@ -13,9 +13,19 @@ pulumi-choosable {
 
     pre.chroma {
         @apply mt-0 bg-gray-100;
+
+        .code-mode-dark & {
+            @apply bg-gray-900;
+        }
     }
 
     .highlight, .chroma {
         // @apply border-transparent;
+    }
+
+    .copy-button-container {
+        .no-copy & {
+            display: none;
+        }
     }
 }

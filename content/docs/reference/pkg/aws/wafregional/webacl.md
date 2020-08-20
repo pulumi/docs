@@ -52,11 +52,11 @@ class MyStack : Stack
         });
         var wafacl = new Aws.WafRegional.WebAcl("wafacl", new Aws.WafRegional.WebAclArgs
         {
+            MetricName = "tfWebACL",
             DefaultAction = new Aws.WafRegional.Inputs.WebAclDefaultActionArgs
             {
                 Type = "ALLOW",
             },
-            MetricName = "tfWebACL",
             Rules = 
             {
                 new Aws.WafRegional.Inputs.WebAclRuleArgs
@@ -83,7 +83,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -114,10 +114,10 @@ func main() {
 			return err
 		}
 		_, err = wafregional.NewWebAcl(ctx, "wafacl", &wafregional.WebAclArgs{
+			MetricName: pulumi.String("tfWebACL"),
 			DefaultAction: &wafregional.WebAclDefaultActionArgs{
 				Type: pulumi.String("ALLOW"),
 			},
-			MetricName: pulumi.String("tfWebACL"),
 			Rules: wafregional.WebAclRuleArray{
 				&wafregional.WebAclRuleArgs{
 					Action: &wafregional.WebAclRuleActionArgs{
@@ -156,10 +156,10 @@ wafrule = aws.wafregional.Rule("wafrule",
         "type": "IPMatch",
     }])
 wafacl = aws.wafregional.WebAcl("wafacl",
+    metric_name="tfWebACL",
     default_action={
         "type": "ALLOW",
     },
-    metric_name="tfWebACL",
     rules=[{
         "action": {
             "type": "BLOCK",
@@ -178,12 +178,10 @@ wafacl = aws.wafregional.WebAcl("wafacl",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ipset = new aws.wafregional.IpSet("ipset", {
-    ipSetDescriptors: [{
-        type: "IPV4",
-        value: "192.0.7.0/24",
-    }],
-});
+const ipset = new aws.wafregional.IpSet("ipset", {ipSetDescriptors: [{
+    type: "IPV4",
+    value: "192.0.7.0/24",
+}]});
 const wafrule = new aws.wafregional.Rule("wafrule", {
     metricName: "tfWAFRule",
     predicates: [{
@@ -193,10 +191,10 @@ const wafrule = new aws.wafregional.Rule("wafrule", {
     }],
 });
 const wafacl = new aws.wafregional.WebAcl("wafacl", {
+    metricName: "tfWebACL",
     defaultAction: {
         type: "ALLOW",
     },
-    metricName: "tfWebACL",
     rules: [{
         action: {
             type: "BLOCK",
@@ -222,22 +220,22 @@ class MyStack : Stack
     {
         var example = new Aws.WafRegional.WebAcl("example", new Aws.WafRegional.WebAclArgs
         {
+            MetricName = "example",
             DefaultAction = new Aws.WafRegional.Inputs.WebAclDefaultActionArgs
             {
                 Type = "ALLOW",
             },
-            MetricName = "example",
             Rules = 
             {
                 new Aws.WafRegional.Inputs.WebAclRuleArgs
                 {
+                    Priority = 1,
+                    RuleId = aws_wafregional_rule_group.Example.Id,
+                    Type = "GROUP",
                     OverrideAction = new Aws.WafRegional.Inputs.WebAclRuleOverrideActionArgs
                     {
                         Type = "NONE",
                     },
-                    Priority = 1,
-                    RuleId = aws_wafregional_rule_group.Example.Id,
-                    Type = "GROUP",
                 },
             },
         });
@@ -253,25 +251,25 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := wafregional.NewWebAcl(ctx, "example", &wafregional.WebAclArgs{
+			MetricName: pulumi.String("example"),
 			DefaultAction: &wafregional.WebAclDefaultActionArgs{
 				Type: pulumi.String("ALLOW"),
 			},
-			MetricName: pulumi.String("example"),
 			Rules: wafregional.WebAclRuleArray{
 				&wafregional.WebAclRuleArgs{
+					Priority: pulumi.Int(1),
+					RuleId:   pulumi.Any(aws_wafregional_rule_group.Example.Id),
+					Type:     pulumi.String("GROUP"),
 					OverrideAction: &wafregional.WebAclRuleOverrideActionArgs{
 						Type: pulumi.String("NONE"),
 					},
-					Priority: pulumi.Int(1),
-					RuleId:   pulumi.String(aws_wafregional_rule_group.Example.Id),
-					Type:     pulumi.String("GROUP"),
 				},
 			},
 		})
@@ -291,17 +289,17 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.wafregional.WebAcl("example",
+    metric_name="example",
     default_action={
         "type": "ALLOW",
     },
-    metric_name="example",
     rules=[{
-        "overrideAction": {
-            "type": "NONE",
-        },
         "priority": 1,
         "rule_id": aws_wafregional_rule_group["example"]["id"],
         "type": "GROUP",
+        "overrideAction": {
+            "type": "NONE",
+        },
     }])
 ```
 
@@ -314,17 +312,17 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.wafregional.WebAcl("example", {
+    metricName: "example",
     defaultAction: {
         type: "ALLOW",
     },
-    metricName: "example",
     rules: [{
+        priority: 1,
+        ruleId: aws_wafregional_rule_group.example.id,
+        type: "GROUP",
         overrideAction: {
             type: "NONE",
         },
-        priority: 1,
-        ruleId: aws_wafregional_rule_group_example.id,
-        type: "GROUP",
     }],
 });
 ```
@@ -341,6 +339,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // ... other configuration ...
         var example = new Aws.WafRegional.WebAcl("example", new Aws.WafRegional.WebAclArgs
         {
             LoggingConfiguration = new Aws.WafRegional.Inputs.WebAclLoggingConfigurationArgs
@@ -348,16 +347,16 @@ class MyStack : Stack
                 LogDestination = aws_kinesis_firehose_delivery_stream.Example.Arn,
                 RedactedFields = new Aws.WafRegional.Inputs.WebAclLoggingConfigurationRedactedFieldsArgs
                 {
-                    FieldToMatch = 
+                    FieldToMatches = 
                     {
-                        
+                        new Aws.WafRegional.Inputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs
                         {
-                            { "type", "URI" },
+                            Type = "URI",
                         },
-                        
+                        new Aws.WafRegional.Inputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs
                         {
-                            { "data", "referer" },
-                            { "type", "HEADER" },
+                            Data = "referer",
+                            Type = "HEADER",
                         },
                     },
                 },
@@ -375,7 +374,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -383,15 +382,15 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := wafregional.NewWebAcl(ctx, "example", &wafregional.WebAclArgs{
 			LoggingConfiguration: &wafregional.WebAclLoggingConfigurationArgs{
-				LogDestination: pulumi.String(aws_kinesis_firehose_delivery_stream.Example.Arn),
+				LogDestination: pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
 				RedactedFields: &wafregional.WebAclLoggingConfigurationRedactedFieldsArgs{
-					FieldToMatch: pulumi.Array{
-						pulumi.StringMap{
-							"type": pulumi.String("URI"),
+					FieldToMatches: wafregional.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArray{
+						&wafregional.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs{
+							Type: pulumi.String("URI"),
 						},
-						pulumi.StringMap{
-							"data": pulumi.String("referer"),
-							"type": pulumi.String("HEADER"),
+						&wafregional.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs{
+							Data: pulumi.String("referer"),
+							Type: pulumi.String("HEADER"),
 						},
 					},
 				},
@@ -412,10 +411,11 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
+# ... other configuration ...
 example = aws.wafregional.WebAcl("example", logging_configuration={
     "log_destination": aws_kinesis_firehose_delivery_stream["example"]["arn"],
     "redactedFields": {
-        "fieldToMatch": [
+        "fieldToMatches": [
             {
                 "type": "URI",
             },
@@ -436,22 +436,21 @@ example = aws.wafregional.WebAcl("example", logging_configuration={
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.wafregional.WebAcl("example", {
-    loggingConfiguration: {
-        logDestination: aws_kinesis_firehose_delivery_stream_example.arn,
-        redactedFields: {
-            fieldToMatches: [
-                {
-                    type: "URI",
-                },
-                {
-                    data: "referer",
-                    type: "HEADER",
-                },
-            ],
-        },
+// ... other configuration ...
+const example = new aws.wafregional.WebAcl("example", {loggingConfiguration: {
+    logDestination: aws_kinesis_firehose_delivery_stream.example.arn,
+    redactedFields: {
+        fieldToMatches: [
+            {
+                type: "URI",
+            },
+            {
+                data: "referer",
+                type: "HEADER",
+            },
+        ],
     },
-});
+}});
 ```
 
 {{% /example %}}
@@ -472,7 +471,7 @@ const example = new aws.wafregional.WebAcl("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAcl">NewWebAcl</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclArgs">WebAclArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAcl">WebAcl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAcl">NewWebAcl</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclArgs">WebAclArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAcl">WebAcl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -546,7 +545,7 @@ const example = new aws.wafregional.WebAcl("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -566,7 +565,7 @@ const example = new aws.wafregional.WebAcl("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclArgs">WebAclArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclArgs">WebAclArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -576,7 +575,7 @@ const example = new aws.wafregional.WebAcl("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1071,7 +1070,7 @@ Get an existing WebAcl resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebAcl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclState">WebAclState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAcl">WebAcl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebAcl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclState">WebAclState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAcl">WebAcl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1531,7 +1530,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclDefaultActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclDefaultActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclDefaultActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclDefaultActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.WebAclDefaultActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.WebAclDefaultAction.html">output</a> API doc for this type.
@@ -1621,7 +1620,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.WebAclLoggingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.WebAclLoggingConfiguration.html">output</a> API doc for this type.
@@ -1755,7 +1754,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationRedactedFieldsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationRedactedFieldsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationRedactedFieldsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationRedactedFieldsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.WebAclLoggingConfigurationRedactedFieldsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.WebAclLoggingConfigurationRedactedFields.html">output</a> API doc for this type.
@@ -1845,7 +1844,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationRedactedFieldsFieldToMatchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclLoggingConfigurationRedactedFieldsFieldToMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatch.html">output</a> API doc for this type.
@@ -1979,7 +1978,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.WebAclRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.WebAclRule.html">output</a> API doc for this type.
@@ -2249,7 +2248,7 @@ Rules with a lower value are evaluated before rules with a higher value.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclRuleActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclRuleActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclRuleActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclRuleActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.WebAclRuleActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.WebAclRuleAction.html">output</a> API doc for this type.
@@ -2339,7 +2338,7 @@ Rules with a lower value are evaluated before rules with a higher value.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclRuleOverrideActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/wafregional?tab=doc#WebAclRuleOverrideActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclRuleOverrideActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclRuleOverrideActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.WebAclRuleOverrideActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.WebAclRuleOverrideAction.html">output</a> API doc for this type.

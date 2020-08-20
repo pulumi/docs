@@ -3,7 +3,7 @@ title: "Module cloudfront"
 title_tag: "Module cloudfront | Package @pulumi/aws | Node.js SDK"
 linktitle: "cloudfront"
 meta_desc: "Explore members of the cloudfront module in the @pulumi/aws package."
-git_sha: "e07f1c21047146459fa7794a69555b4dd80e2222"
+git_sha: "0a2e76f947fd9ea3ee41beab30d2121c4b385e5c"
 block_external_search_index: true
 ---
 
@@ -11,13 +11,6 @@ block_external_search_index: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
 
 {{< resource-docs-alert "aws" >}}
-
-
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-aws` repo](https://github.com/pulumi/pulumi-aws/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-aws` repo](https://github.com/terraform-providers/terraform-provider-aws/issues).
-
 
 
 
@@ -49,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Distribution" data-link-title="Distribution">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L206">
         Resource <strong>Distribution</strong>
     </a>
 </h3>
@@ -70,25 +63,40 @@ want to wait, you need to use the `retainOnDelete` flag.
 
 #### Example Usage
 
-
+The following example below creates a CloudFront distribution with an S3 origin.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bucket = new aws.s3.Bucket("b", {
+const bucket = new aws.s3.Bucket("bucket", {
     acl: "private",
     tags: {
         Name: "My bucket",
     },
 });
 const s3OriginId = "myS3Origin";
-const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
+const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
+    origins: [{
+        domainName: bucket.bucketRegionalDomainName,
+        originId: s3OriginId,
+        s3OriginConfig: {
+            originAccessIdentity: "origin-access-identity/cloudfront/ABCDEFG1234567",
+        },
+    }],
+    enabled: true,
+    isIpv6Enabled: true,
+    comment: "Some comment",
+    defaultRootObject: "index.html",
+    loggingConfig: {
+        includeCookies: false,
+        bucket: "mylogs.s3.amazonaws.com",
+        prefix: "myprefix",
+    },
     aliases: [
         "mysite.example.com",
         "yoursite.example.com",
     ],
-    comment: "Some comment",
     defaultCacheBehavior: {
         allowedMethods: [
             "DELETE",
@@ -103,29 +111,21 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
             "GET",
             "HEAD",
         ],
-        defaultTtl: 3600,
+        targetOriginId: s3OriginId,
         forwardedValues: {
+            queryString: false,
             cookies: {
                 forward: "none",
             },
-            queryString: false,
         },
-        maxTtl: 86400,
-        minTtl: 0,
-        targetOriginId: s3OriginId,
         viewerProtocolPolicy: "allow-all",
-    },
-    defaultRootObject: "index.html",
-    enabled: true,
-    isIpv6Enabled: true,
-    loggingConfig: {
-        bucket: "mylogs.s3.amazonaws.com",
-        includeCookies: false,
-        prefix: "myprefix",
+        minTtl: 0,
+        defaultTtl: 3600,
+        maxTtl: 86400,
     },
     orderedCacheBehaviors: [
-        // Cache behavior with precedence 0
         {
+            pathPattern: "/content/immutable/*",
             allowedMethods: [
                 "GET",
                 "HEAD",
@@ -136,23 +136,22 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
                 "HEAD",
                 "OPTIONS",
             ],
-            compress: true,
-            defaultTtl: 86400,
+            targetOriginId: s3OriginId,
             forwardedValues: {
+                queryString: false,
+                headers: ["Origin"],
                 cookies: {
                     forward: "none",
                 },
-                headers: ["Origin"],
-                queryString: false,
             },
-            maxTtl: 31536000,
             minTtl: 0,
-            pathPattern: "/content/immutable/*",
-            targetOriginId: s3OriginId,
+            defaultTtl: 86400,
+            maxTtl: 31536000,
+            compress: true,
             viewerProtocolPolicy: "redirect-to-https",
         },
-        // Cache behavior with precedence 1
         {
+            pathPattern: "/content/*",
             allowedMethods: [
                 "GET",
                 "HEAD",
@@ -162,38 +161,30 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
                 "GET",
                 "HEAD",
             ],
-            compress: true,
-            defaultTtl: 3600,
+            targetOriginId: s3OriginId,
             forwardedValues: {
+                queryString: false,
                 cookies: {
                     forward: "none",
                 },
-                queryString: false,
             },
-            maxTtl: 86400,
             minTtl: 0,
-            pathPattern: "/content/*",
-            targetOriginId: s3OriginId,
+            defaultTtl: 3600,
+            maxTtl: 86400,
+            compress: true,
             viewerProtocolPolicy: "redirect-to-https",
         },
     ],
-    origins: [{
-        domainName: bucket.bucketRegionalDomainName,
-        originId: s3OriginId,
-        s3OriginConfig: {
-            originAccessIdentity: "origin-access-identity/cloudfront/ABCDEFG1234567",
-        },
-    }],
     priceClass: "PriceClass_200",
     restrictions: {
         geoRestriction: {
+            restrictionType: "whitelist",
             locations: [
                 "US",
                 "CA",
                 "GB",
                 "DE",
             ],
-            restrictionType: "whitelist",
         },
     },
     tags: {
@@ -205,8 +196,57 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
 });
 ```
 
+The following example below creates a Cloudfront distribution with an origin group for failover routing:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
+    originGroups: [{
+        originId: "groupS3",
+        failoverCriteria: {
+            statusCodes: [
+                403,
+                404,
+                500,
+                502,
+            ],
+        },
+        members: [
+            {
+                originId: "primaryS3",
+            },
+            {
+                originId: "failoverS3",
+            },
+        ],
+    }],
+    origins: [
+        {
+            domainName: aws_s3_bucket.primary.bucket_regional_domain_name,
+            originId: "primaryS3",
+            s3OriginConfig: {
+                originAccessIdentity: aws_cloudfront_origin_access_identity["default"].cloudfront_access_identity_path,
+            },
+        },
+        {
+            domainName: aws_s3_bucket.failover.bucket_regional_domain_name,
+            originId: "failoverS3",
+            s3OriginConfig: {
+                originAccessIdentity: aws_cloudfront_origin_access_identity["default"].cloudfront_access_identity_path,
+            },
+        },
+    ],
+    defaultCacheBehavior: {
+        targetOriginId: "groupS3",
+    },
+});
+// ... other configuration ...
+```
+
 <h4 class="pdoc-member-header" id="Distribution-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L333"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L379"> <b>constructor</b></a>
 </h4>
 
 
@@ -220,7 +260,7 @@ Create a Distribution resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Distribution-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L169">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L216">method <b>get</b></a>
 </h4>
 
 
@@ -231,14 +271,14 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Distribution-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L159">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L206">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Distribution-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L180">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L227">method <b>isInstance</b></a>
 </h4>
 
 
@@ -248,18 +288,8 @@ properties used to qualify the lookup.
 Returns true if the given object is an instance of Distribution.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
-<h4 class="pdoc-member-header" id="Distribution-activeTrustedSigners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L192">property <b>activeTrustedSigners</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'>public </span>activeTrustedSigners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
-
-The key pair IDs that CloudFront is aware of for
-each trusted signer, if the distribution is set up to serve private content
-with signed URLs.
-
 <h4 class="pdoc-member-header" id="Distribution-aliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L197">property <b>aliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L238">property <b>aliases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aliases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -268,7 +298,7 @@ Extra CNAMEs (alternate domain names), if any, for
 this distribution.
 
 <h4 class="pdoc-member-header" id="Distribution-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L201">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L242">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -276,7 +306,7 @@ this distribution.
 The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 
 <h4 class="pdoc-member-header" id="Distribution-callerReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L206">property <b>callerReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L247">property <b>callerReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>callerReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -285,7 +315,7 @@ Internal value used by CloudFront to allow future
 updates to the distribution configuration.
 
 <h4 class="pdoc-member-header" id="Distribution-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L211">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L252">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -294,7 +324,7 @@ Any comments you want to include about the
 distribution.
 
 <h4 class="pdoc-member-header" id="Distribution-customErrorResponses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L215">property <b>customErrorResponses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L256">property <b>customErrorResponses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customErrorResponses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionCustomErrorResponse'>DistributionCustomErrorResponse</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -302,7 +332,7 @@ distribution.
 One or more custom error response elements (multiples allowed).
 
 <h4 class="pdoc-member-header" id="Distribution-defaultCacheBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L220">property <b>defaultCacheBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L261">property <b>defaultCacheBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultCacheBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehavior'>DistributionDefaultCacheBehavior</a>&gt;;</code></pre>
@@ -311,7 +341,7 @@ The default cache behavior for this distribution (maximum
 one).
 
 <h4 class="pdoc-member-header" id="Distribution-defaultRootObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L225">property <b>defaultRootObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L266">property <b>defaultRootObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultRootObject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -320,7 +350,7 @@ The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
 
 <h4 class="pdoc-member-header" id="Distribution-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L230">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L271">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -329,7 +359,7 @@ The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
 
 <h4 class="pdoc-member-header" id="Distribution-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L235">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L276">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -338,7 +368,7 @@ Whether the distribution is enabled to accept end
 user requests for content.
 
 <h4 class="pdoc-member-header" id="Distribution-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L240">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L281">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -347,7 +377,7 @@ The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
 
 <h4 class="pdoc-member-header" id="Distribution-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L246">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L287">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostedZoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -357,7 +387,7 @@ route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/A
 alias for the zone ID `Z2FDTNDATAQYW2`.
 
 <h4 class="pdoc-member-header" id="Distribution-httpVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L252">property <b>httpVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L293">property <b>httpVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -367,7 +397,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 `http2`.
 
 <h4 class="pdoc-member-header" id="Distribution-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L159">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L206">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -376,7 +406,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Distribution-inProgressValidationBatches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L257">property <b>inProgressValidationBatches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L298">property <b>inProgressValidationBatches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>inProgressValidationBatches: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -385,7 +415,7 @@ The number of invalidation batches
 currently in progress.
 
 <h4 class="pdoc-member-header" id="Distribution-isIpv6Enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L261">property <b>isIpv6Enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L302">property <b>isIpv6Enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isIpv6Enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -393,7 +423,7 @@ currently in progress.
 Whether the IPv6 is enabled for the distribution.
 
 <h4 class="pdoc-member-header" id="Distribution-lastModifiedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L265">property <b>lastModifiedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L306">property <b>lastModifiedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModifiedTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -401,7 +431,7 @@ Whether the IPv6 is enabled for the distribution.
 The date and time the distribution was last modified.
 
 <h4 class="pdoc-member-header" id="Distribution-loggingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L271">property <b>loggingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L312">property <b>loggingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionLoggingConfig'>DistributionLoggingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -411,7 +441,7 @@ configuration that controls how logs are written
 to your distribution (maximum one).
 
 <h4 class="pdoc-member-header" id="Distribution-orderedCacheBehaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L277">property <b>orderedCacheBehaviors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L318">property <b>orderedCacheBehaviors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>orderedCacheBehaviors: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehavior'>DistributionOrderedCacheBehavior</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -421,7 +451,7 @@ resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.
 
 <h4 class="pdoc-member-header" id="Distribution-originGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L282">property <b>originGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L323">property <b>originGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>originGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginGroup'>DistributionOriginGroup</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -430,7 +460,7 @@ One or more originGroup for this
 distribution (multiples allowed).
 
 <h4 class="pdoc-member-header" id="Distribution-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L287">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L328">property <b>origins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrigin'>DistributionOrigin</a>[]&gt;;</code></pre>
@@ -439,7 +469,7 @@ One or more origins for this
 distribution (multiples allowed).
 
 <h4 class="pdoc-member-header" id="Distribution-priceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L292">property <b>priceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L333">property <b>priceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -448,7 +478,7 @@ The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
 
 <h4 class="pdoc-member-header" id="Distribution-restrictions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L297">property <b>restrictions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L338">property <b>restrictions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>restrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionRestrictions'>DistributionRestrictions</a>&gt;;</code></pre>
@@ -457,7 +487,7 @@ The restriction
 configuration for this distribution (maximum one).
 
 <h4 class="pdoc-member-header" id="Distribution-retainOnDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L303">property <b>retainOnDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L344">property <b>retainOnDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retainOnDelete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -467,7 +497,7 @@ deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: `false`.
 
 <h4 class="pdoc-member-header" id="Distribution-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L309">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L350">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -477,15 +507,24 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 
 <h4 class="pdoc-member-header" id="Distribution-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L313">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L354">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
+<h4 class="pdoc-member-header" id="Distribution-trustedSigners">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L359">property <b>trustedSigners</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>trustedSigners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionTrustedSigner'>DistributionTrustedSigner</a>[]&gt;;</code></pre>
+
+List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+
 <h4 class="pdoc-member-header" id="Distribution-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L159">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L206">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -494,7 +533,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Distribution-viewerCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L319">property <b>viewerCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L365">property <b>viewerCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>viewerCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionViewerCertificate'>DistributionViewerCertificate</a>&gt;;</code></pre>
@@ -504,7 +543,7 @@ configuration for this distribution (maximum
 one).
 
 <h4 class="pdoc-member-header" id="Distribution-waitForDeployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L325">property <b>waitForDeployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L371">property <b>waitForDeployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>waitForDeployment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -514,7 +553,7 @@ the distribution status to change from `InProgress` to `Deployed`. Setting
 this to`false` will skip the process. Default: `true`.
 
 <h4 class="pdoc-member-header" id="Distribution-webAclId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L333">property <b>webAclId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L379">property <b>webAclId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>webAclId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -523,10 +562,10 @@ If you're using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
-`waf:GetWebACL` permissions assigned.
+`waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
 
 <h3 class="pdoc-module-header" id="OriginAccessIdentity" data-link-title="OriginAccessIdentity">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L71">
         Resource <strong>OriginAccessIdentity</strong>
     </a>
 </h3>
@@ -542,7 +581,7 @@ origin access identities, see
 
 #### Example Usage
 
-
+The following example below creates a CloudFront origin access identity.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -552,7 +591,6 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
     comment: "Some comment",
 });
 ```
-
 #### Using With CloudFront
 
 Normally, when referencing an origin access identity in CloudFront, you need to
@@ -576,29 +614,19 @@ you see this behaviour, use the `iamArn` instead:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const s3Policy = pulumi.all([aws_cloudfront_origin_access_identity_origin_access_identity.iamArn, aws_s3_bucket_example.arn, aws_cloudfront_origin_access_identity_origin_access_identity.iamArn, aws_s3_bucket_example.arn]).apply(([aws_cloudfront_origin_access_identity_origin_access_identityIamArn, aws_s3_bucket_exampleArn, aws_cloudfront_origin_access_identity_origin_access_identityIamArn1, aws_s3_bucket_exampleArn1]) => aws.iam.getPolicyDocument({
-    statements: [
-        {
-            actions: ["s3:GetObject"],
-            principals: [{
-                identifiers: [aws_cloudfront_origin_access_identity_origin_access_identityIamArn],
-                type: "AWS",
-            }],
-            resources: [`${aws_s3_bucket_exampleArn}/*`],
-        },
-        {
-            actions: ["s3:ListBucket"],
-            principals: [{
-                identifiers: [aws_cloudfront_origin_access_identity_origin_access_identityIamArn1],
-                type: "AWS",
-            }],
-            resources: [aws_s3_bucket_exampleArn1],
-        },
-    ],
-}, { async: true }));
+const s3Policy = aws.iam.getPolicyDocument({
+    statements: [{
+        actions: ["s3:GetObject"],
+        resources: [`${aws_s3_bucket.example.arn}/*`],
+        principals: [{
+            type: "AWS",
+            identifiers: [aws_cloudfront_origin_access_identity.origin_access_identity.iam_arn],
+        }],
+    }],
+});
 const example = new aws.s3.BucketPolicy("example", {
-    bucket: aws_s3_bucket_example.id,
-    policy: s3Policy.json,
+    bucket: aws_s3_bucket.example.id,
+    policy: s3Policy.then(s3Policy => s3Policy.json),
 });
 ```
 
@@ -608,7 +636,7 @@ const example = new aws.s3.BucketPolicy("example", {
 [4]: https://www.terraform.io/docs/providers/aws/r/s3_bucket.html
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L140"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L129"> <b>constructor</b></a>
 </h4>
 
 
@@ -622,7 +650,7 @@ Create a OriginAccessIdentity resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L92">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -633,14 +661,14 @@ Get an existing OriginAccessIdentity resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L82">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L71">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L103">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -651,7 +679,7 @@ Returns true if the given object is an instance of OriginAccessIdentity.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-callerReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L114">property <b>callerReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L103">property <b>callerReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>callerReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -660,7 +688,7 @@ Internal value used by CloudFront to allow future
 updates to the origin access identity.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-cloudfrontAccessIdentityPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L119">property <b>cloudfrontAccessIdentityPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L108">property <b>cloudfrontAccessIdentityPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudfrontAccessIdentityPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -669,7 +697,7 @@ A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L123">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L112">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -677,7 +705,7 @@ origin access identity to use in CloudFront, see below.
 An optional comment for the origin access identity.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L128">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L117">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -686,7 +714,7 @@ The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-iamArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L134">property <b>iamArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L123">property <b>iamArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -696,7 +724,7 @@ Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -705,7 +733,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-s3CanonicalUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L140">property <b>s3CanonicalUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L129">property <b>s3CanonicalUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3CanonicalUserId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -715,7 +743,7 @@ access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentity-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L82">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L71">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -724,7 +752,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PublicKey" data-link-title="PublicKey">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L23">
         Resource <strong>PublicKey</strong>
     </a>
 </h3>
@@ -733,19 +761,21 @@ deployments.
 
 #### Example Usage
 
+The following example below creates a CloudFront public key.
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
-import * as fs from "fs";
+import * from "fs";
 
 const example = new aws.cloudfront.PublicKey("example", {
     comment: "test public key",
-    encodedKey: fs.readFileSync("public_key.pem", "utf-8"),
+    encodedKey: fs.readFileSync("public_key.pem"),
 });
 ```
 
 <h4 class="pdoc-member-header" id="PublicKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -759,7 +789,7 @@ Create a PublicKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PublicKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -770,14 +800,14 @@ Get an existing PublicKey resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PublicKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PublicKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -788,7 +818,7 @@ Returns true if the given object is an instance of PublicKey.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PublicKey-callerReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L54">property <b>callerReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L54">property <b>callerReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>callerReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -796,7 +826,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Internal value used by CloudFront to allow future updates to the public key configuration.
 
 <h4 class="pdoc-member-header" id="PublicKey-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L58">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L58">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -804,7 +834,7 @@ Internal value used by CloudFront to allow future updates to the public key conf
 An optional comment about the public key.
 
 <h4 class="pdoc-member-header" id="PublicKey-encodedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L62">property <b>encodedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L62">property <b>encodedKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encodedKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -812,7 +842,7 @@ An optional comment about the public key.
 The encoded public key that you want to add to CloudFront to use with features like field-level encryption.
 
 <h4 class="pdoc-member-header" id="PublicKey-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L66">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L66">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -820,7 +850,7 @@ The encoded public key that you want to add to CloudFront to use with features l
 The current version of the public key. For example: `E2QWRUHAPOMQZL`.
 
 <h4 class="pdoc-member-header" id="PublicKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -829,7 +859,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PublicKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -837,7 +867,7 @@ deployments and may be missing (undefined) during planning phases.
 The name for the public key. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="PublicKey-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L74">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L74">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -845,7 +875,7 @@ The name for the public key. By default generated by this provider.
 The name for the public key. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="PublicKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -856,7 +886,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDistribution" data-link-title="getDistribution">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L23">
         Function <strong>getDistribution</strong>
     </a>
 </h3>
@@ -868,8 +898,6 @@ deployments.
 Use this data source to retrieve information about a CloudFront distribution.
 
 #### Example Usage
-
-
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -883,7 +911,7 @@ const test = pulumi.output(aws.cloudfront.getDistribution({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DistributionArgs" data-link-title="DistributionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L588">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L633">
         interface <strong>DistributionArgs</strong>
     </a>
 </h3>
@@ -893,7 +921,7 @@ const test = pulumi.output(aws.cloudfront.getDistribution({
 The set of arguments for constructing a Distribution resource.
 
 <h4 class="pdoc-member-header" id="DistributionArgs-aliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L593">property <b>aliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L638">property <b>aliases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -902,7 +930,7 @@ Extra CNAMEs (alternate domain names), if any, for
 this distribution.
 
 <h4 class="pdoc-member-header" id="DistributionArgs-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L598">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L643">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -911,7 +939,7 @@ Any comments you want to include about the
 distribution.
 
 <h4 class="pdoc-member-header" id="DistributionArgs-customErrorResponses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L602">property <b>customErrorResponses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L647">property <b>customErrorResponses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customErrorResponses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionCustomErrorResponse'>DistributionCustomErrorResponse</a>&gt;[]&gt;;</code></pre>
@@ -919,7 +947,7 @@ distribution.
 One or more custom error response elements (multiples allowed).
 
 <h4 class="pdoc-member-header" id="DistributionArgs-defaultCacheBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L607">property <b>defaultCacheBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L652">property <b>defaultCacheBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultCacheBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehavior'>DistributionDefaultCacheBehavior</a>&gt;;</code></pre>
@@ -928,7 +956,7 @@ The default cache behavior for this distribution (maximum
 one).
 
 <h4 class="pdoc-member-header" id="DistributionArgs-defaultRootObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L612">property <b>defaultRootObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L657">property <b>defaultRootObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRootObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -937,7 +965,7 @@ The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
 
 <h4 class="pdoc-member-header" id="DistributionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L617">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L662">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -946,7 +974,7 @@ Whether the distribution is enabled to accept end
 user requests for content.
 
 <h4 class="pdoc-member-header" id="DistributionArgs-httpVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L623">property <b>httpVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L668">property <b>httpVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -956,7 +984,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 `http2`.
 
 <h4 class="pdoc-member-header" id="DistributionArgs-isIpv6Enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L627">property <b>isIpv6Enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L672">property <b>isIpv6Enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isIpv6Enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -964,7 +992,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 Whether the IPv6 is enabled for the distribution.
 
 <h4 class="pdoc-member-header" id="DistributionArgs-loggingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L633">property <b>loggingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L678">property <b>loggingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionLoggingConfig'>DistributionLoggingConfig</a>&gt;;</code></pre>
@@ -974,7 +1002,7 @@ configuration that controls how logs are written
 to your distribution (maximum one).
 
 <h4 class="pdoc-member-header" id="DistributionArgs-orderedCacheBehaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L639">property <b>orderedCacheBehaviors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L684">property <b>orderedCacheBehaviors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orderedCacheBehaviors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehavior'>DistributionOrderedCacheBehavior</a>&gt;[]&gt;;</code></pre>
@@ -984,7 +1012,7 @@ resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.
 
 <h4 class="pdoc-member-header" id="DistributionArgs-originGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L644">property <b>originGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L689">property <b>originGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroup'>DistributionOriginGroup</a>&gt;[]&gt;;</code></pre>
@@ -993,7 +1021,7 @@ One or more originGroup for this
 distribution (multiples allowed).
 
 <h4 class="pdoc-member-header" id="DistributionArgs-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L649">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L694">property <b>origins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrigin'>DistributionOrigin</a>&gt;[]&gt;;</code></pre>
@@ -1002,7 +1030,7 @@ One or more origins for this
 distribution (multiples allowed).
 
 <h4 class="pdoc-member-header" id="DistributionArgs-priceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L654">property <b>priceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L699">property <b>priceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priceClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1011,7 +1039,7 @@ The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
 
 <h4 class="pdoc-member-header" id="DistributionArgs-restrictions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L659">property <b>restrictions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L704">property <b>restrictions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restrictions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionRestrictions'>DistributionRestrictions</a>&gt;;</code></pre>
@@ -1020,7 +1048,7 @@ The restriction
 configuration for this distribution (maximum one).
 
 <h4 class="pdoc-member-header" id="DistributionArgs-retainOnDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L665">property <b>retainOnDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L710">property <b>retainOnDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retainOnDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1030,15 +1058,15 @@ deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: `false`.
 
 <h4 class="pdoc-member-header" id="DistributionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L669">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L714">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="DistributionArgs-viewerCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L675">property <b>viewerCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L720">property <b>viewerCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>viewerCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionViewerCertificate'>DistributionViewerCertificate</a>&gt;;</code></pre>
@@ -1048,7 +1076,7 @@ configuration for this distribution (maximum
 one).
 
 <h4 class="pdoc-member-header" id="DistributionArgs-waitForDeployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L681">property <b>waitForDeployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L726">property <b>waitForDeployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitForDeployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1058,7 +1086,7 @@ the distribution status to change from `InProgress` to `Deployed`. Setting
 this to`false` will skip the process. Default: `true`.
 
 <h4 class="pdoc-member-header" id="DistributionArgs-webAclId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L689">property <b>webAclId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L734">property <b>webAclId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webAclId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1067,10 +1095,10 @@ If you're using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
-`waf:GetWebACL` permissions assigned.
+`waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
 
 <h3 class="pdoc-module-header" id="DistributionState" data-link-title="DistributionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L435">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L481">
         interface <strong>DistributionState</strong>
     </a>
 </h3>
@@ -1079,18 +1107,8 @@ region and the credentials configuring this argument must have
 
 Input properties used for looking up and filtering Distribution resources.
 
-<h4 class="pdoc-member-header" id="DistributionState-activeTrustedSigners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L441">property <b>activeTrustedSigners</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>activeTrustedSigners?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
-
-The key pair IDs that CloudFront is aware of for
-each trusted signer, if the distribution is set up to serve private content
-with signed URLs.
-
 <h4 class="pdoc-member-header" id="DistributionState-aliases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L446">property <b>aliases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L486">property <b>aliases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aliases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1099,7 +1117,7 @@ Extra CNAMEs (alternate domain names), if any, for
 this distribution.
 
 <h4 class="pdoc-member-header" id="DistributionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L450">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L490">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1107,7 +1125,7 @@ this distribution.
 The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 
 <h4 class="pdoc-member-header" id="DistributionState-callerReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L455">property <b>callerReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L495">property <b>callerReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callerReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1116,7 +1134,7 @@ Internal value used by CloudFront to allow future
 updates to the distribution configuration.
 
 <h4 class="pdoc-member-header" id="DistributionState-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L460">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L500">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1125,7 +1143,7 @@ Any comments you want to include about the
 distribution.
 
 <h4 class="pdoc-member-header" id="DistributionState-customErrorResponses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L464">property <b>customErrorResponses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L504">property <b>customErrorResponses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customErrorResponses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionCustomErrorResponse'>DistributionCustomErrorResponse</a>&gt;[]&gt;;</code></pre>
@@ -1133,7 +1151,7 @@ distribution.
 One or more custom error response elements (multiples allowed).
 
 <h4 class="pdoc-member-header" id="DistributionState-defaultCacheBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L469">property <b>defaultCacheBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L509">property <b>defaultCacheBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultCacheBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehavior'>DistributionDefaultCacheBehavior</a>&gt;;</code></pre>
@@ -1142,7 +1160,7 @@ The default cache behavior for this distribution (maximum
 one).
 
 <h4 class="pdoc-member-header" id="DistributionState-defaultRootObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L474">property <b>defaultRootObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L514">property <b>defaultRootObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRootObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1151,7 +1169,7 @@ The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
 
 <h4 class="pdoc-member-header" id="DistributionState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L479">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L519">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1160,7 +1178,7 @@ The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
 
 <h4 class="pdoc-member-header" id="DistributionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L484">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L524">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1169,7 +1187,7 @@ Whether the distribution is enabled to accept end
 user requests for content.
 
 <h4 class="pdoc-member-header" id="DistributionState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L489">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L529">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1178,7 +1196,7 @@ The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
 
 <h4 class="pdoc-member-header" id="DistributionState-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L495">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L535">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1188,7 +1206,7 @@ route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/A
 alias for the zone ID `Z2FDTNDATAQYW2`.
 
 <h4 class="pdoc-member-header" id="DistributionState-httpVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L501">property <b>httpVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L541">property <b>httpVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1198,7 +1216,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 `http2`.
 
 <h4 class="pdoc-member-header" id="DistributionState-inProgressValidationBatches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L506">property <b>inProgressValidationBatches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L546">property <b>inProgressValidationBatches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inProgressValidationBatches?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1207,7 +1225,7 @@ The number of invalidation batches
 currently in progress.
 
 <h4 class="pdoc-member-header" id="DistributionState-isIpv6Enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L510">property <b>isIpv6Enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L550">property <b>isIpv6Enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isIpv6Enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1215,7 +1233,7 @@ currently in progress.
 Whether the IPv6 is enabled for the distribution.
 
 <h4 class="pdoc-member-header" id="DistributionState-lastModifiedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L514">property <b>lastModifiedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L554">property <b>lastModifiedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModifiedTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1223,7 +1241,7 @@ Whether the IPv6 is enabled for the distribution.
 The date and time the distribution was last modified.
 
 <h4 class="pdoc-member-header" id="DistributionState-loggingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L520">property <b>loggingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L560">property <b>loggingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionLoggingConfig'>DistributionLoggingConfig</a>&gt;;</code></pre>
@@ -1233,7 +1251,7 @@ configuration that controls how logs are written
 to your distribution (maximum one).
 
 <h4 class="pdoc-member-header" id="DistributionState-orderedCacheBehaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L526">property <b>orderedCacheBehaviors</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L566">property <b>orderedCacheBehaviors</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orderedCacheBehaviors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehavior'>DistributionOrderedCacheBehavior</a>&gt;[]&gt;;</code></pre>
@@ -1243,7 +1261,7 @@ resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.
 
 <h4 class="pdoc-member-header" id="DistributionState-originGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L531">property <b>originGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L571">property <b>originGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>originGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroup'>DistributionOriginGroup</a>&gt;[]&gt;;</code></pre>
@@ -1252,7 +1270,7 @@ One or more originGroup for this
 distribution (multiples allowed).
 
 <h4 class="pdoc-member-header" id="DistributionState-origins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L536">property <b>origins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L576">property <b>origins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrigin'>DistributionOrigin</a>&gt;[]&gt;;</code></pre>
@@ -1261,7 +1279,7 @@ One or more origins for this
 distribution (multiples allowed).
 
 <h4 class="pdoc-member-header" id="DistributionState-priceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L541">property <b>priceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L581">property <b>priceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priceClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1270,7 +1288,7 @@ The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
 
 <h4 class="pdoc-member-header" id="DistributionState-restrictions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L546">property <b>restrictions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L586">property <b>restrictions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restrictions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionRestrictions'>DistributionRestrictions</a>&gt;;</code></pre>
@@ -1279,7 +1297,7 @@ The restriction
 configuration for this distribution (maximum one).
 
 <h4 class="pdoc-member-header" id="DistributionState-retainOnDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L552">property <b>retainOnDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L592">property <b>retainOnDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retainOnDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1289,7 +1307,7 @@ deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: `false`.
 
 <h4 class="pdoc-member-header" id="DistributionState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L558">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L598">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1299,15 +1317,24 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 
 <h4 class="pdoc-member-header" id="DistributionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L562">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L602">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
 A map of tags to assign to the resource.
 
+<h4 class="pdoc-member-header" id="DistributionState-trustedSigners">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L607">property <b>trustedSigners</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>trustedSigners?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionTrustedSigner'>DistributionTrustedSigner</a>&gt;[]&gt;;</code></pre>
+
+List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
+See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+
 <h4 class="pdoc-member-header" id="DistributionState-viewerCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L568">property <b>viewerCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L613">property <b>viewerCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>viewerCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionViewerCertificate'>DistributionViewerCertificate</a>&gt;;</code></pre>
@@ -1317,7 +1344,7 @@ configuration for this distribution (maximum
 one).
 
 <h4 class="pdoc-member-header" id="DistributionState-waitForDeployment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L574">property <b>waitForDeployment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L619">property <b>waitForDeployment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitForDeployment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1327,7 +1354,7 @@ the distribution status to change from `InProgress` to `Deployed`. Setting
 this to`false` will skip the process. Default: `true`.
 
 <h4 class="pdoc-member-header" id="DistributionState-webAclId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/distribution.ts#L582">property <b>webAclId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/distribution.ts#L627">property <b>webAclId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webAclId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1336,10 +1363,10 @@ If you're using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
 distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
 region and the credentials configuring this argument must have
-`waf:GetWebACL` permissions assigned.
+`waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
 
 <h3 class="pdoc-module-header" id="GetDistributionArgs" data-link-title="GetDistributionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L40">
         interface <strong>GetDistributionArgs</strong>
     </a>
 </h3>
@@ -1349,7 +1376,7 @@ region and the credentials configuring this argument must have
 A collection of arguments for invoking getDistribution.
 
 <h4 class="pdoc-member-header" id="GetDistributionArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1357,12 +1384,12 @@ A collection of arguments for invoking getDistribution.
 The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
 
 <h4 class="pdoc-member-header" id="GetDistributionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L47">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L45">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetDistributionResult" data-link-title="GetDistributionResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L51">
         interface <strong>GetDistributionResult</strong>
     </a>
 </h3>
@@ -1372,7 +1399,7 @@ The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
 A collection of values returned by getDistribution.
 
 <h4 class="pdoc-member-header" id="GetDistributionResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L57">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L55">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1380,7 +1407,7 @@ A collection of values returned by getDistribution.
 The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
 
 <h4 class="pdoc-member-header" id="GetDistributionResult-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L62">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L60">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1389,12 +1416,12 @@ The domain name corresponding to the distribution. For
 example: `d604721fxaaqy9.cloudfront.net`.
 
 <h4 class="pdoc-member-header" id="GetDistributionResult-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L63">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L61">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDistributionResult-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L68">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L66">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1403,7 +1430,7 @@ The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
 
 <h4 class="pdoc-member-header" id="GetDistributionResult-hostedZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L74">property <b>hostedZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L72">property <b>hostedZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostedZoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1413,7 +1440,7 @@ route an [Alias Resource Record Set][7] to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 
 <h4 class="pdoc-member-header" id="GetDistributionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1421,7 +1448,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
 
 <h4 class="pdoc-member-header" id="GetDistributionResult-inProgressValidationBatches">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L83">property <b>inProgressValidationBatches</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L81">property <b>inProgressValidationBatches</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inProgressValidationBatches: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1430,7 +1457,7 @@ The number of invalidation batches
 currently in progress.
 
 <h4 class="pdoc-member-header" id="GetDistributionResult-lastModifiedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L87">property <b>lastModifiedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L85">property <b>lastModifiedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModifiedTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1438,7 +1465,7 @@ currently in progress.
 The date and time the distribution was last modified.
 
 <h4 class="pdoc-member-header" id="GetDistributionResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L93">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L91">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1448,12 +1475,12 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 
 <h4 class="pdoc-member-header" id="GetDistributionResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/getDistribution.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/getDistribution.ts#L92">property <b>tags</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
+<pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="OriginAccessIdentityArgs" data-link-title="OriginAccessIdentityArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L220">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L209">
         interface <strong>OriginAccessIdentityArgs</strong>
     </a>
 </h3>
@@ -1463,7 +1490,7 @@ CloudFront system.
 The set of arguments for constructing a OriginAccessIdentity resource.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentityArgs-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L224">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L213">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1471,7 +1498,7 @@ The set of arguments for constructing a OriginAccessIdentity resource.
 An optional comment for the origin access identity.
 
 <h3 class="pdoc-module-header" id="OriginAccessIdentityState" data-link-title="OriginAccessIdentityState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L172">
         interface <strong>OriginAccessIdentityState</strong>
     </a>
 </h3>
@@ -1481,7 +1508,7 @@ An optional comment for the origin access identity.
 Input properties used for looking up and filtering OriginAccessIdentity resources.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentityState-callerReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L188">property <b>callerReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L177">property <b>callerReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callerReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1490,7 +1517,7 @@ Internal value used by CloudFront to allow future
 updates to the origin access identity.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentityState-cloudfrontAccessIdentityPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L193">property <b>cloudfrontAccessIdentityPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L182">property <b>cloudfrontAccessIdentityPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudfrontAccessIdentityPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1499,7 +1526,7 @@ A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentityState-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L197">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L186">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1507,7 +1534,7 @@ origin access identity to use in CloudFront, see below.
 An optional comment for the origin access identity.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentityState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L202">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L191">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1516,7 +1543,7 @@ The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentityState-iamArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L208">property <b>iamArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L197">property <b>iamArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1526,7 +1553,7 @@ Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 
 <h4 class="pdoc-member-header" id="OriginAccessIdentityState-s3CanonicalUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/originAccessIdentity.ts#L214">property <b>s3CanonicalUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/originAccessIdentity.ts#L203">property <b>s3CanonicalUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3CanonicalUserId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1536,7 +1563,7 @@ access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
 
 <h3 class="pdoc-module-header" id="PublicKeyArgs" data-link-title="PublicKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L150">
         interface <strong>PublicKeyArgs</strong>
     </a>
 </h3>
@@ -1546,7 +1573,7 @@ permission to an object in Amazon S3.
 The set of arguments for constructing a PublicKey resource.
 
 <h4 class="pdoc-member-header" id="PublicKeyArgs-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L154">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L154">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1554,7 +1581,7 @@ The set of arguments for constructing a PublicKey resource.
 An optional comment about the public key.
 
 <h4 class="pdoc-member-header" id="PublicKeyArgs-encodedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L158">property <b>encodedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L158">property <b>encodedKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encodedKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1562,7 +1589,7 @@ An optional comment about the public key.
 The encoded public key that you want to add to CloudFront to use with features like field-level encryption.
 
 <h4 class="pdoc-member-header" id="PublicKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1570,7 +1597,7 @@ The encoded public key that you want to add to CloudFront to use with features l
 The name for the public key. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="PublicKeyArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L166">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L166">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1578,7 +1605,7 @@ The name for the public key. By default generated by this provider.
 The name for the public key. Conflicts with `name`.
 
 <h3 class="pdoc-module-header" id="PublicKeyState" data-link-title="PublicKeyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L120">
         interface <strong>PublicKeyState</strong>
     </a>
 </h3>
@@ -1588,7 +1615,7 @@ The name for the public key. Conflicts with `name`.
 Input properties used for looking up and filtering PublicKey resources.
 
 <h4 class="pdoc-member-header" id="PublicKeyState-callerReference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L124">property <b>callerReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L124">property <b>callerReference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callerReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1596,7 +1623,7 @@ Input properties used for looking up and filtering PublicKey resources.
 Internal value used by CloudFront to allow future updates to the public key configuration.
 
 <h4 class="pdoc-member-header" id="PublicKeyState-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L128">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L128">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1604,7 +1631,7 @@ Internal value used by CloudFront to allow future updates to the public key conf
 An optional comment about the public key.
 
 <h4 class="pdoc-member-header" id="PublicKeyState-encodedKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L132">property <b>encodedKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L132">property <b>encodedKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encodedKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1612,7 +1639,7 @@ An optional comment about the public key.
 The encoded public key that you want to add to CloudFront to use with features like field-level encryption.
 
 <h4 class="pdoc-member-header" id="PublicKeyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L136">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L136">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1620,7 +1647,7 @@ The encoded public key that you want to add to CloudFront to use with features l
 The current version of the public key. For example: `E2QWRUHAPOMQZL`.
 
 <h4 class="pdoc-member-header" id="PublicKeyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1628,7 +1655,7 @@ The current version of the public key. For example: `E2QWRUHAPOMQZL`.
 The name for the public key. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="PublicKeyState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/e07f1c21047146459fa7794a69555b4dd80e2222/sdk/nodejs/cloudfront/publicKey.ts#L144">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/cloudfront/publicKey.ts#L144">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

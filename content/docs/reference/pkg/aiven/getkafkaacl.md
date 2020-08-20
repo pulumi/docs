@@ -2,7 +2,7 @@
 ---
 title: "GetKafkaAcl"
 title_tag: "Function GetKafkaAcl | Package Aiven"
-meta_desc: "Explore the GetKafkaAcl function of the Aiven package, including examples, input properties, output properties, and supporting types. {{% examples %}}"
+meta_desc: "Explore the GetKafkaAcl function of the Aiven package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -11,68 +11,6 @@ meta_desc: "Explore the GetKafkaAcl function of the Aiven package, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aiven = Pulumi.Aiven;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mytestacl = Output.Create(Aiven.GetKafkaAcl.InvokeAsync(new Aiven.GetKafkaAclArgs
-        {
-            Project = data.Aiven_service.Myservice.Project,
-            ServiceName = data.Aiven_service.Myservice.Service_name,
-            Topic = "<TOPIC_NAME_PATTERN>",
-            Username = "<USERNAME_PATTERN>",
-        }));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aiven as aiven
-
-mytestacl = aiven.get_kafka_acl(project=data["aiven..Service"]["myservice"]["project"],
-    service_name=data["aiven..Service"]["myservice"]["service_name"],
-    topic="<TOPIC_NAME_PATTERN>",
-    username="<USERNAME_PATTERN>")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aiven from "@pulumi/aiven";
-
-const mytestacl = aiven.getKafkaAcl({
-    project: data.aiven_service.myservice.project,
-    serviceName: data.aiven_service.myservice.service_name,
-    topic: "<TOPIC_NAME_PATTERN>",
-    username: "<USERNAME_PATTERN>",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetKafkaAcl {#using}
@@ -91,7 +29,7 @@ const mytestacl = aiven.getKafkaAcl({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafkaAcl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#LookupKafkaAclArgs">LookupKafkaAclArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v2/go/aiven/?tab=doc#LookupKafkaAclResult">LookupKafkaAclResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafkaAcl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupKafkaAclArgs">LookupKafkaAclArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupKafkaAclResult">LookupKafkaAclResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupKafkaAcl` in the Go SDK.
 

@@ -32,7 +32,7 @@ Explore the resources and functions of the secretsmanager module in the AWS pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.13.1</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 
@@ -43,7 +43,7 @@ Explore the resources and functions of the secretsmanager module in the AWS pack
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SecretsManager.html" title="Pulumi.Aws.SecretsManager">Pulumi.Aws.SecretsManager</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/secretsmanager?tab=doc#" title="aws/secretsmanager">aws/secretsmanager</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/secretsmanager?tab=doc#" title="aws/secretsmanager">aws/secretsmanager</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/secretsmanager/#" title="@pulumi/aws/secretsmanager">@pulumi/aws/secretsmanager</a></dd>

@@ -18,31 +18,30 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const config = new pulumi.Config();
-const cognitoUserPoolName = config.require("cognitoUserPoolName");
-
-const thisUserPools = pulumi.output(aws.cognito.getUserPools({
+const cognitoUserPoolName = config.requireObject("cognitoUserPoolName");
+const thisUserPools = aws.cognito.getUserPools({
     name: cognitoUserPoolName,
-}, { async: true }));
-const thisRestApi = new aws.apigateway.RestApi("this", {});
-const thisResource = new aws.apigateway.Resource("this", {
+});
+const thisRestApi = new aws.apigateway.RestApi("thisRestApi", {});
+const thisResource = new aws.apigateway.Resource("thisResource", {
+    restApi: thisRestApi.id,
     parentId: thisRestApi.rootResourceId,
     pathPart: "{proxy+}",
-    restApi: thisRestApi.id,
 });
-const thisAuthorizer = new aws.apigateway.Authorizer("this", {
-    providerArns: thisUserPools.arns,
-    restApi: thisRestApi.id,
+const thisAuthorizer = new aws.apigateway.Authorizer("thisAuthorizer", {
     type: "COGNITO_USER_POOLS",
+    restApi: thisRestApi.id,
+    providerArns: thisUserPools.then(thisUserPools => thisUserPools.arns),
 });
 const any = new aws.apigateway.Method("any", {
+    restApi: thisRestApi.id,
+    resourceId: thisResource.id,
+    httpMethod: "ANY",
     authorization: "COGNITO_USER_POOLS",
     authorizerId: thisAuthorizer.id,
-    httpMethod: "ANY",
     requestParameters: {
         "method.request.path.proxy": true,
     },
-    resourceId: thisResource.id,
-    restApi: thisRestApi.id,
 });
 ```
 ```python
@@ -54,22 +53,22 @@ cognito_user_pool_name = config.require_object("cognitoUserPoolName")
 this_user_pools = aws.cognito.get_user_pools(name=cognito_user_pool_name)
 this_rest_api = aws.apigateway.RestApi("thisRestApi")
 this_resource = aws.apigateway.Resource("thisResource",
-    parent_id=this_rest_api.root_resource_id,
-    path_part="{proxy+}",
-    rest_api=this_rest_api.id)
-this_authorizer = aws.apigateway.Authorizer("thisAuthorizer",
-    provider_arns=this_user_pools.arns,
     rest_api=this_rest_api.id,
-    type="COGNITO_USER_POOLS")
+    parent_id=this_rest_api.root_resource_id,
+    path_part="{proxy+}")
+this_authorizer = aws.apigateway.Authorizer("thisAuthorizer",
+    type="COGNITO_USER_POOLS",
+    rest_api=this_rest_api.id,
+    provider_arns=this_user_pools.arns)
 any = aws.apigateway.Method("any",
+    rest_api=this_rest_api.id,
+    resource_id=this_resource.id,
+    http_method="ANY",
     authorization="COGNITO_USER_POOLS",
     authorizer_id=this_authorizer.id,
-    http_method="ANY",
     request_parameters={
         "method.request.path.proxy": True,
-    },
-    resource_id=this_resource.id,
-    rest_api=this_rest_api.id)
+    })
 ```
 ```csharp
 using Pulumi;
@@ -90,27 +89,27 @@ class MyStack : Stack
         });
         var thisResource = new Aws.ApiGateway.Resource("thisResource", new Aws.ApiGateway.ResourceArgs
         {
+            RestApi = thisRestApi.Id,
             ParentId = thisRestApi.RootResourceId,
             PathPart = "{proxy+}",
-            RestApi = thisRestApi.Id,
         });
         var thisAuthorizer = new Aws.ApiGateway.Authorizer("thisAuthorizer", new Aws.ApiGateway.AuthorizerArgs
         {
-            ProviderArns = thisUserPools.Apply(thisUserPools => thisUserPools.Arns),
-            RestApi = thisRestApi.Id,
             Type = "COGNITO_USER_POOLS",
+            RestApi = thisRestApi.Id,
+            ProviderArns = thisUserPools.Apply(thisUserPools => thisUserPools.Arns),
         });
         var any = new Aws.ApiGateway.Method("any", new Aws.ApiGateway.MethodArgs
         {
+            RestApi = thisRestApi.Id,
+            ResourceId = thisResource.Id,
+            HttpMethod = "ANY",
             Authorization = "COGNITO_USER_POOLS",
             AuthorizerId = thisAuthorizer.Id,
-            HttpMethod = "ANY",
             RequestParameters = 
             {
                 { "method.request.path.proxy", true },
             },
-            ResourceId = thisResource.Id,
-            RestApi = thisRestApi.Id,
         });
     }
 
@@ -120,8 +119,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -138,30 +137,30 @@ func main() {
 			return err
 		}
 		thisResource, err := apigateway.NewResource(ctx, "thisResource", &apigateway.ResourceArgs{
+			RestApi:  thisRestApi.ID(),
 			ParentId: thisRestApi.RootResourceId,
 			PathPart: pulumi.String("{proxy+}"),
-			RestApi:  thisRestApi.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		thisAuthorizer, err := apigateway.NewAuthorizer(ctx, "thisAuthorizer", &apigateway.AuthorizerArgs{
-			ProviderArns: toPulumiStringArray(thisUserPools.Arns),
-			RestApi:      thisRestApi.ID(),
 			Type:         pulumi.String("COGNITO_USER_POOLS"),
+			RestApi:      thisRestApi.ID(),
+			ProviderArns: toPulumiStringArray(thisUserPools.Arns),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = apigateway.NewMethod(ctx, "any", &apigateway.MethodArgs{
+			RestApi:       thisRestApi.ID(),
+			ResourceId:    thisResource.ID(),
+			HttpMethod:    pulumi.String("ANY"),
 			Authorization: pulumi.String("COGNITO_USER_POOLS"),
 			AuthorizerId:  thisAuthorizer.ID(),
-			HttpMethod:    pulumi.String("ANY"),
 			RequestParameters: pulumi.BoolMap{
 				"method.request.path.proxy": pulumi.Bool(true),
 			},
-			ResourceId: thisResource.ID(),
-			RestApi:    thisRestApi.ID(),
 		})
 		if err != nil {
 			return err
@@ -198,16 +197,16 @@ class MyStack : Stack
         });
         var myDemoResource = new Aws.ApiGateway.Resource("myDemoResource", new Aws.ApiGateway.ResourceArgs
         {
+            RestApi = myDemoAPI.Id,
             ParentId = myDemoAPI.RootResourceId,
             PathPart = "mydemoresource",
-            RestApi = myDemoAPI.Id,
         });
         var myDemoMethod = new Aws.ApiGateway.Method("myDemoMethod", new Aws.ApiGateway.MethodArgs
         {
-            Authorization = "NONE",
-            HttpMethod = "GET",
-            ResourceId = myDemoResource.Id,
             RestApi = myDemoAPI.Id,
+            ResourceId = myDemoResource.Id,
+            HttpMethod = "GET",
+            Authorization = "NONE",
         });
     }
 
@@ -221,7 +220,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -234,18 +233,18 @@ func main() {
 			return err
 		}
 		myDemoResource, err := apigateway.NewResource(ctx, "myDemoResource", &apigateway.ResourceArgs{
+			RestApi:  myDemoAPI.ID(),
 			ParentId: myDemoAPI.RootResourceId,
 			PathPart: pulumi.String("mydemoresource"),
-			RestApi:  myDemoAPI.ID(),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = apigateway.NewMethod(ctx, "myDemoMethod", &apigateway.MethodArgs{
-			Authorization: pulumi.String("NONE"),
-			HttpMethod:    pulumi.String("GET"),
-			ResourceId:    myDemoResource.ID(),
 			RestApi:       myDemoAPI.ID(),
+			ResourceId:    myDemoResource.ID(),
+			HttpMethod:    pulumi.String("GET"),
+			Authorization: pulumi.String("NONE"),
 		})
 		if err != nil {
 			return err
@@ -264,14 +263,14 @@ import pulumi_aws as aws
 
 my_demo_api = aws.apigateway.RestApi("myDemoAPI", description="This is my API for demonstration purposes")
 my_demo_resource = aws.apigateway.Resource("myDemoResource",
+    rest_api=my_demo_api.id,
     parent_id=my_demo_api.root_resource_id,
-    path_part="mydemoresource",
-    rest_api=my_demo_api.id)
+    path_part="mydemoresource")
 my_demo_method = aws.apigateway.Method("myDemoMethod",
-    authorization="NONE",
-    http_method="GET",
+    rest_api=my_demo_api.id,
     resource_id=my_demo_resource.id,
-    rest_api=my_demo_api.id)
+    http_method="GET",
+    authorization="NONE")
 ```
 
 {{% /example %}}
@@ -282,19 +281,17 @@ my_demo_method = aws.apigateway.Method("myDemoMethod",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
-    description: "This is my API for demonstration purposes",
-});
-const myDemoResource = new aws.apigateway.Resource("MyDemoResource", {
+const myDemoAPI = new aws.apigateway.RestApi("myDemoAPI", {description: "This is my API for demonstration purposes"});
+const myDemoResource = new aws.apigateway.Resource("myDemoResource", {
+    restApi: myDemoAPI.id,
     parentId: myDemoAPI.rootResourceId,
     pathPart: "mydemoresource",
-    restApi: myDemoAPI.id,
 });
-const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
-    authorization: "NONE",
-    httpMethod: "GET",
-    resourceId: myDemoResource.id,
+const myDemoMethod = new aws.apigateway.Method("myDemoMethod", {
     restApi: myDemoAPI.id,
+    resourceId: myDemoResource.id,
+    httpMethod: "GET",
+    authorization: "NONE",
 });
 ```
 
@@ -316,7 +313,7 @@ const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Method">NewMethod</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#MethodArgs">MethodArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Method">Method</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Method">NewMethod</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#MethodArgs">MethodArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Method">Method</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -390,7 +387,7 @@ const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -410,7 +407,7 @@ const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#MethodArgs">MethodArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#MethodArgs">MethodArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -420,7 +417,7 @@ const myDemoMethod = new aws.apigateway.Method("MyDemoMethod", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1059,7 +1056,7 @@ Get an existing Method resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMethod<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#MethodState">MethodState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#Method">Method</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMethod<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#MethodState">MethodState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#Method">Method</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

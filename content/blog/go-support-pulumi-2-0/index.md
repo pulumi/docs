@@ -145,7 +145,7 @@ ctx.Export("endpoint", group.Fqdn)
 
 ### Kubernetes
 
-Pulumi provides access not just to your cloud (AWS, Azure, GCP and more), but also to the whole Kubernetes API.  The Pulumi  [Kubernetes provider](https://github.com/pulumi/pulumi-kubernetes) is based on the OpenAPI specification, so is always up to date with the full functionality of the Kubernetes API. Using Pulumi to provision your Kuberentes resources gives you the declarative benefits of YAML without any of the drawbacks. Using a real language to orchestrate resources brings the benefits of strong typing, safety, and opens up options for encapsulation. Here’s a snippet from the [guestbook example](https://github.com/pulumi/examples/tree/master/kubernetes-go-guestbook):
+Pulumi provides access not just to your cloud (AWS, Azure, GCP and more), but also to the whole Kubernetes API.  The Pulumi  [Kubernetes provider](https://github.com/pulumi/pulumi-kubernetes) is based on the OpenAPI specification, so is always up to date with the full functionality of the Kubernetes API. Using Pulumi to provision your Kuberentes resources gives you the declarative benefits of YAML without any of the drawbacks. Using a familiar, general-purpose language to orchestrate resources brings the benefits of strong typing, safety, and opens up options for encapsulation. Here’s a snippet from the [guestbook example](https://github.com/pulumi/examples/tree/master/kubernetes-go-guestbook):
 
 ```go
 // Redis leader Service

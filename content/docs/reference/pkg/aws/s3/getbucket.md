@@ -39,6 +39,9 @@ class MyStack : Stack
         }));
         var example = new Aws.Route53.Record("example", new Aws.Route53.RecordArgs
         {
+            ZoneId = testZone.Apply(testZone => testZone.Id),
+            Name = "bucket",
+            Type = "A",
             Aliases = 
             {
                 new Aws.Route53.Inputs.RecordAliasArgs
@@ -47,9 +50,6 @@ class MyStack : Stack
                     ZoneId = selected.Apply(selected => selected.HostedZoneId),
                 },
             },
-            Name = "bucket",
-            Type = "A",
-            ZoneId = testZone.Apply(testZone => testZone.Id),
         });
     }
 
@@ -63,8 +63,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,15 +84,15 @@ func main() {
 			return err
 		}
 		_, err = route53.NewRecord(ctx, "example", &route53.RecordArgs{
+			ZoneId: pulumi.String(testZone.Id),
+			Name:   pulumi.String("bucket"),
+			Type:   pulumi.String("A"),
 			Aliases: route53.RecordAliasArray{
 				&route53.RecordAliasArgs{
 					Name:   pulumi.String(selected.WebsiteDomain),
 					ZoneId: pulumi.String(selected.HostedZoneId),
 				},
 			},
-			Name:   pulumi.String("bucket"),
-			Type:   pulumi.String("A"),
-			ZoneId: pulumi.String(testZone.Id),
 		})
 		if err != nil {
 			return err
@@ -112,13 +112,13 @@ import pulumi_aws as aws
 selected = aws.s3.get_bucket(bucket="bucket.test.com")
 test_zone = aws.route53.get_zone(name="test.com.")
 example = aws.route53.Record("example",
+    zone_id=test_zone.id,
+    name="bucket",
+    type="A",
     aliases=[{
         "name": selected.website_domain,
         "zone_id": selected.hosted_zone_id,
-    }],
-    name="bucket",
-    type="A",
-    zone_id=test_zone.id)
+    }])
 ```
 
 {{% /example %}}
@@ -129,20 +129,20 @@ example = aws.route53.Record("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = pulumi.output(aws.s3.getBucket({
+const selected = aws.s3.getBucket({
     bucket: "bucket.test.com",
-}, { async: true }));
-const testZone = pulumi.output(aws.route53.getZone({
+});
+const testZone = aws.route53.getZone({
     name: "test.com.",
-}, { async: true }));
+});
 const example = new aws.route53.Record("example", {
-    aliases: [{
-        name: selected.websiteDomain,
-        zoneId: selected.hostedZoneId,
-    }],
+    zoneId: testZone.then(testZone => testZone.id),
     name: "bucket",
     type: "A",
-    zoneId: testZone.id,
+    aliases: [{
+        name: selected.then(selected => selected.websiteDomain),
+        zoneId: selected.then(selected => selected.hostedZoneId),
+    }],
 });
 ```
 
@@ -185,8 +185,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -236,15 +236,13 @@ test = aws.cloudfront.Distribution("test", origins=[{
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = pulumi.output(aws.s3.getBucket({
+const selected = aws.s3.getBucket({
     bucket: "a-test-bucket",
-}, { async: true }));
-const test = new aws.cloudfront.Distribution("test", {
-    origins: [{
-        domainName: selected.bucketDomainName,
-        originId: "s3-selected-bucket",
-    }],
 });
+const test = new aws.cloudfront.Distribution("test", {origins: [{
+    domainName: selected.then(selected => selected.bucketDomainName),
+    originId: "s3-selected-bucket",
+}]});
 ```
 
 {{% /example %}}
@@ -268,7 +266,7 @@ const test = new aws.cloudfront.Distribution("test", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#LookupBucketArgs">LookupBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#LookupBucketResult">LookupBucketResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#LookupBucketArgs">LookupBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#LookupBucketResult">LookupBucketResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBucket` in the Go SDK.
 

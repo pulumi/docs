@@ -43,7 +43,34 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network1, err := networking.NewNetwork(ctx, "network1", &networking.NetworkArgs{
+			AdminStateUp: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = networking.NewSubnet(ctx, "subnet1", &networking.SubnetArgs{
+			Cidr:      pulumi.String("192.168.199.0/24"),
+			NetworkId: network1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -88,7 +115,7 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#Subnet">Subnet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocation_pools=None<span class="p">, </span>allocation_pools_collection=None<span class="p">, </span>cidr=None<span class="p">, </span>description=None<span class="p">, </span>dns_nameservers=None<span class="p">, </span>enable_dhcp=None<span class="p">, </span>gateway_ip=None<span class="p">, </span>host_routes=None<span class="p">, </span>ip_version=None<span class="p">, </span>ipv6_address_mode=None<span class="p">, </span>ipv6_ra_mode=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>no_gateway=None<span class="p">, </span>prefix_length=None<span class="p">, </span>region=None<span class="p">, </span>subnetpool_id=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/networking/#pulumi_openstack.networking.Subnet">Subnet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allocation_pools=None<span class="p">, </span>allocation_pools_collection=None<span class="p">, </span>cidr=None<span class="p">, </span>description=None<span class="p">, </span>dns_nameservers=None<span class="p">, </span>enable_dhcp=None<span class="p">, </span>gateway_ip=None<span class="p">, </span>host_routes=None<span class="p">, </span>ip_version=None<span class="p">, </span>ipv6_address_mode=None<span class="p">, </span>ipv6_ra_mode=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>no_gateway=None<span class="p">, </span>prefix_length=None<span class="p">, </span>region=None<span class="p">, </span>subnetpool_id=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -296,8 +323,7 @@ The `allocation_pool` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
+    <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
@@ -558,8 +584,7 @@ The `allocation_pool` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">[]Subnet<wbr>Allocation<wbr>Pools<wbr>Collection</a></span>
     </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
+    <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
@@ -820,8 +845,7 @@ The `allocation_pool` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection[]</a></span>
     </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
+    <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
@@ -1082,8 +1106,7 @@ The `allocation_pool` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">List[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection]</a></span>
     </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
+    <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
@@ -1447,7 +1470,7 @@ Get an existing Subnet resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>all_tags=None<span class="p">, </span>allocation_pools=None<span class="p">, </span>allocation_pools_collection=None<span class="p">, </span>cidr=None<span class="p">, </span>description=None<span class="p">, </span>dns_nameservers=None<span class="p">, </span>enable_dhcp=None<span class="p">, </span>gateway_ip=None<span class="p">, </span>host_routes=None<span class="p">, </span>ip_version=None<span class="p">, </span>ipv6_address_mode=None<span class="p">, </span>ipv6_ra_mode=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>no_gateway=None<span class="p">, </span>prefix_length=None<span class="p">, </span>region=None<span class="p">, </span>subnetpool_id=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>all_tags=None<span class="p">, </span>allocation_pools=None<span class="p">, </span>allocation_pools_collection=None<span class="p">, </span>cidr=None<span class="p">, </span>description=None<span class="p">, </span>dns_nameservers=None<span class="p">, </span>enable_dhcp=None<span class="p">, </span>gateway_ip=None<span class="p">, </span>host_routes=None<span class="p">, </span>ip_version=None<span class="p">, </span>ipv6_address_mode=None<span class="p">, </span>ipv6_ra_mode=None<span class="p">, </span>name=None<span class="p">, </span>network_id=None<span class="p">, </span>no_gateway=None<span class="p">, </span>prefix_length=None<span class="p">, </span>region=None<span class="p">, </span>subnetpool_id=None<span class="p">, </span>tags=None<span class="p">, </span>tenant_id=None<span class="p">, </span>value_specs=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1597,8 +1620,7 @@ The `allocation_pool` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
+    <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
@@ -1871,8 +1893,7 @@ The `allocation_pool` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">[]Subnet<wbr>Allocation<wbr>Pools<wbr>Collection</a></span>
     </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
+    <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
@@ -2145,8 +2166,7 @@ The `allocation_pool` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection[]</a></span>
     </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
+    <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
@@ -2419,8 +2439,7 @@ The `allocation_pool` block is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetallocationpoolscollection">List[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection]</a></span>
     </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
+    <dd>{{% md %}}A block declaring the start and end range of the IP addresses available for
 use with DHCP in this subnet.
 The `allocation_pools` block is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>

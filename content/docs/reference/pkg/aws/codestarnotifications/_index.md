@@ -23,7 +23,7 @@ Explore the resources and functions of the codestarnotifications module in the A
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.13.1</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 
@@ -34,7 +34,7 @@ Explore the resources and functions of the codestarnotifications module in the A
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeStarNotifications.html" title="Pulumi.Aws.CodeStarNotifications">Pulumi.Aws.CodeStarNotifications</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codestarnotifications?tab=doc#" title="aws/codestarnotifications">aws/codestarnotifications</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codestarnotifications?tab=doc#" title="aws/codestarnotifications">aws/codestarnotifications</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/codestarnotifications/#" title="@pulumi/aws/codestarnotifications">@pulumi/aws/codestarnotifications</a></dd>

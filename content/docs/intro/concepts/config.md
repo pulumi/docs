@@ -110,7 +110,7 @@ console.log(`Password: ${config.require("dbPassword")}`);
 ```python
 import pulumi
 config = pulumi.Config()
-print('Password: %s'.format(config.require('dbPassword')))
+print('Password: {}'.format(config.require('dbPassword')))
 ```
 
 {{% /choosable %}}
@@ -198,10 +198,20 @@ print(config.require_secret('dbPassword'))
 {{% choosable language go %}}
 
 ```go
-c := config.New(ctx, "")
+package main
 
-name := c.Require("name")
-dbPassword := c.Require("dbPassword")
+import (
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        c := config.New(ctx, "")
+
+        name := c.Require("name")
+        dbPassword := c.Require("dbPassword")
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -245,10 +255,10 @@ Structured configuration is also supported and can be set using `pulumi config s
 For example:
 
 ```bash
-$ pulumi config set --path data.active true
-$ pulumi config set --path data.nums[0] 1
-$ pulumi config set --path data.nums[1] 2
-$ pulumi config set --path data.nums[2] 3
+$ pulumi config set --path 'data.active' true
+$ pulumi config set --path 'data.nums[0]' 1
+$ pulumi config set --path 'data.nums[1]' 2
+$ pulumi config set --path 'data.nums[2]' 3
 ```
 
 The structure of `data` is persisted in the stack's `Pulumi.<stack-name>.yaml` file as:
@@ -304,6 +314,13 @@ print("Active:", data.get("active"))
 {{% choosable language go %}}
 
 ```go
+package main
+
+import (
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
 type Data struct {
 	Active bool
 	Nums   []int
@@ -433,63 +450,21 @@ $ pulumi stack init my-stack \
 
 ### Changing the Secrets Provider for a Stack
 
-> Note: There is not (yet) built-in `pulumi` CLI support for changing the secrets provider on an existing stack, but for cases where this is necessary, it is possible with some manual steps, as outlined in this section.
+To change the secrets provider for an existing stack use the [`pulumi stack change-secrets-provider`]({{< relref "/docs/reference/cli/pulumi_stack_change-secrets-provider" >}}) command.
 
-> Note: These steps can also be used to change the passphrase that is used for an existing stack.
-
-There are two places where secrets are stored in an encrypted form: (1) the configuration stored in the stack file (`Pulumi.<stackname>.yaml`) and (2) the state stored in your state backend.  To change the secrets provider for a stack, both of these will need to be manually updated.  Here are the high-level steps needed to change the secrets provider for a stack with details below:
-
-1. Export stack and config with secrets in plaintext
-1. Initialize a temporary new stack with the new encryption provider configuration
-1. Modify your existing stack's state file with the configuration values of the new encryption provider
-1. Re-import your state file with the updated encryption provider configuration
-
-First, you will need to get copies of the two assets above with plaintext copies of your secret values from your current stack.  This is a sensitive operation, and you should be careful to do this in a safe environment and be sure to remove these files when you are done.
-
-```
-$ pulumi config --show-secrets --json > config.json
-$ pulumi stack export --show-secrets > stack.json
+```bash
+$ pulumi stack change-secrets-provider "<secrets-provider>"
 ```
 
-Next, you will need to create a temporary new stack using the desired new secrets provider.  If using the `passphrase` secrets provider, this can also be used to create a new passphrase to use for encryption.
+This will change the encrypted secrets in the provider configuration and the stack's state file to use the new secrets provider.
+The [supported secrets providers]({{< relref "/docs/reference/cli/pulumi_stack_init" >}}) are:
 
-```
-$ pulumi stack init temp --secrets-provider <provider>
-```
+* `default`
+* `passphrase`
+* `awskms`
+* `azurekeyvault`
+* `gcpkms`
+* `hashivault`
 
-If you chose `passphrase` you will see something like this:
-
-```
-$ cat Pulumi.temp.yaml
-encryptionsalt: v1:h8kauiCOXZc=:v1:0Tjy4uHvwgw/b0Hp:gKAqRJ74vyIkc5BeEUlCFXynwRTPFQ==
-```
-
-Else if you chose one of the cloud-provider secrets providers you will see something like this:
-
-```
-$ cat Pulumi.temp.yaml
-secretsprovider: awskms://alias/my-kms-key
-encryptedkey: AQICAHhivZtfYgNwNJDVWDd++88uo2qgy5MJqqzsPfTFv7uzDgF+1kaw9/wSKgGh5QpT/cwtAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMc2EiH7Mli5ohzB1aAgEQgDsOszkuuC7wffN3FdtKCNAcRoJq3krWmeA/ucnSMn/F2OYVIDKxDZkjJYZBAjEmpWL49Fcly/n8NMNHhw==
-```
-
-And if you chose the Pulumi Service secrets provider, there will be no stack file.
-
-You will use the values above to replace those in use in your existing stack.  Switch back to the existing stack with `pulumi stack select ...`, then update your config and state as outlined below.
-
-First, your config.  
-
-1. You will need to remove all encypted secrets from your current config using `pulumi config rm` or by removing them by hand from the `.yaml` file (you saved them to `config.json` above).  
-2. Then copy the lines above (`encryptionsalt` or `secretsprovider`+`encryptedkey`) from the `temp` stack into your primary stack (replacing the existing corresponding lines).
-3. Save that, and then run `pulumi config set --secret <key> <value>` for each of the secret config values you removed, using the values from `config.json`.  
-
-Next, your state.  
-
-1. Open `stack.json` and find the `secrets_providers` section.  
-2. Based on the output of your `Pulumi.temp.yaml` pick from these options:
-    * For `encryptionsalt` set `"type": "passphrase",` and replace the contents of the `state` with `"salt": "<value>"`.
-    * For `secretsprovider`+`encryptedkey` set `"type": "cloud"` and replace the contents of the `state` with `"url": "<value>"` and `"encryptedkey": "<value>"` respectively.
-    * For Pulumi Service secrets-provider, set `"type": "service"` and replace the contents of the `state` with `"url"`, `"owner"`, `"project"` and `"stack"` as appropriate for your existing stack.
-
-Save your `stack.json` with those changes, then run `pulumi stack import < stack.json` to import it into your Pulumi stack.
-
-You should now be able to run `pulumi preview` and see no proposed changes.  Your configuration secrets and state files are now encrypted using the new secrets provider.  You can remove the `stack.json` and `config.json` files to ensure the plain text of the secrets is no longer available, as well as remove the temporary stack (`pulumi stack rm temp`).
+After the provider has been changed, you should be able to run `pulumi preview` and see no proposed changes.  Your configuration secrets
+and state files are now encrypted using the new secrets provider.

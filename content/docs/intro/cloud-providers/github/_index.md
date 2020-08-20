@@ -69,7 +69,7 @@ import (
 
 repository, _ := github.NewRepository(ctx, "demo-repo", &github.RepositoryArgs{
   Description: pulumi.String("Generated from automated test"),
-  Private:     pulumi.Boolean(true),
+  Private:     pulumi.Bool(true),
 })
 ```
 

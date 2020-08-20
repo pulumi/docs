@@ -30,18 +30,18 @@ class MyStack : Stack
         var main = Output.Create(Aws.Elb.GetHostedZoneId.InvokeAsync());
         var www = new Aws.Route53.Record("www", new Aws.Route53.RecordArgs
         {
+            ZoneId = aws_route53_zone.Primary.Zone_id,
+            Name = "example.com",
+            Type = "A",
             Aliases = 
             {
                 new Aws.Route53.Inputs.RecordAliasArgs
                 {
-                    EvaluateTargetHealth = true,
                     Name = aws_elb.Main.Dns_name,
                     ZoneId = main.Apply(main => main.Id),
+                    EvaluateTargetHealth = true,
                 },
             },
-            Name = "example.com",
-            Type = "A",
-            ZoneId = aws_route53_zone.Primary.Zone_id,
         });
     }
 
@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elb"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -67,16 +67,16 @@ func main() {
 			return err
 		}
 		_, err = route53.NewRecord(ctx, "www", &route53.RecordArgs{
-			Aliases: route53.RecordAliasArray{
-				&route53.RecordAliasArgs{
-					EvaluateTargetHealth: pulumi.Bool(true),
-					Name:                 pulumi.String(aws_elb.Main.Dns_name),
-					ZoneId:               pulumi.String(main.Id),
-				},
-			},
+			ZoneId: pulumi.Any(aws_route53_zone.Primary.Zone_id),
 			Name:   pulumi.String("example.com"),
 			Type:   pulumi.String("A"),
-			ZoneId: pulumi.String(aws_route53_zone.Primary.Zone_id),
+			Aliases: route53.RecordAliasArray{
+				&route53.RecordAliasArgs{
+					Name:                 pulumi.Any(aws_elb.Main.Dns_name),
+					ZoneId:               pulumi.String(main.Id),
+					EvaluateTargetHealth: pulumi.Bool(true),
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -95,14 +95,14 @@ import pulumi_aws as aws
 
 main = aws.elb.get_hosted_zone_id()
 www = aws.route53.Record("www",
-    aliases=[{
-        "evaluateTargetHealth": True,
-        "name": aws_elb["main"]["dns_name"],
-        "zone_id": main.id,
-    }],
+    zone_id=aws_route53_zone["primary"]["zone_id"],
     name="example.com",
     type="A",
-    zone_id=aws_route53_zone["primary"]["zone_id"])
+    aliases=[{
+        "name": aws_elb["main"]["dns_name"],
+        "zone_id": main.id,
+        "evaluateTargetHealth": True,
+    }])
 ```
 
 {{% /example %}}
@@ -113,16 +113,16 @@ www = aws.route53.Record("www",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = pulumi.output(aws.elb.getHostedZoneId({ async: true }));
+const main = aws.elb.getHostedZoneId({});
 const www = new aws.route53.Record("www", {
-    aliases: [{
-        evaluateTargetHealth: true,
-        name: aws_elb_main.dnsName,
-        zoneId: main.id,
-    }],
+    zoneId: aws_route53_zone.primary.zone_id,
     name: "example.com",
     type: "A",
-    zoneId: aws_route53_zone_primary.zoneId,
+    aliases: [{
+        name: aws_elb.main.dns_name,
+        zoneId: main.then(main => main.id),
+        evaluateTargetHealth: true,
+    }],
 });
 ```
 
@@ -148,7 +148,7 @@ const www = new aws.route53.Record("www", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostedZoneId<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#GetHostedZoneIdArgs">GetHostedZoneIdArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#GetHostedZoneIdResult">GetHostedZoneIdResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostedZoneId<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#GetHostedZoneIdArgs">GetHostedZoneIdArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#GetHostedZoneIdResult">GetHostedZoneIdResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 

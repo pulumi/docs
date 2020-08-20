@@ -40,13 +40,13 @@ class MyStack : Stack
         });
         var fooSubnet = new Aws.Ec2.Subnet("fooSubnet", new Aws.Ec2.SubnetArgs
         {
-            AvailabilityZone = "us-west-2a",
+            VpcId = fooVpc.Id,
             CidrBlock = "10.0.0.0/24",
+            AvailabilityZone = "us-west-2a",
             Tags = 
             {
                 { "Name", "tf-test" },
             },
-            VpcId = fooVpc.Id,
         });
         var bar = new Aws.ElastiCache.SubnetGroup("bar", new Aws.ElastiCache.SubnetGroupArgs
         {
@@ -67,8 +67,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,12 +84,12 @@ func main() {
 			return err
 		}
 		fooSubnet, err := ec2.NewSubnet(ctx, "fooSubnet", &ec2.SubnetArgs{
-			AvailabilityZone: pulumi.String("us-west-2a"),
+			VpcId:            fooVpc.ID(),
 			CidrBlock:        pulumi.String("10.0.0.0/24"),
+			AvailabilityZone: pulumi.String("us-west-2a"),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("tf-test"),
 			},
-			VpcId: fooVpc.ID(),
 		})
 		if err != nil {
 			return err
@@ -120,12 +120,12 @@ foo_vpc = aws.ec2.Vpc("fooVpc",
         "Name": "tf-test",
     })
 foo_subnet = aws.ec2.Subnet("fooSubnet",
-    availability_zone="us-west-2a",
+    vpc_id=foo_vpc.id,
     cidr_block="10.0.0.0/24",
+    availability_zone="us-west-2a",
     tags={
         "Name": "tf-test",
-    },
-    vpc_id=foo_vpc.id)
+    })
 bar = aws.elasticache.SubnetGroup("bar", subnet_ids=[foo_subnet.id])
 ```
 
@@ -137,23 +137,21 @@ bar = aws.elasticache.SubnetGroup("bar", subnet_ids=[foo_subnet.id])
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooVpc = new aws.ec2.Vpc("foo", {
+const fooVpc = new aws.ec2.Vpc("fooVpc", {
     cidrBlock: "10.0.0.0/16",
     tags: {
         Name: "tf-test",
     },
 });
-const fooSubnet = new aws.ec2.Subnet("foo", {
-    availabilityZone: "us-west-2a",
+const fooSubnet = new aws.ec2.Subnet("fooSubnet", {
+    vpcId: fooVpc.id,
     cidrBlock: "10.0.0.0/24",
+    availabilityZone: "us-west-2a",
     tags: {
         Name: "tf-test",
     },
-    vpcId: fooVpc.id,
 });
-const bar = new aws.elasticache.SubnetGroup("bar", {
-    subnetIds: [fooSubnet.id],
-});
+const bar = new aws.elasticache.SubnetGroup("bar", {subnetIds: [fooSubnet.id]});
 ```
 
 {{% /example %}}
@@ -174,7 +172,7 @@ const bar = new aws.elasticache.SubnetGroup("bar", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#SubnetGroup">NewSubnetGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#SubnetGroupArgs">SubnetGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#SubnetGroup">SubnetGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache?tab=doc#SubnetGroup">NewSubnetGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache?tab=doc#SubnetGroupArgs">SubnetGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache?tab=doc#SubnetGroup">SubnetGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -248,7 +246,7 @@ const bar = new aws.elasticache.SubnetGroup("bar", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -268,7 +266,7 @@ const bar = new aws.elasticache.SubnetGroup("bar", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#SubnetGroupArgs">SubnetGroupArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache?tab=doc#SubnetGroupArgs">SubnetGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -278,7 +276,7 @@ const bar = new aws.elasticache.SubnetGroup("bar", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -597,7 +595,7 @@ Get an existing SubnetGroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#SubnetGroupState">SubnetGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticache?tab=doc#SubnetGroup">SubnetGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache?tab=doc#SubnetGroupState">SubnetGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache?tab=doc#SubnetGroup">SubnetGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

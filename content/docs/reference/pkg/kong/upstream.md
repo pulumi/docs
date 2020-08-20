@@ -22,7 +22,7 @@ meta_desc: "Explore the Upstream resource of the Kong package, including example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/kong/#Upstream">Upstream</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>hash_fallback=None<span class="p">, </span>hash_fallback_header=None<span class="p">, </span>hash_on=None<span class="p">, </span>hash_on_cookie=None<span class="p">, </span>hash_on_cookie_path=None<span class="p">, </span>hash_on_header=None<span class="p">, </span>healthchecks=None<span class="p">, </span>name=None<span class="p">, </span>slots=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kong/#pulumi_kong.Upstream">Upstream</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>hash_fallback=None<span class="p">, </span>hash_fallback_header=None<span class="p">, </span>hash_on=None<span class="p">, </span>hash_on_cookie=None<span class="p">, </span>hash_on_cookie_path=None<span class="p">, </span>hash_on_header=None<span class="p">, </span>healthchecks=None<span class="p">, </span>name=None<span class="p">, </span>slots=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -673,7 +673,7 @@ Get an existing Upstream resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>hash_fallback=None<span class="p">, </span>hash_fallback_header=None<span class="p">, </span>hash_on=None<span class="p">, </span>hash_on_cookie=None<span class="p">, </span>hash_on_cookie_path=None<span class="p">, </span>hash_on_header=None<span class="p">, </span>healthchecks=None<span class="p">, </span>name=None<span class="p">, </span>slots=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>hash_fallback=None<span class="p">, </span>hash_fallback_header=None<span class="p">, </span>hash_on=None<span class="p">, </span>hash_on_cookie=None<span class="p">, </span>hash_on_cookie_path=None<span class="p">, </span>hash_on_header=None<span class="p">, </span>healthchecks=None<span class="p">, </span>name=None<span class="p">, </span>slots=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

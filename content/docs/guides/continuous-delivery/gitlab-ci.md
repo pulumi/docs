@@ -24,7 +24,7 @@ altered to fit into any existing type of deployment setup.
 
 - An account on [https://app.pulumi.com](https://app.pulumi.com) and that you have created a new project.
     - This just means you will sign-in using your GitLab credentials.
-    - However, pulumi can be run from anywhere and your infrastrucutre code itself can be hosted anywhere.
+    - However, pulumi can be run from anywhere and your infrastructure code itself can be hosted anywhere.
 - The latest CLI. Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
 - A bare repo and set the remote URL to be your GitLab project.
 
@@ -188,7 +188,7 @@ yarn install
 pulumi stack select product-catalog-service
 # The following is just a sample config setting that the hypothetical pulumi
 # program needs.
-# Learn more about pulumi configuration at: {{< absurl "/reference/config/" >}}
-pulumi config set mysetting:myvalue
+# Learn more about pulumi configuration at: {{< absurl "/docs/intro/concepts/config/" >}}
+pulumi config set mysetting myvalue
 pulumi up --yes
 ```

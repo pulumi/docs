@@ -1,7 +1,7 @@
 ---
 title: "Program Kubernetes with 11 Pulumi Pearls"
 date: "2018-09-12"
-meta_desc: "How to build & deploy Kubernetes applications using infrastructure as code, in three categories: config as real code, multi-cloud, & software delivery as code."
+meta_desc: "How to build & deploy Kubernetes applications using infrastructure as code, in three categories: config as code, multi-cloud, & software delivery as code."
 meta_image: "health-checks.gif"
 authors: ["joe-duffy"]
 tags: ["Kubernetes"]
@@ -12,7 +12,7 @@ snippets -- that demonstrate using Pulumi to build and deploy Kubernetes
 applications using cloud native infrastructure as code. These pearls are
 organized into three categories, each demonstrating a unique scenario:
 
-- **Config as Real Code:** Use your favorite language for authoring
+- **Config as Code:** Use your favorite language for authoring
   applications and configuration, eliminating toil and YAML.
 - **Multi-Cloud Infrastructure:** Mix cloud services alongside
   Kubernetes resources and manage them using one set of tools and
@@ -20,16 +20,16 @@ organized into three categories, each demonstrating a unique scenario:
 - **Software Delivery as Code:** Perform sophisticated continuous
   delivery of your Kubernetes deployments -- including canaries,
   staged rollouts, leveraging cloud native projects like Envoy and
-  Prometheus -- authored in real code.
+  Prometheus -- authored in code using familiar languages.
 <!--more-->
 
 Here is a complete index of the pearls below, in case you want to jump
 around a little:
 
 <!-- just links to this same post -->
-**[Config as Real Code](#config-as-real-code)**
+**[Config as Code](#config-as-code)**
 
-- [Define Kubernetes Applications in a Real Language](#1-define-kubernetes-applications-in-a-real-language)
+- [Define Kubernetes Applications in a Familiar Language](#1-define-kubernetes-applications-in-a-familiar-language)
 - [More Expressiveness, Less Boilerplate](#2-more-expressiveness-less-boilerplate)
 - [Inject Envoy Sidecars Using Abstraction](#3-inject-envoy-sidecars-using-abstraction)
 - [Adopt Existing Kubernetes YAML](#4-adopt-existing-kubernetes-yaml)
@@ -47,7 +47,7 @@ around a little:
 - [Trigger Cascading Rollouts from Dependent Updates](#10-trigger-cascading-rollouts-from-dependent-updates)
 - [Staged Application Rollouts Gated by Prometheus Checks](#11-staged-application-rollouts-gated-by-prometheus-checks)
 
-## Config as Real Code
+## Config as Code
 
 The default authoring experience for Kubernetes applications is in YAML,
 similar to other infrastructure as code solutions. These configuration
@@ -61,7 +61,7 @@ the most basic level of complexity, you'll soon have accidentally
 encoded critical software architecture decisions in YAML, where as
 software developers we prefer to write and maintain such things in code.
 
-Using a real language brings productivity and joy to development, but
+Using a familiar language brings productivity and joy to development, but
 more concretely also unlocks the ability to codify and enforce best
 practices, and to share and reuse them within your team or the
 community. This is something that simply isn't possible with YAML.
@@ -69,13 +69,13 @@ community. This is something that simply isn't possible with YAML.
 Pulumi supports the full Kubernetes API and lets you author and deploy
 resources in code.
 
-## 1. Define Kubernetes Applications in a Real Language
+## 1. Define Kubernetes Applications in a Familiar Language
 
 [
 [Code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-nginx) |
 [Tutorial]({{< relref "/docs/tutorials/kubernetes/stateless-app" >}}) ]
 
-Let's begin by seeing what defining Kubernetes applications in a real
+Let's begin by seeing what defining Kubernetes applications in a familiar
 language looks like. The full Kubernetes API is available, just in code
 instead of YAML. A simple program looks like so:
 
@@ -128,7 +128,7 @@ Selecting yes will carry out the update:
 ![4](./4.png)
 
 At this point, we've seen that we can gain some advantages from
-infrastructure as real code (like good IDE support and the use of a
+infrastructure as code (like good IDE support and the use of a
 variable to avoid repeating ourselves for appLabels ). But let's now see
 some more compelling reasons why this is so great.
 
@@ -272,14 +272,14 @@ const deployment = new EnvoyDeployment("nginx", {
 
 Of course, we can do the same with Prometheus or any other project
 requiring sidecars, and we envision possibly having a more general
-sidecar injection mechanism, thanks to real languages. In fact, we could
+sidecar injection mechanism, thanks to familiar languages. In fact, we could
 define a base class that our entire organization uses with certain
 sidecars baked in, updated easily in one place and rolled out using
 package managers.
 
 ## 4. Adopt existing Kubernetes YAML
 
-It's wonderful that we can use real languages, but there's already lots
+It's wonderful that we can use familiar languages, but there's already lots
 of YAML in the world. Pulumi lets us process that YAML dynamically, and
 adopt it on the fly to become part of our Pulumi program, without even
 needing to change it. This enables multi-cloud and advanced delivery
@@ -576,7 +576,7 @@ towards operating. Namely, how to achieve robust continuous deployment
 (CD) of your Kubernetes applications.
 
 Pulumi takes an "everything is code" approach so, in addition to your
-infrastructure being written in real code, your software delivery
+infrastructure being written in code, your software delivery
 pipeline is too. In fact, each Pulumi program really is a deployment
 workflow expressed in code. The Pulumi CLI is responsible for evaluating
 programs, producing goal states, diffing states to produce plans, and

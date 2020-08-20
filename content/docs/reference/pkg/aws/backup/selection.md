@@ -40,7 +40,6 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var exampleRolePolicyAttachment = new Aws.Iam.RolePolicyAttachment("exampleRolePolicyAttachment", new Aws.Iam.RolePolicyAttachmentArgs
@@ -48,6 +47,7 @@ class MyStack : Stack
             PolicyArn = "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
             Role = exampleRole.Name,
         });
+        // ... other configuration ...
         var exampleSelection = new Aws.Backup.Selection("exampleSelection", new Aws.Backup.SelectionArgs
         {
             IamRoleArn = exampleRole.Arn,
@@ -66,15 +66,15 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\"sts:AssumeRole\"],\n", "      \"Effect\": \"allow\",\n", "      \"Principal\": {\n", "        \"Service\": [\"backup.amazonaws.com\"]\n", "      }\n", "    }\n", "  ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\"sts:AssumeRole\"],\n", "      \"Effect\": \"allow\",\n", "      \"Principal\": {\n", "        \"Service\": [\"backup.amazonaws.com\"]\n", "      }\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -116,11 +116,11 @@ example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
     }
   ]
 }
-
 """)
 example_role_policy_attachment = aws.iam.RolePolicyAttachment("exampleRolePolicyAttachment",
     policy_arn="arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
     role=example_role.name)
+# ... other configuration ...
 example_selection = aws.backup.Selection("exampleSelection", iam_role_arn=example_role.arn)
 ```
 
@@ -132,8 +132,7 @@ example_selection = aws.backup.Selection("exampleSelection", iam_role_arn=exampl
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleRole = new aws.iam.Role("example", {
-    assumeRolePolicy: `{
+const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -145,15 +144,13 @@ const exampleRole = new aws.iam.Role("example", {
     }
   ]
 }
-`,
-});
-const exampleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("example", {
+`});
+const exampleRolePolicyAttachment = new aws.iam.RolePolicyAttachment("exampleRolePolicyAttachment", {
     policyArn: "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup",
     role: exampleRole.name,
 });
-const exampleSelection = new aws.backup.Selection("example", {
-    iamRoleArn: exampleRole.arn,
-});
+// ... other configuration ...
+const exampleSelection = new aws.backup.Selection("exampleSelection", {iamRoleArn: exampleRole.arn});
 ```
 
 {{% /example %}}
@@ -176,8 +173,8 @@ class MyStack : Stack
             {
                 new Aws.Backup.Inputs.SelectionSelectionTagArgs
                 {
-                    Key = "foo",
                     Type = "STRINGEQUALS",
+                    Key = "foo",
                     Value = "bar",
                 },
             },
@@ -194,19 +191,19 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := backup.NewSelection(ctx, "example", &backup.SelectionArgs{
-			IamRoleArn: pulumi.String(aws_iam_role.Example.Arn),
-			PlanId:     pulumi.String(aws_backup_plan.Example.Id),
+			IamRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+			PlanId:     pulumi.Any(aws_backup_plan.Example.Id),
 			SelectionTags: backup.SelectionSelectionTagArray{
 				&backup.SelectionSelectionTagArgs{
-					Key:   pulumi.String("foo"),
 					Type:  pulumi.String("STRINGEQUALS"),
+					Key:   pulumi.String("foo"),
 					Value: pulumi.String("bar"),
 				},
 			},
@@ -230,8 +227,8 @@ example = aws.backup.Selection("example",
     iam_role_arn=aws_iam_role["example"]["arn"],
     plan_id=aws_backup_plan["example"]["id"],
     selection_tags=[{
-        "key": "foo",
         "type": "STRINGEQUALS",
+        "key": "foo",
         "value": "bar",
     }])
 ```
@@ -245,11 +242,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.backup.Selection("example", {
-    iamRoleArn: aws_iam_role_example.arn,
-    planId: aws_backup_plan_example.id,
+    iamRoleArn: aws_iam_role.example.arn,
+    planId: aws_backup_plan.example.id,
     selectionTags: [{
-        key: "foo",
         type: "STRINGEQUALS",
+        key: "foo",
         value: "bar",
     }],
 });
@@ -273,7 +270,7 @@ const example = new aws.backup.Selection("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#Selection">NewSelection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#SelectionArgs">SelectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#Selection">Selection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#Selection">NewSelection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#SelectionArgs">SelectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#Selection">Selection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -347,7 +344,7 @@ const example = new aws.backup.Selection("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -367,7 +364,7 @@ const example = new aws.backup.Selection("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#SelectionArgs">SelectionArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#SelectionArgs">SelectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -377,7 +374,7 @@ const example = new aws.backup.Selection("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -784,7 +781,7 @@ Get an existing Selection resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSelection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#SelectionState">SelectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#Selection">Selection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSelection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#SelectionState">SelectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#Selection">Selection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1156,7 +1153,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#SelectionSelectionTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#SelectionSelectionTagOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#SelectionSelectionTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#SelectionSelectionTagOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.Inputs.SelectionSelectionTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.Outputs.SelectionSelectionTag.html">output</a> API doc for this type.

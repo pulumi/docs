@@ -12,8 +12,6 @@ meta_desc: "Explore the GetSaml function of the idp module, including examples, 
 
 Use this data source to retrieve a SAML IdP from Okta.
 
-
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,10 +34,31 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-okta/sdk/v2/go/okta/idp"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := idp.LookupSaml(ctx, &idp.LookupSamlArgs{
+			Label: "Example App",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -49,9 +68,11 @@ import pulumi_okta as okta
 
 example = okta.idp.get_saml(label="Example App")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
@@ -60,6 +81,7 @@ const example = pulumi.output(okta.idp.getSaml({
     label: "Example App",
 }, { async: true }));
 ```
+
 {{% /example %}}
 
 {{% /examples %}}

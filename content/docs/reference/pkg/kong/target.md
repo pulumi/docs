@@ -22,7 +22,7 @@ meta_desc: "Explore the Target resource of the Kong package, including examples,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/kong/#Target">Target</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>target=None<span class="p">, </span>upstream_id=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kong/#pulumi_kong.Target">Target</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>target=None<span class="p">, </span>upstream_id=None<span class="p">, </span>weight=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -433,7 +433,7 @@ Get an existing Target resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>target=None<span class="p">, </span>upstream_id=None<span class="p">, </span>weight=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>target=None<span class="p">, </span>upstream_id=None<span class="p">, </span>weight=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -1,8 +1,8 @@
 
 ---
 title: "ResourceServer"
-title_tag: "Resource ResourceServer | Package auth0"
-meta_desc: "Explore the ResourceServer resource of the auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With this resource, you can set up APIs that can be consumed from your authorized applications."
+title_tag: "Resource ResourceServer | Package Auth0"
+meta_desc: "Explore the ResourceServer resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With this resource, you can set up APIs that can be consumed from your authorized applications."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the ResourceServer resource of the auth0 package, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 With this resource, you can set up APIs that can be consumed from your authorized applications.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -53,6 +51,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -81,9 +80,11 @@ my_resource_server = auth0.ResourceServer("myResourceServer",
     skip_consent_for_verifiable_first_party_clients=True,
     token_lifetime=8600)
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as auth0 from "@pulumi/auth0";
@@ -106,6 +107,7 @@ const myResourceServer = new auth0.ResourceServer("my_resource_server", {
     tokenLifetime: 8600,
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -120,7 +122,7 @@ const myResourceServer = new auth0.ResourceServer("my_resource_server", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#ResourceServer">ResourceServer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_offline_access=None<span class="p">, </span>enforce_policies=None<span class="p">, </span>identifier=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>scopes=None<span class="p">, </span>signing_alg=None<span class="p">, </span>signing_secret=None<span class="p">, </span>skip_consent_for_verifiable_first_party_clients=None<span class="p">, </span>token_dialect=None<span class="p">, </span>token_lifetime=None<span class="p">, </span>token_lifetime_for_web=None<span class="p">, </span>verification_location=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.ResourceServer">ResourceServer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allow_offline_access=None<span class="p">, </span>enforce_policies=None<span class="p">, </span>identifier=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>scopes=None<span class="p">, </span>signing_alg=None<span class="p">, </span>signing_secret=None<span class="p">, </span>skip_consent_for_verifiable_first_party_clients=None<span class="p">, </span>token_dialect=None<span class="p">, </span>token_lifetime=None<span class="p">, </span>token_lifetime_for_web=None<span class="p">, </span>verification_location=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -983,7 +985,7 @@ Get an existing ResourceServer resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allow_offline_access=None<span class="p">, </span>enforce_policies=None<span class="p">, </span>identifier=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>scopes=None<span class="p">, </span>signing_alg=None<span class="p">, </span>signing_secret=None<span class="p">, </span>skip_consent_for_verifiable_first_party_clients=None<span class="p">, </span>token_dialect=None<span class="p">, </span>token_lifetime=None<span class="p">, </span>token_lifetime_for_web=None<span class="p">, </span>verification_location=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allow_offline_access=None<span class="p">, </span>enforce_policies=None<span class="p">, </span>identifier=None<span class="p">, </span>name=None<span class="p">, </span>options=None<span class="p">, </span>scopes=None<span class="p">, </span>signing_alg=None<span class="p">, </span>signing_secret=None<span class="p">, </span>skip_consent_for_verifiable_first_party_clients=None<span class="p">, </span>token_dialect=None<span class="p">, </span>token_lifetime=None<span class="p">, </span>token_lifetime_for_web=None<span class="p">, </span>verification_location=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

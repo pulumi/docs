@@ -1,6 +1,6 @@
 ---
-title: "pagerduty"
-title_tag: "Module pagerduty | Package pagerduty"
+title: "PagerDuty"
+title_tag: "Module PagerDuty | Package PagerDuty"
 meta_desc: "A Pulumi package for creating and managing pagerduty cloud resources."
 menu:
     reference:
@@ -56,7 +56,7 @@ A Pulumi package for creating and managing pagerduty cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).</dd>
 	<dt>Version</dt>
-	<dd>1.0.2</dd>
+	<dd>1.0.3</dd>
 </dl>
 
 

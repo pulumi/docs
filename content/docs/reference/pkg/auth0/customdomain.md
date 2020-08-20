@@ -1,8 +1,8 @@
 
 ---
 title: "CustomDomain"
-title_tag: "Resource CustomDomain | Package auth0"
-meta_desc: "Explore the CustomDomain resource of the auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can use a custom domain to maintain a consistent user experience. This resource allows you to create and manage a custom domain within your Auth0 tenant."
+title_tag: "Resource CustomDomain | Package Auth0"
+meta_desc: "Explore the CustomDomain resource of the Auth0 package, including examples, input properties, output properties, lookup functions, and supporting types. With Auth0, you can use a custom domain to maintain a consistent user experience. This resource allows you to create and manage a custom domain within your Auth0 tenant."
 ---
 
 
@@ -11,8 +11,6 @@ meta_desc: "Explore the CustomDomain resource of the auth0 package, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 With Auth0, you can use a custom domain to maintain a consistent user experience. This resource allows you to create and manage a custom domain within your Auth0 tenant.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -38,6 +36,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -54,9 +53,11 @@ my_custom_domain = auth0.CustomDomain("myCustomDomain",
     type="auth0_managed_certs",
     verification_method="txt")
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as auth0 from "@pulumi/auth0";
@@ -67,6 +68,7 @@ const myCustomDomain = new auth0.CustomDomain("my_custom_domain", {
     verificationMethod: "txt",
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
@@ -81,7 +83,7 @@ const myCustomDomain = new auth0.CustomDomain("my_custom_domain", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/auth0/#CustomDomain">CustomDomain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>type=None<span class="p">, </span>verification_method=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.CustomDomain">CustomDomain</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>domain=None<span class="p">, </span>type=None<span class="p">, </span>verification_method=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -636,7 +638,7 @@ Get an existing CustomDomain resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>domain=None<span class="p">, </span>primary=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>verification=None<span class="p">, </span>verification_method=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>domain=None<span class="p">, </span>primary=None<span class="p">, </span>status=None<span class="p">, </span>type=None<span class="p">, </span>verification=None<span class="p">, </span>verification_method=None<span class="p">, __props__=None)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

@@ -43,7 +43,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,10 +80,10 @@ example = aws.backup.get_selection(plan_id=data["aws_backup_plan"]["example"]["i
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws_backup_plan_example.id.apply(id => aws.backup.getSelection({
-    planId: id,
+const example = aws.backup.getSelection({
+    planId: data.aws_backup_plan.example.id,
     selectionId: "selection-id-example",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -107,7 +107,7 @@ const example = aws_backup_plan_example.id.apply(id => aws.backup.getSelection({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSelection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#LookupSelectionArgs">LookupSelectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/backup?tab=doc#LookupSelectionResult">LookupSelectionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSelection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#LookupSelectionArgs">LookupSelectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#LookupSelectionResult">LookupSelectionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSelection` in the Go SDK.
 

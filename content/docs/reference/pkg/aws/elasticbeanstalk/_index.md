@@ -33,7 +33,7 @@ Explore the resources and functions of the elasticbeanstalk module in the AWS pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>2.13.1</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 
@@ -44,7 +44,7 @@ Explore the resources and functions of the elasticbeanstalk module in the AWS pa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.html" title="Pulumi.Aws.ElasticBeanstalk">Pulumi.Aws.ElasticBeanstalk</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticbeanstalk?tab=doc#" title="aws/elasticbeanstalk">aws/elasticbeanstalk</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticbeanstalk?tab=doc#" title="aws/elasticbeanstalk">aws/elasticbeanstalk</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#" title="@pulumi/aws/elasticbeanstalk">@pulumi/aws/elasticbeanstalk</a></dd>

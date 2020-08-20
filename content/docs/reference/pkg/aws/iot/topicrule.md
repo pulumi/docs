@@ -45,13 +45,20 @@ class MyStack : Stack
     }
   ]
 }
-
 ",
         });
         var rule = new Aws.Iot.TopicRule("rule", new Aws.Iot.TopicRuleArgs
         {
             Description = "Example rule",
             Enabled = true,
+            Sql = "SELECT * FROM 'topic/test'",
+            SqlVersion = "2016-03-23",
+            Sns = new Aws.Iot.Inputs.TopicRuleSnsArgs
+            {
+                MessageFormat = "RAW",
+                RoleArn = role.Arn,
+                TargetArn = mytopic.Arn,
+            },
             ErrorAction = new Aws.Iot.Inputs.TopicRuleErrorActionArgs
             {
                 Sns = new Aws.Iot.Inputs.TopicRuleErrorActionSnsArgs
@@ -61,17 +68,10 @@ class MyStack : Stack
                     TargetArn = myerrortopic.Arn,
                 },
             },
-            Sns = new Aws.Iot.Inputs.TopicRuleSnsArgs
-            {
-                MessageFormat = "RAW",
-                RoleArn = role.Arn,
-                TargetArn = mytopic.Arn,
-            },
-            Sql = "SELECT * FROM 'topic/test'",
-            SqlVersion = "2016-03-23",
         });
         var iamPolicyForLambda = new Aws.Iam.RolePolicy("iamPolicyForLambda", new Aws.Iam.RolePolicyArgs
         {
+            Role = role.Id,
             Policy = mytopic.Arn.Apply(arn => @$"{{
   ""Version"": ""2012-10-17"",
   ""Statement"": [
@@ -84,9 +84,7 @@ class MyStack : Stack
     }}
   ]
 }}
-
 "),
-            Role = role.Id,
         });
     }
 
@@ -102,9 +100,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot"
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -119,7 +117,7 @@ func main() {
 			return err
 		}
 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"iot.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n", "\n")),
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"iot.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -127,6 +125,13 @@ func main() {
 		_, err = iot.NewTopicRule(ctx, "rule", &iot.TopicRuleArgs{
 			Description: pulumi.String("Example rule"),
 			Enabled:     pulumi.Bool(true),
+			Sql:         pulumi.String("SELECT * FROM 'topic/test'"),
+			SqlVersion:  pulumi.String("2016-03-23"),
+			Sns: &iot.TopicRuleSnsArgs{
+				MessageFormat: pulumi.String("RAW"),
+				RoleArn:       role.Arn,
+				TargetArn:     mytopic.Arn,
+			},
 			ErrorAction: &iot.TopicRuleErrorActionArgs{
 				Sns: &iot.TopicRuleErrorActionSnsArgs{
 					MessageFormat: pulumi.String("RAW"),
@@ -134,22 +139,15 @@ func main() {
 					TargetArn:     myerrortopic.Arn,
 				},
 			},
-			Sns: &iot.TopicRuleSnsArgs{
-				MessageFormat: pulumi.String("RAW"),
-				RoleArn:       role.Arn,
-				TargetArn:     mytopic.Arn,
-			},
-			Sql:        pulumi.String("SELECT * FROM 'topic/test'"),
-			SqlVersion: pulumi.String("2016-03-23"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = iam.NewRolePolicy(ctx, "iamPolicyForLambda", &iam.RolePolicyArgs{
-			Policy: mytopic.Arn.ApplyT(func(arn string) (string, error) {
-				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "        \"Effect\": \"Allow\",\n", "        \"Action\": [\n", "            \"sns:Publish\"\n", "        ],\n", "        \"Resource\": \"", arn, "\"\n", "    }\n", "  ]\n", "}\n", "\n"), nil
-			}).(pulumi.StringOutput),
 			Role: role.ID(),
+			Policy: mytopic.Arn.ApplyT(func(arn string) (string, error) {
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "        \"Effect\": \"Allow\",\n", "        \"Action\": [\n", "            \"sns:Publish\"\n", "        ],\n", "        \"Resource\": \"", arn, "\"\n", "    }\n", "  ]\n", "}\n"), nil
+			}).(pulumi.StringOutput),
 		})
 		if err != nil {
 			return err
@@ -180,26 +178,26 @@ role = aws.iam.Role("role", assume_role_policy="""{
     }
   ]
 }
-
 """)
 rule = aws.iot.TopicRule("rule",
     description="Example rule",
     enabled=True,
+    sql="SELECT * FROM 'topic/test'",
+    sql_version="2016-03-23",
+    sns={
+        "messageFormat": "RAW",
+        "role_arn": role.arn,
+        "target_arn": mytopic.arn,
+    },
     error_action={
         "sns": {
             "messageFormat": "RAW",
             "role_arn": role.arn,
             "target_arn": myerrortopic.arn,
         },
-    },
-    sns={
-        "messageFormat": "RAW",
-        "role_arn": role.arn,
-        "target_arn": mytopic.arn,
-    },
-    sql="SELECT * FROM 'topic/test'",
-    sql_version="2016-03-23")
+    })
 iam_policy_for_lambda = aws.iam.RolePolicy("iamPolicyForLambda",
+    role=role.id,
     policy=mytopic.arn.apply(lambda arn: f"""{{
   "Version": "2012-10-17",
   "Statement": [
@@ -212,9 +210,7 @@ iam_policy_for_lambda = aws.iam.RolePolicy("iamPolicyForLambda",
     }}
   ]
 }}
-
-"""),
-    role=role.id)
+"""))
 ```
 
 {{% /example %}}
@@ -227,8 +223,7 @@ import * as aws from "@pulumi/aws";
 
 const mytopic = new aws.sns.Topic("mytopic", {});
 const myerrortopic = new aws.sns.Topic("myerrortopic", {});
-const role = new aws.iam.Role("role", {
-    assumeRolePolicy: `{
+const role = new aws.iam.Role("role", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -240,11 +235,17 @@ const role = new aws.iam.Role("role", {
     }
   ]
 }
-`,
-});
+`});
 const rule = new aws.iot.TopicRule("rule", {
     description: "Example rule",
     enabled: true,
+    sql: "SELECT * FROM 'topic/test'",
+    sqlVersion: "2016-03-23",
+    sns: {
+        messageFormat: "RAW",
+        roleArn: role.arn,
+        targetArn: mytopic.arn,
+    },
     errorAction: {
         sns: {
             messageFormat: "RAW",
@@ -252,15 +253,9 @@ const rule = new aws.iot.TopicRule("rule", {
             targetArn: myerrortopic.arn,
         },
     },
-    sns: {
-        messageFormat: "RAW",
-        roleArn: role.arn,
-        targetArn: mytopic.arn,
-    },
-    sql: "SELECT * FROM 'topic/test'",
-    sqlVersion: "2016-03-23",
 });
-const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
+const iamPolicyForLambda = new aws.iam.RolePolicy("iamPolicyForLambda", {
+    role: role.id,
     policy: pulumi.interpolate`{
   "Version": "2012-10-17",
   "Statement": [
@@ -274,7 +269,6 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
   ]
 }
 `,
-    role: role.id,
 });
 ```
 
@@ -296,7 +290,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRule">NewTopicRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleArgs">TopicRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRule">TopicRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRule">NewTopicRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleArgs">TopicRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRule">TopicRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -370,7 +364,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -390,7 +384,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleArgs">TopicRuleArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleArgs">TopicRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -400,7 +394,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1539,7 +1533,7 @@ Get an existing TopicRule resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopicRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleState">TopicRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRule">TopicRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopicRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleState">TopicRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRule">TopicRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2643,7 +2637,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleCloudwatchAlarmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleCloudwatchAlarmOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleCloudwatchAlarmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleCloudwatchAlarmOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleCloudwatchAlarmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleCloudwatchAlarm.html">output</a> API doc for this type.
@@ -2865,7 +2859,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleCloudwatchMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleCloudwatchMetricOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleCloudwatchMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleCloudwatchMetricOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleCloudwatchMetricArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleCloudwatchMetric.html">output</a> API doc for this type.
@@ -3175,7 +3169,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleDynamodbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleDynamodbOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleDynamodbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleDynamodbOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleDynamodbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleDynamodb.html">output</a> API doc for this type.
@@ -3661,7 +3655,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleDynamodbv2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleDynamodbv2Output">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleDynamodbv2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleDynamodbv2Output">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleDynamodbv2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleDynamodbv2.html">output</a> API doc for this type.
@@ -3795,7 +3789,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleDynamodbv2PutItemArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleDynamodbv2PutItemOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleDynamodbv2PutItemArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleDynamodbv2PutItemOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleDynamodbv2PutItemArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleDynamodbv2PutItem.html">output</a> API doc for this type.
@@ -3885,7 +3879,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleElasticsearchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleElasticsearchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleElasticsearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleElasticsearch.html">output</a> API doc for this type.
@@ -4151,7 +4145,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorAction.html">output</a> API doc for this type.
@@ -4797,7 +4791,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchAlarmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchAlarmOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchAlarmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchAlarmOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionCloudwatchAlarmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionCloudwatchAlarm.html">output</a> API doc for this type.
@@ -5019,7 +5013,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchMetricOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionCloudwatchMetricOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionCloudwatchMetricArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionCloudwatchMetric.html">output</a> API doc for this type.
@@ -5329,7 +5323,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionDynamodbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionDynamodb.html">output</a> API doc for this type.
@@ -5815,7 +5809,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2Output">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2Output">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionDynamodbv2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionDynamodbv2.html">output</a> API doc for this type.
@@ -5949,7 +5943,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2PutItemArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2PutItemOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2PutItemArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionDynamodbv2PutItemOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionDynamodbv2PutItemArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionDynamodbv2PutItem.html">output</a> API doc for this type.
@@ -6039,7 +6033,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionElasticsearchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionElasticsearchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionElasticsearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionElasticsearch.html">output</a> API doc for this type.
@@ -6305,7 +6299,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionFirehoseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionFirehoseOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionFirehoseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionFirehoseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionFirehoseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionFirehose.html">output</a> API doc for this type.
@@ -6483,7 +6477,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionIotAnalyticsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionIotAnalyticsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionIotAnalyticsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionIotAnalyticsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionIotAnalyticsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionIotAnalytics.html">output</a> API doc for this type.
@@ -6617,7 +6611,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionIotEventsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionIotEventsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionIotEventsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionIotEventsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionIotEventsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionIotEvents.html">output</a> API doc for this type.
@@ -6795,7 +6789,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionKinesisArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionKinesisOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionKinesisArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionKinesisOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionKinesisArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionKinesis.html">output</a> API doc for this type.
@@ -6973,7 +6967,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionLambdaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionLambdaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionLambdaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionLambdaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionLambdaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionLambda.html">output</a> API doc for this type.
@@ -7063,7 +7057,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionRepublishArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionRepublishOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionRepublishArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionRepublishOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionRepublishArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionRepublish.html">output</a> API doc for this type.
@@ -7241,7 +7235,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionS3Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionS3Output">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionS3Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionS3Output">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionS3Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionS3.html">output</a> API doc for this type.
@@ -7419,7 +7413,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionSnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionSnsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionSnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionSnsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionSnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionSns.html">output</a> API doc for this type.
@@ -7597,7 +7591,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionSqsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionSqsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionSqsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionSqsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionSqsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionSqs.html">output</a> API doc for this type.
@@ -7775,7 +7769,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionStepFunctionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleErrorActionStepFunctionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionStepFunctionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleErrorActionStepFunctionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleErrorActionStepFunctionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleErrorActionStepFunctions.html">output</a> API doc for this type.
@@ -7953,7 +7947,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleFirehoseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleFirehoseOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleFirehoseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleFirehoseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleFirehoseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleFirehose.html">output</a> API doc for this type.
@@ -8131,7 +8125,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleIotAnalyticArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleIotAnalyticOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleIotAnalyticArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleIotAnalyticOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleIotAnalyticArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleIotAnalytic.html">output</a> API doc for this type.
@@ -8265,7 +8259,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleIotEventArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleIotEventOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleIotEventArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleIotEventOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleIotEventArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleIotEvent.html">output</a> API doc for this type.
@@ -8443,7 +8437,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleKinesisArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleKinesisOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleKinesisArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleKinesisOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleKinesisArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleKinesis.html">output</a> API doc for this type.
@@ -8621,7 +8615,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleLambdaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleLambdaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleLambdaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleLambdaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleLambdaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleLambda.html">output</a> API doc for this type.
@@ -8711,7 +8705,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleRepublishArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleRepublishOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleRepublishArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleRepublishOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleRepublishArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleRepublish.html">output</a> API doc for this type.
@@ -8889,7 +8883,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleS3Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleS3Output">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleS3Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleS3Output">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleS3Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleS3.html">output</a> API doc for this type.
@@ -9067,7 +9061,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleSnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleSnsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleSnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleSnsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleSnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleSns.html">output</a> API doc for this type.
@@ -9245,7 +9239,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleSqsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleSqsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleSqsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleSqsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleSqsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleSqs.html">output</a> API doc for this type.
@@ -9423,7 +9417,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleStepFunctionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iot?tab=doc#TopicRuleStepFunctionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleStepFunctionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iot?tab=doc#TopicRuleStepFunctionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Inputs.TopicRuleStepFunctionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.Outputs.TopicRuleStepFunction.html">output</a> API doc for this type.

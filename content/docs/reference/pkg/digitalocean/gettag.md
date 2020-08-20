@@ -1,8 +1,8 @@
 
 ---
 title: "GetTag"
-title_tag: "Function GetTag | Package Digital Ocean"
-meta_desc: "Explore the GetTag function of the Digital Ocean package, including examples, input properties, output properties, and supporting types. Get information on a tag. This data source provides the name as configured on"
+title_tag: "Function GetTag | Package DigitalOcean"
+meta_desc: "Explore the GetTag function of the DigitalOcean package, including examples, input properties, output properties, and supporting types. Get information on a tag. This data source provides the name as configured on"
 ---
 
 
@@ -15,8 +15,6 @@ your DigitalOcean account. This is useful if the tag name in question is not
 managed by this provider or you need validate if the tag exists in the account.
 
 An error is triggered if the provided tag name does not exist.
-
-
 
 {{% examples %}}
 ## Example Usage
@@ -50,6 +48,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{% /example %}}
 
 {{% example go %}}
@@ -68,9 +67,11 @@ example_droplet = digitalocean.Droplet("exampleDroplet",
     size="s-1vcpu-1gb",
     tags=[example_tag.name])
 ```
+
 {{% /example %}}
 
 {{% example typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
@@ -85,6 +86,7 @@ const exampleDroplet = new digitalocean.Droplet("exampleDroplet", {
     tags: [exampleTag.then(exampleTag => exampleTag.name)],
 });
 ```
+
 {{% /example %}}
 
 {{% /examples %}}
