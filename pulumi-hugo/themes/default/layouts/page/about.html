@@ -119,7 +119,9 @@
                             <div class="pl-4 flex-1">
                                 <div class="text-sm text-gray-500">{{ .date }}</div>
                                 <h5 class="mt-2 mb-0">{{ .title }}</h5>
-                                <a data-track="news-{{ .url | urlize }}" class="block my-2" href="{{ .url }}">Read more &rarr;</a>
+                                <a data-track="news-{{ .url | urlize }}" class="block my-2" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+                                    Read more &rarr;
+                                </a>
                             </div>
                         </li>
                     {{ end }}
