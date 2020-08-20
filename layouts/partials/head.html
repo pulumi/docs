@@ -130,6 +130,9 @@
         </script>
     {{ end }}
 
+    <!-- Preload the component JavaScript to help our Google Page Speed score. -->
+    <link rel="preload" href="/js/components/components.esm.js" as="script" crossorigin="anonymous">
+
     {{/* Tests to enforce required frontmatter for certain content types. */}}
     {{ if and (eq .Type "blog") .IsPage }}
         {{ if not .Params.authors }}
