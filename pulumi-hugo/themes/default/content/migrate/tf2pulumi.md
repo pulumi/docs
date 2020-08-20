@@ -233,7 +233,7 @@ function displayCouldNotConvert(language) {
 }
 
 // Now set up our event handler for conversion.
-function convertCode(language) {
+function convertCode(language, inputKind) {
     // If we got called without an explicit language, look it up.
     language = language || getCurrentLanguage();
 
@@ -261,7 +261,7 @@ function convertCode(language) {
     }
 
     // Read the input kind and verify that we've got what we need.
-    let tfIk = getCurrentInputKind();
+    let tfIk = inputKind || getCurrentInputKind();
     switch (tfIk) {
     case "url":
         if (tfUrl === "") {
@@ -541,9 +541,12 @@ window.onload = function() {
         // If there are querystring parameters populate the fields.
         let tfUrl = getQueryVariable("url");
         let tfCode = getQueryVariable("code");
+
+        // Let's initialize the code conversion component.
         if (tfUrl) {
             $("#terraform-url").val(tfUrl);
             setCurrentInputKind("url");
+            convertCode(getCurrentLanguage() || "typescript", "url");
         } else {
             if (tfCode) {
                 $("#terraform-code").val(tfCode);
@@ -551,6 +554,7 @@ window.onload = function() {
                 loadCannedExample();
             }
             setCurrentInputKind("code");
+            convertCode(getCurrentLanguage() || "typescript", "code");
         }
 
         // We auto-submit the code based on user interaction, including (1) after they finish typing,
@@ -617,12 +621,17 @@ window.onload = function() {
         // Hook up event handlers for the language choosers.
         $("pulumi-chooser[type='language'] > ul > li > a").each(function (i, e) {
             $(e).click(function() {
-                convertCode($(e).text().trim().toLowerCase());
+                // We need to check that the inputKind has been properly set and if it
+                // has not, let's set the value to "code" and update the handler.
+                let inputKind = getCurrentInputKind();
+                if (inputKind === undefined) {
+                    setCurrentInputKind("code");
+                    inputKind = "code";
+                }
+
+                convertCode($(e).text().trim().toLowerCase(), inputKind);
             });
         });
-
-        // Fire off a conversion just to get started using the default code snippet example.
-        convertCode(getCurrentLanguage() || "typescript");
     });
 }
 </script>
