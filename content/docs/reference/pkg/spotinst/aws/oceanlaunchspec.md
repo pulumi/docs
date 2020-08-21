@@ -18,198 +18,11 @@ Provides a custom Spotinst Ocean AWS Launch Spec resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-```csharp
-using Pulumi;
-using SpotInst = Pulumi.SpotInst;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new SpotInst.Aws.OceanLaunchSpec("example", new SpotInst.Aws.OceanLaunchSpecArgs
-        {
-            AutoscaleHeadrooms = 
-            {
-                new SpotInst.Aws.Inputs.OceanLaunchSpecAutoscaleHeadroomArgs
-                {
-                    CpuPerUnit = 1000,
-                    GpuPerUnit = 0,
-                    MemoryPerUnit = 2048,
-                    NumOfUnits = 5,
-                },
-            },
-            BlockDeviceMappings = 
-            {
-                new SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingArgs
-                {
-                    DeviceName = "/dev/xvda1",
-                    Ebs = new SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingEbsArgs
-                    {
-                        DeleteOnTermination = true,
-                        DynamicVolumeSize = new SpotInst.Aws.Inputs.OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeArgs
-                        {
-                            BaseSize = 50,
-                            Resource = "CPU",
-                            SizePerResourceUnit = 20,
-                        },
-                        Encrypted = false,
-                        VolumeSize = 50,
-                        VolumeType = "gp2",
-                    },
-                },
-            },
-            ElasticIpPools = 
-            {
-                new SpotInst.Aws.Inputs.OceanLaunchSpecElasticIpPoolArgs
-                {
-                    TagSelector = new SpotInst.Aws.Inputs.OceanLaunchSpecElasticIpPoolTagSelectorArgs
-                    {
-                        TagKey = "key",
-                        TagValue = "value",
-                    },
-                },
-            },
-            IamInstanceProfile = "iam-profile",
-            ImageId = "ami-123456",
-            Labels = 
-            {
-                new SpotInst.Aws.Inputs.OceanLaunchSpecLabelArgs
-                {
-                    Key = "fakeKey",
-                    Value = "fakeValue",
-                },
-            },
-            OceanId = "o-123456",
-            ResourceLimits = 
-            {
-                new SpotInst.Aws.Inputs.OceanLaunchSpecResourceLimitArgs
-                {
-                    MaxInstanceCount = 4,
-                },
-            },
-            RootVolumeSize = 30,
-            SecurityGroups = 
-            {
-                "sg-987654321",
-            },
-            SubnetIds = 
-            {
-                "subnet-1234",
-            },
-            Tags = 
-            {
-                new SpotInst.Aws.Inputs.OceanLaunchSpecTagArgs
-                {
-                    Key = "Env",
-                    Value = "production",
-                },
-            },
-            Taints = 
-            {
-                new SpotInst.Aws.Inputs.OceanLaunchSpecTaintArgs
-                {
-                    Effect = "NoExecute",
-                    Key = "taint key updated",
-                    Value = "taint value updated",
-                },
-            },
-            UserData = "echo hello world",
-        });
-    }
-
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aws.NewOceanLaunchSpec(ctx, "example", &aws.OceanLaunchSpecArgs{
-			AutoscaleHeadrooms: aws.OceanLaunchSpecAutoscaleHeadroomArray{
-				&aws.OceanLaunchSpecAutoscaleHeadroomArgs{
-					CpuPerUnit:    pulumi.Int(1000),
-					GpuPerUnit:    pulumi.Int(0),
-					MemoryPerUnit: pulumi.Int(2048),
-					NumOfUnits:    pulumi.Int(5),
-				},
-			},
-			BlockDeviceMappings: aws.OceanLaunchSpecBlockDeviceMappingArray{
-				&aws.OceanLaunchSpecBlockDeviceMappingArgs{
-					DeviceName: pulumi.String("/dev/xvda1"),
-					Ebs: &aws.OceanLaunchSpecBlockDeviceMappingEbsArgs{
-						DeleteOnTermination: pulumi.Bool(true),
-						DynamicVolumeSize: &aws.OceanLaunchSpecBlockDeviceMappingEbsDynamicVolumeSizeArgs{
-							BaseSize:            pulumi.Int(50),
-							Resource:            pulumi.String("CPU"),
-							SizePerResourceUnit: pulumi.Int(20),
-						},
-						Encrypted:  pulumi.Bool(false),
-						VolumeSize: pulumi.Int(50),
-						VolumeType: pulumi.String("gp2"),
-					},
-				},
-			},
-			ElasticIpPools: aws.OceanLaunchSpecElasticIpPoolArray{
-				&aws.OceanLaunchSpecElasticIpPoolArgs{
-					TagSelector: &aws.OceanLaunchSpecElasticIpPoolTagSelectorArgs{
-						TagKey:   pulumi.String("key"),
-						TagValue: pulumi.String("value"),
-					},
-				},
-			},
-			IamInstanceProfile: pulumi.String("iam-profile"),
-			ImageId:            pulumi.String("ami-123456"),
-			Labels: aws.OceanLaunchSpecLabelArray{
-				&aws.OceanLaunchSpecLabelArgs{
-					Key:   pulumi.String("fakeKey"),
-					Value: pulumi.String("fakeValue"),
-				},
-			},
-			OceanId: pulumi.String("o-123456"),
-			ResourceLimits: aws.OceanLaunchSpecResourceLimitArray{
-				&aws.OceanLaunchSpecResourceLimitArgs{
-					MaxInstanceCount: pulumi.Int(4),
-				},
-			},
-			RootVolumeSize: pulumi.Int(30),
-			SecurityGroups: pulumi.StringArray{
-				pulumi.String("sg-987654321"),
-			},
-			SubnetIds: pulumi.StringArray{
-				pulumi.String("subnet-1234"),
-			},
-			Tags: aws.OceanLaunchSpecTagArray{
-				&aws.OceanLaunchSpecTagArgs{
-					Key:   pulumi.String("Env"),
-					Value: pulumi.String("production"),
-				},
-			},
-			Taints: aws.OceanLaunchSpecTaintArray{
-				&aws.OceanLaunchSpecTaintArgs{
-					Effect: pulumi.String("NoExecute"),
-					Key:    pulumi.String("taint key updated"),
-					Value:  pulumi.String("taint value updated"),
-				},
-			},
-			UserData: pulumi.String("echo hello world"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -246,6 +59,23 @@ example = spotinst.aws.OceanLaunchSpec("example",
     }],
     iam_instance_profile="iam-profile",
     image_id="ami-123456",
+    intance_types=[
+        "m3.large",
+        "m3.xlarge",
+        "m3.2xlarge",
+        "m4.large",
+        "m4.xlarge",
+        "m4.4xlarge",
+        "m4.2xlarge",
+        "m4.10xlarge",
+        "m4.16xlarge",
+        "m5.large",
+        "m5.xlarge",
+        "m5.2xlarge",
+        "m5.4xlarge",
+        "m5.12xlarge",
+        "m5.24xlarge",
+    ],
     labels=[{
         "key": "fakeKey",
         "value": "fakeValue",
@@ -306,6 +136,23 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
     }],
     iamInstanceProfile: "iam-profile",
     imageId: "ami-123456",
+    intanceTypes: [
+        "m3.large",
+        "m3.xlarge",
+        "m3.2xlarge",
+        "m4.large",
+        "m4.xlarge",
+        "m4.4xlarge",
+        "m4.2xlarge",
+        "m4.10xlarge",
+        "m4.16xlarge",
+        "m5.large",
+        "m5.xlarge",
+        "m5.2xlarge",
+        "m5.4xlarge",
+        "m5.12xlarge",
+        "m5.24xlarge",
+    ],
     labels: [{
         key: "fakeKey",
         value: "fakeValue",
@@ -344,7 +191,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscale_headrooms=None<span class="p">, </span>block_device_mappings=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAutoscaleHeadroom]]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecBlockDeviceMapping]]</span> = None<span class="p">, </span><span class="nx">elastic_ip_pools</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecElasticIpPool]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecLabel]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecResourceLimit]]</span> = None<span class="p">, </span><span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTag]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTaint]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -584,6 +431,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span id="instancetypes_csharp">
+<a href="#instancetypes_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
@@ -752,6 +609,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancetypes_go">
+<a href="#instancetypes_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -926,6 +793,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 
     <dt class="property-optional"
             title="Optional">
+        <span id="instancetypes_nodejs">
+<a href="#instancetypes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
@@ -1094,6 +971,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_types_python">
+<a href="#instance_types_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1291,7 +1178,8 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>block_device_mappings=None<span class="p">, </span>elastic_ip_pools=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>resource_limits=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecAutoscaleHeadroom]]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecBlockDeviceMapping]]</span> = None<span class="p">, </span><span class="nx">elastic_ip_pools</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecElasticIpPool]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecLabel]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecResourceLimit]]</span> = None<span class="p">, </span><span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTag]]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[List[OceanLaunchSpecTaint]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OceanLaunchSpec</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1299,7 +1187,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.OceanLaunchSpec.html">OceanLaunchSpec</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.OceanLaunchSpecState.html">OceanLaunchSpecState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.OceanLaunchSpec.html">OceanLaunchSpec</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.OceanLaunchSpecState.html">OceanLaunchSpecState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1459,6 +1347,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_instancetypes_csharp">
+<a href="#state_instancetypes_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1633,6 +1531,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_instancetypes_go">
+<a href="#state_instancetypes_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span> 
@@ -1804,6 +1712,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_instancetypes_nodejs">
+<a href="#state_instancetypes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
@@ -1972,6 +1890,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_instance_types_python">
+<a href="#state_instance_types_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

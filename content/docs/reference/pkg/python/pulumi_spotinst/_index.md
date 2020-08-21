@@ -51,11 +51,13 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>check</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination for the request.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">healthy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive successful health checks that must occur before declaring an instance healthy.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time (in seconds) between each health check (minimum: 10).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port of the Spotinst HCS (default: 80).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to use to connect with the instance. Valid values: http, https.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeOut</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - the amount of time (in seconds) to wait when receiving a response from the health check.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">unhealthy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive failed health checks that must occur before declaring an instance unhealthy.</p></li>
 </ul>
@@ -64,11 +66,13 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">check</code><em class="property">: pulumi.Output[dict]</em><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.HealthCheck.check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Describes the check to execute.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The destination for the request.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">healthy</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of consecutive successful health checks that must occur before declaring an instance healthy.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of time (in seconds) between each health check (minimum: 10).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port of the Spotinst HCS (default: 80).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol to use to connect with the instance. Valid values: http, https.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeOut</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - the amount of time (in seconds) to wait when receiving a response from the health check.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">unhealthy</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of consecutive failed health checks that must occur before declaring an instance unhealthy.</p></li>
 </ul>
@@ -105,11 +109,13 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>check</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination for the request.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">healthy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive successful health checks that must occur before declaring an instance healthy.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time (in seconds) between each health check (minimum: 10).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port of the Spotinst HCS (default: 80).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol to use to connect with the instance. Valid values: http, https.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeOut</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - the amount of time (in seconds) to wait when receiving a response from the health check.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">unhealthy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of consecutive failed health checks that must occur before declaring an instance unhealthy.</p></li>
 </ul>
