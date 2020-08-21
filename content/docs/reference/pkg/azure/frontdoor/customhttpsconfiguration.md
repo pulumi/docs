@@ -12,7 +12,7 @@ meta_desc: "Explore the CustomHttpsConfiguration resource of the frontdoor modul
 
 Manages the Custom Https Configuration for an Azure Front Door Frontend Endpoint..
 
-> **NOTE:** Custom https configurations for a Front Door Frontened Endpoint can be defined both within the `azure.frontdoor.Frontdoor` resource via the `custom_https_configuration` block and by using a separate resource, as described in the following sections.
+> **NOTE:** Custom https configurations for a Front Door Frontend Endpoint can be defined both within the `azure.frontdoor.Frontdoor` resource via the `custom_https_configuration` block and by using a separate resource, as described in the following sections.
 
 > **NOTE:** Defining custom https configurations using a separate `azure.frontdoor.CustomHttpsConfiguration` resource allows for parallel creation/update.
 
@@ -71,12 +71,10 @@ const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
 });
 const exampleCustomHttps0 = new azure.frontdoor.CustomHttpsConfiguration("exampleCustomHttps0", {
     frontendEndpointId: exampleFrontdoor.frontendEndpoints.apply(frontendEndpoints => frontendEndpoints[0].id),
-    resourceGroupName: exampleResourceGroup.name,
     customHttpsProvisioningEnabled: false,
 });
 const exampleCustomHttps1 = new azure.frontdoor.CustomHttpsConfiguration("exampleCustomHttps1", {
     frontendEndpointId: exampleFrontdoor.frontendEndpoints.apply(frontendEndpoints => frontendEndpoints[1].id),
-    resourceGroupName: exampleResourceGroup.name,
     customHttpsProvisioningEnabled: true,
     customHttpsConfiguration: {
         certificateSource: "AzureKeyVault",
@@ -138,11 +136,9 @@ example_frontdoor = azure.frontdoor.Frontdoor("exampleFrontdoor",
     ])
 example_custom_https0 = azure.frontdoor.CustomHttpsConfiguration("exampleCustomHttps0",
     frontend_endpoint_id=example_frontdoor.frontend_endpoints[0]["id"],
-    resource_group_name=example_resource_group.name,
     custom_https_provisioning_enabled=False)
 example_custom_https1 = azure.frontdoor.CustomHttpsConfiguration("exampleCustomHttps1",
     frontend_endpoint_id=example_frontdoor.frontend_endpoints[1]["id"],
-    resource_group_name=example_resource_group.name,
     custom_https_provisioning_enabled=True,
     custom_https_configuration={
         "certificateSource": "AzureKeyVault",
@@ -247,13 +243,11 @@ class MyStack : Stack
         var exampleCustomHttps0 = new Azure.FrontDoor.CustomHttpsConfiguration("exampleCustomHttps0", new Azure.FrontDoor.CustomHttpsConfigurationArgs
         {
             FrontendEndpointId = exampleFrontdoor.FrontendEndpoints.Apply(frontendEndpoints => frontendEndpoints[0].Id),
-            ResourceGroupName = exampleResourceGroup.Name,
             CustomHttpsProvisioningEnabled = false,
         });
         var exampleCustomHttps1 = new Azure.FrontDoor.CustomHttpsConfiguration("exampleCustomHttps1", new Azure.FrontDoor.CustomHttpsConfigurationArgs
         {
             FrontendEndpointId = exampleFrontdoor.FrontendEndpoints.Apply(frontendEndpoints => frontendEndpoints[1].Id),
-            ResourceGroupName = exampleResourceGroup.Name,
             CustomHttpsProvisioningEnabled = true,
             CustomHttpsConfiguration = new Azure.FrontDoor.Inputs.CustomHttpsConfigurationCustomHttpsConfigurationArgs
             {
@@ -357,7 +351,6 @@ func main() {
 			FrontendEndpointId: pulumi.String(exampleFrontdoor.FrontendEndpoints.ApplyT(func(frontendEndpoints []frontdoor.FrontdoorFrontendEndpoint) (string, error) {
 				return frontendEndpoints[0].Id, nil
 			}).(pulumi.StringOutput)),
-			ResourceGroupName:              exampleResourceGroup.Name,
 			CustomHttpsProvisioningEnabled: pulumi.Bool(false),
 		})
 		if err != nil {
@@ -367,7 +360,6 @@ func main() {
 			FrontendEndpointId: pulumi.String(exampleFrontdoor.FrontendEndpoints.ApplyT(func(frontendEndpoints []frontdoor.FrontdoorFrontendEndpoint) (string, error) {
 				return frontendEndpoints[1].Id, nil
 			}).(pulumi.StringOutput)),
-			ResourceGroupName:              exampleResourceGroup.Name,
 			CustomHttpsProvisioningEnabled: pulumi.Bool(true),
 			CustomHttpsConfiguration: &frontdoor.CustomHttpsConfigurationCustomHttpsConfigurationArgs{
 				CertificateSource:                     pulumi.String("AzureKeyVault"),
@@ -395,7 +387,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.CustomHttpsConfiguration">CustomHttpsConfiguration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_https_configuration=None<span class="p">, </span>custom_https_provisioning_enabled=None<span class="p">, </span>frontend_endpoint_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.CustomHttpsConfiguration">CustomHttpsConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_https_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomHttpsConfigurationCustomHttpsConfiguration]]</span> = None<span class="p">, </span><span class="nx">custom_https_provisioning_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frontend_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -586,18 +578,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Id of the Front Door Frontend endpoint this configuration refers to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcegroupname_csharp">
-<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door exists
+    <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -608,7 +589,18 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `custom_https_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -636,18 +628,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Id of the Front Door Frontend endpoint this configuration refers to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcegroupname_go">
-<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door exists
+    <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -658,7 +639,18 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `custom_https_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -686,18 +678,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Id of the Front Door Frontend endpoint this configuration refers to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcegroupname_nodejs">
-<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door exists
+    <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -708,7 +689,18 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `custom_https_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -736,18 +728,7 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Id of the Front Door Frontend endpoint this configuration refers to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resource_group_name_python">
-<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door exists
+    <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -758,7 +739,18 @@ The CustomHttpsConfiguration resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Dict[Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `custom_https_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -858,7 +850,8 @@ Get an existing CustomHttpsConfiguration resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>custom_https_configuration=None<span class="p">, </span>custom_https_provisioning_enabled=None<span class="p">, </span>frontend_endpoint_id=None<span class="p">, </span>resource_group_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_https_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[CustomHttpsConfigurationCustomHttpsConfiguration]]</span> = None<span class="p">, </span><span class="nx">custom_https_provisioning_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frontend_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomHttpsConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -866,7 +859,7 @@ Get an existing CustomHttpsConfiguration resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.CustomHttpsConfiguration.html">CustomHttpsConfiguration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.CustomHttpsConfigurationState.html">CustomHttpsConfigurationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.CustomHttpsConfiguration.html">CustomHttpsConfiguration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.CustomHttpsConfigurationState.html">CustomHttpsConfigurationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -980,7 +973,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `custom_https_configuration` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1001,19 +995,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Id of the Front Door Frontend endpoint this configuration refers to.
+    <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door exists
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1030,7 +1023,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `custom_https_configuration` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1051,19 +1045,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Id of the Front Door Frontend endpoint this configuration refers to.
+    <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door exists
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1080,7 +1073,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `custom_https_configuration` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1101,19 +1095,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Id of the Front Door Frontend endpoint this configuration refers to.
+    <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door exists
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}
@@ -1130,7 +1123,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhttpsconfigurationcustomhttpsconfiguration">Dict[Custom<wbr>Https<wbr>Configuration<wbr>Custom<wbr>Https<wbr>Configuration]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A `custom_https_configuration` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1151,19 +1145,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Id of the Front Door Frontend endpoint this configuration refers to.
+    <dd>{{% md %}}The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Resource Group in which the Front Door exists
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 
 </dl>
 {{% /choosable %}}

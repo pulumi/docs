@@ -550,7 +550,7 @@ const exampleFirewallPolicy = new azure.frontdoor.FirewallPolicy("exampleFirewal
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.FirewallPolicy">FirewallPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>custom_block_response_body=None<span class="p">, </span>custom_block_response_status_code=None<span class="p">, </span>custom_rules=None<span class="p">, </span>enabled=None<span class="p">, </span>managed_rules=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>redirect_url=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.FirewallPolicy">FirewallPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_block_response_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_block_response_status_code</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyCustomRule]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyManagedRule]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1209,7 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}the Frontend Endpoints associated with this Front Door Web Application Firewall policy.
+    <dd>{{% md %}}The Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1230,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource location.
+    <dd>{{% md %}}The Azure Region where this FrontDoor Firewall Policy exists.
 {{% /md %}}</dd>
 
 </dl>
@@ -1248,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}the Frontend Endpoints associated with this Front Door Web Application Firewall policy.
+    <dd>{{% md %}}The Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1269,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource location.
+    <dd>{{% md %}}The Azure Region where this FrontDoor Firewall Policy exists.
 {{% /md %}}</dd>
 
 </dl>
@@ -1287,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}the Frontend Endpoints associated with this Front Door Web Application Firewall policy.
+    <dd>{{% md %}}The Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1308,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource location.
+    <dd>{{% md %}}The Azure Region where this FrontDoor Firewall Policy exists.
 {{% /md %}}</dd>
 
 </dl>
@@ -1326,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}the Frontend Endpoints associated with this Front Door Web Application Firewall policy.
+    <dd>{{% md %}}The Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1347,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource location.
+    <dd>{{% md %}}The Azure Region where this FrontDoor Firewall Policy exists.
 {{% /md %}}</dd>
 
 </dl>
@@ -1369,7 +1369,8 @@ Get an existing FirewallPolicy resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>custom_block_response_body=None<span class="p">, </span>custom_block_response_status_code=None<span class="p">, </span>custom_rules=None<span class="p">, </span>enabled=None<span class="p">, </span>frontend_endpoint_ids=None<span class="p">, </span>location=None<span class="p">, </span>managed_rules=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>redirect_url=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_block_response_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_block_response_status_code</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyCustomRule]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frontend_endpoint_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyManagedRule]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> FirewallPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1377,7 +1378,7 @@ Get an existing FirewallPolicy resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.FirewallPolicy.html">FirewallPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.FirewallPolicyState.html">FirewallPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.FirewallPolicy.html">FirewallPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.FrontDoor.FirewallPolicyState.html">FirewallPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1535,7 +1536,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}the Frontend Endpoints associated with this Front Door Web Application Firewall policy.
+    <dd>{{% md %}}The Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1546,7 +1547,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource location.
+    <dd>{{% md %}}The Azure Region where this FrontDoor Firewall Policy exists.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1674,7 +1675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}the Frontend Endpoints associated with this Front Door Web Application Firewall policy.
+    <dd>{{% md %}}The Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1685,7 +1686,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource location.
+    <dd>{{% md %}}The Azure Region where this FrontDoor Firewall Policy exists.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1813,7 +1814,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}the Frontend Endpoints associated with this Front Door Web Application Firewall policy.
+    <dd>{{% md %}}The Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1824,7 +1825,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Resource location.
+    <dd>{{% md %}}The Azure Region where this FrontDoor Firewall Policy exists.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1952,7 +1953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}the Frontend Endpoints associated with this Front Door Web Application Firewall policy.
+    <dd>{{% md %}}The Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1963,7 +1964,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Resource location.
+    <dd>{{% md %}}The Azure Region where this FrontDoor Firewall Policy exists.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

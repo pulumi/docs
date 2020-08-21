@@ -34,7 +34,7 @@ class MyStack : Stack
             Metadata = @"    {
     ""category"": ""General""
     }
-  
+
 
 ",
             Mode = "Indexed",
@@ -87,7 +87,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := policy.NewDefinition(ctx, "policy", &policy.DefinitionArgs{
 			DisplayName: pulumi.String("acceptance test policy definition"),
-			Metadata:    pulumi.String(fmt.Sprintf("%v%v%v%v%v", "    {\n", "    \"category\": \"General\"\n", "    }\n", "  \n", "\n")),
+			Metadata:    pulumi.String(fmt.Sprintf("%v%v%v%v%v", "    {\n", "    \"category\": \"General\"\n", "    }\n", "\n", "\n")),
 			Mode:        pulumi.String("Indexed"),
 			Parameters: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "	{\n", "    \"allowedLocations\": {\n", "      \"type\": \"Array\",\n", "      \"metadata\": {\n", "        \"description\": \"The list of allowed locations for resources.\",\n", "        \"displayName\": \"Allowed locations\",\n", "        \"strongType\": \"location\"\n", "      }\n", "    }\n", "  }\n", "\n")),
 			PolicyRule: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "	{\n", "    \"if\": {\n", "      \"not\": {\n", "        \"field\": \"location\",\n", "        \"in\": \"[parameters('allowedLocations')]\"\n", "      }\n", "    },\n", "    \"then\": {\n", "      \"effect\": \"audit\"\n", "    }\n", "  }\n", "\n")),
@@ -113,7 +113,7 @@ policy = azure.policy.Definition("policy",
     metadata="""    {
     "category": "General"
     }
-  
+
 
 """,
     mode="Indexed",
@@ -158,7 +158,7 @@ const policy = new azure.policy.Definition("policy", {
     metadata: `    {
     "category": "General"
     }
-  
+
 `,
     mode: "Indexed",
     parameters: `	{
@@ -202,7 +202,7 @@ const policy = new azure.policy.Definition("policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/policy/#pulumi_azure.policy.Definition">Definition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>management_group_id=None<span class="p">, </span>management_group_name=None<span class="p">, </span>metadata=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_rule=None<span class="p">, </span>policy_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/policy/#pulumi_azure.policy.Definition">Definition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -395,8 +395,7 @@ The Definition resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated.  The value can be "All", "Indexed" or
-"NotSpecified". Changing this resource forces a new resource to be
-created.
+"NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -521,8 +520,7 @@ a then block.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated.  The value can be "All", "Indexed" or
-"NotSpecified". Changing this resource forces a new resource to be
-created.
+"NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -647,8 +645,7 @@ a then block.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated.  The value can be "All", "Indexed" or
-"NotSpecified". Changing this resource forces a new resource to be
-created.
+"NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -773,8 +770,7 @@ a then block.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated.  The value can be "All", "Indexed" or
-"NotSpecified". Changing this resource forces a new resource to be
-created.
+"NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -969,7 +965,8 @@ Get an existing Definition resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>management_group_id=None<span class="p">, </span>management_group_name=None<span class="p">, </span>metadata=None<span class="p">, </span>mode=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>policy_rule=None<span class="p">, </span>policy_type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Definition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -977,7 +974,7 @@ Get an existing Definition resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.Definition.html">Definition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.DefinitionState.html">DefinitionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.Definition.html">Definition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.DefinitionState.html">DefinitionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1150,8 +1147,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated.  The value can be "All", "Indexed" or
-"NotSpecified". Changing this resource forces a new resource to be
-created.
+"NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1276,8 +1272,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated.  The value can be "All", "Indexed" or
-"NotSpecified". Changing this resource forces a new resource to be
-created.
+"NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1402,8 +1397,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated.  The value can be "All", "Indexed" or
-"NotSpecified". Changing this resource forces a new resource to be
-created.
+"NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1528,8 +1522,7 @@ with the policy definition.
     </dt>
     <dd>{{% md %}}The policy mode that allows you to specify which resource
 types will be evaluated.  The value can be "All", "Indexed" or
-"NotSpecified". Changing this resource forces a new resource to be
-created.
+"NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
