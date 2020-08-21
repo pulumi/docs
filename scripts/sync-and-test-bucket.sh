@@ -50,8 +50,8 @@ aws_region="$(pulumi -C infrastructure config get 'aws:region')"
 aws s3 mb $destination_bucket_uri --region $aws_region || true
 
 # Tag the bucket with ownership information for production buckets.
-if [ "$(pulumi stack --show-name)" == "production" ]; then
-    aws s3api put-bucket-tagging --bucket $destination_bucket_uri --tagging file://$(pwd)/scripts/bucket-tagging.json
+if [ "$(pulumi -C infrastructure stack --show-name)" == "production" ]; then
+    aws s3api put-bucket-tagging --bucket $destination_bucket --tagging file://$(pwd)/scripts/bucket-tagging.json
 fi
 
 # Make the bucket an S3 website.
