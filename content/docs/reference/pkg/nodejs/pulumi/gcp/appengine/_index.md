@@ -1284,7 +1284,7 @@ const myappV1 = new gcp.appengine.StandardAppVersion("myappV1", {
     envVariables: {
         port: "8080",
     },
-    automatic_scaling: {
+    automaticScaling: {
         maxConcurrentRequests: 10,
         minIdleInstances: 1,
         maxIdleInstances: 3,
@@ -1314,7 +1314,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     envVariables: {
         port: "8080",
     },
-    basic_scaling: {
+    basicScaling: {
         maxInstances: 5,
     },
     noopOnDestroy: true,
