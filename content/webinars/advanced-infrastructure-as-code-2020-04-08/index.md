@@ -1,7 +1,7 @@
 ---
 title: Advanced Infrastructure as Code
 meta_desc: Join us on April 08th, 2020 for a deep dive into Infrastructure as
-  Code concepts with Pulumi engineers Paul Stack and Mikhail Shilkov.df
+  Code concepts with Pulumi engineers Paul Stack and Mikhail Shilkov.dfdsf
 featured: false
 pre_recorded: false
 pulumi_tv: false
