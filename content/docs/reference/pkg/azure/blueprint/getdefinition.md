@@ -128,7 +128,7 @@ const example = root.then(root => azure.blueprint.getDefinition({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_definition(</span>name=None<span class="p">, </span>scope_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_definition(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDefinitionResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -161,7 +161,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Blueprint
+    <dd>{{% md %}}The name of the Blueprint.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -172,7 +172,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.
+    <dd>{{% md %}}The ID of the Subscription or Management Group, as the scope at which the blueprint definition is stored.
 {{% /md %}}</dd>
 
 </dl>
@@ -190,7 +190,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Blueprint
+    <dd>{{% md %}}The name of the Blueprint.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -201,7 +201,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.
+    <dd>{{% md %}}The ID of the Subscription or Management Group, as the scope at which the blueprint definition is stored.
 {{% /md %}}</dd>
 
 </dl>
@@ -219,7 +219,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Blueprint
+    <dd>{{% md %}}The name of the Blueprint.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -230,7 +230,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.
+    <dd>{{% md %}}The ID of the Subscription or Management Group, as the scope at which the blueprint definition is stored.
 {{% /md %}}</dd>
 
 </dl>
@@ -248,7 +248,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the Blueprint
+    <dd>{{% md %}}The name of the Blueprint.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -259,7 +259,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the scope at which the blueprint definition is stored. This will be with either a Subscription ID or Management Group ID.
+    <dd>{{% md %}}The ID of the Subscription or Management Group, as the scope at which the blueprint definition is stored.
 {{% /md %}}</dd>
 
 </dl>

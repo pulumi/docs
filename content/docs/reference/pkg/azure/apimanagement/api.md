@@ -183,7 +183,7 @@ const exampleApi = new azure.apimanagement.Api("exampleApi", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.Api">Api</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_management_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>import_=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>protocols=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>revision=None<span class="p">, </span>service_url=None<span class="p">, </span>soap_pass_through=None<span class="p">, </span>subscription_key_parameter_names=None<span class="p">, </span>subscription_required=None<span class="p">, </span>version=None<span class="p">, </span>version_set_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.Api">Api</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiImport]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_authorization</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiOauth2Authorization]]</span> = None<span class="p">, </span><span class="nx">openid_authentication</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiOpenidAuthentication]]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soap_pass_through</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiSubscriptionKeyParameterNames]]</span> = None<span class="p">, </span><span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -456,6 +456,28 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="oauth2authorization_csharp">
+<a href="#oauth2authorization_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Authorization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `oauth2_authorization` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="openidauthentication_csharp">
+<a href="#openidauthentication_csharp" style="color: inherit; text-decoration: inherit;">Openid<wbr>Authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `openid_authentication` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="serviceurl_csharp">
 <a href="#serviceurl_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
 </span> 
@@ -624,6 +646,28 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oauth2authorization_go">
+<a href="#oauth2authorization_go" style="color: inherit; text-decoration: inherit;">Oauth2Authorization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization</a></span>
+    </dt>
+    <dd>{{% md %}}An `oauth2_authorization` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="openidauthentication_go">
+<a href="#openidauthentication_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</a></span>
+    </dt>
+    <dd>{{% md %}}An `openid_authentication` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -800,6 +844,28 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="oauth2authorization_nodejs">
+<a href="#oauth2authorization_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Authorization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization</a></span>
+    </dt>
+    <dd>{{% md %}}An `oauth2_authorization` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="openidauthentication_nodejs">
+<a href="#openidauthentication_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</a></span>
+    </dt>
+    <dd>{{% md %}}An `openid_authentication` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="serviceurl_nodejs">
 <a href="#serviceurl_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Url</a>
 </span> 
@@ -968,6 +1034,28 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="oauth2_authorization_python">
+<a href="#oauth2_authorization_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>authorization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apioauth2authorization">Dict[Api<wbr>Oauth2Authorization]</a></span>
+    </dt>
+    <dd>{{% md %}}An `oauth2_authorization` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="openid_authentication_python">
+<a href="#openid_authentication_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Dict[Api<wbr>Openid<wbr>Authentication]</a></span>
+    </dt>
+    <dd>{{% md %}}An `openid_authentication` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1222,7 +1310,8 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_management_name=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>import_=None<span class="p">, </span>is_current=None<span class="p">, </span>is_online=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>protocols=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>revision=None<span class="p">, </span>service_url=None<span class="p">, </span>soap_pass_through=None<span class="p">, </span>subscription_key_parameter_names=None<span class="p">, </span>subscription_required=None<span class="p">, </span>version=None<span class="p">, </span>version_set_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiImport]]</span> = None<span class="p">, </span><span class="nx">is_current</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_online</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_authorization</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiOauth2Authorization]]</span> = None<span class="p">, </span><span class="nx">openid_authentication</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiOpenidAuthentication]]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soap_pass_through</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiSubscriptionKeyParameterNames]]</span> = None<span class="p">, </span><span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Api</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1230,7 +1319,7 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Api.html">Api</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ApiState.html">ApiState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Api.html">Api</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ApiState.html">ApiState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1411,6 +1500,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_oauth2authorization_csharp">
+<a href="#state_oauth2authorization_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Authorization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `oauth2_authorization` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_openidauthentication_csharp">
+<a href="#state_openidauthentication_csharp" style="color: inherit; text-decoration: inherit;">Openid<wbr>Authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `openid_authentication` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1609,6 +1720,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_oauth2authorization_go">
+<a href="#state_oauth2authorization_go" style="color: inherit; text-decoration: inherit;">Oauth2Authorization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization</a></span>
+    </dt>
+    <dd>{{% md %}}An `oauth2_authorization` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_openidauthentication_go">
+<a href="#state_openidauthentication_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</a></span>
+    </dt>
+    <dd>{{% md %}}An `openid_authentication` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span> 
@@ -1803,6 +1936,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_oauth2authorization_nodejs">
+<a href="#state_oauth2authorization_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Authorization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization</a></span>
+    </dt>
+    <dd>{{% md %}}An `oauth2_authorization` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_openidauthentication_nodejs">
+<a href="#state_openidauthentication_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</a></span>
+    </dt>
+    <dd>{{% md %}}An `openid_authentication` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span> 
@@ -1993,6 +2148,28 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_oauth2_authorization_python">
+<a href="#state_oauth2_authorization_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>authorization</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apioauth2authorization">Dict[Api<wbr>Oauth2Authorization]</a></span>
+    </dt>
+    <dd>{{% md %}}An `oauth2_authorization` block as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_openid_authentication_python">
+<a href="#state_openid_authentication_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>authentication</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Dict[Api<wbr>Openid<wbr>Authentication]</a></span>
+    </dt>
+    <dd>{{% md %}}An `openid_authentication` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2423,6 +2600,266 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of service to import from WSDL.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="apioauth2authorization">Api<wbr>Oauth2Authorization</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOauth2Authorization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOauth2Authorization">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOauth2AuthorizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOauth2AuthorizationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.ApiOauth2AuthorizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Outputs.ApiOauth2Authorization.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="authorizationservername_csharp">
+<a href="#authorizationservername_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operations scope.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="authorizationservername_go">
+<a href="#authorizationservername_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operations scope.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="authorizationservername_nodejs">
+<a href="#authorizationservername_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Operations scope.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="authorizationservername_python">
+<a href="#authorizationservername_python" style="color: inherit; text-decoration: inherit;">authorization<wbr>Server<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Operations scope.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOpenidAuthentication">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOpenidAuthentication">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOpenidAuthenticationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOpenidAuthenticationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.ApiOpenidAuthenticationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Outputs.ApiOpenidAuthentication.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="openidprovidername_csharp">
+<a href="#openidprovidername_csharp" style="color: inherit; text-decoration: inherit;">Openid<wbr>Provider<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bearertokensendingmethods_csharp">
+<a href="#bearertokensendingmethods_csharp" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}How to send token to the server. A list of zero or more methods. Valid values are `authorizationHeader` and `query`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="openidprovidername_go">
+<a href="#openidprovidername_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Provider<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bearertokensendingmethods_go">
+<a href="#bearertokensendingmethods_go" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}How to send token to the server. A list of zero or more methods. Valid values are `authorizationHeader` and `query`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="openidprovidername_nodejs">
+<a href="#openidprovidername_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Provider<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bearertokensendingmethods_nodejs">
+<a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}How to send token to the server. A list of zero or more methods. Valid values are `authorizationHeader` and `query`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="openidprovidername_python">
+<a href="#openidprovidername_python" style="color: inherit; text-decoration: inherit;">openid<wbr>Provider<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bearer_token_sending_methods_python">
+<a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}How to send token to the server. A list of zero or more methods. Valid values are `authorizationHeader` and `query`.
 {{% /md %}}</dd>
 
 </dl>

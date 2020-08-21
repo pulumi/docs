@@ -109,7 +109,7 @@ export const queryRuleId = example.id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_scheduled_query_rules_alert(</span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_scheduled_query_rules_alert(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetScheduledQueryRulesAlertResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -284,7 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of Resource IDs referred into query.
+    <dd>{{% md %}}The list of Resource IDs referred into query.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -473,7 +473,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of Resource IDs referred into query.
+    <dd>{{% md %}}The list of Resource IDs referred into query.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -662,7 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of Resource IDs referred into query.
+    <dd>{{% md %}}The list of Resource IDs referred into query.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -851,7 +851,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of Resource IDs referred into query.
+    <dd>{{% md %}}The list of Resource IDs referred into query.
 {{% /md %}}</dd>
 
     <dt class="property-"

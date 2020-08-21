@@ -108,7 +108,7 @@ export const firewallPrivateIp = example.then(example => example.ipConfiguration
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_firewall(</span>name=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_firewall(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFirewallResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -593,7 +593,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The private IP address of the Azure Firewall.
+    <dd>{{% md %}}The Private IP Address of the Azure Firewall.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -614,7 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the subnet where the Azure Firewall is deployed.
+    <dd>{{% md %}}The ID of the Subnet where the Azure Firewall is deployed.
 {{% /md %}}</dd>
 
 </dl>
@@ -653,7 +653,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The private IP address of the Azure Firewall.
+    <dd>{{% md %}}The Private IP Address of the Azure Firewall.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -674,7 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the subnet where the Azure Firewall is deployed.
+    <dd>{{% md %}}The ID of the Subnet where the Azure Firewall is deployed.
 {{% /md %}}</dd>
 
 </dl>
@@ -713,7 +713,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The private IP address of the Azure Firewall.
+    <dd>{{% md %}}The Private IP Address of the Azure Firewall.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -734,7 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the subnet where the Azure Firewall is deployed.
+    <dd>{{% md %}}The ID of the Subnet where the Azure Firewall is deployed.
 {{% /md %}}</dd>
 
 </dl>
@@ -773,7 +773,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The private IP address of the Azure Firewall.
+    <dd>{{% md %}}The Private IP Address of the Azure Firewall.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -794,7 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Resource ID of the subnet where the Azure Firewall is deployed.
+    <dd>{{% md %}}The ID of the Subnet where the Azure Firewall is deployed.
 {{% /md %}}</dd>
 
 </dl>

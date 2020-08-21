@@ -3,7 +3,7 @@ title: "Module databasemigration"
 title_tag: "Module databasemigration | Package @pulumi/azure | Node.js SDK"
 linktitle: "databasemigration"
 meta_desc: "Explore members of the databasemigration module in the @pulumi/azure package."
-git_sha: "1ab68fc895391745ca99e4edaaef6ceeea643c4a"
+git_sha: "91032c2a3b439090a2e0c91de8152754746653c8"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Project" data-link-title="Project">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L44">
         Resource <strong>Project</strong>
     </a>
 </h3>
@@ -86,7 +86,7 @@ const exampleProject = new azure.databasemigration.Project("exampleProject", {
 ```
 
 <h4 class="pdoc-member-header" id="Project-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L99"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L99"> <b>constructor</b></a>
 </h4>
 
 
@@ -100,7 +100,7 @@ Create a Project resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Project-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -111,14 +111,14 @@ Get an existing Project resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Project-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Project-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -129,7 +129,7 @@ Returns true if the given object is an instance of Project.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Project-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -138,7 +138,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Project-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L75">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L75">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Project-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specify the name of the database migration project. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Project-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L83">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L83">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ Specify the name of the database migration project. Changing this forces a new r
 Name of the resource group in which to create the database migration project. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Project-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L87">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L87">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ Name of the resource group in which to create the database migration project. Ch
 Name of the database migration service where resource belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Project-sourcePlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L91">property <b>sourcePlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L91">property <b>sourcePlatform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourcePlatform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ Name of the database migration service where resource belongs to. Changing this 
 The platform type of the migration source. Currently only support: `SQL`(on-premises SQL Server). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Project-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L95">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ The platform type of the migration source. Currently only support: `SQL`(on-prem
 A mapping of tags to assigned to the resource.
 
 <h4 class="pdoc-member-header" id="Project-targetPlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L99">property <b>targetPlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L99">property <b>targetPlatform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetPlatform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -194,7 +194,7 @@ A mapping of tags to assigned to the resource.
 The platform type of the migration target. Currently only support: `SQLDB`(Azure SQL Database). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Project-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -203,7 +203,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Service" data-link-title="Service">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L37">
         Resource <strong>Service</strong>
     </a>
 </h3>
@@ -240,7 +240,7 @@ const exampleService = new azure.databasemigration.Service("exampleService", {
 ```
 
 <h4 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -254,7 +254,7 @@ Create a Service resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Service-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -265,14 +265,14 @@ Get an existing Service resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -283,7 +283,7 @@ Returns true if the given object is an instance of Service.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Service-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -292,7 +292,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Service-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L68">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L68">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -300,7 +300,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -308,7 +308,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specify the name of the database migration service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Service-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L76">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L76">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -316,7 +316,7 @@ Specify the name of the database migration service. Changing this forces a new r
 Name of the resource group in which to create the database migration service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Service-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L80">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L80">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -324,7 +324,7 @@ Name of the resource group in which to create the database migration service. Ch
 The sku name of the database migration service. Possible values are `Premium_4vCores`, `Standard_1vCores`, `Standard_2vCores` and `Standard_4vCores`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Service-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L84">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L84">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -332,7 +332,7 @@ The sku name of the database migration service. Possible values are `Premium_4vC
 The ID of the virtual subnet resource to which the database migration service should be joined. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Service-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L88">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L88">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -340,7 +340,7 @@ The ID of the virtual subnet resource to which the database migration service sh
 A mapping of tags to assigned to the resource.
 
 <h4 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -351,7 +351,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getProject" data-link-title="getProject">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L27">
         Function <strong>getProject</strong>
     </a>
 </h3>
@@ -378,7 +378,7 @@ export const name = example.name;
 ```
 
 <h3 class="pdoc-module-header" id="getService" data-link-title="getService">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L26">
         Function <strong>getService</strong>
     </a>
 </h3>
@@ -406,7 +406,7 @@ export const azurermDmsId = example.id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetProjectArgs" data-link-title="GetProjectArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L45">
         interface <strong>GetProjectArgs</strong>
     </a>
 </h3>
@@ -416,7 +416,7 @@ export const azurermDmsId = example.id;
 A collection of arguments for invoking getProject.
 
 <h4 class="pdoc-member-header" id="GetProjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -424,7 +424,7 @@ A collection of arguments for invoking getProject.
 Name of the database migration project.
 
 <h4 class="pdoc-member-header" id="GetProjectArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L53">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L53">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -432,7 +432,7 @@ Name of the database migration project.
 Name of the resource group where resource belongs to.
 
 <h4 class="pdoc-member-header" id="GetProjectArgs-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L57">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L57">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -440,7 +440,7 @@ Name of the resource group where resource belongs to.
 Name of the database migration service where resource belongs to.
 
 <h3 class="pdoc-module-header" id="GetProjectResult" data-link-title="GetProjectResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L63">
         interface <strong>GetProjectResult</strong>
     </a>
 </h3>
@@ -450,7 +450,7 @@ Name of the database migration service where resource belongs to.
 A collection of values returned by getProject.
 
 <h4 class="pdoc-member-header" id="GetProjectResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -458,7 +458,7 @@ A collection of values returned by getProject.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetProjectResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L71">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L71">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -466,22 +466,22 @@ The provider-assigned unique ID for this managed resource.
 Azure location where the resource exists.
 
 <h4 class="pdoc-member-header" id="GetProjectResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L73">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L73">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectResult-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L74">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L74">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProjectResult-sourcePlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L78">property <b>sourcePlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L78">property <b>sourcePlatform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourcePlatform: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -489,7 +489,7 @@ Azure location where the resource exists.
 The platform type of the migration source.
 
 <h4 class="pdoc-member-header" id="GetProjectResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L82">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L82">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -497,7 +497,7 @@ The platform type of the migration source.
 A mapping of tags to assigned to the resource.
 
 <h4 class="pdoc-member-header" id="GetProjectResult-targetPlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getProject.ts#L86">property <b>targetPlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getProject.ts#L86">property <b>targetPlatform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetPlatform: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -505,7 +505,7 @@ A mapping of tags to assigned to the resource.
 The platform type of the migration target.
 
 <h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L43">
         interface <strong>GetServiceArgs</strong>
     </a>
 </h3>
@@ -515,7 +515,7 @@ The platform type of the migration target.
 A collection of arguments for invoking getService.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L47">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -523,7 +523,7 @@ A collection of arguments for invoking getService.
 Specify the name of the database migration service.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L51">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L51">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -531,7 +531,7 @@ Specify the name of the database migration service.
 Specifies the Name of the Resource Group within which the database migration service exists
 
 <h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L57">
         interface <strong>GetServiceResult</strong>
     </a>
 </h3>
@@ -541,7 +541,7 @@ Specifies the Name of the Resource Group within which the database migration ser
 A collection of values returned by getService.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -549,7 +549,7 @@ A collection of values returned by getService.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L65">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L65">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -557,17 +557,17 @@ The provider-assigned unique ID for this managed resource.
 Azure location where the resource exists.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L67">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L67">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L71">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L71">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -575,7 +575,7 @@ Azure location where the resource exists.
 The sku name of database migration service.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L75">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L75">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -583,7 +583,7 @@ The sku name of database migration service.
 The ID of the virtual subnet resource to which the database migration service exists.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/getService.ts#L79">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/getService.ts#L79">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -591,7 +591,7 @@ The ID of the virtual subnet resource to which the database migration service ex
 A mapping of tags to assigned to the resource.
 
 <h3 class="pdoc-module-header" id="ProjectArgs" data-link-title="ProjectArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L190">
         interface <strong>ProjectArgs</strong>
     </a>
 </h3>
@@ -601,7 +601,7 @@ A mapping of tags to assigned to the resource.
 The set of arguments for constructing a Project resource.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L194">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L194">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -609,7 +609,7 @@ The set of arguments for constructing a Project resource.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L198">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L198">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -617,7 +617,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specify the name of the database migration project. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L202">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L202">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -625,7 +625,7 @@ Specify the name of the database migration project. Changing this forces a new r
 Name of the resource group in which to create the database migration project. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L206">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L206">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -633,7 +633,7 @@ Name of the resource group in which to create the database migration project. Ch
 Name of the database migration service where resource belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-sourcePlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L210">property <b>sourcePlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L210">property <b>sourcePlatform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourcePlatform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -641,7 +641,7 @@ Name of the database migration service where resource belongs to. Changing this 
 The platform type of the migration source. Currently only support: `SQL`(on-premises SQL Server). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L214">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L214">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -649,7 +649,7 @@ The platform type of the migration source. Currently only support: `SQL`(on-prem
 A mapping of tags to assigned to the resource.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-targetPlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L218">property <b>targetPlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L218">property <b>targetPlatform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetPlatform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -657,7 +657,7 @@ A mapping of tags to assigned to the resource.
 The platform type of the migration target. Currently only support: `SQLDB`(Azure SQL Database). Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ProjectState" data-link-title="ProjectState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L156">
         interface <strong>ProjectState</strong>
     </a>
 </h3>
@@ -667,7 +667,7 @@ The platform type of the migration target. Currently only support: `SQLDB`(Azure
 Input properties used for looking up and filtering Project resources.
 
 <h4 class="pdoc-member-header" id="ProjectState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L160">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L160">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -675,7 +675,7 @@ Input properties used for looking up and filtering Project resources.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProjectState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -683,7 +683,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specify the name of the database migration project. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProjectState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L168">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L168">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -691,7 +691,7 @@ Specify the name of the database migration project. Changing this forces a new r
 Name of the resource group in which to create the database migration project. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProjectState-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L172">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L172">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -699,7 +699,7 @@ Name of the resource group in which to create the database migration project. Ch
 Name of the database migration service where resource belongs to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProjectState-sourcePlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L176">property <b>sourcePlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L176">property <b>sourcePlatform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourcePlatform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -707,7 +707,7 @@ Name of the database migration service where resource belongs to. Changing this 
 The platform type of the migration source. Currently only support: `SQL`(on-premises SQL Server). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ProjectState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L180">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L180">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -715,7 +715,7 @@ The platform type of the migration source. Currently only support: `SQL`(on-prem
 A mapping of tags to assigned to the resource.
 
 <h4 class="pdoc-member-header" id="ProjectState-targetPlatform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/project.ts#L184">property <b>targetPlatform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/project.ts#L184">property <b>targetPlatform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetPlatform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -723,7 +723,7 @@ A mapping of tags to assigned to the resource.
 The platform type of the migration target. Currently only support: `SQLDB`(Azure SQL Database). Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ServiceArgs" data-link-title="ServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L170">
         interface <strong>ServiceArgs</strong>
     </a>
 </h3>
@@ -733,7 +733,7 @@ The platform type of the migration target. Currently only support: `SQLDB`(Azure
 The set of arguments for constructing a Service resource.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L174">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L174">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -741,7 +741,7 @@ The set of arguments for constructing a Service resource.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L178">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -749,7 +749,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specify the name of the database migration service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L182">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L182">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -757,7 +757,7 @@ Specify the name of the database migration service. Changing this forces a new r
 Name of the resource group in which to create the database migration service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L186">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L186">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -765,7 +765,7 @@ Name of the resource group in which to create the database migration service. Ch
 The sku name of the database migration service. Possible values are `Premium_4vCores`, `Standard_1vCores`, `Standard_2vCores` and `Standard_4vCores`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L190">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L190">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ The sku name of the database migration service. Possible values are `Premium_4vC
 The ID of the virtual subnet resource to which the database migration service should be joined. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L194">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L194">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -781,7 +781,7 @@ The ID of the virtual subnet resource to which the database migration service sh
 A mapping of tags to assigned to the resource.
 
 <h3 class="pdoc-module-header" id="ServiceState" data-link-title="ServiceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L140">
         interface <strong>ServiceState</strong>
     </a>
 </h3>
@@ -791,7 +791,7 @@ A mapping of tags to assigned to the resource.
 Input properties used for looking up and filtering Service resources.
 
 <h4 class="pdoc-member-header" id="ServiceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L144">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L144">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -799,7 +799,7 @@ Input properties used for looking up and filtering Service resources.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L148">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -807,7 +807,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specify the name of the database migration service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L152">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L152">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -815,7 +815,7 @@ Specify the name of the database migration service. Changing this forces a new r
 Name of the resource group in which to create the database migration service. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L156">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L156">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -823,7 +823,7 @@ Name of the resource group in which to create the database migration service. Ch
 The sku name of the database migration service. Possible values are `Premium_4vCores`, `Standard_1vCores`, `Standard_2vCores` and `Standard_4vCores`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L160">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L160">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -831,7 +831,7 @@ The sku name of the database migration service. Possible values are `Premium_4vC
 The ID of the virtual subnet resource to which the database migration service should be joined. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ServiceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1ab68fc895391745ca99e4edaaef6ceeea643c4a/sdk/nodejs/databasemigration/service.ts#L164">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/databasemigration/service.ts#L164">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

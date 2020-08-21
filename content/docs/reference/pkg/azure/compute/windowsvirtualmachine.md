@@ -286,7 +286,7 @@ const exampleWindowsVirtualMachine = new azure.compute.WindowsVirtualMachine("ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.WindowsVirtualMachine">WindowsVirtualMachine</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_capabilities=None<span class="p">, </span>additional_unattend_contents=None<span class="p">, </span>admin_password=None<span class="p">, </span>admin_username=None<span class="p">, </span>allow_extension_operations=None<span class="p">, </span>availability_set_id=None<span class="p">, </span>boot_diagnostics=None<span class="p">, </span>computer_name=None<span class="p">, </span>custom_data=None<span class="p">, </span>dedicated_host_id=None<span class="p">, </span>enable_automatic_updates=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>identity=None<span class="p">, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>max_bid_price=None<span class="p">, </span>name=None<span class="p">, </span>network_interface_ids=None<span class="p">, </span>os_disk=None<span class="p">, </span>plan=None<span class="p">, </span>priority=None<span class="p">, </span>provision_vm_agent=None<span class="p">, </span>proximity_placement_group_id=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secrets=None<span class="p">, </span>size=None<span class="p">, </span>source_image_id=None<span class="p">, </span>source_image_reference=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, </span>virtual_machine_scale_set_id=None<span class="p">, </span>winrm_listeners=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.WindowsVirtualMachine">WindowsVirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachineAdditionalCapabilities]]</span> = None<span class="p">, </span><span class="nx">additional_unattend_contents</span><span class="p">:</span> <span class="nx">Optional[List[WindowsVirtualMachineAdditionalUnattendContent]]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_extension_operations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachineBootDiagnostics]]</span> = None<span class="p">, </span><span class="nx">computer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dedicated_host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_automatic_updates</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachineIdentity]]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachineOsDisk]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachinePlan]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[WindowsVirtualMachineSecret]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachineSourceImageReference]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_scale_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">winrm_listeners</span><span class="p">:</span> <span class="nx">Optional[List[WindowsVirtualMachineWinrmListener]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2249,7 +2249,8 @@ Get an existing WindowsVirtualMachine resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_capabilities=None<span class="p">, </span>additional_unattend_contents=None<span class="p">, </span>admin_password=None<span class="p">, </span>admin_username=None<span class="p">, </span>allow_extension_operations=None<span class="p">, </span>availability_set_id=None<span class="p">, </span>boot_diagnostics=None<span class="p">, </span>computer_name=None<span class="p">, </span>custom_data=None<span class="p">, </span>dedicated_host_id=None<span class="p">, </span>enable_automatic_updates=None<span class="p">, </span>eviction_policy=None<span class="p">, </span>identity=None<span class="p">, </span>license_type=None<span class="p">, </span>location=None<span class="p">, </span>max_bid_price=None<span class="p">, </span>name=None<span class="p">, </span>network_interface_ids=None<span class="p">, </span>os_disk=None<span class="p">, </span>plan=None<span class="p">, </span>priority=None<span class="p">, </span>private_ip_address=None<span class="p">, </span>private_ip_addresses=None<span class="p">, </span>provision_vm_agent=None<span class="p">, </span>proximity_placement_group_id=None<span class="p">, </span>public_ip_address=None<span class="p">, </span>public_ip_addresses=None<span class="p">, </span>resource_group_name=None<span class="p">, </span>secrets=None<span class="p">, </span>size=None<span class="p">, </span>source_image_id=None<span class="p">, </span>source_image_reference=None<span class="p">, </span>tags=None<span class="p">, </span>timezone=None<span class="p">, </span>virtual_machine_id=None<span class="p">, </span>virtual_machine_scale_set_id=None<span class="p">, </span>winrm_listeners=None<span class="p">, </span>zone=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachineAdditionalCapabilities]]</span> = None<span class="p">, </span><span class="nx">additional_unattend_contents</span><span class="p">:</span> <span class="nx">Optional[List[WindowsVirtualMachineAdditionalUnattendContent]]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_extension_operations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachineBootDiagnostics]]</span> = None<span class="p">, </span><span class="nx">computer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dedicated_host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_automatic_updates</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachineIdentity]]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachineOsDisk]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachinePlan]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[WindowsVirtualMachineSecret]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[WindowsVirtualMachineSourceImageReference]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_scale_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">winrm_listeners</span><span class="p">:</span> <span class="nx">Optional[List[WindowsVirtualMachineWinrmListener]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> WindowsVirtualMachine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2257,7 +2258,7 @@ Get an existing WindowsVirtualMachine resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.WindowsVirtualMachine.html">WindowsVirtualMachine</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.WindowsVirtualMachineState.html">WindowsVirtualMachineState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.WindowsVirtualMachine.html">WindowsVirtualMachine</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.WindowsVirtualMachineState.html">WindowsVirtualMachineState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5523,7 +5524,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the offer of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5534,7 +5535,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5545,7 +5546,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the SKU of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5556,7 +5557,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the version of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
 </dl>
@@ -5574,7 +5575,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the offer of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5585,7 +5586,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5596,7 +5597,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the SKU of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5607,7 +5608,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the version of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
 </dl>
@@ -5625,7 +5626,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the offer of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5636,7 +5637,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5647,7 +5648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the SKU of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5658,7 +5659,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the version of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
 </dl>
@@ -5676,7 +5677,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the offer of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5687,7 +5688,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5698,7 +5699,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the SKU of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5709,7 +5710,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the version of the image used to create the virtual machines.
+    <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
 
 </dl>
