@@ -844,7 +844,7 @@ func main() {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_policy_document(</span>override_json=None<span class="p">, </span>policy_id=None<span class="p">, </span>source_json=None<span class="p">, </span>statements=None<span class="p">, </span>version=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy_document(</span><span class="nx">override_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statements</span><span class="p">:</span> <span class="nx">Optional[List[GetPolicyDocumentStatement]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicyDocumentResult</code></pre></div>
 {{% /choosable %}}
 
 

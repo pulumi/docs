@@ -110,7 +110,7 @@ const example = pulumi.output(aws.acm.getCertificate({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_certificate(</span>domain=None<span class="p">, </span>key_types=None<span class="p">, </span>most_recent=None<span class="p">, </span>statuses=None<span class="p">, </span>tags=None<span class="p">, </span>types=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_certificate(</span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCertificateResult</code></pre></div>
 {{% /choosable %}}
 
 

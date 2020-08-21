@@ -297,7 +297,7 @@ const test = pulumi.output(aws.ec2.getVpcEndpointService({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_vpc_endpoint_service(</span>filters=None<span class="p">, </span>service=None<span class="p">, </span>service_name=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_vpc_endpoint_service(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetVpcEndpointServiceFilter]]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVpcEndpointServiceResult</code></pre></div>
 {{% /choosable %}}
 
 

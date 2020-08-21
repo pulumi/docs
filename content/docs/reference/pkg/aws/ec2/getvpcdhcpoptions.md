@@ -216,7 +216,7 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_vpc_dhcp_options(</span>dhcp_options_id=None<span class="p">, </span>filters=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_vpc_dhcp_options(</span><span class="nx">dhcp_options_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetVpcDhcpOptionsFilter]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVpcDhcpOptionsResult</code></pre></div>
 {{% /choosable %}}
 
 

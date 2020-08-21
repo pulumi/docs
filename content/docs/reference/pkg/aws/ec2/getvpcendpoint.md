@@ -124,7 +124,7 @@ const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("privateS3", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_vpc_endpoint(</span>filters=None<span class="p">, </span>id=None<span class="p">, </span>service_name=None<span class="p">, </span>state=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_vpc_endpoint(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetVpcEndpointFilter]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVpcEndpointResult</code></pre></div>
 {{% /choosable %}}
 
 

@@ -153,7 +153,7 @@ const foo = pulumi.output(aws.ec2.getInstance({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance(</span>filters=None<span class="p">, </span>get_password_data=None<span class="p">, </span>get_user_data=None<span class="p">, </span>instance_id=None<span class="p">, </span>instance_tags=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetInstanceFilter]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">get_user_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceResult</code></pre></div>
 {{% /choosable %}}
 
 

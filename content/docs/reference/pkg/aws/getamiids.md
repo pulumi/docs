@@ -130,7 +130,7 @@ const ubuntu = pulumi.output(aws.getAmiIds({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_ami_ids(</span>executable_users=None<span class="p">, </span>filters=None<span class="p">, </span>name_regex=None<span class="p">, </span>owners=None<span class="p">, </span>sort_ascending=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ami_ids(</span><span class="nx">executable_users</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetAmiIdsFilter]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">sort_ascending</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAmiIdsResult</code></pre></div>
 {{% /choosable %}}
 
 

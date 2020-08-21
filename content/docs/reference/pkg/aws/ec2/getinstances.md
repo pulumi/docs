@@ -152,7 +152,7 @@ export = async () => {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instances(</span>filters=None<span class="p">, </span>instance_state_names=None<span class="p">, </span>instance_tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instances(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetInstancesFilter]]</span> = None<span class="p">, </span><span class="nx">instance_state_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">instance_tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 

@@ -24,7 +24,7 @@ meta_desc: "Explore the GetSecret function of the kms module, including examples
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_secret(</span>secrets=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_secret(</span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[GetSecretSecret]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecretResult</code></pre></div>
 {{% /choosable %}}
 
 
