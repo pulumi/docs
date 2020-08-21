@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/vsphere | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/vsphere package."
-git_sha: "5000461cdebb84f25ea1928e1e1f4a45bb6c1311"
+git_sha: "dac69a3bf037c08e4f6dc283282d6e329f2187b8"
 block_external_search_index: true
 ---
 
@@ -38,7 +38,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="allowUnverifiedSsl" data-link-title="allowUnverifiedSsl">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L12">
         let <strong>allowUnverifiedSsl</strong>
     </a>
 </h3>
@@ -48,7 +48,7 @@ block_external_search_index: true
 If set, VMware vSphere client will permit unverifiable SSL certificates.
 
 <h3 class="pdoc-module-header" id="clientDebug" data-link-title="clientDebug">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L16">
         let <strong>clientDebug</strong>
     </a>
 </h3>
@@ -58,7 +58,7 @@ If set, VMware vSphere client will permit unverifiable SSL certificates.
 govmomi debug
 
 <h3 class="pdoc-module-header" id="clientDebugPath" data-link-title="clientDebugPath">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L20">
         let <strong>clientDebugPath</strong>
     </a>
 </h3>
@@ -68,7 +68,7 @@ govmomi debug
 govmomi debug path for debug
 
 <h3 class="pdoc-module-header" id="clientDebugPathRun" data-link-title="clientDebugPathRun">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L24">
         let <strong>clientDebugPathRun</strong>
     </a>
 </h3>
@@ -78,7 +78,7 @@ govmomi debug path for debug
 govmomi debug path for a single run
 
 <h3 class="pdoc-module-header" id="password" data-link-title="password">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L28">
         let <strong>password</strong>
     </a>
 </h3>
@@ -88,7 +88,7 @@ govmomi debug path for a single run
 The user password for vSphere API operations.
 
 <h3 class="pdoc-module-header" id="persistSession" data-link-title="persistSession">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L32">
         let <strong>persistSession</strong>
     </a>
 </h3>
@@ -98,7 +98,7 @@ The user password for vSphere API operations.
 Persist vSphere client sessions to disk
 
 <h3 class="pdoc-module-header" id="restSessionPath" data-link-title="restSessionPath">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L36">
         let <strong>restSessionPath</strong>
     </a>
 </h3>
@@ -108,7 +108,7 @@ Persist vSphere client sessions to disk
 The directory to save vSphere REST API sessions to
 
 <h3 class="pdoc-module-header" id="user" data-link-title="user">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L40">
         let <strong>user</strong>
     </a>
 </h3>
@@ -118,14 +118,14 @@ The directory to save vSphere REST API sessions to
 The user name for vSphere API operations.
 
 <h3 class="pdoc-module-header" id="vcenterServer" data-link-title="vcenterServer">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L41">
         let <strong>vcenterServer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> vcenterServer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;vcenterServer&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="vimKeepAlive" data-link-title="vimKeepAlive">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L45">
         let <strong>vimKeepAlive</strong>
     </a>
 </h3>
@@ -135,7 +135,7 @@ The user name for vSphere API operations.
 Keep alive interval for the VIM session in minutes
 
 <h3 class="pdoc-module-header" id="vimSessionPath" data-link-title="vimSessionPath">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L49">
         let <strong>vimSessionPath</strong>
     </a>
 </h3>
@@ -145,7 +145,7 @@ Keep alive interval for the VIM session in minutes
 The directory to save vSphere SOAP API sessions to
 
 <h3 class="pdoc-module-header" id="vsphereServer" data-link-title="vsphereServer">
-    <a href="https://github.com/pulumi/pulumi-vsphere/blob/5000461cdebb84f25ea1928e1e1f4a45bb6c1311/sdk/nodejs/config/vars.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/dac69a3bf037c08e4f6dc283282d6e329f2187b8/sdk/nodejs/config/vars.ts#L53">
         let <strong>vsphereServer</strong>
     </a>
 </h3>

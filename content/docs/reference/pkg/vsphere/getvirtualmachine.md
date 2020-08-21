@@ -122,7 +122,7 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_virtual_machine(</span>datacenter_id=None<span class="p">, </span>ide_controller_scan_count=None<span class="p">, </span>name=None<span class="p">, </span>sata_controller_scan_count=None<span class="p">, </span>scsi_controller_scan_count=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_virtual_machine(</span><span class="nx">alternate_guest_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">annotation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">boot_retry_delay</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">boot_retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_hot_remove_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_performance_counters_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cpu_reservation</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_share_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cpu_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">efi_secure_boot_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_disk_uuid</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ept_rvi_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extra_config</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">firmware</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">guest_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hardware_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">hv_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ide_controller_scan_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">latency_sensitivity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_hot_add_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">memory_limit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_reservation</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_share_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">memory_share_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nested_hv_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">num_cores_per_socket</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">num_cpus</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_power_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_after_resume</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_reboot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_shutdown</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">run_tools_scripts_before_guest_standby</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sata_controller_scan_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scsi_controller_scan_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[Dict[GetVirtualMachineVapp]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVirtualMachineResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -163,6 +163,129 @@ path.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="alternateguestname_csharp">
+<a href="#alternateguestname_csharp" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alternate guest name of the virtual machine when
+guest_id is a non-specific operating system, like `otherGuest`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotation_csharp">
+<a href="#annotation_csharp" style="color: inherit; text-decoration: inherit;">Annotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user-provided description of this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootdelay_csharp">
+<a href="#bootdelay_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootretrydelay_csharp">
+<a href="#bootretrydelay_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootretryenabled_csharp">
+<a href="#bootretryenabled_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpuhotaddenabled_csharp">
+<a href="#cpuhotaddenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpuhotremoveenabled_csharp">
+<a href="#cpuhotremoveenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpulimit_csharp">
+<a href="#cpulimit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpuperformancecountersenabled_csharp">
+<a href="#cpuperformancecountersenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpureservation_csharp">
+<a href="#cpureservation_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpusharecount_csharp">
+<a href="#cpusharecount_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpusharelevel_csharp">
+<a href="#cpusharelevel_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="datacenterid_csharp">
 <a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
 </span> 
@@ -178,11 +301,258 @@ For default datacenters, use the `id` attribute from an empty
 
     <dt class="property-optional"
             title="Optional">
+        <span id="efisecurebootenabled_csharp">
+<a href="#efisecurebootenabled_csharp" style="color: inherit; text-decoration: inherit;">Efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablediskuuid_csharp">
+<a href="#enablediskuuid_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablelogging_csharp">
+<a href="#enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eptrvimode_csharp">
+<a href="#eptrvimode_csharp" style="color: inherit; text-decoration: inherit;">Ept<wbr>Rvi<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extraconfig_csharp">
+<a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firmware_csharp">
+<a href="#firmware_csharp" style="color: inherit; text-decoration: inherit;">Firmware</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="guestid_csharp">
+<a href="#guestid_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The guest ID of the virtual machine or template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardwareversion_csharp">
+<a href="#hardwareversion_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The hardware version number on this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hvmode_csharp">
+<a href="#hvmode_csharp" style="color: inherit; text-decoration: inherit;">Hv<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="idecontrollerscancount_csharp">
 <a href="#idecontrollerscancount_csharp" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Scan<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="latencysensitivity_csharp">
+<a href="#latencysensitivity_csharp" style="color: inherit; text-decoration: inherit;">Latency<wbr>Sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memory_csharp">
+<a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine's memory, in MB.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryhotaddenabled_csharp">
+<a href="#memoryhotaddenabled_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memorylimit_csharp">
+<a href="#memorylimit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryreservation_csharp">
+<a href="#memoryreservation_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memorysharecount_csharp">
+<a href="#memorysharecount_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memorysharelevel_csharp">
+<a href="#memorysharelevel_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nestedhvenabled_csharp">
+<a href="#nestedhvenabled_csharp" style="color: inherit; text-decoration: inherit;">Nested<wbr>Hv<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numcorespersocket_csharp">
+<a href="#numcorespersocket_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Cores<wbr>Per<wbr>Socket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of cores per socket for this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numcpus_csharp">
+<a href="#numcpus_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total number of virtual processor cores assigned to this
+virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsafterpoweron_csharp">
+<a href="#runtoolsscriptsafterpoweron_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsafterresume_csharp">
+<a href="#runtoolsscriptsafterresume_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsbeforeguestreboot_csharp">
+<a href="#runtoolsscriptsbeforeguestreboot_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsbeforeguestshutdown_csharp">
+<a href="#runtoolsscriptsbeforeguestshutdown_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsbeforegueststandby_csharp">
+<a href="#runtoolsscriptsbeforegueststandby_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -208,6 +578,46 @@ For default datacenters, use the `id` attribute from an empty
 scan for disk attributes and controller types on. Default: `1`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storagepolicyid_csharp">
+<a href="#storagepolicyid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swapplacementpolicy_csharp">
+<a href="#swapplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Swap<wbr>Placement<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="synctimewithhost_csharp">
+<a href="#synctimewithhost_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vapp_csharp">
+<a href="#vapp_csharp" style="color: inherit; text-decoration: inherit;">Vapp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinevapp">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Get<wbr>Virtual<wbr>Machine<wbr>Vapp<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -229,6 +639,129 @@ path.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="alternateguestname_go">
+<a href="#alternateguestname_go" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alternate guest name of the virtual machine when
+guest_id is a non-specific operating system, like `otherGuest`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotation_go">
+<a href="#annotation_go" style="color: inherit; text-decoration: inherit;">Annotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user-provided description of this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootdelay_go">
+<a href="#bootdelay_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootretrydelay_go">
+<a href="#bootretrydelay_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootretryenabled_go">
+<a href="#bootretryenabled_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpuhotaddenabled_go">
+<a href="#cpuhotaddenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpuhotremoveenabled_go">
+<a href="#cpuhotremoveenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpulimit_go">
+<a href="#cpulimit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpuperformancecountersenabled_go">
+<a href="#cpuperformancecountersenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpureservation_go">
+<a href="#cpureservation_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpusharecount_go">
+<a href="#cpusharecount_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpusharelevel_go">
+<a href="#cpusharelevel_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="datacenterid_go">
 <a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
 </span> 
@@ -244,11 +777,258 @@ For default datacenters, use the `id` attribute from an empty
 
     <dt class="property-optional"
             title="Optional">
+        <span id="efisecurebootenabled_go">
+<a href="#efisecurebootenabled_go" style="color: inherit; text-decoration: inherit;">Efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablediskuuid_go">
+<a href="#enablediskuuid_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablelogging_go">
+<a href="#enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eptrvimode_go">
+<a href="#eptrvimode_go" style="color: inherit; text-decoration: inherit;">Ept<wbr>Rvi<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extraconfig_go">
+<a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firmware_go">
+<a href="#firmware_go" style="color: inherit; text-decoration: inherit;">Firmware</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="guestid_go">
+<a href="#guestid_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The guest ID of the virtual machine or template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardwareversion_go">
+<a href="#hardwareversion_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The hardware version number on this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hvmode_go">
+<a href="#hvmode_go" style="color: inherit; text-decoration: inherit;">Hv<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="idecontrollerscancount_go">
 <a href="#idecontrollerscancount_go" style="color: inherit; text-decoration: inherit;">Ide<wbr>Controller<wbr>Scan<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="latencysensitivity_go">
+<a href="#latencysensitivity_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memory_go">
+<a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine's memory, in MB.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryhotaddenabled_go">
+<a href="#memoryhotaddenabled_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memorylimit_go">
+<a href="#memorylimit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryreservation_go">
+<a href="#memoryreservation_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memorysharecount_go">
+<a href="#memorysharecount_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memorysharelevel_go">
+<a href="#memorysharelevel_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nestedhvenabled_go">
+<a href="#nestedhvenabled_go" style="color: inherit; text-decoration: inherit;">Nested<wbr>Hv<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numcorespersocket_go">
+<a href="#numcorespersocket_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Cores<wbr>Per<wbr>Socket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of cores per socket for this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numcpus_go">
+<a href="#numcpus_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total number of virtual processor cores assigned to this
+virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsafterpoweron_go">
+<a href="#runtoolsscriptsafterpoweron_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsafterresume_go">
+<a href="#runtoolsscriptsafterresume_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsbeforeguestreboot_go">
+<a href="#runtoolsscriptsbeforeguestreboot_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsbeforeguestshutdown_go">
+<a href="#runtoolsscriptsbeforeguestshutdown_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsbeforegueststandby_go">
+<a href="#runtoolsscriptsbeforegueststandby_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -274,6 +1054,46 @@ For default datacenters, use the `id` attribute from an empty
 scan for disk attributes and controller types on. Default: `1`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storagepolicyid_go">
+<a href="#storagepolicyid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swapplacementpolicy_go">
+<a href="#swapplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Swap<wbr>Placement<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="synctimewithhost_go">
+<a href="#synctimewithhost_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vapp_go">
+<a href="#vapp_go" style="color: inherit; text-decoration: inherit;">Vapp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinevapp">Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -295,6 +1115,129 @@ path.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="alternateguestname_nodejs">
+<a href="#alternateguestname_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Guest<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alternate guest name of the virtual machine when
+guest_id is a non-specific operating system, like `otherGuest`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotation_nodejs">
+<a href="#annotation_nodejs" style="color: inherit; text-decoration: inherit;">annotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user-provided description of this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootdelay_nodejs">
+<a href="#bootdelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootretrydelay_nodejs">
+<a href="#bootretrydelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootretryenabled_nodejs">
+<a href="#bootretryenabled_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpuhotaddenabled_nodejs">
+<a href="#cpuhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpuhotremoveenabled_nodejs">
+<a href="#cpuhotremoveenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpulimit_nodejs">
+<a href="#cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpuperformancecountersenabled_nodejs">
+<a href="#cpuperformancecountersenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpureservation_nodejs">
+<a href="#cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpusharecount_nodejs">
+<a href="#cpusharecount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpusharelevel_nodejs">
+<a href="#cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="datacenterid_nodejs">
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
 </span> 
@@ -310,11 +1253,258 @@ For default datacenters, use the `id` attribute from an empty
 
     <dt class="property-optional"
             title="Optional">
+        <span id="efisecurebootenabled_nodejs">
+<a href="#efisecurebootenabled_nodejs" style="color: inherit; text-decoration: inherit;">efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablediskuuid_nodejs">
+<a href="#enablediskuuid_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Disk<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablelogging_nodejs">
+<a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eptrvimode_nodejs">
+<a href="#eptrvimode_nodejs" style="color: inherit; text-decoration: inherit;">ept<wbr>Rvi<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extraconfig_nodejs">
+<a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firmware_nodejs">
+<a href="#firmware_nodejs" style="color: inherit; text-decoration: inherit;">firmware</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="guestid_nodejs">
+<a href="#guestid_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The guest ID of the virtual machine or template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardwareversion_nodejs">
+<a href="#hardwareversion_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The hardware version number on this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hvmode_nodejs">
+<a href="#hvmode_nodejs" style="color: inherit; text-decoration: inherit;">hv<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="idecontrollerscancount_nodejs">
 <a href="#idecontrollerscancount_nodejs" style="color: inherit; text-decoration: inherit;">ide<wbr>Controller<wbr>Scan<wbr>Count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="latencysensitivity_nodejs">
+<a href="#latencysensitivity_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memory_nodejs">
+<a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine's memory, in MB.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryhotaddenabled_nodejs">
+<a href="#memoryhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memorylimit_nodejs">
+<a href="#memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memoryreservation_nodejs">
+<a href="#memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memorysharecount_nodejs">
+<a href="#memorysharecount_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memorysharelevel_nodejs">
+<a href="#memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nestedhvenabled_nodejs">
+<a href="#nestedhvenabled_nodejs" style="color: inherit; text-decoration: inherit;">nested<wbr>Hv<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numcorespersocket_nodejs">
+<a href="#numcorespersocket_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cores<wbr>Per<wbr>Socket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of cores per socket for this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numcpus_nodejs">
+<a href="#numcpus_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The total number of virtual processor cores assigned to this
+virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsafterpoweron_nodejs">
+<a href="#runtoolsscriptsafterpoweron_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsafterresume_nodejs">
+<a href="#runtoolsscriptsafterresume_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsbeforeguestreboot_nodejs">
+<a href="#runtoolsscriptsbeforeguestreboot_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsbeforeguestshutdown_nodejs">
+<a href="#runtoolsscriptsbeforeguestshutdown_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="runtoolsscriptsbeforegueststandby_nodejs">
+<a href="#runtoolsscriptsbeforegueststandby_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -340,6 +1530,46 @@ For default datacenters, use the `id` attribute from an empty
 scan for disk attributes and controller types on. Default: `1`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storagepolicyid_nodejs">
+<a href="#storagepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swapplacementpolicy_nodejs">
+<a href="#swapplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>Placement<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="synctimewithhost_nodejs">
+<a href="#synctimewithhost_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Time<wbr>With<wbr>Host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vapp_nodejs">
+<a href="#vapp_nodejs" style="color: inherit; text-decoration: inherit;">vapp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinevapp">Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -361,6 +1591,129 @@ path.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="alternate_guest_name_python">
+<a href="#alternate_guest_name_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>guest_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alternate guest name of the virtual machine when
+guest_id is a non-specific operating system, like `otherGuest`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotation_python">
+<a href="#annotation_python" style="color: inherit; text-decoration: inherit;">annotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The user-provided description of this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="boot_delay_python">
+<a href="#boot_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="boot_retry_delay_python">
+<a href="#boot_retry_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="boot_retry_enabled_python">
+<a href="#boot_retry_enabled_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_hot_add_enabled_python">
+<a href="#cpu_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>add_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_hot_remove_enabled_python">
+<a href="#cpu_hot_remove_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>remove_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_limit_python">
+<a href="#cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_performance_counters_enabled_python">
+<a href="#cpu_performance_counters_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>performance_<wbr>counters_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_reservation_python">
+<a href="#cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_share_count_python">
+<a href="#cpu_share_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_share_level_python">
+<a href="#cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="datacenter_id_python">
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
 </span> 
@@ -376,11 +1729,258 @@ For default datacenters, use the `id` attribute from an empty
 
     <dt class="property-optional"
             title="Optional">
+        <span id="efi_secure_boot_enabled_python">
+<a href="#efi_secure_boot_enabled_python" style="color: inherit; text-decoration: inherit;">efi_<wbr>secure_<wbr>boot_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_disk_uuid_python">
+<a href="#enable_disk_uuid_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>disk_<wbr>uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_logging_python">
+<a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ept_rvi_mode_python">
+<a href="#ept_rvi_mode_python" style="color: inherit; text-decoration: inherit;">ept_<wbr>rvi_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extra_config_python">
+<a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firmware_python">
+<a href="#firmware_python" style="color: inherit; text-decoration: inherit;">firmware</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="guest_id_python">
+<a href="#guest_id_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The guest ID of the virtual machine or template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardware_version_python">
+<a href="#hardware_version_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The hardware version number on this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hv_mode_python">
+<a href="#hv_mode_python" style="color: inherit; text-decoration: inherit;">hv_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ide_controller_scan_count_python">
 <a href="#ide_controller_scan_count_python" style="color: inherit; text-decoration: inherit;">ide_<wbr>controller_<wbr>scan_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="latency_sensitivity_python">
+<a href="#latency_sensitivity_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memory_python">
+<a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine's memory, in MB.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memory_hot_add_enabled_python">
+<a href="#memory_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>hot_<wbr>add_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memory_limit_python">
+<a href="#memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memory_reservation_python">
+<a href="#memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memory_share_count_python">
+<a href="#memory_share_count_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="memory_share_level_python">
+<a href="#memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nested_hv_enabled_python">
+<a href="#nested_hv_enabled_python" style="color: inherit; text-decoration: inherit;">nested_<wbr>hv_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="num_cores_per_socket_python">
+<a href="#num_cores_per_socket_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cores_<wbr>per_<wbr>socket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of cores per socket for this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="num_cpus_python">
+<a href="#num_cpus_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The total number of virtual processor cores assigned to this
+virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_tools_scripts_after_power_on_python">
+<a href="#run_tools_scripts_after_power_on_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>power_<wbr>on</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_tools_scripts_after_resume_python">
+<a href="#run_tools_scripts_after_resume_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>resume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_tools_scripts_before_guest_reboot_python">
+<a href="#run_tools_scripts_before_guest_reboot_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_tools_scripts_before_guest_shutdown_python">
+<a href="#run_tools_scripts_before_guest_shutdown_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>shutdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="run_tools_scripts_before_guest_standby_python">
+<a href="#run_tools_scripts_before_guest_standby_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>standby</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -406,6 +2006,46 @@ For default datacenters, use the `id` attribute from an empty
 scan for disk attributes and controller types on. Default: `1`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_policy_id_python">
+<a href="#storage_policy_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>policy_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swap_placement_policy_python">
+<a href="#swap_placement_policy_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>placement_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_time_with_host_python">
+<a href="#sync_time_with_host_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vapp_python">
+<a href="#vapp_python" style="color: inherit; text-decoration: inherit;">vapp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinevapp">Dict[Get<wbr>Virtual<wbr>Machine<wbr>Vapp]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -428,15 +2068,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="alternateguestname_csharp">
-<a href="#alternateguestname_csharp" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
+        <span id="changeversion_csharp">
+<a href="#changeversion_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The alternate guest name of the virtual machine when
-guest_id is a non-specific operating system, like `otherGuest`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpusharecount_csharp">
+<a href="#cpusharecount_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -454,17 +2102,6 @@ performing a linked clone, as all settings that are output by this data
 source must be the same on the destination virtual machine as the source.
 Only the first number of controllers defined by `scsi_controller_scan_count`
 are scanned for disks. The sub-attributes are:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="firmware_csharp">
-<a href="#firmware_csharp" style="color: inherit; text-decoration: inherit;">Firmware</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -491,6 +2128,17 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
+        <span id="hardwareversion_csharp">
+<a href="#hardwareversion_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The hardware version number on this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -499,6 +2147,16 @@ are scanned for disks. The sub-attributes are:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memorysharecount_csharp">
+<a href="#memorysharecount_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -553,8 +2211,212 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
+        <span id="uuid_csharp">
+<a href="#uuid_csharp" style="color: inherit; text-decoration: inherit;">Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="vapptransports_csharp">
+<a href="#vapptransports_csharp" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Transports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="alternateguestname_csharp">
+<a href="#alternateguestname_csharp" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alternate guest name of the virtual machine when
+guest_id is a non-specific operating system, like `otherGuest`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="annotation_csharp">
+<a href="#annotation_csharp" style="color: inherit; text-decoration: inherit;">Annotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user-provided description of this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="bootdelay_csharp">
+<a href="#bootdelay_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="bootretrydelay_csharp">
+<a href="#bootretrydelay_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="bootretryenabled_csharp">
+<a href="#bootretryenabled_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpuhotaddenabled_csharp">
+<a href="#cpuhotaddenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpuhotremoveenabled_csharp">
+<a href="#cpuhotremoveenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpulimit_csharp">
+<a href="#cpulimit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpuperformancecountersenabled_csharp">
+<a href="#cpuperformancecountersenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpureservation_csharp">
+<a href="#cpureservation_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpusharelevel_csharp">
+<a href="#cpusharelevel_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="datacenterid_csharp">
 <a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="efisecurebootenabled_csharp">
+<a href="#efisecurebootenabled_csharp" style="color: inherit; text-decoration: inherit;">Efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enablediskuuid_csharp">
+<a href="#enablediskuuid_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enablelogging_csharp">
+<a href="#enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="eptrvimode_csharp">
+<a href="#eptrvimode_csharp" style="color: inherit; text-decoration: inherit;">Ept<wbr>Rvi<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="extraconfig_csharp">
+<a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="firmware_csharp">
+<a href="#firmware_csharp" style="color: inherit; text-decoration: inherit;">Firmware</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="hvmode_csharp">
+<a href="#hvmode_csharp" style="color: inherit; text-decoration: inherit;">Hv<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -568,6 +2430,150 @@ defined by `scsi_controller_scan_count` are scanned.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="latencysensitivity_csharp">
+<a href="#latencysensitivity_csharp" style="color: inherit; text-decoration: inherit;">Latency<wbr>Sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memory_csharp">
+<a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine's memory, in MB.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memoryhotaddenabled_csharp">
+<a href="#memoryhotaddenabled_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memorylimit_csharp">
+<a href="#memorylimit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memoryreservation_csharp">
+<a href="#memoryreservation_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memorysharelevel_csharp">
+<a href="#memorysharelevel_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="nestedhvenabled_csharp">
+<a href="#nestedhvenabled_csharp" style="color: inherit; text-decoration: inherit;">Nested<wbr>Hv<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="numcorespersocket_csharp">
+<a href="#numcorespersocket_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Cores<wbr>Per<wbr>Socket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of cores per socket for this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="numcpus_csharp">
+<a href="#numcpus_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total number of virtual processor cores assigned to this
+virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsafterpoweron_csharp">
+<a href="#runtoolsscriptsafterpoweron_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsafterresume_csharp">
+<a href="#runtoolsscriptsafterresume_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsbeforeguestreboot_csharp">
+<a href="#runtoolsscriptsbeforeguestreboot_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsbeforeguestshutdown_csharp">
+<a href="#runtoolsscriptsbeforeguestshutdown_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsbeforegueststandby_csharp">
+<a href="#runtoolsscriptsbeforegueststandby_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -591,6 +2597,46 @@ defined by `scsi_controller_scan_count` are scanned.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="storagepolicyid_csharp">
+<a href="#storagepolicyid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="swapplacementpolicy_csharp">
+<a href="#swapplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Swap<wbr>Placement<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="synctimewithhost_csharp">
+<a href="#synctimewithhost_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="vapp_csharp">
+<a href="#vapp_csharp" style="color: inherit; text-decoration: inherit;">Vapp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinevapp">Pulumi.<wbr>VSphere.<wbr>Outputs.<wbr>Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -600,15 +2646,23 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span id="alternateguestname_go">
-<a href="#alternateguestname_go" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
+        <span id="changeversion_go">
+<a href="#changeversion_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alternate guest name of the virtual machine when
-guest_id is a non-specific operating system, like `otherGuest`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpusharecount_go">
+<a href="#cpusharecount_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -626,17 +2680,6 @@ performing a linked clone, as all settings that are output by this data
 source must be the same on the destination virtual machine as the source.
 Only the first number of controllers defined by `scsi_controller_scan_count`
 are scanned for disks. The sub-attributes are:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="firmware_go">
-<a href="#firmware_go" style="color: inherit; text-decoration: inherit;">Firmware</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -663,6 +2706,17 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
+        <span id="hardwareversion_go">
+<a href="#hardwareversion_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The hardware version number on this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -671,6 +2725,16 @@ are scanned for disks. The sub-attributes are:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memorysharecount_go">
+<a href="#memorysharecount_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -725,8 +2789,212 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
+        <span id="uuid_go">
+<a href="#uuid_go" style="color: inherit; text-decoration: inherit;">Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="vapptransports_go">
+<a href="#vapptransports_go" style="color: inherit; text-decoration: inherit;">Vapp<wbr>Transports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="alternateguestname_go">
+<a href="#alternateguestname_go" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Guest<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alternate guest name of the virtual machine when
+guest_id is a non-specific operating system, like `otherGuest`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="annotation_go">
+<a href="#annotation_go" style="color: inherit; text-decoration: inherit;">Annotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user-provided description of this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="bootdelay_go">
+<a href="#bootdelay_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="bootretrydelay_go">
+<a href="#bootretrydelay_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="bootretryenabled_go">
+<a href="#bootretryenabled_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Retry<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpuhotaddenabled_go">
+<a href="#cpuhotaddenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpuhotremoveenabled_go">
+<a href="#cpuhotremoveenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpulimit_go">
+<a href="#cpulimit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpuperformancecountersenabled_go">
+<a href="#cpuperformancecountersenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpureservation_go">
+<a href="#cpureservation_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpusharelevel_go">
+<a href="#cpusharelevel_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="datacenterid_go">
 <a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="efisecurebootenabled_go">
+<a href="#efisecurebootenabled_go" style="color: inherit; text-decoration: inherit;">Efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enablediskuuid_go">
+<a href="#enablediskuuid_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enablelogging_go">
+<a href="#enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="eptrvimode_go">
+<a href="#eptrvimode_go" style="color: inherit; text-decoration: inherit;">Ept<wbr>Rvi<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="extraconfig_go">
+<a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="firmware_go">
+<a href="#firmware_go" style="color: inherit; text-decoration: inherit;">Firmware</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="hvmode_go">
+<a href="#hvmode_go" style="color: inherit; text-decoration: inherit;">Hv<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -740,6 +3008,150 @@ defined by `scsi_controller_scan_count` are scanned.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="latencysensitivity_go">
+<a href="#latencysensitivity_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memory_go">
+<a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine's memory, in MB.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memoryhotaddenabled_go">
+<a href="#memoryhotaddenabled_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memorylimit_go">
+<a href="#memorylimit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memoryreservation_go">
+<a href="#memoryreservation_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memorysharelevel_go">
+<a href="#memorysharelevel_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="nestedhvenabled_go">
+<a href="#nestedhvenabled_go" style="color: inherit; text-decoration: inherit;">Nested<wbr>Hv<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="numcorespersocket_go">
+<a href="#numcorespersocket_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Cores<wbr>Per<wbr>Socket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of cores per socket for this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="numcpus_go">
+<a href="#numcpus_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The total number of virtual processor cores assigned to this
+virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsafterpoweron_go">
+<a href="#runtoolsscriptsafterpoweron_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsafterresume_go">
+<a href="#runtoolsscriptsafterresume_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsbeforeguestreboot_go">
+<a href="#runtoolsscriptsbeforeguestreboot_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsbeforeguestshutdown_go">
+<a href="#runtoolsscriptsbeforeguestshutdown_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsbeforegueststandby_go">
+<a href="#runtoolsscriptsbeforegueststandby_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -763,6 +3175,46 @@ defined by `scsi_controller_scan_count` are scanned.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="storagepolicyid_go">
+<a href="#storagepolicyid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="swapplacementpolicy_go">
+<a href="#swapplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Swap<wbr>Placement<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="synctimewithhost_go">
+<a href="#synctimewithhost_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="vapp_go">
+<a href="#vapp_go" style="color: inherit; text-decoration: inherit;">Vapp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinevapp">Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -772,15 +3224,23 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span id="alternateguestname_nodejs">
-<a href="#alternateguestname_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Guest<wbr>Name</a>
+        <span id="changeversion_nodejs">
+<a href="#changeversion_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The alternate guest name of the virtual machine when
-guest_id is a non-specific operating system, like `otherGuest`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpusharecount_nodejs">
+<a href="#cpusharecount_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -798,17 +3258,6 @@ performing a linked clone, as all settings that are output by this data
 source must be the same on the destination virtual machine as the source.
 Only the first number of controllers defined by `scsi_controller_scan_count`
 are scanned for disks. The sub-attributes are:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="firmware_nodejs">
-<a href="#firmware_nodejs" style="color: inherit; text-decoration: inherit;">firmware</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -835,6 +3284,17 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
+        <span id="hardwareversion_nodejs">
+<a href="#hardwareversion_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The hardware version number on this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -843,6 +3303,16 @@ are scanned for disks. The sub-attributes are:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memorysharecount_nodejs">
+<a href="#memorysharecount_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -897,8 +3367,212 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
+        <span id="uuid_nodejs">
+<a href="#uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="vapptransports_nodejs">
+<a href="#vapptransports_nodejs" style="color: inherit; text-decoration: inherit;">vapp<wbr>Transports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="alternateguestname_nodejs">
+<a href="#alternateguestname_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Guest<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The alternate guest name of the virtual machine when
+guest_id is a non-specific operating system, like `otherGuest`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="annotation_nodejs">
+<a href="#annotation_nodejs" style="color: inherit; text-decoration: inherit;">annotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user-provided description of this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="bootdelay_nodejs">
+<a href="#bootdelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="bootretrydelay_nodejs">
+<a href="#bootretrydelay_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="bootretryenabled_nodejs">
+<a href="#bootretryenabled_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Retry<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpuhotaddenabled_nodejs">
+<a href="#cpuhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpuhotremoveenabled_nodejs">
+<a href="#cpuhotremoveenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Hot<wbr>Remove<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpulimit_nodejs">
+<a href="#cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpuperformancecountersenabled_nodejs">
+<a href="#cpuperformancecountersenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Performance<wbr>Counters<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpureservation_nodejs">
+<a href="#cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpusharelevel_nodejs">
+<a href="#cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="datacenterid_nodejs">
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="efisecurebootenabled_nodejs">
+<a href="#efisecurebootenabled_nodejs" style="color: inherit; text-decoration: inherit;">efi<wbr>Secure<wbr>Boot<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enablediskuuid_nodejs">
+<a href="#enablediskuuid_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Disk<wbr>Uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enablelogging_nodejs">
+<a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="eptrvimode_nodejs">
+<a href="#eptrvimode_nodejs" style="color: inherit; text-decoration: inherit;">ept<wbr>Rvi<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="extraconfig_nodejs">
+<a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="firmware_nodejs">
+<a href="#firmware_nodejs" style="color: inherit; text-decoration: inherit;">firmware</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="hvmode_nodejs">
+<a href="#hvmode_nodejs" style="color: inherit; text-decoration: inherit;">hv<wbr>Mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -912,6 +3586,150 @@ defined by `scsi_controller_scan_count` are scanned.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="latencysensitivity_nodejs">
+<a href="#latencysensitivity_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memory_nodejs">
+<a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine's memory, in MB.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memoryhotaddenabled_nodejs">
+<a href="#memoryhotaddenabled_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Hot<wbr>Add<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memorylimit_nodejs">
+<a href="#memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memoryreservation_nodejs">
+<a href="#memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memorysharelevel_nodejs">
+<a href="#memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="nestedhvenabled_nodejs">
+<a href="#nestedhvenabled_nodejs" style="color: inherit; text-decoration: inherit;">nested<wbr>Hv<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="numcorespersocket_nodejs">
+<a href="#numcorespersocket_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cores<wbr>Per<wbr>Socket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of cores per socket for this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="numcpus_nodejs">
+<a href="#numcpus_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The total number of virtual processor cores assigned to this
+virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsafterpoweron_nodejs">
+<a href="#runtoolsscriptsafterpoweron_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Power<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsafterresume_nodejs">
+<a href="#runtoolsscriptsafterresume_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>After<wbr>Resume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsbeforeguestreboot_nodejs">
+<a href="#runtoolsscriptsbeforeguestreboot_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsbeforeguestshutdown_nodejs">
+<a href="#runtoolsscriptsbeforeguestshutdown_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Shutdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="runtoolsscriptsbeforegueststandby_nodejs">
+<a href="#runtoolsscriptsbeforegueststandby_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Tools<wbr>Scripts<wbr>Before<wbr>Guest<wbr>Standby</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -935,6 +3753,46 @@ defined by `scsi_controller_scan_count` are scanned.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span id="storagepolicyid_nodejs">
+<a href="#storagepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="swapplacementpolicy_nodejs">
+<a href="#swapplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>Placement<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="synctimewithhost_nodejs">
+<a href="#synctimewithhost_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Time<wbr>With<wbr>Host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="vapp_nodejs">
+<a href="#vapp_nodejs" style="color: inherit; text-decoration: inherit;">vapp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinevapp">Get<wbr>Virtual<wbr>Machine<wbr>Vapp</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -944,15 +3802,23 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span id="alternate_guest_name_python">
-<a href="#alternate_guest_name_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>guest_<wbr>name</a>
+        <span id="change_version_python">
+<a href="#change_version_python" style="color: inherit; text-decoration: inherit;">change_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The alternate guest name of the virtual machine when
-guest_id is a non-specific operating system, like `otherGuest`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpu_share_count_python">
+<a href="#cpu_share_count_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -970,17 +3836,6 @@ performing a linked clone, as all settings that are output by this data
 source must be the same on the destination virtual machine as the source.
 Only the first number of controllers defined by `scsi_controller_scan_count`
 are scanned for disks. The sub-attributes are:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="firmware_python">
-<a href="#firmware_python" style="color: inherit; text-decoration: inherit;">firmware</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1007,6 +3862,17 @@ are scanned for disks. The sub-attributes are:
 
     <dt class="property-"
             title="">
+        <span id="hardware_version_python">
+<a href="#hardware_version_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The hardware version number on this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -1015,6 +3881,16 @@ are scanned for disks. The sub-attributes are:
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memory_share_count_python">
+<a href="#memory_share_count_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1069,8 +3945,212 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
+        <span id="uuid_python">
+<a href="#uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="vapp_transports_python">
+<a href="#vapp_transports_python" style="color: inherit; text-decoration: inherit;">vapp_<wbr>transports</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="alternate_guest_name_python">
+<a href="#alternate_guest_name_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>guest_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The alternate guest name of the virtual machine when
+guest_id is a non-specific operating system, like `otherGuest`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="annotation_python">
+<a href="#annotation_python" style="color: inherit; text-decoration: inherit;">annotation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The user-provided description of this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="boot_delay_python">
+<a href="#boot_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="boot_retry_delay_python">
+<a href="#boot_retry_delay_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>delay</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="boot_retry_enabled_python">
+<a href="#boot_retry_enabled_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>retry_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpu_hot_add_enabled_python">
+<a href="#cpu_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>add_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpu_hot_remove_enabled_python">
+<a href="#cpu_hot_remove_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>hot_<wbr>remove_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpu_limit_python">
+<a href="#cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpu_performance_counters_enabled_python">
+<a href="#cpu_performance_counters_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>performance_<wbr>counters_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpu_reservation_python">
+<a href="#cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="cpu_share_level_python">
+<a href="#cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="datacenter_id_python">
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="efi_secure_boot_enabled_python">
+<a href="#efi_secure_boot_enabled_python" style="color: inherit; text-decoration: inherit;">efi_<wbr>secure_<wbr>boot_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enable_disk_uuid_python">
+<a href="#enable_disk_uuid_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>disk_<wbr>uuid</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="enable_logging_python">
+<a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="ept_rvi_mode_python">
+<a href="#ept_rvi_mode_python" style="color: inherit; text-decoration: inherit;">ept_<wbr>rvi_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="extra_config_python">
+<a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="firmware_python">
+<a href="#firmware_python" style="color: inherit; text-decoration: inherit;">firmware</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="hv_mode_python">
+<a href="#hv_mode_python" style="color: inherit; text-decoration: inherit;">hv_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1084,6 +4164,150 @@ defined by `scsi_controller_scan_count` are scanned.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="latency_sensitivity_python">
+<a href="#latency_sensitivity_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>sensitivity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memory_python">
+<a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the virtual machine's memory, in MB.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memory_hot_add_enabled_python">
+<a href="#memory_hot_add_enabled_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>hot_<wbr>add_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memory_limit_python">
+<a href="#memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memory_reservation_python">
+<a href="#memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="memory_share_level_python">
+<a href="#memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="nested_hv_enabled_python">
+<a href="#nested_hv_enabled_python" style="color: inherit; text-decoration: inherit;">nested_<wbr>hv_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="num_cores_per_socket_python">
+<a href="#num_cores_per_socket_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cores_<wbr>per_<wbr>socket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of cores per socket for this virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="num_cpus_python">
+<a href="#num_cpus_python" style="color: inherit; text-decoration: inherit;">num_<wbr>cpus</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The total number of virtual processor cores assigned to this
+virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="run_tools_scripts_after_power_on_python">
+<a href="#run_tools_scripts_after_power_on_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>power_<wbr>on</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="run_tools_scripts_after_resume_python">
+<a href="#run_tools_scripts_after_resume_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>after_<wbr>resume</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="run_tools_scripts_before_guest_reboot_python">
+<a href="#run_tools_scripts_before_guest_reboot_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>reboot</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="run_tools_scripts_before_guest_shutdown_python">
+<a href="#run_tools_scripts_before_guest_shutdown_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>shutdown</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="run_tools_scripts_before_guest_standby_python">
+<a href="#run_tools_scripts_before_guest_standby_python" style="color: inherit; text-decoration: inherit;">run_<wbr>tools_<wbr>scripts_<wbr>before_<wbr>guest_<wbr>standby</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1104,6 +4328,46 @@ defined by `scsi_controller_scan_count` are scanned.
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="storage_policy_id_python">
+<a href="#storage_policy_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>policy_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="swap_placement_policy_python">
+<a href="#swap_placement_policy_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>placement_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sync_time_with_host_python">
+<a href="#sync_time_with_host_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="vapp_python">
+<a href="#vapp_python" style="color: inherit; text-decoration: inherit;">vapp</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvirtualmachinevapp">Dict[Get<wbr>Virtual<wbr>Machine<wbr>Vapp]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1151,6 +4415,17 @@ defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-required"
             title="Required">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label for the disk.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span> 
@@ -1171,6 +4446,17 @@ defined by `scsi_controller_scan_count` are scanned.
     <dd>{{% md %}}Set to `true` if the disk has been thin provisioned.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="unitnumber_csharp">
+<a href="#unitnumber_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The disk number on the storage bus.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1187,6 +4473,17 @@ defined by `scsi_controller_scan_count` are scanned.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been eager zeroed.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label for the disk.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1211,6 +4508,17 @@ defined by `scsi_controller_scan_count` are scanned.
     <dd>{{% md %}}Set to `true` if the disk has been thin provisioned.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="unitnumber_go">
+<a href="#unitnumber_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The disk number on the storage bus.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1227,6 +4535,17 @@ defined by `scsi_controller_scan_count` are scanned.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been eager zeroed.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The label for the disk.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1251,6 +4570,17 @@ defined by `scsi_controller_scan_count` are scanned.
     <dd>{{% md %}}Set to `true` if the disk has been thin provisioned.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="unitnumber_nodejs">
+<a href="#unitnumber_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The disk number on the storage bus.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1267,6 +4597,17 @@ defined by `scsi_controller_scan_count` are scanned.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been eager zeroed.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The label for the disk.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1290,6 +4631,103 @@ defined by `scsi_controller_scan_count` are scanned.
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been thin provisioned.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unitnumber_python">
+<a href="#unitnumber_python" style="color: inherit; text-decoration: inherit;">unit<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The disk number on the storage bus.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getvirtualmachinevapp">Get<wbr>Virtual<wbr>Machine<wbr>Vapp</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#GetVirtualMachineVapp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#GetVirtualMachineVapp">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVirtualMachineVappArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVirtualMachineVapp">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Inputs.GetVirtualMachineVappArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.Outputs.GetVirtualMachineVapp.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

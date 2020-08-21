@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/vsphere | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/vsphere package."
-git_sha: "5000461cdebb84f25ea1928e1e1f4a45bb6c1311"
+git_sha: "dac69a3bf037c08e4f6dc283282d6e329f2187b8"
 block_external_search_index: true
 ---
 
