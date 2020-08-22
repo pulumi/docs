@@ -1,16 +1,3 @@
-<!-- Our JavaScript bundle. -->
-<script src="{{ getenv "REL_JS_BUNDLE" }}"></script>
-
-<script>
-    Sentry.init({
-        dsn: "https://02614bf2f18e4615a73218b810563ced@o433463.ingest.sentry.io/5388693",
-        environment: "{{ hugo.Environment }}",
-        {{ if in "preview production" hugo.Environment }}
-            release: "{{ getenv "ASSET_BUNDLE_ID" }}",
-        {{ end }}
-    });
-</script>
-
 <!--
     These two scripts are provided separately in order to allow browsers to decide which
     component bundle to load. Modern browsers that support web components will load the
