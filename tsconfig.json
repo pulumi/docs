@@ -3,9 +3,11 @@
         "allowJs": true,
         "removeComments": true,
         "sourceMap": true,
-        "sourceRoot": "/"
+        "sourceRoot": "/",
     },
     "files": [
+        "node_modules/jquery/dist/jquery.js",
+        "node_modules/@sentry/browser/build/bundle.js",
         "assets/js/main.js",
         "assets/js/nav.js",
         "assets/js/carousel.js",
