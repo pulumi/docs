@@ -92,8 +92,10 @@ using Pulumi.Okta.User;
 class Program
 {
     static Task Main() =>
-        Deployment.Run(() => {
-            var user = new User.User("example-user", new User.UserArgs{
+        Pulumi.Deployment.RunAsync(() =>
+        {
+            var user = new User("example-user", new UserArgs
+            {
                 FirstName = "random",
                 LastName = "user",
                 Login = "test-user@mydomain.com",
