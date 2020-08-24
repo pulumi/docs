@@ -96,10 +96,10 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_custom_provider = azure.core.CustomProvider("exampleCustomProvider",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    resource_types=[{
-        "name": "dEf1",
-        "endpoint": "https://testendpoint.com/",
-    }])
+    resource_types=[azure.core.CustomProviderResourceTypeArgs(
+        name="dEf1",
+        endpoint="https://testendpoint.com/",
+    )])
 ```
 
 {{% /example %}}
@@ -135,7 +135,7 @@ const exampleCustomProvider = new azure.core.CustomProvider("exampleCustomProvid
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/core/#pulumi_azure.core.CustomProvider">CustomProvider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderAction]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_types</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderResourceType]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">validations</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderValidation]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/core/#pulumi_azure.core.CustomProvider">CustomProvider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderActionArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_types</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderResourceTypeArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validations</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderValidationArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -576,7 +576,7 @@ The CustomProvider resource accepts the following [input]({{< relref "/docs/intr
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprovideraction">List[Custom<wbr>Provider<wbr>Action]</a></span>
+        <span class="property-type"><a href="#customprovideraction">List[Custom<wbr>Provider<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Any number of `action` block as defined below. One of `resource_type` or `action` must be specified.
 {{% /md %}}</dd>
@@ -609,7 +609,7 @@ The CustomProvider resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customproviderresourcetype">List[Custom<wbr>Provider<wbr>Resource<wbr>Type]</a></span>
+        <span class="property-type"><a href="#customproviderresourcetype">List[Custom<wbr>Provider<wbr>Resource<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Any number of `resource_type` block as defined below. One of `resource_type` or `action` must be specified.
 {{% /md %}}</dd>
@@ -620,7 +620,7 @@ The CustomProvider resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -631,7 +631,7 @@ The CustomProvider resource accepts the following [input]({{< relref "/docs/intr
 <a href="#validations_python" style="color: inherit; text-decoration: inherit;">validations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprovidervalidation">List[Custom<wbr>Provider<wbr>Validation]</a></span>
+        <span class="property-type"><a href="#customprovidervalidation">List[Custom<wbr>Provider<wbr>Validation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Any number of `validation` block as defined below.
 {{% /md %}}</dd>
@@ -735,7 +735,7 @@ Get an existing CustomProvider resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderAction]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_types</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderResourceType]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">validations</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderValidation]]</span> = None<span class="p">) -&gt;</span> CustomProvider</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderActionArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_types</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderResourceTypeArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validations</span><span class="p">:</span> <span class="nx">Optional[List[CustomProviderValidationArgs]]</span> = None<span class="p">) -&gt;</span> CustomProvider</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1107,7 +1107,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprovideraction">List[Custom<wbr>Provider<wbr>Action]</a></span>
+        <span class="property-type"><a href="#customprovideraction">List[Custom<wbr>Provider<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Any number of `action` block as defined below. One of `resource_type` or `action` must be specified.
 {{% /md %}}</dd>
@@ -1151,7 +1151,7 @@ The following state arguments are supported:
 <a href="#state_resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customproviderresourcetype">List[Custom<wbr>Provider<wbr>Resource<wbr>Type]</a></span>
+        <span class="property-type"><a href="#customproviderresourcetype">List[Custom<wbr>Provider<wbr>Resource<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Any number of `resource_type` block as defined below. One of `resource_type` or `action` must be specified.
 {{% /md %}}</dd>
@@ -1162,7 +1162,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1173,7 +1173,7 @@ The following state arguments are supported:
 <a href="#state_validations_python" style="color: inherit; text-decoration: inherit;">validations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customprovidervalidation">List[Custom<wbr>Provider<wbr>Validation]</a></span>
+        <span class="property-type"><a href="#customprovidervalidation">List[Custom<wbr>Provider<wbr>Validation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Any number of `validation` block as defined below.
 {{% /md %}}</dd>
@@ -1489,8 +1489,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routingtype_python">
-<a href="#routingtype_python" style="color: inherit; text-decoration: inherit;">routing<wbr>Type</a>
+        <span id="routing_type_python">
+<a href="#routing_type_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

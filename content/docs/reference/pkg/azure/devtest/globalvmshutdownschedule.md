@@ -188,7 +188,7 @@ func main() {
 			return err
 		}
 		_, err = devtest.NewGlobalVMShutdownSchedule(ctx, "exampleGlobalVMShutdownSchedule", &devtest.GlobalVMShutdownScheduleArgs{
-			VirtualMachineId:    pulumi.String(azurerm_virtual_machine.Example.Id),
+			VirtualMachineId:    pulumi.Any(azurerm_virtual_machine.Example.Id),
 			Location:            exampleResourceGroup.Location,
 			Enabled:             pulumi.Bool(true),
 			DailyRecurrenceTime: pulumi.String("1100"),
@@ -226,27 +226,27 @@ example_subnet = azure.network.Subnet("exampleSubnet",
 example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    ip_configurations=[{
-        "name": "testconfiguration1",
-        "subnet_id": example_subnet.id,
-        "privateIpAddressAllocation": "Dynamic",
-    }])
+    ip_configurations=[azure.network.NetworkInterfaceIpConfigurationArgs(
+        name="testconfiguration1",
+        subnet_id=example_subnet.id,
+        private_ip_address_allocation="Dynamic",
+    )])
 example_linux_virtual_machine = azure.compute.LinuxVirtualMachine("exampleLinuxVirtualMachine",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     network_interface_ids=[example_network_interface.id],
     size="Standard_B2s",
-    source_image_reference={
-        "publisher": "Canonical",
-        "offer": "UbuntuServer",
-        "sku": "16.04-LTS",
-        "version": "latest",
-    },
-    os_disk={
-        "name": "myosdisk-%d",
-        "caching": "ReadWrite",
-        "managedDiskType": "Standard_LRS",
-    },
+    source_image_reference=azure.compute.LinuxVirtualMachineSourceImageReferenceArgs(
+        publisher="Canonical",
+        offer="UbuntuServer",
+        sku="16.04-LTS",
+        version="latest",
+    ),
+    os_disk=azure.compute.LinuxVirtualMachineOsDiskArgs(
+        name="myosdisk-%d",
+        caching="ReadWrite",
+        managed_disk_type="Standard_LRS",
+    ),
     admin_username="testadmin",
     admin_password="Password1234!",
     disable_password_authentication=False)
@@ -256,11 +256,11 @@ example_global_vm_shutdown_schedule = azure.devtest.GlobalVMShutdownSchedule("ex
     enabled=True,
     daily_recurrence_time="1100",
     timezone="Pacific Standard Time",
-    notification_settings={
-        "enabled": True,
-        "timeInMinutes": "60",
-        "webhookUrl": "https://sample-webhook-url.example.com",
-    })
+    notification_settings=azure.devtest.GlobalVMShutdownScheduleNotificationSettingsArgs(
+        enabled=True,
+        time_in_minutes=60,
+        webhook_url="https://sample-webhook-url.example.com",
+    ))
 ```
 
 {{% /example %}}
@@ -339,7 +339,7 @@ const exampleGlobalVMShutdownSchedule = new azure.devtest.GlobalVMShutdownSchedu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/devtest/#pulumi_azure.devtest.GlobalVMShutdownSchedule">GlobalVMShutdownSchedule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">daily_recurrence_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[GlobalVMShutdownScheduleNotificationSettings]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/devtest/#pulumi_azure.devtest.GlobalVMShutdownSchedule">GlobalVMShutdownSchedule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">daily_recurrence_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[GlobalVMShutdownScheduleNotificationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -777,7 +777,7 @@ The GlobalVMShutdownSchedule resource accepts the following [input]({{< relref "
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalvmshutdownschedulenotificationsettings">Dict[Global<wbr>VMShutdown<wbr>Schedule<wbr>Notification<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#globalvmshutdownschedulenotificationsettings">Global<wbr>VMShutdown<wbr>Schedule<wbr>Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -831,7 +831,7 @@ The GlobalVMShutdownSchedule resource accepts the following [input]({{< relref "
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -935,7 +935,7 @@ Get an existing GlobalVMShutdownSchedule resource's state with the given name, I
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">daily_recurrence_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[GlobalVMShutdownScheduleNotificationSettings]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GlobalVMShutdownSchedule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">daily_recurrence_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[GlobalVMShutdownScheduleNotificationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GlobalVMShutdownSchedule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1337,7 +1337,7 @@ The following state arguments are supported:
 <a href="#state_notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalvmshutdownschedulenotificationsettings">Dict[Global<wbr>VMShutdown<wbr>Schedule<wbr>Notification<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#globalvmshutdownschedulenotificationsettings">Global<wbr>VMShutdown<wbr>Schedule<wbr>Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1347,7 +1347,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1540,8 +1540,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeinminutes_python">
-<a href="#timeinminutes_python" style="color: inherit; text-decoration: inherit;">time<wbr>In<wbr>Minutes</a>
+        <span id="time_in_minutes_python">
+<a href="#time_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1551,8 +1551,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webhookurl_python">
-<a href="#webhookurl_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Url</a>
+        <span id="webhook_url_python">
+<a href="#webhook_url_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -99,10 +99,10 @@ rg = azure.core.ResourceGroup("rg", location="East US")
 example = azure.kusto.Cluster("example",
     location=rg.location,
     resource_group_name=rg.name,
-    sku={
-        "name": "Standard_D13_v2",
-        "capacity": 2,
-    },
+    sku=azure.kusto.ClusterSkuArgs(
+        name="Standard_D13_v2",
+        capacity=2,
+    ),
     tags={
         "Environment": "Production",
     })
@@ -144,7 +144,7 @@ const example = new azure.kusto.Cluster("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/kusto/#pulumi_azure.kusto.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterIdentity]]</span> = None<span class="p">, </span><span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterOptimizedAutoScale]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterVirtualNetworkConfiguration]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/kusto/#pulumi_azure.kusto.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[ClusterOptimizedAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ClusterSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -816,7 +816,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersku">Dict[Cluster<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#clustersku">Cluster<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
@@ -860,7 +860,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">Dict[Cluster<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A identity block.
 {{% /md %}}</dd>
@@ -904,7 +904,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#optimized_auto_scale_python" style="color: inherit; text-decoration: inherit;">optimized_<wbr>auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteroptimizedautoscale">Dict[Cluster<wbr>Optimized<wbr>Auto<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd>
@@ -915,7 +915,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -937,7 +937,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Dict[Cluster<wbr>Virtual<wbr>Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1140,7 +1140,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_ingestion_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterIdentity]]</span> = None<span class="p">, </span><span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterOptimizedAutoScale]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterSku]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterVirtualNetworkConfiguration]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_ingestion_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[ClusterOptimizedAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ClusterSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1853,7 +1853,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">Dict[Cluster<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A identity block.
 {{% /md %}}</dd>
@@ -1897,7 +1897,7 @@ The following state arguments are supported:
 <a href="#state_optimized_auto_scale_python" style="color: inherit; text-decoration: inherit;">optimized_<wbr>auto_<wbr>scale</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteroptimizedautoscale">Dict[Cluster<wbr>Optimized<wbr>Auto<wbr>Scale]</a></span>
+        <span class="property-type"><a href="#clusteroptimizedautoscale">Cluster<wbr>Optimized<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `optimized_auto_scale` block as defined below.
 {{% /md %}}</dd>
@@ -1919,7 +1919,7 @@ The following state arguments are supported:
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersku">Dict[Cluster<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#clustersku">Cluster<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
@@ -1930,7 +1930,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1963,7 +1963,7 @@ The following state arguments are supported:
 <a href="#state_virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Dict[Cluster<wbr>Virtual<wbr>Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -2178,8 +2178,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityids_python">
-<a href="#identityids_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2323,8 +2323,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="maximuminstances_python">
-<a href="#maximuminstances_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Instances</a>
+        <span id="maximum_instances_python">
+<a href="#maximum_instances_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2334,8 +2334,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="minimuminstances_python">
-<a href="#minimuminstances_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instances</a>
+        <span id="minimum_instances_python">
+<a href="#minimum_instances_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2624,8 +2624,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="datamanagementpublicipid_python">
-<a href="#datamanagementpublicipid_python" style="color: inherit; text-decoration: inherit;">data<wbr>Management<wbr>Public<wbr>Ip<wbr>Id</a>
+        <span id="data_management_public_ip_id_python">
+<a href="#data_management_public_ip_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>management_<wbr>public_<wbr>ip_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2635,8 +2635,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="enginepublicipid_python">
-<a href="#enginepublicipid_python" style="color: inherit; text-decoration: inherit;">engine<wbr>Public<wbr>Ip<wbr>Id</a>
+        <span id="engine_public_ip_id_python">
+<a href="#engine_public_ip_id_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>public_<wbr>ip_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

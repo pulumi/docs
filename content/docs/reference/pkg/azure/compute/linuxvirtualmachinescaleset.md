@@ -128,29 +128,29 @@ example_linux_virtual_machine_scale_set = azure.compute.LinuxVirtualMachineScale
     sku="Standard_F2",
     instances=1,
     admin_username="adminuser",
-    admin_ssh_keys=[{
-        "username": "adminuser",
-        "publicKey": (lambda path: open(path).read())("~/.ssh/id_rsa.pub"),
-    }],
-    source_image_reference={
-        "publisher": "Canonical",
-        "offer": "UbuntuServer",
-        "sku": "16.04-LTS",
-        "version": "latest",
-    },
-    os_disk={
-        "storage_account_type": "Standard_LRS",
-        "caching": "ReadWrite",
-    },
-    network_interfaces=[{
-        "name": "example",
-        "primary": True,
-        "ip_configurations": [{
+    admin_ssh_keys=[azure.compute.LinuxVirtualMachineScaleSetAdminSshKeyArgs(
+        username="adminuser",
+        public_key=(lambda path: open(path).read())("~/.ssh/id_rsa.pub"),
+    )],
+    source_image_reference=azure.compute.LinuxVirtualMachineScaleSetSourceImageReferenceArgs(
+        publisher="Canonical",
+        offer="UbuntuServer",
+        sku="16.04-LTS",
+        version="latest",
+    ),
+    os_disk=azure.compute.LinuxVirtualMachineScaleSetOsDiskArgs(
+        storage_account_type="Standard_LRS",
+        caching="ReadWrite",
+    ),
+    network_interfaces=[azure.compute.LinuxVirtualMachineScaleSetNetworkInterfaceArgs(
+        name="example",
+        primary=True,
+        ip_configurations=[{
             "name": "internal",
             "primary": True,
             "subnet_id": internal.id,
         }],
-    }])
+    )])
 ```
 
 {{% /example %}}
@@ -219,7 +219,7 @@ const exampleLinuxVirtualMachineScaleSet = new azure.compute.LinuxVirtualMachine
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.LinuxVirtualMachineScaleSet">LinuxVirtualMachineScaleSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetAdditionalCapabilities]]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_ssh_keys</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetAdminSshKey]]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_instance_repair</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetAutomaticInstanceRepair]]</span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy]]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetBootDiagnostics]]</span> = None<span class="p">, </span><span class="nx">computer_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetDataDisk]]</span> = None<span class="p">, </span><span class="nx">disable_password_authentication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">do_not_run_extensions_on_overprovisioned_machines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetIdentity]]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetOsDisk]]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetPlan]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetRollingUpgradePolicy]]</span> = None<span class="p">, </span><span class="nx">scale_in_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetSecret]]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetSourceImageReference]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">terminate_notification</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetTerminateNotification]]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_balance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.LinuxVirtualMachineScaleSet">LinuxVirtualMachineScaleSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetAdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_ssh_keys</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetAdminSshKeyArgs]]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_instance_repair</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetAutomaticInstanceRepairArgs]</span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">computer_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">disable_password_authentication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">do_not_run_extensions_on_overprovisioned_machines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetPlanArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">scale_in_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetSecretArgs]]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetSourceImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">terminate_notification</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetTerminateNotificationArgs]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_balance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1724,7 +1724,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetnetworkinterface">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetnetworkinterface">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` blocks as defined below.
 {{% /md %}}</dd>
@@ -1735,7 +1735,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetosdisk">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetosdisk">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_disk` block as defined below.
 {{% /md %}}</dd>
@@ -1768,7 +1768,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetadditionalcapabilities">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetadditionalcapabilities">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block as defined below.
 {{% /md %}}</dd>
@@ -1790,7 +1790,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#admin_ssh_keys_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetadminsshkey">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Admin<wbr>Ssh<wbr>Key]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetadminsshkey">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Admin<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `admin_ssh_key` blocks as defined below.
 {{% /md %}}</dd>
@@ -1801,7 +1801,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#automatic_instance_repair_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>instance_<wbr>repair</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetautomaticinstancerepair">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetautomaticinstancerepair">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `automatic_instance_repair` block as defined below. To enable the automatic instance repair, this Virtual Machine Scale Set must have a valid `health_probe_id` or an [Application Health Extension](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-health-extension).
 {{% /md %}}</dd>
@@ -1812,7 +1812,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#automatic_os_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetautomaticosupgradepolicy">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetautomaticosupgradepolicy">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `automatic_os_upgrade_policy` block as defined below. This is Required and can only be specified when `upgrade_mode` is set to `Automatic`.
 {{% /md %}}</dd>
@@ -1823,7 +1823,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetbootdiagnostics">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetbootdiagnostics">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block as defined below.
 {{% /md %}}</dd>
@@ -1856,7 +1856,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetdatadisk">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetdatadisk">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` blocks as defined below.
 {{% /md %}}</dd>
@@ -1911,7 +1911,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetidentity">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetidentity">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd>
@@ -1966,7 +1966,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetplan">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetplan">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2009,7 +2009,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetrollingupgradepolicy">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetrollingupgradepolicy">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd>
@@ -2031,7 +2031,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetsecret">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetsecret">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `secret` blocks as defined below.
 {{% /md %}}</dd>
@@ -2064,7 +2064,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#source_image_reference_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetsourceimagereference">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetsourceimagereference">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source_image_reference` block as defined below.
 {{% /md %}}</dd>
@@ -2075,7 +2075,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to this Virtual Machine Scale Set.
 {{% /md %}}</dd>
@@ -2086,7 +2086,7 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 <a href="#terminate_notification_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>notification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetterminatenotification">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetterminatenotification">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `terminate_notification` block as defined below.
 {{% /md %}}</dd>
@@ -2267,7 +2267,7 @@ Get an existing LinuxVirtualMachineScaleSet resource's state with the given name
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetAdditionalCapabilities]]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_ssh_keys</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetAdminSshKey]]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_instance_repair</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetAutomaticInstanceRepair]]</span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy]]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetBootDiagnostics]]</span> = None<span class="p">, </span><span class="nx">computer_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetDataDisk]]</span> = None<span class="p">, </span><span class="nx">disable_password_authentication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">do_not_run_extensions_on_overprovisioned_machines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetIdentity]]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetOsDisk]]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetPlan]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetRollingUpgradePolicy]]</span> = None<span class="p">, </span><span class="nx">scale_in_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetSecret]]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetSourceImageReference]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">terminate_notification</span><span class="p">:</span> <span class="nx">Optional[Dict[LinuxVirtualMachineScaleSetTerminateNotification]]</span> = None<span class="p">, </span><span class="nx">unique_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_balance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> LinuxVirtualMachineScaleSet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetAdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_ssh_keys</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetAdminSshKeyArgs]]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">automatic_instance_repair</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetAutomaticInstanceRepairArgs]</span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">computer_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">disable_password_authentication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">do_not_run_extensions_on_overprovisioned_machines</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetPlanArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">scale_in_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[List[LinuxVirtualMachineScaleSetSecretArgs]]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetSourceImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">terminate_notification</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineScaleSetTerminateNotificationArgs]</span> = None<span class="p">, </span><span class="nx">unique_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_balance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> LinuxVirtualMachineScaleSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3725,7 +3725,7 @@ The following state arguments are supported:
 <a href="#state_additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetadditionalcapabilities">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetadditionalcapabilities">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block as defined below.
 {{% /md %}}</dd>
@@ -3747,7 +3747,7 @@ The following state arguments are supported:
 <a href="#state_admin_ssh_keys_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetadminsshkey">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Admin<wbr>Ssh<wbr>Key]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetadminsshkey">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Admin<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `admin_ssh_key` blocks as defined below.
 {{% /md %}}</dd>
@@ -3769,7 +3769,7 @@ The following state arguments are supported:
 <a href="#state_automatic_instance_repair_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>instance_<wbr>repair</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetautomaticinstancerepair">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetautomaticinstancerepair">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Instance<wbr>Repair<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `automatic_instance_repair` block as defined below. To enable the automatic instance repair, this Virtual Machine Scale Set must have a valid `health_probe_id` or an [Application Health Extension](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-health-extension).
 {{% /md %}}</dd>
@@ -3780,7 +3780,7 @@ The following state arguments are supported:
 <a href="#state_automatic_os_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetautomaticosupgradepolicy">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetautomaticosupgradepolicy">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `automatic_os_upgrade_policy` block as defined below. This is Required and can only be specified when `upgrade_mode` is set to `Automatic`.
 {{% /md %}}</dd>
@@ -3791,7 +3791,7 @@ The following state arguments are supported:
 <a href="#state_boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetbootdiagnostics">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetbootdiagnostics">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block as defined below.
 {{% /md %}}</dd>
@@ -3824,7 +3824,7 @@ The following state arguments are supported:
 <a href="#state_data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetdatadisk">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetdatadisk">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` blocks as defined below.
 {{% /md %}}</dd>
@@ -3879,7 +3879,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetidentity">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetidentity">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd>
@@ -3934,7 +3934,7 @@ The following state arguments are supported:
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetnetworkinterface">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetnetworkinterface">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` blocks as defined below.
 {{% /md %}}</dd>
@@ -3945,7 +3945,7 @@ The following state arguments are supported:
 <a href="#state_os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetosdisk">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetosdisk">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `os_disk` block as defined below.
 {{% /md %}}</dd>
@@ -3967,7 +3967,7 @@ The following state arguments are supported:
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetplan">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetplan">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4021,7 +4021,7 @@ The following state arguments are supported:
 <a href="#state_rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetrollingupgradepolicy">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetrollingupgradepolicy">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is Required and can only be specified when `upgrade_mode` is set to `Automatic` or `Rolling`.
 {{% /md %}}</dd>
@@ -4043,7 +4043,7 @@ The following state arguments are supported:
 <a href="#state_secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetsecret">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetsecret">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `secret` blocks as defined below.
 {{% /md %}}</dd>
@@ -4087,7 +4087,7 @@ The following state arguments are supported:
 <a href="#state_source_image_reference_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetsourceimagereference">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetsourceimagereference">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source_image_reference` block as defined below.
 {{% /md %}}</dd>
@@ -4098,7 +4098,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to this Virtual Machine Scale Set.
 {{% /md %}}</dd>
@@ -4109,7 +4109,7 @@ The following state arguments are supported:
 <a href="#state_terminate_notification_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>notification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetterminatenotification">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetterminatenotification">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `terminate_notification` block as defined below.
 {{% /md %}}</dd>
@@ -4247,8 +4247,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ultrassdenabled_python">
-<a href="#ultrassdenabled_python" style="color: inherit; text-decoration: inherit;">ultra<wbr>Ssd<wbr>Enabled</a>
+        <span id="ultra_ssd_enabled_python">
+<a href="#ultra_ssd_enabled_python" style="color: inherit; text-decoration: inherit;">ultra_<wbr>ssd_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4370,8 +4370,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="publickey_python">
-<a href="#publickey_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
+        <span id="public_key_python">
+<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4515,8 +4515,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="graceperiod_python">
-<a href="#graceperiod_python" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
+        <span id="grace_period_python">
+<a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4638,8 +4638,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="disableautomaticrollback_python">
-<a href="#disableautomaticrollback_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Automatic<wbr>Rollback</a>
+        <span id="disable_automatic_rollback_python">
+<a href="#disable_automatic_rollback_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>automatic_<wbr>rollback</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4649,8 +4649,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="enableautomaticosupgrade_python">
-<a href="#enableautomaticosupgrade_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Os<wbr>Upgrade</a>
+        <span id="enable_automatic_os_upgrade_python">
+<a href="#enable_automatic_os_upgrade_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>os_<wbr>upgrade</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4739,8 +4739,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="storageaccounturi_python">
-<a href="#storageaccounturi_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Uri</a>
+        <span id="storage_account_uri_python">
+<a href="#storage_account_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5260,8 +5260,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityids_python">
-<a href="#identityids_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5563,7 +5563,7 @@ The following state arguments are supported:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetnetworkinterfaceipconfiguration">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetnetworkinterfaceipconfiguration">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_configuration` blocks as defined above.
 {{% /md %}}</dd>
@@ -5990,8 +5990,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationgatewaybackendaddresspoolids_python">
-<a href="#applicationgatewaybackendaddresspoolids_python" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+        <span id="application_gateway_backend_address_pool_ids_python">
+<a href="#application_gateway_backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pool_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6001,8 +6001,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationsecuritygroupids_python">
-<a href="#applicationsecuritygroupids_python" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Group<wbr>Ids</a>
+        <span id="application_security_group_ids_python">
+<a href="#application_security_group_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6012,8 +6012,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerbackendaddresspoolids_python">
-<a href="#loadbalancerbackendaddresspoolids_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
+        <span id="load_balancer_backend_address_pool_ids_python">
+<a href="#load_balancer_backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pool_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6023,8 +6023,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerinboundnatrulesids_python">
-<a href="#loadbalancerinboundnatrulesids_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
+        <span id="load_balancer_inbound_nat_rules_ids_python">
+<a href="#load_balancer_inbound_nat_rules_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>rules_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6049,7 +6049,7 @@ The following state arguments are supported:
 <a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `public_ip_address` block as defined below.
 {{% /md %}}</dd>
@@ -6322,11 +6322,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iptags_python">
-<a href="#iptags_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Tags</a>
+        <span id="ip_tags_python">
+<a href="#ip_tags_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_tag` blocks as defined above.
 {{% /md %}}</dd>
@@ -6744,11 +6744,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diffdisksettings_python">
-<a href="#diffdisksettings_python" style="color: inherit; text-decoration: inherit;">diff<wbr>Disk<wbr>Settings</a>
+        <span id="diff_disk_settings_python">
+<a href="#diff_disk_settings_python" style="color: inherit; text-decoration: inherit;">diff_<wbr>disk_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetosdiskdiffdisksettings">Dict[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetosdiskdiffdisksettings">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diff_disk_settings` block as defined above. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -7226,8 +7226,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxbatchinstancepercent_python">
-<a href="#maxbatchinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Batch<wbr>Instance<wbr>Percent</a>
+        <span id="max_batch_instance_percent_python">
+<a href="#max_batch_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>batch_<wbr>instance_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7237,8 +7237,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxunhealthyinstancepercent_python">
-<a href="#maxunhealthyinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Instance<wbr>Percent</a>
+        <span id="max_unhealthy_instance_percent_python">
+<a href="#max_unhealthy_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unhealthy_<wbr>instance_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7248,8 +7248,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxunhealthyupgradedinstancepercent_python">
-<a href="#maxunhealthyupgradedinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</a>
+        <span id="max_unhealthy_upgraded_instance_percent_python">
+<a href="#max_unhealthy_upgraded_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unhealthy_<wbr>upgraded_<wbr>instance_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7259,8 +7259,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="pausetimebetweenbatches_python">
-<a href="#pausetimebetweenbatches_python" style="color: inherit; text-decoration: inherit;">pause<wbr>Time<wbr>Between<wbr>Batches</a>
+        <span id="pause_time_between_batches_python">
+<a href="#pause_time_between_batches_python" style="color: inherit; text-decoration: inherit;">pause_<wbr>time_<wbr>between_<wbr>batches</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7386,7 +7386,7 @@ The following state arguments are supported:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinescalesetsecretcertificate">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinescalesetsecretcertificate">List[Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks as defined above.
 {{% /md %}}</dd>

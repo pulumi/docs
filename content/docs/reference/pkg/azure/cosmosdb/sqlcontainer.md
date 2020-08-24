@@ -64,9 +64,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cosmosdb.NewSqlContainer(ctx, "example", &cosmosdb.SqlContainerArgs{
-			ResourceGroupName: pulumi.String(azurerm_cosmosdb_account.Example.Resource_group_name),
-			AccountName:       pulumi.String(azurerm_cosmosdb_account.Example.Name),
-			DatabaseName:      pulumi.String(azurerm_cosmosdb_sql_database.Example.Name),
+			ResourceGroupName: pulumi.Any(azurerm_cosmosdb_account.Example.Resource_group_name),
+			AccountName:       pulumi.Any(azurerm_cosmosdb_account.Example.Name),
+			DatabaseName:      pulumi.Any(azurerm_cosmosdb_sql_database.Example.Name),
 			PartitionKeyPath:  pulumi.String("/definition/id"),
 			Throughput:        pulumi.Int(400),
 			UniqueKeys: cosmosdb.SqlContainerUniqueKeyArray{
@@ -99,12 +99,12 @@ example = azure.cosmosdb.SqlContainer("example",
     database_name=azurerm_cosmosdb_sql_database["example"]["name"],
     partition_key_path="/definition/id",
     throughput=400,
-    unique_keys=[{
-        "paths": [
+    unique_keys=[azure.cosmosdb.SqlContainerUniqueKeyArgs(
+        paths=[
             "/definition/idlong",
             "/definition/idshort",
         ],
-    }])
+    )])
 ```
 
 {{% /example %}}
@@ -144,7 +144,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.SqlContainer">SqlContainer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[List[SqlContainerUniqueKey]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.SqlContainer">SqlContainer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[List[SqlContainerUniqueKeyArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -684,7 +684,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontaineruniquekey">List[Sql<wbr>Container<wbr>Unique<wbr>Key]</a></span>
+        <span class="property-type"><a href="#sqlcontaineruniquekey">List[Sql<wbr>Container<wbr>Unique<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -788,7 +788,7 @@ Get an existing SqlContainer resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[List[SqlContainerUniqueKey]]</span> = None<span class="p">) -&gt;</span> SqlContainer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[List[SqlContainerUniqueKeyArgs]]</span> = None<span class="p">) -&gt;</span> SqlContainer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1270,7 +1270,7 @@ The following state arguments are supported:
 <a href="#state_unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlcontaineruniquekey">List[Sql<wbr>Container<wbr>Unique<wbr>Key]</a></span>
+        <span class="property-type"><a href="#sqlcontaineruniquekey">List[Sql<wbr>Container<wbr>Unique<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>

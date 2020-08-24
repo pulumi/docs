@@ -134,12 +134,12 @@ example_sql_server = azure.sql.SqlServer("exampleSqlServer",
     version="12.0",
     administrator_login="mradministrator",
     administrator_login_password="thisIsDog11",
-    extended_auditing_policy={
-        "storage_endpoint": example_account.primary_blob_endpoint,
-        "storage_account_access_key": example_account.primary_access_key,
-        "storageAccountAccessKeyIsSecondary": True,
-        "retention_in_days": 6,
-    },
+    extended_auditing_policy=azure.sql.SqlServerExtendedAuditingPolicyArgs(
+        storage_endpoint=example_account.primary_blob_endpoint,
+        storage_account_access_key=example_account.primary_access_key,
+        storage_account_access_key_is_secondary=True,
+        retention_in_days=6,
+    ),
     tags={
         "environment": "production",
     })
@@ -192,7 +192,7 @@ const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sql/#pulumi_azure.sql.SqlServer">SqlServer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[SqlServerExtendedAuditingPolicy]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[SqlServerIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/sql/#pulumi_azure.sql.SqlServer">SqlServer</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[SqlServerExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[SqlServerIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -776,7 +776,7 @@ The SqlServer resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlserverextendedauditingpolicy">Dict[Sql<wbr>Server<wbr>Extended<wbr>Auditing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#sqlserverextendedauditingpolicy">Sql<wbr>Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}</dd>
@@ -787,7 +787,7 @@ The SqlServer resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlserveridentity">Dict[Sql<wbr>Server<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#sqlserveridentity">Sql<wbr>Server<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -820,7 +820,7 @@ The SqlServer resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ Get an existing SqlServer resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[SqlServerExtendedAuditingPolicy]]</span> = None<span class="p">, </span><span class="nx">fully_qualified_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[SqlServerIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SqlServer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[SqlServerExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">fully_qualified_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[SqlServerIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SqlServer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1505,7 +1505,7 @@ The following state arguments are supported:
 <a href="#state_extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlserverextendedauditingpolicy">Dict[Sql<wbr>Server<wbr>Extended<wbr>Auditing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#sqlserverextendedauditingpolicy">Sql<wbr>Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}</dd>
@@ -1527,7 +1527,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlserveridentity">Dict[Sql<wbr>Server<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#sqlserveridentity">Sql<wbr>Server<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -1571,7 +1571,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1808,8 +1808,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storageaccountaccesskeyissecondary_python">
-<a href="#storageaccountaccesskeyissecondary_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
+        <span id="storage_account_access_key_is_secondary_python">
+<a href="#storage_account_access_key_is_secondary_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key_<wbr>is_<wbr>secondary</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

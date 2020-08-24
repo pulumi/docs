@@ -125,11 +125,11 @@ example_share = azure.datashare.Share("exampleShare",
     kind="CopyBased",
     description="example desc",
     terms="example terms",
-    snapshot_schedule={
-        "name": "example-ss",
-        "recurrence": "Day",
-        "start_time": "2020-04-17T04:47:52.9614956Z",
-    })
+    snapshot_schedule=azure.datashare.ShareSnapshotScheduleArgs(
+        name="example-ss",
+        recurrence="Day",
+        start_time="2020-04-17T04:47:52.9614956Z",
+    ))
 ```
 
 {{% /example %}}
@@ -175,7 +175,7 @@ const exampleShare = new azure.datashare.Share("exampleShare", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datashare/#pulumi_azure.datashare.Share">Share</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_schedule</span><span class="p">:</span> <span class="nx">Optional[Dict[ShareSnapshotSchedule]]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datashare/#pulumi_azure.datashare.Share">Share</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_schedule</span><span class="p">:</span> <span class="nx">Optional[ShareSnapshotScheduleArgs]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -616,7 +616,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#snapshot_schedule_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharesnapshotschedule">Dict[Share<wbr>Snapshot<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#sharesnapshotschedule">Share<wbr>Snapshot<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot_schedule` block as defined below.
 {{% /md %}}</dd>
@@ -731,7 +731,7 @@ Get an existing Share resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_schedule</span><span class="p">:</span> <span class="nx">Optional[Dict[ShareSnapshotSchedule]]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Share</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_schedule</span><span class="p">:</span> <span class="nx">Optional[ShareSnapshotScheduleArgs]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Share</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1114,7 +1114,7 @@ The following state arguments are supported:
 <a href="#state_snapshot_schedule_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharesnapshotschedule">Dict[Share<wbr>Snapshot<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#sharesnapshotschedule">Share<wbr>Snapshot<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot_schedule` block as defined below.
 {{% /md %}}</dd>

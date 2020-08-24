@@ -145,22 +145,22 @@ example_group = azure.containerservice.Group("exampleGroup",
     dns_name_label="aci-label",
     os_type="Linux",
     containers=[
-        {
-            "name": "hello-world",
-            "image": "microsoft/aci-helloworld:latest",
-            "cpu": "0.5",
-            "memory": "1.5",
-            "ports": [{
-                "port": 443,
-                "protocol": "TCP",
-            }],
-        },
-        {
-            "name": "sidecar",
-            "image": "microsoft/aci-tutorial-sidecar",
-            "cpu": "0.5",
-            "memory": "1.5",
-        },
+        azure.containerservice.GroupContainerArgs(
+            name="hello-world",
+            image="microsoft/aci-helloworld:latest",
+            cpu=0.5,
+            memory=1.5,
+            ports=[azure.containerservice.GroupContainerPortArgs(
+                port=443,
+                protocol="TCP",
+            )],
+        ),
+        azure.containerservice.GroupContainerArgs(
+            name="sidecar",
+            image="microsoft/aci-tutorial-sidecar",
+            cpu=0.5,
+            memory=1.5,
+        ),
     ],
     tags={
         "environment": "testing",
@@ -220,7 +220,7 @@ const exampleGroup = new azure.containerservice.Group("exampleGroup", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.Group">Group</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[List[GroupContainer]]</span> = None<span class="p">, </span><span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[GroupDiagnostics]]</span> = None<span class="p">, </span><span class="nx">dns_name_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[GroupIdentity]]</span> = None<span class="p">, </span><span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[List[GroupImageRegistryCredential]]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.Group">Group</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[List[GroupContainerArgs]]</span> = None<span class="p">, </span><span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[GroupDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">dns_name_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[GroupIdentityArgs]</span> = None<span class="p">, </span><span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[List[GroupImageRegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -848,7 +848,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainer">List[Group<wbr>Container]</a></span>
+        <span class="property-type"><a href="#groupcontainer">List[Group<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -881,7 +881,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnostics">Dict[Group<wbr>Diagnostics]</a></span>
+        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics` block as documented below.
 {{% /md %}}</dd>
@@ -903,7 +903,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupidentity">Dict[Group<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#image_registry_credentials_python" style="color: inherit; text-decoration: inherit;">image_<wbr>registry_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupimageregistrycredential">List[Group<wbr>Image<wbr>Registry<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#groupimageregistrycredential">List[Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `image_registry_credential` block as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -980,7 +980,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1172,7 +1172,7 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[List[GroupContainer]]</span> = None<span class="p">, </span><span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[GroupDiagnostics]]</span> = None<span class="p">, </span><span class="nx">dns_name_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[GroupIdentity]]</span> = None<span class="p">, </span><span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[List[GroupImageRegistryCredential]]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[List[GroupContainerArgs]]</span> = None<span class="p">, </span><span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[GroupDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">dns_name_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[GroupIdentityArgs]</span> = None<span class="p">, </span><span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[List[GroupImageRegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1808,7 +1808,7 @@ The following state arguments are supported:
 <a href="#state_containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainer">List[Group<wbr>Container]</a></span>
+        <span class="property-type"><a href="#groupcontainer">List[Group<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1819,7 +1819,7 @@ The following state arguments are supported:
 <a href="#state_diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnostics">Dict[Group<wbr>Diagnostics]</a></span>
+        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics` block as documented below.
 {{% /md %}}</dd>
@@ -1852,7 +1852,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupidentity">Dict[Group<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -1863,7 +1863,7 @@ The following state arguments are supported:
 <a href="#state_image_registry_credentials_python" style="color: inherit; text-decoration: inherit;">image_<wbr>registry_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupimageregistrycredential">List[Group<wbr>Image<wbr>Registry<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#groupimageregistrycredential">List[Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `image_registry_credential` block as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1962,7 +1962,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2474,11 +2474,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="environmentvariables_python">
-<a href="#environmentvariables_python" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
+        <span id="environment_variables_python">
+<a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2489,18 +2489,18 @@ The following state arguments are supported:
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainergpu">Dict[Group<wbr>Container<wbr>Gpu]</a></span>
+        <span class="property-type"><a href="#groupcontainergpu">Group<wbr>Container<wbr>Gpu<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gpu` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="livenessprobe_python">
-<a href="#livenessprobe_python" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
+        <span id="liveness_probe_python">
+<a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobe">Dict[Group<wbr>Container<wbr>Liveness<wbr>Probe]</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobe">Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `liveness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2511,29 +2511,29 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerport">List[Group<wbr>Container<wbr>Port]</a></span>
+        <span class="property-type"><a href="#groupcontainerport">List[Group<wbr>Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of public ports for the container. Changing this forces a new resource to be created. Set as documented in the `ports` block below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="readinessprobe_python">
-<a href="#readinessprobe_python" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
+        <span id="readiness_probe_python">
+<a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobe">Dict[Group<wbr>Container<wbr>Readiness<wbr>Probe]</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobe">Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `readiness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secureenvironmentvariables_python">
-<a href="#secureenvironmentvariables_python" style="color: inherit; text-decoration: inherit;">secure<wbr>Environment<wbr>Variables</a>
+        <span id="secure_environment_variables_python">
+<a href="#secure_environment_variables_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>environment_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of sensitive environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2544,7 +2544,7 @@ The following state arguments are supported:
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolume">List[Group<wbr>Container<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#groupcontainervolume">List[Group<wbr>Container<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of a volume mount for this container as documented in the `volume` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2973,8 +2973,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failurethreshold_python">
-<a href="#failurethreshold_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
+        <span id="failure_threshold_python">
+<a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2984,19 +2984,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpgets_python">
-<a href="#httpgets_python" style="color: inherit; text-decoration: inherit;">http<wbr>Gets</a>
+        <span id="http_gets_python">
+<a href="#http_gets_python" style="color: inherit; text-decoration: inherit;">http_<wbr>gets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">List[Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get]</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">List[Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initialdelayseconds_python">
-<a href="#initialdelayseconds_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
+        <span id="initial_delay_seconds_python">
+<a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3006,8 +3006,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="periodseconds_python">
-<a href="#periodseconds_python" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
+        <span id="period_seconds_python">
+<a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3017,8 +3017,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successthreshold_python">
-<a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
+        <span id="success_threshold_python">
+<a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3028,8 +3028,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeoutseconds_python">
-<a href="#timeoutseconds_python" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
+        <span id="timeout_seconds_python">
+<a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3639,8 +3639,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failurethreshold_python">
-<a href="#failurethreshold_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
+        <span id="failure_threshold_python">
+<a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3650,19 +3650,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpgets_python">
-<a href="#httpgets_python" style="color: inherit; text-decoration: inherit;">http<wbr>Gets</a>
+        <span id="http_gets_python">
+<a href="#http_gets_python" style="color: inherit; text-decoration: inherit;">http_<wbr>gets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">List[Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get]</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">List[Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initialdelayseconds_python">
-<a href="#initialdelayseconds_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
+        <span id="initial_delay_seconds_python">
+<a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3672,8 +3672,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="periodseconds_python">
-<a href="#periodseconds_python" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
+        <span id="period_seconds_python">
+<a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3683,8 +3683,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successthreshold_python">
-<a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
+        <span id="success_threshold_python">
+<a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3694,8 +3694,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeoutseconds_python">
-<a href="#timeoutseconds_python" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
+        <span id="timeout_seconds_python">
+<a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4127,8 +4127,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="mountpath_python">
-<a href="#mountpath_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
+        <span id="mount_path_python">
+<a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4182,8 +4182,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="readonly_python">
-<a href="#readonly_python" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
+        <span id="read_only_python">
+<a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4272,11 +4272,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="loganalytics_python">
-<a href="#loganalytics_python" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics</a>
+        <span id="log_analytics_python">
+<a href="#log_analytics_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Dict[Group<wbr>Diagnostics<wbr>Log<wbr>Analytics]</a></span>
+        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Group<wbr>Diagnostics<wbr>Log<wbr>Analytics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `log_analytics` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -4461,17 +4461,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="workspacekey_python">
-<a href="#workspacekey_python" style="color: inherit; text-decoration: inherit;">workspace<wbr>Key</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Workspace Key of the Log Analytics Workspace. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span> 
@@ -4481,10 +4470,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The Workspace ID of the Log Analytics Workspace. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="workspace_key_python">
+<a href="#workspace_key_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>key</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Workspace Key of the Log Analytics Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
-        <span id="logtype_python">
-<a href="#logtype_python" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
+        <span id="log_type_python">
+<a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4498,7 +4498,7 @@ The following state arguments are supported:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Any metadata required for Log Analytics. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -4658,8 +4658,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityids_python">
-<a href="#identityids_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

@@ -566,7 +566,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleaction">List[Get<wbr>Policy<wbr>Rule<wbr>Action]</a></span>
+        <span class="property-type"><a href="#getpolicyruleaction">List[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
 {{% /md %}}</dd>
@@ -588,7 +588,7 @@ The following output properties are available:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyrulefilter">List[Get<wbr>Policy<wbr>Rule<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getpolicyrulefilter">List[Get<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd>
@@ -718,11 +718,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="baseblobs_python">
-<a href="#baseblobs_python" style="color: inherit; text-decoration: inherit;">base<wbr>Blobs</a>
+        <span id="base_blobs_python">
+<a href="#base_blobs_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blobs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleactionbaseblob">List[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob]</a></span>
+        <span class="property-type"><a href="#getpolicyruleactionbaseblob">List[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
 {{% /md %}}</dd>
@@ -733,7 +733,7 @@ The following output properties are available:
 <a href="#snapshots_python" style="color: inherit; text-decoration: inherit;">snapshots</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicyruleactionsnapshot">List[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot]</a></span>
+        <span class="property-type"><a href="#getpolicyruleactionsnapshot">List[Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
 {{% /md %}}</dd>
@@ -885,8 +885,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deleteafterdayssincemodificationgreaterthan_python">
-<a href="#deleteafterdayssincemodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+        <span id="delete_after_days_since_modification_greater_than_python">
+<a href="#delete_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -896,8 +896,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="tiertoarchiveafterdayssincemodificationgreaterthan_python">
-<a href="#tiertoarchiveafterdayssincemodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+        <span id="tier_to_archive_after_days_since_modification_greater_than_python">
+<a href="#tier_to_archive_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -907,8 +907,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="tiertocoolafterdayssincemodificationgreaterthan_python">
-<a href="#tiertocoolafterdayssincemodificationgreaterthan_python" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</a>
+        <span id="tier_to_cool_after_days_since_modification_greater_than_python">
+<a href="#tier_to_cool_after_days_since_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool_<wbr>after_<wbr>days_<wbr>since_<wbr>modification_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -997,8 +997,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="deleteafterdayssincecreationgreaterthan_python">
-<a href="#deleteafterdayssincecreationgreaterthan_python" style="color: inherit; text-decoration: inherit;">delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</a>
+        <span id="delete_after_days_since_creation_greater_than_python">
+<a href="#delete_after_days_since_creation_greater_than_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after_<wbr>days_<wbr>since_<wbr>creation_<wbr>greater_<wbr>than</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1120,8 +1120,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="blobtypes_python">
-<a href="#blobtypes_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
+        <span id="blob_types_python">
+<a href="#blob_types_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1131,8 +1131,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="prefixmatches_python">
-<a href="#prefixmatches_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Matches</a>
+        <span id="prefix_matches_python">
+<a href="#prefix_matches_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>matches</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

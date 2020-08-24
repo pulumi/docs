@@ -140,26 +140,26 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_plan = azure.appservice.Plan("examplePlan",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    sku={
-        "tier": "Standard",
-        "size": "S1",
-    })
+    sku=azure.appservice.PlanSkuArgs(
+        tier="Standard",
+        size="S1",
+    ))
 example_app_service = azure.appservice.AppService("exampleAppService",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     app_service_plan_id=example_plan.id,
-    site_config={
-        "dotnetFrameworkVersion": "v4.0",
-        "scmType": "LocalGit",
-    },
+    site_config=azure.appservice.AppServiceSiteConfigArgs(
+        dotnet_framework_version="v4.0",
+        scm_type="LocalGit",
+    ),
     app_settings={
         "SOME_KEY": "some-value",
     },
-    connection_strings=[{
-        "name": "Database",
-        "type": "SQLServer",
-        "value": "Server=some-server.mydomain.com;Integrated Security=SSPI",
-    }])
+    connection_strings=[azure.appservice.AppServiceConnectionStringArgs(
+        name="Database",
+        type="SQLServer",
+        value="Server=some-server.mydomain.com;Integrated Security=SSPI",
+    )])
 ```
 
 {{% /example %}}
@@ -212,7 +212,7 @@ const exampleAppService = new azure.appservice.AppService("exampleAppService", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.AppService">AppService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceAuthSettings]]</span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceBackup]]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[List[AppServiceConnectionString]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceLogs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceSiteConfig]]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceSourceControl]]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[AppServiceStorageAccount]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.AppService">AppService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[AppServiceAuthSettingsArgs]</span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[AppServiceBackupArgs]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[List[AppServiceConnectionStringArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AppServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[AppServiceLogsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[AppServiceSiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[AppServiceSourceControlArgs]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[AppServiceStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1027,7 +1027,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#app_settings_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key-value pair of App Settings.
 {{% /md %}}</dd>
@@ -1038,7 +1038,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#auth_settings_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettings">Dict[App<wbr>Service<wbr>Auth<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#appserviceauthsettings">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -1049,7 +1049,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackup">Dict[App<wbr>Service<wbr>Backup]</a></span>
+        <span class="property-type"><a href="#appservicebackup">App<wbr>Service<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backup` block as defined below.
 {{% /md %}}</dd>
@@ -1082,7 +1082,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceconnectionstring">List[App<wbr>Service<wbr>Connection<wbr>String]</a></span>
+        <span class="property-type"><a href="#appserviceconnectionstring">List[App<wbr>Service<wbr>Connection<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `connection_string` blocks as defined below.
 {{% /md %}}</dd>
@@ -1115,7 +1115,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceidentity">Dict[App<wbr>Service<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd>
@@ -1137,7 +1137,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogs">Dict[App<wbr>Service<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#appservicelogs">App<wbr>Service<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `logs` block as defined below.
 {{% /md %}}</dd>
@@ -1159,7 +1159,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#site_config_python" style="color: inherit; text-decoration: inherit;">site_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfig">Dict[App<wbr>Service<wbr>Site<wbr>Config]</a></span>
+        <span class="property-type"><a href="#appservicesiteconfig">App<wbr>Service<wbr>Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
 {{% /md %}}</dd>
@@ -1170,7 +1170,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#source_control_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">Dict[App<wbr>Service<wbr>Source<wbr>Control]</a></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Source Control block as defined below
 {{% /md %}}</dd>
@@ -1181,7 +1181,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicestorageaccount">List[App<wbr>Service<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#appservicestorageaccount">List[App<wbr>Service<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
 {{% /md %}}</dd>
@@ -1192,7 +1192,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1472,7 +1472,7 @@ Get an existing AppService resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceAuthSettings]]</span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceBackup]]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[List[AppServiceConnectionString]]</span> = None<span class="p">, </span><span class="nx">default_site_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceLogs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">possible_outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceSiteConfig]]</span> = None<span class="p">, </span><span class="nx">site_credentials</span><span class="p">:</span> <span class="nx">Optional[List[AppServiceSiteCredential]]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[Dict[AppServiceSourceControl]]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[AppServiceStorageAccount]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> AppService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[AppServiceAuthSettingsArgs]</span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[AppServiceBackupArgs]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[List[AppServiceConnectionStringArgs]]</span> = None<span class="p">, </span><span class="nx">default_site_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AppServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[AppServiceLogsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">possible_outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[AppServiceSiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">site_credentials</span><span class="p">:</span> <span class="nx">Optional[List[AppServiceSiteCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[AppServiceSourceControlArgs]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[AppServiceStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> AppService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2350,7 +2350,7 @@ The following state arguments are supported:
 <a href="#state_app_settings_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key-value pair of App Settings.
 {{% /md %}}</dd>
@@ -2361,7 +2361,7 @@ The following state arguments are supported:
 <a href="#state_auth_settings_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettings">Dict[App<wbr>Service<wbr>Auth<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#appserviceauthsettings">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -2372,7 +2372,7 @@ The following state arguments are supported:
 <a href="#state_backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackup">Dict[App<wbr>Service<wbr>Backup]</a></span>
+        <span class="property-type"><a href="#appservicebackup">App<wbr>Service<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backup` block as defined below.
 {{% /md %}}</dd>
@@ -2405,7 +2405,7 @@ The following state arguments are supported:
 <a href="#state_connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceconnectionstring">List[App<wbr>Service<wbr>Connection<wbr>String]</a></span>
+        <span class="property-type"><a href="#appserviceconnectionstring">List[App<wbr>Service<wbr>Connection<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `connection_string` blocks as defined below.
 {{% /md %}}</dd>
@@ -2449,7 +2449,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceidentity">Dict[App<wbr>Service<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd>
@@ -2471,7 +2471,7 @@ The following state arguments are supported:
 <a href="#state_logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogs">Dict[App<wbr>Service<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#appservicelogs">App<wbr>Service<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `logs` block as defined below.
 {{% /md %}}</dd>
@@ -2526,7 +2526,7 @@ The following state arguments are supported:
 <a href="#state_site_config_python" style="color: inherit; text-decoration: inherit;">site_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfig">Dict[App<wbr>Service<wbr>Site<wbr>Config]</a></span>
+        <span class="property-type"><a href="#appservicesiteconfig">App<wbr>Service<wbr>Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
 {{% /md %}}</dd>
@@ -2537,7 +2537,7 @@ The following state arguments are supported:
 <a href="#state_site_credentials_python" style="color: inherit; text-decoration: inherit;">site_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesitecredential">List[App<wbr>Service<wbr>Site<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#appservicesitecredential">List[App<wbr>Service<wbr>Site<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd>
@@ -2548,7 +2548,7 @@ The following state arguments are supported:
 <a href="#state_source_control_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">Dict[App<wbr>Service<wbr>Source<wbr>Control]</a></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Source Control block as defined below
 {{% /md %}}</dd>
@@ -2559,7 +2559,7 @@ The following state arguments are supported:
 <a href="#state_storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicestorageaccount">List[App<wbr>Service<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#appservicestorageaccount">List[App<wbr>Service<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
 {{% /md %}}</dd>
@@ -2570,7 +2570,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3108,26 +3108,26 @@ The following state arguments are supported:
 <a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsactivedirectory">Dict[App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsactivedirectory">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalloginparams_python">
-<a href="#additionalloginparams_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Login<wbr>Params</a>
+        <span id="additional_login_params_python">
+<a href="#additional_login_params_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>login_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Login parameters to send to the OpenID Connect authorization endpoint when a user logs in. Each parameter must be in the form "key=value".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedexternalredirecturls_python">
-<a href="#allowedexternalredirecturls_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>External<wbr>Redirect<wbr>Urls</a>
+        <span id="allowed_external_redirect_urls_python">
+<a href="#allowed_external_redirect_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>external_<wbr>redirect_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3137,8 +3137,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultprovider_python">
-<a href="#defaultprovider_python" style="color: inherit; text-decoration: inherit;">default<wbr>Provider</a>
+        <span id="default_provider_python">
+<a href="#default_provider_python" style="color: inherit; text-decoration: inherit;">default_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3152,7 +3152,7 @@ The following state arguments are supported:
 <a href="#facebook_python" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsfacebook">Dict[App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook]</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsfacebook">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd>
@@ -3163,7 +3163,7 @@ The following state arguments are supported:
 <a href="#google_python" style="color: inherit; text-decoration: inherit;">google</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsgoogle">Dict[App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google]</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsgoogle">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd>
@@ -3185,15 +3185,15 @@ The following state arguments are supported:
 <a href="#microsoft_python" style="color: inherit; text-decoration: inherit;">microsoft</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsmicrosoft">Dict[App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft]</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsmicrosoft">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runtimeversion_python">
-<a href="#runtimeversion_python" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
+        <span id="runtime_version_python">
+<a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3203,8 +3203,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenrefreshextensionhours_python">
-<a href="#tokenrefreshextensionhours_python" style="color: inherit; text-decoration: inherit;">token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
+        <span id="token_refresh_extension_hours_python">
+<a href="#token_refresh_extension_hours_python" style="color: inherit; text-decoration: inherit;">token_<wbr>refresh_<wbr>extension_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3214,8 +3214,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenstoreenabled_python">
-<a href="#tokenstoreenabled_python" style="color: inherit; text-decoration: inherit;">token<wbr>Store<wbr>Enabled</a>
+        <span id="token_store_enabled_python">
+<a href="#token_store_enabled_python" style="color: inherit; text-decoration: inherit;">token_<wbr>store_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3229,15 +3229,15 @@ The following state arguments are supported:
 <a href="#twitter_python" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingstwitter">Dict[App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter]</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingstwitter">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="unauthenticatedclientaction_python">
-<a href="#unauthenticatedclientaction_python" style="color: inherit; text-decoration: inherit;">unauthenticated<wbr>Client<wbr>Action</a>
+        <span id="unauthenticated_client_action_python">
+<a href="#unauthenticated_client_action_python" style="color: inherit; text-decoration: inherit;">unauthenticated_<wbr>client_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3403,8 +3403,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedaudiences_python">
-<a href="#allowedaudiences_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
+        <span id="allowed_audiences_python">
+<a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3592,8 +3592,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oauthscopes_python">
-<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3770,8 +3770,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oauthscopes_python">
-<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3948,8 +3948,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oauthscopes_python">
-<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4065,8 +4065,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="consumerkey_python">
-<a href="#consumerkey_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Key</a>
+        <span id="consumer_key_python">
+<a href="#consumer_key_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4075,8 +4075,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="consumersecret_python">
-<a href="#consumersecret_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Secret</a>
+        <span id="consumer_secret_python">
+<a href="#consumer_secret_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4278,15 +4278,15 @@ The following state arguments are supported:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackupschedule">Dict[App<wbr>Service<wbr>Backup<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#appservicebackupschedule">App<wbr>Service<wbr>Backup<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schedule` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="storageaccounturl_python">
-<a href="#storageaccounturl_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
+        <span id="storage_account_url_python">
+<a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4518,8 +4518,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencyinterval_python">
-<a href="#frequencyinterval_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
+        <span id="frequency_interval_python">
+<a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4529,8 +4529,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="frequencyunit_python">
-<a href="#frequencyunit_python" style="color: inherit; text-decoration: inherit;">frequency<wbr>Unit</a>
+        <span id="frequency_unit_python">
+<a href="#frequency_unit_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4540,8 +4540,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keepatleastonebackup_python">
-<a href="#keepatleastonebackup_python" style="color: inherit; text-decoration: inherit;">keep<wbr>At<wbr>Least<wbr>One<wbr>Backup</a>
+        <span id="keep_at_least_one_backup_python">
+<a href="#keep_at_least_one_backup_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>at_<wbr>least_<wbr>one_<wbr>backup</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4551,8 +4551,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionperiodindays_python">
-<a href="#retentionperiodindays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Period<wbr>In<wbr>Days</a>
+        <span id="retention_period_in_days_python">
+<a href="#retention_period_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4940,8 +4940,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityids_python">
-<a href="#identityids_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5085,22 +5085,22 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationlogs_python">
-<a href="#applicationlogs_python" style="color: inherit; text-decoration: inherit;">application<wbr>Logs</a>
+        <span id="application_logs_python">
+<a href="#application_logs_python" style="color: inherit; text-decoration: inherit;">application_<wbr>logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogsapplicationlogs">Dict[App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#appservicelogsapplicationlogs">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `application_logs` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httplogs_python">
-<a href="#httplogs_python" style="color: inherit; text-decoration: inherit;">http<wbr>Logs</a>
+        <span id="http_logs_python">
+<a href="#http_logs_python" style="color: inherit; text-decoration: inherit;">http_<wbr>logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogs">Dict[App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogs">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `http_logs` block as defined below.
 {{% /md %}}</dd>
@@ -5216,19 +5216,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureblobstorage_python">
-<a href="#azureblobstorage_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
+        <span id="azure_blob_storage_python">
+<a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogsapplicationlogsazureblobstorage">Dict[App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage]</a></span>
+        <span class="property-type"><a href="#appservicelogsapplicationlogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filesystemlevel_python">
-<a href="#filesystemlevel_python" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Level</a>
+        <span id="file_system_level_python">
+<a href="#file_system_level_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5404,8 +5404,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sasurl_python">
-<a href="#sasurl_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Url</a>
+        <span id="sas_url_python">
+<a href="#sas_url_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5527,22 +5527,22 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azureblobstorage_python">
-<a href="#azureblobstorage_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
+        <span id="azure_blob_storage_python">
+<a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogsazureblobstorage">Dict[App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage]</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filesystem_python">
-<a href="#filesystem_python" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
+        <span id="file_system_python">
+<a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogsfilesystem">Dict[App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System]</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogsfilesystem">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `file_system` block as defined below.
 {{% /md %}}</dd>
@@ -5672,8 +5672,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sasurl_python">
-<a href="#sasurl_python" style="color: inherit; text-decoration: inherit;">sas<wbr>Url</a>
+        <span id="sas_url_python">
+<a href="#sas_url_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5795,17 +5795,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="retentioninmb_python">
-<a href="#retentioninmb_python" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Mb</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The maximum size in megabytes that http log files can use before being removed.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
 </span> 
@@ -5813,6 +5802,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of days to retain logs for.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="retention_in_mb_python">
+<a href="#retention_in_mb_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>mb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum size in megabytes that http log files can use before being removed.
 {{% /md %}}</dd>
 
 </dl>
@@ -6751,8 +6751,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alwayson_python">
-<a href="#alwayson_python" style="color: inherit; text-decoration: inherit;">always<wbr>On</a>
+        <span id="always_on_python">
+<a href="#always_on_python" style="color: inherit; text-decoration: inherit;">always_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6762,8 +6762,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appcommandline_python">
-<a href="#appcommandline_python" style="color: inherit; text-decoration: inherit;">app<wbr>Command<wbr>Line</a>
+        <span id="app_command_line_python">
+<a href="#app_command_line_python" style="color: inherit; text-decoration: inherit;">app_<wbr>command_<wbr>line</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6773,8 +6773,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoswapslotname_python">
-<a href="#autoswapslotname_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Swap<wbr>Slot<wbr>Name</a>
+        <span id="auto_swap_slot_name_python">
+<a href="#auto_swap_slot_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>swap_<wbr>slot_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6787,15 +6787,15 @@ The following state arguments are supported:
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigcors">Dict[App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors]</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigcors">App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultdocuments_python">
-<a href="#defaultdocuments_python" style="color: inherit; text-decoration: inherit;">default<wbr>Documents</a>
+        <span id="default_documents_python">
+<a href="#default_documents_python" style="color: inherit; text-decoration: inherit;">default_<wbr>documents</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6805,8 +6805,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dotnetframeworkversion_python">
-<a href="#dotnetframeworkversion_python" style="color: inherit; text-decoration: inherit;">dotnet<wbr>Framework<wbr>Version</a>
+        <span id="dotnet_framework_version_python">
+<a href="#dotnet_framework_version_python" style="color: inherit; text-decoration: inherit;">dotnet_<wbr>framework_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6816,8 +6816,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ftpsstate_python">
-<a href="#ftpsstate_python" style="color: inherit; text-decoration: inherit;">ftps<wbr>State</a>
+        <span id="ftps_state_python">
+<a href="#ftps_state_python" style="color: inherit; text-decoration: inherit;">ftps_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6827,8 +6827,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="healthcheckpath_python">
-<a href="#healthcheckpath_python" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
+        <span id="health_check_path_python">
+<a href="#health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6838,8 +6838,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="http2enabled_python">
-<a href="#http2enabled_python" style="color: inherit; text-decoration: inherit;">http2Enabled</a>
+        <span id="http2_enabled_python">
+<a href="#http2_enabled_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6849,19 +6849,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iprestrictions_python">
-<a href="#iprestrictions_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Restrictions</a>
+        <span id="ip_restrictions_python">
+<a href="#ip_restrictions_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigiprestriction">List[App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction]</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigiprestriction">List[App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing ip restrictions as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="javacontainer_python">
-<a href="#javacontainer_python" style="color: inherit; text-decoration: inherit;">java<wbr>Container</a>
+        <span id="java_container_python">
+<a href="#java_container_python" style="color: inherit; text-decoration: inherit;">java_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6871,8 +6871,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="javacontainerversion_python">
-<a href="#javacontainerversion_python" style="color: inherit; text-decoration: inherit;">java<wbr>Container<wbr>Version</a>
+        <span id="java_container_version_python">
+<a href="#java_container_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>container_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6882,8 +6882,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="javaversion_python">
-<a href="#javaversion_python" style="color: inherit; text-decoration: inherit;">java<wbr>Version</a>
+        <span id="java_version_python">
+<a href="#java_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6893,8 +6893,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linuxfxversion_python">
-<a href="#linuxfxversion_python" style="color: inherit; text-decoration: inherit;">linux<wbr>Fx<wbr>Version</a>
+        <span id="linux_fx_version_python">
+<a href="#linux_fx_version_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>fx_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6904,8 +6904,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localmysqlenabled_python">
-<a href="#localmysqlenabled_python" style="color: inherit; text-decoration: inherit;">local<wbr>Mysql<wbr>Enabled</a>
+        <span id="local_mysql_enabled_python">
+<a href="#local_mysql_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>mysql_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6915,8 +6915,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="managedpipelinemode_python">
-<a href="#managedpipelinemode_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Pipeline<wbr>Mode</a>
+        <span id="managed_pipeline_mode_python">
+<a href="#managed_pipeline_mode_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>pipeline_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6937,8 +6937,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="phpversion_python">
-<a href="#phpversion_python" style="color: inherit; text-decoration: inherit;">php<wbr>Version</a>
+        <span id="php_version_python">
+<a href="#php_version_python" style="color: inherit; text-decoration: inherit;">php_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6948,8 +6948,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pythonversion_python">
-<a href="#pythonversion_python" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
+        <span id="python_version_python">
+<a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6959,8 +6959,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remotedebuggingenabled_python">
-<a href="#remotedebuggingenabled_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Debugging<wbr>Enabled</a>
+        <span id="remote_debugging_enabled_python">
+<a href="#remote_debugging_enabled_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>debugging_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6970,8 +6970,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remotedebuggingversion_python">
-<a href="#remotedebuggingversion_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Debugging<wbr>Version</a>
+        <span id="remote_debugging_version_python">
+<a href="#remote_debugging_version_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>debugging_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6981,19 +6981,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scmiprestrictions_python">
-<a href="#scmiprestrictions_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Restrictions</a>
+        <span id="scm_ip_restrictions_python">
+<a href="#scm_ip_restrictions_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigscmiprestriction">List[App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction]</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigscmiprestriction">List[App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scmtype_python">
-<a href="#scmtype_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Type</a>
+        <span id="scm_type_python">
+<a href="#scm_type_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7003,8 +7003,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scmusemainiprestriction_python">
-<a href="#scmusemainiprestriction_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Use<wbr>Main<wbr>Ip<wbr>Restriction</a>
+        <span id="scm_use_main_ip_restriction_python">
+<a href="#scm_use_main_ip_restriction_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>use_<wbr>main_<wbr>ip_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7014,8 +7014,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="use32bitworkerprocess_python">
-<a href="#use32bitworkerprocess_python" style="color: inherit; text-decoration: inherit;">use32Bit<wbr>Worker<wbr>Process</a>
+        <span id="use32_bit_worker_process_python">
+<a href="#use32_bit_worker_process_python" style="color: inherit; text-decoration: inherit;">use32_<wbr>bit_<wbr>worker_<wbr>process</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7025,8 +7025,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="websocketsenabled_python">
-<a href="#websocketsenabled_python" style="color: inherit; text-decoration: inherit;">websockets<wbr>Enabled</a>
+        <span id="websockets_enabled_python">
+<a href="#websockets_enabled_python" style="color: inherit; text-decoration: inherit;">websockets_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7036,8 +7036,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="windowsfxversion_python">
-<a href="#windowsfxversion_python" style="color: inherit; text-decoration: inherit;">windows<wbr>Fx<wbr>Version</a>
+        <span id="windows_fx_version_python">
+<a href="#windows_fx_version_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>fx_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7159,8 +7159,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedorigins_python">
-<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+        <span id="allowed_origins_python">
+<a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7170,8 +7170,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="supportcredentials_python">
-<a href="#supportcredentials_python" style="color: inherit; text-decoration: inherit;">support<wbr>Credentials</a>
+        <span id="support_credentials_python">
+<a href="#support_credentials_python" style="color: inherit; text-decoration: inherit;">support_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7476,8 +7476,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualnetworksubnetid_python">
-<a href="#virtualnetworksubnetid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+        <span id="virtual_network_subnet_id_python">
+<a href="#virtual_network_subnet_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7782,8 +7782,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualnetworksubnetid_python">
-<a href="#virtualnetworksubnetid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+        <span id="virtual_network_subnet_id_python">
+<a href="#virtual_network_subnet_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8149,8 +8149,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manualintegration_python">
-<a href="#manualintegration_python" style="color: inherit; text-decoration: inherit;">manual<wbr>Integration</a>
+        <span id="manual_integration_python">
+<a href="#manual_integration_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>integration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8160,8 +8160,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="repourl_python">
-<a href="#repourl_python" style="color: inherit; text-decoration: inherit;">repo<wbr>Url</a>
+        <span id="repo_url_python">
+<a href="#repo_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8171,8 +8171,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rollbackenabled_python">
-<a href="#rollbackenabled_python" style="color: inherit; text-decoration: inherit;">rollback<wbr>Enabled</a>
+        <span id="rollback_enabled_python">
+<a href="#rollback_enabled_python" style="color: inherit; text-decoration: inherit;">rollback_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8182,8 +8182,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usemercurial_python">
-<a href="#usemercurial_python" style="color: inherit; text-decoration: inherit;">use<wbr>Mercurial</a>
+        <span id="use_mercurial_python">
+<a href="#use_mercurial_python" style="color: inherit; text-decoration: inherit;">use_<wbr>mercurial</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8437,8 +8437,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskey_python">
-<a href="#accesskey_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
+        <span id="access_key_python">
+<a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8492,8 +8492,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mountpath_python">
-<a href="#mountpath_python" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
+        <span id="mount_path_python">
+<a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

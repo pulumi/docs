@@ -155,10 +155,10 @@ example_container = azure.storage.Container("exampleContainer",
 example_io_t_hub = azure.iot.IoTHub("exampleIoTHub",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
-    sku={
-        "name": "S1",
-        "capacity": "1",
-    })
+    sku=azure.iot.IoTHubSkuArgs(
+        name="S1",
+        capacity=1,
+    ))
 example_endpoint_storage_container = azure.iot.EndpointStorageContainer("exampleEndpointStorageContainer",
     resource_group_name=example_resource_group.name,
     iothub_name=example_io_t_hub.name,

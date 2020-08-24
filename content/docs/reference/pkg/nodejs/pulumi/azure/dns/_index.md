@@ -3,7 +3,7 @@ title: "Module dns"
 title_tag: "Module dns | Package @pulumi/azure | Node.js SDK"
 linktitle: "dns"
 meta_desc: "Explore members of the dns module in the @pulumi/azure package."
-git_sha: "91032c2a3b439090a2e0c91de8152754746653c8"
+git_sha: "ae81224b0e43a24bc091e2a578f201522008bfbd"
 block_external_search_index: true
 ---
 
@@ -63,7 +63,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AaaaRecord" data-link-title="AaaaRecord">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L46">
         Resource <strong>AaaaRecord</strong>
     </a>
 </h3>
@@ -109,7 +109,7 @@ const exampleAaaaRecord = new azure.dns.AaaaRecord("exampleAaaaRecord", {
 ```
 
 <h4 class="pdoc-member-header" id="AaaaRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -123,7 +123,7 @@ Create a AaaaRecord resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AaaaRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -134,14 +134,14 @@ Get an existing AaaaRecord resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AaaaRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AaaaRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -152,7 +152,7 @@ Returns true if the given object is an instance of AaaaRecord.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AaaaRecord-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L77">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L77">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The FQDN of the DNS AAAA Record.
 
 <h4 class="pdoc-member-header" id="AaaaRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -169,7 +169,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AaaaRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DNS AAAA Record.
 
 <h4 class="pdoc-member-header" id="AaaaRecord-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L85">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L85">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ The name of the DNS AAAA Record.
 List of IPv4 Addresses. Conflicts with `targetResourceId`.
 
 <h4 class="pdoc-member-header" id="AaaaRecord-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L89">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L89">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ List of IPv4 Addresses. Conflicts with `targetResourceId`.
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AaaaRecord-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L93">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L93">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -201,7 +201,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="AaaaRecord-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L97">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L97">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,12 +209,12 @@ A mapping of tags to assign to the resource.
 The Azure resource id of the target object. Conflicts with `records`
 
 <h4 class="pdoc-member-header" id="AaaaRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L98">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L98">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AaaaRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -223,7 +223,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AaaaRecord-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L102">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L102">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -231,7 +231,7 @@ deployments.
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ARecord" data-link-title="ARecord">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L47">
         Resource <strong>ARecord</strong>
     </a>
 </h3>
@@ -278,7 +278,7 @@ const exampleARecord = new azure.dns.ARecord("exampleARecord", {
 ```
 
 <h4 class="pdoc-member-header" id="ARecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -292,7 +292,7 @@ Create a ARecord resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ARecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -303,14 +303,14 @@ Get an existing ARecord resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ARecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L47">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ARecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L68">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -321,7 +321,7 @@ Returns true if the given object is an instance of ARecord.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ARecord-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L78">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L78">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -329,7 +329,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The FQDN of the DNS A Record.
 
 <h4 class="pdoc-member-header" id="ARecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -338,7 +338,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ARecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -346,7 +346,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DNS A Record.
 
 <h4 class="pdoc-member-header" id="ARecord-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L86">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L86">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -354,7 +354,7 @@ The name of the DNS A Record.
 List of IPv4 Addresses. Conflicts with `targetResourceId`.
 
 <h4 class="pdoc-member-header" id="ARecord-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L90">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L90">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -362,7 +362,7 @@ List of IPv4 Addresses. Conflicts with `targetResourceId`.
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ARecord-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -370,7 +370,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ARecord-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L98">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L98">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -378,12 +378,12 @@ A mapping of tags to assign to the resource.
 The Azure resource id of the target object. Conflicts with `records`
 
 <h4 class="pdoc-member-header" id="ARecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L99">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L99">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ARecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -392,7 +392,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ARecord-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L103">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L103">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -400,7 +400,7 @@ deployments.
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="CaaRecord" data-link-title="CaaRecord">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L52">
         Resource <strong>CaaRecord</strong>
     </a>
 </h3>
@@ -450,7 +450,7 @@ const exampleCaaRecord = new azure.dns.CaaRecord("exampleCaaRecord", {
 ```
 
 <h4 class="pdoc-member-header" id="CaaRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -464,7 +464,7 @@ Create a CaaRecord resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CaaRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -475,14 +475,14 @@ Get an existing CaaRecord resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CaaRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CaaRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -493,7 +493,7 @@ Returns true if the given object is an instance of CaaRecord.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CaaRecord-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L83">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L83">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -501,7 +501,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The FQDN of the DNS CAA Record.
 
 <h4 class="pdoc-member-header" id="CaaRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -510,7 +510,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CaaRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DNS CAA Record. If you are creating the record in the apex of the zone use `"@"` as the name.
 
 <h4 class="pdoc-member-header" id="CaaRecord-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L91">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L91">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CaaRecordRecord'>CaaRecordRecord</a>[]&gt;;</code></pre>
@@ -526,7 +526,7 @@ The name of the DNS CAA Record. If you are creating the record in the apex of th
 A list of values that make up the CAA record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="CaaRecord-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L95">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L95">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ A list of values that make up the CAA record. Each `record` block supports field
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CaaRecord-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L99">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L99">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CaaRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L103">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L103">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="CaaRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -559,7 +559,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="CaaRecord-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L107">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L107">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -567,7 +567,7 @@ deployments.
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="CNameRecord" data-link-title="CNameRecord">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L47">
         Resource <strong>CNameRecord</strong>
     </a>
 </h3>
@@ -614,7 +614,7 @@ const exampleCNameRecord = new azure.dns.CNameRecord("exampleCNameRecord", {
 ```
 
 <h4 class="pdoc-member-header" id="CNameRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -628,7 +628,7 @@ Create a CNameRecord resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CNameRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -639,14 +639,14 @@ Get an existing CNameRecord resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CNameRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L47">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CNameRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L68">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -657,7 +657,7 @@ Returns true if the given object is an instance of CNameRecord.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CNameRecord-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L78">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L78">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -665,7 +665,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The FQDN of the DNS CName Record.
 
 <h4 class="pdoc-member-header" id="CNameRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -674,7 +674,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CNameRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -682,7 +682,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DNS CNAME Record.
 
 <h4 class="pdoc-member-header" id="CNameRecord-record">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L86">property <b>record</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L86">property <b>record</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>record: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -690,7 +690,7 @@ The name of the DNS CNAME Record.
 The target of the CNAME.
 
 <h4 class="pdoc-member-header" id="CNameRecord-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L90">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L90">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -698,7 +698,7 @@ The target of the CNAME.
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CNameRecord-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -706,7 +706,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CNameRecord-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L98">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L98">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -714,12 +714,12 @@ A mapping of tags to assign to the resource.
 The Azure resource id of the target object. Conflicts with `records`
 
 <h4 class="pdoc-member-header" id="CNameRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L99">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L99">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CNameRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -728,7 +728,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="CNameRecord-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L103">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L103">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -736,7 +736,7 @@ deployments.
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="MxRecord" data-link-title="MxRecord">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L40">
         Resource <strong>MxRecord</strong>
     </a>
 </h3>
@@ -774,7 +774,7 @@ const exampleMxRecord = new azure.dns.MxRecord("exampleMxRecord", {
 ```
 
 <h4 class="pdoc-member-header" id="MxRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -788,7 +788,7 @@ Create a MxRecord resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MxRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -799,14 +799,14 @@ Get an existing MxRecord resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MxRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MxRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -817,7 +817,7 @@ Returns true if the given object is an instance of MxRecord.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MxRecord-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L71">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L71">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -825,7 +825,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The FQDN of the DNS MX Record.
 
 <h4 class="pdoc-member-header" id="MxRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -834,7 +834,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MxRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -842,7 +842,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DNS MX Record. Defaults to `@` (root). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MxRecord-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L79">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L79">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MxRecordRecord'>MxRecordRecord</a>[]&gt;;</code></pre>
@@ -850,7 +850,7 @@ The name of the DNS MX Record. Defaults to `@` (root). Changing this forces a ne
 A list of values that make up the MX record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="MxRecord-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L83">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L83">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -858,7 +858,7 @@ A list of values that make up the MX record. Each `record` block supports fields
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MxRecord-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L87">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -866,7 +866,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MxRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L91">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L91">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -874,7 +874,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="MxRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -883,7 +883,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="MxRecord-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L95">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L95">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -891,7 +891,7 @@ deployments.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="NsRecord" data-link-title="NsRecord">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L32">
         Resource <strong>NsRecord</strong>
     </a>
 </h3>
@@ -923,7 +923,7 @@ const exampleNsRecord = new azure.dns.NsRecord("exampleNsRecord", {
 ```
 
 <h4 class="pdoc-member-header" id="NsRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -937,7 +937,7 @@ Create a NsRecord resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NsRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -948,14 +948,14 @@ Get an existing NsRecord resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NsRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NsRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -966,7 +966,7 @@ Returns true if the given object is an instance of NsRecord.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NsRecord-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L63">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L63">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -974,7 +974,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The FQDN of the DNS NS Record.
 
 <h4 class="pdoc-member-header" id="NsRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -983,7 +983,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NsRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -991,7 +991,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DNS NS Record.
 
 <h4 class="pdoc-member-header" id="NsRecord-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L71">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L71">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -999,7 +999,7 @@ The name of the DNS NS Record.
 A list of values that make up the NS record.
 
 <h4 class="pdoc-member-header" id="NsRecord-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L75">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L75">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1007,7 +1007,7 @@ A list of values that make up the NS record.
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NsRecord-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L79">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L79">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1015,7 +1015,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="NsRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L83">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L83">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1023,7 +1023,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="NsRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1032,7 +1032,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="NsRecord-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L87">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L87">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1040,7 +1040,7 @@ deployments.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="PtrRecord" data-link-title="PtrRecord">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L26">
         Resource <strong>PtrRecord</strong>
     </a>
 </h3>
@@ -1066,7 +1066,7 @@ const examplePtrRecord = new azure.dns.PtrRecord("examplePtrRecord", {
 ```
 
 <h4 class="pdoc-member-header" id="PtrRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -1080,7 +1080,7 @@ Create a PtrRecord resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PtrRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -1091,14 +1091,14 @@ Get an existing PtrRecord resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PtrRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PtrRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1109,7 +1109,7 @@ Returns true if the given object is an instance of PtrRecord.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PtrRecord-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L57">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L57">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1117,7 +1117,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The FQDN of the DNS PTR Record.
 
 <h4 class="pdoc-member-header" id="PtrRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1126,7 +1126,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PtrRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1134,7 +1134,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DNS PTR Record.
 
 <h4 class="pdoc-member-header" id="PtrRecord-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L65">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L65">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1142,7 +1142,7 @@ The name of the DNS PTR Record.
 List of Fully Qualified Domain Names.
 
 <h4 class="pdoc-member-header" id="PtrRecord-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L69">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L69">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1150,7 +1150,7 @@ List of Fully Qualified Domain Names.
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PtrRecord-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L73">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1158,7 +1158,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="PtrRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L77">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L77">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1166,7 +1166,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="PtrRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1175,7 +1175,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="PtrRecord-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L81">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L81">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1183,7 +1183,7 @@ deployments.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SrvRecord" data-link-title="SrvRecord">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L36">
         Resource <strong>SrvRecord</strong>
     </a>
 </h3>
@@ -1217,7 +1217,7 @@ const exampleSrvRecord = new azure.dns.SrvRecord("exampleSrvRecord", {
 ```
 
 <h4 class="pdoc-member-header" id="SrvRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -1231,7 +1231,7 @@ Create a SrvRecord resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SrvRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -1242,14 +1242,14 @@ Get an existing SrvRecord resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SrvRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SrvRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1260,7 +1260,7 @@ Returns true if the given object is an instance of SrvRecord.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SrvRecord-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L67">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L67">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1268,7 +1268,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The FQDN of the DNS SRV Record.
 
 <h4 class="pdoc-member-header" id="SrvRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1277,7 +1277,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SrvRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1285,7 +1285,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DNS SRV Record.
 
 <h4 class="pdoc-member-header" id="SrvRecord-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L75">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L75">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SrvRecordRecord'>SrvRecordRecord</a>[]&gt;;</code></pre>
@@ -1293,7 +1293,7 @@ The name of the DNS SRV Record.
 A list of values that make up the SRV record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="SrvRecord-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L79">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L79">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1301,7 +1301,7 @@ A list of values that make up the SRV record. Each `record` block supports field
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SrvRecord-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L83">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L83">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1309,7 +1309,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SrvRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L87">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L87">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1317,7 +1317,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="SrvRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1326,7 +1326,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SrvRecord-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L91">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L91">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1334,7 +1334,7 @@ deployments.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="TxtRecord" data-link-title="TxtRecord">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L38">
         Resource <strong>TxtRecord</strong>
     </a>
 </h3>
@@ -1370,7 +1370,7 @@ const exampleTxtRecord = new azure.dns.TxtRecord("exampleTxtRecord", {
 ```
 
 <h4 class="pdoc-member-header" id="TxtRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -1384,7 +1384,7 @@ Create a TxtRecord resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TxtRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -1395,14 +1395,14 @@ Get an existing TxtRecord resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TxtRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TxtRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1413,7 +1413,7 @@ Returns true if the given object is an instance of TxtRecord.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TxtRecord-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L69">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L69">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1421,7 +1421,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The FQDN of the DNS TXT Record.
 
 <h4 class="pdoc-member-header" id="TxtRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1430,7 +1430,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TxtRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1438,7 +1438,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DNS TXT Record.
 
 <h4 class="pdoc-member-header" id="TxtRecord-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L77">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L77">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TxtRecordRecord'>TxtRecordRecord</a>[]&gt;;</code></pre>
@@ -1446,7 +1446,7 @@ The name of the DNS TXT Record.
 A list of values that make up the txt record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="TxtRecord-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L81">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L81">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1454,7 +1454,7 @@ A list of values that make up the txt record. Each `record` block supports field
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TxtRecord-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L85">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1462,7 +1462,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TxtRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L89">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L89">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1470,7 +1470,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="TxtRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1479,7 +1479,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="TxtRecord-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L93">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L93">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1487,7 +1487,7 @@ deployments.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="Zone" data-link-title="Zone">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L21">
         Resource <strong>Zone</strong>
     </a>
 </h3>
@@ -1508,7 +1508,7 @@ const example_private = new azure.privatedns.Zone("example-private", {resourceGr
 ```
 
 <h4 class="pdoc-member-header" id="Zone-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L72"> <b>constructor</b></a>
 </h4>
 
 
@@ -1522,7 +1522,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Zone-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L31">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L31">method <b>get</b></a>
 </h4>
 
 
@@ -1533,14 +1533,14 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Zone-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L21">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L21">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Zone-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L42">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L42">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1551,7 +1551,7 @@ Returns true if the given object is an instance of Zone.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Zone-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L21">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L21">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1560,7 +1560,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Zone-maxNumberOfRecordSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L52">property <b>maxNumberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L52">property <b>maxNumberOfRecordSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxNumberOfRecordSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1568,7 +1568,7 @@ deployments and may be missing (undefined) during planning phases.
 (Optional) Maximum number of Records in the zone. Defaults to `1000`.
 
 <h4 class="pdoc-member-header" id="Zone-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L56">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1576,7 +1576,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the DNS Zone. Must be a valid domain name.
 
 <h4 class="pdoc-member-header" id="Zone-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L60">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L60">property <b>nameServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nameServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1584,7 +1584,7 @@ The name of the DNS Zone. Must be a valid domain name.
 (Optional) A list of values that make up the NS record for the zone.
 
 <h4 class="pdoc-member-header" id="Zone-numberOfRecordSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L64">property <b>numberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L64">property <b>numberOfRecordSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>numberOfRecordSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1592,7 +1592,7 @@ The name of the DNS Zone. Must be a valid domain name.
 (Optional) The number of records already in the zone.
 
 <h4 class="pdoc-member-header" id="Zone-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L68">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L68">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1600,7 +1600,7 @@ The name of the DNS Zone. Must be a valid domain name.
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Zone-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L72">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L72">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1608,7 +1608,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Zone-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L21">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L21">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1619,7 +1619,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getZone" data-link-title="getZone">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L25">
         Function <strong>getZone</strong>
     </a>
 </h3>
@@ -1646,7 +1646,7 @@ export const dnsZoneId = example.then(example => example.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AaaaRecordArgs" data-link-title="AaaaRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L193">
         interface <strong>AaaaRecordArgs</strong>
     </a>
 </h3>
@@ -1656,7 +1656,7 @@ export const dnsZoneId = example.then(example => example.id);
 The set of arguments for constructing a AaaaRecord resource.
 
 <h4 class="pdoc-member-header" id="AaaaRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L197">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L197">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1664,7 +1664,7 @@ The set of arguments for constructing a AaaaRecord resource.
 The name of the DNS AAAA Record.
 
 <h4 class="pdoc-member-header" id="AaaaRecordArgs-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L201">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L201">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1672,7 +1672,7 @@ The name of the DNS AAAA Record.
 List of IPv4 Addresses. Conflicts with `targetResourceId`.
 
 <h4 class="pdoc-member-header" id="AaaaRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L205">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L205">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1680,7 +1680,7 @@ List of IPv4 Addresses. Conflicts with `targetResourceId`.
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AaaaRecordArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L209">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L209">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1688,7 +1688,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="AaaaRecordArgs-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L213">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L213">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1696,12 +1696,12 @@ A mapping of tags to assign to the resource.
 The Azure resource id of the target object. Conflicts with `records`
 
 <h4 class="pdoc-member-header" id="AaaaRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L214">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L214">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AaaaRecordArgs-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L218">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L218">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1709,7 +1709,7 @@ The Azure resource id of the target object. Conflicts with `records`
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="AaaaRecordState" data-link-title="AaaaRecordState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L158">
         interface <strong>AaaaRecordState</strong>
     </a>
 </h3>
@@ -1719,7 +1719,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 Input properties used for looking up and filtering AaaaRecord resources.
 
 <h4 class="pdoc-member-header" id="AaaaRecordState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L162">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L162">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1727,7 +1727,7 @@ Input properties used for looking up and filtering AaaaRecord resources.
 The FQDN of the DNS AAAA Record.
 
 <h4 class="pdoc-member-header" id="AaaaRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L166">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L166">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1735,7 +1735,7 @@ The FQDN of the DNS AAAA Record.
 The name of the DNS AAAA Record.
 
 <h4 class="pdoc-member-header" id="AaaaRecordState-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L170">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L170">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1743,7 +1743,7 @@ The name of the DNS AAAA Record.
 List of IPv4 Addresses. Conflicts with `targetResourceId`.
 
 <h4 class="pdoc-member-header" id="AaaaRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L174">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L174">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1751,7 +1751,7 @@ List of IPv4 Addresses. Conflicts with `targetResourceId`.
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AaaaRecordState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L178">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L178">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1759,7 +1759,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="AaaaRecordState-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L182">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L182">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1767,12 +1767,12 @@ A mapping of tags to assign to the resource.
 The Azure resource id of the target object. Conflicts with `records`
 
 <h4 class="pdoc-member-header" id="AaaaRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L183">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L183">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AaaaRecordState-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/aaaaRecord.ts#L187">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/aaaaRecord.ts#L187">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1780,7 +1780,7 @@ The Azure resource id of the target object. Conflicts with `records`
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ARecordArgs" data-link-title="ARecordArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L194">
         interface <strong>ARecordArgs</strong>
     </a>
 </h3>
@@ -1790,7 +1790,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 The set of arguments for constructing a ARecord resource.
 
 <h4 class="pdoc-member-header" id="ARecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L198">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L198">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1798,7 +1798,7 @@ The set of arguments for constructing a ARecord resource.
 The name of the DNS A Record.
 
 <h4 class="pdoc-member-header" id="ARecordArgs-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L202">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L202">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1806,7 +1806,7 @@ The name of the DNS A Record.
 List of IPv4 Addresses. Conflicts with `targetResourceId`.
 
 <h4 class="pdoc-member-header" id="ARecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L206">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L206">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1814,7 +1814,7 @@ List of IPv4 Addresses. Conflicts with `targetResourceId`.
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ARecordArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L210">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L210">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1822,7 +1822,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ARecordArgs-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L214">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L214">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1830,12 +1830,12 @@ A mapping of tags to assign to the resource.
 The Azure resource id of the target object. Conflicts with `records`
 
 <h4 class="pdoc-member-header" id="ARecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L215">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L215">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ARecordArgs-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L219">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L219">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1843,7 +1843,7 @@ The Azure resource id of the target object. Conflicts with `records`
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ARecordState" data-link-title="ARecordState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L159">
         interface <strong>ARecordState</strong>
     </a>
 </h3>
@@ -1853,7 +1853,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 Input properties used for looking up and filtering ARecord resources.
 
 <h4 class="pdoc-member-header" id="ARecordState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L163">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L163">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1861,7 +1861,7 @@ Input properties used for looking up and filtering ARecord resources.
 The FQDN of the DNS A Record.
 
 <h4 class="pdoc-member-header" id="ARecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L167">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L167">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1869,7 +1869,7 @@ The FQDN of the DNS A Record.
 The name of the DNS A Record.
 
 <h4 class="pdoc-member-header" id="ARecordState-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L171">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L171">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1877,7 +1877,7 @@ The name of the DNS A Record.
 List of IPv4 Addresses. Conflicts with `targetResourceId`.
 
 <h4 class="pdoc-member-header" id="ARecordState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L175">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L175">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1885,7 +1885,7 @@ List of IPv4 Addresses. Conflicts with `targetResourceId`.
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ARecordState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L179">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L179">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1893,7 +1893,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ARecordState-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L183">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L183">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1901,12 +1901,12 @@ A mapping of tags to assign to the resource.
 The Azure resource id of the target object. Conflicts with `records`
 
 <h4 class="pdoc-member-header" id="ARecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L184">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L184">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ARecordState-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/arecord.ts#L188">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/arecord.ts#L188">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1914,7 +1914,7 @@ The Azure resource id of the target object. Conflicts with `records`
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="CaaRecordArgs" data-link-title="CaaRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L198">
         interface <strong>CaaRecordArgs</strong>
     </a>
 </h3>
@@ -1924,7 +1924,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 The set of arguments for constructing a CaaRecord resource.
 
 <h4 class="pdoc-member-header" id="CaaRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L202">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L202">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1932,7 +1932,7 @@ The set of arguments for constructing a CaaRecord resource.
 The name of the DNS CAA Record. If you are creating the record in the apex of the zone use `"@"` as the name.
 
 <h4 class="pdoc-member-header" id="CaaRecordArgs-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L206">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L206">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CaaRecordRecord'>CaaRecordRecord</a>&gt;[]&gt;;</code></pre>
@@ -1940,7 +1940,7 @@ The name of the DNS CAA Record. If you are creating the record in the apex of th
 A list of values that make up the CAA record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="CaaRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L210">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L210">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1948,7 +1948,7 @@ A list of values that make up the CAA record. Each `record` block supports field
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CaaRecordArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L214">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L214">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1956,7 +1956,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CaaRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L218">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L218">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1964,7 +1964,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="CaaRecordArgs-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L222">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L222">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1972,7 +1972,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="CaaRecordState" data-link-title="CaaRecordState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L164">
         interface <strong>CaaRecordState</strong>
     </a>
 </h3>
@@ -1982,7 +1982,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 Input properties used for looking up and filtering CaaRecord resources.
 
 <h4 class="pdoc-member-header" id="CaaRecordState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L168">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L168">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1990,7 +1990,7 @@ Input properties used for looking up and filtering CaaRecord resources.
 The FQDN of the DNS CAA Record.
 
 <h4 class="pdoc-member-header" id="CaaRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L172">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1998,7 +1998,7 @@ The FQDN of the DNS CAA Record.
 The name of the DNS CAA Record. If you are creating the record in the apex of the zone use `"@"` as the name.
 
 <h4 class="pdoc-member-header" id="CaaRecordState-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L176">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L176">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CaaRecordRecord'>CaaRecordRecord</a>&gt;[]&gt;;</code></pre>
@@ -2006,7 +2006,7 @@ The name of the DNS CAA Record. If you are creating the record in the apex of th
 A list of values that make up the CAA record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="CaaRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L180">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L180">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2014,7 +2014,7 @@ A list of values that make up the CAA record. Each `record` block supports field
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CaaRecordState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L184">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L184">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2022,7 +2022,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CaaRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L188">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L188">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2030,7 +2030,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="CaaRecordState-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/caaRecord.ts#L192">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/caaRecord.ts#L192">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2038,7 +2038,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="CNameRecordArgs" data-link-title="CNameRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L194">
         interface <strong>CNameRecordArgs</strong>
     </a>
 </h3>
@@ -2048,7 +2048,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 The set of arguments for constructing a CNameRecord resource.
 
 <h4 class="pdoc-member-header" id="CNameRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L198">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L198">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2056,7 +2056,7 @@ The set of arguments for constructing a CNameRecord resource.
 The name of the DNS CNAME Record.
 
 <h4 class="pdoc-member-header" id="CNameRecordArgs-record">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L202">property <b>record</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L202">property <b>record</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>record?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2064,7 +2064,7 @@ The name of the DNS CNAME Record.
 The target of the CNAME.
 
 <h4 class="pdoc-member-header" id="CNameRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L206">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L206">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2072,7 +2072,7 @@ The target of the CNAME.
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CNameRecordArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L210">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L210">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2080,7 +2080,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CNameRecordArgs-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L214">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L214">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2088,12 +2088,12 @@ A mapping of tags to assign to the resource.
 The Azure resource id of the target object. Conflicts with `records`
 
 <h4 class="pdoc-member-header" id="CNameRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L215">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L215">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CNameRecordArgs-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L219">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L219">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2101,7 +2101,7 @@ The Azure resource id of the target object. Conflicts with `records`
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="CNameRecordState" data-link-title="CNameRecordState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L159">
         interface <strong>CNameRecordState</strong>
     </a>
 </h3>
@@ -2111,7 +2111,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 Input properties used for looking up and filtering CNameRecord resources.
 
 <h4 class="pdoc-member-header" id="CNameRecordState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L163">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L163">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2119,7 +2119,7 @@ Input properties used for looking up and filtering CNameRecord resources.
 The FQDN of the DNS CName Record.
 
 <h4 class="pdoc-member-header" id="CNameRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L167">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L167">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2127,7 +2127,7 @@ The FQDN of the DNS CName Record.
 The name of the DNS CNAME Record.
 
 <h4 class="pdoc-member-header" id="CNameRecordState-record">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L171">property <b>record</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L171">property <b>record</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>record?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2135,7 +2135,7 @@ The name of the DNS CNAME Record.
 The target of the CNAME.
 
 <h4 class="pdoc-member-header" id="CNameRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L175">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L175">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2143,7 +2143,7 @@ The target of the CNAME.
 Specifies the resource group where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CNameRecordState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L179">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L179">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2151,7 +2151,7 @@ Specifies the resource group where the DNS Zone (parent resource) exists. Changi
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CNameRecordState-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L183">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L183">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2159,12 +2159,12 @@ A mapping of tags to assign to the resource.
 The Azure resource id of the target object. Conflicts with `records`
 
 <h4 class="pdoc-member-header" id="CNameRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L184">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L184">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CNameRecordState-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/cnameRecord.ts#L188">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/cnameRecord.ts#L188">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2172,7 +2172,7 @@ The Azure resource id of the target object. Conflicts with `records`
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="GetZoneArgs" data-link-title="GetZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L42">
         interface <strong>GetZoneArgs</strong>
     </a>
 </h3>
@@ -2182,7 +2182,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 A collection of arguments for invoking getZone.
 
 <h4 class="pdoc-member-header" id="GetZoneArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2190,7 +2190,7 @@ A collection of arguments for invoking getZone.
 The name of the DNS Zone.
 
 <h4 class="pdoc-member-header" id="GetZoneArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L52">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L52">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2200,7 +2200,7 @@ If the Name of the Resource Group is not provided, the first DNS Zone from the l
 in your subscription that matches `name` will be returned.
 
 <h3 class="pdoc-module-header" id="GetZoneResult" data-link-title="GetZoneResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L58">
         interface <strong>GetZoneResult</strong>
     </a>
 </h3>
@@ -2210,7 +2210,7 @@ in your subscription that matches `name` will be returned.
 A collection of values returned by getZone.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2218,7 +2218,7 @@ A collection of values returned by getZone.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-maxNumberOfRecordSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L66">property <b>maxNumberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L66">property <b>maxNumberOfRecordSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxNumberOfRecordSets: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2226,12 +2226,12 @@ The provider-assigned unique ID for this managed resource.
 Maximum number of Records in the zone.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZoneResult-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L71">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L71">property <b>nameServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2239,7 +2239,7 @@ Maximum number of Records in the zone.
 A list of values that make up the NS record for the zone.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-numberOfRecordSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L75">property <b>numberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L75">property <b>numberOfRecordSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numberOfRecordSets: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2247,12 +2247,12 @@ A list of values that make up the NS record for the zone.
 The number of records already in the zone.
 
 <h4 class="pdoc-member-header" id="GetZoneResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L76">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L76">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZoneResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/getZone.ts#L80">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/getZone.ts#L80">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2260,7 +2260,7 @@ The number of records already in the zone.
 A mapping of tags to assign to the EventHub Namespace.
 
 <h3 class="pdoc-module-header" id="MxRecordArgs" data-link-title="MxRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L186">
         interface <strong>MxRecordArgs</strong>
     </a>
 </h3>
@@ -2270,7 +2270,7 @@ A mapping of tags to assign to the EventHub Namespace.
 The set of arguments for constructing a MxRecord resource.
 
 <h4 class="pdoc-member-header" id="MxRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L190">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2278,7 +2278,7 @@ The set of arguments for constructing a MxRecord resource.
 The name of the DNS MX Record. Defaults to `@` (root). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MxRecordArgs-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L194">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L194">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MxRecordRecord'>MxRecordRecord</a>&gt;[]&gt;;</code></pre>
@@ -2286,7 +2286,7 @@ The name of the DNS MX Record. Defaults to `@` (root). Changing this forces a ne
 A list of values that make up the MX record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="MxRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L198">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L198">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2294,7 +2294,7 @@ A list of values that make up the MX record. Each `record` block supports fields
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MxRecordArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L202">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L202">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2302,7 +2302,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MxRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L206">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L206">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2310,7 +2310,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="MxRecordArgs-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L210">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L210">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2318,7 +2318,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="MxRecordState" data-link-title="MxRecordState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L152">
         interface <strong>MxRecordState</strong>
     </a>
 </h3>
@@ -2328,7 +2328,7 @@ Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing thi
 Input properties used for looking up and filtering MxRecord resources.
 
 <h4 class="pdoc-member-header" id="MxRecordState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L156">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L156">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2336,7 +2336,7 @@ Input properties used for looking up and filtering MxRecord resources.
 The FQDN of the DNS MX Record.
 
 <h4 class="pdoc-member-header" id="MxRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L160">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L160">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2344,7 +2344,7 @@ The FQDN of the DNS MX Record.
 The name of the DNS MX Record. Defaults to `@` (root). Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MxRecordState-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L164">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L164">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MxRecordRecord'>MxRecordRecord</a>&gt;[]&gt;;</code></pre>
@@ -2352,7 +2352,7 @@ The name of the DNS MX Record. Defaults to `@` (root). Changing this forces a ne
 A list of values that make up the MX record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="MxRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L168">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L168">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2360,7 +2360,7 @@ A list of values that make up the MX record. Each `record` block supports fields
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MxRecordState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L172">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L172">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2368,7 +2368,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MxRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L176">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L176">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2376,7 +2376,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="MxRecordState-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/mxRecord.ts#L180">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/mxRecord.ts#L180">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2384,7 +2384,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="NsRecordArgs" data-link-title="NsRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L178">
         interface <strong>NsRecordArgs</strong>
     </a>
 </h3>
@@ -2394,7 +2394,7 @@ Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing thi
 The set of arguments for constructing a NsRecord resource.
 
 <h4 class="pdoc-member-header" id="NsRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L182">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2402,7 +2402,7 @@ The set of arguments for constructing a NsRecord resource.
 The name of the DNS NS Record.
 
 <h4 class="pdoc-member-header" id="NsRecordArgs-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L186">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L186">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2410,7 +2410,7 @@ The name of the DNS NS Record.
 A list of values that make up the NS record.
 
 <h4 class="pdoc-member-header" id="NsRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L190">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L190">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2418,7 +2418,7 @@ A list of values that make up the NS record.
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NsRecordArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L194">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L194">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2426,7 +2426,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="NsRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L198">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L198">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2434,7 +2434,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="NsRecordArgs-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L202">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L202">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2442,7 +2442,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="NsRecordState" data-link-title="NsRecordState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L144">
         interface <strong>NsRecordState</strong>
     </a>
 </h3>
@@ -2452,7 +2452,7 @@ Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing thi
 Input properties used for looking up and filtering NsRecord resources.
 
 <h4 class="pdoc-member-header" id="NsRecordState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L148">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L148">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2460,7 +2460,7 @@ Input properties used for looking up and filtering NsRecord resources.
 The FQDN of the DNS NS Record.
 
 <h4 class="pdoc-member-header" id="NsRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2468,7 +2468,7 @@ The FQDN of the DNS NS Record.
 The name of the DNS NS Record.
 
 <h4 class="pdoc-member-header" id="NsRecordState-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L156">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L156">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2476,7 +2476,7 @@ The name of the DNS NS Record.
 A list of values that make up the NS record.
 
 <h4 class="pdoc-member-header" id="NsRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L160">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L160">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2484,7 +2484,7 @@ A list of values that make up the NS record.
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NsRecordState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L164">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L164">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2492,7 +2492,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="NsRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L168">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L168">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2500,7 +2500,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="NsRecordState-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/nsRecord.ts#L172">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/nsRecord.ts#L172">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2508,7 +2508,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="PtrRecordArgs" data-link-title="PtrRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L172">
         interface <strong>PtrRecordArgs</strong>
     </a>
 </h3>
@@ -2518,7 +2518,7 @@ Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing thi
 The set of arguments for constructing a PtrRecord resource.
 
 <h4 class="pdoc-member-header" id="PtrRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L176">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2526,7 +2526,7 @@ The set of arguments for constructing a PtrRecord resource.
 The name of the DNS PTR Record.
 
 <h4 class="pdoc-member-header" id="PtrRecordArgs-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L180">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L180">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2534,7 +2534,7 @@ The name of the DNS PTR Record.
 List of Fully Qualified Domain Names.
 
 <h4 class="pdoc-member-header" id="PtrRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L184">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L184">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2542,7 +2542,7 @@ List of Fully Qualified Domain Names.
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PtrRecordArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L188">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L188">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2550,7 +2550,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="PtrRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L192">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L192">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2558,7 +2558,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="PtrRecordArgs-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L196">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L196">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2566,7 +2566,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="PtrRecordState" data-link-title="PtrRecordState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L138">
         interface <strong>PtrRecordState</strong>
     </a>
 </h3>
@@ -2576,7 +2576,7 @@ Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing thi
 Input properties used for looking up and filtering PtrRecord resources.
 
 <h4 class="pdoc-member-header" id="PtrRecordState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L142">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L142">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2584,7 +2584,7 @@ Input properties used for looking up and filtering PtrRecord resources.
 The FQDN of the DNS PTR Record.
 
 <h4 class="pdoc-member-header" id="PtrRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2592,7 +2592,7 @@ The FQDN of the DNS PTR Record.
 The name of the DNS PTR Record.
 
 <h4 class="pdoc-member-header" id="PtrRecordState-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L150">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L150">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2600,7 +2600,7 @@ The name of the DNS PTR Record.
 List of Fully Qualified Domain Names.
 
 <h4 class="pdoc-member-header" id="PtrRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L154">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L154">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2608,7 +2608,7 @@ List of Fully Qualified Domain Names.
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="PtrRecordState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L158">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L158">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2616,7 +2616,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="PtrRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L162">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L162">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2624,7 +2624,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="PtrRecordState-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/ptrRecord.ts#L166">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/ptrRecord.ts#L166">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2632,7 +2632,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SrvRecordArgs" data-link-title="SrvRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L182">
         interface <strong>SrvRecordArgs</strong>
     </a>
 </h3>
@@ -2642,7 +2642,7 @@ Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing thi
 The set of arguments for constructing a SrvRecord resource.
 
 <h4 class="pdoc-member-header" id="SrvRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L186">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L186">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2650,7 +2650,7 @@ The set of arguments for constructing a SrvRecord resource.
 The name of the DNS SRV Record.
 
 <h4 class="pdoc-member-header" id="SrvRecordArgs-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L190">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L190">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SrvRecordRecord'>SrvRecordRecord</a>&gt;[]&gt;;</code></pre>
@@ -2658,7 +2658,7 @@ The name of the DNS SRV Record.
 A list of values that make up the SRV record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="SrvRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L194">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L194">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2666,7 +2666,7 @@ A list of values that make up the SRV record. Each `record` block supports field
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SrvRecordArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L198">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L198">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2674,7 +2674,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SrvRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L202">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L202">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2682,7 +2682,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="SrvRecordArgs-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L206">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L206">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2690,7 +2690,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SrvRecordState" data-link-title="SrvRecordState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L148">
         interface <strong>SrvRecordState</strong>
     </a>
 </h3>
@@ -2700,7 +2700,7 @@ Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing thi
 Input properties used for looking up and filtering SrvRecord resources.
 
 <h4 class="pdoc-member-header" id="SrvRecordState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L152">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L152">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2708,7 +2708,7 @@ Input properties used for looking up and filtering SrvRecord resources.
 The FQDN of the DNS SRV Record.
 
 <h4 class="pdoc-member-header" id="SrvRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L156">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2716,7 +2716,7 @@ The FQDN of the DNS SRV Record.
 The name of the DNS SRV Record.
 
 <h4 class="pdoc-member-header" id="SrvRecordState-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L160">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L160">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SrvRecordRecord'>SrvRecordRecord</a>&gt;[]&gt;;</code></pre>
@@ -2724,7 +2724,7 @@ The name of the DNS SRV Record.
 A list of values that make up the SRV record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="SrvRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L164">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L164">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2732,7 +2732,7 @@ A list of values that make up the SRV record. Each `record` block supports field
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SrvRecordState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L168">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L168">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2740,7 +2740,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SrvRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L172">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L172">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2748,7 +2748,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="SrvRecordState-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/srvRecord.ts#L176">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/srvRecord.ts#L176">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2756,7 +2756,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="TxtRecordArgs" data-link-title="TxtRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L184">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L184">
         interface <strong>TxtRecordArgs</strong>
     </a>
 </h3>
@@ -2766,7 +2766,7 @@ Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing thi
 The set of arguments for constructing a TxtRecord resource.
 
 <h4 class="pdoc-member-header" id="TxtRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2774,7 +2774,7 @@ The set of arguments for constructing a TxtRecord resource.
 The name of the DNS TXT Record.
 
 <h4 class="pdoc-member-header" id="TxtRecordArgs-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L192">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L192">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TxtRecordRecord'>TxtRecordRecord</a>&gt;[]&gt;;</code></pre>
@@ -2782,7 +2782,7 @@ The name of the DNS TXT Record.
 A list of values that make up the txt record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="TxtRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L196">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L196">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2790,7 +2790,7 @@ A list of values that make up the txt record. Each `record` block supports field
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TxtRecordArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L200">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L200">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2798,7 +2798,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TxtRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L204">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L204">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2806,7 +2806,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="TxtRecordArgs-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L208">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L208">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2814,7 +2814,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="TxtRecordState" data-link-title="TxtRecordState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L150">
         interface <strong>TxtRecordState</strong>
     </a>
 </h3>
@@ -2824,7 +2824,7 @@ Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing thi
 Input properties used for looking up and filtering TxtRecord resources.
 
 <h4 class="pdoc-member-header" id="TxtRecordState-fqdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L154">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L154">property <b>fqdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2832,7 +2832,7 @@ Input properties used for looking up and filtering TxtRecord resources.
 The FQDN of the DNS TXT Record.
 
 <h4 class="pdoc-member-header" id="TxtRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L158">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L158">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2840,7 +2840,7 @@ The FQDN of the DNS TXT Record.
 The name of the DNS TXT Record.
 
 <h4 class="pdoc-member-header" id="TxtRecordState-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L162">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L162">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TxtRecordRecord'>TxtRecordRecord</a>&gt;[]&gt;;</code></pre>
@@ -2848,7 +2848,7 @@ The name of the DNS TXT Record.
 A list of values that make up the txt record. Each `record` block supports fields documented below.
 
 <h4 class="pdoc-member-header" id="TxtRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L166">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L166">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2856,7 +2856,7 @@ A list of values that make up the txt record. Each `record` block supports field
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TxtRecordState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L170">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L170">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2864,7 +2864,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TxtRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L174">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L174">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2872,7 +2872,7 @@ A mapping of tags to assign to the resource.
 The Time To Live (TTL) of the DNS record in seconds.
 
 <h4 class="pdoc-member-header" id="TxtRecordState-zoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/txtRecord.ts#L178">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/txtRecord.ts#L178">property <b>zoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2880,7 +2880,7 @@ The Time To Live (TTL) of the DNS record in seconds.
 Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="ZoneArgs" data-link-title="ZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L148">
         interface <strong>ZoneArgs</strong>
     </a>
 </h3>
@@ -2890,7 +2890,7 @@ Specifies the DNS Zone where the DNS Zone (parent resource) exists. Changing thi
 The set of arguments for constructing a Zone resource.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2898,7 +2898,7 @@ The set of arguments for constructing a Zone resource.
 The name of the DNS Zone. Must be a valid domain name.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L156">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L156">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2906,7 +2906,7 @@ The name of the DNS Zone. Must be a valid domain name.
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L160">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L160">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2914,7 +2914,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ZoneState" data-link-title="ZoneState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L118">
         interface <strong>ZoneState</strong>
     </a>
 </h3>
@@ -2924,7 +2924,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Zone resources.
 
 <h4 class="pdoc-member-header" id="ZoneState-maxNumberOfRecordSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L122">property <b>maxNumberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L122">property <b>maxNumberOfRecordSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxNumberOfRecordSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2932,7 +2932,7 @@ Input properties used for looking up and filtering Zone resources.
 (Optional) Maximum number of Records in the zone. Defaults to `1000`.
 
 <h4 class="pdoc-member-header" id="ZoneState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L126">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2940,7 +2940,7 @@ Input properties used for looking up and filtering Zone resources.
 The name of the DNS Zone. Must be a valid domain name.
 
 <h4 class="pdoc-member-header" id="ZoneState-nameServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L130">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L130">property <b>nameServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2948,7 +2948,7 @@ The name of the DNS Zone. Must be a valid domain name.
 (Optional) A list of values that make up the NS record for the zone.
 
 <h4 class="pdoc-member-header" id="ZoneState-numberOfRecordSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L134">property <b>numberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L134">property <b>numberOfRecordSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numberOfRecordSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2956,7 +2956,7 @@ The name of the DNS Zone. Must be a valid domain name.
 (Optional) The number of records already in the zone.
 
 <h4 class="pdoc-member-header" id="ZoneState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L138">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L138">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2964,7 +2964,7 @@ The name of the DNS Zone. Must be a valid domain name.
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ZoneState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/91032c2a3b439090a2e0c91de8152754746653c8/sdk/nodejs/dns/zone.ts#L142">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/ae81224b0e43a24bc091e2a578f201522008bfbd/sdk/nodejs/dns/zone.ts#L142">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

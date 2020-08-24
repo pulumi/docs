@@ -219,11 +219,11 @@ example_virtual_network_gateway = azure.network.VirtualNetworkGateway("exampleVi
     active_active=False,
     enable_bgp=False,
     sku="Basic",
-    ip_configurations=[{
-        "public_ip_address_id": example_public_ip.id,
-        "privateIpAddressAllocation": "Dynamic",
-        "subnet_id": example_subnet.id,
-    }])
+    ip_configurations=[azure.network.VirtualNetworkGatewayIpConfigurationArgs(
+        public_ip_address_id=example_public_ip.id,
+        private_ip_address_allocation="Dynamic",
+        subnet_id=example_subnet.id,
+    )])
 onpremise_virtual_network_gateway_connection = azure.network.VirtualNetworkGatewayConnection("onpremiseVirtualNetworkGatewayConnection",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -571,11 +571,11 @@ us_virtual_network_gateway = azure.network.VirtualNetworkGateway("usVirtualNetwo
     type="Vpn",
     vpn_type="RouteBased",
     sku="Basic",
-    ip_configurations=[{
-        "public_ip_address_id": us_public_ip.id,
-        "privateIpAddressAllocation": "Dynamic",
-        "subnet_id": us_gateway.id,
-    }])
+    ip_configurations=[azure.network.VirtualNetworkGatewayIpConfigurationArgs(
+        public_ip_address_id=us_public_ip.id,
+        private_ip_address_allocation="Dynamic",
+        subnet_id=us_gateway.id,
+    )])
 europe_resource_group = azure.core.ResourceGroup("europeResourceGroup", location="West Europe")
 europe_virtual_network = azure.network.VirtualNetwork("europeVirtualNetwork",
     location=europe_resource_group.location,
@@ -595,11 +595,11 @@ europe_virtual_network_gateway = azure.network.VirtualNetworkGateway("europeVirt
     type="Vpn",
     vpn_type="RouteBased",
     sku="Basic",
-    ip_configurations=[{
-        "public_ip_address_id": europe_public_ip.id,
-        "privateIpAddressAllocation": "Dynamic",
-        "subnet_id": europe_gateway.id,
-    }])
+    ip_configurations=[azure.network.VirtualNetworkGatewayIpConfigurationArgs(
+        public_ip_address_id=europe_public_ip.id,
+        private_ip_address_allocation="Dynamic",
+        subnet_id=europe_gateway.id,
+    )])
 us_to_europe = azure.network.VirtualNetworkGatewayConnection("usToEurope",
     location=us_resource_group.location,
     resource_group_name=us_resource_group.name,
@@ -712,7 +712,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetworkGatewayConnection">VirtualNetworkGatewayConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualNetworkGatewayConnectionIpsecPolicy]]</span> = None<span class="p">, </span><span class="nx">local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_selector_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualNetworkGatewayConnectionTrafficSelectorPolicy]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetworkGatewayConnection">VirtualNetworkGatewayConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayConnectionIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_selector_policy</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayConnectionTrafficSelectorPolicyArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1692,7 +1692,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
@@ -1778,7 +1778,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1789,7 +1789,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#traffic_selector_policy_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
@@ -1908,7 +1908,7 @@ Get an existing VirtualNetworkGatewayConnection resource's state with the given 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualNetworkGatewayConnectionIpsecPolicy]]</span> = None<span class="p">, </span><span class="nx">local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_selector_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualNetworkGatewayConnectionTrafficSelectorPolicy]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualNetworkGatewayConnection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorization_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_bgp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">express_route_gateway_bypass</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipsec_policy</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayConnectionIpsecPolicyArgs]</span> = None<span class="p">, </span><span class="nx">local_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_weight</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_selector_policy</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkGatewayConnectionTrafficSelectorPolicyArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_policy_based_traffic_selectors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">virtual_network_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualNetworkGatewayConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2790,7 +2790,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#state_ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
@@ -2888,7 +2888,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2899,7 +2899,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#state_traffic_selector_policy_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
@@ -3297,8 +3297,8 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="dhgroup_python">
-<a href="#dhgroup_python" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
+        <span id="dh_group_python">
+<a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3310,8 +3310,8 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 
     <dt class="property-required"
             title="Required">
-        <span id="ikeencryption_python">
-<a href="#ikeencryption_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
+        <span id="ike_encryption_python">
+<a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3322,8 +3322,8 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
 
     <dt class="property-required"
             title="Required">
-        <span id="ikeintegrity_python">
-<a href="#ikeintegrity_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
+        <span id="ike_integrity_python">
+<a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3334,8 +3334,8 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
 
     <dt class="property-required"
             title="Required">
-        <span id="ipsecencryption_python">
-<a href="#ipsecencryption_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
+        <span id="ipsec_encryption_python">
+<a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3346,8 +3346,8 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
 
     <dt class="property-required"
             title="Required">
-        <span id="ipsecintegrity_python">
-<a href="#ipsecintegrity_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
+        <span id="ipsec_integrity_python">
+<a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3358,8 +3358,8 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
 
     <dt class="property-required"
             title="Required">
-        <span id="pfsgroup_python">
-<a href="#pfsgroup_python" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
+        <span id="pfs_group_python">
+<a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3371,8 +3371,8 @@ or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sadatasize_python">
-<a href="#sadatasize_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Datasize</a>
+        <span id="sa_datasize_python">
+<a href="#sa_datasize_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>datasize</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3383,8 +3383,8 @@ or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="salifetime_python">
-<a href="#salifetime_python" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime</a>
+        <span id="sa_lifetime_python">
+<a href="#sa_lifetime_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>lifetime</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3501,8 +3501,8 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="localaddresscidrs_python">
-<a href="#localaddresscidrs_python" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Cidrs</a>
+        <span id="local_address_cidrs_python">
+<a href="#local_address_cidrs_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>cidrs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3511,8 +3511,8 @@ or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="remoteaddresscidrs_python">
-<a href="#remoteaddresscidrs_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Cidrs</a>
+        <span id="remote_address_cidrs_python">
+<a href="#remote_address_cidrs_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>cidrs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

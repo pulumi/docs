@@ -162,7 +162,7 @@ const exampleEventHub = new azure.eventhub.EventHub("exampleEventHub", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#pulumi_azure.eventhub.EventHub">EventHub</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[Dict[EventHubCaptureDescription]]</span> = None<span class="p">, </span><span class="nx">message_retention</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#pulumi_azure.eventhub.EventHub">EventHub</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[EventHubCaptureDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">message_retention</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -603,7 +603,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#capture_description_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubcapturedescription">Dict[Event<wbr>Hub<wbr>Capture<wbr>Description]</a></span>
+        <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `capture_description` block as defined below.
 {{% /md %}}</dd>
@@ -762,7 +762,7 @@ Get an existing EventHub resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[Dict[EventHubCaptureDescription]]</span> = None<span class="p">, </span><span class="nx">message_retention</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">partition_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EventHub</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[EventHubCaptureDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">message_retention</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">partition_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EventHub</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1134,7 +1134,7 @@ The following state arguments are supported:
 <a href="#state_capture_description_python" style="color: inherit; text-decoration: inherit;">capture_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubcapturedescription">Dict[Event<wbr>Hub<wbr>Capture<wbr>Description]</a></span>
+        <span class="property-type"><a href="#eventhubcapturedescription">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `capture_description` block as defined below.
 {{% /md %}}</dd>
@@ -1463,7 +1463,7 @@ The following state arguments are supported:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Dict[Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#eventhubcapturedescriptiondestination">Event<wbr>Hub<wbr>Capture<wbr>Description<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `destination` block as defined below.
 {{% /md %}}</dd>
@@ -1503,8 +1503,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sizelimitinbytes_python">
-<a href="#sizelimitinbytes_python" style="color: inherit; text-decoration: inherit;">size<wbr>Limit<wbr>In<wbr>Bytes</a>
+        <span id="size_limit_in_bytes_python">
+<a href="#size_limit_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>limit_<wbr>in_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1514,8 +1514,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skipemptyarchives_python">
-<a href="#skipemptyarchives_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Empty<wbr>Archives</a>
+        <span id="skip_empty_archives_python">
+<a href="#skip_empty_archives_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>empty_<wbr>archives</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1703,8 +1703,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="archivenameformat_python">
-<a href="#archivenameformat_python" style="color: inherit; text-decoration: inherit;">archive<wbr>Name<wbr>Format</a>
+        <span id="archive_name_format_python">
+<a href="#archive_name_format_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>name_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1714,8 +1714,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="blobcontainername_python">
-<a href="#blobcontainername_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Name</a>
+        <span id="blob_container_name_python">
+<a href="#blob_container_name_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -239,31 +239,31 @@ example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
     sku="Standard",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    frontend_ip_configurations=[{
-        "name": example_public_ip.name,
-        "public_ip_address_id": example_public_ip.id,
-    }])
+    frontend_ip_configurations=[azure.lb.LoadBalancerFrontendIpConfigurationArgs(
+        name=example_public_ip.name,
+        public_ip_address_id=example_public_ip.id,
+    )])
 example_link_service = azure.privatedns.LinkService("exampleLinkService",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
     auto_approval_subscription_ids=["00000000-0000-0000-0000-000000000000"],
     visibility_subscription_ids=["00000000-0000-0000-0000-000000000000"],
-    load_balancer_frontend_ip_configuration_ids=[example_load_balancer.frontend_ip_configurations[0]["id"]],
+    load_balancer_frontend_ip_configuration_ids=[example_load_balancer.frontend_ip_configurations[0].id],
     nat_ip_configurations=[
-        {
-            "name": "primary",
-            "private_ip_address": "10.5.1.17",
-            "privateIpAddressVersion": "IPv4",
-            "subnet_id": example_subnet.id,
-            "primary": True,
-        },
-        {
-            "name": "secondary",
-            "private_ip_address": "10.5.1.18",
-            "privateIpAddressVersion": "IPv4",
-            "subnet_id": example_subnet.id,
-            "primary": False,
-        },
+        azure.privatedns.LinkServiceNatIpConfigurationArgs(
+            name="primary",
+            private_ip_address="10.5.1.17",
+            private_ip_address_version="IPv4",
+            subnet_id=example_subnet.id,
+            primary=True,
+        ),
+        azure.privatedns.LinkServiceNatIpConfigurationArgs(
+            name="secondary",
+            private_ip_address="10.5.1.18",
+            private_ip_address_version="IPv4",
+            subnet_id=example_subnet.id,
+            primary=False,
+        ),
     ])
 ```
 
@@ -341,7 +341,7 @@ const exampleLinkService = new azure.privatedns.LinkService("exampleLinkService"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#pulumi_azure.privatedns.LinkService">LinkService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_approval_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_frontend_ip_configuration_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[LinkServiceNatIpConfiguration]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#pulumi_azure.privatedns.LinkService">LinkService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_approval_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_frontend_ip_configuration_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[LinkServiceNatIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -848,7 +848,7 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#nat_ip_configurations_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkservicenatipconfiguration">List[Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#linkservicenatipconfiguration">List[Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 8) `nat_ip_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1073,7 +1073,7 @@ Get an existing LinkService resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_approval_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_frontend_ip_configuration_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[LinkServiceNatIpConfiguration]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> LinkService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_approval_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_frontend_ip_configuration_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[LinkServiceNatIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> LinkService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1610,7 +1610,7 @@ The following state arguments are supported:
 <a href="#state_nat_ip_configurations_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkservicenatipconfiguration">List[Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#linkservicenatipconfiguration">List[Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 8) `nat_ip_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1632,7 +1632,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1902,17 +1902,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privateipaddressversion_python">
-<a href="#privateipaddressversion_python" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The version of the IP Protocol which should be used. At this time the only supported value is `IPv4`. Defaults to `IPv4`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span> 
@@ -1920,6 +1909,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies a Private Static IP Address for this IP Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_version_python">
+<a href="#private_ip_address_version_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The version of the IP Protocol which should be used. At this time the only supported value is `IPv4`. Defaults to `IPv4`.
 {{% /md %}}</dd>
 
 </dl>

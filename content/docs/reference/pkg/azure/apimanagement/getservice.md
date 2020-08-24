@@ -1108,7 +1108,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
@@ -1510,11 +1510,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="developerportals_python">
-<a href="#developerportals_python" style="color: inherit; text-decoration: inherit;">developer<wbr>Portals</a>
+        <span id="developer_portals_python">
+<a href="#developer_portals_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationdeveloperportal">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationdeveloperportal">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
 {{% /md %}}</dd>
@@ -1525,7 +1525,7 @@ The following output properties are available:
 <a href="#managements_python" style="color: inherit; text-decoration: inherit;">managements</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationmanagement">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationmanagement">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd>
@@ -1536,7 +1536,7 @@ The following output properties are available:
 <a href="#portals_python" style="color: inherit; text-decoration: inherit;">portals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationportal">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationportal">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd>
@@ -1547,7 +1547,7 @@ The following output properties are available:
 <a href="#proxies_python" style="color: inherit; text-decoration: inherit;">proxies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationproxy">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationproxy">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd>
@@ -1558,7 +1558,7 @@ The following output properties are available:
 <a href="#scms_python" style="color: inherit; text-decoration: inherit;">scms</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehostnameconfigurationscm">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm]</a></span>
+        <span class="property-type"><a href="#getservicehostnameconfigurationscm">List[Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd>
@@ -1732,8 +1732,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="negotiateclientcertificate_python">
-<a href="#negotiateclientcertificate_python" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
+        <span id="negotiate_client_certificate_python">
+<a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1910,8 +1910,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="negotiateclientcertificate_python">
-<a href="#negotiateclientcertificate_python" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
+        <span id="negotiate_client_certificate_python">
+<a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2088,8 +2088,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="negotiateclientcertificate_python">
-<a href="#negotiateclientcertificate_python" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
+        <span id="negotiate_client_certificate_python">
+<a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2277,8 +2277,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultsslbinding_python">
-<a href="#defaultsslbinding_python" style="color: inherit; text-decoration: inherit;">default<wbr>Ssl<wbr>Binding</a>
+        <span id="default_ssl_binding_python">
+<a href="#default_ssl_binding_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssl_<wbr>binding</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2310,8 +2310,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="negotiateclientcertificate_python">
-<a href="#negotiateclientcertificate_python" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
+        <span id="negotiate_client_certificate_python">
+<a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2488,8 +2488,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="negotiateclientcertificate_python">
-<a href="#negotiateclientcertificate_python" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
+        <span id="negotiate_client_certificate_python">
+<a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2677,8 +2677,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="identityids_python">
-<a href="#identityids_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

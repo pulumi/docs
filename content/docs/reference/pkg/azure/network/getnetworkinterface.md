@@ -969,7 +969,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}List the tags associated to the specified Network Interface.
 {{% /md %}}</dd>
@@ -1396,8 +1396,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="applicationgatewaybackendaddresspoolsids_python">
-<a href="#applicationgatewaybackendaddresspoolsids_python" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pools<wbr>Ids</a>
+        <span id="application_gateway_backend_address_pools_ids_python">
+<a href="#application_gateway_backend_address_pools_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pools_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1407,8 +1407,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="applicationsecuritygroupids_python">
-<a href="#applicationsecuritygroupids_python" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Group<wbr>Ids</a>
+        <span id="application_security_group_ids_python">
+<a href="#application_security_group_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1417,8 +1417,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="loadbalancerbackendaddresspoolsids_python">
-<a href="#loadbalancerbackendaddresspoolsids_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools<wbr>Ids</a>
+        <span id="load_balancer_backend_address_pools_ids_python">
+<a href="#load_balancer_backend_address_pools_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1428,8 +1428,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="loadbalancerinboundnatrulesids_python">
-<a href="#loadbalancerinboundnatrulesids_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
+        <span id="load_balancer_inbound_nat_rules_ids_python">
+<a href="#load_balancer_inbound_nat_rules_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>rules_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1461,8 +1461,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="privateipaddressallocation_python">
-<a href="#privateipaddressallocation_python" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Allocation</a>
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Private IP Address assigned to this Network Interface.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="private_ip_address_allocation_python">
+<a href="#private_ip_address_allocation_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>allocation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1472,24 +1483,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="privateipaddressversion_python">
-<a href="#privateipaddressversion_python" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Version</a>
+        <span id="private_ip_address_version_python">
+<a href="#private_ip_address_version_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="private_ip_address_python">
-<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Private IP Address assigned to this Network Interface.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

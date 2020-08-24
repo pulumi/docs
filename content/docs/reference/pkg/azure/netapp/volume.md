@@ -75,16 +75,16 @@ example_subnet = azure.network.Subnet("exampleSubnet",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
     address_prefix="10.0.2.0/24",
-    delegations=[{
-        "name": "netapp",
-        "serviceDelegation": {
-            "name": "Microsoft.Netapp/volumes",
-            "actions": [
+    delegations=[azure.network.SubnetDelegationArgs(
+        name="netapp",
+        service_delegation=azure.network.SubnetDelegationServiceDelegationArgs(
+            name="Microsoft.Netapp/volumes",
+            actions=[
                 "Microsoft.Network/networkinterfaces/*",
                 "Microsoft.Network/virtualNetworks/subnets/join/action",
             ],
-        },
-    }])
+        ),
+    )])
 example_account = azure.netapp.Account("exampleAccount",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name)
@@ -277,7 +277,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/netapp/#pulumi_azure.netapp.Volume">Volume</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[List[VolumeExportPolicyRule]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/netapp/#pulumi_azure.netapp.Volume">Volume</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[List[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -949,7 +949,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#export_policy_rules_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeexportpolicyrule">List[Volume<wbr>Export<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#volumeexportpolicyrule">List[Volume<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `export_policy_rule` block defined below.
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1141,7 +1141,7 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[List[VolumeExportPolicyRule]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[List[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1722,7 +1722,7 @@ The following state arguments are supported:
 <a href="#state_export_policy_rules_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeexportpolicyrule">List[Volume<wbr>Export<wbr>Policy<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#volumeexportpolicyrule">List[Volume<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `export_policy_rule` block defined below.
 {{% /md %}}</dd>
@@ -1832,7 +1832,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2168,8 +2168,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedclients_python">
-<a href="#allowedclients_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Clients</a>
+        <span id="allowed_clients_python">
+<a href="#allowed_clients_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>clients</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2179,8 +2179,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="ruleindex_python">
-<a href="#ruleindex_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Index</a>
+        <span id="rule_index_python">
+<a href="#rule_index_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>index</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2190,8 +2190,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="cifsenabled_python">
-<a href="#cifsenabled_python" style="color: inherit; text-decoration: inherit;">cifs<wbr>Enabled</a>
+        <span id="cifs_enabled_python">
+<a href="#cifs_enabled_python" style="color: inherit; text-decoration: inherit;">cifs_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2201,8 +2201,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="nfsv3enabled_python">
-<a href="#nfsv3enabled_python" style="color: inherit; text-decoration: inherit;">nfsv3Enabled</a>
+        <span id="nfsv3_enabled_python">
+<a href="#nfsv3_enabled_python" style="color: inherit; text-decoration: inherit;">nfsv3_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2212,8 +2212,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="nfsv4enabled_python">
-<a href="#nfsv4enabled_python" style="color: inherit; text-decoration: inherit;">nfsv4Enabled</a>
+        <span id="nfsv4_enabled_python">
+<a href="#nfsv4_enabled_python" style="color: inherit; text-decoration: inherit;">nfsv4_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2223,8 +2223,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="protocolsenabled_python">
-<a href="#protocolsenabled_python" style="color: inherit; text-decoration: inherit;">protocols<wbr>Enabled</a>
+        <span id="protocols_enabled_python">
+<a href="#protocols_enabled_python" style="color: inherit; text-decoration: inherit;">protocols_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2234,8 +2234,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="unixreadonly_python">
-<a href="#unixreadonly_python" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Only</a>
+        <span id="unix_read_only_python">
+<a href="#unix_read_only_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2245,8 +2245,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="unixreadwrite_python">
-<a href="#unixreadwrite_python" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Write</a>
+        <span id="unix_read_write_python">
+<a href="#unix_read_write_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>write</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

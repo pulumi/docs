@@ -194,39 +194,39 @@ example_policy_vm = azure.backup.PolicyVM("examplePolicyVM",
     resource_group_name=example_resource_group.name,
     recovery_vault_name=example_vault.name,
     timezone="UTC",
-    backup={
-        "frequency": "Daily",
-        "time": "23:00",
-    },
-    retention_daily={
-        "count": 10,
-    },
-    retention_weekly={
-        "count": 42,
-        "weekdays": [
+    backup=azure.backup.PolicyVMBackupArgs(
+        frequency="Daily",
+        time="23:00",
+    ),
+    retention_daily=azure.backup.PolicyVMRetentionDailyArgs(
+        count=10,
+    ),
+    retention_weekly=azure.backup.PolicyVMRetentionWeeklyArgs(
+        count=42,
+        weekdays=[
             "Sunday",
             "Wednesday",
             "Friday",
             "Saturday",
         ],
-    },
-    retention_monthly={
-        "count": 7,
-        "weekdays": [
+    ),
+    retention_monthly=azure.backup.PolicyVMRetentionMonthlyArgs(
+        count=7,
+        weekdays=[
             "Sunday",
             "Wednesday",
         ],
-        "weeks": [
+        weeks=[
             "First",
             "Last",
         ],
-    },
-    retention_yearly={
-        "count": 77,
-        "weekdays": ["Sunday"],
-        "weeks": ["Last"],
-        "months": ["January"],
-    })
+    ),
+    retention_yearly=azure.backup.PolicyVMRetentionYearlyArgs(
+        count=77,
+        weekdays=["Sunday"],
+        weeks=["Last"],
+        months=["January"],
+    ))
 ```
 
 {{% /example %}}
@@ -297,7 +297,7 @@ const examplePolicyVM = new azure.backup.PolicyVM("examplePolicyVM", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#pulumi_azure.backup.PolicyVM">PolicyVM</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyVMBackup]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyVMRetentionDaily]]</span> = None<span class="p">, </span><span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyVMRetentionMonthly]]</span> = None<span class="p">, </span><span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyVMRetentionWeekly]]</span> = None<span class="p">, </span><span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyVMRetentionYearly]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/backup/#pulumi_azure.backup.PolicyVM">PolicyVM</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyVMBackupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionDailyArgs]</span> = None<span class="p">, </span><span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionMonthlyArgs]</span> = None<span class="p">, </span><span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionWeeklyArgs]</span> = None<span class="p">, </span><span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionYearlyArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -826,7 +826,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmbackup">Dict[Policy<wbr>VMBackup]</a></span>
+        <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
 {{% /md %}}</dd>
@@ -870,7 +870,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retention_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>daily</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentiondaily">Dict[Policy<wbr>VMRetention<wbr>Daily]</a></span>
+        <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
 {{% /md %}}</dd>
@@ -881,7 +881,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retention_monthly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>monthly</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionmonthly">Dict[Policy<wbr>VMRetention<wbr>Monthly]</a></span>
+        <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
 {{% /md %}}</dd>
@@ -892,7 +892,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retention_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>weekly</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionweekly">Dict[Policy<wbr>VMRetention<wbr>Weekly]</a></span>
+        <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
 {{% /md %}}</dd>
@@ -903,7 +903,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retention_yearly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>yearly</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionyearly">Dict[Policy<wbr>VMRetention<wbr>Yearly]</a></span>
+        <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1029,7 +1029,7 @@ Get an existing PolicyVM resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyVMBackup]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyVMRetentionDaily]]</span> = None<span class="p">, </span><span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyVMRetentionMonthly]]</span> = None<span class="p">, </span><span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyVMRetentionWeekly]]</span> = None<span class="p">, </span><span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[Dict[PolicyVMRetentionYearly]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PolicyVM</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup</span><span class="p">:</span> <span class="nx">Optional[PolicyVMBackupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_daily</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionDailyArgs]</span> = None<span class="p">, </span><span class="nx">retention_monthly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionMonthlyArgs]</span> = None<span class="p">, </span><span class="nx">retention_weekly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionWeeklyArgs]</span> = None<span class="p">, </span><span class="nx">retention_yearly</span><span class="p">:</span> <span class="nx">Optional[PolicyVMRetentionYearlyArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PolicyVM</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1500,7 +1500,7 @@ The following state arguments are supported:
 <a href="#state_backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmbackup">Dict[Policy<wbr>VMBackup]</a></span>
+        <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
 {{% /md %}}</dd>
@@ -1544,7 +1544,7 @@ The following state arguments are supported:
 <a href="#state_retention_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>daily</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentiondaily">Dict[Policy<wbr>VMRetention<wbr>Daily]</a></span>
+        <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
 {{% /md %}}</dd>
@@ -1555,7 +1555,7 @@ The following state arguments are supported:
 <a href="#state_retention_monthly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>monthly</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionmonthly">Dict[Policy<wbr>VMRetention<wbr>Monthly]</a></span>
+        <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
 {{% /md %}}</dd>
@@ -1566,7 +1566,7 @@ The following state arguments are supported:
 <a href="#state_retention_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>weekly</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionweekly">Dict[Policy<wbr>VMRetention<wbr>Weekly]</a></span>
+        <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
 {{% /md %}}</dd>
@@ -1577,7 +1577,7 @@ The following state arguments are supported:
 <a href="#state_retention_yearly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>yearly</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionyearly">Dict[Policy<wbr>VMRetention<wbr>Yearly]</a></span>
+        <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
 {{% /md %}}</dd>
@@ -1588,7 +1588,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

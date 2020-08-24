@@ -143,19 +143,19 @@ example_key_vault = example_resource_group.name.apply(lambda name: azure.keyvaul
 example_diagnostic_setting = azure.monitoring.DiagnosticSetting("exampleDiagnosticSetting",
     target_resource_id=example_key_vault.id,
     storage_account_id=example_account.id,
-    logs=[{
-        "category": "AuditEvent",
-        "enabled": False,
-        "retention_policy": {
+    logs=[azure.monitoring.DiagnosticSettingLogArgs(
+        category="AuditEvent",
+        enabled=False,
+        retention_policy={
             "enabled": False,
         },
-    }],
-    metrics=[{
-        "category": "AllMetrics",
-        "retention_policy": {
+    )],
+    metrics=[azure.monitoring.DiagnosticSettingMetricArgs(
+        category="AllMetrics",
+        retention_policy={
             "enabled": False,
         },
-    }])
+    )])
 ```
 
 {{% /example %}}
@@ -208,7 +208,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.DiagnosticSetting">DiagnosticSetting</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">eventhub_authorization_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_analytics_destination_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[List[DiagnosticSettingLog]]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[List[DiagnosticSettingMetric]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.DiagnosticSetting">DiagnosticSetting</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">eventhub_authorization_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_analytics_destination_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[List[DiagnosticSettingLogArgs]]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[List[DiagnosticSettingMetricArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -759,7 +759,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">List[Diagnostic<wbr>Setting<wbr>Log]</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglog">List[Diagnostic<wbr>Setting<wbr>Log<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `log` blocks as defined below.
 {{% /md %}}</dd>
@@ -770,7 +770,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">List[Diagnostic<wbr>Setting<wbr>Metric]</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetric">List[Diagnostic<wbr>Setting<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `metric` blocks as defined below.
 {{% /md %}}</dd>
@@ -896,7 +896,7 @@ Get an existing DiagnosticSetting resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">eventhub_authorization_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_analytics_destination_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[List[DiagnosticSettingLog]]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[List[DiagnosticSettingMetric]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DiagnosticSetting</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">eventhub_authorization_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_analytics_destination_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[List[DiagnosticSettingLogArgs]]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[List[DiagnosticSettingMetricArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DiagnosticSetting</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1378,7 +1378,7 @@ The following state arguments are supported:
 <a href="#state_logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">List[Diagnostic<wbr>Setting<wbr>Log]</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglog">List[Diagnostic<wbr>Setting<wbr>Log<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `log` blocks as defined below.
 {{% /md %}}</dd>
@@ -1389,7 +1389,7 @@ The following state arguments are supported:
 <a href="#state_metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">List[Diagnostic<wbr>Setting<wbr>Metric]</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetric">List[Diagnostic<wbr>Setting<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `metric` blocks as defined below.
 {{% /md %}}</dd>
@@ -1608,7 +1608,7 @@ The following state arguments are supported:
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>
@@ -1920,7 +1920,7 @@ The following state arguments are supported:
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
 {{% /md %}}</dd>

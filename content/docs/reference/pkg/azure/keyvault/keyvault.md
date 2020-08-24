@@ -161,17 +161,17 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
     soft_delete_enabled=True,
     purge_protection_enabled=False,
     sku_name="standard",
-    access_policies=[{
-        "tenant_id": current.tenant_id,
-        "object_id": current.object_id,
-        "key_permissions": ["get"],
-        "secret_permissions": ["get"],
-        "storage_permissions": ["get"],
-    }],
-    network_acls={
-        "default_action": "Deny",
-        "bypass": "AzureServices",
-    },
+    access_policies=[azure.keyvault.KeyVaultAccessPolicyArgs(
+        tenant_id=current.tenant_id,
+        object_id=current.object_id,
+        key_permissions=["get"],
+        secret_permissions=["get"],
+        storage_permissions=["get"],
+    )],
+    network_acls=azure.keyvault.KeyVaultNetworkAclsArgs(
+        default_action="Deny",
+        bypass="AzureServices",
+    ),
     tags={
         "environment": "Testing",
     })
@@ -226,7 +226,7 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/keyvault/#pulumi_azure.keyvault.KeyVault">KeyVault</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[List[KeyVaultAccessPolicy]]</span> = None<span class="p">, </span><span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[Dict[KeyVaultNetworkAcls]]</span> = None<span class="p">, </span><span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/keyvault/#pulumi_azure.keyvault.KeyVault">KeyVault</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[List[KeyVaultAccessPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[KeyVaultNetworkAclsArgs]</span> = None<span class="p">, </span><span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -887,7 +887,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultaccesspolicy">List[Key<wbr>Vault<wbr>Access<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#keyvaultaccesspolicy">List[Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
 {{% /md %}}</dd>
@@ -953,7 +953,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultnetworkacls">Dict[Key<wbr>Vault<wbr>Network<wbr>Acls]</a></span>
+        <span class="property-type"><a href="#keyvaultnetworkacls">Key<wbr>Vault<wbr>Network<wbr>Acls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd>
@@ -986,7 +986,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1134,7 +1134,7 @@ Get an existing KeyVault resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[List[KeyVaultAccessPolicy]]</span> = None<span class="p">, </span><span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[Dict[KeyVaultNetworkAcls]]</span> = None<span class="p">, </span><span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KeyVault</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_policies</span><span class="p">:</span> <span class="nx">Optional[List[KeyVaultAccessPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">enabled_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled_for_template_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[KeyVaultNetworkAclsArgs]</span> = None<span class="p">, </span><span class="nx">purge_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soft_delete_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KeyVault</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1737,7 +1737,7 @@ The following state arguments are supported:
 <a href="#state_access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultaccesspolicy">List[Key<wbr>Vault<wbr>Access<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#keyvaultaccesspolicy">List[Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
 {{% /md %}}</dd>
@@ -1803,7 +1803,7 @@ The following state arguments are supported:
 <a href="#state_network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultnetworkacls">Dict[Key<wbr>Vault<wbr>Network<wbr>Acls]</a></span>
+        <span class="property-type"><a href="#keyvaultnetworkacls">Key<wbr>Vault<wbr>Network<wbr>Acls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd>
@@ -1858,7 +1858,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

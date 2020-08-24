@@ -701,7 +701,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -945,11 +945,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="issuerparameters_python">
-<a href="#issuerparameters_python" style="color: inherit; text-decoration: inherit;">issuer<wbr>Parameters</a>
+        <span id="issuer_parameters_python">
+<a href="#issuer_parameters_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd>
@@ -960,40 +960,40 @@ The following output properties are available:
 <a href="#key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="secretproperties_python">
-<a href="#secretproperties_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Properties</a>
+        <span id="secret_properties_python">
+<a href="#secret_properties_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="x509certificateproperties_python">
-<a href="#x509certificateproperties_python" style="color: inherit; text-decoration: inherit;">x509Certificate<wbr>Properties</a>
+        <span id="x509_certificate_properties_python">
+<a href="#x509_certificate_properties_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lifetimeactions_python">
-<a href="#lifetimeactions_python" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Actions</a>
+        <span id="lifetime_actions_python">
+<a href="#lifetime_actions_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd>
@@ -1301,8 +1301,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="reusekey_python">
-<a href="#reusekey_python" style="color: inherit; text-decoration: inherit;">reuse<wbr>Key</a>
+        <span id="reuse_key_python">
+<a href="#reuse_key_python" style="color: inherit; text-decoration: inherit;">reuse_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1428,7 +1428,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd>
@@ -1439,7 +1439,7 @@ The following output properties are available:
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd>
@@ -1525,8 +1525,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1648,8 +1648,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="daysbeforeexpiry_python">
-<a href="#daysbeforeexpiry_python" style="color: inherit; text-decoration: inherit;">days<wbr>Before<wbr>Expiry</a>
+        <span id="days_before_expiry_python">
+<a href="#days_before_expiry_python" style="color: inherit; text-decoration: inherit;">days_<wbr>before_<wbr>expiry</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1659,8 +1659,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lifetimepercentage_python">
-<a href="#lifetimepercentage_python" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Percentage</a>
+        <span id="lifetime_percentage_python">
+<a href="#lifetime_percentage_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>percentage</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1971,8 +1971,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="extendedkeyusages_python">
-<a href="#extendedkeyusages_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usages</a>
+        <span id="extended_key_usages_python">
+<a href="#extended_key_usages_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usages</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1982,8 +1982,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyusages_python">
-<a href="#keyusages_python" style="color: inherit; text-decoration: inherit;">key<wbr>Usages</a>
+        <span id="key_usages_python">
+<a href="#key_usages_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usages</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2004,19 +2004,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="subjectalternativenames_python">
-<a href="#subjectalternativenames_python" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
+        <span id="subject_alternative_names_python">
+<a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="validityinmonths_python">
-<a href="#validityinmonths_python" style="color: inherit; text-decoration: inherit;">validity<wbr>In<wbr>Months</a>
+        <span id="validity_in_months_python">
+<a href="#validity_in_months_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>in_<wbr>months</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2171,8 +2171,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dnsnames_python">
-<a href="#dnsnames_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
+        <span id="dns_names_python">
+<a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

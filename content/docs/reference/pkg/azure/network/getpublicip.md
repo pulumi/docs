@@ -294,13 +294,13 @@ example_public_ip = azure.network.PublicIp("examplePublicIp",
 example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    ip_configurations=[{
-        "name": "testconfiguration1",
-        "subnet_id": example_subnet.id,
-        "privateIpAddressAllocation": "Static",
-        "private_ip_address": "10.0.2.5",
-        "public_ip_address_id": example_public_ip.id,
-    }])
+    ip_configurations=[azure.network.NetworkInterfaceIpConfigurationArgs(
+        name="testconfiguration1",
+        subnet_id=example_subnet.id,
+        private_ip_address_allocation="Static",
+        private_ip_address="10.0.2.5",
+        public_ip_address_id=example_public_ip.id,
+    )])
 example_virtual_machine = azure.compute.VirtualMachine("exampleVirtualMachine",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -379,7 +379,7 @@ export const publicIpAddress = examplePublicIp.ipAddress;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_public_ip(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPublicIPResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_public_ip(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPublicIPResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -582,7 +582,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assigned to the resource.
 {{% /md %}}</dd>
@@ -1221,7 +1221,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assigned to the resource.
 {{% /md %}}</dd>

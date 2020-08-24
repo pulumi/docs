@@ -211,21 +211,21 @@ example_public_ip = azure.network.PublicIp("examplePublicIp",
 example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    frontend_ip_configurations=[{
-        "name": "primary",
-        "public_ip_address_id": example_public_ip.id,
-    }])
+    frontend_ip_configurations=[azure.lb.LoadBalancerFrontendIpConfigurationArgs(
+        name="primary",
+        public_ip_address_id=example_public_ip.id,
+    )])
 example_backend_address_pool = azure.lb.BackendAddressPool("exampleBackendAddressPool",
     resource_group_name=example_resource_group.name,
     loadbalancer_id=example_load_balancer.id)
 example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    ip_configurations=[{
-        "name": "testconfiguration1",
-        "subnet_id": example_subnet.id,
-        "privateIpAddressAllocation": "Dynamic",
-    }])
+    ip_configurations=[azure.network.NetworkInterfaceIpConfigurationArgs(
+        name="testconfiguration1",
+        subnet_id=example_subnet.id,
+        private_ip_address_allocation="Dynamic",
+    )])
 example_network_interface_backend_address_pool_association = azure.network.NetworkInterfaceBackendAddressPoolAssociation("exampleNetworkInterfaceBackendAddressPoolAssociation",
     network_interface_id=example_network_interface.id,
     ip_configuration_name="testconfiguration1",

@@ -109,7 +109,7 @@ example_mongo_collection = azure.cosmosdb.MongoCollection("exampleMongoCollectio
     resource_group_name=example_account.resource_group_name,
     account_name=example_account.name,
     database_name=example_mongo_database.name,
-    default_ttl_seconds="777",
+    default_ttl_seconds=777,
     shard_key="uniqueKey",
     throughput=400)
 ```
@@ -154,7 +154,7 @@ const exampleMongoCollection = new azure.cosmosdb.MongoCollection("exampleMongoC
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.MongoCollection">MongoCollection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">indices</span><span class="p">:</span> <span class="nx">Optional[List[MongoCollectionIndex]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shard_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.MongoCollection">MongoCollection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">indices</span><span class="p">:</span> <span class="nx">Optional[List[MongoCollectionIndexArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shard_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -657,7 +657,7 @@ The MongoCollection resource accepts the following [input]({{< relref "/docs/int
 <a href="#indices_python" style="color: inherit; text-decoration: inherit;">indices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongocollectionindex">List[Mongo<wbr>Collection<wbr>Index]</a></span>
+        <span class="property-type"><a href="#mongocollectionindex">List[Mongo<wbr>Collection<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
 {{% /md %}}</dd>
@@ -838,7 +838,7 @@ Get an existing MongoCollection resource's state with the given name, ID, and op
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">indices</span><span class="p">:</span> <span class="nx">Optional[List[MongoCollectionIndex]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shard_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_indexes</span><span class="p">:</span> <span class="nx">Optional[List[MongoCollectionSystemIndex]]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> MongoCollection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">indices</span><span class="p">:</span> <span class="nx">Optional[List[MongoCollectionIndexArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shard_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">system_indexes</span><span class="p">:</span> <span class="nx">Optional[List[MongoCollectionSystemIndexArgs]]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> MongoCollection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1305,7 +1305,7 @@ The following state arguments are supported:
 <a href="#state_indices_python" style="color: inherit; text-decoration: inherit;">indices</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongocollectionindex">List[Mongo<wbr>Collection<wbr>Index]</a></span>
+        <span class="property-type"><a href="#mongocollectionindex">List[Mongo<wbr>Collection<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
 {{% /md %}}</dd>
@@ -1349,7 +1349,7 @@ The following state arguments are supported:
 <a href="#state_system_indexes_python" style="color: inherit; text-decoration: inherit;">system_<wbr>indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongocollectionsystemindex">List[Mongo<wbr>Collection<wbr>System<wbr>Index]</a></span>
+        <span class="property-type"><a href="#mongocollectionsystemindex">List[Mongo<wbr>Collection<wbr>System<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `system_indexes` blocks as defined below.
 {{% /md %}}</dd>

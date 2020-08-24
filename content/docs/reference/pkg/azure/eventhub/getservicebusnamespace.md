@@ -796,7 +796,7 @@ authorization rule `RootManageSharedAccessKey`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>

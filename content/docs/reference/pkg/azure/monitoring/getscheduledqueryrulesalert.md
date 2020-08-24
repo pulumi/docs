@@ -977,7 +977,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1167,8 +1167,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="actiongroups_python">
-<a href="#actiongroups_python" style="color: inherit; text-decoration: inherit;">action<wbr>Groups</a>
+        <span id="action_groups_python">
+<a href="#action_groups_python" style="color: inherit; text-decoration: inherit;">action_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1178,8 +1178,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="customwebhookpayload_python">
-<a href="#customwebhookpayload_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Webhook<wbr>Payload</a>
+        <span id="custom_webhook_payload_python">
+<a href="#custom_webhook_payload_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>webhook_<wbr>payload</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1189,8 +1189,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="emailsubject_python">
-<a href="#emailsubject_python" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
+        <span id="email_subject_python">
+<a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1342,11 +1342,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="metrictriggers_python">
-<a href="#metrictriggers_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Triggers</a>
+        <span id="metric_triggers_python">
+<a href="#metric_triggers_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>triggers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscheduledqueryrulesalerttriggermetrictrigger">List[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#getscheduledqueryrulesalerttriggermetrictrigger">List[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1546,8 +1546,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="metriccolumn_python">
-<a href="#metriccolumn_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Column</a>
+        <span id="metric_column_python">
+<a href="#metric_column_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>column</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1556,8 +1556,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="metrictriggertype_python">
-<a href="#metrictriggertype_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger<wbr>Type</a>
+        <span id="metric_trigger_type_python">
+<a href="#metric_trigger_type_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

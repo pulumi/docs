@@ -1141,7 +1141,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1343,24 +1343,13 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="certificatename_python">
-<a href="#certificatename_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Name</a>
+        <span id="certificate_name_python">
+<a href="#certificate_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the App Service Certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="keyvaultsecretname_python">
-<a href="#keyvaultsecretname_python" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Secret<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Key Vault secret name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1376,8 +1365,19 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="provisioningstate_python">
-<a href="#provisioningstate_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+        <span id="key_vault_secret_name_python">
+<a href="#key_vault_secret_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>secret_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Key Vault secret name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

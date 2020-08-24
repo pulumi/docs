@@ -106,7 +106,7 @@ const example = pulumi.output(azure.compute.getSharedImageVersions({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_shared_image_versions(</span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags_filter</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSharedImageVersionsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_shared_image_versions(</span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags_filter</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSharedImageVersionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -323,7 +323,7 @@ The following arguments are supported:
 <a href="#tags_filter_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to filter the list of images against.
 {{% /md %}}</dd>
@@ -613,7 +613,7 @@ The following output properties are available:
 <a href="#tags_filter_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -917,7 +917,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the Shared Image.
 {{% /md %}}</dd>
@@ -928,7 +928,7 @@ The following output properties are available:
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsharedimageversionsimagetargetregion">List[Get<wbr>Shared<wbr>Image<wbr>Versions<wbr>Image<wbr>Target<wbr>Region]</a></span>
+        <span class="property-type"><a href="#getsharedimageversionsimagetargetregion">List[Get<wbr>Shared<wbr>Image<wbr>Versions<wbr>Image<wbr>Target<wbr>Region<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `target_region` blocks as documented below.
 {{% /md %}}</dd>
@@ -1091,8 +1091,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="regionalreplicacount_python">
-<a href="#regionalreplicacount_python" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
+        <span id="regional_replica_count_python">
+<a href="#regional_replica_count_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>replica_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

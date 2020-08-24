@@ -53,10 +53,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewPointToPointVpnGateway(ctx, "example", &network.PointToPointVpnGatewayArgs{
-			Location:                 pulumi.String(azurerm_resource_group.Example.Location),
-			ResourceGroupName:        pulumi.String(azurerm_resource_group.Example.Resource_group_name),
-			VirtualHubId:             pulumi.String(azurerm_virtual_hub.Example.Id),
-			VpnServerConfigurationId: pulumi.String(azurerm_vpn_server_configuration.Example.Id),
+			Location:                 pulumi.Any(azurerm_resource_group.Example.Location),
+			ResourceGroupName:        pulumi.Any(azurerm_resource_group.Example.Resource_group_name),
+			VirtualHubId:             pulumi.Any(azurerm_virtual_hub.Example.Id),
+			VpnServerConfigurationId: pulumi.Any(azurerm_vpn_server_configuration.Example.Id),
 			ScaleUnit:                pulumi.Int(1),
 		})
 		if err != nil {
@@ -113,7 +113,7 @@ const example = new azure.network.PointToPointVpnGateway("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.PointToPointVpnGateway">PointToPointVpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[PointToPointVpnGatewayConnectionConfiguration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.PointToPointVpnGateway">PointToPointVpnGateway</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[PointToPointVpnGatewayConnectionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -576,7 +576,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#connection_configuration_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Dict[Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `connection_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -653,7 +653,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Point-to-Site VPN Gateway.
 {{% /md %}}</dd>
@@ -757,7 +757,7 @@ Get an existing PointToPointVpnGateway resource's state with the given name, ID,
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[PointToPointVpnGatewayConnectionConfiguration]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PointToPointVpnGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[PointToPointVpnGatewayConnectionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PointToPointVpnGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1162,7 +1162,7 @@ The following state arguments are supported:
 <a href="#state_connection_configuration_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Dict[Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `connection_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1217,7 +1217,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Point-to-Site VPN Gateway.
 {{% /md %}}</dd>
@@ -1377,11 +1377,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="vpnclientaddresspool_python">
-<a href="#vpnclientaddresspool_python" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Address<wbr>Pool</a>
+        <span id="vpn_client_address_pool_python">
+<a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Dict[Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_address_pool` block as defined below.
 {{% /md %}}</dd>

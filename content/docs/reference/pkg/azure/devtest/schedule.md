@@ -130,16 +130,16 @@ example_schedule = azure.devtest.Schedule("exampleSchedule",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     lab_name=example_lab.name,
-    weekly_recurrence={
-        "time": "1100",
-        "week_days": [
+    weekly_recurrence=azure.devtest.ScheduleWeeklyRecurrenceArgs(
+        time="1100",
+        week_days=[
             "Monday",
             "Tuesday",
         ],
-    },
+    ),
     time_zone_id="Pacific Standard Time",
     task_type="LabVmsStartupTask",
-    notification_settings={},
+    notification_settings=azure.devtest.ScheduleNotificationSettingsArgs(),
     tags={
         "environment": "Production",
     })
@@ -192,7 +192,7 @@ const exampleSchedule = new azure.devtest.Schedule("exampleSchedule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/devtest/#pulumi_azure.devtest.Schedule">Schedule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">daily_recurrence</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleDailyRecurrence]]</span> = None<span class="p">, </span><span class="nx">hourly_recurrence</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleHourlyRecurrence]]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleNotificationSettings]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">task_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weekly_recurrence</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleWeeklyRecurrence]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/devtest/#pulumi_azure.devtest.Schedule">Schedule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">daily_recurrence</span><span class="p">:</span> <span class="nx">Optional[ScheduleDailyRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">hourly_recurrence</span><span class="p">:</span> <span class="nx">Optional[ScheduleHourlyRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[ScheduleNotificationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weekly_recurrence</span><span class="p">:</span> <span class="nx">Optional[ScheduleWeeklyRecurrenceArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -786,7 +786,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulenotificationsettings">Dict[Schedule<wbr>Notification<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#schedulenotificationsettings">Schedule<wbr>Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -829,7 +829,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledailyrecurrence">Dict[Schedule<wbr>Daily<wbr>Recurrence]</a></span>
+        <span class="property-type"><a href="#scheduledailyrecurrence">Schedule<wbr>Daily<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -839,7 +839,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulehourlyrecurrence">Dict[Schedule<wbr>Hourly<wbr>Recurrence]</a></span>
+        <span class="property-type"><a href="#schedulehourlyrecurrence">Schedule<wbr>Hourly<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -882,7 +882,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -893,7 +893,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleweeklyrecurrence">Dict[Schedule<wbr>Weekly<wbr>Recurrence]</a></span>
+        <span class="property-type"><a href="#scheduleweeklyrecurrence">Schedule<wbr>Weekly<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -996,7 +996,7 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">daily_recurrence</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleDailyRecurrence]]</span> = None<span class="p">, </span><span class="nx">hourly_recurrence</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleHourlyRecurrence]]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleNotificationSettings]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">task_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weekly_recurrence</span><span class="p">:</span> <span class="nx">Optional[Dict[ScheduleWeeklyRecurrence]]</span> = None<span class="p">) -&gt;</span> Schedule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">daily_recurrence</span><span class="p">:</span> <span class="nx">Optional[ScheduleDailyRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">hourly_recurrence</span><span class="p">:</span> <span class="nx">Optional[ScheduleHourlyRecurrenceArgs]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[ScheduleNotificationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">weekly_recurrence</span><span class="p">:</span> <span class="nx">Optional[ScheduleWeeklyRecurrenceArgs]</span> = None<span class="p">) -&gt;</span> Schedule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1521,7 +1521,7 @@ The following state arguments are supported:
 <a href="#state_daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledailyrecurrence">Dict[Schedule<wbr>Daily<wbr>Recurrence]</a></span>
+        <span class="property-type"><a href="#scheduledailyrecurrence">Schedule<wbr>Daily<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1531,7 +1531,7 @@ The following state arguments are supported:
 <a href="#state_hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulehourlyrecurrence">Dict[Schedule<wbr>Hourly<wbr>Recurrence]</a></span>
+        <span class="property-type"><a href="#schedulehourlyrecurrence">Schedule<wbr>Hourly<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1574,7 +1574,7 @@ The following state arguments are supported:
 <a href="#state_notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulenotificationsettings">Dict[Schedule<wbr>Notification<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#schedulenotificationsettings">Schedule<wbr>Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1606,7 +1606,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1639,7 +1639,7 @@ The following state arguments are supported:
 <a href="#state_weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleweeklyrecurrence">Dict[Schedule<wbr>Weekly<wbr>Recurrence]</a></span>
+        <span class="property-type"><a href="#scheduleweeklyrecurrence">Schedule<wbr>Weekly<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1985,8 +1985,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timeinminutes_python">
-<a href="#timeinminutes_python" style="color: inherit; text-decoration: inherit;">time<wbr>In<wbr>Minutes</a>
+        <span id="time_in_minutes_python">
+<a href="#time_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1996,8 +1996,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webhookurl_python">
-<a href="#webhookurl_python" style="color: inherit; text-decoration: inherit;">webhook<wbr>Url</a>
+        <span id="webhook_url_python">
+<a href="#webhook_url_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

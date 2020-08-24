@@ -112,11 +112,11 @@ example_mssql_virtual_machine_virtual_machine = azure.mssql.VirtualMachine("exam
     sql_connectivity_type="PRIVATE",
     sql_connectivity_update_password="Password1234!",
     sql_connectivity_update_username="sqllogin",
-    auto_patching={
-        "dayOfWeek": "Sunday",
-        "maintenanceWindowDurationInMinutes": 60,
-        "maintenanceWindowStartingHour": 2,
-    })
+    auto_patching=azure.mssql.VirtualMachineAutoPatchingArgs(
+        day_of_week="Sunday",
+        maintenance_window_duration_in_minutes=60,
+        maintenance_window_starting_hour=2,
+    ))
 ```
 
 {{% /example %}}
@@ -161,7 +161,7 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineAutoPatching]]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineKeyVaultCredential]]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -712,7 +712,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#auto_patching_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Dict[Virtual<wbr>Machine<wbr>Auto<wbr>Patching]</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd>
@@ -723,7 +723,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#key_vault_credential_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Dict[Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd>
@@ -789,7 +789,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -893,7 +893,7 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineAutoPatching]]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[VirtualMachineKeyVaultCredential]]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1364,7 +1364,7 @@ The following state arguments are supported:
 <a href="#state_auto_patching_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>patching</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Dict[Virtual<wbr>Machine<wbr>Auto<wbr>Patching]</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd>
@@ -1375,7 +1375,7 @@ The following state arguments are supported:
 <a href="#state_key_vault_credential_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Dict[Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd>
@@ -1452,7 +1452,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1623,8 +1623,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="dayofweek_python">
-<a href="#dayofweek_python" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
+        <span id="day_of_week_python">
+<a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1634,8 +1634,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="maintenancewindowdurationinminutes_python">
-<a href="#maintenancewindowdurationinminutes_python" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</a>
+        <span id="maintenance_window_duration_in_minutes_python">
+<a href="#maintenance_window_duration_in_minutes_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>duration_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1645,8 +1645,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="maintenancewindowstartinghour_python">
-<a href="#maintenancewindowstartinghour_python" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Starting<wbr>Hour</a>
+        <span id="maintenance_window_starting_hour_python">
+<a href="#maintenance_window_starting_hour_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>starting_<wbr>hour</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1834,8 +1834,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyvaulturl_python">
-<a href="#keyvaulturl_python" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Url</a>
+        <span id="key_vault_url_python">
+<a href="#key_vault_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1856,8 +1856,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipalname_python">
-<a href="#serviceprincipalname_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Name</a>
+        <span id="service_principal_name_python">
+<a href="#service_principal_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1867,8 +1867,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="serviceprincipalsecret_python">
-<a href="#serviceprincipalsecret_python" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Secret</a>
+        <span id="service_principal_secret_python">
+<a href="#service_principal_secret_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

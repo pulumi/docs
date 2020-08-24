@@ -130,10 +130,10 @@ example_account = azure.storage.Account("exampleAccount",
 example_plan = azure.appservice.Plan("examplePlan",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    sku={
-        "tier": "Standard",
-        "size": "S1",
-    })
+    sku=azure.appservice.PlanSkuArgs(
+        tier="Standard",
+        size="S1",
+    ))
 example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -291,10 +291,10 @@ example_plan = azure.appservice.Plan("examplePlan",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     kind="FunctionApp",
-    sku={
-        "tier": "Dynamic",
-        "size": "Y1",
-    })
+    sku=azure.appservice.PlanSkuArgs(
+        tier="Dynamic",
+        size="Y1",
+    ))
 example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -458,10 +458,10 @@ example_plan = azure.appservice.Plan("examplePlan",
     resource_group_name=example_resource_group.name,
     kind="FunctionApp",
     reserved=True,
-    sku={
-        "tier": "Dynamic",
-        "size": "Y1",
-    })
+    sku=azure.appservice.PlanSkuArgs(
+        tier="Dynamic",
+        size="Y1",
+    ))
 example_function_app = azure.appservice.FunctionApp("exampleFunctionApp",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -518,7 +518,7 @@ const exampleFunctionApp = new azure.appservice.FunctionApp("exampleFunctionApp"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.FunctionApp">FunctionApp</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[FunctionAppAuthSettings]]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[List[FunctionAppConnectionString]]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">enable_builtin_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[FunctionAppIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[Dict[FunctionAppSiteConfig]]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[Dict[FunctionAppSourceControl]]</span> = None<span class="p">, </span><span class="nx">storage_account_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appservice/#pulumi_azure.appservice.FunctionApp">FunctionApp</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[FunctionAppAuthSettingsArgs]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[List[FunctionAppConnectionStringArgs]]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">enable_builtin_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FunctionAppIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSourceControlArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1429,7 +1429,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#app_settings_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 {{% /md %}}</dd>
@@ -1440,7 +1440,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#auth_settings_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettings">Dict[Function<wbr>App<wbr>Auth<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -1462,7 +1462,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappconnectionstring">List[Function<wbr>App<wbr>Connection<wbr>String]</a></span>
+        <span class="property-type"><a href="#functionappconnectionstring">List[Function<wbr>App<wbr>Connection<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd>
@@ -1517,7 +1517,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappidentity">Dict[Function<wbr>App<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#functionappidentity">Function<wbr>App<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -1561,7 +1561,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#site_config_python" style="color: inherit; text-decoration: inherit;">site_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsiteconfig">Dict[Function<wbr>App<wbr>Site<wbr>Config]</a></span>
+        <span class="property-type"><a href="#functionappsiteconfig">Function<wbr>App<wbr>Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd>
@@ -1572,7 +1572,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#source_control_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsourcecontrol">Dict[Function<wbr>App<wbr>Source<wbr>Control]</a></span>
+        <span class="property-type"><a href="#functionappsourcecontrol">Function<wbr>App<wbr>Source<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source_control` block, as defined below.
 {{% /md %}}</dd>
@@ -1615,7 +1615,7 @@ The FunctionApp resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1950,7 +1950,7 @@ Get an existing FunctionApp resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[FunctionAppAuthSettings]]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[List[FunctionAppConnectionString]]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">default_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_builtin_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[FunctionAppIdentity]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">possible_outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[Dict[FunctionAppSiteConfig]]</span> = None<span class="p">, </span><span class="nx">site_credentials</span><span class="p">:</span> <span class="nx">Optional[List[FunctionAppSiteCredential]]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[Dict[FunctionAppSourceControl]]</span> = None<span class="p">, </span><span class="nx">storage_account_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FunctionApp</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_service_plan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">app_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">auth_settings</span><span class="p">:</span> <span class="nx">Optional[FunctionAppAuthSettingsArgs]</span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[List[FunctionAppConnectionStringArgs]]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">default_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_builtin_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FunctionAppIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">possible_outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">site_credentials</span><span class="p">:</span> <span class="nx">Optional[List[FunctionAppSiteCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">source_control</span><span class="p">:</span> <span class="nx">Optional[FunctionAppSourceControlArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FunctionApp</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2957,7 +2957,7 @@ The following state arguments are supported:
 <a href="#state_app_settings_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 {{% /md %}}</dd>
@@ -2968,7 +2968,7 @@ The following state arguments are supported:
 <a href="#state_auth_settings_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettings">Dict[Function<wbr>App<wbr>Auth<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#functionappauthsettings">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd>
@@ -2990,7 +2990,7 @@ The following state arguments are supported:
 <a href="#state_connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappconnectionstring">List[Function<wbr>App<wbr>Connection<wbr>String]</a></span>
+        <span class="property-type"><a href="#functionappconnectionstring">List[Function<wbr>App<wbr>Connection<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd>
@@ -3056,7 +3056,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappidentity">Dict[Function<wbr>App<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#functionappidentity">Function<wbr>App<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -3144,7 +3144,7 @@ The following state arguments are supported:
 <a href="#state_site_config_python" style="color: inherit; text-decoration: inherit;">site_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsiteconfig">Dict[Function<wbr>App<wbr>Site<wbr>Config]</a></span>
+        <span class="property-type"><a href="#functionappsiteconfig">Function<wbr>App<wbr>Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd>
@@ -3155,7 +3155,7 @@ The following state arguments are supported:
 <a href="#state_site_credentials_python" style="color: inherit; text-decoration: inherit;">site_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsitecredential">List[Function<wbr>App<wbr>Site<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#functionappsitecredential">List[Function<wbr>App<wbr>Site<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd>
@@ -3166,7 +3166,7 @@ The following state arguments are supported:
 <a href="#state_source_control_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsourcecontrol">Dict[Function<wbr>App<wbr>Source<wbr>Control]</a></span>
+        <span class="property-type"><a href="#functionappsourcecontrol">Function<wbr>App<wbr>Source<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source_control` block, as defined below.
 {{% /md %}}</dd>
@@ -3209,7 +3209,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3758,26 +3758,26 @@ The following state arguments are supported:
 <a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettingsactivedirectory">Dict[Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#functionappauthsettingsactivedirectory">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalloginparams_python">
-<a href="#additionalloginparams_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Login<wbr>Params</a>
+        <span id="additional_login_params_python">
+<a href="#additional_login_params_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>login_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Login parameters to send to the OpenID Connect authorization endpoint when a user logs in. Each parameter must be in the form "key=value".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedexternalredirecturls_python">
-<a href="#allowedexternalredirecturls_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>External<wbr>Redirect<wbr>Urls</a>
+        <span id="allowed_external_redirect_urls_python">
+<a href="#allowed_external_redirect_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>external_<wbr>redirect_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3787,8 +3787,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultprovider_python">
-<a href="#defaultprovider_python" style="color: inherit; text-decoration: inherit;">default<wbr>Provider</a>
+        <span id="default_provider_python">
+<a href="#default_provider_python" style="color: inherit; text-decoration: inherit;">default_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3802,7 +3802,7 @@ The following state arguments are supported:
 <a href="#facebook_python" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettingsfacebook">Dict[Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Facebook]</a></span>
+        <span class="property-type"><a href="#functionappauthsettingsfacebook">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd>
@@ -3813,7 +3813,7 @@ The following state arguments are supported:
 <a href="#google_python" style="color: inherit; text-decoration: inherit;">google</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettingsgoogle">Dict[Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Google]</a></span>
+        <span class="property-type"><a href="#functionappauthsettingsgoogle">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd>
@@ -3835,15 +3835,15 @@ The following state arguments are supported:
 <a href="#microsoft_python" style="color: inherit; text-decoration: inherit;">microsoft</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettingsmicrosoft">Dict[Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Microsoft]</a></span>
+        <span class="property-type"><a href="#functionappauthsettingsmicrosoft">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="runtimeversion_python">
-<a href="#runtimeversion_python" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
+        <span id="runtime_version_python">
+<a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3853,8 +3853,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenrefreshextensionhours_python">
-<a href="#tokenrefreshextensionhours_python" style="color: inherit; text-decoration: inherit;">token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
+        <span id="token_refresh_extension_hours_python">
+<a href="#token_refresh_extension_hours_python" style="color: inherit; text-decoration: inherit;">token_<wbr>refresh_<wbr>extension_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3864,8 +3864,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tokenstoreenabled_python">
-<a href="#tokenstoreenabled_python" style="color: inherit; text-decoration: inherit;">token<wbr>Store<wbr>Enabled</a>
+        <span id="token_store_enabled_python">
+<a href="#token_store_enabled_python" style="color: inherit; text-decoration: inherit;">token_<wbr>store_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3879,15 +3879,15 @@ The following state arguments are supported:
 <a href="#twitter_python" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappauthsettingstwitter">Dict[Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Twitter]</a></span>
+        <span class="property-type"><a href="#functionappauthsettingstwitter">Function<wbr>App<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="unauthenticatedclientaction_python">
-<a href="#unauthenticatedclientaction_python" style="color: inherit; text-decoration: inherit;">unauthenticated<wbr>Client<wbr>Action</a>
+        <span id="unauthenticated_client_action_python">
+<a href="#unauthenticated_client_action_python" style="color: inherit; text-decoration: inherit;">unauthenticated_<wbr>client_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4053,8 +4053,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedaudiences_python">
-<a href="#allowedaudiences_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
+        <span id="allowed_audiences_python">
+<a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4242,8 +4242,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oauthscopes_python">
-<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4420,8 +4420,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oauthscopes_python">
-<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4598,8 +4598,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oauthscopes_python">
-<a href="#oauthscopes_python" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
+        <span id="oauth_scopes_python">
+<a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4715,8 +4715,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="consumerkey_python">
-<a href="#consumerkey_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Key</a>
+        <span id="consumer_key_python">
+<a href="#consumer_key_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4725,8 +4725,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="consumersecret_python">
-<a href="#consumersecret_python" style="color: inherit; text-decoration: inherit;">consumer<wbr>Secret</a>
+        <span id="consumer_secret_python">
+<a href="#consumer_secret_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5102,8 +5102,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="identityids_python">
-<a href="#identityids_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5640,8 +5640,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alwayson_python">
-<a href="#alwayson_python" style="color: inherit; text-decoration: inherit;">always<wbr>On</a>
+        <span id="always_on_python">
+<a href="#always_on_python" style="color: inherit; text-decoration: inherit;">always_<wbr>on</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5651,8 +5651,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoswapslotname_python">
-<a href="#autoswapslotname_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Swap<wbr>Slot<wbr>Name</a>
+        <span id="auto_swap_slot_name_python">
+<a href="#auto_swap_slot_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>swap_<wbr>slot_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5665,15 +5665,15 @@ The following state arguments are supported:
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsiteconfigcors">Dict[Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors]</a></span>
+        <span class="property-type"><a href="#functionappsiteconfigcors">Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ftpsstate_python">
-<a href="#ftpsstate_python" style="color: inherit; text-decoration: inherit;">ftps<wbr>State</a>
+        <span id="ftps_state_python">
+<a href="#ftps_state_python" style="color: inherit; text-decoration: inherit;">ftps_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5683,8 +5683,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="http2enabled_python">
-<a href="#http2enabled_python" style="color: inherit; text-decoration: inherit;">http2Enabled</a>
+        <span id="http2_enabled_python">
+<a href="#http2_enabled_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5694,19 +5694,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iprestrictions_python">
-<a href="#iprestrictions_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Restrictions</a>
+        <span id="ip_restrictions_python">
+<a href="#ip_restrictions_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsiteconfigiprestriction">List[Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction]</a></span>
+        <span class="property-type"><a href="#functionappsiteconfigiprestriction">List[Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="linuxfxversion_python">
-<a href="#linuxfxversion_python" style="color: inherit; text-decoration: inherit;">linux<wbr>Fx<wbr>Version</a>
+        <span id="linux_fx_version_python">
+<a href="#linux_fx_version_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>fx_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5727,8 +5727,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prewarmedinstancecount_python">
-<a href="#prewarmedinstancecount_python" style="color: inherit; text-decoration: inherit;">pre<wbr>Warmed<wbr>Instance<wbr>Count</a>
+        <span id="pre_warmed_instance_count_python">
+<a href="#pre_warmed_instance_count_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>warmed_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5738,19 +5738,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scmiprestrictions_python">
-<a href="#scmiprestrictions_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Restrictions</a>
+        <span id="scm_ip_restrictions_python">
+<a href="#scm_ip_restrictions_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>restrictions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappsiteconfigscmiprestriction">List[Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction]</a></span>
+        <span class="property-type"><a href="#functionappsiteconfigscmiprestriction">List[Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scmtype_python">
-<a href="#scmtype_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Type</a>
+        <span id="scm_type_python">
+<a href="#scm_type_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5760,8 +5760,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scmusemainiprestriction_python">
-<a href="#scmusemainiprestriction_python" style="color: inherit; text-decoration: inherit;">scm<wbr>Use<wbr>Main<wbr>Ip<wbr>Restriction</a>
+        <span id="scm_use_main_ip_restriction_python">
+<a href="#scm_use_main_ip_restriction_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>use_<wbr>main_<wbr>ip_<wbr>restriction</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5771,8 +5771,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="use32bitworkerprocess_python">
-<a href="#use32bitworkerprocess_python" style="color: inherit; text-decoration: inherit;">use32Bit<wbr>Worker<wbr>Process</a>
+        <span id="use32_bit_worker_process_python">
+<a href="#use32_bit_worker_process_python" style="color: inherit; text-decoration: inherit;">use32_<wbr>bit_<wbr>worker_<wbr>process</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5782,8 +5782,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="websocketsenabled_python">
-<a href="#websocketsenabled_python" style="color: inherit; text-decoration: inherit;">websockets<wbr>Enabled</a>
+        <span id="websockets_enabled_python">
+<a href="#websockets_enabled_python" style="color: inherit; text-decoration: inherit;">websockets_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5905,8 +5905,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedorigins_python">
-<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+        <span id="allowed_origins_python">
+<a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5916,8 +5916,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="supportcredentials_python">
-<a href="#supportcredentials_python" style="color: inherit; text-decoration: inherit;">support<wbr>Credentials</a>
+        <span id="support_credentials_python">
+<a href="#support_credentials_python" style="color: inherit; text-decoration: inherit;">support_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6222,8 +6222,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualnetworksubnetid_python">
-<a href="#virtualnetworksubnetid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+        <span id="virtual_network_subnet_id_python">
+<a href="#virtual_network_subnet_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6528,8 +6528,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualnetworksubnetid_python">
-<a href="#virtualnetworksubnetid_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
+        <span id="virtual_network_subnet_id_python">
+<a href="#virtual_network_subnet_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6895,8 +6895,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="manualintegration_python">
-<a href="#manualintegration_python" style="color: inherit; text-decoration: inherit;">manual<wbr>Integration</a>
+        <span id="manual_integration_python">
+<a href="#manual_integration_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>integration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6906,8 +6906,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="repourl_python">
-<a href="#repourl_python" style="color: inherit; text-decoration: inherit;">repo<wbr>Url</a>
+        <span id="repo_url_python">
+<a href="#repo_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6917,8 +6917,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rollbackenabled_python">
-<a href="#rollbackenabled_python" style="color: inherit; text-decoration: inherit;">rollback<wbr>Enabled</a>
+        <span id="rollback_enabled_python">
+<a href="#rollback_enabled_python" style="color: inherit; text-decoration: inherit;">rollback_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6928,8 +6928,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usemercurial_python">
-<a href="#usemercurial_python" style="color: inherit; text-decoration: inherit;">use<wbr>Mercurial</a>
+        <span id="use_mercurial_python">
+<a href="#use_mercurial_python" style="color: inherit; text-decoration: inherit;">use_<wbr>mercurial</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
