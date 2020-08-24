@@ -37,14 +37,14 @@ kubernetes_overview:
                 import * as pulumi from "@pulumi/pulumi";
                 import * as kubernetes from "@pulumi/kubernetes";
 
-                // Create a namespace.
+                // Create a K8s namespace.
                 const devNamespace = new kubernetes.core.v1.Namespace("devNamespace", {
                     metadata: {
                         name: "dev",
                     },
                 });
 
-                // Deploy the nginx-ingress Helm chart into the created namespace.
+                // Deploy the K8s nginx-ingress Helm chart into the created namespace.
                 const nginxIngress = new kubernetes.helm.v3.Chart("nginx-ingress", {
                     chart: "nginx-ingress",
                     namespace: devNamespace.metadata.name,
@@ -57,14 +57,14 @@ kubernetes_overview:
               code: |
                 import pulumi_kubernetes as kubernetes
 
-                # Create a namespace.
+                # Create a K8s namespace.
                 dev_namespace = kubernetes.core.v1.Namespace(
                     "devNamespace",
                     metadata={
                         "name": "dev",
                     })
 
-                # Deploy the nginx-ingress Helm chart into the created namespace.
+                # Deploy the K8s nginx-ingress Helm chart into the created namespace.
                 nginx_ingress = kubernetes.helm.v3.Chart(
                     "nginx-ingress",
                     kubernetes.helm.v3.ChartOpts(
@@ -90,7 +90,7 @@ kubernetes_overview:
                     func main() {
                         pulumi.Run(func(ctx *pulumi.Context) error {
 
-                            // Create a namespace.
+                            // Create a K8s namespace.
                             ns, err := corev1.NewNamespace(ctx, "devNamespace", &corev1.NamespaceArgs{
                                 Metadata: &metav1.ObjectMetaArgs{
                                     Name: pulumi.String("dev"),
@@ -100,7 +100,7 @@ kubernetes_overview:
                                 return err
                             }
 
-                            // Deploy the nginx-ingress Helm chart into the created namespace.
+                            // Deploy the K8s nginx-ingress Helm chart into the created namespace.
                             _, err = helm.NewChart(ctx, "nginx-ingress", helm.ChartArgs{
                                 Chart: pulumi.String("nginx-ingress"),
                                 Namespace: ns.Metadata.ApplyT(func(metadata interface{}) string {
@@ -127,7 +127,7 @@ kubernetes_overview:
                 {
                     public MyStack()
                     {
-                        // Create a namespace.
+                        // Create a K8s namespace.
                         var devNamespace = new Kubernetes.Core.V1.Namespace("devNamespace", new Kubernetes.Types.Inputs.Core.V1.NamespaceArgs
                         {
                             Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
@@ -136,7 +136,7 @@ kubernetes_overview:
                             },
                         });
 
-                        // Deploy the nginx-ingress Helm chart into the created namespace.
+                        // Deploy the K8s nginx-ingress Helm chart into the created namespace.
                         var nginx = new Kubernetes.Helm.V3.Chart("nginx-ingress", new Kubernetes.Helm.ChartArgs
                         {
                             Chart = "nginx-ingress",
@@ -225,7 +225,7 @@ detail_sections:
             icon: fa-tools
 
           - title: Efficient Adoption
-            description: There’s no need to rewrite your existing Kubernetes configurations to get started with Pulumi. You can efficiently adopt existing resources to deploy your application to save time and effort.
+            description: There’s no need to rewrite your existing Kubernetes configurations to get started with Pulumi. You can efficiently adopt existing K8s resources to deploy your application to save time and effort.
             icon: fa-book
 
           - title: Secrets Management
@@ -255,7 +255,7 @@ detail_sections:
             icon: fa-chalkboard-teacher
 
           - title: Avoid Pitfalls
-            description: Discover solutions to the hardest Kubernetes problems to avoid mitigating pitfalls around infrastructure, security, governance, reliability, and maintainability of the cluster, its workloads, and underlying resources.
+            description: Discover solutions to the hardest Kubernetes problems to avoid mitigating pitfalls around infrastructure, security, governance, reliability, and maintainability of the K8s cluster, its workloads, and underlying resources.
             icon: fa-pager
 
 contact_us_form:
