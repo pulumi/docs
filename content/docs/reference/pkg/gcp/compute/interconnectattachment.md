@@ -13,96 +13,6 @@ meta_desc: "Explore the InterconnectAttachment resource of the compute module, i
 Represents an InterconnectAttachment (VLAN attachment) resource. For more
 information, see Creating VLAN Attachments.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Interconnect Attachment Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var foobar = new Gcp.Compute.Router("foobar", new Gcp.Compute.RouterArgs
-        {
-            Network = google_compute_network.Foobar.Name,
-        });
-        var onPrem = new Gcp.Compute.InterconnectAttachment("onPrem", new Gcp.Compute.InterconnectAttachmentArgs
-        {
-            Interconnect = "my-interconnect-id",
-            Router = foobar.Id,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		foobar, err := compute.NewRouter(ctx, "foobar", &compute.RouterArgs{
-			Network: pulumi.String(google_compute_network.Foobar.Name),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = compute.NewInterconnectAttachment(ctx, "onPrem", &compute.InterconnectAttachmentArgs{
-			Interconnect: pulumi.String("my-interconnect-id"),
-			Router:       foobar.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-foobar = gcp.compute.Router("foobar", network=google_compute_network["foobar"]["name"])
-on_prem = gcp.compute.InterconnectAttachment("onPrem",
-    interconnect="my-interconnect-id",
-    router=foobar.id)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const foobar = new gcp.compute.Router("foobar", {network: google_compute_network.foobar.name});
-const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
-    interconnect: "my-interconnect-id",
-    router: foobar.id,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a InterconnectAttachment Resource {#create}
@@ -114,7 +24,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#InterconnectAttachment">InterconnectAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_enabled=None<span class="p">, </span>bandwidth=None<span class="p">, </span>candidate_subnets=None<span class="p">, </span>description=None<span class="p">, </span>edge_availability_domain=None<span class="p">, </span>interconnect=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>type=None<span class="p">, </span>vlan_tag8021q=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.InterconnectAttachment">InterconnectAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -325,6 +235,7 @@ For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -433,6 +344,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -493,6 +405,7 @@ For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -601,6 +514,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -661,6 +575,7 @@ For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -769,6 +684,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -829,6 +745,7 @@ For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -937,6 +854,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1414,7 +1332,7 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 <a href="#private_interconnect_info_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Dict[Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info]</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -1461,7 +1379,8 @@ Get an existing InterconnectAttachment resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_enabled=None<span class="p">, </span>bandwidth=None<span class="p">, </span>candidate_subnets=None<span class="p">, </span>cloud_router_ip_address=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>customer_router_ip_address=None<span class="p">, </span>description=None<span class="p">, </span>edge_availability_domain=None<span class="p">, </span>google_reference_id=None<span class="p">, </span>interconnect=None<span class="p">, </span>name=None<span class="p">, </span>pairing_key=None<span class="p">, </span>partner_asn=None<span class="p">, </span>private_interconnect_info=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>self_link=None<span class="p">, </span>state=None<span class="p">, </span>type=None<span class="p">, </span>vlan_tag8021q=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_interconnect_info</span><span class="p">:</span> <span class="nx">Optional[InterconnectAttachmentPrivateInterconnectInfoArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> InterconnectAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1469,7 +1388,7 @@ Get an existing InterconnectAttachment resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InterconnectAttachment.html">InterconnectAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InterconnectAttachmentState.html">InterconnectAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InterconnectAttachment.html">InterconnectAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InterconnectAttachmentState.html">InterconnectAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1600,6 +1519,7 @@ For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1825,6 +1745,7 @@ Cloud Router is configured.
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1871,6 +1792,7 @@ For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2096,6 +2018,7 @@ Cloud Router is configured.
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2142,6 +2065,7 @@ For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2367,6 +2291,7 @@ Cloud Router is configured.
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2413,6 +2338,7 @@ For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2563,7 +2489,7 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 <a href="#state_private_interconnect_info_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Dict[Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info]</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -2638,6 +2564,7 @@ Cloud Router is configured.
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2764,6 +2691,6 @@ using PARTNER type this will be managed upstream.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

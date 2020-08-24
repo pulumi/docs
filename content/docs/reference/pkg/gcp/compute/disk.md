@@ -35,105 +35,6 @@ To get more information about Disk, see:
 > **Warning:** All arguments including `disk_encryption_key.raw_key` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Disk Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = new Gcp.Compute.Disk("default", new Gcp.Compute.DiskArgs
-        {
-            Image = "debian-8-jessie-v20170523",
-            Labels = 
-            {
-                { "environment", "dev" },
-            },
-            PhysicalBlockSizeBytes = 4096,
-            Type = "pd-ssd",
-            Zone = "us-central1-a",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewDisk(ctx, "default", &compute.DiskArgs{
-			Image: pulumi.String("debian-8-jessie-v20170523"),
-			Labels: pulumi.Map{
-				"environment": pulumi.String("dev"),
-			},
-			PhysicalBlockSizeBytes: pulumi.Int(4096),
-			Type:                   pulumi.String("pd-ssd"),
-			Zone:                   pulumi.String("us-central1-a"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.Disk("default",
-    image="debian-8-jessie-v20170523",
-    labels={
-        "environment": "dev",
-    },
-    physical_block_size_bytes=4096,
-    type="pd-ssd",
-    zone="us-central1-a")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultDisk = new gcp.compute.Disk("default", {
-    image: "debian-8-jessie-v20170523",
-    labels: {
-        environment: "dev",
-    },
-    physicalBlockSizeBytes: 4096,
-    type: "pd-ssd",
-    zone: "us-central1-a",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Disk Resource {#create}
@@ -145,7 +46,7 @@ const defaultDisk = new gcp.compute.Disk("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#Disk">Disk</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>disk_encryption_key=None<span class="p">, </span>image=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>physical_block_size_bytes=None<span class="p">, </span>project=None<span class="p">, </span>resource_policies=None<span class="p">, </span>size=None<span class="p">, </span>snapshot=None<span class="p">, </span>source_image_encryption_key=None<span class="p">, </span>source_snapshot_encryption_key=None<span class="p">, </span>type=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.Disk">Disk</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[DiskDiskEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">physical_block_size_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[DiskSourceImageEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">source_snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[DiskSourceSnapshotEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -345,7 +246,8 @@ Customer-supplied encryption keys do not protect access to metadata of
 the disk.
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later.  Structure is documented below.
+you do not need to provide a key to use the disk later.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,7 +264,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -480,7 +382,8 @@ following are valid values:
         <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
-the source image is protected by a customer-supplied encryption key.  Structure is documented below.
+the source image is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -493,7 +396,8 @@ the source image is protected by a customer-supplied encryption key.  Structure 
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -554,7 +458,8 @@ Customer-supplied encryption keys do not protect access to metadata of
 the disk.
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later.  Structure is documented below.
+you do not need to provide a key to use the disk later.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -571,7 +476,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -689,7 +594,8 @@ following are valid values:
         <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
-the source image is protected by a customer-supplied encryption key.  Structure is documented below.
+the source image is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -702,7 +608,8 @@ the source image is protected by a customer-supplied encryption key.  Structure 
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -763,7 +670,8 @@ Customer-supplied encryption keys do not protect access to metadata of
 the disk.
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later.  Structure is documented below.
+you do not need to provide a key to use the disk later.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -780,7 +688,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -898,7 +806,8 @@ following are valid values:
         <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
-the source image is protected by a customer-supplied encryption key.  Structure is documented below.
+the source image is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -911,7 +820,8 @@ the source image is protected by a customer-supplied encryption key.  Structure 
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -962,7 +872,7 @@ you create the resource.
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdiskencryptionkey">Dict[Disk<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#diskdiskencryptionkey">Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key.
 After you encrypt a disk with a customer-supplied key, you must
@@ -972,7 +882,8 @@ Customer-supplied encryption keys do not protect access to metadata of
 the disk.
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later.  Structure is documented below.
+you do not need to provide a key to use the disk later.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -989,7 +900,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -1000,7 +911,7 @@ These images can be referred by family name here.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
 {{% /md %}}</dd>
@@ -1104,10 +1015,11 @@ following are valid values:
 <a href="#source_image_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksourceimageencryptionkey">Dict[Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
-the source image is protected by a customer-supplied encryption key.  Structure is documented below.
+the source image is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1116,11 +1028,12 @@ the source image is protected by a customer-supplied encryption key.  Structure 
 <a href="#source_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksourcesnapshotencryptionkey">Dict[Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#disksourcesnapshotencryptionkey">Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1612,7 +1525,8 @@ Get an existing Disk resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>disk_encryption_key=None<span class="p">, </span>image=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>labels=None<span class="p">, </span>last_attach_timestamp=None<span class="p">, </span>last_detach_timestamp=None<span class="p">, </span>name=None<span class="p">, </span>physical_block_size_bytes=None<span class="p">, </span>project=None<span class="p">, </span>resource_policies=None<span class="p">, </span>self_link=None<span class="p">, </span>size=None<span class="p">, </span>snapshot=None<span class="p">, </span>source_image_encryption_key=None<span class="p">, </span>source_image_id=None<span class="p">, </span>source_snapshot_encryption_key=None<span class="p">, </span>source_snapshot_id=None<span class="p">, </span>type=None<span class="p">, </span>users=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[DiskDiskEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">last_attach_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_detach_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">physical_block_size_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_policies</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_encryption_key</span><span class="p">:</span> <span class="nx">Optional[DiskSourceImageEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[DiskSourceSnapshotEncryptionKeyArgs]</span> = None<span class="p">, </span><span class="nx">source_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Disk</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1620,7 +1534,7 @@ Get an existing Disk resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Disk.html">Disk</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.DiskState.html">DiskState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Disk.html">Disk</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.DiskState.html">DiskState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1765,7 +1679,8 @@ Customer-supplied encryption keys do not protect access to metadata of
 the disk.
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later.  Structure is documented below.
+you do not need to provide a key to use the disk later.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1782,7 +1697,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -1944,7 +1859,8 @@ following are valid values:
         <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
-the source image is protected by a customer-supplied encryption key.  Structure is documented below.
+the source image is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1970,7 +1886,8 @@ under the same name, the source image ID would identify the exact version of the
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2066,7 +1983,8 @@ Customer-supplied encryption keys do not protect access to metadata of
 the disk.
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later.  Structure is documented below.
+you do not need to provide a key to use the disk later.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2083,7 +2001,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -2245,7 +2163,8 @@ following are valid values:
         <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
-the source image is protected by a customer-supplied encryption key.  Structure is documented below.
+the source image is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2271,7 +2190,8 @@ under the same name, the source image ID would identify the exact version of the
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2367,7 +2287,8 @@ Customer-supplied encryption keys do not protect access to metadata of
 the disk.
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later.  Structure is documented below.
+you do not need to provide a key to use the disk later.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2384,7 +2305,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -2546,7 +2467,8 @@ following are valid values:
         <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
-the source image is protected by a customer-supplied encryption key.  Structure is documented below.
+the source image is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2572,7 +2494,8 @@ under the same name, the source image ID would identify the exact version of the
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2658,7 +2581,7 @@ you create the resource.
 <a href="#state_disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdiskencryptionkey">Dict[Disk<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#diskdiskencryptionkey">Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key.
 After you encrypt a disk with a customer-supplied key, you must
@@ -2668,7 +2591,8 @@ Customer-supplied encryption keys do not protect access to metadata of
 the disk.
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later.  Structure is documented below.
+you do not need to provide a key to use the disk later.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2685,7 +2609,7 @@ one of: the image's `self_link`, `projects/{project}/global/images/{image}`,
 `global/images/family/{family}`, `family/{family}`, `{project}/{family}`,
 `{project}/{image}`, `{family}`, or `{image}`. If referred by family, the
 images names must include the family name. If they don't, use the
-[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/datasource_compute_image.html).
+[gcp.compute.Image data source](https://www.terraform.io/docs/providers/google/d/compute_image.html).
 For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
 These images can be referred by family name here.
 {{% /md %}}</dd>
@@ -2707,7 +2631,7 @@ These images can be referred by family name here.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
 {{% /md %}}</dd>
@@ -2844,10 +2768,11 @@ following are valid values:
 <a href="#state_source_image_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksourceimageencryptionkey">Dict[Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#disksourceimageencryptionkey">Disk<wbr>Source<wbr>Image<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source image. Required if
-the source image is protected by a customer-supplied encryption key.  Structure is documented below.
+the source image is protected by a customer-supplied encryption key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2869,11 +2794,12 @@ under the same name, the source image ID would identify the exact version of the
 <a href="#state_source_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksourcesnapshotencryptionkey">Dict[Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#disksourcesnapshotencryptionkey">Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key.  Structure is documented below.
+key.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3099,8 +3025,8 @@ encryption key that protects this resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kmskeyselflink_python">
-<a href="#kmskeyselflink_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
+        <span id="kms_key_self_link_python">
+<a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3114,8 +3040,8 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rawkey_python">
-<a href="#rawkey_python" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
+        <span id="raw_key_python">
+<a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3305,8 +3231,8 @@ encryption key that protects this resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kmskeyselflink_python">
-<a href="#kmskeyselflink_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
+        <span id="kms_key_self_link_python">
+<a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3320,8 +3246,8 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rawkey_python">
-<a href="#rawkey_python" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
+        <span id="raw_key_python">
+<a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3511,8 +3437,8 @@ encryption key that protects this resource.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kmskeyselflink_python">
-<a href="#kmskeyselflink_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
+        <span id="kms_key_self_link_python">
+<a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3526,8 +3452,8 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rawkey_python">
-<a href="#rawkey_python" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
+        <span id="raw_key_python">
+<a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3567,6 +3493,6 @@ encryption key that protects this resource.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -30,7 +30,7 @@ To get more information about Occurrence, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/containeranalysis/#Occurence">Occurence</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attestation=None<span class="p">, </span>note_name=None<span class="p">, </span>project=None<span class="p">, </span>remediation=None<span class="p">, </span>resource_uri=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/containeranalysis/#pulumi_gcp.containeranalysis.Occurence">Occurence</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation</span><span class="p">:</span> <span class="nx">Optional[OccurenceAttestationArgs]</span> = None<span class="p">, </span><span class="nx">note_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -217,7 +217,8 @@ the signature is sufficient to establish trust. In this circumstance,
 the authority to which this attestation is attached is primarily
 useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
-which authority this attestation was intended to sign.  Structure is documented below.
+which authority this attestation was intended to sign.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -291,7 +292,8 @@ the signature is sufficient to establish trust. In this circumstance,
 the authority to which this attestation is attached is primarily
 useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
-which authority this attestation was intended to sign.  Structure is documented below.
+which authority this attestation was intended to sign.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -365,7 +367,8 @@ the signature is sufficient to establish trust. In this circumstance,
 the authority to which this attestation is attached is primarily
 useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
-which authority this attestation was intended to sign.  Structure is documented below.
+which authority this attestation was intended to sign.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -430,7 +433,7 @@ If it is not provided, the provider project is used.
 <a href="#attestation_python" style="color: inherit; text-decoration: inherit;">attestation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#occurenceattestation">Dict[Occurence<wbr>Attestation]</a></span>
+        <span class="property-type"><a href="#occurenceattestation">Occurence<wbr>Attestation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Occurrence that represents a single "attestation". The authenticity
 of an attestation can be verified using the attached signature.
@@ -439,7 +442,8 @@ the signature is sufficient to establish trust. In this circumstance,
 the authority to which this attestation is attached is primarily
 useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
-which authority this attestation was intended to sign.  Structure is documented below.
+which authority this attestation was intended to sign.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -769,7 +773,8 @@ Get an existing Occurence resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attestation=None<span class="p">, </span>create_time=None<span class="p">, </span>kind=None<span class="p">, </span>name=None<span class="p">, </span>note_name=None<span class="p">, </span>project=None<span class="p">, </span>remediation=None<span class="p">, </span>resource_uri=None<span class="p">, </span>update_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation</span><span class="p">:</span> <span class="nx">Optional[OccurenceAttestationArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">note_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Occurence</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -777,7 +782,7 @@ Get an existing Occurence resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Occurence.html">Occurence</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.OccurenceState.html">OccurenceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Occurence.html">Occurence</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.OccurenceState.html">OccurenceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -898,7 +903,8 @@ the signature is sufficient to establish trust. In this circumstance,
 the authority to which this attestation is attached is primarily
 useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
-which authority this attestation was intended to sign.  Structure is documented below.
+which authority this attestation was intended to sign.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1017,7 +1023,8 @@ the signature is sufficient to establish trust. In this circumstance,
 the authority to which this attestation is attached is primarily
 useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
-which authority this attestation was intended to sign.  Structure is documented below.
+which authority this attestation was intended to sign.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1136,7 +1143,8 @@ the signature is sufficient to establish trust. In this circumstance,
 the authority to which this attestation is attached is primarily
 useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
-which authority this attestation was intended to sign.  Structure is documented below.
+which authority this attestation was intended to sign.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1246,7 +1254,7 @@ https://gcr.io/project/image@sha256:123abc for a Docker image.
 <a href="#state_attestation_python" style="color: inherit; text-decoration: inherit;">attestation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#occurenceattestation">Dict[Occurence<wbr>Attestation]</a></span>
+        <span class="property-type"><a href="#occurenceattestation">Occurence<wbr>Attestation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Occurrence that represents a single "attestation". The authenticity
 of an attestation can be verified using the attached signature.
@@ -1255,7 +1263,8 @@ the signature is sufficient to establish trust. In this circumstance,
 the authority to which this attestation is attached is primarily
 useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
-which authority this attestation was intended to sign.  Structure is documented below.
+which authority this attestation was intended to sign.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1409,7 +1418,8 @@ more signatures. A base64-encoded string.
 Verifier implementations should consider this attestation
 message verified if at least one signature verifies
 serializedPayload. See Signature in common.proto for more
-details on signature structure and verification.  Structure is documented below.
+details on signature structure and verification.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1443,7 +1453,8 @@ more signatures. A base64-encoded string.
 Verifier implementations should consider this attestation
 message verified if at least one signature verifies
 serializedPayload. See Signature in common.proto for more
-details on signature structure and verification.  Structure is documented below.
+details on signature structure and verification.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1477,7 +1488,8 @@ more signatures. A base64-encoded string.
 Verifier implementations should consider this attestation
 message verified if at least one signature verifies
 serializedPayload. See Signature in common.proto for more
-details on signature structure and verification.  Structure is documented below.
+details on signature structure and verification.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1489,8 +1501,8 @@ details on signature structure and verification.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="serializedpayload_python">
-<a href="#serializedpayload_python" style="color: inherit; text-decoration: inherit;">serialized<wbr>Payload</a>
+        <span id="serialized_payload_python">
+<a href="#serialized_payload_python" style="color: inherit; text-decoration: inherit;">serialized_<wbr>payload</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1505,13 +1517,14 @@ more signatures. A base64-encoded string.
 <a href="#signatures_python" style="color: inherit; text-decoration: inherit;">signatures</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#occurenceattestationsignature">List[Occurence<wbr>Attestation<wbr>Signature]</a></span>
+        <span class="property-type"><a href="#occurenceattestationsignature">List[Occurence<wbr>Attestation<wbr>Signature<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more signatures over serializedPayload.
 Verifier implementations should consider this attestation
 message verified if at least one signature verifies
 serializedPayload. See Signature in common.proto for more
-details on signature structure and verification.  Structure is documented below.
+details on signature structure and verification.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1673,8 +1686,8 @@ unambiguously computed to derive the payload.
 
     <dt class="property-required"
             title="Required">
-        <span id="publickeyid_python">
-<a href="#publickeyid_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Id</a>
+        <span id="public_key_id_python">
+<a href="#public_key_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1726,6 +1739,6 @@ unambiguously computed to derive the payload.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

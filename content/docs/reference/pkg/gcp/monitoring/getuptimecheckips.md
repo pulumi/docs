@@ -13,78 +13,6 @@ meta_desc: "Explore the GetUptimeCheckIPs function of the monitoring module, inc
 Returns the list of IP addresses that checkers run from. For more information see
 the [official documentation](https://cloud.google.com/monitoring/uptime-checks#get-ips).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ips = Output.Create(Gcp.Monitoring.GetUptimeCheckIPs.InvokeAsync());
-        this.IpList = ips.Apply(ips => ips.UptimeCheckIps);
-    }
-
-    [Output("ipList")]
-    public Output<string> IpList { get; set; }
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		ips, err := monitoring.GetUptimeCheckIPs(ctx, nil, nil)
-		if err != nil {
-			return err
-		}
-		ctx.Export("ipList", ips.UptimeCheckIps)
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-ips = gcp.monitoring.get_uptime_check_i_ps()
-pulumi.export("ipList", ips.uptime_check_ips)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const ips = gcp.monitoring.getUptimeCheckIPs({});
-export const ipList = ips.then(ips => ips.uptimeCheckIps);
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetUptimeCheckIPs {#using}
@@ -98,7 +26,7 @@ export const ipList = ips.then(ips => ips.uptimeCheckIps);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_uptime_check_i_ps(</span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_uptime_check_i_ps(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUptimeCheckIPsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -454,6 +382,6 @@ IPv4 or IPv6 format.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

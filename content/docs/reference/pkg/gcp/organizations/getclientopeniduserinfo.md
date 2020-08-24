@@ -22,78 +22,6 @@ authentication with GKE and configure an RBAC role for the email used.
 use the `https://www.googleapis.com/auth/userinfo.email` scope! You will
 receive an error otherwise.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Exporting An Email
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var me = Output.Create(Gcp.Organizations.GetClientOpenIdUserInfo.InvokeAsync());
-        this.My_email = me.Apply(me => me.Email);
-    }
-
-    [Output("my-email")]
-    public Output<string> My_email { get; set; }
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		me, err := organizations.GetClientOpenIdUserInfo(ctx, nil, nil)
-		if err != nil {
-			return err
-		}
-		ctx.Export("my-email", me.Email)
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-me = gcp.organizations.get_client_open_id_user_info()
-pulumi.export("my-email", me.email)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const me = gcp.organizations.getClientOpenIdUserInfo({});
-export const my_email = me.then(me => me.email);
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetClientOpenIdUserInfo {#using}
@@ -107,7 +35,7 @@ export const my_email = me.then(me => me.email);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_client_open_id_user_info(</span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_client_open_id_user_info(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClientOpenIdUserInfoResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -263,6 +191,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

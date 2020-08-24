@@ -18,170 +18,6 @@ To get more information about Instance, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/memorystore/docs/redis/)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Redis Instance Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var cache = new Gcp.Redis.Instance("cache", new Gcp.Redis.InstanceArgs
-        {
-            MemorySizeGb = 1,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/redis"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = redis.NewInstance(ctx, "cache", &redis.InstanceArgs{
-			MemorySizeGb: pulumi.Int(1),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-cache = gcp.redis.Instance("cache", memory_size_gb=1)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const cache = new gcp.redis.Instance("cache", {
-    memorySizeGb: 1,
-});
-```
-
-{{% /example %}}
-
-### Redis Instance Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var redis_network = Output.Create(Gcp.Compute.GetNetwork.InvokeAsync(new Gcp.Compute.GetNetworkArgs
-        {
-            Name = "redis-test-network",
-        }));
-        var cache = new Gcp.Redis.Instance("cache", new Gcp.Redis.InstanceArgs
-        {
-            Tier = "STANDARD_HA",
-            MemorySizeGb = 1,
-            LocationId = "us-central1-a",
-            AlternativeLocationId = "us-central1-f",
-            AuthorizedNetwork = redis_network.Apply(redis_network => redis_network.Id),
-            RedisVersion = "REDIS_3_2",
-            DisplayName = "Test Instance",
-            ReservedIpRange = "192.168.0.0/29",
-            Labels = 
-            {
-                { "my_key", "my_val" },
-                { "other_key", "other_val" },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-redis_network = gcp.compute.get_network(name="redis-test-network")
-cache = gcp.redis.Instance("cache",
-    tier="STANDARD_HA",
-    memory_size_gb=1,
-    location_id="us-central1-a",
-    alternative_location_id="us-central1-f",
-    authorized_network=redis_network.id,
-    redis_version="REDIS_3_2",
-    display_name="Test Instance",
-    reserved_ip_range="192.168.0.0/29",
-    labels={
-        "my_key": "my_val",
-        "other_key": "other_val",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const redis-network = gcp.compute.getNetwork({
-    name: "redis-test-network",
-});
-const cache = new gcp.redis.Instance("cache", {
-    tier: "STANDARD_HA",
-    memorySizeGb: 1,
-    locationId: "us-central1-a",
-    alternativeLocationId: "us-central1-f",
-    authorizedNetwork: redis_network.then(redis_network => redis_network.id),
-    redisVersion: "REDIS_3_2",
-    displayName: "Test Instance",
-    reservedIpRange: "192.168.0.0/29",
-    labels: {
-        my_key: "my_val",
-        other_key: "other_val",
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}
@@ -193,7 +29,7 @@ const cache = new gcp.redis.Instance("cache", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/redis/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>alternative_location_id=None<span class="p">, </span>authorized_network=None<span class="p">, </span>connect_mode=None<span class="p">, </span>display_name=None<span class="p">, </span>labels=None<span class="p">, </span>location_id=None<span class="p">, </span>memory_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>redis_configs=None<span class="p">, </span>redis_version=None<span class="p">, </span>region=None<span class="p">, </span>reserved_ip_range=None<span class="p">, </span>tier=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/redis/#pulumi_gcp.redis.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternative_location_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorized_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connect_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis_configs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">redis_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reserved_ip_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -412,6 +248,8 @@ will be used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -497,6 +335,7 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
+- REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
@@ -538,6 +377,8 @@ network.
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
 - STANDARD_HA: highly available primary/replica instances
+Default value is `BASIC`.
+Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -594,6 +435,8 @@ will be used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -679,6 +522,7 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
+- REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
@@ -720,6 +564,8 @@ network.
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
 - STANDARD_HA: highly available primary/replica instances
+Default value is `BASIC`.
+Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -776,6 +622,8 @@ will be used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -861,6 +709,7 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
+- REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
@@ -902,6 +751,8 @@ network.
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
 - STANDARD_HA: highly available primary/replica instances
+Default value is `BASIC`.
+Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -958,6 +809,8 @@ will be used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -977,7 +830,7 @@ will be used.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
@@ -1026,7 +879,7 @@ If it is not provided, the provider project is used.
 <a href="#redis_configs_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
@@ -1043,6 +896,7 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
+- REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
@@ -1084,6 +938,8 @@ network.
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
 - STANDARD_HA: highly available primary/replica instances
+Default value is `BASIC`.
+Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1151,6 +1007,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="persistenceiamidentity_csharp">
+<a href="#persistenceiamidentity_csharp" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
+"serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
+operation.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span> 
@@ -1211,6 +1080,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="persistenceiamidentity_go">
+<a href="#persistenceiamidentity_go" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
+"serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
+operation.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1277,6 +1159,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="persistenceiamidentity_nodejs">
+<a href="#persistenceiamidentity_nodejs" style="color: inherit; text-decoration: inherit;">persistence<wbr>Iam<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
+"serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
+operation.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
@@ -1340,6 +1235,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="persistence_iam_identity_python">
+<a href="#persistence_iam_identity_python" style="color: inherit; text-decoration: inherit;">persistence_<wbr>iam_<wbr>identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
+"serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
+operation.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
@@ -1368,7 +1276,8 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alternative_location_id=None<span class="p">, </span>authorized_network=None<span class="p">, </span>connect_mode=None<span class="p">, </span>create_time=None<span class="p">, </span>current_location_id=None<span class="p">, </span>display_name=None<span class="p">, </span>host=None<span class="p">, </span>labels=None<span class="p">, </span>location_id=None<span class="p">, </span>memory_size_gb=None<span class="p">, </span>name=None<span class="p">, </span>port=None<span class="p">, </span>project=None<span class="p">, </span>redis_configs=None<span class="p">, </span>redis_version=None<span class="p">, </span>region=None<span class="p">, </span>reserved_ip_range=None<span class="p">, </span>tier=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alternative_location_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorized_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connect_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">current_location_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persistence_iam_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redis_configs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">redis_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reserved_ip_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1376,7 +1285,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1518,6 +1427,8 @@ will be used.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1616,6 +1527,19 @@ be different from [locationId].
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_persistenceiamidentity_csharp">
+<a href="#state_persistenceiamidentity_csharp" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
+"serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
+operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span> 
@@ -1660,6 +1584,7 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
+- REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
@@ -1701,6 +1626,8 @@ network.
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
 - STANDARD_HA: highly available primary/replica instances
+Default value is `BASIC`.
+Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1746,6 +1673,8 @@ will be used.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1844,6 +1773,19 @@ be different from [locationId].
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_persistenceiamidentity_go">
+<a href="#state_persistenceiamidentity_go" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
+"serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
+operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span> 
@@ -1888,6 +1830,7 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
+- REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
@@ -1929,6 +1872,8 @@ network.
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
 - STANDARD_HA: highly available primary/replica instances
+Default value is `BASIC`.
+Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1974,6 +1919,8 @@ will be used.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2072,6 +2019,19 @@ be different from [locationId].
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_persistenceiamidentity_nodejs">
+<a href="#state_persistenceiamidentity_nodejs" style="color: inherit; text-decoration: inherit;">persistence<wbr>Iam<wbr>Identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
+"serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
+operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
@@ -2116,6 +2076,7 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
+- REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
@@ -2157,6 +2118,8 @@ network.
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
 - STANDARD_HA: highly available primary/replica instances
+Default value is `BASIC`.
+Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2202,6 +2165,8 @@ will be used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
+Default value is `DIRECT_PEERING`.
+Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2256,7 +2221,7 @@ will be used.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
@@ -2300,6 +2265,19 @@ be different from [locationId].
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_persistence_iam_identity_python">
+<a href="#state_persistence_iam_identity_python" style="color: inherit; text-decoration: inherit;">persistence_<wbr>iam_<wbr>identity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
+"serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
+operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span> 
@@ -2327,7 +2305,7 @@ If it is not provided, the provider project is used.
 <a href="#state_redis_configs_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Redis configuration parameters, according to http://redis.io/topics/config.
 Please check Memorystore documentation for the list of supported parameters:
@@ -2344,6 +2322,7 @@ https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locat
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
+- REDIS_5_0 for Redis 5.0 compatibility
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
@@ -2385,6 +2364,8 @@ network.
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
 - STANDARD_HA: highly available primary/replica instances
+Default value is `BASIC`.
+Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2407,6 +2388,6 @@ network.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -30,7 +30,7 @@ To get more information about GameServerDeploymentRollout, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/gameservices/#GameServerDeploymentRollout">GameServerDeploymentRollout</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_game_server_config=None<span class="p">, </span>deployment_id=None<span class="p">, </span>game_server_config_overrides=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/gameservices/#pulumi_gcp.gameservices.GameServerDeploymentRollout">GameServerDeploymentRollout</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_game_server_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">game_server_config_overrides</span><span class="p">:</span> <span class="nx">Optional[List[GameServerDeploymentRolloutGameServerConfigOverrideArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -237,7 +237,8 @@ applied by default to all realms and clusters. For example,
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
-processed.  Structure is documented below.
+processed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -294,7 +295,8 @@ applied by default to all realms and clusters. For example,
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
-processed.  Structure is documented below.
+processed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -351,7 +353,8 @@ applied by default to all realms and clusters. For example,
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
-processed.  Structure is documented below.
+processed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -403,12 +406,13 @@ applied by default to all realms and clusters. For example,
 <a href="#game_server_config_overrides_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>config_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override]</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
-processed.  Structure is documented below.
+processed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -569,7 +573,8 @@ Get an existing GameServerDeploymentRollout resource's state with the given name
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>default_game_server_config=None<span class="p">, </span>deployment_id=None<span class="p">, </span>game_server_config_overrides=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_game_server_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">game_server_config_overrides</span><span class="p">:</span> <span class="nx">Optional[List[GameServerDeploymentRolloutGameServerConfigOverrideArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GameServerDeploymentRollout</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -577,7 +582,7 @@ Get an existing GameServerDeploymentRollout resource's state with the given name
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerDeploymentRollout.html">GameServerDeploymentRollout</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerDeploymentRolloutState.html">GameServerDeploymentRolloutState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerDeploymentRollout.html">GameServerDeploymentRollout</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerDeploymentRolloutState.html">GameServerDeploymentRolloutState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -718,7 +723,8 @@ applied by default to all realms and clusters. For example,
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
-processed.  Structure is documented below.
+processed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -787,7 +793,8 @@ applied by default to all realms and clusters. For example,
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
-processed.  Structure is documented below.
+processed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -856,7 +863,8 @@ applied by default to all realms and clusters. For example,
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
-processed.  Structure is documented below.
+processed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -920,12 +928,13 @@ applied by default to all realms and clusters. For example,
 <a href="#state_game_server_config_overrides_python" style="color: inherit; text-decoration: inherit;">game_<wbr>server_<wbr>config_<wbr>overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override]</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverride">List[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
-processed.  Structure is documented below.
+processed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1004,7 +1013,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Selection by realms.  Structure is documented below.
+    <dd>{{% md %}}Selection by realms.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1033,7 +1043,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Selection by realms.  Structure is documented below.
+    <dd>{{% md %}}Selection by realms.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1062,7 +1073,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Selection by realms.  Structure is documented below.
+    <dd>{{% md %}}Selection by realms.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1074,8 +1086,8 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="configversion_python">
-<a href="#configversion_python" style="color: inherit; text-decoration: inherit;">config<wbr>Version</a>
+        <span id="config_version_python">
+<a href="#config_version_python" style="color: inherit; text-decoration: inherit;">config_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1085,13 +1097,14 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="realmsselector_python">
-<a href="#realmsselector_python" style="color: inherit; text-decoration: inherit;">realms<wbr>Selector</a>
+        <span id="realms_selector_python">
+<a href="#realms_selector_python" style="color: inherit; text-decoration: inherit;">realms_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Dict[Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#gameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Selection by realms.  Structure is documented below.
+    <dd>{{% md %}}Selection by realms.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1202,6 +1215,6 @@ If it is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

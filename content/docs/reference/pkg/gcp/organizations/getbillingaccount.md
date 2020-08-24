@@ -12,86 +12,6 @@ meta_desc: "Explore the GetBillingAccount function of the organizations module, 
 
 Use this data source to get information about a Google Billing Account.
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const acct = gcp.organizations.getBillingAccount({
-    displayName: "My Billing Account",
-    open: true,
-});
-const myProject = new gcp.organizations.Project("myProject", {
-    projectId: "your-project-id",
-    orgId: "1234567",
-    billingAccount: acct.then(acct => acct.id),
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-acct = gcp.organizations.get_billing_account(display_name="My Billing Account",
-    open=True)
-my_project = gcp.organizations.Project("myProject",
-    project_id="your-project-id",
-    org_id="1234567",
-    billing_account=acct.id)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var acct = Output.Create(Gcp.Organizations.GetBillingAccount.InvokeAsync(new Gcp.Organizations.GetBillingAccountArgs
-        {
-            DisplayName = "My Billing Account",
-            Open = true,
-        }));
-        var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
-        {
-            ProjectId = "your-project-id",
-            OrgId = "1234567",
-            BillingAccount = acct.Apply(acct => acct.Id),
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "My Billing Account"
-		opt1 := true
-		acct, err := organizations.GetBillingAccount(ctx, &organizations.GetBillingAccountArgs{
-			DisplayName: &opt0,
-			Open:        &opt1,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err = organizations.NewProject(ctx, "myProject", &organizations.ProjectArgs{
-			ProjectId:      pulumi.String("your-project-id"),
-			OrgId:          pulumi.String("1234567"),
-			BillingAccount: pulumi.String(acct.Id),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
 
 
 ## Using GetBillingAccount {#using}
@@ -105,7 +25,7 @@ func main() {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_billing_account(</span>billing_account=None<span class="p">, </span>display_name=None<span class="p">, </span>open=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_billing_account(</span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">open</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBillingAccountResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -594,6 +514,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

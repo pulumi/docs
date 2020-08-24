@@ -14,106 +14,6 @@ Creates a Google Bigtable instance. For more information see
 [the official documentation](https://cloud.google.com/bigtable/) and
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Development Instance
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var development_instance = new Gcp.BigTable.Instance("development-instance", new Gcp.BigTable.InstanceArgs
-        {
-            Clusters = 
-            {
-                new Gcp.BigTable.Inputs.InstanceClusterArgs
-                {
-                    ClusterId = "tf-instance-cluster",
-                    StorageType = "HDD",
-                    Zone = "us-central1-b",
-                },
-            },
-            InstanceType = "DEVELOPMENT",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = bigtable.NewInstance(ctx, "development-instance", &bigtable.InstanceArgs{
-			Clusters: bigtable.InstanceClusterArray{
-				&bigtable.InstanceClusterArgs{
-					ClusterId:   pulumi.String("tf-instance-cluster"),
-					StorageType: pulumi.String("HDD"),
-					Zone:        pulumi.String("us-central1-b"),
-				},
-			},
-			InstanceType: pulumi.String("DEVELOPMENT"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-development_instance = gcp.bigtable.Instance("development-instance",
-    clusters=[{
-        "cluster_id": "tf-instance-cluster",
-        "storageType": "HDD",
-        "zone": "us-central1-b",
-    }],
-    instance_type="DEVELOPMENT")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const development_instance = new gcp.bigtable.Instance("development-instance", {
-    clusters: [{
-        clusterId: "tf-instance-cluster",
-        storageType: "HDD",
-        zone: "us-central1-b",
-    }],
-    instanceType: "DEVELOPMENT",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}
@@ -125,7 +25,7 @@ const development_instance = new gcp.bigtable.Instance("development-instance", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>clusters=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>display_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable/#pulumi_gcp.bigtable.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusters</span><span class="p">:</span> <span class="nx">Optional[List[InstanceClusterArgs]]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -305,7 +205,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecluster">List&lt;Instance<wbr>Cluster<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+    <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
+See structure below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -340,6 +241,17 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -380,7 +292,8 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecluster">[]Instance<wbr>Cluster</a></span>
     </dt>
-    <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+    <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
+See structure below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -415,6 +328,17 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -455,7 +379,8 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecluster">Instance<wbr>Cluster[]</a></span>
     </dt>
-    <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+    <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
+See structure below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -494,6 +419,17 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
 
     <dt class="property-optional"
             title="Optional">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -528,9 +464,10 @@ is not provided, the provider project is used.
 <a href="#clusters_python" style="color: inherit; text-decoration: inherit;">clusters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecluster">List[Instance<wbr>Cluster]</a></span>
+        <span class="property-type"><a href="#instancecluster">List[Instance<wbr>Cluster<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+    <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
+See structure below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -565,6 +502,17 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -688,7 +636,8 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>clusters=None<span class="p">, </span>deletion_protection=None<span class="p">, </span>display_name=None<span class="p">, </span>instance_type=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusters</span><span class="p">:</span> <span class="nx">Optional[List[InstanceClusterArgs]]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -696,7 +645,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -810,7 +759,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecluster">List&lt;Instance<wbr>Cluster<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+    <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
+See structure below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -845,6 +795,17 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_labels_csharp">
+<a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -885,7 +846,8 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecluster">[]Instance<wbr>Cluster</a></span>
     </dt>
-    <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+    <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
+See structure below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -920,6 +882,17 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_labels_go">
+<a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -960,7 +933,8 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecluster">Instance<wbr>Cluster[]</a></span>
     </dt>
-    <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+    <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
+See structure below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -999,6 +973,17 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_labels_nodejs">
+<a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1033,9 +1018,10 @@ is not provided, the provider project is used.
 <a href="#state_clusters_python" style="color: inherit; text-decoration: inherit;">clusters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecluster">List[Instance<wbr>Cluster]</a></span>
+        <span class="property-type"><a href="#instancecluster">List[Instance<wbr>Cluster<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.
+    <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
+See structure below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1070,6 +1056,17 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The instance type to create. One of `"DEVELOPMENT"` or `"PRODUCTION"`. Defaults to `"PRODUCTION"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_labels_python">
+<a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1335,8 +1332,8 @@ for a `DEVELOPMENT` instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storagetype_python">
-<a href="#storagetype_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
+        <span id="storage_type_python">
+<a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1363,6 +1360,6 @@ for a `DEVELOPMENT` instance.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

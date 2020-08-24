@@ -25,7 +25,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#Table">Table</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>clusterings=None<span class="p">, </span>dataset_id=None<span class="p">, </span>description=None<span class="p">, </span>encryption_configuration=None<span class="p">, </span>expiration_time=None<span class="p">, </span>external_data_configuration=None<span class="p">, </span>friendly_name=None<span class="p">, </span>labels=None<span class="p">, </span>project=None<span class="p">, </span>range_partitioning=None<span class="p">, </span>schema=None<span class="p">, </span>table_id=None<span class="p">, </span>time_partitioning=None<span class="p">, </span>view=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.Table">Table</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -340,17 +340,17 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A JSON schema for the table. Schema is required
-for CSV and JSON formats and is disallowed for Google Cloud
-Bigtable, Cloud Datastore backups, and Avro formats when using
-external tables. For more information see the
-[BigQuery API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource).
-~>**NOTE**: Because this field expects a JSON string, any changes to the
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
 string will create a diff, even if the JSON itself hasn't changed.
-If the API returns a different value for the same schema, e.g. it
-switched the order of values or replaced `STRUCT` field type with `RECORD`
-field type, we currently cannot suppress the recurring diff this causes.
-As a workaround, we recommend using the schema as returned by the API.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -527,17 +527,17 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A JSON schema for the table. Schema is required
-for CSV and JSON formats and is disallowed for Google Cloud
-Bigtable, Cloud Datastore backups, and Avro formats when using
-external tables. For more information see the
-[BigQuery API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource).
-~>**NOTE**: Because this field expects a JSON string, any changes to the
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
 string will create a diff, even if the JSON itself hasn't changed.
-If the API returns a different value for the same schema, e.g. it
-switched the order of values or replaced `STRUCT` field type with `RECORD`
-field type, we currently cannot suppress the recurring diff this causes.
-As a workaround, we recommend using the schema as returned by the API.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -714,17 +714,17 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A JSON schema for the table. Schema is required
-for CSV and JSON formats and is disallowed for Google Cloud
-Bigtable, Cloud Datastore backups, and Avro formats when using
-external tables. For more information see the
-[BigQuery API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource).
-~>**NOTE**: Because this field expects a JSON string, any changes to the
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
 string will create a diff, even if the JSON itself hasn't changed.
-If the API returns a different value for the same schema, e.g. it
-switched the order of values or replaced `STRUCT` field type with `RECORD`
-field type, we currently cannot suppress the recurring diff this causes.
-As a workaround, we recommend using the schema as returned by the API.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -812,7 +812,7 @@ descending priority order.
 <a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableencryptionconfiguration">Dict[Table<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
@@ -839,7 +839,7 @@ reclaimed.
 <a href="#external_data_configuration_python" style="color: inherit; text-decoration: inherit;">external_<wbr>data_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfiguration">Dict[Table<wbr>External<wbr>Data<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -864,7 +864,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of labels to assign to the resource.
 {{% /md %}}</dd>
@@ -887,7 +887,7 @@ is not provided, the provider project is used.
 <a href="#range_partitioning_python" style="color: inherit; text-decoration: inherit;">range_<wbr>partitioning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioning">Dict[Table<wbr>Range<wbr>Partitioning]</a></span>
+        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures range-based
 partitioning for this table. Structure is documented below.
@@ -901,17 +901,17 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A JSON schema for the table. Schema is required
-for CSV and JSON formats and is disallowed for Google Cloud
-Bigtable, Cloud Datastore backups, and Avro formats when using
-external tables. For more information see the
-[BigQuery API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource).
-~>**NOTE**: Because this field expects a JSON string, any changes to the
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
 string will create a diff, even if the JSON itself hasn't changed.
-If the API returns a different value for the same schema, e.g. it
-switched the order of values or replaced `STRUCT` field type with `RECORD`
-field type, we currently cannot suppress the recurring diff this causes.
-As a workaround, we recommend using the schema as returned by the API.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -920,7 +920,7 @@ As a workaround, we recommend using the schema as returned by the API.
 <a href="#time_partitioning_python" style="color: inherit; text-decoration: inherit;">time_<wbr>partitioning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletimepartitioning">Dict[Table<wbr>Time<wbr>Partitioning]</a></span>
+        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -932,7 +932,7 @@ partitioning for this table. Structure is documented below.
 <a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableview">Dict[Table<wbr>View]</a></span>
+        <span class="property-type"><a href="#tableview">Table<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a view.
 Structure is documented below.
@@ -1436,7 +1436,8 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>clusterings=None<span class="p">, </span>creation_time=None<span class="p">, </span>dataset_id=None<span class="p">, </span>description=None<span class="p">, </span>encryption_configuration=None<span class="p">, </span>etag=None<span class="p">, </span>expiration_time=None<span class="p">, </span>external_data_configuration=None<span class="p">, </span>friendly_name=None<span class="p">, </span>labels=None<span class="p">, </span>last_modified_time=None<span class="p">, </span>location=None<span class="p">, </span>num_bytes=None<span class="p">, </span>num_long_term_bytes=None<span class="p">, </span>num_rows=None<span class="p">, </span>project=None<span class="p">, </span>range_partitioning=None<span class="p">, </span>schema=None<span class="p">, </span>self_link=None<span class="p">, </span>table_id=None<span class="p">, </span>time_partitioning=None<span class="p">, </span>type=None<span class="p">, </span>view=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">num_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">num_long_term_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">num_rows</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1444,7 +1445,7 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Table.html">Table</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.TableState.html">TableState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Table.html">Table</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.TableState.html">TableState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1758,17 +1759,17 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A JSON schema for the table. Schema is required
-for CSV and JSON formats and is disallowed for Google Cloud
-Bigtable, Cloud Datastore backups, and Avro formats when using
-external tables. For more information see the
-[BigQuery API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource).
-~>**NOTE**: Because this field expects a JSON string, any changes to the
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
 string will create a diff, even if the JSON itself hasn't changed.
-If the API returns a different value for the same schema, e.g. it
-switched the order of values or replaced `STRUCT` field type with `RECORD`
-field type, we currently cannot suppress the recurring diff this causes.
-As a workaround, we recommend using the schema as returned by the API.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2045,17 +2046,17 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A JSON schema for the table. Schema is required
-for CSV and JSON formats and is disallowed for Google Cloud
-Bigtable, Cloud Datastore backups, and Avro formats when using
-external tables. For more information see the
-[BigQuery API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource).
-~>**NOTE**: Because this field expects a JSON string, any changes to the
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
 string will create a diff, even if the JSON itself hasn't changed.
-If the API returns a different value for the same schema, e.g. it
-switched the order of values or replaced `STRUCT` field type with `RECORD`
-field type, we currently cannot suppress the recurring diff this causes.
-As a workaround, we recommend using the schema as returned by the API.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2332,17 +2333,17 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A JSON schema for the table. Schema is required
-for CSV and JSON formats and is disallowed for Google Cloud
-Bigtable, Cloud Datastore backups, and Avro formats when using
-external tables. For more information see the
-[BigQuery API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource).
-~>**NOTE**: Because this field expects a JSON string, any changes to the
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
 string will create a diff, even if the JSON itself hasn't changed.
-If the API returns a different value for the same schema, e.g. it
-switched the order of values or replaced `STRUCT` field type with `RECORD`
-field type, we currently cannot suppress the recurring diff this causes.
-As a workaround, we recommend using the schema as returned by the API.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2464,7 +2465,7 @@ Changing this forces a new resource to be created.
 <a href="#state_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableencryptionconfiguration">Dict[Table<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
@@ -2502,7 +2503,7 @@ reclaimed.
 <a href="#state_external_data_configuration_python" style="color: inherit; text-decoration: inherit;">external_<wbr>data_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfiguration">Dict[Table<wbr>External<wbr>Data<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -2527,7 +2528,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of labels to assign to the resource.
 {{% /md %}}</dd>
@@ -2605,7 +2606,7 @@ is not provided, the provider project is used.
 <a href="#state_range_partitioning_python" style="color: inherit; text-decoration: inherit;">range_<wbr>partitioning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioning">Dict[Table<wbr>Range<wbr>Partitioning]</a></span>
+        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures range-based
 partitioning for this table. Structure is documented below.
@@ -2619,17 +2620,17 @@ partitioning for this table. Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A JSON schema for the table. Schema is required
-for CSV and JSON formats and is disallowed for Google Cloud
-Bigtable, Cloud Datastore backups, and Avro formats when using
-external tables. For more information see the
-[BigQuery API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#resource).
-~>**NOTE**: Because this field expects a JSON string, any changes to the
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
 string will create a diff, even if the JSON itself hasn't changed.
-If the API returns a different value for the same schema, e.g. it
-switched the order of values or replaced `STRUCT` field type with `RECORD`
-field type, we currently cannot suppress the recurring diff this causes.
-As a workaround, we recommend using the schema as returned by the API.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2661,7 +2662,7 @@ Changing this forces a new resource to be created.
 <a href="#state_time_partitioning_python" style="color: inherit; text-decoration: inherit;">time_<wbr>partitioning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletimepartitioning">Dict[Table<wbr>Time<wbr>Partitioning]</a></span>
+        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -2685,7 +2686,7 @@ one partition per day based on data loading time.
 <a href="#state_view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableview">Dict[Table<wbr>View]</a></span>
+        <span class="property-type"><a href="#tableview">Table<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a view.
 Structure is documented below.
@@ -2948,6 +2949,27 @@ The default value is false.
 BigQuery can ignore when reading data.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_csharp">
+<a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
+string will create a diff, even if the JSON itself hasn't changed.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3071,6 +3093,27 @@ The default value is false.
     </dt>
     <dd>{{% md %}}The maximum number of bad records that
 BigQuery can ignore when reading data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_go">
+<a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
+string will create a diff, even if the JSON itself hasn't changed.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
 {{% /md %}}</dd>
 
 </dl>
@@ -3198,6 +3241,27 @@ The default value is false.
 BigQuery can ignore when reading data.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_nodejs">
+<a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
+string will create a diff, even if the JSON itself hasn't changed.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3219,8 +3283,8 @@ and format of the table.
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceformat_python">
-<a href="#sourceformat_python" style="color: inherit; text-decoration: inherit;">source<wbr>Format</a>
+        <span id="source_format_python">
+<a href="#source_format_python" style="color: inherit; text-decoration: inherit;">source_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3234,8 +3298,8 @@ the `scopes` must include
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceuris_python">
-<a href="#sourceuris_python" style="color: inherit; text-decoration: inherit;">source<wbr>Uris</a>
+        <span id="source_uris_python">
+<a href="#source_uris_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3258,11 +3322,11 @@ Valid values are "NONE" or "GZIP".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="csvoptions_python">
-<a href="#csvoptions_python" style="color: inherit; text-decoration: inherit;">csv<wbr>Options</a>
+        <span id="csv_options_python">
+<a href="#csv_options_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Dict[Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options]</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if
 `source_format` is set to "CSV". Structure is documented below.
@@ -3270,11 +3334,11 @@ Valid values are "NONE" or "GZIP".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="googlesheetsoptions_python">
-<a href="#googlesheetsoptions_python" style="color: inherit; text-decoration: inherit;">google<wbr>Sheets<wbr>Options</a>
+        <span id="google_sheets_options_python">
+<a href="#google_sheets_options_python" style="color: inherit; text-decoration: inherit;">google_<wbr>sheets_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Dict[Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options]</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional options if
 `source_format` is set to "GOOGLE_SHEETS". Structure is
@@ -3283,11 +3347,11 @@ documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hivepartitioningoptions_python">
-<a href="#hivepartitioningoptions_python" style="color: inherit; text-decoration: inherit;">hive<wbr>Partitioning<wbr>Options</a>
+        <span id="hive_partitioning_options_python">
+<a href="#hive_partitioning_options_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>partitioning_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Dict[Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options]</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When set, configures hive partitioning
 support. Not all storage formats support hive partitioning -- requesting hive
@@ -3297,8 +3361,8 @@ an invalid specification.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignoreunknownvalues_python">
-<a href="#ignoreunknownvalues_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Unknown<wbr>Values</a>
+        <span id="ignore_unknown_values_python">
+<a href="#ignore_unknown_values_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>unknown_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3313,14 +3377,35 @@ The default value is false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxbadrecords_python">
-<a href="#maxbadrecords_python" style="color: inherit; text-decoration: inherit;">max<wbr>Bad<wbr>Records</a>
+        <span id="max_bad_records_python">
+<a href="#max_bad_records_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bad_<wbr>records</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of bad records that
 BigQuery can ignore when reading data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_python">
+<a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A JSON schema for the external table. Schema is required
+for CSV and JSON formats if autodetect is not on. Schema is disallowed
+for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats.
+~>**NOTE:** Because this field expects a JSON string, any changes to the
+string will create a diff, even if the JSON itself hasn't changed.
+Furthermore drift for this field cannot not be detected because BigQuery
+only uses this schema to compute the effective schema for the table, therefore
+any changes on the configured value will force the table to be recreated.
+This schema is effectively only applied when creating a table from an external
+datasource, after creation the computed schema will be stored in
+`google_bigquery_table.schema`
 {{% /md %}}</dd>
 
 </dl>
@@ -3622,8 +3707,8 @@ explicitly set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowjaggedrows_python">
-<a href="#allowjaggedrows_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Jagged<wbr>Rows</a>
+        <span id="allow_jagged_rows_python">
+<a href="#allow_jagged_rows_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>jagged_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3634,8 +3719,8 @@ that are missing trailing optional columns.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowquotednewlines_python">
-<a href="#allowquotednewlines_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Quoted<wbr>Newlines</a>
+        <span id="allow_quoted_newlines_python">
+<a href="#allow_quoted_newlines_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>quoted_<wbr>newlines</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3659,8 +3744,8 @@ values are UTF-8 or ISO-8859-1.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fielddelimiter_python">
-<a href="#fielddelimiter_python" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
+        <span id="field_delimiter_python">
+<a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3670,8 +3755,8 @@ values are UTF-8 or ISO-8859-1.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skipleadingrows_python">
-<a href="#skipleadingrows_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
+        <span id="skip_leading_rows_python">
+<a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3816,8 +3901,8 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skipleadingrows_python">
-<a href="#skipleadingrows_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
+        <span id="skip_leading_rows_python">
+<a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4001,8 +4086,8 @@ Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceuriprefix_python">
-<a href="#sourceuriprefix_python" style="color: inherit; text-decoration: inherit;">source<wbr>Uri<wbr>Prefix</a>
+        <span id="source_uri_prefix_python">
+<a href="#source_uri_prefix_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4153,7 +4238,7 @@ partition.
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioningrange">Dict[Table<wbr>Range<wbr>Partitioning<wbr>Range]</a></span>
+        <span class="property-type"><a href="#tablerangepartitioningrange">Table<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information required to partition based on ranges.
 Structure is documented below.
@@ -4544,8 +4629,8 @@ one partition per day based on data loading time.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expirationms_python">
-<a href="#expirationms_python" style="color: inherit; text-decoration: inherit;">expiration<wbr>Ms</a>
+        <span id="expiration_ms_python">
+<a href="#expiration_ms_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>ms</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4568,8 +4653,8 @@ partition.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requirepartitionfilter_python">
-<a href="#requirepartitionfilter_python" style="color: inherit; text-decoration: inherit;">require<wbr>Partition<wbr>Filter</a>
+        <span id="require_partition_filter_python">
+<a href="#require_partition_filter_python" style="color: inherit; text-decoration: inherit;">require_<wbr>partition_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4707,8 +4792,8 @@ The default value is true. If set to false, the view will use BigQuery's standar
 
     <dt class="property-optional"
             title="Optional">
-        <span id="uselegacysql_python">
-<a href="#uselegacysql_python" style="color: inherit; text-decoration: inherit;">use<wbr>Legacy<wbr>Sql</a>
+        <span id="use_legacy_sql_python">
+<a href="#use_legacy_sql_python" style="color: inherit; text-decoration: inherit;">use_<wbr>legacy_<wbr>sql</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4735,6 +4820,6 @@ The default value is true. If set to false, the view will use BigQuery's standar
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

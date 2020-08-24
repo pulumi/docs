@@ -21,6 +21,7 @@ Explore the resources and functions of the sql module in the GCP package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcacerts" title="GetCaCerts"><span class="symbol function"></span>GetCaCerts</a></li>
+    <li><a href="getdatabaseinstance" title="GetDatabaseInstance"><span class="symbol function"></span>GetDatabaseInstance</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,9 +31,9 @@ Explore the resources and functions of the sql module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
+	<dd>3.20.0</dd>
 </dl>
 
 

@@ -12,116 +12,6 @@ meta_desc: "Explore the Lien resource of the resourcemanager module, including e
 
 A Lien represents an encumbrance on the actions that can be performed on a resource.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Resource Manager Lien
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var project = new Gcp.Organizations.Project("project", new Gcp.Organizations.ProjectArgs
-        {
-            ProjectId = "staging-project",
-        });
-        var lien = new Gcp.ResourceManager.Lien("lien", new Gcp.ResourceManager.LienArgs
-        {
-            Origin = "machine-readable-explanation",
-            Parent = project.Number.Apply(number => $"projects/{number}"),
-            Reason = "This project is an important environment",
-            Restrictions = 
-            {
-                "resourcemanager.projects.delete",
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/resourcemanager"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		project, err := organizations.NewProject(ctx, "project", &organizations.ProjectArgs{
-			ProjectId: pulumi.String("staging-project"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = resourcemanager.NewLien(ctx, "lien", &resourcemanager.LienArgs{
-			Origin: pulumi.String("machine-readable-explanation"),
-			Parent: project.Number.ApplyT(func(number string) (string, error) {
-				return fmt.Sprintf("%v%v", "projects/", number), nil
-			}).(pulumi.StringOutput),
-			Reason: pulumi.String("This project is an important environment"),
-			Restrictions: pulumi.StringArray{
-				pulumi.String("resourcemanager.projects.delete"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-project = gcp.organizations.Project("project", project_id="staging-project")
-lien = gcp.resourcemanager.Lien("lien",
-    origin="machine-readable-explanation",
-    parent=project.number.apply(lambda number: f"projects/{number}"),
-    reason="This project is an important environment",
-    restrictions=["resourcemanager.projects.delete"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const project = new gcp.organizations.Project("project", {
-    projectId: "staging-project",
-});
-const lien = new gcp.resourcemanager.Lien("lien", {
-    origin: "machine-readable-explanation",
-    parent: pulumi.interpolate`projects/${project.number}`,
-    reason: "This project is an important environment",
-    restrictions: ["resourcemanager.projects.delete"],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Lien Resource {#create}
@@ -133,7 +23,7 @@ const lien = new gcp.resourcemanager.Lien("lien", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/resourcemanager/#Lien">Lien</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>origin=None<span class="p">, </span>parent=None<span class="p">, </span>reason=None<span class="p">, </span>restrictions=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/resourcemanager/#pulumi_gcp.resourcemanager.Lien">Lien</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">origin</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -728,7 +618,8 @@ Get an existing Lien resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_time=None<span class="p">, </span>name=None<span class="p">, </span>origin=None<span class="p">, </span>parent=None<span class="p">, </span>reason=None<span class="p">, </span>restrictions=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Lien</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -736,7 +627,7 @@ Get an existing Lien resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.Lien.html">Lien</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.LienState.html">LienState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.Lien.html">Lien</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.LienState.html">LienState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1187,6 +1078,6 @@ e.g. ['resourcemanager.projects.delete']
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -13,124 +13,6 @@ meta_desc: "Explore the GetGlobalAddress function of the compute module, includi
 Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
 the official [API](https://cloud.google.com/compute/docs/reference/latest/globalAddresses) documentation.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myAddress = Output.Create(Gcp.Compute.GetGlobalAddress.InvokeAsync(new Gcp.Compute.GetGlobalAddressArgs
-        {
-            Name = "foobar",
-        }));
-        var prod = new Gcp.Dns.ManagedZone("prod", new Gcp.Dns.ManagedZoneArgs
-        {
-            DnsName = "prod.mydomain.com.",
-        });
-        var frontend = new Gcp.Dns.RecordSet("frontend", new Gcp.Dns.RecordSetArgs
-        {
-            Type = "A",
-            Ttl = 300,
-            ManagedZone = prod.Name,
-            Rrdatas = 
-            {
-                myAddress.Apply(myAddress => myAddress.Address),
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		myAddress, err := compute.LookupGlobalAddress(ctx, &compute.LookupGlobalAddressArgs{
-			Name: "foobar",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		prod, err := dns.NewManagedZone(ctx, "prod", &dns.ManagedZoneArgs{
-			DnsName: pulumi.String("prod.mydomain.com."),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = dns.NewRecordSet(ctx, "frontend", &dns.RecordSetArgs{
-			Type:        pulumi.String("A"),
-			Ttl:         pulumi.Int(300),
-			ManagedZone: prod.Name,
-			Rrdatas: pulumi.StringArray{
-				pulumi.String(myAddress.Address),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_address = gcp.compute.get_global_address(name="foobar")
-prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
-frontend = gcp.dns.RecordSet("frontend",
-    type="A",
-    ttl=300,
-    managed_zone=prod.name,
-    rrdatas=[my_address.address])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const myAddress = gcp.compute.getGlobalAddress({
-    name: "foobar",
-});
-const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
-const frontend = new gcp.dns.RecordSet("frontend", {
-    type: "A",
-    ttl: 300,
-    managedZone: prod.name,
-    rrdatas: [myAddress.then(myAddress => myAddress.address)],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetGlobalAddress {#using}
@@ -144,7 +26,7 @@ const frontend = new gcp.dns.RecordSet("frontend", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_global_address(</span>name=None<span class="p">, </span>project=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_global_address(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGlobalAddressResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -599,6 +481,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

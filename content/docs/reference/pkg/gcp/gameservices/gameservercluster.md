@@ -29,7 +29,7 @@ To get more information about GameServerCluster, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/gameservices/#GameServerCluster">GameServerCluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>connection_info=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>realm_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/gameservices/#pulumi_gcp.gameservices.GameServerCluster">GameServerCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_info</span><span class="p">:</span> <span class="nx">Optional[GameServerClusterConnectionInfoArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -221,7 +221,8 @@ The GameServerCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Game server cluster connection information. This information is used to
-manage game server clusters.  Structure is documented below.
+manage game server clusters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -308,7 +309,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Game server cluster connection information. This information is used to
-manage game server clusters.  Structure is documented below.
+manage game server clusters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -395,7 +397,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Game server cluster connection information. This information is used to
-manage game server clusters.  Structure is documented below.
+manage game server clusters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -479,10 +482,11 @@ If it is not provided, the provider project is used.
 <a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverclusterconnectioninfo">Dict[Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Game server cluster connection information. This information is used to
-manage game server clusters.  Structure is documented below.
+manage game server clusters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -513,7 +517,7 @@ manage game server clusters.  Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this game server cluster. Each label is a
 key-value pair.
@@ -692,7 +696,8 @@ Get an existing GameServerCluster resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_id=None<span class="p">, </span>connection_info=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>realm_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_info</span><span class="p">:</span> <span class="nx">Optional[GameServerClusterConnectionInfoArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GameServerCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -700,7 +705,7 @@ Get an existing GameServerCluster resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerCluster.html">GameServerCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerClusterState.html">GameServerClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerCluster.html">GameServerCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerClusterState.html">GameServerClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -826,7 +831,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Game server cluster connection information. This information is used to
-manage game server clusters.  Structure is documented below.
+manage game server clusters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -926,7 +932,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Game server cluster connection information. This information is used to
-manage game server clusters.  Structure is documented below.
+manage game server clusters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1026,7 +1033,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Game server cluster connection information. This information is used to
-manage game server clusters.  Structure is documented below.
+manage game server clusters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1123,10 +1131,11 @@ If it is not provided, the provider project is used.
 <a href="#state_connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverclusterconnectioninfo">Dict[Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info]</a></span>
+        <span class="property-type"><a href="#gameserverclusterconnectioninfo">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Game server cluster connection information. This information is used to
-manage game server clusters.  Structure is documented below.
+manage game server clusters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1146,7 +1155,7 @@ manage game server clusters.  Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this game server cluster. Each label is a
 key-value pair.
@@ -1240,7 +1249,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.  Structure is documented below.
+    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1271,7 +1281,8 @@ during creation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.  Structure is documented below.
+    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1302,7 +1313,8 @@ during creation.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.  Structure is documented below.
+    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1327,13 +1339,14 @@ during creation.
 
     <dt class="property-required"
             title="Required">
-        <span id="gkeclusterreference_python">
-<a href="#gkeclusterreference_python" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster<wbr>Reference</a>
+        <span id="gke_cluster_reference_python">
+<a href="#gke_cluster_reference_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster_<wbr>reference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Dict[Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#gameserverclusterconnectioninfogkeclusterreference">Game<wbr>Server<wbr>Cluster<wbr>Connection<wbr>Info<wbr>Gke<wbr>Cluster<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.  Structure is documented below.
+    <dd>{{% md %}}Reference of the GKE cluster where the game servers are installed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1485,6 +1498,6 @@ GKE cluster.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

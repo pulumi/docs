@@ -19,96 +19,6 @@ To get more information about Subscription, see:
 * How-to Guides
     * [Managing Subscriptions](https://cloud.google.com/pubsub/docs/admin#managing_subscriptions)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Pubsub Subscription Different Project
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleTopic = new Gcp.PubSub.Topic("exampleTopic", new Gcp.PubSub.TopicArgs
-        {
-            Project = "topic-project",
-        });
-        var exampleSubscription = new Gcp.PubSub.Subscription("exampleSubscription", new Gcp.PubSub.SubscriptionArgs
-        {
-            Project = "subscription-project",
-            Topic = exampleTopic.Name,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleTopic, err := pubsub.NewTopic(ctx, "exampleTopic", &pubsub.TopicArgs{
-			Project: pulumi.String("topic-project"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = pubsub.NewSubscription(ctx, "exampleSubscription", &pubsub.SubscriptionArgs{
-			Project: pulumi.String("subscription-project"),
-			Topic:   exampleTopic.Name,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-example_topic = gcp.pubsub.Topic("exampleTopic", project="topic-project")
-example_subscription = gcp.pubsub.Subscription("exampleSubscription",
-    project="subscription-project",
-    topic=example_topic.name)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {project: "topic-project"});
-const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
-    project: "subscription-project",
-    topic: exampleTopic.name,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Subscription Resource {#create}
@@ -120,7 +30,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/pubsub/#Subscription">Subscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ack_deadline_seconds=None<span class="p">, </span>dead_letter_policy=None<span class="p">, </span>expiration_policy=None<span class="p">, </span>labels=None<span class="p">, </span>message_retention_duration=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>push_config=None<span class="p">, </span>retain_acked_messages=None<span class="p">, </span>topic=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/pubsub/#pulumi_gcp.pubsub.Subscription">Subscription</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionDeadLetterPolicyArgs]</span> = None<span class="p">, </span><span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionExpirationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[SubscriptionPushConfigArgs]</span> = None<span class="p">, </span><span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -342,7 +252,8 @@ is disabled.
 The Cloud Pub/Sub service account associated with this subscriptions's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -359,7 +270,22 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -424,7 +350,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -498,7 +425,8 @@ is disabled.
 The Cloud Pub/Sub service account associated with this subscriptions's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -515,7 +443,22 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -580,7 +523,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -654,7 +598,8 @@ is disabled.
 The Cloud Pub/Sub service account associated with this subscriptions's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -671,7 +616,22 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -736,7 +696,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -802,7 +763,7 @@ will eventually redeliver the message.
 <a href="#dead_letter_policy_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Dict[Subscription<wbr>Dead<wbr>Letter<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
@@ -810,7 +771,8 @@ is disabled.
 The Cloud Pub/Sub service account associated with this subscriptions's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -819,7 +781,7 @@ permission to Acknowledge() messages on this subscription.  Structure is documen
 <a href="#expiration_policy_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Dict[Subscription<wbr>Expiration<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
 A subscription is considered active as long as any connected subscriber
@@ -827,7 +789,22 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -836,7 +813,7 @@ is 1 day.  Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd>
@@ -888,11 +865,12 @@ If it is not provided, the provider project is used.
 <a href="#push_config_python" style="color: inherit; text-decoration: inherit;">push_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Dict[Subscription<wbr>Push<wbr>Config]</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1047,7 +1025,8 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>ack_deadline_seconds=None<span class="p">, </span>dead_letter_policy=None<span class="p">, </span>expiration_policy=None<span class="p">, </span>labels=None<span class="p">, </span>message_retention_duration=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>project=None<span class="p">, </span>push_config=None<span class="p">, </span>retain_acked_messages=None<span class="p">, </span>topic=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionDeadLetterPolicyArgs]</span> = None<span class="p">, </span><span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionExpirationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[SubscriptionPushConfigArgs]</span> = None<span class="p">, </span><span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subscription</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1055,7 +1034,7 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Subscription.html">Subscription</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.SubscriptionState.html">SubscriptionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Subscription.html">Subscription</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.SubscriptionState.html">SubscriptionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1200,7 +1179,8 @@ is disabled.
 The Cloud Pub/Sub service account associated with this subscriptions's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1217,7 +1197,22 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filter_csharp">
+<a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1292,7 +1287,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1366,7 +1362,8 @@ is disabled.
 The Cloud Pub/Sub service account associated with this subscriptions's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1383,7 +1380,22 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filter_go">
+<a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1458,7 +1470,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1532,7 +1545,8 @@ is disabled.
 The Cloud Pub/Sub service account associated with this subscriptions's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1549,7 +1563,22 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filter_nodejs">
+<a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1624,7 +1653,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1690,7 +1720,7 @@ will eventually redeliver the message.
 <a href="#state_dead_letter_policy_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Dict[Subscription<wbr>Dead<wbr>Letter<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
@@ -1698,7 +1728,8 @@ is disabled.
 The Cloud Pub/Sub service account associated with this subscriptions's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1707,7 +1738,7 @@ permission to Acknowledge() messages on this subscription.  Structure is documen
 <a href="#state_expiration_policy_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Dict[Subscription<wbr>Expiration<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
 A subscription is considered active as long as any connected subscriber
@@ -1715,7 +1746,22 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filter_python">
+<a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1724,7 +1770,7 @@ is 1 day.  Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd>
@@ -1786,11 +1832,12 @@ If it is not provided, the provider project is used.
 <a href="#state_push_config_python" style="color: inherit; text-decoration: inherit;">push_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Dict[Subscription<wbr>Push<wbr>Config]</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1861,7 +1908,7 @@ messageRetentionDuration window.
     </dt>
     <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
 Format is `projects/{project}/topics/{topic}`.
-The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+The Cloud Pub/Sub service account associated with the enclosing subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
 permission to Publish() to this topic.
@@ -1905,7 +1952,7 @@ If this parameter is 0, a default value of 5 is used.
     </dt>
     <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
 Format is `projects/{project}/topics/{topic}`.
-The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+The Cloud Pub/Sub service account associated with the enclosing subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
 permission to Publish() to this topic.
@@ -1949,7 +1996,7 @@ If this parameter is 0, a default value of 5 is used.
     </dt>
     <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
 Format is `projects/{project}/topics/{topic}`.
-The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+The Cloud Pub/Sub service account associated with the enclosing subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
 permission to Publish() to this topic.
@@ -1985,15 +2032,15 @@ If this parameter is 0, a default value of 5 is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlettertopic_python">
-<a href="#deadlettertopic_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Topic</a>
+        <span id="dead_letter_topic_python">
+<a href="#dead_letter_topic_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>topic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
 Format is `projects/{project}/topics/{topic}`.
-The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+The Cloud Pub/Sub service account associated with the enclosing subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
 permission to Publish() to this topic.
@@ -2004,8 +2051,8 @@ since messages published to a topic with no subscriptions are lost.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxdeliveryattempts_python">
-<a href="#maxdeliveryattempts_python" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Attempts</a>
+        <span id="max_delivery_attempts_python">
+<a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2201,7 +2248,8 @@ The possible values for this attribute are:
         <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
-an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+an Authorization header in the HTTP request for every pushed message.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2261,7 +2309,8 @@ The possible values for this attribute are:
         <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
-an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+an Authorization header in the HTTP request for every pushed message.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2321,7 +2370,8 @@ The possible values for this attribute are:
         <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
-an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+an Authorization header in the HTTP request for every pushed message.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2333,8 +2383,8 @@ an Authorization header in the HTTP request for every pushed message.  Structure
 
     <dt class="property-required"
             title="Required">
-        <span id="pushendpoint_python">
-<a href="#pushendpoint_python" style="color: inherit; text-decoration: inherit;">push<wbr>Endpoint</a>
+        <span id="push_endpoint_python">
+<a href="#push_endpoint_python" style="color: inherit; text-decoration: inherit;">push_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2350,7 +2400,7 @@ For example, a Webhook endpoint might use
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Endpoint configuration attributes.
 Every endpoint has a set of API supported attributes that can
@@ -2374,14 +2424,15 @@ The possible values for this attribute are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="oidctoken_python">
-<a href="#oidctoken_python" style="color: inherit; text-decoration: inherit;">oidc<wbr>Token</a>
+        <span id="oidc_token_python">
+<a href="#oidc_token_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Dict[Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token]</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
-an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+an Authorization header in the HTTP request for every pushed message.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2568,6 +2619,6 @@ Note: if not specified, the Push endpoint URL will be used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

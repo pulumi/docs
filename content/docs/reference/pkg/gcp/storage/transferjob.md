@@ -30,7 +30,7 @@ To get more information about Google Cloud Storage Transfer, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/storage/#TransferJob">TransferJob</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, </span>status=None<span class="p">, </span>transfer_spec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/storage/#pulumi_gcp.storage.TransferJob">TransferJob</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[TransferJobScheduleArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transfer_spec</span><span class="p">:</span> <span class="nx">Optional[TransferJobTransferSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -408,7 +408,7 @@ is not provided, the provider project is used.
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedule">Dict[Transfer<wbr>Job<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 {{% /md %}}</dd>
@@ -419,7 +419,7 @@ is not provided, the provider project is used.
 <a href="#transfer_spec_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspec">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
 {{% /md %}}</dd>
@@ -721,7 +721,8 @@ Get an existing TransferJob resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>creation_time=None<span class="p">, </span>deletion_time=None<span class="p">, </span>description=None<span class="p">, </span>last_modification_time=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>schedule=None<span class="p">, </span>status=None<span class="p">, </span>transfer_spec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_modification_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[TransferJobScheduleArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transfer_spec</span><span class="p">:</span> <span class="nx">Optional[TransferJobTransferSpecArgs]</span> = None<span class="p">) -&gt;</span> TransferJob</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -729,7 +730,7 @@ Get an existing TransferJob resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.TransferJob.html">TransferJob</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.TransferJobState.html">TransferJobState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.TransferJob.html">TransferJob</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.TransferJobState.html">TransferJobState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1229,7 +1230,7 @@ is not provided, the provider project is used.
 <a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedule">Dict[Transfer<wbr>Job<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 {{% /md %}}</dd>
@@ -1251,7 +1252,7 @@ is not provided, the provider project is used.
 <a href="#state_transfer_spec_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspec">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
 {{% /md %}}</dd>
@@ -1411,33 +1412,33 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span id="schedulestartdate_python">
-<a href="#schedulestartdate_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>Start<wbr>Date</a>
+        <span id="schedule_start_date_python">
+<a href="#schedule_start_date_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>start_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Dict[Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date]</a></span>
+        <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="scheduleenddate_python">
-<a href="#scheduleenddate_python" style="color: inherit; text-decoration: inherit;">schedule<wbr>End<wbr>Date</a>
+        <span id="schedule_end_date_python">
+<a href="#schedule_end_date_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>end_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Dict[Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date]</a></span>
+        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="starttimeofday_python">
-<a href="#starttimeofday_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Of<wbr>Day</a>
+        <span id="start_time_of_day_python">
+<a href="#start_time_of_day_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>of_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Dict[Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day]</a></span>
+        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
 {{% /md %}}</dd>
@@ -2266,66 +2267,66 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="awss3datasource_python">
-<a href="#awss3datasource_python" style="color: inherit; text-decoration: inherit;">aws<wbr>S3Data<wbr>Source</a>
+        <span id="aws_s3_data_source_python">
+<a href="#aws_s3_data_source_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>s3_<wbr>data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source]</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gcsdatasink_python">
-<a href="#gcsdatasink_python" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Sink</a>
+        <span id="gcs_data_sink_python">
+<a href="#gcs_data_sink_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>data_<wbr>sink</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink]</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data sink. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gcsdatasource_python">
-<a href="#gcsdatasource_python" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Source</a>
+        <span id="gcs_data_source_python">
+<a href="#gcs_data_source_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source]</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data source. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpdatasource_python">
-<a href="#httpdatasource_python" style="color: inherit; text-decoration: inherit;">http<wbr>Data<wbr>Source</a>
+        <span id="http_data_source_python">
+<a href="#http_data_source_python" style="color: inherit; text-decoration: inherit;">http_<wbr>data_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source]</a></span>
+        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="objectconditions_python">
-<a href="#objectconditions_python" style="color: inherit; text-decoration: inherit;">object<wbr>Conditions</a>
+        <span id="object_conditions_python">
+<a href="#object_conditions_python" style="color: inherit; text-decoration: inherit;">object_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions]</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transferoptions_python">
-<a href="#transferoptions_python" style="color: inherit; text-decoration: inherit;">transfer<wbr>Options</a>
+        <span id="transfer_options_python">
+<a href="#transfer_options_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options]</a></span>
+        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
 {{% /md %}}</dd>
@@ -2444,11 +2445,11 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span id="awsaccesskey_python">
-<a href="#awsaccesskey_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Access<wbr>Key</a>
+        <span id="aws_access_key_python">
+<a href="#aws_access_key_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key]</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS credentials block.
 {{% /md %}}</dd>
@@ -2578,8 +2579,8 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span id="accesskeyid_python">
-<a href="#accesskeyid_python" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
+        <span id="access_key_id_python">
+<a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2589,8 +2590,8 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span id="secretaccesskey_python">
-<a href="#secretaccesskey_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
+        <span id="secret_access_key_python">
+<a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2859,8 +2860,8 @@ is not provided, the provider project is used.
 
     <dt class="property-required"
             title="Required">
-        <span id="listurl_python">
-<a href="#listurl_python" style="color: inherit; text-decoration: inherit;">list<wbr>Url</a>
+        <span id="list_url_python">
+<a href="#list_url_python" style="color: inherit; text-decoration: inherit;">list_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3048,8 +3049,8 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="excludeprefixes_python">
-<a href="#excludeprefixes_python" style="color: inherit; text-decoration: inherit;">exclude<wbr>Prefixes</a>
+        <span id="exclude_prefixes_python">
+<a href="#exclude_prefixes_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3059,8 +3060,8 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includeprefixes_python">
-<a href="#includeprefixes_python" style="color: inherit; text-decoration: inherit;">include<wbr>Prefixes</a>
+        <span id="include_prefixes_python">
+<a href="#include_prefixes_python" style="color: inherit; text-decoration: inherit;">include_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3070,8 +3071,8 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtimeelapsedsincelastmodification_python">
-<a href="#maxtimeelapsedsincelastmodification_python" style="color: inherit; text-decoration: inherit;">max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
+        <span id="max_time_elapsed_since_last_modification_python">
+<a href="#max_time_elapsed_since_last_modification_python" style="color: inherit; text-decoration: inherit;">max_<wbr>time_<wbr>elapsed_<wbr>since_<wbr>last_<wbr>modification</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3081,8 +3082,8 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mintimeelapsedsincelastmodification_python">
-<a href="#mintimeelapsedsincelastmodification_python" style="color: inherit; text-decoration: inherit;">min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
+        <span id="min_time_elapsed_since_last_modification_python">
+<a href="#min_time_elapsed_since_last_modification_python" style="color: inherit; text-decoration: inherit;">min_<wbr>time_<wbr>elapsed_<wbr>since_<wbr>last_<wbr>modification</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3240,8 +3241,8 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteobjectsfromsourceaftertransfer_python">
-<a href="#deleteobjectsfromsourceaftertransfer_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</a>
+        <span id="delete_objects_from_source_after_transfer_python">
+<a href="#delete_objects_from_source_after_transfer_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>objects_<wbr>from_<wbr>source_<wbr>after_<wbr>transfer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3251,8 +3252,8 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteobjectsuniqueinsink_python">
-<a href="#deleteobjectsuniqueinsink_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</a>
+        <span id="delete_objects_unique_in_sink_python">
+<a href="#delete_objects_unique_in_sink_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>objects_<wbr>unique_<wbr>in_<wbr>sink</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3263,8 +3264,8 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overwriteobjectsalreadyexistinginsink_python">
-<a href="#overwriteobjectsalreadyexistinginsink_python" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</a>
+        <span id="overwrite_objects_already_existing_in_sink_python">
+<a href="#overwrite_objects_already_existing_in_sink_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>objects_<wbr>already_<wbr>existing_<wbr>in_<wbr>sink</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3290,6 +3291,6 @@ is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -21,162 +21,6 @@ To get more information about NetworkPeeringRoutesConfig, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc-peering)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Network Peering Routes Config Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var networkPrimary = new Gcp.Compute.Network("networkPrimary", new Gcp.Compute.NetworkArgs
-        {
-            AutoCreateSubnetworks = false,
-        });
-        var networkSecondary = new Gcp.Compute.Network("networkSecondary", new Gcp.Compute.NetworkArgs
-        {
-            AutoCreateSubnetworks = false,
-        });
-        var peeringPrimary = new Gcp.Compute.NetworkPeering("peeringPrimary", new Gcp.Compute.NetworkPeeringArgs
-        {
-            Network = networkPrimary.Id,
-            PeerNetwork = networkSecondary.Id,
-            ImportCustomRoutes = true,
-            ExportCustomRoutes = true,
-        });
-        var peeringPrimaryRoutes = new Gcp.Compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes", new Gcp.Compute.NetworkPeeringRoutesConfigArgs
-        {
-            Peering = peeringPrimary.Name,
-            Network = networkPrimary.Name,
-            ImportCustomRoutes = true,
-            ExportCustomRoutes = true,
-        });
-        var peeringSecondary = new Gcp.Compute.NetworkPeering("peeringSecondary", new Gcp.Compute.NetworkPeeringArgs
-        {
-            Network = networkSecondary.Id,
-            PeerNetwork = networkPrimary.Id,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		networkPrimary, err := compute.NewNetwork(ctx, "networkPrimary", &compute.NetworkArgs{
-			AutoCreateSubnetworks: pulumi.Bool(false),
-		})
-		if err != nil {
-			return err
-		}
-		networkSecondary, err := compute.NewNetwork(ctx, "networkSecondary", &compute.NetworkArgs{
-			AutoCreateSubnetworks: pulumi.Bool(false),
-		})
-		if err != nil {
-			return err
-		}
-		peeringPrimary, err := compute.NewNetworkPeering(ctx, "peeringPrimary", &compute.NetworkPeeringArgs{
-			Network:            networkPrimary.ID(),
-			PeerNetwork:        networkSecondary.ID(),
-			ImportCustomRoutes: pulumi.Bool(true),
-			ExportCustomRoutes: pulumi.Bool(true),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = compute.NewNetworkPeeringRoutesConfig(ctx, "peeringPrimaryRoutes", &compute.NetworkPeeringRoutesConfigArgs{
-			Peering:            peeringPrimary.Name,
-			Network:            networkPrimary.Name,
-			ImportCustomRoutes: pulumi.Bool(true),
-			ExportCustomRoutes: pulumi.Bool(true),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = compute.NewNetworkPeering(ctx, "peeringSecondary", &compute.NetworkPeeringArgs{
-			Network:     networkSecondary.ID(),
-			PeerNetwork: networkPrimary.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-network_primary = gcp.compute.Network("networkPrimary", auto_create_subnetworks="false")
-network_secondary = gcp.compute.Network("networkSecondary", auto_create_subnetworks="false")
-peering_primary = gcp.compute.NetworkPeering("peeringPrimary",
-    network=network_primary.id,
-    peer_network=network_secondary.id,
-    import_custom_routes=True,
-    export_custom_routes=True)
-peering_primary_routes = gcp.compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes",
-    peering=peering_primary.name,
-    network=network_primary.name,
-    import_custom_routes=True,
-    export_custom_routes=True)
-peering_secondary = gcp.compute.NetworkPeering("peeringSecondary",
-    network=network_secondary.id,
-    peer_network=network_primary.id)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const networkPrimary = new gcp.compute.Network("networkPrimary", {autoCreateSubnetworks: "false"});
-const networkSecondary = new gcp.compute.Network("networkSecondary", {autoCreateSubnetworks: "false"});
-const peeringPrimary = new gcp.compute.NetworkPeering("peeringPrimary", {
-    network: networkPrimary.id,
-    peerNetwork: networkSecondary.id,
-    importCustomRoutes: true,
-    exportCustomRoutes: true,
-});
-const peeringPrimaryRoutes = new gcp.compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes", {
-    peering: peeringPrimary.name,
-    network: networkPrimary.name,
-    importCustomRoutes: true,
-    exportCustomRoutes: true,
-});
-const peeringSecondary = new gcp.compute.NetworkPeering("peeringSecondary", {
-    network: networkSecondary.id,
-    peerNetwork: networkPrimary.id,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a NetworkPeeringRoutesConfig Resource {#create}
@@ -188,7 +32,7 @@ const peeringSecondary = new gcp.compute.NetworkPeering("peeringSecondary", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#NetworkPeeringRoutesConfig">NetworkPeeringRoutesConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>export_custom_routes=None<span class="p">, </span>import_custom_routes=None<span class="p">, </span>network=None<span class="p">, </span>peering=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.NetworkPeeringRoutesConfig">NetworkPeeringRoutesConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">export_custom_routes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">import_custom_routes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -703,7 +547,8 @@ Get an existing NetworkPeeringRoutesConfig resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>export_custom_routes=None<span class="p">, </span>import_custom_routes=None<span class="p">, </span>network=None<span class="p">, </span>peering=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">export_custom_routes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">import_custom_routes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NetworkPeeringRoutesConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -711,7 +556,7 @@ Get an existing NetworkPeeringRoutesConfig resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkPeeringRoutesConfig.html">NetworkPeeringRoutesConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkPeeringRoutesConfigState.html">NetworkPeeringRoutesConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkPeeringRoutesConfig.html">NetworkPeeringRoutesConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NetworkPeeringRoutesConfigState.html">NetworkPeeringRoutesConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1082,6 +927,6 @@ If it is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

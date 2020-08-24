@@ -14,93 +14,6 @@ The Google Cloud storage signed URL data source generates a signed URL for a giv
 
 For more info about signed URL's is available [here](https://cloud.google.com/storage/docs/access-control/signed-urls).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var artifact = Output.Create(Gcp.Storage.GetObjectSignedUrl.InvokeAsync(new Gcp.Storage.GetObjectSignedUrlArgs
-        {
-            Bucket = "install_binaries",
-            Path = "path/to/install_file.bin",
-        }));
-        var vm = new Gcp.Compute.Instance("vm", new Gcp.Compute.InstanceArgs
-        {
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storage.GetObjectSignedUrl(ctx, &storage.GetObjectSignedUrlArgs{
-			Bucket: "install_binaries",
-			Path:   "path/to/install_file.bin",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err = compute.NewInstance(ctx, "vm", nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-artifact = gcp.storage.get_object_signed_url(bucket="install_binaries",
-    path="path/to/install_file.bin")
-vm = gcp.compute.Instance("vm")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const artifact = pulumi.output(gcp.storage.getObjectSignedUrl({
-    bucket: "install_binaries",
-    path: "path/to/install_file.bin",
-}, { async: true }));
-const vm = new gcp.compute.Instance("vm", {});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetObjectSignedUrl {#using}
@@ -114,7 +27,7 @@ const vm = new gcp.compute.Instance("vm", {});
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_object_signed_url(</span>bucket=None<span class="p">, </span>content_md5=None<span class="p">, </span>content_type=None<span class="p">, </span>credentials=None<span class="p">, </span>duration=None<span class="p">, </span>extension_headers=None<span class="p">, </span>http_method=None<span class="p">, </span>path=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_object_signed_url(</span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_md5</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extension_headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetObjectSignedUrlResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -515,7 +428,7 @@ See [here](https://golang.org/pkg/time/#ParseDuration) for info on valid duratio
 <a href="#extension_headers_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}As needed. The server checks to make sure that the client provides matching values in requests using the signed URL.
 Any header starting with `x-goog-` is accepted but see the [Google Docs](https://cloud.google.com/storage/docs/xml-api/reference-headers) for list of headers that are supported by Google.
@@ -967,7 +880,7 @@ The following output properties are available:
 <a href="#extension_headers_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -999,6 +912,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

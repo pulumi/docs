@@ -17,482 +17,6 @@ Manages a Cloud Dataproc cluster resource within GCP. For more information see
 `labels`,`cluster_config.worker_config.num_instances` and `cluster_config.preemptible_worker_config.num_instances` are non-updatable. Changing others will cause recreation of the
 whole cluster!
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var simplecluster = new Gcp.Dataproc.Cluster("simplecluster", new Gcp.Dataproc.ClusterArgs
-        {
-            Region = "us-central1",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = dataproc.NewCluster(ctx, "simplecluster", &dataproc.ClusterArgs{
-			Region: pulumi.String("us-central1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-simplecluster = gcp.dataproc.Cluster("simplecluster", region="us-central1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const simplecluster = new gcp.dataproc.Cluster("simplecluster", {
-    region: "us-central1",
-});
-```
-
-{{% /example %}}
-
-### Advanced
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var mycluster = new Gcp.Dataproc.Cluster("mycluster", new Gcp.Dataproc.ClusterArgs
-        {
-            ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
-            {
-                GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
-                {
-                    ServiceAccountScopes = 
-                    {
-                        "https://www.googleapis.com/auth/monitoring",
-                        "useraccounts-ro",
-                        "storage-rw",
-                        "logging-write",
-                    },
-                    Tags = 
-                    {
-                        "foo",
-                        "bar",
-                    },
-                },
-                InitializationAction = 
-                {
-                    
-                    {
-                        { "script", "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh" },
-                        { "timeoutSec", 500 },
-                    },
-                },
-                MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
-                {
-                    DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs
-                    {
-                        BootDiskSizeGb = 15,
-                        BootDiskType = "pd-ssd",
-                    },
-                    MachineType = "n1-standard-1",
-                    NumInstances = 1,
-                },
-                PreemptibleWorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigArgs
-                {
-                    NumInstances = 0,
-                },
-                SoftwareConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigSoftwareConfigArgs
-                {
-                    ImageVersion = "1.3.7-deb9",
-                    OverrideProperties = 
-                    {
-                        { "dataproc:dataproc.allow.zero.workers", "true" },
-                    },
-                },
-                StagingBucket = "dataproc-staging-bucket",
-                WorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs
-                {
-                    DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs
-                    {
-                        BootDiskSizeGb = 15,
-                        NumLocalSsds = 1,
-                    },
-                    MachineType = "n1-standard-1",
-                    MinCpuPlatform = "Intel Skylake",
-                    NumInstances = 2,
-                },
-            },
-            Labels = 
-            {
-                { "foo", "bar" },
-            },
-            Region = "us-central1",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = dataproc.NewCluster(ctx, "mycluster", &dataproc.ClusterArgs{
-			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
-				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
-					ServiceAccountScopes: pulumi.StringArray{
-						pulumi.String("https://www.googleapis.com/auth/monitoring"),
-						pulumi.String("useraccounts-ro"),
-						pulumi.String("storage-rw"),
-						pulumi.String("logging-write"),
-					},
-					Tags: pulumi.StringArray{
-						pulumi.String("foo"),
-						pulumi.String("bar"),
-					},
-				},
-				InitializationAction: pulumi.MapArray{
-					pulumi.Map{
-						"script":     pulumi.String("gs://dataproc-initialization-actions/stackdriver/stackdriver.sh"),
-						"timeoutSec": pulumi.Float64(500),
-					},
-				},
-				MasterConfig: &dataproc.ClusterClusterConfigMasterConfigArgs{
-					DiskConfig: &dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs{
-						BootDiskSizeGb: pulumi.Int(15),
-						BootDiskType:   pulumi.String("pd-ssd"),
-					},
-					MachineType:  pulumi.String("n1-standard-1"),
-					NumInstances: pulumi.Int(1),
-				},
-				PreemptibleWorkerConfig: &dataproc.ClusterClusterConfigPreemptibleWorkerConfigArgs{
-					NumInstances: pulumi.Int(0),
-				},
-				SoftwareConfig: &dataproc.ClusterClusterConfigSoftwareConfigArgs{
-					ImageVersion: pulumi.String("1.3.7-deb9"),
-					OverrideProperties: pulumi.Map{
-						"dataproc:dataproc.allow.zero.workers": pulumi.String("true"),
-					},
-				},
-				StagingBucket: pulumi.String("dataproc-staging-bucket"),
-				WorkerConfig: &dataproc.ClusterClusterConfigWorkerConfigArgs{
-					DiskConfig: &dataproc.ClusterClusterConfigWorkerConfigDiskConfigArgs{
-						BootDiskSizeGb: pulumi.Int(15),
-						NumLocalSsds:   pulumi.Int(1),
-					},
-					MachineType:    pulumi.String("n1-standard-1"),
-					MinCpuPlatform: pulumi.String("Intel Skylake"),
-					NumInstances:   pulumi.Int(2),
-				},
-			},
-			Labels: pulumi.Map{
-				"foo": pulumi.String("bar"),
-			},
-			Region: pulumi.String("us-central1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-mycluster = gcp.dataproc.Cluster("mycluster",
-    cluster_config={
-        "gceClusterConfig": {
-            "serviceAccountScopes": [
-                "https://www.googleapis.com/auth/monitoring",
-                "useraccounts-ro",
-                "storage-rw",
-                "logging-write",
-            ],
-            "tags": [
-                "foo",
-                "bar",
-            ],
-        },
-        "initializationAction": [{
-            "script": "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
-            "timeout_sec": 500,
-        }],
-        "masterConfig": {
-            "diskConfig": {
-                "boot_disk_size_gb": 15,
-                "boot_disk_type": "pd-ssd",
-            },
-            "machine_type": "n1-standard-1",
-            "numInstances": 1,
-        },
-        "preemptibleWorkerConfig": {
-            "numInstances": 0,
-        },
-        "softwareConfig": {
-            "imageVersion": "1.3.7-deb9",
-            "overrideProperties": {
-                "dataproc:dataproc.allow.zero.workers": "true",
-            },
-        },
-        "stagingBucket": "dataproc-staging-bucket",
-        "worker_config": {
-            "diskConfig": {
-                "boot_disk_size_gb": 15,
-                "numLocalSsds": 1,
-            },
-            "machine_type": "n1-standard-1",
-            "min_cpu_platform": "Intel Skylake",
-            "numInstances": 2,
-        },
-    },
-    labels={
-        "foo": "bar",
-    },
-    region="us-central1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const mycluster = new gcp.dataproc.Cluster("mycluster", {
-    clusterConfig: {
-        gceClusterConfig: {
-            serviceAccountScopes: [
-                "https://www.googleapis.com/auth/monitoring",
-                "useraccounts-ro",
-                "storage-rw",
-                "logging-write",
-            ],
-            tags: [
-                "foo",
-                "bar",
-            ],
-        },
-        // You can define multiple initialization_action blocks
-        initializationActions: [{
-            script: "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
-            timeoutSec: 500,
-        }],
-        masterConfig: {
-            diskConfig: {
-                bootDiskSizeGb: 15,
-                bootDiskType: "pd-ssd",
-            },
-            machineType: "n1-standard-1",
-            numInstances: 1,
-        },
-        preemptibleWorkerConfig: {
-            numInstances: 0,
-        },
-        // Override or set some custom properties
-        softwareConfig: {
-            imageVersion: "1.3.7-deb9",
-            overrideProperties: {
-                "dataproc:dataproc.allow.zero.workers": "true",
-            },
-        },
-        stagingBucket: "dataproc-staging-bucket",
-        workerConfig: {
-            diskConfig: {
-                bootDiskSizeGb: 15,
-                numLocalSsds: 1,
-            },
-            machineType: "n1-standard-1",
-            minCpuPlatform: "Intel Skylake",
-            numInstances: 2,
-        },
-    },
-    labels: {
-        foo: "bar",
-    },
-    region: "us-central1",
-});
-```
-
-{{% /example %}}
-
-### Using A GPU Accelerator
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var acceleratedCluster = new Gcp.Dataproc.Cluster("acceleratedCluster", new Gcp.Dataproc.ClusterArgs
-        {
-            ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
-            {
-                GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
-                {
-                    Zone = "us-central1-a",
-                },
-                MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
-                {
-                    Accelerators = 
-                    {
-                        new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigAcceleratorArgs
-                        {
-                            AcceleratorCount = 1,
-                            AcceleratorType = "nvidia-tesla-k80",
-                        },
-                    },
-                },
-            },
-            Region = "us-central1",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = dataproc.NewCluster(ctx, "acceleratedCluster", &dataproc.ClusterArgs{
-			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
-				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
-					Zone: pulumi.String("us-central1-a"),
-				},
-				MasterConfig: &dataproc.ClusterClusterConfigMasterConfigArgs{
-					Accelerators: dataproc.ClusterClusterConfigMasterConfigAcceleratorArray{
-						&dataproc.ClusterClusterConfigMasterConfigAcceleratorArgs{
-							AcceleratorCount: pulumi.Int(1),
-							AcceleratorType:  pulumi.String("nvidia-tesla-k80"),
-						},
-					},
-				},
-			},
-			Region: pulumi.String("us-central1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-accelerated_cluster = gcp.dataproc.Cluster("acceleratedCluster",
-    cluster_config={
-        "gceClusterConfig": {
-            "zone": "us-central1-a",
-        },
-        "masterConfig": {
-            "accelerators": [{
-                "acceleratorCount": "1",
-                "accelerator_type": "nvidia-tesla-k80",
-            }],
-        },
-    },
-    region="us-central1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
-    clusterConfig: {
-        gceClusterConfig: {
-            zone: "us-central1-a",
-        },
-        masterConfig: {
-            accelerators: [{
-                acceleratorCount: 1,
-                acceleratorType: "nvidia-tesla-k80",
-            }],
-        },
-    },
-    region: "us-central1",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
@@ -504,7 +28,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataproc/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataproc/#pulumi_gcp.dataproc.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -886,7 +410,7 @@ Defaults to `global`.
 <a href="#cluster_config_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfig">Dict[Cluster<wbr>Cluster<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
@@ -898,7 +422,7 @@ Structure defined below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to be applied to
 instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
@@ -1039,7 +563,8 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1047,7 +572,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1363,7 +888,7 @@ Defaults to `global`.
 <a href="#state_cluster_config_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfig">Dict[Cluster<wbr>Cluster<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
@@ -1375,7 +900,7 @@ Structure defined below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to be applied to
 instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
@@ -1951,11 +1476,11 @@ in a cluster.. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalingconfig_python">
-<a href="#autoscalingconfig_python" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Config</a>
+        <span id="autoscaling_config_python">
+<a href="#autoscaling_config_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
 Structure defined below.
@@ -1973,11 +1498,11 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptionconfig_python">
-<a href="#encryptionconfig_python" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
+        <span id="encryption_config_python">
+<a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Customer managed encryption keys settings for the cluster.
 Structure defined below.
@@ -1985,11 +1510,11 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointconfig_python">
-<a href="#endpointconfig_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
+        <span id="endpoint_config_python">
+<a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config settings for port access on the cluster.
 Structure defined below.
@@ -1998,11 +1523,11 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="gceclusterconfig_python">
-<a href="#gceclusterconfig_python" style="color: inherit; text-decoration: inherit;">gce<wbr>Cluster<wbr>Config</a>
+        <span id="gce_cluster_config_python">
+<a href="#gce_cluster_config_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>cluster_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Common config settings for resources of Google Compute Engine cluster
 instances, applicable to all instances in the cluster. Structure defined below.
@@ -2010,11 +1535,11 @@ instances, applicable to all instances in the cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="initializationactions_python">
-<a href="#initializationactions_python" style="color: inherit; text-decoration: inherit;">initialization<wbr>Actions</a>
+        <span id="initialization_actions_python">
+<a href="#initialization_actions_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">List[Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">List[Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.
@@ -2022,11 +1547,11 @@ You can specify multiple versions of these. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lifecycleconfig_python">
-<a href="#lifecycleconfig_python" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Config</a>
+        <span id="lifecycle_config_python">
+<a href="#lifecycle_config_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for auto deletion cluster schedule.
 Structure defined below.
@@ -2034,11 +1559,11 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="masterconfig_python">
-<a href="#masterconfig_python" style="color: inherit; text-decoration: inherit;">master<wbr>Config</a>
+        <span id="master_config_python">
+<a href="#master_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
@@ -2046,11 +1571,11 @@ in a cluster.. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="preemptibleworkerconfig_python">
-<a href="#preemptibleworkerconfig_python" style="color: inherit; text-decoration: inherit;">preemptible<wbr>Worker<wbr>Config</a>
+        <span id="preemptible_worker_config_python">
+<a href="#preemptible_worker_config_python" style="color: inherit; text-decoration: inherit;">preemptible_<wbr>worker_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the additional (aka
 preemptible) instances in a cluster. Structure defined below.
@@ -2058,22 +1583,22 @@ preemptible) instances in a cluster. Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="securityconfig_python">
-<a href="#securityconfig_python" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
+        <span id="security_config_python">
+<a href="#security_config_python" style="color: inherit; text-decoration: inherit;">security_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Security related configuration. Structure defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="softwareconfig_python">
-<a href="#softwareconfig_python" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
+        <span id="software_config_python">
+<a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config settings for software inside the cluster.
 Structure defined below.
@@ -2081,8 +1606,8 @@ Structure defined below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stagingbucket_python">
-<a href="#stagingbucket_python" style="color: inherit; text-decoration: inherit;">staging<wbr>Bucket</a>
+        <span id="staging_bucket_python">
+<a href="#staging_bucket_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>bucket</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2102,7 +1627,7 @@ option.
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
 in a cluster.. Structure defined below.
@@ -2189,8 +1714,8 @@ in a cluster.. Structure defined below.
 
     <dt class="property-required"
             title="Required">
-        <span id="policyuri_python">
-<a href="#policyuri_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Uri</a>
+        <span id="policy_uri_python">
+<a href="#policy_uri_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2406,8 +1931,8 @@ on the cluster from external sources (aka Component Gateway). Defaults to false.
 
     <dt class="property-required"
             title="Required">
-        <span id="enablehttpportaccess_python">
-<a href="#enablehttpportaccess_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Http<wbr>Port<wbr>Access</a>
+        <span id="enable_http_port_access_python">
+<a href="#enable_http_port_access_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http_<wbr>port_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2418,11 +1943,11 @@ on the cluster from external sources (aka Component Gateway). Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpports_python">
-<a href="#httpports_python" style="color: inherit; text-decoration: inherit;">http<wbr>Ports</a>
+        <span id="http_ports_python">
+<a href="#http_ports_python" style="color: inherit; text-decoration: inherit;">http_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2798,8 +2323,8 @@ which computing resources are available for use with other configs such as
 
     <dt class="property-optional"
             title="Optional">
-        <span id="internaliponly_python">
-<a href="#internaliponly_python" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Only</a>
+        <span id="internal_ip_only_python">
+<a href="#internal_ip_only_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip_<wbr>only</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2817,7 +2342,7 @@ will be launched in.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the Compute Engine metadata entries to add to all instances
 (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
@@ -2838,8 +2363,20 @@ If neither is specified, this defaults to the "default" network.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceaccountscopes_python">
-<a href="#serviceaccountscopes_python" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Scopes</a>
+        <span id="service_account_python">
+<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service account to be used by the Node VMs.
+If not specified, the "default" service account is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_account_scopes_python">
+<a href="#service_account_scopes_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>scopes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2849,18 +2386,6 @@ to be made available on all of the node VMs under the `service_account`
 specified. These can be	either FQDNs, or scope aliases. The following scopes
 must be set if any other scopes are set. They're necessary to ensure the
 correct functioning ofthe cluster, and are set automatically by the API:
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="service_account_python">
-<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The service account to be used by the Node VMs.
-If not specified, the "default" service account is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3203,8 +2728,8 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autodeletetime_python">
-<a href="#autodeletetime_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>Time</a>
+        <span id="auto_delete_time_python">
+<a href="#auto_delete_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3216,8 +2741,8 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="idledeletettl_python">
-<a href="#idledeletettl_python" style="color: inherit; text-decoration: inherit;">idle<wbr>Delete<wbr>Ttl</a>
+        <span id="idle_delete_ttl_python">
+<a href="#idle_delete_ttl_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>delete_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3228,8 +2753,8 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="idlestarttime_python">
-<a href="#idlestarttime_python" style="color: inherit; text-decoration: inherit;">idle<wbr>Start<wbr>Time</a>
+        <span id="idle_start_time_python">
+<a href="#idle_start_time_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3537,26 +3062,26 @@ Defaults to 0.
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">List[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">List[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskconfig_python">
-<a href="#diskconfig_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
+        <span id="disk_config_python">
+<a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageuri_python">
-<a href="#imageuri_python" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
+        <span id="image_uri_python">
+<a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3567,8 +3092,8 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instancenames_python">
-<a href="#instancenames_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+        <span id="instance_names_python">
+<a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3604,8 +3129,8 @@ for details about which CPU families are available (and defaulted) for each zone
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numinstances_python">
-<a href="#numinstances_python" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
+        <span id="num_instances_python">
+<a href="#num_instances_python" style="color: inherit; text-decoration: inherit;">num_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3728,8 +3253,8 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span id="acceleratorcount_python">
-<a href="#acceleratorcount_python" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
+        <span id="accelerator_count_python">
+<a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3936,8 +3461,8 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numlocalssds_python">
-<a href="#numlocalssds_python" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
+        <span id="num_local_ssds_python">
+<a href="#num_local_ssds_python" style="color: inherit; text-decoration: inherit;">num_<wbr>local_<wbr>ssds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4093,19 +3618,19 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskconfig_python">
-<a href="#diskconfig_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
+        <span id="disk_config_python">
+<a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instancenames_python">
-<a href="#instancenames_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+        <span id="instance_names_python">
+<a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4114,8 +3639,8 @@ Defaults to 0.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numinstances_python">
-<a href="#numinstances_python" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
+        <span id="num_instances_python">
+<a href="#num_instances_python" style="color: inherit; text-decoration: inherit;">num_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4312,8 +3837,8 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numlocalssds_python">
-<a href="#numlocalssds_python" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
+        <span id="num_local_ssds_python">
+<a href="#num_local_ssds_python" style="color: inherit; text-decoration: inherit;">num_<wbr>local_<wbr>ssds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4403,11 +3928,11 @@ attached to each preemptible worker node. Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span id="kerberosconfig_python">
-<a href="#kerberosconfig_python" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
+        <span id="kerberos_config_python">
+<a href="#kerberos_config_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos Configuration
 {{% /md %}}</dd>
@@ -5003,8 +4528,8 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
     <dt class="property-required"
             title="Required">
-        <span id="kmskeyuri_python">
-<a href="#kmskeyuri_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Uri</a>
+        <span id="kms_key_uri_python">
+<a href="#kms_key_uri_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5014,8 +4539,8 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
     <dt class="property-required"
             title="Required">
-        <span id="rootprincipalpassworduri_python">
-<a href="#rootprincipalpassworduri_python" style="color: inherit; text-decoration: inherit;">root<wbr>Principal<wbr>Password<wbr>Uri</a>
+        <span id="root_principal_password_uri_python">
+<a href="#root_principal_password_uri_python" style="color: inherit; text-decoration: inherit;">root_<wbr>principal_<wbr>password_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5026,8 +4551,8 @@ containing the root principal password.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crossrealmtrustadminserver_python">
-<a href="#crossrealmtrustadminserver_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</a>
+        <span id="cross_realm_trust_admin_server_python">
+<a href="#cross_realm_trust_admin_server_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>admin_<wbr>server</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5038,8 +4563,8 @@ remote trusted realm in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crossrealmtrustkdc_python">
-<a href="#crossrealmtrustkdc_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Kdc</a>
+        <span id="cross_realm_trust_kdc_python">
+<a href="#cross_realm_trust_kdc_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>kdc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5050,8 +4575,8 @@ remote trusted realm in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crossrealmtrustrealm_python">
-<a href="#crossrealmtrustrealm_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Realm</a>
+        <span id="cross_realm_trust_realm_python">
+<a href="#cross_realm_trust_realm_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>realm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5062,8 +4587,8 @@ trust, should the user enable cross realm trust.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crossrealmtrustsharedpassworduri_python">
-<a href="#crossrealmtrustsharedpassworduri_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</a>
+        <span id="cross_realm_trust_shared_password_uri_python">
+<a href="#cross_realm_trust_shared_password_uri_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>shared_<wbr>password_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5075,8 +4600,8 @@ and the remote trusted realm, in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablekerberos_python">
-<a href="#enablekerberos_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Kerberos</a>
+        <span id="enable_kerberos_python">
+<a href="#enable_kerberos_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kerberos</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5086,8 +4611,8 @@ and the remote trusted realm, in a cross realm trust relationship.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kdcdbkeyuri_python">
-<a href="#kdcdbkeyuri_python" style="color: inherit; text-decoration: inherit;">kdc<wbr>Db<wbr>Key<wbr>Uri</a>
+        <span id="kdc_db_key_uri_python">
+<a href="#kdc_db_key_uri_python" style="color: inherit; text-decoration: inherit;">kdc_<wbr>db_<wbr>key_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5098,8 +4623,8 @@ the master key of the KDC database.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keypassworduri_python">
-<a href="#keypassworduri_python" style="color: inherit; text-decoration: inherit;">key<wbr>Password<wbr>Uri</a>
+        <span id="key_password_uri_python">
+<a href="#key_password_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>password_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5111,8 +4636,8 @@ is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keystorepassworduri_python">
-<a href="#keystorepassworduri_python" style="color: inherit; text-decoration: inherit;">keystore<wbr>Password<wbr>Uri</a>
+        <span id="keystore_password_uri_python">
+<a href="#keystore_password_uri_python" style="color: inherit; text-decoration: inherit;">keystore_<wbr>password_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5124,8 +4649,8 @@ is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keystoreuri_python">
-<a href="#keystoreuri_python" style="color: inherit; text-decoration: inherit;">keystore<wbr>Uri</a>
+        <span id="keystore_uri_python">
+<a href="#keystore_uri_python" style="color: inherit; text-decoration: inherit;">keystore_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5148,8 +4673,8 @@ uppercased domain of hostnames will be the realm.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tgtlifetimehours_python">
-<a href="#tgtlifetimehours_python" style="color: inherit; text-decoration: inherit;">tgt<wbr>Lifetime<wbr>Hours</a>
+        <span id="tgt_lifetime_hours_python">
+<a href="#tgt_lifetime_hours_python" style="color: inherit; text-decoration: inherit;">tgt_<wbr>lifetime_<wbr>hours</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5159,8 +4684,8 @@ uppercased domain of hostnames will be the realm.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="truststorepassworduri_python">
-<a href="#truststorepassworduri_python" style="color: inherit; text-decoration: inherit;">truststore<wbr>Password<wbr>Uri</a>
+        <span id="truststore_password_uri_python">
+<a href="#truststore_password_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>password_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5172,8 +4697,8 @@ certificate, this password is generated by Dataproc.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="truststoreuri_python">
-<a href="#truststoreuri_python" style="color: inherit; text-decoration: inherit;">truststore<wbr>Uri</a>
+        <span id="truststore_uri_python">
+<a href="#truststore_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5416,8 +4941,8 @@ a cluster. For a list of valid properties please see
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageversion_python">
-<a href="#imageversion_python" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
+        <span id="image_version_python">
+<a href="#image_version_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5431,8 +4956,8 @@ latest version. For a list of valid versions see
 
     <dt class="property-optional"
             title="Optional">
-        <span id="optionalcomponents_python">
-<a href="#optionalcomponents_python" style="color: inherit; text-decoration: inherit;">optional<wbr>Components</a>
+        <span id="optional_components_python">
+<a href="#optional_components_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>components</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5454,11 +4979,11 @@ Accepted values are:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overrideproperties_python">
-<a href="#overrideproperties_python" style="color: inherit; text-decoration: inherit;">override<wbr>Properties</a>
+        <span id="override_properties_python">
+<a href="#override_properties_python" style="color: inherit; text-decoration: inherit;">override_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of override and additional properties (key/value pairs)
 used to modify various aspects of the common configuration files used when creating
@@ -5472,7 +4997,7 @@ a cluster. For a list of valid properties please see
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5777,26 +5302,26 @@ Defaults to 0.
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">List[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">List[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskconfig_python">
-<a href="#diskconfig_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
+        <span id="disk_config_python">
+<a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageuri_python">
-<a href="#imageuri_python" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
+        <span id="image_uri_python">
+<a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5807,8 +5332,8 @@ for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instancenames_python">
-<a href="#instancenames_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
+        <span id="instance_names_python">
+<a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5844,8 +5369,8 @@ for details about which CPU families are available (and defaulted) for each zone
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numinstances_python">
-<a href="#numinstances_python" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
+        <span id="num_instances_python">
+<a href="#num_instances_python" style="color: inherit; text-decoration: inherit;">num_<wbr>instances</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5968,8 +5493,8 @@ Defaults to 0.
 
     <dt class="property-required"
             title="Required">
-        <span id="acceleratorcount_python">
-<a href="#acceleratorcount_python" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
+        <span id="accelerator_count_python">
+<a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6176,8 +5701,8 @@ One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numlocalssds_python">
-<a href="#numlocalssds_python" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
+        <span id="num_local_ssds_python">
+<a href="#num_local_ssds_python" style="color: inherit; text-decoration: inherit;">num_<wbr>local_<wbr>ssds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6204,6 +5729,6 @@ attached to each preemptible worker node. Defaults to 0.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

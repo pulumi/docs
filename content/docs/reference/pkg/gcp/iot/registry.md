@@ -18,74 +18,6 @@ To get more information about DeviceRegistry, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/iot/docs/)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Cloudiot Device Registry Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var test_registry = new Gcp.Iot.Registry("test-registry", new Gcp.Iot.RegistryArgs
-        {
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iot"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = iot.NewRegistry(ctx, "test-registry", nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-test_registry = gcp.iot.Registry("test-registry")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const test_registry = new gcp.iot.Registry("test-registry", {});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Registry Resource {#create}
@@ -97,7 +29,7 @@ const test_registry = new gcp.iot.Registry("test-registry", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/iot/#Registry">Registry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>credentials=None<span class="p">, </span>event_notification_configs=None<span class="p">, </span>http_config=None<span class="p">, </span>log_level=None<span class="p">, </span>mqtt_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>state_notification_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/iot/#pulumi_gcp.iot.Registry">Registry</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[List[RegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[List[RegistryEventNotificationConfigItemArgs]]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[RegistryHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[RegistryMqttConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[RegistryStateNotificationConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -290,7 +222,8 @@ The structure is documented below.
         <span class="property-type"><a href="#registryeventnotificationconfigitem">List&lt;Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.  Structure is documented below.
+to publish device events to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -318,6 +251,8 @@ registry. Specifies which events should be written to logs. For
 example, if the LogLevel is ERROR, only events that terminate in
 errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
+Default value is `NONE`.
+Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -407,7 +342,8 @@ The structure is documented below.
         <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.  Structure is documented below.
+to publish device events to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -435,6 +371,8 @@ registry. Specifies which events should be written to logs. For
 example, if the LogLevel is ERROR, only events that terminate in
 errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
+Default value is `NONE`.
+Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -524,7 +462,8 @@ The structure is documented below.
         <span class="property-type"><a href="#registryeventnotificationconfigitem">Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.  Structure is documented below.
+to publish device events to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -552,6 +491,8 @@ registry. Specifies which events should be written to logs. For
 example, if the LogLevel is ERROR, only events that terminate in
 errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
+Default value is `NONE`.
+Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -626,7 +567,7 @@ The structure is documented below.
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredential">List[Registry<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#registrycredential">List[Registry<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
@@ -638,10 +579,11 @@ The structure is documented below.
 <a href="#event_notification_configs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>notification_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryeventnotificationconfigitem">List[Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item]</a></span>
+        <span class="property-type"><a href="#registryeventnotificationconfigitem">List[Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.  Structure is documented below.
+to publish device events to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -650,7 +592,7 @@ to publish device events to.  Structure is documented below.
 <a href="#http_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryhttpconfig">Dict[Registry<wbr>Http<wbr>Config]</a></span>
+        <span class="property-type"><a href="#registryhttpconfig">Registry<wbr>Http<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
@@ -669,6 +611,8 @@ registry. Specifies which events should be written to logs. For
 example, if the LogLevel is ERROR, only events that terminate in
 errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
+Default value is `NONE`.
+Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -677,7 +621,7 @@ will also enable ERROR logging.
 <a href="#mqtt_config_python" style="color: inherit; text-decoration: inherit;">mqtt_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrymqttconfig">Dict[Registry<wbr>Mqtt<wbr>Config]</a></span>
+        <span class="property-type"><a href="#registrymqttconfig">Registry<wbr>Mqtt<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
@@ -724,7 +668,7 @@ If it is not provided, the provider region is used.
 <a href="#state_notification_config_python" style="color: inherit; text-decoration: inherit;">state_<wbr>notification_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrystatenotificationconfig">Dict[Registry<wbr>State<wbr>Notification<wbr>Config]</a></span>
+        <span class="property-type"><a href="#registrystatenotificationconfig">Registry<wbr>State<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
@@ -828,7 +772,8 @@ Get an existing Registry resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>credentials=None<span class="p">, </span>event_notification_configs=None<span class="p">, </span>http_config=None<span class="p">, </span>log_level=None<span class="p">, </span>mqtt_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>state_notification_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">credentials</span><span class="p">:</span> <span class="nx">Optional[List[RegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">event_notification_configs</span><span class="p">:</span> <span class="nx">Optional[List[RegistryEventNotificationConfigItemArgs]]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[RegistryHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mqtt_config</span><span class="p">:</span> <span class="nx">Optional[RegistryMqttConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_notification_config</span><span class="p">:</span> <span class="nx">Optional[RegistryStateNotificationConfigArgs]</span> = None<span class="p">) -&gt;</span> Registry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -836,7 +781,7 @@ Get an existing Registry resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Registry.html">Registry</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.RegistryState.html">RegistryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.Registry.html">Registry</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iot.RegistryState.html">RegistryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -963,7 +908,8 @@ The structure is documented below.
         <span class="property-type"><a href="#registryeventnotificationconfigitem">List&lt;Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.  Structure is documented below.
+to publish device events to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -991,6 +937,8 @@ registry. Specifies which events should be written to logs. For
 example, if the LogLevel is ERROR, only events that terminate in
 errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
+Default value is `NONE`.
+Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1080,7 +1028,8 @@ The structure is documented below.
         <span class="property-type"><a href="#registryeventnotificationconfigitem">[]Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.  Structure is documented below.
+to publish device events to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1108,6 +1057,8 @@ registry. Specifies which events should be written to logs. For
 example, if the LogLevel is ERROR, only events that terminate in
 errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
+Default value is `NONE`.
+Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1197,7 +1148,8 @@ The structure is documented below.
         <span class="property-type"><a href="#registryeventnotificationconfigitem">Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.  Structure is documented below.
+to publish device events to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1225,6 +1177,8 @@ registry. Specifies which events should be written to logs. For
 example, if the LogLevel is ERROR, only events that terminate in
 errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
+Default value is `NONE`.
+Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1299,7 +1253,7 @@ The structure is documented below.
 <a href="#state_credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredential">List[Registry<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#registrycredential">List[Registry<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
@@ -1311,10 +1265,11 @@ The structure is documented below.
 <a href="#state_event_notification_configs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>notification_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryeventnotificationconfigitem">List[Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item]</a></span>
+        <span class="property-type"><a href="#registryeventnotificationconfigitem">List[Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
-to publish device events to.  Structure is documented below.
+to publish device events to.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1323,7 +1278,7 @@ to publish device events to.  Structure is documented below.
 <a href="#state_http_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryhttpconfig">Dict[Registry<wbr>Http<wbr>Config]</a></span>
+        <span class="property-type"><a href="#registryhttpconfig">Registry<wbr>Http<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
@@ -1342,6 +1297,8 @@ registry. Specifies which events should be written to logs. For
 example, if the LogLevel is ERROR, only events that terminate in
 errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
+Default value is `NONE`.
+Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1350,7 +1307,7 @@ will also enable ERROR logging.
 <a href="#state_mqtt_config_python" style="color: inherit; text-decoration: inherit;">mqtt_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrymqttconfig">Dict[Registry<wbr>Mqtt<wbr>Config]</a></span>
+        <span class="property-type"><a href="#registrymqttconfig">Registry<wbr>Mqtt<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
@@ -1397,7 +1354,7 @@ If it is not provided, the provider region is used.
 <a href="#state_state_notification_config_python" style="color: inherit; text-decoration: inherit;">state_<wbr>notification_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrystatenotificationconfig">Dict[Registry<wbr>State<wbr>Notification<wbr>Config]</a></span>
+        <span class="property-type"><a href="#registrystatenotificationconfig">Registry<wbr>State<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
@@ -1492,11 +1449,11 @@ The structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="publickeycertificate_python">
-<a href="#publickeycertificate_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Certificate</a>
+        <span id="public_key_certificate_python">
+<a href="#public_key_certificate_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrycredentialpublickeycertificate">Dict[Registry<wbr>Credential<wbr>Public<wbr>Key<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#registrycredentialpublickeycertificate">Registry<wbr>Credential<wbr>Public<wbr>Key<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A public key certificate format and data.
 {{% /md %}}</dd>
@@ -1772,8 +1729,8 @@ item.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="subfoldermatches_python">
-<a href="#subfoldermatches_python" style="color: inherit; text-decoration: inherit;">subfolder<wbr>Matches</a>
+        <span id="subfolder_matches_python">
+<a href="#subfolder_matches_python" style="color: inherit; text-decoration: inherit;">subfolder_<wbr>matches</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2073,6 +2030,6 @@ item.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -23,323 +23,6 @@ To get more information about Entry, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Data Catalog Entry Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var entryGroup = new Gcp.DataCatalog.EntryGroup("entryGroup", new Gcp.DataCatalog.EntryGroupArgs
-        {
-            EntryGroupId = "my_group",
-        });
-        var basicEntry = new Gcp.DataCatalog.Entry("basicEntry", new Gcp.DataCatalog.EntryArgs
-        {
-            EntryGroup = entryGroup.Id,
-            EntryId = "my_entry",
-            UserSpecifiedType = "my_custom_type",
-            UserSpecifiedSystem = "SomethingExternal",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		entryGroup, err := datacatalog.NewEntryGroup(ctx, "entryGroup", &datacatalog.EntryGroupArgs{
-			EntryGroupId: pulumi.String("my_group"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = datacatalog.NewEntry(ctx, "basicEntry", &datacatalog.EntryArgs{
-			EntryGroup:          entryGroup.ID(),
-			EntryId:             pulumi.String("my_entry"),
-			UserSpecifiedType:   pulumi.String("my_custom_type"),
-			UserSpecifiedSystem: pulumi.String("SomethingExternal"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-entry_group = gcp.datacatalog.EntryGroup("entryGroup", entry_group_id="my_group")
-basic_entry = gcp.datacatalog.Entry("basicEntry",
-    entry_group=entry_group.id,
-    entry_id="my_entry",
-    user_specified_type="my_custom_type",
-    user_specified_system="SomethingExternal")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const entryGroup = new gcp.datacatalog.EntryGroup("entryGroup", {entryGroupId: "my_group"});
-const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
-    entryGroup: entryGroup.id,
-    entryId: "my_entry",
-    userSpecifiedType: "my_custom_type",
-    userSpecifiedSystem: "SomethingExternal",
-});
-```
-
-{{% /example %}}
-
-### Data Catalog Entry Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var entryGroup = new Gcp.DataCatalog.EntryGroup("entryGroup", new Gcp.DataCatalog.EntryGroupArgs
-        {
-            EntryGroupId = "my_group",
-        });
-        var basicEntry = new Gcp.DataCatalog.Entry("basicEntry", new Gcp.DataCatalog.EntryArgs
-        {
-            EntryGroup = entryGroup.Id,
-            EntryId = "my_entry",
-            UserSpecifiedType = "my_user_specified_type",
-            UserSpecifiedSystem = "Something_custom",
-            LinkedResource = "my/linked/resource",
-            DisplayName = "my custom type entry",
-            Description = "a custom type entry for a user specified system",
-            Schema = @"{
-  ""columns"": [
-    {
-      ""column"": ""first_name"",
-      ""description"": ""First name"",
-      ""mode"": ""REQUIRED"",
-      ""type"": ""STRING""
-    },
-    {
-      ""column"": ""last_name"",
-      ""description"": ""Last name"",
-      ""mode"": ""REQUIRED"",
-      ""type"": ""STRING""
-    },
-    {
-      ""column"": ""address"",
-      ""description"": ""Address"",
-      ""mode"": ""REPEATED"",
-      ""subcolumns"": [
-        {
-          ""column"": ""city"",
-          ""description"": ""City"",
-          ""mode"": ""NULLABLE"",
-          ""type"": ""STRING""
-        },
-        {
-          ""column"": ""state"",
-          ""description"": ""State"",
-          ""mode"": ""NULLABLE"",
-          ""type"": ""STRING""
-        }
-      ],
-      ""type"": ""RECORD""
-    }
-  ]
-}
-",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		entryGroup, err := datacatalog.NewEntryGroup(ctx, "entryGroup", &datacatalog.EntryGroupArgs{
-			EntryGroupId: pulumi.String("my_group"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = datacatalog.NewEntry(ctx, "basicEntry", &datacatalog.EntryArgs{
-			EntryGroup:          entryGroup.ID(),
-			EntryId:             pulumi.String("my_entry"),
-			UserSpecifiedType:   pulumi.String("my_user_specified_type"),
-			UserSpecifiedSystem: pulumi.String("Something_custom"),
-			LinkedResource:      pulumi.String("my/linked/resource"),
-			DisplayName:         pulumi.String("my custom type entry"),
-			Description:         pulumi.String("a custom type entry for a user specified system"),
-			Schema:              pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"columns\": [\n", "    {\n", "      \"column\": \"first_name\",\n", "      \"description\": \"First name\",\n", "      \"mode\": \"REQUIRED\",\n", "      \"type\": \"STRING\"\n", "    },\n", "    {\n", "      \"column\": \"last_name\",\n", "      \"description\": \"Last name\",\n", "      \"mode\": \"REQUIRED\",\n", "      \"type\": \"STRING\"\n", "    },\n", "    {\n", "      \"column\": \"address\",\n", "      \"description\": \"Address\",\n", "      \"mode\": \"REPEATED\",\n", "      \"subcolumns\": [\n", "        {\n", "          \"column\": \"city\",\n", "          \"description\": \"City\",\n", "          \"mode\": \"NULLABLE\",\n", "          \"type\": \"STRING\"\n", "        },\n", "        {\n", "          \"column\": \"state\",\n", "          \"description\": \"State\",\n", "          \"mode\": \"NULLABLE\",\n", "          \"type\": \"STRING\"\n", "        }\n", "      ],\n", "      \"type\": \"RECORD\"\n", "    }\n", "  ]\n", "}\n")),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-entry_group = gcp.datacatalog.EntryGroup("entryGroup", entry_group_id="my_group")
-basic_entry = gcp.datacatalog.Entry("basicEntry",
-    entry_group=entry_group.id,
-    entry_id="my_entry",
-    user_specified_type="my_user_specified_type",
-    user_specified_system="Something_custom",
-    linked_resource="my/linked/resource",
-    display_name="my custom type entry",
-    description="a custom type entry for a user specified system",
-    schema="""{
-  "columns": [
-    {
-      "column": "first_name",
-      "description": "First name",
-      "mode": "REQUIRED",
-      "type": "STRING"
-    },
-    {
-      "column": "last_name",
-      "description": "Last name",
-      "mode": "REQUIRED",
-      "type": "STRING"
-    },
-    {
-      "column": "address",
-      "description": "Address",
-      "mode": "REPEATED",
-      "subcolumns": [
-        {
-          "column": "city",
-          "description": "City",
-          "mode": "NULLABLE",
-          "type": "STRING"
-        },
-        {
-          "column": "state",
-          "description": "State",
-          "mode": "NULLABLE",
-          "type": "STRING"
-        }
-      ],
-      "type": "RECORD"
-    }
-  ]
-}
-""")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const entryGroup = new gcp.datacatalog.EntryGroup("entryGroup", {entryGroupId: "my_group"});
-const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
-    entryGroup: entryGroup.id,
-    entryId: "my_entry",
-    userSpecifiedType: "my_user_specified_type",
-    userSpecifiedSystem: "Something_custom",
-    linkedResource: "my/linked/resource",
-    displayName: "my custom type entry",
-    description: "a custom type entry for a user specified system",
-    schema: `{
-  "columns": [
-    {
-      "column": "first_name",
-      "description": "First name",
-      "mode": "REQUIRED",
-      "type": "STRING"
-    },
-    {
-      "column": "last_name",
-      "description": "Last name",
-      "mode": "REQUIRED",
-      "type": "STRING"
-    },
-    {
-      "column": "address",
-      "description": "Address",
-      "mode": "REPEATED",
-      "subcolumns": [
-        {
-          "column": "city",
-          "description": "City",
-          "mode": "NULLABLE",
-          "type": "STRING"
-        },
-        {
-          "column": "state",
-          "description": "State",
-          "mode": "NULLABLE",
-          "type": "STRING"
-        }
-      ],
-      "type": "RECORD"
-    }
-  ]
-}
-`,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Entry Resource {#create}
@@ -351,7 +34,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datacatalog/#Entry">Entry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>entry_group=None<span class="p">, </span>entry_id=None<span class="p">, </span>gcs_fileset_spec=None<span class="p">, </span>linked_resource=None<span class="p">, </span>schema=None<span class="p">, </span>type=None<span class="p">, </span>user_specified_system=None<span class="p">, </span>user_specified_type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datacatalog/#pulumi_gcp.datacatalog.Entry">Entry</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gcs_fileset_spec</span><span class="p">:</span> <span class="nx">Optional[EntryGcsFilesetSpecArgs]</span> = None<span class="p">, </span><span class="nx">linked_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -576,7 +259,8 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.  Structure is documented below.
+    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -619,6 +303,7 @@ for what fields this schema can contain.
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
+Possible values are `FILESET`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -709,7 +394,8 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.  Structure is documented below.
+    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -752,6 +438,7 @@ for what fields this schema can contain.
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
+Possible values are `FILESET`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -842,7 +529,8 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.  Structure is documented below.
+    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -885,6 +573,7 @@ for what fields this schema can contain.
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
+Possible values are `FILESET`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -973,9 +662,10 @@ for example, "Analytics Data - Jan 2011".
 <a href="#gcs_fileset_spec_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>fileset_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspec">Dict[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.  Structure is documented below.
+    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1018,6 +708,7 @@ for what fields this schema can contain.
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
+Possible values are `FILESET`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1264,7 +955,7 @@ child resources may not actually be stored in the location in this name.
 <a href="#bigquery_date_sharded_spec_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>date_<wbr>sharded_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Dict[Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -1276,7 +967,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 <a href="#bigquery_table_spec_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Dict[Entry<wbr>Bigquery<wbr>Table<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd>
@@ -1334,7 +1025,8 @@ Get an existing Entry resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bigquery_date_sharded_spec=None<span class="p">, </span>bigquery_table_spec=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>entry_group=None<span class="p">, </span>entry_id=None<span class="p">, </span>gcs_fileset_spec=None<span class="p">, </span>integrated_system=None<span class="p">, </span>linked_resource=None<span class="p">, </span>name=None<span class="p">, </span>schema=None<span class="p">, </span>type=None<span class="p">, </span>user_specified_system=None<span class="p">, </span>user_specified_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bigquery_date_sharded_spec</span><span class="p">:</span> <span class="nx">Optional[EntryBigqueryDateShardedSpecArgs]</span> = None<span class="p">, </span><span class="nx">bigquery_table_spec</span><span class="p">:</span> <span class="nx">Optional[EntryBigqueryTableSpecArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gcs_fileset_spec</span><span class="p">:</span> <span class="nx">Optional[EntryGcsFilesetSpecArgs]</span> = None<span class="p">, </span><span class="nx">integrated_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">linked_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_specified_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Entry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1342,7 +1034,7 @@ Get an existing Entry resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Entry.html">Entry</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.EntryState.html">EntryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Entry.html">Entry</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.EntryState.html">EntryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1524,7 +1216,8 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.  Structure is documented below.
+    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1591,6 +1284,7 @@ for what fields this schema can contain.
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
+Possible values are `FILESET`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1704,7 +1398,8 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.  Structure is documented below.
+    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1771,6 +1466,7 @@ for what fields this schema can contain.
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
+Possible values are `FILESET`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1884,7 +1580,8 @@ for example, "Analytics Data - Jan 2011".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.  Structure is documented below.
+    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1951,6 +1648,7 @@ for what fields this schema can contain.
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
+Possible values are `FILESET`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1994,7 +1692,7 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 <a href="#state_bigquery_date_sharded_spec_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>date_<wbr>sharded_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerydateshardedspec">Dict[Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#entrybigquerydateshardedspec">Entry<wbr>Bigquery<wbr>Date<wbr>Sharded<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification for a group of BigQuery tables with name pattern [prefix]YYYYMMDD. Context:
 https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
@@ -2006,7 +1704,7 @@ https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sh
 <a href="#state_bigquery_table_spec_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>table_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespec">Dict[Entry<wbr>Bigquery<wbr>Table<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
 {{% /md %}}</dd>
@@ -2062,9 +1760,10 @@ for example, "Analytics Data - Jan 2011".
 <a href="#state_gcs_fileset_spec_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>fileset_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspec">Dict[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.  Structure is documented below.
+    <dd>{{% md %}}Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2131,6 +1830,7 @@ for what fields this schema can contain.
     </dt>
     <dd>{{% md %}}The type of the entry. Only used for Entries with types in the EntryType enum.
 Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType.
+Possible values are `FILESET`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2317,8 +2017,8 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="shardcount_python">
-<a href="#shardcount_python" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
+        <span id="shard_count_python">
+<a href="#shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2327,8 +2027,8 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tableprefix_python">
-<a href="#tableprefix_python" style="color: inherit; text-decoration: inherit;">table<wbr>Prefix</a>
+        <span id="table_prefix_python">
+<a href="#table_prefix_python" style="color: inherit; text-decoration: inherit;">table_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2473,8 +2173,8 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablesourcetype_python">
-<a href="#tablesourcetype_python" style="color: inherit; text-decoration: inherit;">table<wbr>Source<wbr>Type</a>
+        <span id="table_source_type_python">
+<a href="#table_source_type_python" style="color: inherit; text-decoration: inherit;">table_<wbr>source_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2483,21 +2183,21 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tablespec_python">
-<a href="#tablespec_python" style="color: inherit; text-decoration: inherit;">table<wbr>Spec</a>
+        <span id="table_spec_python">
+<a href="#table_spec_python" style="color: inherit; text-decoration: inherit;">table_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespectablespec">Dict[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespectablespec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>Table<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="viewspec_python">
-<a href="#viewspec_python" style="color: inherit; text-decoration: inherit;">view<wbr>Spec</a>
+        <span id="view_spec_python">
+<a href="#view_spec_python" style="color: inherit; text-decoration: inherit;">view_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Dict[Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#entrybigquerytablespecviewspec">Entry<wbr>Bigquery<wbr>Table<wbr>Spec<wbr>View<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2579,8 +2279,8 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupedentry_python">
-<a href="#groupedentry_python" style="color: inherit; text-decoration: inherit;">grouped<wbr>Entry</a>
+        <span id="grouped_entry_python">
+<a href="#grouped_entry_python" style="color: inherit; text-decoration: inherit;">grouped_<wbr>entry</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2665,8 +2365,8 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="viewquery_python">
-<a href="#viewquery_python" style="color: inherit; text-decoration: inherit;">view<wbr>Query</a>
+        <span id="view_query_python">
+<a href="#view_query_python" style="color: inherit; text-decoration: inherit;">view_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2728,7 +2428,8 @@ for more information. Note that bucket wildcards are currently not supported. Ex
         <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">List&lt;Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}-
-Sample files contained in this fileset, not all files contained in this fileset are represented here.  Structure is documented below.
+Sample files contained in this fileset, not all files contained in this fileset are represented here.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2768,7 +2469,8 @@ for more information. Note that bucket wildcards are currently not supported. Ex
         <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">[]Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}-
-Sample files contained in this fileset, not all files contained in this fileset are represented here.  Structure is documented below.
+Sample files contained in this fileset, not all files contained in this fileset are represented here.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2808,7 +2510,8 @@ for more information. Note that bucket wildcards are currently not supported. Ex
         <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}-
-Sample files contained in this fileset, not all files contained in this fileset are represented here.  Structure is documented below.
+Sample files contained in this fileset, not all files contained in this fileset are represented here.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2820,8 +2523,8 @@ Sample files contained in this fileset, not all files contained in this fileset 
 
     <dt class="property-required"
             title="Required">
-        <span id="filepatterns_python">
-<a href="#filepatterns_python" style="color: inherit; text-decoration: inherit;">file<wbr>Patterns</a>
+        <span id="file_patterns_python">
+<a href="#file_patterns_python" style="color: inherit; text-decoration: inherit;">file_<wbr>patterns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2841,14 +2544,15 @@ for more information. Note that bucket wildcards are currently not supported. Ex
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samplegcsfilespecs_python">
-<a href="#samplegcsfilespecs_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Gcs<wbr>File<wbr>Specs</a>
+        <span id="sample_gcs_file_specs_python">
+<a href="#sample_gcs_file_specs_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>gcs_<wbr>file_<wbr>specs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">List[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#entrygcsfilesetspecsamplegcsfilespec">List[Entry<wbr>Gcs<wbr>Fileset<wbr>Spec<wbr>Sample<wbr>Gcs<wbr>File<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}-
-Sample files contained in this fileset, not all files contained in this fileset are represented here.  Structure is documented below.
+Sample files contained in this fileset, not all files contained in this fileset are represented here.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2971,8 +2675,8 @@ The size of the file, in bytes.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="filepath_python">
-<a href="#filepath_python" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
+        <span id="file_path_python">
+<a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2983,8 +2687,8 @@ The full file path
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sizebytes_python">
-<a href="#sizebytes_python" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
+        <span id="size_bytes_python">
+<a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3011,6 +2715,6 @@ The size of the file, in bytes.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

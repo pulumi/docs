@@ -20,93 +20,6 @@ To get more information about ForwardingRule, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/network/forwarding-rules)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Forwarding Rule Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var defaultTargetPool = new Gcp.Compute.TargetPool("defaultTargetPool", new Gcp.Compute.TargetPoolArgs
-        {
-        });
-        var defaultForwardingRule = new Gcp.Compute.ForwardingRule("defaultForwardingRule", new Gcp.Compute.ForwardingRuleArgs
-        {
-            Target = defaultTargetPool.Id,
-            PortRange = "80",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		defaultTargetPool, err := compute.NewTargetPool(ctx, "defaultTargetPool", nil)
-		if err != nil {
-			return err
-		}
-		_, err = compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
-			Target:    defaultTargetPool.ID(),
-			PortRange: pulumi.String("80"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default_target_pool = gcp.compute.TargetPool("defaultTargetPool")
-default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
-    target=default_target_pool.id,
-    port_range="80")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {});
-const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
-    target: defaultTargetPool.id,
-    portRange: "80",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a ForwardingRule Resource {#create}
@@ -118,7 +31,7 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#ForwardingRule">ForwardingRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>all_ports=None<span class="p">, </span>allow_global_access=None<span class="p">, </span>backend_service=None<span class="p">, </span>description=None<span class="p">, </span>ip_address=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>is_mirroring_collector=None<span class="p">, </span>labels=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_tier=None<span class="p">, </span>port_range=None<span class="p">, </span>ports=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>service_label=None<span class="p">, </span>subnetwork=None<span class="p">, </span>target=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.ForwardingRule">ForwardingRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_global_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_mirroring_collector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -364,7 +277,7 @@ When the load balancing scheme is INTERNAL, this can only be an RFC
 forwarding rule. By default, if this field is empty, an ephemeral
 internal IP address will be automatically allocated from the IP range
 of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
+An address must be specified by a literal IP address. > **NOTE:** While
 the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
@@ -382,6 +295,7 @@ or unnecessary diffs.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -426,6 +340,8 @@ and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
 INTERNAL is used for protocol forwarding to VMs from an internal IP address,
 and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -469,6 +385,7 @@ This field is only used for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -668,7 +585,7 @@ When the load balancing scheme is INTERNAL, this can only be an RFC
 forwarding rule. By default, if this field is empty, an ephemeral
 internal IP address will be automatically allocated from the IP range
 of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
+An address must be specified by a literal IP address. > **NOTE:** While
 the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
@@ -686,6 +603,7 @@ or unnecessary diffs.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -730,6 +648,8 @@ and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
 INTERNAL is used for protocol forwarding to VMs from an internal IP address,
 and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -773,6 +693,7 @@ This field is only used for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -972,7 +893,7 @@ When the load balancing scheme is INTERNAL, this can only be an RFC
 forwarding rule. By default, if this field is empty, an ephemeral
 internal IP address will be automatically allocated from the IP range
 of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
+An address must be specified by a literal IP address. > **NOTE:** While
 the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
@@ -990,6 +911,7 @@ or unnecessary diffs.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1034,6 +956,8 @@ and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
 INTERNAL is used for protocol forwarding to VMs from an internal IP address,
 and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1077,6 +1001,7 @@ This field is only used for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1276,7 +1201,7 @@ When the load balancing scheme is INTERNAL, this can only be an RFC
 forwarding rule. By default, if this field is empty, an ephemeral
 internal IP address will be automatically allocated from the IP range
 of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
+An address must be specified by a literal IP address. > **NOTE:** While
 the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
@@ -1294,6 +1219,7 @@ or unnecessary diffs.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1318,7 +1244,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
@@ -1338,6 +1264,8 @@ and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
 INTERNAL is used for protocol forwarding to VMs from an internal IP address,
 and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1381,6 +1309,7 @@ This field is only used for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1773,7 +1702,8 @@ Get an existing ForwardingRule resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>all_ports=None<span class="p">, </span>allow_global_access=None<span class="p">, </span>backend_service=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>ip_address=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>is_mirroring_collector=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>labels=None<span class="p">, </span>load_balancing_scheme=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>network_tier=None<span class="p">, </span>port_range=None<span class="p">, </span>ports=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>service_label=None<span class="p">, </span>service_name=None<span class="p">, </span>subnetwork=None<span class="p">, </span>target=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_global_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_mirroring_collector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ForwardingRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1781,7 +1711,7 @@ Get an existing ForwardingRule resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ForwardingRule.html">ForwardingRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ForwardingRuleState.html">ForwardingRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ForwardingRule.html">ForwardingRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ForwardingRuleState.html">ForwardingRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1972,7 +1902,7 @@ When the load balancing scheme is INTERNAL, this can only be an RFC
 forwarding rule. By default, if this field is empty, an ephemeral
 internal IP address will be automatically allocated from the IP range
 of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
+An address must be specified by a literal IP address. > **NOTE:** While
 the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
@@ -1990,6 +1920,7 @@ or unnecessary diffs.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2045,6 +1976,8 @@ and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
 INTERNAL is used for protocol forwarding to VMs from an internal IP address,
 and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2088,6 +2021,7 @@ This field is only used for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2320,7 +2254,7 @@ When the load balancing scheme is INTERNAL, this can only be an RFC
 forwarding rule. By default, if this field is empty, an ephemeral
 internal IP address will be automatically allocated from the IP range
 of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
+An address must be specified by a literal IP address. > **NOTE:** While
 the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
@@ -2338,6 +2272,7 @@ or unnecessary diffs.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2393,6 +2328,8 @@ and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
 INTERNAL is used for protocol forwarding to VMs from an internal IP address,
 and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2436,6 +2373,7 @@ This field is only used for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2668,7 +2606,7 @@ When the load balancing scheme is INTERNAL, this can only be an RFC
 forwarding rule. By default, if this field is empty, an ephemeral
 internal IP address will be automatically allocated from the IP range
 of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
+An address must be specified by a literal IP address. > **NOTE:** While
 the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
@@ -2686,6 +2624,7 @@ or unnecessary diffs.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2741,6 +2680,8 @@ and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
 INTERNAL is used for protocol forwarding to VMs from an internal IP address,
 and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2784,6 +2725,7 @@ This field is only used for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3016,7 +2958,7 @@ When the load balancing scheme is INTERNAL, this can only be an RFC
 forwarding rule. By default, if this field is empty, an ephemeral
 internal IP address will be automatically allocated from the IP range
 of the subnet or network configured for this forwarding rule.
-An address must be specified by a literal IP address. > **NOTE**: While
+An address must be specified by a literal IP address. > **NOTE:** While
 the API allows you to specify various resource paths for an address resource
 instead, this provider requires this to specifically be an IP address to
 avoid needing to fetching the IP address from resource paths on refresh
@@ -3034,6 +2976,7 @@ or unnecessary diffs.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3069,7 +3012,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd>
@@ -3089,6 +3032,8 @@ and HTTP(S), SSL Proxy, TCP Proxy, and Network TCP/UDP load balancers.
 INTERNAL is used for protocol forwarding to VMs from an internal IP address,
 and internal TCP/UDP load balancers.
 INTERNAL_MANAGED is used for internal HTTP(S) load balancers.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3132,6 +3077,7 @@ This field is only used for INTERNAL load balancing.
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
+Possible values are `PREMIUM` and `STANDARD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3292,6 +3238,6 @@ object.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 
