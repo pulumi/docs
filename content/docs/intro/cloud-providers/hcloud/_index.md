@@ -81,7 +81,7 @@ using Pulumi.HCloud;
 class Program
 {
     static Task Main() =>
-        Deployment.Run(() => {
+        Deployment.RunAsync(() => {
             var network = new Network("demo-network", new NetworkArgs
             {
                 IpRange = "10.0.1.0/24",
