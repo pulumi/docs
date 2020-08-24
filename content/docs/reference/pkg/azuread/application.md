@@ -274,81 +274,81 @@ import pulumi
 import pulumi_azuread as azuread
 
 example = azuread.Application("example",
-    app_roles=[{
-        "allowedMemberTypes": [
+    app_roles=[azuread.ApplicationAppRoleArgs(
+        allowed_member_types=[
             "User",
             "Application",
         ],
-        "description": "Admins can manage roles and perform all task actions",
-        "display_name": "Admin",
-        "isEnabled": True,
-        "value": "Admin",
-    }],
+        description="Admins can manage roles and perform all task actions",
+        display_name="Admin",
+        is_enabled=True,
+        value="Admin",
+    )],
     available_to_other_tenants=False,
     homepage="https://homepage",
     identifier_uris=["https://uri"],
     oauth2_allow_implicit_flow=True,
     oauth2_permissions=[
-        {
-            "adminConsentDescription": "Allow the application to access example on behalf of the signed-in user.",
-            "adminConsentDisplayName": "Access example",
-            "isEnabled": True,
-            "type": "User",
-            "userConsentDescription": "Allow the application to access example on your behalf.",
-            "userConsentDisplayName": "Access example",
-            "value": "user_impersonation",
-        },
-        {
-            "adminConsentDescription": "Administer the example application",
-            "adminConsentDisplayName": "Administer",
-            "isEnabled": True,
-            "type": "Admin",
-            "value": "administer",
-        },
+        azuread.ApplicationOauth2PermissionArgs(
+            admin_consent_description="Allow the application to access example on behalf of the signed-in user.",
+            admin_consent_display_name="Access example",
+            is_enabled=True,
+            type="User",
+            user_consent_description="Allow the application to access example on your behalf.",
+            user_consent_display_name="Access example",
+            value="user_impersonation",
+        ),
+        azuread.ApplicationOauth2PermissionArgs(
+            admin_consent_description="Administer the example application",
+            admin_consent_display_name="Administer",
+            is_enabled=True,
+            type="Admin",
+            value="administer",
+        ),
     ],
-    optional_claims={
-        "accessTokens": [
-            {
-                "name": "myclaim",
-            },
-            {
-                "name": "otherclaim",
-            },
+    optional_claims=azuread.ApplicationOptionalClaimsArgs(
+        access_tokens=[
+            azuread.ApplicationOptionalClaimsAccessTokenArgs(
+                name="myclaim",
+            ),
+            azuread.ApplicationOptionalClaimsAccessTokenArgs(
+                name="otherclaim",
+            ),
         ],
-        "idTokens": [{
-            "additionalProperties": ["emit_as_roles"],
-            "essential": True,
-            "name": "userclaim",
-            "source": "user",
-        }],
-    },
+        id_tokens=[azuread.ApplicationOptionalClaimsIdTokenArgs(
+            additional_properties=["emit_as_roles"],
+            essential=True,
+            name="userclaim",
+            source="user",
+        )],
+    ),
     owners=["00000004-0000-0000-c000-000000000000"],
     reply_urls=["https://replyurl"],
     required_resource_accesses=[
-        {
-            "resourceAccesses": [
-                {
-                    "id": "...",
-                    "type": "Role",
-                },
-                {
-                    "id": "...",
-                    "type": "Scope",
-                },
-                {
-                    "id": "...",
-                    "type": "Scope",
-                },
+        azuread.ApplicationRequiredResourceAccessArgs(
+            resource_accesses=[
+                azuread.ApplicationRequiredResourceAccessResourceAccessArgs(
+                    id="...",
+                    type="Role",
+                ),
+                azuread.ApplicationRequiredResourceAccessResourceAccessArgs(
+                    id="...",
+                    type="Scope",
+                ),
+                azuread.ApplicationRequiredResourceAccessResourceAccessArgs(
+                    id="...",
+                    type="Scope",
+                ),
             ],
-            "resourceAppId": "00000003-0000-0000-c000-000000000000",
-        },
-        {
-            "resourceAccesses": [{
-                "id": "...",
-                "type": "Scope",
-            }],
-            "resourceAppId": "00000002-0000-0000-c000-000000000000",
-        },
+            resource_app_id="00000003-0000-0000-c000-000000000000",
+        ),
+        azuread.ApplicationRequiredResourceAccessArgs(
+            resource_accesses=[azuread.ApplicationRequiredResourceAccessResourceAccessArgs(
+                id="...",
+                type="Scope",
+            )],
+            resource_app_id="00000002-0000-0000-c000-000000000000",
+        ),
     ],
     type="webapp/api")
 ```
@@ -456,7 +456,7 @@ const example = new azuread.Application("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.Application">Application</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_roles=None<span class="p">, </span>available_to_other_tenants=None<span class="p">, </span>group_membership_claims=None<span class="p">, </span>homepage=None<span class="p">, </span>identifier_uris=None<span class="p">, </span>logout_url=None<span class="p">, </span>name=None<span class="p">, </span>oauth2_allow_implicit_flow=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>optional_claims=None<span class="p">, </span>owners=None<span class="p">, </span>prevent_duplicate_names=None<span class="p">, </span>public_client=None<span class="p">, </span>reply_urls=None<span class="p">, </span>required_resource_accesses=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.Application">Application</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_roles</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationAppRoleArgs]]</span> = None<span class="p">, </span><span class="nx">available_to_other_tenants</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_membership_claims</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">homepage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier_uris</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_allow_implicit_flow</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[ApplicationOptionalClaimsArgs]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">prevent_duplicate_names</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">public_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reply_urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">required_resource_accesses</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationRequiredResourceAccessArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1183,7 +1183,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#app_roles_python" style="color: inherit; text-decoration: inherit;">app_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapprole">List[Application<wbr>App<wbr>Role]</a></span>
+        <span class="property-type"><a href="#applicationapprole">List[Application<wbr>App<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
@@ -1271,7 +1271,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoauth2permission">List[Application<wbr>Oauth2Permission]</a></span>
+        <span class="property-type"><a href="#applicationoauth2permission">List[Application<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below.
 {{% /md %}}</dd>
@@ -1282,7 +1282,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#optional_claims_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>claims</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaims">Dict[Application<wbr>Optional<wbr>Claims]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
@@ -1337,7 +1337,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#required_resource_accesses_python" style="color: inherit; text-decoration: inherit;">required_<wbr>resource_<wbr>accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccess">List[Application<wbr>Required<wbr>Resource<wbr>Access]</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccess">List[Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
@@ -1539,7 +1539,8 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_roles=None<span class="p">, </span>application_id=None<span class="p">, </span>available_to_other_tenants=None<span class="p">, </span>group_membership_claims=None<span class="p">, </span>homepage=None<span class="p">, </span>identifier_uris=None<span class="p">, </span>logout_url=None<span class="p">, </span>name=None<span class="p">, </span>oauth2_allow_implicit_flow=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>object_id=None<span class="p">, </span>optional_claims=None<span class="p">, </span>owners=None<span class="p">, </span>prevent_duplicate_names=None<span class="p">, </span>public_client=None<span class="p">, </span>reply_urls=None<span class="p">, </span>required_resource_accesses=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_roles</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationAppRoleArgs]]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">available_to_other_tenants</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">group_membership_claims</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">homepage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier_uris</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_allow_implicit_flow</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[ApplicationOptionalClaimsArgs]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">prevent_duplicate_names</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">public_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reply_urls</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">required_resource_accesses</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationRequiredResourceAccessArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1547,7 +1548,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD..ApplicationState.html">ApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD..ApplicationState.html">ApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2274,7 +2275,7 @@ The following state arguments are supported:
 <a href="#state_app_roles_python" style="color: inherit; text-decoration: inherit;">app_<wbr>roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapprole">List[Application<wbr>App<wbr>Role]</a></span>
+        <span class="property-type"><a href="#applicationapprole">List[Application<wbr>App<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
@@ -2373,7 +2374,7 @@ The following state arguments are supported:
 <a href="#state_oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoauth2permission">List[Application<wbr>Oauth2Permission]</a></span>
+        <span class="property-type"><a href="#applicationoauth2permission">List[Application<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below.
 {{% /md %}}</dd>
@@ -2395,7 +2396,7 @@ The following state arguments are supported:
 <a href="#state_optional_claims_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>claims</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaims">Dict[Application<wbr>Optional<wbr>Claims]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
@@ -2450,7 +2451,7 @@ The following state arguments are supported:
 <a href="#state_required_resource_accesses_python" style="color: inherit; text-decoration: inherit;">required_<wbr>resource_<wbr>accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccess">List[Application<wbr>Required<wbr>Resource<wbr>Access]</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccess">List[Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
@@ -2720,8 +2721,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedmembertypes_python">
-<a href="#allowedmembertypes_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Member<wbr>Types</a>
+        <span id="allowed_member_types_python">
+<a href="#allowed_member_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>member_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2764,8 +2765,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3096,8 +3097,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminconsentdescription_python">
-<a href="#adminconsentdescription_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Description</a>
+        <span id="admin_consent_description_python">
+<a href="#admin_consent_description_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>consent_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3107,8 +3108,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminconsentdisplayname_python">
-<a href="#adminconsentdisplayname_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Display<wbr>Name</a>
+        <span id="admin_consent_display_name_python">
+<a href="#admin_consent_display_name_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>consent_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3129,8 +3130,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3151,8 +3152,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userconsentdescription_python">
-<a href="#userconsentdescription_python" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Description</a>
+        <span id="user_consent_description_python">
+<a href="#user_consent_description_python" style="color: inherit; text-decoration: inherit;">user_<wbr>consent_<wbr>description</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3162,8 +3163,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="userconsentdisplayname_python">
-<a href="#userconsentdisplayname_python" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Display<wbr>Name</a>
+        <span id="user_consent_display_name_python">
+<a href="#user_consent_display_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>consent_<wbr>display_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3290,21 +3291,21 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesstokens_python">
-<a href="#accesstokens_python" style="color: inherit; text-decoration: inherit;">access<wbr>Tokens</a>
+        <span id="access_tokens_python">
+<a href="#access_tokens_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">List[Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">List[Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="idtokens_python">
-<a href="#idtokens_python" style="color: inherit; text-decoration: inherit;">id<wbr>Tokens</a>
+        <span id="id_tokens_python">
+<a href="#id_tokens_python" style="color: inherit; text-decoration: inherit;">id_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaimsidtoken">List[Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaimsidtoken">List[Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3499,8 +3500,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalproperties_python">
-<a href="#additionalproperties_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3721,8 +3722,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalproperties_python">
-<a href="#additionalproperties_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3866,19 +3867,19 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourceaccesses_python">
-<a href="#resourceaccesses_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Accesses</a>
+        <span id="resource_accesses_python">
+<a href="#resource_accesses_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>accesses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">List[Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access]</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">List[Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="resourceappid_python">
-<a href="#resourceappid_python" style="color: inherit; text-decoration: inherit;">resource<wbr>App<wbr>Id</a>
+        <span id="resource_app_id_python">
+<a href="#resource_app_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>app_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
