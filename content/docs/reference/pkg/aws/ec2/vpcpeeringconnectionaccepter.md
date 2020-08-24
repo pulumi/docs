@@ -232,7 +232,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.VpcPeeringConnectionAccepter">VpcPeeringConnectionAccepter</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accepter=None<span class="p">, </span>auto_accept=None<span class="p">, </span>requester=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_peering_connection_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.VpcPeeringConnectionAccepter">VpcPeeringConnectionAccepter</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accepter</span><span class="p">:</span> <span class="nx">Optional[VpcPeeringConnectionAccepterAccepterArgs]</span> = None<span class="p">, </span><span class="nx">auto_accept</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">requester</span><span class="p">:</span> <span class="nx">Optional[VpcPeeringConnectionAccepterRequesterArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_peering_connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -613,7 +613,7 @@ The VpcPeeringConnectionAccepter resource accepts the following [input]({{< relr
 <a href="#accepter_python" style="color: inherit; text-decoration: inherit;">accepter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionaccepteraccepter">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter]</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionaccepteraccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
@@ -636,7 +636,7 @@ The VpcPeeringConnectionAccepter resource accepts the following [input]({{< relr
 <a href="#requester_python" style="color: inherit; text-decoration: inherit;">requester</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionaccepterrequester">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester]</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionaccepterrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
@@ -648,7 +648,7 @@ The VpcPeeringConnectionAccepter resource accepts the following [input]({{< relr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -971,7 +971,8 @@ Get an existing VpcPeeringConnectionAccepter resource's state with the given nam
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accept_status=None<span class="p">, </span>accepter=None<span class="p">, </span>auto_accept=None<span class="p">, </span>peer_owner_id=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_vpc_id=None<span class="p">, </span>requester=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_id=None<span class="p">, </span>vpc_peering_connection_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accept_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">accepter</span><span class="p">:</span> <span class="nx">Optional[VpcPeeringConnectionAccepterAccepterArgs]</span> = None<span class="p">, </span><span class="nx">auto_accept</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">peer_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requester</span><span class="p">:</span> <span class="nx">Optional[VpcPeeringConnectionAccepterRequesterArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_peering_connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VpcPeeringConnectionAccepter</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -979,7 +980,7 @@ Get an existing VpcPeeringConnectionAccepter resource's state with the given nam
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.VpcPeeringConnectionAccepter.html">VpcPeeringConnectionAccepter</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.VpcPeeringConnectionAccepterState.html">VpcPeeringConnectionAccepterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.VpcPeeringConnectionAccepter.html">VpcPeeringConnectionAccepter</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.VpcPeeringConnectionAccepterState.html">VpcPeeringConnectionAccepterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1459,7 +1460,7 @@ The following state arguments are supported:
 <a href="#state_accepter_python" style="color: inherit; text-decoration: inherit;">accepter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionaccepteraccepter">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter]</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionaccepteraccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Accepter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
@@ -1515,7 +1516,7 @@ The following state arguments are supported:
 <a href="#state_requester_python" style="color: inherit; text-decoration: inherit;">requester</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcpeeringconnectionaccepterrequester">Dict[Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester]</a></span>
+        <span class="property-type"><a href="#vpcpeeringconnectionaccepterrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter<wbr>Requester<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
@@ -1527,7 +1528,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1718,8 +1719,8 @@ connection in the peer VPC over the VPC Peering Connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowclassiclinktoremotevpc_python">
-<a href="#allowclassiclinktoremotevpc_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
+        <span id="allow_classic_link_to_remote_vpc_python">
+<a href="#allow_classic_link_to_remote_vpc_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>classic_<wbr>link_<wbr>to_<wbr>remote_<wbr>vpc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1730,8 +1731,8 @@ with the peer VPC over the VPC Peering Connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowremotevpcdnsresolution_python">
-<a href="#allowremotevpcdnsresolution_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
+        <span id="allow_remote_vpc_dns_resolution_python">
+<a href="#allow_remote_vpc_dns_resolution_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>remote_<wbr>vpc_<wbr>dns_<wbr>resolution</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1742,8 +1743,8 @@ private IP addresses when queried from instances in a peer VPC.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowvpctoremoteclassiclink_python">
-<a href="#allowvpctoremoteclassiclink_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
+        <span id="allow_vpc_to_remote_classic_link_python">
+<a href="#allow_vpc_to_remote_classic_link_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>vpc_<wbr>to_<wbr>remote_<wbr>classic_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1908,8 +1909,8 @@ connection in the peer VPC over the VPC Peering Connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowclassiclinktoremotevpc_python">
-<a href="#allowclassiclinktoremotevpc_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
+        <span id="allow_classic_link_to_remote_vpc_python">
+<a href="#allow_classic_link_to_remote_vpc_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>classic_<wbr>link_<wbr>to_<wbr>remote_<wbr>vpc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1920,8 +1921,8 @@ with the peer VPC over the VPC Peering Connection.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowremotevpcdnsresolution_python">
-<a href="#allowremotevpcdnsresolution_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
+        <span id="allow_remote_vpc_dns_resolution_python">
+<a href="#allow_remote_vpc_dns_resolution_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>remote_<wbr>vpc_<wbr>dns_<wbr>resolution</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1932,8 +1933,8 @@ private IP addresses when queried from instances in a peer VPC.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowvpctoremoteclassiclink_python">
-<a href="#allowvpctoremoteclassiclink_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
+        <span id="allow_vpc_to_remote_classic_link_python">
+<a href="#allow_vpc_to_remote_classic_link_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>vpc_<wbr>to_<wbr>remote_<wbr>classic_<wbr>link</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

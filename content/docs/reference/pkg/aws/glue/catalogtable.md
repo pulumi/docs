@@ -242,43 +242,43 @@ aws_glue_catalog_table = aws.glue.CatalogTable("awsGlueCatalogTable",
         "EXTERNAL": "TRUE",
         "parquet.compression": "SNAPPY",
     },
-    storage_descriptor={
-        "columns": [
-            {
-                "name": "my_string",
-                "type": "string",
-            },
-            {
-                "name": "my_double",
-                "type": "double",
-            },
-            {
-                "comment": "",
-                "name": "my_date",
-                "type": "date",
-            },
-            {
-                "comment": "",
-                "name": "my_bigint",
-                "type": "bigint",
-            },
-            {
-                "comment": "",
-                "name": "my_struct",
-                "type": "struct<my_nested_string:string>",
-            },
+    storage_descriptor=aws.glue.CatalogTableStorageDescriptorArgs(
+        columns=[
+            aws.glue.CatalogTableStorageDescriptorColumnArgs(
+                name="my_string",
+                type="string",
+            ),
+            aws.glue.CatalogTableStorageDescriptorColumnArgs(
+                name="my_double",
+                type="double",
+            ),
+            aws.glue.CatalogTableStorageDescriptorColumnArgs(
+                comment="",
+                name="my_date",
+                type="date",
+            ),
+            aws.glue.CatalogTableStorageDescriptorColumnArgs(
+                comment="",
+                name="my_bigint",
+                type="bigint",
+            ),
+            aws.glue.CatalogTableStorageDescriptorColumnArgs(
+                comment="",
+                name="my_struct",
+                type="struct<my_nested_string:string>",
+            ),
         ],
-        "inputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
-        "location": "s3://my-bucket/event-streams/my-stream",
-        "outputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
-        "serDeInfo": {
-            "name": "my-stream",
-            "parameters": {
-                "serialization.format": 1,
+        input_format="org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+        location="s3://my-bucket/event-streams/my-stream",
+        output_format="org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+        ser_de_info=aws.glue.CatalogTableStorageDescriptorSerDeInfoArgs(
+            name="my-stream",
+            parameters={
+                "serialization.format": "1",
             },
-            "serializationLibrary": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
-        },
-    },
+            serialization_library="org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+        ),
+    ),
     table_type="EXTERNAL_TABLE")
 ```
 
@@ -352,7 +352,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws_glue_catalog_table", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.CatalogTable">CatalogTable</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>catalog_id=None<span class="p">, </span>database_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>owner=None<span class="p">, </span>parameters=None<span class="p">, </span>partition_keys=None<span class="p">, </span>retention=None<span class="p">, </span>storage_descriptor=None<span class="p">, </span>table_type=None<span class="p">, </span>view_expanded_text=None<span class="p">, </span>view_original_text=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.CatalogTable">CatalogTable</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">partition_keys</span><span class="p">:</span> <span class="nx">Optional[List[CatalogTablePartitionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">retention</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">storage_descriptor</span><span class="p">:</span> <span class="nx">Optional[CatalogTableStorageDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">table_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_expanded_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_original_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1002,7 +1002,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
@@ -1013,7 +1013,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">List[Catalog<wbr>Table<wbr>Partition<wbr>Key]</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">List[Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
 {{% /md %}}</dd>
@@ -1035,7 +1035,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storage_descriptor_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>descriptor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Dict[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd>
@@ -1215,7 +1215,8 @@ Get an existing CatalogTable resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>catalog_id=None<span class="p">, </span>database_name=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>owner=None<span class="p">, </span>parameters=None<span class="p">, </span>partition_keys=None<span class="p">, </span>retention=None<span class="p">, </span>storage_descriptor=None<span class="p">, </span>table_type=None<span class="p">, </span>view_expanded_text=None<span class="p">, </span>view_original_text=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">partition_keys</span><span class="p">:</span> <span class="nx">Optional[List[CatalogTablePartitionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">retention</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">storage_descriptor</span><span class="p">:</span> <span class="nx">Optional[CatalogTableStorageDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">table_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_expanded_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_original_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CatalogTable</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1223,7 +1224,7 @@ Get an existing CatalogTable resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.CatalogTable.html">CatalogTable</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.CatalogTableState.html">CatalogTableState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.CatalogTable.html">CatalogTable</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.CatalogTableState.html">CatalogTableState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1851,7 +1852,7 @@ The following state arguments are supported:
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
@@ -1862,7 +1863,7 @@ The following state arguments are supported:
 <a href="#state_partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">List[Catalog<wbr>Table<wbr>Partition<wbr>Key]</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">List[Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
 {{% /md %}}</dd>
@@ -1884,7 +1885,7 @@ The following state arguments are supported:
 <a href="#state_storage_descriptor_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>descriptor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Dict[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd>
@@ -2552,8 +2553,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bucketcolumns_python">
-<a href="#bucketcolumns_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Columns</a>
+        <span id="bucket_columns_python">
+<a href="#bucket_columns_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2567,7 +2568,7 @@ The following state arguments are supported:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">List[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">List[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of the Columns in the table.
 {{% /md %}}</dd>
@@ -2585,8 +2586,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inputformat_python">
-<a href="#inputformat_python" style="color: inherit; text-decoration: inherit;">input<wbr>Format</a>
+        <span id="input_format_python">
+<a href="#input_format_python" style="color: inherit; text-decoration: inherit;">input_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2607,8 +2608,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numberofbuckets_python">
-<a href="#numberofbuckets_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Buckets</a>
+        <span id="number_of_buckets_python">
+<a href="#number_of_buckets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>buckets</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2618,8 +2619,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outputformat_python">
-<a href="#outputformat_python" style="color: inherit; text-decoration: inherit;">output<wbr>Format</a>
+        <span id="output_format_python">
+<a href="#output_format_python" style="color: inherit; text-decoration: inherit;">output_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2633,48 +2634,48 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serdeinfo_python">
-<a href="#serdeinfo_python" style="color: inherit; text-decoration: inherit;">ser<wbr>De<wbr>Info</a>
+        <span id="ser_de_info_python">
+<a href="#ser_de_info_python" style="color: inherit; text-decoration: inherit;">ser_<wbr>de_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Dict[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Serialization/deserialization (SerDe) information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skewedinfo_python">
-<a href="#skewedinfo_python" style="color: inherit; text-decoration: inherit;">skewed<wbr>Info</a>
+        <span id="skewed_info_python">
+<a href="#skewed_info_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>info</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Dict[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about values that appear very frequently in a column (skewed values).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sortcolumns_python">
-<a href="#sortcolumns_python" style="color: inherit; text-decoration: inherit;">sort<wbr>Columns</a>
+        <span id="sort_columns_python">
+<a href="#sort_columns_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">List[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column]</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">List[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Order objects specifying the sort order of each bucket in the table.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storedassubdirectories_python">
-<a href="#storedassubdirectories_python" style="color: inherit; text-decoration: inherit;">stored<wbr>As<wbr>Sub<wbr>Directories</a>
+        <span id="stored_as_sub_directories_python">
+<a href="#stored_as_sub_directories_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>as_<wbr>sub_<wbr>directories</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3022,15 +3023,15 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serializationlibrary_python">
-<a href="#serializationlibrary_python" style="color: inherit; text-decoration: inherit;">serialization<wbr>Library</a>
+        <span id="serialization_library_python">
+<a href="#serialization_library_python" style="color: inherit; text-decoration: inherit;">serialization_<wbr>library</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3185,8 +3186,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skewedcolumnnames_python">
-<a href="#skewedcolumnnames_python" style="color: inherit; text-decoration: inherit;">skewed<wbr>Column<wbr>Names</a>
+        <span id="skewed_column_names_python">
+<a href="#skewed_column_names_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>column_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3196,19 +3197,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skewedcolumnvaluelocationmaps_python">
-<a href="#skewedcolumnvaluelocationmaps_python" style="color: inherit; text-decoration: inherit;">skewed<wbr>Column<wbr>Value<wbr>Location<wbr>Maps</a>
+        <span id="skewed_column_value_location_maps_python">
+<a href="#skewed_column_value_location_maps_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>column_<wbr>value_<wbr>location_<wbr>maps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of values that appear so frequently as to be considered skewed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="skewedcolumnvalues_python">
-<a href="#skewedcolumnvalues_python" style="color: inherit; text-decoration: inherit;">skewed<wbr>Column<wbr>Values</a>
+        <span id="skewed_column_values_python">
+<a href="#skewed_column_values_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>column_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3341,8 +3342,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sortorder_python">
-<a href="#sortorder_python" style="color: inherit; text-decoration: inherit;">sort<wbr>Order</a>
+        <span id="sort_order_python">
+<a href="#sort_order_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>order</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

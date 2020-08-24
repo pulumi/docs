@@ -73,9 +73,9 @@ import pulumi
 import pulumi_aws as aws
 
 # ... other configurations ...
-example = aws.eks.NodeGroup("example", scaling_config={
-    "desiredSize": 2,
-})
+example = aws.eks.NodeGroup("example", scaling_config=aws.eks.NodeGroupScalingConfigArgs(
+    desired_size=2,
+))
 ```
 
 {{% /example %}}
@@ -284,7 +284,7 @@ const example_AmazonEC2ContainerRegistryReadOnly = new aws.iam.RolePolicyAttachm
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/eks/#pulumi_aws.eks.NodeGroup">NodeGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ami_type=None<span class="p">, </span>cluster_name=None<span class="p">, </span>disk_size=None<span class="p">, </span>force_update_version=None<span class="p">, </span>instance_types=None<span class="p">, </span>labels=None<span class="p">, </span>node_group_name=None<span class="p">, </span>node_role_arn=None<span class="p">, </span>release_version=None<span class="p">, </span>remote_access=None<span class="p">, </span>scaling_config=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/eks/#pulumi_aws.eks.NodeGroup">NodeGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">force_update_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_access</span><span class="p">:</span> <span class="nx">Optional[NodeGroupRemoteAccessArgs]</span> = None<span class="p">, </span><span class="nx">scaling_config</span><span class="p">:</span> <span class="nx">Optional[NodeGroupScalingConfigArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -967,7 +967,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#scaling_config_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">Dict[Node<wbr>Group<wbr>Scaling<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
 {{% /md %}}</dd>
@@ -1033,7 +1033,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
 {{% /md %}}</dd>
@@ -1066,7 +1066,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#remote_access_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">Dict[Node<wbr>Group<wbr>Remote<wbr>Access]</a></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
@@ -1077,7 +1077,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -1323,7 +1323,8 @@ Get an existing NodeGroup resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>ami_type=None<span class="p">, </span>arn=None<span class="p">, </span>cluster_name=None<span class="p">, </span>disk_size=None<span class="p">, </span>force_update_version=None<span class="p">, </span>instance_types=None<span class="p">, </span>labels=None<span class="p">, </span>node_group_name=None<span class="p">, </span>node_role_arn=None<span class="p">, </span>release_version=None<span class="p">, </span>remote_access=None<span class="p">, </span>resources=None<span class="p">, </span>scaling_config=None<span class="p">, </span>status=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">force_update_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_access</span><span class="p">:</span> <span class="nx">Optional[NodeGroupRemoteAccessArgs]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[List[NodeGroupResourceArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_config</span><span class="p">:</span> <span class="nx">Optional[NodeGroupScalingConfigArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NodeGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1331,7 +1332,7 @@ Get an existing NodeGroup resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.NodeGroup.html">NodeGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.NodeGroupState.html">NodeGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.NodeGroup.html">NodeGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.NodeGroupState.html">NodeGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2091,7 +2092,7 @@ The following state arguments are supported:
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
 {{% /md %}}</dd>
@@ -2135,7 +2136,7 @@ The following state arguments are supported:
 <a href="#state_remote_access_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">Dict[Node<wbr>Group<wbr>Remote<wbr>Access]</a></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
@@ -2146,7 +2147,7 @@ The following state arguments are supported:
 <a href="#state_resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupresource">List[Node<wbr>Group<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#nodegroupresource">List[Node<wbr>Group<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about underlying resources.
 {{% /md %}}</dd>
@@ -2157,7 +2158,7 @@ The following state arguments are supported:
 <a href="#state_scaling_config_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">Dict[Node<wbr>Group<wbr>Scaling<wbr>Config]</a></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
 {{% /md %}}</dd>
@@ -2190,7 +2191,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -2328,8 +2329,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ec2sshkey_python">
-<a href="#ec2sshkey_python" style="color: inherit; text-decoration: inherit;">ec2Ssh<wbr>Key</a>
+        <span id="ec2_ssh_key_python">
+<a href="#ec2_ssh_key_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>ssh_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2339,8 +2340,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcesecuritygroupids_python">
-<a href="#sourcesecuritygroupids_python" style="color: inherit; text-decoration: inherit;">source<wbr>Security<wbr>Group<wbr>Ids</a>
+        <span id="source_security_group_ids_python">
+<a href="#source_security_group_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>security_<wbr>group_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2466,15 +2467,15 @@ The following state arguments are supported:
 <a href="#autoscaling_groups_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">List[Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group]</a></span>
+        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">List[Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about AutoScaling Groups.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteaccesssecuritygroupid_python">
-<a href="#remoteaccesssecuritygroupid_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Access<wbr>Security<wbr>Group<wbr>Id</a>
+        <span id="remote_access_security_group_id_python">
+<a href="#remote_access_security_group_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>access_<wbr>security_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2719,8 +2720,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="desiredsize_python">
-<a href="#desiredsize_python" style="color: inherit; text-decoration: inherit;">desired<wbr>Size</a>
+        <span id="desired_size_python">
+<a href="#desired_size_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

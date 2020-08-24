@@ -117,13 +117,13 @@ import pulumi_aws as aws
 
 wu_tang = aws.elb.LoadBalancer("wu-tang",
     availability_zones=["us-east-1a"],
-    listeners=[{
-        "instance_port": 443,
-        "instanceProtocol": "http",
-        "lb_port": 443,
-        "lbProtocol": "https",
-        "sslCertificateId": "arn:aws:iam::000000000000:server-certificate/wu-tang.net",
-    }],
+    listeners=[aws.elb.LoadBalancerListenerArgs(
+        instance_port=443,
+        instance_protocol="http",
+        lb_port=443,
+        lb_protocol="https",
+        ssl_certificate_id="arn:aws:iam::000000000000:server-certificate/wu-tang.net",
+    )],
     tags={
         "Name": "wu-tang",
     })
@@ -131,18 +131,18 @@ wu_tang_ca_pubkey_policy = aws.elb.LoadBalancerPolicy("wu-tang-ca-pubkey-policy"
     load_balancer_name=wu_tang.name,
     policy_name="wu-tang-ca-pubkey-policy",
     policy_type_name="PublicKeyPolicyType",
-    policy_attributes=[{
-        "name": "PublicKey",
-        "value": (lambda path: open(path).read())("wu-tang-pubkey"),
-    }])
+    policy_attributes=[aws.elb.LoadBalancerPolicyPolicyAttributeArgs(
+        name="PublicKey",
+        value=(lambda path: open(path).read())("wu-tang-pubkey"),
+    )])
 wu_tang_root_ca_backend_auth_policy = aws.elb.LoadBalancerPolicy("wu-tang-root-ca-backend-auth-policy",
     load_balancer_name=wu_tang.name,
     policy_name="wu-tang-root-ca-backend-auth-policy",
     policy_type_name="BackendServerAuthenticationPolicyType",
-    policy_attributes=[{
-        "name": "PublicKeyPolicyName",
-        "value": aws_load_balancer_policy["wu-tang-root-ca-pubkey-policy"]["policy_name"],
-    }])
+    policy_attributes=[aws.elb.LoadBalancerPolicyPolicyAttributeArgs(
+        name="PublicKeyPolicyName",
+        value=aws_load_balancer_policy["wu-tang-root-ca-pubkey-policy"]["policy_name"],
+    )])
 wu_tang_backend_auth_policies_443 = aws.elb.LoadBalancerBackendServerPolicy("wu-tang-backend-auth-policies-443",
     load_balancer_name=wu_tang.name,
     instance_port=443,
@@ -211,7 +211,7 @@ const wu_tang_backend_auth_policies_443 = new aws.elb.LoadBalancerBackendServerP
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticloadbalancing/#pulumi_aws.elasticloadbalancing.LoadBalancerBackendServerPolicy">LoadBalancerBackendServerPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>instance_port=None<span class="p">, </span>load_balancer_name=None<span class="p">, </span>policy_names=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticloadbalancing/#pulumi_aws.elasticloadbalancing.LoadBalancerBackendServerPolicy">LoadBalancerBackendServerPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">load_balancer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -634,7 +634,8 @@ Get an existing LoadBalancerBackendServerPolicy resource's state with the given 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>instance_port=None<span class="p">, </span>load_balancer_name=None<span class="p">, </span>policy_names=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">instance_port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">load_balancer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> LoadBalancerBackendServerPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -642,7 +643,7 @@ Get an existing LoadBalancerBackendServerPolicy resource's state with the given 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.LoadBalancerBackendServerPolicy.html">LoadBalancerBackendServerPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.LoadBalancerBackendServerPolicyState.html">LoadBalancerBackendServerPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.LoadBalancerBackendServerPolicy.html">LoadBalancerBackendServerPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.LoadBalancerBackendServerPolicyState.html">LoadBalancerBackendServerPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}

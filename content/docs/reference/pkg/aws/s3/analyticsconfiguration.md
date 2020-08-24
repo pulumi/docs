@@ -106,15 +106,15 @@ example = aws.s3.Bucket("example")
 analytics = aws.s3.Bucket("analytics")
 example_entire_bucket = aws.s3.AnalyticsConfiguration("example-entire-bucket",
     bucket=example.bucket,
-    storage_class_analysis={
-        "dataExport": {
-            "destination": {
-                "s3BucketDestination": {
-                    "bucketArn": analytics.arn,
-                },
-            },
-        },
-    })
+    storage_class_analysis=aws.s3.AnalyticsConfigurationStorageClassAnalysisArgs(
+        data_export=aws.s3.AnalyticsConfigurationStorageClassAnalysisDataExportArgs(
+            destination=aws.s3.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs(
+                s3_bucket_destination=aws.s3.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs(
+                    bucket_arn=analytics.arn,
+                ),
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -219,13 +219,13 @@ import pulumi_aws as aws
 example = aws.s3.Bucket("example")
 example_filtered = aws.s3.AnalyticsConfiguration("example-filtered",
     bucket=example.bucket,
-    filter={
-        "prefix": "documents/",
-        "tags": {
+    filter=aws.s3.AnalyticsConfigurationFilterArgs(
+        prefix="documents/",
+        tags={
             "priority": "high",
             "class": "blue",
         },
-    })
+    ))
 ```
 
 {{% /example %}}
@@ -263,7 +263,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.AnalyticsConfiguration">AnalyticsConfiguration</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, </span>storage_class_analysis=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.AnalyticsConfiguration">AnalyticsConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[AnalyticsConfigurationFilterArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_class_analysis</span><span class="p">:</span> <span class="nx">Optional[AnalyticsConfigurationStorageClassAnalysisArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -605,7 +605,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsconfigurationfilter">Dict[Analytics<wbr>Configuration<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#analyticsconfigurationfilter">Analytics<wbr>Configuration<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
 {{% /md %}}</dd>
@@ -627,7 +627,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#storage_class_analysis_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class_<wbr>analysis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Dict[Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis]</a></span>
+        <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the analytics data export (documented below).
 {{% /md %}}</dd>
@@ -730,7 +730,8 @@ Get an existing AnalyticsConfiguration resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bucket=None<span class="p">, </span>filter=None<span class="p">, </span>name=None<span class="p">, </span>storage_class_analysis=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[AnalyticsConfigurationFilterArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_class_analysis</span><span class="p">:</span> <span class="nx">Optional[AnalyticsConfigurationStorageClassAnalysisArgs]</span> = None<span class="p">) -&gt;</span> AnalyticsConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -738,7 +739,7 @@ Get an existing AnalyticsConfiguration resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.AnalyticsConfiguration.html">AnalyticsConfiguration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.AnalyticsConfigurationState.html">AnalyticsConfigurationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.AnalyticsConfiguration.html">AnalyticsConfiguration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.AnalyticsConfigurationState.html">AnalyticsConfigurationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1014,7 +1015,7 @@ The following state arguments are supported:
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsconfigurationfilter">Dict[Analytics<wbr>Configuration<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#analyticsconfigurationfilter">Analytics<wbr>Configuration<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
 {{% /md %}}</dd>
@@ -1036,7 +1037,7 @@ The following state arguments are supported:
 <a href="#state_storage_class_analysis_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class_<wbr>analysis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Dict[Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis]</a></span>
+        <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the analytics data export (documented below).
 {{% /md %}}</dd>
@@ -1178,7 +1179,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of object tags for filtering.
 {{% /md %}}</dd>
@@ -1264,11 +1265,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="dataexport_python">
-<a href="#dataexport_python" style="color: inherit; text-decoration: inherit;">data<wbr>Export</a>
+        <span id="data_export_python">
+<a href="#data_export_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexport">Dict[Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export]</a></span>
+        <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexport">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data export configuration (documented below).
 {{% /md %}}</dd>
@@ -1391,15 +1392,15 @@ The following state arguments are supported:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestination">Dict[Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the exported analytics data (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="outputschemaversion_python">
-<a href="#outputschemaversion_python" style="color: inherit; text-decoration: inherit;">output<wbr>Schema<wbr>Version</a>
+        <span id="output_schema_version_python">
+<a href="#output_schema_version_python" style="color: inherit; text-decoration: inherit;">output_<wbr>schema_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1488,11 +1489,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="s3bucketdestination_python">
-<a href="#s3bucketdestination_python" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Destination</a>
+        <span id="s3_bucket_destination_python">
+<a href="#s3_bucket_destination_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestinations3bucketdestination">Dict[Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>S3Bucket<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestinations3bucketdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>S3Bucket<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Analytics data export currently only supports an S3 bucket destination (documented below).
 {{% /md %}}</dd>
@@ -1677,8 +1678,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketarn_python">
-<a href="#bucketarn_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+        <span id="bucket_arn_python">
+<a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1688,8 +1689,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bucketaccountid_python">
-<a href="#bucketaccountid_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Account<wbr>Id</a>
+        <span id="bucket_account_id_python">
+<a href="#bucket_account_id_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>account_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

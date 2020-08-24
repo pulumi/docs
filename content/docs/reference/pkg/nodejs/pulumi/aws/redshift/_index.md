@@ -3,7 +3,7 @@ title: "Module redshift"
 title_tag: "Module redshift | Package @pulumi/aws | Node.js SDK"
 linktitle: "redshift"
 meta_desc: "Explore members of the redshift module in the @pulumi/aws package."
-git_sha: "0a2e76f947fd9ea3ee41beab30d2121c4b385e5c"
+git_sha: "f41f492a44c487667f616da57823709362559b0c"
 block_external_search_index: true
 ---
 
@@ -60,7 +60,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L30">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -88,7 +88,7 @@ const defaultCluster = new aws.redshift.Cluster("default", {
 ```
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L208"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L208"> <b>constructor</b></a>
 </h4>
 
 
@@ -102,7 +102,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -113,14 +113,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -131,7 +131,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-allowVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L61">property <b>allowVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L61">property <b>allowVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowVersionUpgrade: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -139,7 +139,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true
 
 <h4 class="pdoc-member-header" id="Cluster-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L65">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L65">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -147,7 +147,7 @@ If true , major version upgrades can be applied during the maintenance window to
 Amazon Resource Name (ARN) of cluster
 
 <h4 class="pdoc-member-header" id="Cluster-automatedSnapshotRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L69">property <b>automatedSnapshotRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L69">property <b>automatedSnapshotRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automatedSnapshotRetentionPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -155,7 +155,7 @@ Amazon Resource Name (ARN) of cluster
 The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.
 
 <h4 class="pdoc-member-header" id="Cluster-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L73">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L73">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -163,7 +163,7 @@ The number of days that automated snapshots are retained. If the value is 0, aut
 The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L78">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L78">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ The Cluster Identifier. Must be a lower case
 string.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L82">property <b>clusterParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L82">property <b>clusterParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterParameterGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ string.
 The name of the parameter group to be associated with this cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterPublicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L86">property <b>clusterPublicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L86">property <b>clusterPublicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterPublicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ The name of the parameter group to be associated with this cluster.
 The public key for the cluster
 
 <h4 class="pdoc-member-header" id="Cluster-clusterRevisionNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L90">property <b>clusterRevisionNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L90">property <b>clusterRevisionNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterRevisionNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ The public key for the cluster
 The specific revision number of the database in the cluster
 
 <h4 class="pdoc-member-header" id="Cluster-clusterSecurityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L94">property <b>clusterSecurityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L94">property <b>clusterSecurityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterSecurityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -204,7 +204,7 @@ The specific revision number of the database in the cluster
 A list of security groups to be associated with this cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L98">property <b>clusterSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L98">property <b>clusterSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterSubnetGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -212,7 +212,7 @@ A list of security groups to be associated with this cluster.
 The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).
 
 <h4 class="pdoc-member-header" id="Cluster-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L102">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L102">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -220,7 +220,7 @@ The name of a cluster subnet group to be associated with this cluster. If this p
 The cluster type to use. Either `single-node` or `multi-node`.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L107">property <b>clusterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L107">property <b>clusterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ The version of the Amazon Redshift engine software that you want to deploy on th
 The version selected runs on all the nodes in the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L112">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L112">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -238,7 +238,7 @@ The name of the first database to be created when the cluster is created.
 If you do not provide a name, Amazon Redshift will create a default database called `dev`.
 
 <h4 class="pdoc-member-header" id="Cluster-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L116">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L116">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -246,7 +246,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 The DNS name of the cluster
 
 <h4 class="pdoc-member-header" id="Cluster-elasticIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L120">property <b>elasticIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L120">property <b>elasticIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>elasticIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -254,7 +254,7 @@ The DNS name of the cluster
 The Elastic IP (EIP) address for the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L124">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L124">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -262,7 +262,7 @@ The Elastic IP (EIP) address for the cluster.
 If true , the data in the cluster is encrypted at rest.
 
 <h4 class="pdoc-member-header" id="Cluster-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L128">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L128">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -270,7 +270,7 @@ If true , the data in the cluster is encrypted at rest.
 The connection endpoint
 
 <h4 class="pdoc-member-header" id="Cluster-enhancedVpcRouting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L132">property <b>enhancedVpcRouting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L132">property <b>enhancedVpcRouting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enhancedVpcRouting: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -278,7 +278,7 @@ The connection endpoint
 If true , enhanced VPC routing is enabled.
 
 <h4 class="pdoc-member-header" id="Cluster-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L136">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L136">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>finalSnapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -286,7 +286,7 @@ If true , enhanced VPC routing is enabled.
 The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, `skipFinalSnapshot` must be false.
 
 <h4 class="pdoc-member-header" id="Cluster-iamRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L140">property <b>iamRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L140">property <b>iamRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -294,7 +294,7 @@ The identifier of the final snapshot that is to be created immediately before de
 A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -303,7 +303,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L144">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L144">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -311,7 +311,7 @@ deployments and may be missing (undefined) during planning phases.
 The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="Cluster-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L148">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L148">property <b>logging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logging: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterLogging'>ClusterLogging</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -319,7 +319,7 @@ The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` need
 Logging, documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-masterPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L154">property <b>masterPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L154">property <b>masterPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -329,7 +329,7 @@ Note that this may show up in logs, and it will be stored in the state file. Pas
 contain at least one uppercase letter, one lowercase letter, and one number.
 
 <h4 class="pdoc-member-header" id="Cluster-masterUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L158">property <b>masterUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L158">property <b>masterUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterUsername: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -337,7 +337,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 Username for the master DB user.
 
 <h4 class="pdoc-member-header" id="Cluster-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L162">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L162">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -345,7 +345,7 @@ Username for the master DB user.
 The node type to be provisioned for the cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-numberOfNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L166">property <b>numberOfNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L166">property <b>numberOfNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>numberOfNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -353,7 +353,7 @@ The node type to be provisioned for the cluster.
 The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.
 
 <h4 class="pdoc-member-header" id="Cluster-ownerAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L170">property <b>ownerAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L170">property <b>ownerAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -361,7 +361,7 @@ The number of compute nodes in the cluster. This parameter is required when the 
 The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.
 
 <h4 class="pdoc-member-header" id="Cluster-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L175">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L175">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -370,7 +370,7 @@ The port number on which the cluster accepts incoming connections.
 The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
 
 <h4 class="pdoc-member-header" id="Cluster-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L180">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L180">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredMaintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ The weekly time range (in UTC) during which automated cluster maintenance can oc
 Format: ddd:hh24:mi-ddd:hh24:mi
 
 <h4 class="pdoc-member-header" id="Cluster-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L184">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L184">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publiclyAccessible: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -387,7 +387,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 If true, the cluster can be accessed from a public network. Default is `true`.
 
 <h4 class="pdoc-member-header" id="Cluster-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L188">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L188">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skipFinalSnapshot: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -395,7 +395,7 @@ If true, the cluster can be accessed from a public network. Default is `true`.
 Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
 
 <h4 class="pdoc-member-header" id="Cluster-snapshotClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L192">property <b>snapshotClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L192">property <b>snapshotClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotClusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -403,7 +403,7 @@ Determines whether a final snapshot of the cluster is created before Amazon Reds
 The name of the cluster the source snapshot was created from.
 
 <h4 class="pdoc-member-header" id="Cluster-snapshotCopy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L196">property <b>snapshotCopy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L196">property <b>snapshotCopy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotCopy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterSnapshotCopy'>ClusterSnapshotCopy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -411,7 +411,7 @@ The name of the cluster the source snapshot was created from.
 Configuration of automatic copy of snapshots from one region to another. Documented below.
 
 <h4 class="pdoc-member-header" id="Cluster-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L200">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L200">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -419,7 +419,7 @@ Configuration of automatic copy of snapshots from one region to another. Documen
 The name of the snapshot from which to create the new cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L204">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L204">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -427,7 +427,7 @@ The name of the snapshot from which to create the new cluster.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -436,7 +436,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L208">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L208">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcSecurityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -444,7 +444,7 @@ deployments.
 A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
 
 <h3 class="pdoc-module-header" id="EventSubscription" data-link-title="EventSubscription">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L46">
         Resource <strong>EventSubscription</strong>
     </a>
 </h3>
@@ -490,7 +490,7 @@ The following additional atttributes are provided:
 * `customerAwsId` - The AWS customer account associated with the Redshift event notification subscription
 
 <h4 class="pdoc-member-header" id="EventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L108"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L108"> <b>constructor</b></a>
 </h4>
 
 
@@ -504,7 +504,7 @@ Create a EventSubscription resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventSubscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -515,14 +515,14 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -533,17 +533,17 @@ Returns true if the given object is an instance of EventSubscription.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventSubscription-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L74">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L74">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscription-customerAwsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L75">property <b>customerAwsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L75">property <b>customerAwsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customerAwsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscription-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L79">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L79">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -551,7 +551,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A boolean flag to enable/disable the subscription. Defaults to true.
 
 <h4 class="pdoc-member-header" id="EventSubscription-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L83">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L83">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventCategories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -559,7 +559,7 @@ A boolean flag to enable/disable the subscription. Defaults to true.
 A list of event categories for a SourceType that you want to subscribe to. See https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html or run `aws redshift describe-event-categories`.
 
 <h4 class="pdoc-member-header" id="EventSubscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -568,7 +568,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventSubscription-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +576,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Redshift event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscription-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L91">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L91">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>severity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -584,7 +584,7 @@ The name of the Redshift event subscription.
 The event severity to be published by the notification subscription. Valid options are `INFO` or `ERROR`.
 
 <h4 class="pdoc-member-header" id="EventSubscription-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L95">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L95">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snsTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -592,7 +592,7 @@ The event severity to be published by the notification subscription. Valid optio
 The ARN of the SNS topic to send events to.
 
 <h4 class="pdoc-member-header" id="EventSubscription-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L99">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L99">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -600,7 +600,7 @@ The ARN of the SNS topic to send events to.
 A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a sourceType must also be specified.
 
 <h4 class="pdoc-member-header" id="EventSubscription-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L103">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L103">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -608,12 +608,12 @@ A list of identifiers of the event sources for which events will be returned. If
 The type of source that will be generating the events. Valid options are `cluster`, `cluster-parameter-group`, `cluster-security-group`, or `cluster-snapshot`. If not set, all sources will be subscribed to.
 
 <h4 class="pdoc-member-header" id="EventSubscription-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L104">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L104">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscription-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L108">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L108">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -621,7 +621,7 @@ The type of source that will be generating the events. Valid options are `cluste
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="EventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -630,7 +630,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ParameterGroup" data-link-title="ParameterGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L37">
         Resource <strong>ParameterGroup</strong>
     </a>
 </h3>
@@ -665,7 +665,7 @@ const bar = new aws.redshift.ParameterGroup("bar", {
 ```
 
 <h4 class="pdoc-member-header" id="ParameterGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -679,7 +679,7 @@ Create a ParameterGroup resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -690,14 +690,14 @@ Get an existing ParameterGroup resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ParameterGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -708,7 +708,7 @@ Returns true if the given object is an instance of ParameterGroup.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L68">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L68">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -716,7 +716,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of parameter group
 
 <h4 class="pdoc-member-header" id="ParameterGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L72">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L72">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ Amazon Resource Name (ARN) of parameter group
 The description of the Redshift parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroup-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L76">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L76">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -732,7 +732,7 @@ The description of the Redshift parameter group. Defaults to "Managed by Pulumi"
 The family of the Redshift parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -741,7 +741,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -749,7 +749,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Redshift parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L84">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L84">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ParameterGroupParameter'>ParameterGroupParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -757,7 +757,7 @@ The name of the Redshift parameter.
 A list of Redshift parameters to apply.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L88">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L88">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -765,7 +765,7 @@ A list of Redshift parameters to apply.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ParameterGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -774,7 +774,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecurityGroup" data-link-title="SecurityGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L25">
         Resource <strong>SecurityGroup</strong>
     </a>
 </h3>
@@ -797,7 +797,7 @@ const defaultSecurityGroup = new aws.redshift.SecurityGroup("default", {
 ```
 
 <h4 class="pdoc-member-header" id="SecurityGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -811,7 +811,7 @@ Create a SecurityGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -822,14 +822,14 @@ Get an existing SecurityGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -840,7 +840,7 @@ Returns true if the given object is an instance of SecurityGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L56">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L56">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -848,7 +848,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the Redshift security group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SecurityGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -857,7 +857,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-ingress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L60">property <b>ingress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L60">property <b>ingress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SecurityGroupIngress'>SecurityGroupIngress</a>[]&gt;;</code></pre>
@@ -865,7 +865,7 @@ deployments and may be missing (undefined) during planning phases.
 A list of ingress rules.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -873,7 +873,7 @@ A list of ingress rules.
 The name of the Redshift security group.
 
 <h4 class="pdoc-member-header" id="SecurityGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -882,7 +882,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SnapshotCopyGrant" data-link-title="SnapshotCopyGrant">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L25">
         Resource <strong>SnapshotCopyGrant</strong>
     </a>
 </h3>
@@ -907,7 +907,7 @@ const testCluster = new aws.redshift.Cluster("testCluster", {snapshotCopy: {
 ```
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrant-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -921,7 +921,7 @@ Create a SnapshotCopyGrant resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrant-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L35">method <b>get</b></a>
 </h4>
 
 
@@ -932,14 +932,14 @@ Get an existing SnapshotCopyGrant resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrant-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrant-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L46">method <b>isInstance</b></a>
 </h4>
 
 
@@ -950,7 +950,7 @@ Returns true if the given object is an instance of SnapshotCopyGrant.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrant-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L56">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L56">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -958,7 +958,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of snapshot copy grant
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrant-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -967,7 +967,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrant-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L60">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L60">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -975,7 +975,7 @@ deployments and may be missing (undefined) during planning phases.
 The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrant-snapshotCopyGrantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L64">property <b>snapshotCopyGrantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L64">property <b>snapshotCopyGrantName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snapshotCopyGrantName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -983,7 +983,7 @@ The unique identifier for the customer master key (CMK) that the grant applies t
 A friendly name for identifying the grant.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrant-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L68">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L68">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -991,7 +991,7 @@ A friendly name for identifying the grant.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrant-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1000,7 +1000,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SnapshotSchedule" data-link-title="SnapshotSchedule">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L20">
         Resource <strong>SnapshotSchedule</strong>
     </a>
 </h3>
@@ -1020,7 +1020,7 @@ const defaultSnapshotSchedule = new aws.redshift.SnapshotSchedule("default", {
 ```
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -1034,7 +1034,7 @@ Create a SnapshotSchedule resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L30">method <b>get</b></a>
 </h4>
 
 
@@ -1045,14 +1045,14 @@ Get an existing SnapshotSchedule resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L20">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L41">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1063,12 +1063,12 @@ Returns true if the given object is an instance of SnapshotSchedule.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L48">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L48">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SnapshotSchedule-definitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L52">property <b>definitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L52">property <b>definitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>definitions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1076,7 +1076,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L56">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L56">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1084,7 +1084,7 @@ The definition of the snapshot schedule. The definition is made up of schedule e
 The description of the snapshot schedule.
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L60">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L60">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1092,7 +1092,7 @@ The description of the snapshot schedule.
 Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L20">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1101,7 +1101,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L64">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L64">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1109,7 +1109,7 @@ deployments and may be missing (undefined) during planning phases.
 The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L69">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L69">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identifierPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1118,7 +1118,7 @@ Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L73">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1126,7 +1126,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SnapshotSchedule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L20">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1135,7 +1135,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SnapshotScheduleAssociation" data-link-title="SnapshotScheduleAssociation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L32">
         Resource <strong>SnapshotScheduleAssociation</strong>
     </a>
 </h3>
@@ -1167,7 +1167,7 @@ const defaultSnapshotScheduleAssociation = new aws.redshift.SnapshotScheduleAsso
 ```
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociation-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L67"> <b>constructor</b></a>
 </h4>
 
 
@@ -1181,7 +1181,7 @@ Create a SnapshotScheduleAssociation resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociation-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -1192,14 +1192,14 @@ Get an existing SnapshotScheduleAssociation resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociation-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociation-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1210,7 +1210,7 @@ Returns true if the given object is an instance of SnapshotScheduleAssociation. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociation-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L63">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L63">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1218,7 +1218,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The cluster identifier.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociation-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1227,7 +1227,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociation-scheduleIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L67">property <b>scheduleIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L67">property <b>scheduleIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduleIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1235,7 +1235,7 @@ deployments and may be missing (undefined) during planning phases.
 The snapshot schedule identifier.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociation-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1244,7 +1244,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SubnetGroup" data-link-title="SubnetGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L44">
         Resource <strong>SubnetGroup</strong>
     </a>
 </h3>
@@ -1288,7 +1288,7 @@ const fooSubnetGroup = new aws.redshift.SubnetGroup("fooSubnetGroup", {
 ```
 
 <h4 class="pdoc-member-header" id="SubnetGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -1302,7 +1302,7 @@ Create a SubnetGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -1313,14 +1313,14 @@ Get an existing SubnetGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SubnetGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1331,7 +1331,7 @@ Returns true if the given object is an instance of SubnetGroup.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L75">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L75">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1339,7 +1339,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the Redshift Subnet group name
 
 <h4 class="pdoc-member-header" id="SubnetGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L79">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1347,7 +1347,7 @@ Amazon Resource Name (ARN) of the Redshift Subnet group name
 The description of the Redshift Subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1356,7 +1356,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L83">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1364,7 +1364,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Redshift Subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L87">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L87">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1372,7 +1372,7 @@ The name of the Redshift Subnet group.
 An array of VPC subnet IDs.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L91">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L91">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1380,7 +1380,7 @@ An array of VPC subnet IDs.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="SubnetGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1391,7 +1391,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCluster" data-link-title="getCluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L42">
         Function <strong>getCluster</strong>
     </a>
 </h3>
@@ -1433,7 +1433,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
 ```
 
 <h3 class="pdoc-module-header" id="getServiceAccount" data-link-title="getServiceAccount">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getServiceAccount.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getServiceAccount.ts#L49">
         Function <strong>getServiceAccount</strong>
     </a>
 </h3>
@@ -1484,7 +1484,7 @@ const bucket = new aws.s3.Bucket("bucket", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L474">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L474">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -1494,7 +1494,7 @@ const bucket = new aws.s3.Bucket("bucket", {
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-allowVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L478">property <b>allowVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L478">property <b>allowVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1502,7 +1502,7 @@ The set of arguments for constructing a Cluster resource.
 If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true
 
 <h4 class="pdoc-member-header" id="ClusterArgs-automatedSnapshotRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L482">property <b>automatedSnapshotRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L482">property <b>automatedSnapshotRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automatedSnapshotRetentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1510,7 +1510,7 @@ If true , major version upgrades can be applied during the maintenance window to
 The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L486">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L486">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1518,7 +1518,7 @@ The number of days that automated snapshots are retained. If the value is 0, aut
 The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L491">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L491">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1527,7 +1527,7 @@ The Cluster Identifier. Must be a lower case
 string.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L495">property <b>clusterParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L495">property <b>clusterParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterParameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1535,7 +1535,7 @@ string.
 The name of the parameter group to be associated with this cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterPublicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L499">property <b>clusterPublicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L499">property <b>clusterPublicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterPublicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1543,7 +1543,7 @@ The name of the parameter group to be associated with this cluster.
 The public key for the cluster
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterRevisionNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L503">property <b>clusterRevisionNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L503">property <b>clusterRevisionNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterRevisionNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1551,7 +1551,7 @@ The public key for the cluster
 The specific revision number of the database in the cluster
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterSecurityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L507">property <b>clusterSecurityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L507">property <b>clusterSecurityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSecurityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1559,7 +1559,7 @@ The specific revision number of the database in the cluster
 A list of security groups to be associated with this cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L511">property <b>clusterSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L511">property <b>clusterSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1567,7 +1567,7 @@ A list of security groups to be associated with this cluster.
 The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L515">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L515">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1575,7 +1575,7 @@ The name of a cluster subnet group to be associated with this cluster. If this p
 The cluster type to use. Either `single-node` or `multi-node`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L520">property <b>clusterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L520">property <b>clusterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1584,7 +1584,7 @@ The version of the Amazon Redshift engine software that you want to deploy on th
 The version selected runs on all the nodes in the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L525">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L525">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1593,7 +1593,7 @@ The name of the first database to be created when the cluster is created.
 If you do not provide a name, Amazon Redshift will create a default database called `dev`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-elasticIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L529">property <b>elasticIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L529">property <b>elasticIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1601,7 +1601,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 The Elastic IP (EIP) address for the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L533">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L533">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1609,7 +1609,7 @@ The Elastic IP (EIP) address for the cluster.
 If true , the data in the cluster is encrypted at rest.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L537">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L537">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1617,7 +1617,7 @@ If true , the data in the cluster is encrypted at rest.
 The connection endpoint
 
 <h4 class="pdoc-member-header" id="ClusterArgs-enhancedVpcRouting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L541">property <b>enhancedVpcRouting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L541">property <b>enhancedVpcRouting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enhancedVpcRouting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1625,7 +1625,7 @@ The connection endpoint
 If true , enhanced VPC routing is enabled.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L545">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L545">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>finalSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1633,7 +1633,7 @@ If true , enhanced VPC routing is enabled.
 The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, `skipFinalSnapshot` must be false.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-iamRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L549">property <b>iamRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L549">property <b>iamRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1641,7 +1641,7 @@ The identifier of the final snapshot that is to be created immediately before de
 A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L553">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L553">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1649,7 +1649,7 @@ A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be as
 The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L557">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L557">property <b>logging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterLogging'>ClusterLogging</a>&gt;;</code></pre>
@@ -1657,7 +1657,7 @@ The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` need
 Logging, documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-masterPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L563">property <b>masterPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L563">property <b>masterPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1667,7 +1667,7 @@ Note that this may show up in logs, and it will be stored in the state file. Pas
 contain at least one uppercase letter, one lowercase letter, and one number.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-masterUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L567">property <b>masterUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L567">property <b>masterUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1675,7 +1675,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 Username for the master DB user.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L571">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L571">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1683,7 +1683,7 @@ Username for the master DB user.
 The node type to be provisioned for the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-numberOfNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L575">property <b>numberOfNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L575">property <b>numberOfNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numberOfNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1691,7 +1691,7 @@ The node type to be provisioned for the cluster.
 The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-ownerAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L579">property <b>ownerAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L579">property <b>ownerAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1699,7 +1699,7 @@ The number of compute nodes in the cluster. This parameter is required when the 
 The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L584">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L584">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1708,7 +1708,7 @@ The port number on which the cluster accepts incoming connections.
 The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L589">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L589">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1717,7 +1717,7 @@ The weekly time range (in UTC) during which automated cluster maintenance can oc
 Format: ddd:hh24:mi-ddd:hh24:mi
 
 <h4 class="pdoc-member-header" id="ClusterArgs-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L593">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L593">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1725,7 +1725,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 If true, the cluster can be accessed from a public network. Default is `true`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L597">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L597">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipFinalSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1733,7 +1733,7 @@ If true, the cluster can be accessed from a public network. Default is `true`.
 Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-snapshotClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L601">property <b>snapshotClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L601">property <b>snapshotClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotClusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1741,7 +1741,7 @@ Determines whether a final snapshot of the cluster is created before Amazon Reds
 The name of the cluster the source snapshot was created from.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-snapshotCopy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L605">property <b>snapshotCopy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L605">property <b>snapshotCopy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotCopy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterSnapshotCopy'>ClusterSnapshotCopy</a>&gt;;</code></pre>
@@ -1749,7 +1749,7 @@ The name of the cluster the source snapshot was created from.
 Configuration of automatic copy of snapshots from one region to another. Documented below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L609">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L609">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1757,7 +1757,7 @@ Configuration of automatic copy of snapshots from one region to another. Documen
 The name of the snapshot from which to create the new cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L613">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L613">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1765,7 +1765,7 @@ The name of the snapshot from which to create the new cluster.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L617">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L617">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1773,7 +1773,7 @@ A map of tags to assign to the resource.
 A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L317">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L317">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -1783,7 +1783,7 @@ A list of Virtual Private Cloud (VPC) security groups to be associated with the 
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-allowVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L321">property <b>allowVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L321">property <b>allowVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1791,7 +1791,7 @@ Input properties used for looking up and filtering Cluster resources.
 If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true
 
 <h4 class="pdoc-member-header" id="ClusterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L325">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L325">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1799,7 +1799,7 @@ If true , major version upgrades can be applied during the maintenance window to
 Amazon Resource Name (ARN) of cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-automatedSnapshotRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L329">property <b>automatedSnapshotRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L329">property <b>automatedSnapshotRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automatedSnapshotRetentionPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1807,7 +1807,7 @@ Amazon Resource Name (ARN) of cluster
 The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.
 
 <h4 class="pdoc-member-header" id="ClusterState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L333">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L333">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1815,7 +1815,7 @@ The number of days that automated snapshots are retained. If the value is 0, aut
 The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L338">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L338">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1824,7 +1824,7 @@ The Cluster Identifier. Must be a lower case
 string.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L342">property <b>clusterParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L342">property <b>clusterParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterParameterGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1832,7 +1832,7 @@ string.
 The name of the parameter group to be associated with this cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterPublicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L346">property <b>clusterPublicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L346">property <b>clusterPublicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterPublicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1840,7 +1840,7 @@ The name of the parameter group to be associated with this cluster.
 The public key for the cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterRevisionNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L350">property <b>clusterRevisionNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L350">property <b>clusterRevisionNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterRevisionNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1848,7 +1848,7 @@ The public key for the cluster
 The specific revision number of the database in the cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterSecurityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L354">property <b>clusterSecurityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L354">property <b>clusterSecurityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSecurityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1856,7 +1856,7 @@ The specific revision number of the database in the cluster
 A list of security groups to be associated with this cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L358">property <b>clusterSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L358">property <b>clusterSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSubnetGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1864,7 +1864,7 @@ A list of security groups to be associated with this cluster.
 The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L362">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L362">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1872,7 +1872,7 @@ The name of a cluster subnet group to be associated with this cluster. If this p
 The cluster type to use. Either `single-node` or `multi-node`.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L367">property <b>clusterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L367">property <b>clusterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1881,7 +1881,7 @@ The version of the Amazon Redshift engine software that you want to deploy on th
 The version selected runs on all the nodes in the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L372">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L372">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1890,7 +1890,7 @@ The name of the first database to be created when the cluster is created.
 If you do not provide a name, Amazon Redshift will create a default database called `dev`.
 
 <h4 class="pdoc-member-header" id="ClusterState-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L376">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L376">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1898,7 +1898,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
 The DNS name of the cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-elasticIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L380">property <b>elasticIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L380">property <b>elasticIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1906,7 +1906,7 @@ The DNS name of the cluster
 The Elastic IP (EIP) address for the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L384">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L384">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1914,7 +1914,7 @@ The Elastic IP (EIP) address for the cluster.
 If true , the data in the cluster is encrypted at rest.
 
 <h4 class="pdoc-member-header" id="ClusterState-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L388">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L388">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1922,7 +1922,7 @@ If true , the data in the cluster is encrypted at rest.
 The connection endpoint
 
 <h4 class="pdoc-member-header" id="ClusterState-enhancedVpcRouting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L392">property <b>enhancedVpcRouting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L392">property <b>enhancedVpcRouting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enhancedVpcRouting?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1930,7 +1930,7 @@ The connection endpoint
 If true , enhanced VPC routing is enabled.
 
 <h4 class="pdoc-member-header" id="ClusterState-finalSnapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L396">property <b>finalSnapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L396">property <b>finalSnapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>finalSnapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1938,7 +1938,7 @@ If true , enhanced VPC routing is enabled.
 The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, `skipFinalSnapshot` must be false.
 
 <h4 class="pdoc-member-header" id="ClusterState-iamRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L400">property <b>iamRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L400">property <b>iamRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1946,7 +1946,7 @@ The identifier of the final snapshot that is to be created immediately before de
 A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
 
 <h4 class="pdoc-member-header" id="ClusterState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L404">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L404">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1954,7 +1954,7 @@ A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be as
 The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` needs to be set to true.
 
 <h4 class="pdoc-member-header" id="ClusterState-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L408">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L408">property <b>logging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterLogging'>ClusterLogging</a>&gt;;</code></pre>
@@ -1962,7 +1962,7 @@ The ARN for the KMS encryption key. When specifying `kmsKeyId`, `encrypted` need
 Logging, documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-masterPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L414">property <b>masterPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L414">property <b>masterPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1972,7 +1972,7 @@ Note that this may show up in logs, and it will be stored in the state file. Pas
 contain at least one uppercase letter, one lowercase letter, and one number.
 
 <h4 class="pdoc-member-header" id="ClusterState-masterUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L418">property <b>masterUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L418">property <b>masterUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1980,7 +1980,7 @@ contain at least one uppercase letter, one lowercase letter, and one number.
 Username for the master DB user.
 
 <h4 class="pdoc-member-header" id="ClusterState-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L422">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L422">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1988,7 +1988,7 @@ Username for the master DB user.
 The node type to be provisioned for the cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-numberOfNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L426">property <b>numberOfNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L426">property <b>numberOfNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numberOfNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1996,7 +1996,7 @@ The node type to be provisioned for the cluster.
 The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.
 
 <h4 class="pdoc-member-header" id="ClusterState-ownerAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L430">property <b>ownerAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L430">property <b>ownerAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2004,7 +2004,7 @@ The number of compute nodes in the cluster. This parameter is required when the 
 The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.
 
 <h4 class="pdoc-member-header" id="ClusterState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L435">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L435">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2013,7 +2013,7 @@ The port number on which the cluster accepts incoming connections.
 The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
 
 <h4 class="pdoc-member-header" id="ClusterState-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L440">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L440">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2022,7 +2022,7 @@ The weekly time range (in UTC) during which automated cluster maintenance can oc
 Format: ddd:hh24:mi-ddd:hh24:mi
 
 <h4 class="pdoc-member-header" id="ClusterState-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L444">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L444">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2030,7 +2030,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
 If true, the cluster can be accessed from a public network. Default is `true`.
 
 <h4 class="pdoc-member-header" id="ClusterState-skipFinalSnapshot">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L448">property <b>skipFinalSnapshot</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L448">property <b>skipFinalSnapshot</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipFinalSnapshot?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2038,7 +2038,7 @@ If true, the cluster can be accessed from a public network. Default is `true`.
 Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
 
 <h4 class="pdoc-member-header" id="ClusterState-snapshotClusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L452">property <b>snapshotClusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L452">property <b>snapshotClusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotClusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2046,7 +2046,7 @@ Determines whether a final snapshot of the cluster is created before Amazon Reds
 The name of the cluster the source snapshot was created from.
 
 <h4 class="pdoc-member-header" id="ClusterState-snapshotCopy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L456">property <b>snapshotCopy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L456">property <b>snapshotCopy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotCopy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterSnapshotCopy'>ClusterSnapshotCopy</a>&gt;;</code></pre>
@@ -2054,7 +2054,7 @@ The name of the cluster the source snapshot was created from.
 Configuration of automatic copy of snapshots from one region to another. Documented below.
 
 <h4 class="pdoc-member-header" id="ClusterState-snapshotIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L460">property <b>snapshotIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L460">property <b>snapshotIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2062,7 +2062,7 @@ Configuration of automatic copy of snapshots from one region to another. Documen
 The name of the snapshot from which to create the new cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L464">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L464">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2070,7 +2070,7 @@ The name of the snapshot from which to create the new cluster.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ClusterState-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/cluster.ts#L468">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/cluster.ts#L468">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2078,7 +2078,7 @@ A map of tags to assign to the resource.
 A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
 
 <h3 class="pdoc-module-header" id="EventSubscriptionArgs" data-link-title="EventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L205">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L205">
         interface <strong>EventSubscriptionArgs</strong>
     </a>
 </h3>
@@ -2088,7 +2088,7 @@ A list of Virtual Private Cloud (VPC) security groups to be associated with the 
 The set of arguments for constructing a EventSubscription resource.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L209">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L209">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2096,7 +2096,7 @@ The set of arguments for constructing a EventSubscription resource.
 A boolean flag to enable/disable the subscription. Defaults to true.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L213">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L213">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventCategories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2104,7 +2104,7 @@ A boolean flag to enable/disable the subscription. Defaults to true.
 A list of event categories for a SourceType that you want to subscribe to. See https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html or run `aws redshift describe-event-categories`.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L217">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L217">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2112,7 +2112,7 @@ A list of event categories for a SourceType that you want to subscribe to. See h
 The name of the Redshift event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L221">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L221">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2120,7 +2120,7 @@ The name of the Redshift event subscription.
 The event severity to be published by the notification subscription. Valid options are `INFO` or `ERROR`.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L225">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L225">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2128,7 +2128,7 @@ The event severity to be published by the notification subscription. Valid optio
 The ARN of the SNS topic to send events to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L229">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L229">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2136,7 +2136,7 @@ The ARN of the SNS topic to send events to.
 A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a sourceType must also be specified.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L233">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L233">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2144,7 +2144,7 @@ A list of identifiers of the event sources for which events will be returned. If
 The type of source that will be generating the events. Valid options are `cluster`, `cluster-parameter-group`, `cluster-security-group`, or `cluster-snapshot`. If not set, all sources will be subscribed to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L237">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L237">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2152,7 +2152,7 @@ The type of source that will be generating the events. Valid options are `cluste
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="EventSubscriptionState" data-link-title="EventSubscriptionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L164">
         interface <strong>EventSubscriptionState</strong>
     </a>
 </h3>
@@ -2162,17 +2162,17 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering EventSubscription resources.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L165">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L165">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscriptionState-customerAwsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L166">property <b>customerAwsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L166">property <b>customerAwsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerAwsId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscriptionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L170">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L170">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2180,7 +2180,7 @@ Input properties used for looking up and filtering EventSubscription resources.
 A boolean flag to enable/disable the subscription. Defaults to true.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L174">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L174">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventCategories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2188,7 +2188,7 @@ A boolean flag to enable/disable the subscription. Defaults to true.
 A list of event categories for a SourceType that you want to subscribe to. See https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html or run `aws redshift describe-event-categories`.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L178">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2196,7 +2196,7 @@ A list of event categories for a SourceType that you want to subscribe to. See h
 The name of the Redshift event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L182">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L182">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2204,7 +2204,7 @@ The name of the Redshift event subscription.
 The event severity to be published by the notification subscription. Valid options are `INFO` or `ERROR`.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L186">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L186">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2212,7 +2212,7 @@ The event severity to be published by the notification subscription. Valid optio
 The ARN of the SNS topic to send events to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L190">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L190">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2220,7 +2220,7 @@ The ARN of the SNS topic to send events to.
 A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a sourceType must also be specified.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L194">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L194">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2228,12 +2228,12 @@ A list of identifiers of the event sources for which events will be returned. If
 The type of source that will be generating the events. Valid options are `cluster`, `cluster-parameter-group`, `cluster-security-group`, or `cluster-snapshot`. If not set, all sources will be subscribed to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L195">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L195">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscriptionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/eventSubscription.ts#L199">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/eventSubscription.ts#L199">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2241,7 +2241,7 @@ The type of source that will be generating the events. Valid options are `cluste
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetClusterArgs" data-link-title="GetClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L59">
         interface <strong>GetClusterArgs</strong>
     </a>
 </h3>
@@ -2251,7 +2251,7 @@ A map of tags to assign to the resource.
 A collection of arguments for invoking getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L63">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L63">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2259,7 +2259,7 @@ A collection of arguments for invoking getCluster.
 The cluster identifier
 
 <h4 class="pdoc-member-header" id="GetClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L67">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L67">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2267,7 +2267,7 @@ The cluster identifier
 The tags associated to the cluster
 
 <h3 class="pdoc-module-header" id="GetClusterResult" data-link-title="GetClusterResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L73">
         interface <strong>GetClusterResult</strong>
     </a>
 </h3>
@@ -2277,7 +2277,7 @@ The tags associated to the cluster
 A collection of values returned by getCluster.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-allowVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L77">property <b>allowVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L77">property <b>allowVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowVersionUpgrade: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2285,7 +2285,7 @@ A collection of values returned by getCluster.
 Whether major version upgrades can be applied during maintenance period
 
 <h4 class="pdoc-member-header" id="GetClusterResult-automatedSnapshotRetentionPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L81">property <b>automatedSnapshotRetentionPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L81">property <b>automatedSnapshotRetentionPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automatedSnapshotRetentionPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2293,7 +2293,7 @@ Whether major version upgrades can be applied during maintenance period
 The backup retention period
 
 <h4 class="pdoc-member-header" id="GetClusterResult-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L85">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L85">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2301,7 +2301,7 @@ The backup retention period
 The availability zone of the cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-bucketName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L89">property <b>bucketName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L89">property <b>bucketName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bucketName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2309,7 +2309,7 @@ The availability zone of the cluster
 The name of the S3 bucket where the log files are to be stored
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L93">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L93">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2317,7 +2317,7 @@ The name of the S3 bucket where the log files are to be stored
 The cluster identifier
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterParameterGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L97">property <b>clusterParameterGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L97">property <b>clusterParameterGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterParameterGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2325,7 +2325,7 @@ The cluster identifier
 The name of the parameter group to be associated with this cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterPublicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L101">property <b>clusterPublicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L101">property <b>clusterPublicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterPublicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2333,7 +2333,7 @@ The name of the parameter group to be associated with this cluster
 The public key for the cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterRevisionNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L105">property <b>clusterRevisionNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L105">property <b>clusterRevisionNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterRevisionNumber: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2341,7 +2341,7 @@ The public key for the cluster
 The cluster revision number
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterSecurityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L109">property <b>clusterSecurityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L109">property <b>clusterSecurityGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSecurityGroups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2349,7 +2349,7 @@ The cluster revision number
 The security groups associated with the cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterSubnetGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L113">property <b>clusterSubnetGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L113">property <b>clusterSubnetGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSubnetGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2357,7 +2357,7 @@ The security groups associated with the cluster
 The name of a cluster subnet group to be associated with this cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L117">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L117">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2365,12 +2365,12 @@ The name of a cluster subnet group to be associated with this cluster
 The cluster type
 
 <h4 class="pdoc-member-header" id="GetClusterResult-clusterVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L118">property <b>clusterVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L118">property <b>clusterVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClusterResult-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L122">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L122">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2378,7 +2378,7 @@ The cluster type
 The name of the default database in the cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-elasticIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L126">property <b>elasticIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L126">property <b>elasticIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2386,7 +2386,7 @@ The name of the default database in the cluster
 The Elastic IP of the cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-enableLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L130">property <b>enableLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L130">property <b>enableLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableLogging: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2394,7 +2394,7 @@ The Elastic IP of the cluster
 Whether cluster logging is enabled
 
 <h4 class="pdoc-member-header" id="GetClusterResult-encrypted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L134">property <b>encrypted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L134">property <b>encrypted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encrypted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2402,7 +2402,7 @@ Whether cluster logging is enabled
 Whether the cluster data is encrypted
 
 <h4 class="pdoc-member-header" id="GetClusterResult-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L138">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L138">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2410,7 +2410,7 @@ Whether the cluster data is encrypted
 The cluster endpoint
 
 <h4 class="pdoc-member-header" id="GetClusterResult-enhancedVpcRouting">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L142">property <b>enhancedVpcRouting</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L142">property <b>enhancedVpcRouting</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enhancedVpcRouting: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2418,7 +2418,7 @@ The cluster endpoint
 Whether enhanced VPC routing is enabled
 
 <h4 class="pdoc-member-header" id="GetClusterResult-iamRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L146">property <b>iamRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L146">property <b>iamRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoles: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2426,7 +2426,7 @@ Whether enhanced VPC routing is enabled
 The IAM roles associated to the cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L150">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L150">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2434,7 +2434,7 @@ The IAM roles associated to the cluster
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClusterResult-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L154">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L154">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2442,7 +2442,7 @@ The provider-assigned unique ID for this managed resource.
 The KMS encryption key associated to the cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-masterUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L158">property <b>masterUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L158">property <b>masterUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterUsername: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2450,7 +2450,7 @@ The KMS encryption key associated to the cluster
 Username for the master DB user
 
 <h4 class="pdoc-member-header" id="GetClusterResult-nodeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L162">property <b>nodeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L162">property <b>nodeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2458,7 +2458,7 @@ Username for the master DB user
 The cluster node type
 
 <h4 class="pdoc-member-header" id="GetClusterResult-numberOfNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L166">property <b>numberOfNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L166">property <b>numberOfNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numberOfNodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2466,7 +2466,7 @@ The cluster node type
 The number of nodes in the cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L170">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L170">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2474,7 +2474,7 @@ The number of nodes in the cluster
 The port the cluster responds on
 
 <h4 class="pdoc-member-header" id="GetClusterResult-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L174">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L174">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2482,7 +2482,7 @@ The port the cluster responds on
 The maintenance window
 
 <h4 class="pdoc-member-header" id="GetClusterResult-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L178">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L178">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2490,7 +2490,7 @@ The maintenance window
 Whether the cluster is publicly accessible
 
 <h4 class="pdoc-member-header" id="GetClusterResult-s3KeyPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L182">property <b>s3KeyPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L182">property <b>s3KeyPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3KeyPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2498,7 +2498,7 @@ Whether the cluster is publicly accessible
 The folder inside the S3 bucket where the log files are stored
 
 <h4 class="pdoc-member-header" id="GetClusterResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L186">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L186">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2506,7 +2506,7 @@ The folder inside the S3 bucket where the log files are stored
 The tags associated to the cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L190">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L190">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2514,7 +2514,7 @@ The tags associated to the cluster
 The VPC Id associated with the cluster
 
 <h4 class="pdoc-member-header" id="GetClusterResult-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getCluster.ts#L194">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getCluster.ts#L194">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2522,7 +2522,7 @@ The VPC Id associated with the cluster
 The VPC security group Ids associated with the cluster
 
 <h3 class="pdoc-module-header" id="GetServiceAccountArgs" data-link-title="GetServiceAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getServiceAccount.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getServiceAccount.ts#L66">
         interface <strong>GetServiceAccountArgs</strong>
     </a>
 </h3>
@@ -2532,7 +2532,7 @@ The VPC security group Ids associated with the cluster
 A collection of arguments for invoking getServiceAccount.
 
 <h4 class="pdoc-member-header" id="GetServiceAccountArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getServiceAccount.ts#L71">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getServiceAccount.ts#L71">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2541,7 +2541,7 @@ Name of the region whose AWS Redshift account ID is desired.
 Defaults to the region from the AWS provider configuration.
 
 <h3 class="pdoc-module-header" id="GetServiceAccountResult" data-link-title="GetServiceAccountResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getServiceAccount.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getServiceAccount.ts#L77">
         interface <strong>GetServiceAccountResult</strong>
     </a>
 </h3>
@@ -2551,7 +2551,7 @@ Defaults to the region from the AWS provider configuration.
 A collection of values returned by getServiceAccount.
 
 <h4 class="pdoc-member-header" id="GetServiceAccountResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getServiceAccount.ts#L81">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getServiceAccount.ts#L81">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2559,7 +2559,7 @@ A collection of values returned by getServiceAccount.
 The ARN of the AWS Redshift service account in the selected region.
 
 <h4 class="pdoc-member-header" id="GetServiceAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getServiceAccount.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getServiceAccount.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2567,12 +2567,12 @@ The ARN of the AWS Redshift service account in the selected region.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceAccountResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/getServiceAccount.ts#L86">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/getServiceAccount.ts#L86">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ParameterGroupArgs" data-link-title="ParameterGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L164">
         interface <strong>ParameterGroupArgs</strong>
     </a>
 </h3>
@@ -2582,7 +2582,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a ParameterGroup resource.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L168">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L168">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2590,7 +2590,7 @@ The set of arguments for constructing a ParameterGroup resource.
 The description of the Redshift parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L172">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L172">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2598,7 +2598,7 @@ The description of the Redshift parameter group. Defaults to "Managed by Pulumi"
 The family of the Redshift parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L176">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2606,7 +2606,7 @@ The family of the Redshift parameter group.
 The name of the Redshift parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L180">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L180">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -2614,7 +2614,7 @@ The name of the Redshift parameter.
 A list of Redshift parameters to apply.
 
 <h4 class="pdoc-member-header" id="ParameterGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L184">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L184">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2622,7 +2622,7 @@ A list of Redshift parameters to apply.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ParameterGroupState" data-link-title="ParameterGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L134">
         interface <strong>ParameterGroupState</strong>
     </a>
 </h3>
@@ -2632,7 +2632,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering ParameterGroup resources.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L138">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L138">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2640,7 +2640,7 @@ Input properties used for looking up and filtering ParameterGroup resources.
 Amazon Resource Name (ARN) of parameter group
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L142">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L142">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2648,7 +2648,7 @@ Amazon Resource Name (ARN) of parameter group
 The description of the Redshift parameter group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-family">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L146">property <b>family</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L146">property <b>family</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>family?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2656,7 +2656,7 @@ The description of the Redshift parameter group. Defaults to "Managed by Pulumi"
 The family of the Redshift parameter group.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2664,7 +2664,7 @@ The family of the Redshift parameter group.
 The name of the Redshift parameter.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L154">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L154">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ParameterGroupParameter'>ParameterGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -2672,7 +2672,7 @@ The name of the Redshift parameter.
 A list of Redshift parameters to apply.
 
 <h4 class="pdoc-member-header" id="ParameterGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/parameterGroup.ts#L158">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/parameterGroup.ts#L158">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2680,7 +2680,7 @@ A list of Redshift parameters to apply.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="SecurityGroupArgs" data-link-title="SecurityGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L122">
         interface <strong>SecurityGroupArgs</strong>
     </a>
 </h3>
@@ -2690,7 +2690,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a SecurityGroup resource.
 
 <h4 class="pdoc-member-header" id="SecurityGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L126">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L126">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2698,7 +2698,7 @@ The set of arguments for constructing a SecurityGroup resource.
 The description of the Redshift security group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SecurityGroupArgs-ingress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L130">property <b>ingress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L130">property <b>ingress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ingress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupIngress'>SecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
@@ -2706,7 +2706,7 @@ The description of the Redshift security group. Defaults to "Managed by Pulumi".
 A list of ingress rules.
 
 <h4 class="pdoc-member-header" id="SecurityGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L134">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2714,7 +2714,7 @@ A list of ingress rules.
 The name of the Redshift security group.
 
 <h3 class="pdoc-module-header" id="SecurityGroupState" data-link-title="SecurityGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L104">
         interface <strong>SecurityGroupState</strong>
     </a>
 </h3>
@@ -2724,7 +2724,7 @@ The name of the Redshift security group.
 Input properties used for looking up and filtering SecurityGroup resources.
 
 <h4 class="pdoc-member-header" id="SecurityGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L108">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L108">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2732,7 +2732,7 @@ Input properties used for looking up and filtering SecurityGroup resources.
 The description of the Redshift security group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SecurityGroupState-ingress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L112">property <b>ingress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L112">property <b>ingress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ingress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SecurityGroupIngress'>SecurityGroupIngress</a>&gt;[]&gt;;</code></pre>
@@ -2740,7 +2740,7 @@ The description of the Redshift security group. Defaults to "Managed by Pulumi".
 A list of ingress rules.
 
 <h4 class="pdoc-member-header" id="SecurityGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/securityGroup.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/securityGroup.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2748,7 +2748,7 @@ A list of ingress rules.
 The name of the Redshift security group.
 
 <h3 class="pdoc-module-header" id="SnapshotCopyGrantArgs" data-link-title="SnapshotCopyGrantArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L132">
         interface <strong>SnapshotCopyGrantArgs</strong>
     </a>
 </h3>
@@ -2758,7 +2758,7 @@ The name of the Redshift security group.
 The set of arguments for constructing a SnapshotCopyGrant resource.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrantArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L136">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L136">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2766,7 +2766,7 @@ The set of arguments for constructing a SnapshotCopyGrant resource.
 The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrantArgs-snapshotCopyGrantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L140">property <b>snapshotCopyGrantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L140">property <b>snapshotCopyGrantName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotCopyGrantName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2774,7 +2774,7 @@ The unique identifier for the customer master key (CMK) that the grant applies t
 A friendly name for identifying the grant.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrantArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L144">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L144">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2782,7 +2782,7 @@ A friendly name for identifying the grant.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="SnapshotCopyGrantState" data-link-title="SnapshotCopyGrantState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L110">
         interface <strong>SnapshotCopyGrantState</strong>
     </a>
 </h3>
@@ -2792,7 +2792,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering SnapshotCopyGrant resources.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrantState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L114">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L114">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2800,7 +2800,7 @@ Input properties used for looking up and filtering SnapshotCopyGrant resources.
 Amazon Resource Name (ARN) of snapshot copy grant
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrantState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L118">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L118">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2808,7 +2808,7 @@ Amazon Resource Name (ARN) of snapshot copy grant
 The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrantState-snapshotCopyGrantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L122">property <b>snapshotCopyGrantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L122">property <b>snapshotCopyGrantName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snapshotCopyGrantName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2816,7 +2816,7 @@ The unique identifier for the customer master key (CMK) that the grant applies t
 A friendly name for identifying the grant.
 
 <h4 class="pdoc-member-header" id="SnapshotCopyGrantState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L126">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotCopyGrant.ts#L126">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2824,7 +2824,7 @@ A friendly name for identifying the grant.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="SnapshotScheduleArgs" data-link-title="SnapshotScheduleArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L153">
         interface <strong>SnapshotScheduleArgs</strong>
     </a>
 </h3>
@@ -2834,7 +2834,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a SnapshotSchedule resource.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleArgs-definitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L157">property <b>definitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L157">property <b>definitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definitions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2842,7 +2842,7 @@ The set of arguments for constructing a SnapshotSchedule resource.
 The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L161">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L161">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2850,7 +2850,7 @@ The definition of the snapshot schedule. The definition is made up of schedule e
 The description of the snapshot schedule.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleArgs-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L165">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L165">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2858,7 +2858,7 @@ The description of the snapshot schedule.
 Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleArgs-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L169">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L169">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2866,7 +2866,7 @@ Whether to destroy all associated clusters with this snapshot schedule on deleti
 The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleArgs-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L174">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L174">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2875,7 +2875,7 @@ Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L178">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L178">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2883,7 +2883,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="SnapshotScheduleAssociationArgs" data-link-title="SnapshotScheduleAssociationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L122">
         interface <strong>SnapshotScheduleAssociationArgs</strong>
     </a>
 </h3>
@@ -2893,7 +2893,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a SnapshotScheduleAssociation resource.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociationArgs-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L126">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L126">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2901,7 +2901,7 @@ The set of arguments for constructing a SnapshotScheduleAssociation resource.
 The cluster identifier.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociationArgs-scheduleIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L130">property <b>scheduleIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L130">property <b>scheduleIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleIdentifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2909,7 +2909,7 @@ The cluster identifier.
 The snapshot schedule identifier.
 
 <h3 class="pdoc-module-header" id="SnapshotScheduleAssociationState" data-link-title="SnapshotScheduleAssociationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L108">
         interface <strong>SnapshotScheduleAssociationState</strong>
     </a>
 </h3>
@@ -2919,7 +2919,7 @@ The snapshot schedule identifier.
 Input properties used for looking up and filtering SnapshotScheduleAssociation resources.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociationState-clusterIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L112">property <b>clusterIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L112">property <b>clusterIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2927,7 +2927,7 @@ Input properties used for looking up and filtering SnapshotScheduleAssociation r
 The cluster identifier.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleAssociationState-scheduleIdentifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L116">property <b>scheduleIdentifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotScheduleAssociation.ts#L116">property <b>scheduleIdentifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduleIdentifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2935,7 +2935,7 @@ The cluster identifier.
 The snapshot schedule identifier.
 
 <h3 class="pdoc-module-header" id="SnapshotScheduleState" data-link-title="SnapshotScheduleState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L121">
         interface <strong>SnapshotScheduleState</strong>
     </a>
 </h3>
@@ -2945,12 +2945,12 @@ The snapshot schedule identifier.
 Input properties used for looking up and filtering SnapshotSchedule resources.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L122">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L122">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SnapshotScheduleState-definitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L126">property <b>definitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L126">property <b>definitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definitions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2958,7 +2958,7 @@ Input properties used for looking up and filtering SnapshotSchedule resources.
 The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L130">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L130">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2966,7 +2966,7 @@ The definition of the snapshot schedule. The definition is made up of schedule e
 The description of the snapshot schedule.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleState-forceDestroy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L134">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L134">property <b>forceDestroy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2974,7 +2974,7 @@ The description of the snapshot schedule.
 Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleState-identifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L138">property <b>identifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L138">property <b>identifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2982,7 +2982,7 @@ Whether to destroy all associated clusters with this snapshot schedule on deleti
 The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleState-identifierPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L143">property <b>identifierPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L143">property <b>identifierPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identifierPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2991,7 +2991,7 @@ Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifier`.
 
 <h4 class="pdoc-member-header" id="SnapshotScheduleState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/snapshotSchedule.ts#L147">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/snapshotSchedule.ts#L147">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2999,7 +2999,7 @@ identifier beginning with the specified prefix. Conflicts with `identifier`.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="SubnetGroupArgs" data-link-title="SubnetGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L161">
         interface <strong>SubnetGroupArgs</strong>
     </a>
 </h3>
@@ -3009,7 +3009,7 @@ A map of tags to assign to the resource.
 The set of arguments for constructing a SubnetGroup resource.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L165">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L165">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3017,7 +3017,7 @@ The set of arguments for constructing a SubnetGroup resource.
 The description of the Redshift Subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L169">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L169">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3025,7 +3025,7 @@ The description of the Redshift Subnet group. Defaults to "Managed by Pulumi".
 The name of the Redshift Subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L173">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L173">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3033,7 +3033,7 @@ The name of the Redshift Subnet group.
 An array of VPC subnet IDs.
 
 <h4 class="pdoc-member-header" id="SubnetGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L177">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L177">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3041,7 +3041,7 @@ An array of VPC subnet IDs.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="SubnetGroupState" data-link-title="SubnetGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L135">
         interface <strong>SubnetGroupState</strong>
     </a>
 </h3>
@@ -3051,7 +3051,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering SubnetGroup resources.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L139">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L139">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3059,7 +3059,7 @@ Input properties used for looking up and filtering SubnetGroup resources.
 Amazon Resource Name (ARN) of the Redshift Subnet group name
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L143">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L143">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3067,7 +3067,7 @@ Amazon Resource Name (ARN) of the Redshift Subnet group name
 The description of the Redshift Subnet group. Defaults to "Managed by Pulumi".
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L147">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3075,7 +3075,7 @@ The description of the Redshift Subnet group. Defaults to "Managed by Pulumi".
 The name of the Redshift Subnet group.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L151">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L151">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3083,7 +3083,7 @@ The name of the Redshift Subnet group.
 An array of VPC subnet IDs.
 
 <h4 class="pdoc-member-header" id="SubnetGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/redshift/subnetGroup.ts#L155">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/redshift/subnetGroup.ts#L155">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

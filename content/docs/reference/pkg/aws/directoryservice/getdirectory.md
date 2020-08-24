@@ -98,7 +98,7 @@ const example = aws.directoryservice.getDirectory({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_directory(</span>directory_id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_directory(</span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDirectoryResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the directory/connector.
 {{% /md %}}</dd>
@@ -962,7 +962,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the directory/connector.
 {{% /md %}}</dd>
@@ -1226,8 +1226,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="connectips_python">
-<a href="#connectips_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Ips</a>
+        <span id="connect_ips_python">
+<a href="#connect_ips_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1237,8 +1237,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="customerdnsips_python">
-<a href="#customerdnsips_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Dns<wbr>Ips</a>
+        <span id="customer_dns_ips_python">
+<a href="#customer_dns_ips_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>dns_<wbr>ips</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1248,8 +1248,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="customerusername_python">
-<a href="#customerusername_python" style="color: inherit; text-decoration: inherit;">customer<wbr>Username</a>
+        <span id="customer_username_python">
+<a href="#customer_username_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

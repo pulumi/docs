@@ -110,10 +110,10 @@ dynamodb_scheduled_action = aws.appautoscaling.ScheduledAction("dynamodbSchedule
     resource_id=dynamodb_target.resource_id,
     scalable_dimension=dynamodb_target.scalable_dimension,
     schedule="at(2006-01-02T15:04:05)",
-    scalable_target_action={
-        "min_capacity": 1,
-        "max_capacity": 200,
-    })
+    scalable_target_action=aws.appautoscaling.ScheduledActionScalableTargetActionArgs(
+        min_capacity=1,
+        max_capacity=200,
+    ))
 ```
 
 {{% /example %}}
@@ -239,10 +239,10 @@ ecs_scheduled_action = aws.appautoscaling.ScheduledAction("ecsScheduledAction",
     resource_id=ecs_target.resource_id,
     scalable_dimension=ecs_target.scalable_dimension,
     schedule="at(2006-01-02T15:04:05)",
-    scalable_target_action={
-        "min_capacity": 1,
-        "max_capacity": 10,
-    })
+    scalable_target_action=aws.appautoscaling.ScheduledActionScalableTargetActionArgs(
+        min_capacity=1,
+        max_capacity=10,
+    ))
 ```
 
 {{% /example %}}
@@ -286,7 +286,7 @@ const ecsScheduledAction = new aws.appautoscaling.ScheduledAction("ecsScheduledA
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appautoscaling/#pulumi_aws.appautoscaling.ScheduledAction">ScheduledAction</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>end_time=None<span class="p">, </span>name=None<span class="p">, </span>resource_id=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>scalable_target_action=None<span class="p">, </span>schedule=None<span class="p">, </span>service_namespace=None<span class="p">, </span>start_time=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appautoscaling/#pulumi_aws.appautoscaling.ScheduledAction">ScheduledAction</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scalable_dimension</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scalable_target_action</span><span class="p">:</span> <span class="nx">Optional[ScheduledActionScalableTargetActionArgs]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -804,7 +804,7 @@ The ScheduledAction resource accepts the following [input]({{< relref "/docs/int
 <a href="#scalable_target_action_python" style="color: inherit; text-decoration: inherit;">scalable_<wbr>target_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledactionscalabletargetaction">Dict[Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action]</a></span>
+        <span class="property-type"><a href="#scheduledactionscalabletargetaction">Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The new minimum and maximum capacity. You can set both values or just one. See below
 {{% /md %}}</dd>
@@ -973,7 +973,8 @@ Get an existing ScheduledAction resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>end_time=None<span class="p">, </span>name=None<span class="p">, </span>resource_id=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>scalable_target_action=None<span class="p">, </span>schedule=None<span class="p">, </span>service_namespace=None<span class="p">, </span>start_time=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scalable_dimension</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scalable_target_action</span><span class="p">:</span> <span class="nx">Optional[ScheduledActionScalableTargetActionArgs]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ScheduledAction</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -981,7 +982,7 @@ Get an existing ScheduledAction resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.ScheduledAction.html">ScheduledAction</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.ScheduledActionState.html">ScheduledActionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.ScheduledAction.html">ScheduledAction</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.ScheduledActionState.html">ScheduledActionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1466,7 +1467,7 @@ The following state arguments are supported:
 <a href="#state_scalable_target_action_python" style="color: inherit; text-decoration: inherit;">scalable_<wbr>target_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledactionscalabletargetaction">Dict[Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action]</a></span>
+        <span class="property-type"><a href="#scheduledactionscalabletargetaction">Scheduled<wbr>Action<wbr>Scalable<wbr>Target<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The new minimum and maximum capacity. You can set both values or just one. See below
 {{% /md %}}</dd>

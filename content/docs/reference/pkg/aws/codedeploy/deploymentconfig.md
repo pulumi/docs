@@ -158,33 +158,33 @@ import pulumi_aws as aws
 
 foo_deployment_config = aws.codedeploy.DeploymentConfig("fooDeploymentConfig",
     deployment_config_name="test-deployment-config",
-    minimum_healthy_hosts={
-        "type": "HOST_COUNT",
-        "value": 2,
-    })
+    minimum_healthy_hosts=aws.codedeploy.DeploymentConfigMinimumHealthyHostsArgs(
+        type="HOST_COUNT",
+        value=2,
+    ))
 foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
     app_name=aws_codedeploy_app["foo_app"]["name"],
     deployment_group_name="bar",
     service_role_arn=aws_iam_role["foo_role"]["arn"],
     deployment_config_name=foo_deployment_config.id,
-    ec2_tag_filters=[{
-        "key": "filterkey",
-        "type": "KEY_AND_VALUE",
-        "value": "filtervalue",
-    }],
-    trigger_configurations=[{
-        "triggerEvents": ["DeploymentFailure"],
-        "triggerName": "foo-trigger",
-        "triggerTargetArn": "foo-topic-arn",
-    }],
-    auto_rollback_configuration={
-        "enabled": True,
-        "events": ["DEPLOYMENT_FAILURE"],
-    },
-    alarm_configuration={
-        "alarms": ["my-alarm-name"],
-        "enabled": True,
-    })
+    ec2_tag_filters=[aws.codedeploy.DeploymentGroupEc2TagFilterArgs(
+        key="filterkey",
+        type="KEY_AND_VALUE",
+        value="filtervalue",
+    )],
+    trigger_configurations=[aws.codedeploy.DeploymentGroupTriggerConfigurationArgs(
+        trigger_events=["DeploymentFailure"],
+        trigger_name="foo-trigger",
+        trigger_target_arn="foo-topic-arn",
+    )],
+    auto_rollback_configuration=aws.codedeploy.DeploymentGroupAutoRollbackConfigurationArgs(
+        enabled=True,
+        events=["DEPLOYMENT_FAILURE"],
+    ),
+    alarm_configuration=aws.codedeploy.DeploymentGroupAlarmConfigurationArgs(
+        alarms=["my-alarm-name"],
+        enabled=True,
+    ))
 ```
 
 {{% /example %}}
@@ -345,26 +345,26 @@ import pulumi_aws as aws
 foo_deployment_config = aws.codedeploy.DeploymentConfig("fooDeploymentConfig",
     deployment_config_name="test-deployment-config",
     compute_platform="Lambda",
-    traffic_routing_config={
-        "type": "TimeBasedLinear",
-        "timeBasedLinear": {
-            "interval": 10,
-            "percentage": 10,
-        },
-    })
+    traffic_routing_config=aws.codedeploy.DeploymentConfigTrafficRoutingConfigArgs(
+        type="TimeBasedLinear",
+        time_based_linear=aws.codedeploy.DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs(
+            interval=10,
+            percentage=10,
+        ),
+    ))
 foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
     app_name=aws_codedeploy_app["foo_app"]["name"],
     deployment_group_name="bar",
     service_role_arn=aws_iam_role["foo_role"]["arn"],
     deployment_config_name=foo_deployment_config.id,
-    auto_rollback_configuration={
-        "enabled": True,
-        "events": ["DEPLOYMENT_STOP_ON_ALARM"],
-    },
-    alarm_configuration={
-        "alarms": ["my-alarm-name"],
-        "enabled": True,
-    })
+    auto_rollback_configuration=aws.codedeploy.DeploymentGroupAutoRollbackConfigurationArgs(
+        enabled=True,
+        events=["DEPLOYMENT_STOP_ON_ALARM"],
+    ),
+    alarm_configuration=aws.codedeploy.DeploymentGroupAlarmConfigurationArgs(
+        alarms=["my-alarm-name"],
+        enabled=True,
+    ))
 ```
 
 {{% /example %}}
@@ -416,7 +416,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codedeploy/#pulumi_aws.codedeploy.DeploymentConfig">DeploymentConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>compute_platform=None<span class="p">, </span>deployment_config_name=None<span class="p">, </span>minimum_healthy_hosts=None<span class="p">, </span>traffic_routing_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codedeploy/#pulumi_aws.codedeploy.DeploymentConfig">DeploymentConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compute_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_healthy_hosts</span><span class="p">:</span> <span class="nx">Optional[DeploymentConfigMinimumHealthyHostsArgs]</span> = None<span class="p">, </span><span class="nx">traffic_routing_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentConfigTrafficRoutingConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -769,7 +769,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
 <a href="#minimum_healthy_hosts_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>healthy_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Dict[Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts]</a></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd>
@@ -780,7 +780,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
 <a href="#traffic_routing_config_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>routing_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config]</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd>
@@ -927,7 +927,8 @@ Get an existing DeploymentConfig resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>compute_platform=None<span class="p">, </span>deployment_config_id=None<span class="p">, </span>deployment_config_name=None<span class="p">, </span>minimum_healthy_hosts=None<span class="p">, </span>traffic_routing_config=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">compute_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_config_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_config_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_healthy_hosts</span><span class="p">:</span> <span class="nx">Optional[DeploymentConfigMinimumHealthyHostsArgs]</span> = None<span class="p">, </span><span class="nx">traffic_routing_config</span><span class="p">:</span> <span class="nx">Optional[DeploymentConfigTrafficRoutingConfigArgs]</span> = None<span class="p">) -&gt;</span> DeploymentConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -935,7 +936,7 @@ Get an existing DeploymentConfig resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfig.html">DeploymentConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfigState.html">DeploymentConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfig.html">DeploymentConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfigState.html">DeploymentConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1266,7 +1267,7 @@ The following state arguments are supported:
 <a href="#state_minimum_healthy_hosts_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>healthy_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Dict[Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts]</a></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
 {{% /md %}}</dd>
@@ -1277,7 +1278,7 @@ The following state arguments are supported:
 <a href="#state_traffic_routing_config_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>routing_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config]</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
 {{% /md %}}</dd>
@@ -1583,22 +1584,22 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timebasedcanary_python">
-<a href="#timebasedcanary_python" style="color: inherit; text-decoration: inherit;">time<wbr>Based<wbr>Canary</a>
+        <span id="time_based_canary_python">
+<a href="#time_based_canary_python" style="color: inherit; text-decoration: inherit;">time_<wbr>based_<wbr>canary</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary]</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timebasedlinear_python">
-<a href="#timebasedlinear_python" style="color: inherit; text-decoration: inherit;">time<wbr>Based<wbr>Linear</a>
+        <span id="time_based_linear_python">
+<a href="#time_based_linear_python" style="color: inherit; text-decoration: inherit;">time_<wbr>based_<wbr>linear</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear]</a></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
 {{% /md %}}</dd>

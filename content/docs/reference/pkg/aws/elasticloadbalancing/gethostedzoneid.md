@@ -98,11 +98,11 @@ www = aws.route53.Record("www",
     zone_id=aws_route53_zone["primary"]["zone_id"],
     name="example.com",
     type="A",
-    aliases=[{
-        "name": aws_elb["main"]["dns_name"],
-        "zone_id": main.id,
-        "evaluateTargetHealth": True,
-    }])
+    aliases=[aws.route53.RecordAliasArgs(
+        name=aws_elb["main"]["dns_name"],
+        zone_id=main.id,
+        evaluate_target_health=True,
+    )])
 ```
 
 {{% /example %}}
@@ -143,7 +143,7 @@ const www = new aws.route53.Record("www", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_hosted_zone_id(</span>region=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_hosted_zone_id(</span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetHostedZoneIdResult</code></pre></div>
 {{% /choosable %}}
 
 

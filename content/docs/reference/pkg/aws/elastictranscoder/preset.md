@@ -182,58 +182,58 @@ import pulumi
 import pulumi_aws as aws
 
 bar = aws.elastictranscoder.Preset("bar",
-    audio={
-        "audioPackingMode": "SingleTrack",
-        "bitRate": 96,
-        "channels": 2,
-        "codec": "AAC",
-        "sampleRate": 44100,
-    },
-    audio_codec_options={
-        "profile": "AAC-LC",
-    },
+    audio=aws.elastictranscoder.PresetAudioArgs(
+        audio_packing_mode="SingleTrack",
+        bit_rate="96",
+        channels="2",
+        codec="AAC",
+        sample_rate="44100",
+    ),
+    audio_codec_options=aws.elastictranscoder.PresetAudioCodecOptionsArgs(
+        profile="AAC-LC",
+    ),
     container="mp4",
     description="Sample Preset",
-    thumbnails={
-        "format": "png",
-        "interval": 120,
-        "maxHeight": "auto",
-        "maxWidth": "auto",
-        "paddingPolicy": "Pad",
-        "sizingPolicy": "Fit",
-    },
-    video={
-        "bitRate": "1600",
-        "codec": "H.264",
-        "displayAspectRatio": "16:9",
-        "fixedGop": "false",
-        "frameRate": "auto",
-        "keyframesMaxDist": 240,
-        "maxFrameRate": "60",
-        "maxHeight": "auto",
-        "maxWidth": "auto",
-        "paddingPolicy": "Pad",
-        "sizingPolicy": "Fit",
-    },
+    thumbnails=aws.elastictranscoder.PresetThumbnailsArgs(
+        format="png",
+        interval="120",
+        max_height="auto",
+        max_width="auto",
+        padding_policy="Pad",
+        sizing_policy="Fit",
+    ),
+    video=aws.elastictranscoder.PresetVideoArgs(
+        bit_rate="1600",
+        codec="H.264",
+        display_aspect_ratio="16:9",
+        fixed_gop="false",
+        frame_rate="auto",
+        keyframes_max_dist="240",
+        max_frame_rate="60",
+        max_height="auto",
+        max_width="auto",
+        padding_policy="Pad",
+        sizing_policy="Fit",
+    ),
     video_codec_options={
         "ColorSpaceConversionMode": "None",
         "InterlacedMode": "Progressive",
         "Level": "2.2",
-        "MaxReferenceFrames": 3,
+        "MaxReferenceFrames": "3",
         "Profile": "main",
     },
-    video_watermarks=[{
-        "horizontalAlign": "Right",
-        "horizontalOffset": "10px",
-        "id": "Test",
-        "maxHeight": "20%",
-        "maxWidth": "20%",
-        "opacity": "55.5",
-        "sizingPolicy": "ShrinkToFit",
-        "target": "Content",
-        "verticalAlign": "Bottom",
-        "verticalOffset": "10px",
-    }])
+    video_watermarks=[aws.elastictranscoder.PresetVideoWatermarkArgs(
+        horizontal_align="Right",
+        horizontal_offset="10px",
+        id="Test",
+        max_height="20%",
+        max_width="20%",
+        opacity="55.5",
+        sizing_policy="ShrinkToFit",
+        target="Content",
+        vertical_align="Bottom",
+        vertical_offset="10px",
+    )])
 ```
 
 {{% /example %}}
@@ -314,7 +314,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elastictranscoder/#pulumi_aws.elastictranscoder.Preset">Preset</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>audio=None<span class="p">, </span>audio_codec_options=None<span class="p">, </span>container=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>thumbnails=None<span class="p">, </span>type=None<span class="p">, </span>video=None<span class="p">, </span>video_codec_options=None<span class="p">, </span>video_watermarks=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elastictranscoder/#pulumi_aws.elastictranscoder.Preset">Preset</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">audio</span><span class="p">:</span> <span class="nx">Optional[PresetAudioArgs]</span> = None<span class="p">, </span><span class="nx">audio_codec_options</span><span class="p">:</span> <span class="nx">Optional[PresetAudioCodecOptionsArgs]</span> = None<span class="p">, </span><span class="nx">container</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnails</span><span class="p">:</span> <span class="nx">Optional[PresetThumbnailsArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">video</span><span class="p">:</span> <span class="nx">Optional[PresetVideoArgs]</span> = None<span class="p">, </span><span class="nx">video_codec_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">video_watermarks</span><span class="p">:</span> <span class="nx">Optional[List[PresetVideoWatermarkArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -851,7 +851,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudio">Dict[Preset<wbr>Audio]</a></span>
+        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
@@ -862,7 +862,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#audio_codec_options_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>codec_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudiocodecoptions">Dict[Preset<wbr>Audio<wbr>Codec<wbr>Options]</a></span>
+        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
@@ -895,7 +895,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#thumbnails_python" style="color: inherit; text-decoration: inherit;">thumbnails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetthumbnails">Dict[Preset<wbr>Thumbnails]</a></span>
+        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
@@ -916,7 +916,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#video_python" style="color: inherit; text-decoration: inherit;">video</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideo">Dict[Preset<wbr>Video]</a></span>
+        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
@@ -927,7 +927,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#video_codec_options_python" style="color: inherit; text-decoration: inherit;">video_<wbr>codec_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
@@ -938,7 +938,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#video_watermarks_python" style="color: inherit; text-decoration: inherit;">video_<wbr>watermarks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideowatermark">List[Preset<wbr>Video<wbr>Watermark]</a></span>
+        <span class="property-type"><a href="#presetvideowatermark">List[Preset<wbr>Video<wbr>Watermark<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd>
@@ -1081,7 +1081,8 @@ Get an existing Preset resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>audio=None<span class="p">, </span>audio_codec_options=None<span class="p">, </span>container=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>thumbnails=None<span class="p">, </span>type=None<span class="p">, </span>video=None<span class="p">, </span>video_codec_options=None<span class="p">, </span>video_watermarks=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">audio</span><span class="p">:</span> <span class="nx">Optional[PresetAudioArgs]</span> = None<span class="p">, </span><span class="nx">audio_codec_options</span><span class="p">:</span> <span class="nx">Optional[PresetAudioCodecOptionsArgs]</span> = None<span class="p">, </span><span class="nx">container</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnails</span><span class="p">:</span> <span class="nx">Optional[PresetThumbnailsArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">video</span><span class="p">:</span> <span class="nx">Optional[PresetVideoArgs]</span> = None<span class="p">, </span><span class="nx">video_codec_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">video_watermarks</span><span class="p">:</span> <span class="nx">Optional[List[PresetVideoWatermarkArgs]]</span> = None<span class="p">) -&gt;</span> Preset</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1089,7 +1090,7 @@ Get an existing Preset resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Preset.html">Preset</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.PresetState.html">PresetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Preset.html">Preset</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.PresetState.html">PresetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1589,7 +1590,7 @@ The following state arguments are supported:
 <a href="#state_audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudio">Dict[Preset<wbr>Audio]</a></span>
+        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
@@ -1600,7 +1601,7 @@ The following state arguments are supported:
 <a href="#state_audio_codec_options_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>codec_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudiocodecoptions">Dict[Preset<wbr>Audio<wbr>Codec<wbr>Options]</a></span>
+        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
@@ -1644,7 +1645,7 @@ The following state arguments are supported:
 <a href="#state_thumbnails_python" style="color: inherit; text-decoration: inherit;">thumbnails</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetthumbnails">Dict[Preset<wbr>Thumbnails]</a></span>
+        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
@@ -1665,7 +1666,7 @@ The following state arguments are supported:
 <a href="#state_video_python" style="color: inherit; text-decoration: inherit;">video</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideo">Dict[Preset<wbr>Video]</a></span>
+        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
@@ -1676,7 +1677,7 @@ The following state arguments are supported:
 <a href="#state_video_codec_options_python" style="color: inherit; text-decoration: inherit;">video_<wbr>codec_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd>
@@ -1687,7 +1688,7 @@ The following state arguments are supported:
 <a href="#state_video_watermarks_python" style="color: inherit; text-decoration: inherit;">video_<wbr>watermarks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideowatermark">List[Preset<wbr>Video<wbr>Watermark]</a></span>
+        <span class="property-type"><a href="#presetvideowatermark">List[Preset<wbr>Video<wbr>Watermark<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd>
@@ -1913,8 +1914,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="audiopackingmode_python">
-<a href="#audiopackingmode_python" style="color: inherit; text-decoration: inherit;">audio<wbr>Packing<wbr>Mode</a>
+        <span id="audio_packing_mode_python">
+<a href="#audio_packing_mode_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>packing_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1924,8 +1925,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bitrate_python">
-<a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bit<wbr>Rate</a>
+        <span id="bit_rate_python">
+<a href="#bit_rate_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1957,8 +1958,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samplerate_python">
-<a href="#samplerate_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
+        <span id="sample_rate_python">
+<a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2146,8 +2147,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bitdepth_python">
-<a href="#bitdepth_python" style="color: inherit; text-decoration: inherit;">bit<wbr>Depth</a>
+        <span id="bit_depth_python">
+<a href="#bit_depth_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>depth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2157,8 +2158,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bitorder_python">
-<a href="#bitorder_python" style="color: inherit; text-decoration: inherit;">bit<wbr>Order</a>
+        <span id="bit_order_python">
+<a href="#bit_order_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>order</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2500,8 +2501,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aspectratio_python">
-<a href="#aspectratio_python" style="color: inherit; text-decoration: inherit;">aspect<wbr>Ratio</a>
+        <span id="aspect_ratio_python">
+<a href="#aspect_ratio_python" style="color: inherit; text-decoration: inherit;">aspect_<wbr>ratio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2533,8 +2534,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxheight_python">
-<a href="#maxheight_python" style="color: inherit; text-decoration: inherit;">max<wbr>Height</a>
+        <span id="max_height_python">
+<a href="#max_height_python" style="color: inherit; text-decoration: inherit;">max_<wbr>height</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2544,8 +2545,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxwidth_python">
-<a href="#maxwidth_python" style="color: inherit; text-decoration: inherit;">max<wbr>Width</a>
+        <span id="max_width_python">
+<a href="#max_width_python" style="color: inherit; text-decoration: inherit;">max_<wbr>width</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2555,8 +2556,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="paddingpolicy_python">
-<a href="#paddingpolicy_python" style="color: inherit; text-decoration: inherit;">padding<wbr>Policy</a>
+        <span id="padding_policy_python">
+<a href="#padding_policy_python" style="color: inherit; text-decoration: inherit;">padding_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2577,8 +2578,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sizingpolicy_python">
-<a href="#sizingpolicy_python" style="color: inherit; text-decoration: inherit;">sizing<wbr>Policy</a>
+        <span id="sizing_policy_python">
+<a href="#sizing_policy_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3063,8 +3064,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aspectratio_python">
-<a href="#aspectratio_python" style="color: inherit; text-decoration: inherit;">aspect<wbr>Ratio</a>
+        <span id="aspect_ratio_python">
+<a href="#aspect_ratio_python" style="color: inherit; text-decoration: inherit;">aspect_<wbr>ratio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3074,8 +3075,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bitrate_python">
-<a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bit<wbr>Rate</a>
+        <span id="bit_rate_python">
+<a href="#bit_rate_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3096,8 +3097,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="displayaspectratio_python">
-<a href="#displayaspectratio_python" style="color: inherit; text-decoration: inherit;">display<wbr>Aspect<wbr>Ratio</a>
+        <span id="display_aspect_ratio_python">
+<a href="#display_aspect_ratio_python" style="color: inherit; text-decoration: inherit;">display_<wbr>aspect_<wbr>ratio</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3107,8 +3108,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedgop_python">
-<a href="#fixedgop_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Gop</a>
+        <span id="fixed_gop_python">
+<a href="#fixed_gop_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>gop</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3118,8 +3119,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="framerate_python">
-<a href="#framerate_python" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
+        <span id="frame_rate_python">
+<a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3129,8 +3130,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keyframesmaxdist_python">
-<a href="#keyframesmaxdist_python" style="color: inherit; text-decoration: inherit;">keyframes<wbr>Max<wbr>Dist</a>
+        <span id="keyframes_max_dist_python">
+<a href="#keyframes_max_dist_python" style="color: inherit; text-decoration: inherit;">keyframes_<wbr>max_<wbr>dist</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3140,8 +3141,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxframerate_python">
-<a href="#maxframerate_python" style="color: inherit; text-decoration: inherit;">max<wbr>Frame<wbr>Rate</a>
+        <span id="max_frame_rate_python">
+<a href="#max_frame_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>frame_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3151,8 +3152,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxheight_python">
-<a href="#maxheight_python" style="color: inherit; text-decoration: inherit;">max<wbr>Height</a>
+        <span id="max_height_python">
+<a href="#max_height_python" style="color: inherit; text-decoration: inherit;">max_<wbr>height</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3162,8 +3163,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxwidth_python">
-<a href="#maxwidth_python" style="color: inherit; text-decoration: inherit;">max<wbr>Width</a>
+        <span id="max_width_python">
+<a href="#max_width_python" style="color: inherit; text-decoration: inherit;">max_<wbr>width</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3173,8 +3174,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="paddingpolicy_python">
-<a href="#paddingpolicy_python" style="color: inherit; text-decoration: inherit;">padding<wbr>Policy</a>
+        <span id="padding_policy_python">
+<a href="#padding_policy_python" style="color: inherit; text-decoration: inherit;">padding_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3195,8 +3196,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sizingpolicy_python">
-<a href="#sizingpolicy_python" style="color: inherit; text-decoration: inherit;">sizing<wbr>Policy</a>
+        <span id="sizing_policy_python">
+<a href="#sizing_policy_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3582,8 +3583,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="horizontalalign_python">
-<a href="#horizontalalign_python" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Align</a>
+        <span id="horizontal_align_python">
+<a href="#horizontal_align_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>align</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3593,8 +3594,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="horizontaloffset_python">
-<a href="#horizontaloffset_python" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Offset</a>
+        <span id="horizontal_offset_python">
+<a href="#horizontal_offset_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>offset</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3615,8 +3616,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxheight_python">
-<a href="#maxheight_python" style="color: inherit; text-decoration: inherit;">max<wbr>Height</a>
+        <span id="max_height_python">
+<a href="#max_height_python" style="color: inherit; text-decoration: inherit;">max_<wbr>height</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3626,8 +3627,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxwidth_python">
-<a href="#maxwidth_python" style="color: inherit; text-decoration: inherit;">max<wbr>Width</a>
+        <span id="max_width_python">
+<a href="#max_width_python" style="color: inherit; text-decoration: inherit;">max_<wbr>width</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3648,8 +3649,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sizingpolicy_python">
-<a href="#sizingpolicy_python" style="color: inherit; text-decoration: inherit;">sizing<wbr>Policy</a>
+        <span id="sizing_policy_python">
+<a href="#sizing_policy_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3670,8 +3671,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="verticalalign_python">
-<a href="#verticalalign_python" style="color: inherit; text-decoration: inherit;">vertical<wbr>Align</a>
+        <span id="vertical_align_python">
+<a href="#vertical_align_python" style="color: inherit; text-decoration: inherit;">vertical_<wbr>align</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3681,8 +3682,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="verticaloffset_python">
-<a href="#verticaloffset_python" style="color: inherit; text-decoration: inherit;">vertical<wbr>Offset</a>
+        <span id="vertical_offset_python">
+<a href="#vertical_offset_python" style="color: inherit; text-decoration: inherit;">vertical_<wbr>offset</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

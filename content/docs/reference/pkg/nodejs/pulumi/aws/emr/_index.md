@@ -3,7 +3,7 @@ title: "Module emr"
 title_tag: "Module emr | Package @pulumi/aws | Node.js SDK"
 linktitle: "emr"
 meta_desc: "Explore members of the emr module in the @pulumi/aws package."
-git_sha: "0a2e76f947fd9ea3ee41beab30d2121c4b385e5c"
+git_sha: "f41f492a44c487667f616da57823709362559b0c"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L435">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L435">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -469,7 +469,7 @@ const iamEmrProfilePolicy = new aws.iam.RolePolicy("iamEmrProfilePolicy", {
 ```
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L565"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L565"> <b>constructor</b></a>
 </h4>
 
 
@@ -483,7 +483,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L445">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L445">method <b>get</b></a>
 </h4>
 
 
@@ -494,14 +494,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L435">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L435">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L456">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L456">method <b>isInstance</b></a>
 </h4>
 
 
@@ -512,7 +512,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-additionalInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L466">property <b>additionalInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L466">property <b>additionalInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -520,7 +520,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
 
 <h4 class="pdoc-member-header" id="Cluster-applications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L470">property <b>applications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L470">property <b>applications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -528,12 +528,12 @@ A JSON string for selecting additional features such as adding proxy information
 A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
 
 <h4 class="pdoc-member-header" id="Cluster-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L471">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L471">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-autoscalingRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L475">property <b>autoscalingRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L475">property <b>autoscalingRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoscalingRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -541,7 +541,7 @@ A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hi
 An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
 
 <h4 class="pdoc-member-header" id="Cluster-bootstrapActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L479">property <b>bootstrapActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L479">property <b>bootstrapActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bootstrapActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterBootstrapAction'>ClusterBootstrapAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -549,12 +549,12 @@ An IAM role for automatic scaling policies. The IAM role provides permissions th
 Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L480">property <b>clusterState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L480">property <b>clusterState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterState: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-configurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L484">property <b>configurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L484">property <b>configurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -562,7 +562,7 @@ Ordered list of bootstrap actions that will be run before Hadoop is started on t
 List of configurations supplied for the EMR cluster you are creating
 
 <h4 class="pdoc-member-header" id="Cluster-configurationsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L488">property <b>configurationsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L488">property <b>configurationsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configurationsJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -570,7 +570,7 @@ List of configurations supplied for the EMR cluster you are creating
 A JSON string for supplying list of configurations for the EMR cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-coreInstanceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L492">property <b>coreInstanceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L492">property <b>coreInstanceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>coreInstanceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterCoreInstanceGroup'>ClusterCoreInstanceGroup</a>&gt;;</code></pre>
@@ -578,7 +578,7 @@ A JSON string for supplying list of configurations for the EMR cluster.
 Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 
 <h4 class="pdoc-member-header" id="Cluster-customAmiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L496">property <b>customAmiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L496">property <b>customAmiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customAmiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -586,7 +586,7 @@ Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/l
 A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
 
 <h4 class="pdoc-member-header" id="Cluster-ebsRootVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L500">property <b>ebsRootVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L500">property <b>ebsRootVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ebsRootVolumeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -594,7 +594,7 @@ A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Availab
 Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 
 <h4 class="pdoc-member-header" id="Cluster-ec2Attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L504">property <b>ec2Attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L504">property <b>ec2Attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ec2Attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterEc2Attributes'>ClusterEc2Attributes</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -602,7 +602,7 @@ Size in GiB of the EBS root device volume of the Linux AMI that is used for each
 Attributes for the EC2 instances running the job flow. Defined below
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L435">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L435">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -611,7 +611,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-keepJobFlowAliveWhenNoSteps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L508">property <b>keepJobFlowAliveWhenNoSteps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L508">property <b>keepJobFlowAliveWhenNoSteps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keepJobFlowAliveWhenNoSteps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -619,7 +619,7 @@ deployments and may be missing (undefined) during planning phases.
 Switch on/off run cluster with no steps or when all steps are complete (default is on)
 
 <h4 class="pdoc-member-header" id="Cluster-kerberosAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L512">property <b>kerberosAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L512">property <b>kerberosAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kerberosAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterKerberosAttributes'>ClusterKerberosAttributes</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -627,7 +627,7 @@ Switch on/off run cluster with no steps or when all steps are complete (default 
 Kerberos configuration for the cluster. Defined below
 
 <h4 class="pdoc-member-header" id="Cluster-logUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L516">property <b>logUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L516">property <b>logUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -635,7 +635,7 @@ Kerberos configuration for the cluster. Defined below
 S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
 
 <h4 class="pdoc-member-header" id="Cluster-masterInstanceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L520">property <b>masterInstanceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L520">property <b>masterInstanceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterInstanceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterMasterInstanceGroup'>ClusterMasterInstanceGroup</a>&gt;;</code></pre>
@@ -643,7 +643,7 @@ S3 bucket to write the log files of the job flow. If a value is not provided, lo
 Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 
 <h4 class="pdoc-member-header" id="Cluster-masterPublicDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L525">property <b>masterPublicDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L525">property <b>masterPublicDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterPublicDns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -652,7 +652,7 @@ The public DNS name of the master EC2 instance.
 * `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
 
 <h4 class="pdoc-member-header" id="Cluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L529">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L529">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -660,7 +660,7 @@ The public DNS name of the master EC2 instance.
 The name of the step.
 
 <h4 class="pdoc-member-header" id="Cluster-releaseLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L533">property <b>releaseLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L533">property <b>releaseLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>releaseLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -668,7 +668,7 @@ The name of the step.
 The release label for the Amazon EMR release
 
 <h4 class="pdoc-member-header" id="Cluster-scaleDownBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L537">property <b>scaleDownBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L537">property <b>scaleDownBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scaleDownBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -676,7 +676,7 @@ The release label for the Amazon EMR release
 The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
 
 <h4 class="pdoc-member-header" id="Cluster-securityConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L541">property <b>securityConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L541">property <b>securityConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -684,7 +684,7 @@ The way that individual Amazon EC2 instances terminate when an automatic scale-i
 The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `releaseLabel` 4.8.0 or greater
 
 <h4 class="pdoc-member-header" id="Cluster-serviceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L545">property <b>serviceRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L545">property <b>serviceRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -692,7 +692,7 @@ The security configuration name to attach to the EMR cluster. Only valid for EMR
 IAM role that will be assumed by the Amazon EMR service to access AWS resources
 
 <h4 class="pdoc-member-header" id="Cluster-stepConcurrencyLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L549">property <b>stepConcurrencyLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L549">property <b>stepConcurrencyLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stepConcurrencyLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -700,7 +700,7 @@ IAM role that will be assumed by the Amazon EMR service to access AWS resources
 The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `releaseLabel` 5.28.0 or greater. (default is 1)
 
 <h4 class="pdoc-member-header" id="Cluster-steps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L553">property <b>steps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L553">property <b>steps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>steps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClusterStep'>ClusterStep</a>[]&gt;;</code></pre>
@@ -708,7 +708,7 @@ The number of steps that can be executed concurrently. You can specify a maximum
 List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 
 <h4 class="pdoc-member-header" id="Cluster-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L557">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L557">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -716,7 +716,7 @@ List of steps to run when creating the cluster. Defined below. It is highly reco
 list of tags to apply to the EMR Cluster
 
 <h4 class="pdoc-member-header" id="Cluster-terminationProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L561">property <b>terminationProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L561">property <b>terminationProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>terminationProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ list of tags to apply to the EMR Cluster
 Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L435">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L435">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -733,7 +733,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-visibleToAllUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L565">property <b>visibleToAllUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L565">property <b>visibleToAllUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>visibleToAllUsers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -741,7 +741,7 @@ deployments.
 Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 
 <h3 class="pdoc-module-header" id="InstanceGroup" data-link-title="InstanceGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L30">
         Resource <strong>InstanceGroup</strong>
     </a>
 </h3>
@@ -769,7 +769,7 @@ const task = new aws.emr.InstanceGroup("task", {
 ```
 
 <h4 class="pdoc-member-header" id="InstanceGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -783,7 +783,7 @@ Create a InstanceGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -794,14 +794,14 @@ Get an existing InstanceGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="InstanceGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -812,7 +812,7 @@ Returns true if the given object is an instance of InstanceGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-autoscalingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L61">property <b>autoscalingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L61">property <b>autoscalingPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoscalingPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -820,7 +820,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
 
 <h4 class="pdoc-member-header" id="InstanceGroup-bidPrice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L65">property <b>bidPrice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L65">property <b>bidPrice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bidPrice: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -828,7 +828,7 @@ The autoscaling policy document. This is a JSON formatted string. See [EMR Auto 
 If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L69">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L69">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -836,7 +836,7 @@ If set, the bid price for each EC2 instance in the instance group, expressed in 
 ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-configurationsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L73">property <b>configurationsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L73">property <b>configurationsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configurationsJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -844,7 +844,7 @@ ID of the EMR Cluster to attach to. Changing this forces a new resource to be cr
 A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-ebsConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L77">property <b>ebsConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L77">property <b>ebsConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ebsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceGroupEbsConfig'>InstanceGroupEbsConfig</a>[]&gt;;</code></pre>
@@ -852,7 +852,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
 One or more `ebsConfig` blocks as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-ebsOptimized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L81">property <b>ebsOptimized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L81">property <b>ebsOptimized</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ebsOptimized: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -860,7 +860,7 @@ One or more `ebsConfig` blocks as defined below. Changing this forces a new reso
 Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -869,7 +869,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-instanceCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L85">property <b>instanceCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L85">property <b>instanceCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -877,7 +877,7 @@ deployments and may be missing (undefined) during planning phases.
 target number of instances for the instance group. defaults to 0.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L89">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L89">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -885,7 +885,7 @@ target number of instances for the instance group. defaults to 0.
 The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -893,17 +893,17 @@ The EC2 instance type for all instances in the instance group. Changing this for
 Human friendly name given to the instance group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroup-runningInstanceCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L94">property <b>runningInstanceCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L94">property <b>runningInstanceCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runningInstanceCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceGroup-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L95">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L95">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -912,7 +912,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecurityConfiguration" data-link-title="SecurityConfiguration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L36">
         Resource <strong>SecurityConfiguration</strong>
     </a>
 </h3>
@@ -948,7 +948,7 @@ const foo = new aws.emr.SecurityConfiguration("foo", {
 ```
 
 <h4 class="pdoc-member-header" id="SecurityConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -962,7 +962,7 @@ Create a SecurityConfiguration resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecurityConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -973,14 +973,14 @@ Get an existing SecurityConfiguration resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecurityConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -991,7 +991,7 @@ Returns true if the given object is an instance of SecurityConfiguration.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecurityConfiguration-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L67">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L67">property <b>configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -999,7 +999,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A JSON formatted Security Configuration
 
 <h4 class="pdoc-member-header" id="SecurityConfiguration-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L71">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L71">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1007,7 +1007,7 @@ A JSON formatted Security Configuration
 Date the Security Configuration was created
 
 <h4 class="pdoc-member-header" id="SecurityConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1016,7 +1016,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecurityConfiguration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1024,7 +1024,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the EMR Security Configuration. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="SecurityConfiguration-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L80">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L80">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1033,7 +1033,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h4 class="pdoc-member-header" id="SecurityConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1045,7 +1045,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L765">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L765">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -1055,7 +1055,7 @@ deployments.
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-additionalInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L769">property <b>additionalInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L769">property <b>additionalInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1063,7 +1063,7 @@ The set of arguments for constructing a Cluster resource.
 A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-applications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L773">property <b>applications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L773">property <b>applications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1071,7 +1071,7 @@ A JSON string for selecting additional features such as adding proxy information
 A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
 
 <h4 class="pdoc-member-header" id="ClusterArgs-autoscalingRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L777">property <b>autoscalingRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L777">property <b>autoscalingRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscalingRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1079,7 +1079,7 @@ A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hi
 An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-bootstrapActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L781">property <b>bootstrapActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L781">property <b>bootstrapActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bootstrapActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterBootstrapAction'>ClusterBootstrapAction</a>&gt;[]&gt;;</code></pre>
@@ -1087,7 +1087,7 @@ An IAM role for automatic scaling policies. The IAM role provides permissions th
 Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-configurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L785">property <b>configurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L785">property <b>configurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1095,7 +1095,7 @@ Ordered list of bootstrap actions that will be run before Hadoop is started on t
 List of configurations supplied for the EMR cluster you are creating
 
 <h4 class="pdoc-member-header" id="ClusterArgs-configurationsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L789">property <b>configurationsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L789">property <b>configurationsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationsJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1103,7 +1103,7 @@ List of configurations supplied for the EMR cluster you are creating
 A JSON string for supplying list of configurations for the EMR cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-coreInstanceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L793">property <b>coreInstanceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L793">property <b>coreInstanceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coreInstanceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceGroup'>ClusterCoreInstanceGroup</a>&gt;;</code></pre>
@@ -1111,7 +1111,7 @@ A JSON string for supplying list of configurations for the EMR cluster.
 Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 
 <h4 class="pdoc-member-header" id="ClusterArgs-customAmiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L797">property <b>customAmiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L797">property <b>customAmiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customAmiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1119,7 +1119,7 @@ Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/l
 A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-ebsRootVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L801">property <b>ebsRootVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L801">property <b>ebsRootVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ebsRootVolumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1127,7 +1127,7 @@ A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Availab
 Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-ec2Attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L805">property <b>ec2Attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L805">property <b>ec2Attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ec2Attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterEc2Attributes'>ClusterEc2Attributes</a>&gt;;</code></pre>
@@ -1135,7 +1135,7 @@ Size in GiB of the EBS root device volume of the Linux AMI that is used for each
 Attributes for the EC2 instances running the job flow. Defined below
 
 <h4 class="pdoc-member-header" id="ClusterArgs-keepJobFlowAliveWhenNoSteps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L809">property <b>keepJobFlowAliveWhenNoSteps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L809">property <b>keepJobFlowAliveWhenNoSteps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keepJobFlowAliveWhenNoSteps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1143,7 +1143,7 @@ Attributes for the EC2 instances running the job flow. Defined below
 Switch on/off run cluster with no steps or when all steps are complete (default is on)
 
 <h4 class="pdoc-member-header" id="ClusterArgs-kerberosAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L813">property <b>kerberosAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L813">property <b>kerberosAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kerberosAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterKerberosAttributes'>ClusterKerberosAttributes</a>&gt;;</code></pre>
@@ -1151,7 +1151,7 @@ Switch on/off run cluster with no steps or when all steps are complete (default 
 Kerberos configuration for the cluster. Defined below
 
 <h4 class="pdoc-member-header" id="ClusterArgs-logUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L817">property <b>logUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L817">property <b>logUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1159,7 +1159,7 @@ Kerberos configuration for the cluster. Defined below
 S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
 
 <h4 class="pdoc-member-header" id="ClusterArgs-masterInstanceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L821">property <b>masterInstanceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L821">property <b>masterInstanceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterInstanceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceGroup'>ClusterMasterInstanceGroup</a>&gt;;</code></pre>
@@ -1167,7 +1167,7 @@ S3 bucket to write the log files of the job flow. If a value is not provided, lo
 Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 
 <h4 class="pdoc-member-header" id="ClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L825">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L825">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1175,7 +1175,7 @@ Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/l
 The name of the step.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-releaseLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L829">property <b>releaseLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L829">property <b>releaseLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1183,7 +1183,7 @@ The name of the step.
 The release label for the Amazon EMR release
 
 <h4 class="pdoc-member-header" id="ClusterArgs-scaleDownBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L833">property <b>scaleDownBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L833">property <b>scaleDownBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleDownBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1191,7 +1191,7 @@ The release label for the Amazon EMR release
 The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-securityConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L837">property <b>securityConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L837">property <b>securityConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1199,7 +1199,7 @@ The way that individual Amazon EC2 instances terminate when an automatic scale-i
 The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `releaseLabel` 4.8.0 or greater
 
 <h4 class="pdoc-member-header" id="ClusterArgs-serviceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L841">property <b>serviceRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L841">property <b>serviceRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1207,7 +1207,7 @@ The security configuration name to attach to the EMR cluster. Only valid for EMR
 IAM role that will be assumed by the Amazon EMR service to access AWS resources
 
 <h4 class="pdoc-member-header" id="ClusterArgs-stepConcurrencyLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L845">property <b>stepConcurrencyLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L845">property <b>stepConcurrencyLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stepConcurrencyLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1215,7 +1215,7 @@ IAM role that will be assumed by the Amazon EMR service to access AWS resources
 The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `releaseLabel` 5.28.0 or greater. (default is 1)
 
 <h4 class="pdoc-member-header" id="ClusterArgs-steps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L849">property <b>steps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L849">property <b>steps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>steps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterStep'>ClusterStep</a>&gt;[]&gt;;</code></pre>
@@ -1223,7 +1223,7 @@ The number of steps that can be executed concurrently. You can specify a maximum
 List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L853">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L853">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1231,7 +1231,7 @@ List of steps to run when creating the cluster. Defined below. It is highly reco
 list of tags to apply to the EMR Cluster
 
 <h4 class="pdoc-member-header" id="ClusterArgs-terminationProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L857">property <b>terminationProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L857">property <b>terminationProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terminationProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1239,7 +1239,7 @@ list of tags to apply to the EMR Cluster
 Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-visibleToAllUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L861">property <b>visibleToAllUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L861">property <b>visibleToAllUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibleToAllUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1247,7 +1247,7 @@ Switch on/off termination protection (default is `false`, except when using mult
 Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L656">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L656">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -1257,7 +1257,7 @@ Whether the job flow is visible to all IAM users of the AWS account associated w
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-additionalInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L660">property <b>additionalInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L660">property <b>additionalInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1265,7 +1265,7 @@ Input properties used for looking up and filtering Cluster resources.
 A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
 
 <h4 class="pdoc-member-header" id="ClusterState-applications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L664">property <b>applications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L664">property <b>applications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1273,12 +1273,12 @@ A JSON string for selecting additional features such as adding proxy information
 A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
 
 <h4 class="pdoc-member-header" id="ClusterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L665">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L665">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-autoscalingRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L669">property <b>autoscalingRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L669">property <b>autoscalingRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscalingRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1286,7 +1286,7 @@ A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hi
 An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
 
 <h4 class="pdoc-member-header" id="ClusterState-bootstrapActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L673">property <b>bootstrapActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L673">property <b>bootstrapActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bootstrapActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterBootstrapAction'>ClusterBootstrapAction</a>&gt;[]&gt;;</code></pre>
@@ -1294,12 +1294,12 @@ An IAM role for automatic scaling policies. The IAM role provides permissions th
 Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterState">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L674">property <b>clusterState</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L674">property <b>clusterState</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterState?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-configurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L678">property <b>configurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L678">property <b>configurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1307,7 +1307,7 @@ Ordered list of bootstrap actions that will be run before Hadoop is started on t
 List of configurations supplied for the EMR cluster you are creating
 
 <h4 class="pdoc-member-header" id="ClusterState-configurationsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L682">property <b>configurationsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L682">property <b>configurationsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationsJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1315,7 +1315,7 @@ List of configurations supplied for the EMR cluster you are creating
 A JSON string for supplying list of configurations for the EMR cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-coreInstanceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L686">property <b>coreInstanceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L686">property <b>coreInstanceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coreInstanceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterCoreInstanceGroup'>ClusterCoreInstanceGroup</a>&gt;;</code></pre>
@@ -1323,7 +1323,7 @@ A JSON string for supplying list of configurations for the EMR cluster.
 Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 
 <h4 class="pdoc-member-header" id="ClusterState-customAmiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L690">property <b>customAmiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L690">property <b>customAmiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customAmiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1331,7 +1331,7 @@ Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/l
 A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
 
 <h4 class="pdoc-member-header" id="ClusterState-ebsRootVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L694">property <b>ebsRootVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L694">property <b>ebsRootVolumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ebsRootVolumeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1339,7 +1339,7 @@ A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Availab
 Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 
 <h4 class="pdoc-member-header" id="ClusterState-ec2Attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L698">property <b>ec2Attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L698">property <b>ec2Attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ec2Attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterEc2Attributes'>ClusterEc2Attributes</a>&gt;;</code></pre>
@@ -1347,7 +1347,7 @@ Size in GiB of the EBS root device volume of the Linux AMI that is used for each
 Attributes for the EC2 instances running the job flow. Defined below
 
 <h4 class="pdoc-member-header" id="ClusterState-keepJobFlowAliveWhenNoSteps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L702">property <b>keepJobFlowAliveWhenNoSteps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L702">property <b>keepJobFlowAliveWhenNoSteps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keepJobFlowAliveWhenNoSteps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1355,7 +1355,7 @@ Attributes for the EC2 instances running the job flow. Defined below
 Switch on/off run cluster with no steps or when all steps are complete (default is on)
 
 <h4 class="pdoc-member-header" id="ClusterState-kerberosAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L706">property <b>kerberosAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L706">property <b>kerberosAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kerberosAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterKerberosAttributes'>ClusterKerberosAttributes</a>&gt;;</code></pre>
@@ -1363,7 +1363,7 @@ Switch on/off run cluster with no steps or when all steps are complete (default 
 Kerberos configuration for the cluster. Defined below
 
 <h4 class="pdoc-member-header" id="ClusterState-logUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L710">property <b>logUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L710">property <b>logUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1371,7 +1371,7 @@ Kerberos configuration for the cluster. Defined below
 S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
 
 <h4 class="pdoc-member-header" id="ClusterState-masterInstanceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L714">property <b>masterInstanceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L714">property <b>masterInstanceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterInstanceGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterMasterInstanceGroup'>ClusterMasterInstanceGroup</a>&gt;;</code></pre>
@@ -1379,7 +1379,7 @@ S3 bucket to write the log files of the job flow. If a value is not provided, lo
 Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 
 <h4 class="pdoc-member-header" id="ClusterState-masterPublicDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L719">property <b>masterPublicDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L719">property <b>masterPublicDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPublicDns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1388,7 +1388,7 @@ The public DNS name of the master EC2 instance.
 * `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
 
 <h4 class="pdoc-member-header" id="ClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L723">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L723">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1396,7 +1396,7 @@ The public DNS name of the master EC2 instance.
 The name of the step.
 
 <h4 class="pdoc-member-header" id="ClusterState-releaseLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L727">property <b>releaseLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L727">property <b>releaseLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1404,7 +1404,7 @@ The name of the step.
 The release label for the Amazon EMR release
 
 <h4 class="pdoc-member-header" id="ClusterState-scaleDownBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L731">property <b>scaleDownBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L731">property <b>scaleDownBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scaleDownBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1412,7 +1412,7 @@ The release label for the Amazon EMR release
 The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
 
 <h4 class="pdoc-member-header" id="ClusterState-securityConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L735">property <b>securityConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L735">property <b>securityConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1420,7 +1420,7 @@ The way that individual Amazon EC2 instances terminate when an automatic scale-i
 The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `releaseLabel` 4.8.0 or greater
 
 <h4 class="pdoc-member-header" id="ClusterState-serviceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L739">property <b>serviceRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L739">property <b>serviceRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1428,7 +1428,7 @@ The security configuration name to attach to the EMR cluster. Only valid for EMR
 IAM role that will be assumed by the Amazon EMR service to access AWS resources
 
 <h4 class="pdoc-member-header" id="ClusterState-stepConcurrencyLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L743">property <b>stepConcurrencyLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L743">property <b>stepConcurrencyLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stepConcurrencyLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1436,7 +1436,7 @@ IAM role that will be assumed by the Amazon EMR service to access AWS resources
 The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `releaseLabel` 5.28.0 or greater. (default is 1)
 
 <h4 class="pdoc-member-header" id="ClusterState-steps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L747">property <b>steps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L747">property <b>steps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>steps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClusterStep'>ClusterStep</a>&gt;[]&gt;;</code></pre>
@@ -1444,7 +1444,7 @@ The number of steps that can be executed concurrently. You can specify a maximum
 List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 
 <h4 class="pdoc-member-header" id="ClusterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L751">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L751">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1452,7 +1452,7 @@ List of steps to run when creating the cluster. Defined below. It is highly reco
 list of tags to apply to the EMR Cluster
 
 <h4 class="pdoc-member-header" id="ClusterState-terminationProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L755">property <b>terminationProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L755">property <b>terminationProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>terminationProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1460,7 +1460,7 @@ list of tags to apply to the EMR Cluster
 Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 
 <h4 class="pdoc-member-header" id="ClusterState-visibleToAllUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/cluster.ts#L759">property <b>visibleToAllUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/cluster.ts#L759">property <b>visibleToAllUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibleToAllUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1468,7 +1468,7 @@ Switch on/off termination protection (default is `false`, except when using mult
 Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 
 <h3 class="pdoc-module-header" id="InstanceGroupArgs" data-link-title="InstanceGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L198">
         interface <strong>InstanceGroupArgs</strong>
     </a>
 </h3>
@@ -1478,7 +1478,7 @@ Whether the job flow is visible to all IAM users of the AWS account associated w
 The set of arguments for constructing a InstanceGroup resource.
 
 <h4 class="pdoc-member-header" id="InstanceGroupArgs-autoscalingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L202">property <b>autoscalingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L202">property <b>autoscalingPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscalingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1486,7 +1486,7 @@ The set of arguments for constructing a InstanceGroup resource.
 The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
 
 <h4 class="pdoc-member-header" id="InstanceGroupArgs-bidPrice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L206">property <b>bidPrice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L206">property <b>bidPrice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bidPrice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1494,7 +1494,7 @@ The autoscaling policy document. This is a JSON formatted string. See [EMR Auto 
 If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
 
 <h4 class="pdoc-member-header" id="InstanceGroupArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L210">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L210">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1502,7 +1502,7 @@ If set, the bid price for each EC2 instance in the instance group, expressed in 
 ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroupArgs-configurationsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L214">property <b>configurationsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L214">property <b>configurationsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationsJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1510,7 +1510,7 @@ ID of the EMR Cluster to attach to. Changing this forces a new resource to be cr
 A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.
 
 <h4 class="pdoc-member-header" id="InstanceGroupArgs-ebsConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L218">property <b>ebsConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L218">property <b>ebsConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ebsConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceGroupEbsConfig'>InstanceGroupEbsConfig</a>&gt;[]&gt;;</code></pre>
@@ -1518,7 +1518,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
 One or more `ebsConfig` blocks as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroupArgs-ebsOptimized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L222">property <b>ebsOptimized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L222">property <b>ebsOptimized</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ebsOptimized?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1526,7 +1526,7 @@ One or more `ebsConfig` blocks as defined below. Changing this forces a new reso
 Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroupArgs-instanceCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L226">property <b>instanceCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L226">property <b>instanceCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1534,7 +1534,7 @@ Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a 
 target number of instances for the instance group. defaults to 0.
 
 <h4 class="pdoc-member-header" id="InstanceGroupArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L230">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L230">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1542,7 +1542,7 @@ target number of instances for the instance group. defaults to 0.
 The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L234">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L234">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1550,7 +1550,7 @@ The EC2 instance type for all instances in the instance group. Changing this for
 Human friendly name given to the instance group. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="InstanceGroupState" data-link-title="InstanceGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L154">
         interface <strong>InstanceGroupState</strong>
     </a>
 </h3>
@@ -1560,7 +1560,7 @@ Human friendly name given to the instance group. Changing this forces a new reso
 Input properties used for looking up and filtering InstanceGroup resources.
 
 <h4 class="pdoc-member-header" id="InstanceGroupState-autoscalingPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L158">property <b>autoscalingPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L158">property <b>autoscalingPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscalingPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1568,7 +1568,7 @@ Input properties used for looking up and filtering InstanceGroup resources.
 The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
 
 <h4 class="pdoc-member-header" id="InstanceGroupState-bidPrice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L162">property <b>bidPrice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L162">property <b>bidPrice</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bidPrice?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1576,7 +1576,7 @@ The autoscaling policy document. This is a JSON formatted string. See [EMR Auto 
 If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
 
 <h4 class="pdoc-member-header" id="InstanceGroupState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L166">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L166">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1584,7 +1584,7 @@ If set, the bid price for each EC2 instance in the instance group, expressed in 
 ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroupState-configurationsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L170">property <b>configurationsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L170">property <b>configurationsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurationsJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1592,7 +1592,7 @@ ID of the EMR Cluster to attach to. Changing this forces a new resource to be cr
 A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.
 
 <h4 class="pdoc-member-header" id="InstanceGroupState-ebsConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L174">property <b>ebsConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L174">property <b>ebsConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ebsConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceGroupEbsConfig'>InstanceGroupEbsConfig</a>&gt;[]&gt;;</code></pre>
@@ -1600,7 +1600,7 @@ A JSON string for supplying list of configurations specific to the EMR instance 
 One or more `ebsConfig` blocks as defined below. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroupState-ebsOptimized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L178">property <b>ebsOptimized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L178">property <b>ebsOptimized</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ebsOptimized?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1608,7 +1608,7 @@ One or more `ebsConfig` blocks as defined below. Changing this forces a new reso
 Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroupState-instanceCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L182">property <b>instanceCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L182">property <b>instanceCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1616,7 +1616,7 @@ Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a 
 target number of instances for the instance group. defaults to 0.
 
 <h4 class="pdoc-member-header" id="InstanceGroupState-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L186">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L186">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1624,7 +1624,7 @@ target number of instances for the instance group. defaults to 0.
 The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L190">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1632,17 +1632,17 @@ The EC2 instance type for all instances in the instance group. Changing this for
 Human friendly name given to the instance group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="InstanceGroupState-runningInstanceCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L191">property <b>runningInstanceCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L191">property <b>runningInstanceCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runningInstanceCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceGroupState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/instanceGroup.ts#L192">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/instanceGroup.ts#L192">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SecurityConfigurationArgs" data-link-title="SecurityConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L145">
         interface <strong>SecurityConfigurationArgs</strong>
     </a>
 </h3>
@@ -1652,7 +1652,7 @@ Human friendly name given to the instance group. Changing this forces a new reso
 The set of arguments for constructing a SecurityConfiguration resource.
 
 <h4 class="pdoc-member-header" id="SecurityConfigurationArgs-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L149">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L149">property <b>configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1660,7 +1660,7 @@ The set of arguments for constructing a SecurityConfiguration resource.
 A JSON formatted Security Configuration
 
 <h4 class="pdoc-member-header" id="SecurityConfigurationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L153">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1668,7 +1668,7 @@ A JSON formatted Security Configuration
 The name of the EMR Security Configuration. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="SecurityConfigurationArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L158">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L158">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1677,7 +1677,7 @@ Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
 
 <h3 class="pdoc-module-header" id="SecurityConfigurationState" data-link-title="SecurityConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L122">
         interface <strong>SecurityConfigurationState</strong>
     </a>
 </h3>
@@ -1687,7 +1687,7 @@ prefix. Conflicts with `name`.
 Input properties used for looking up and filtering SecurityConfiguration resources.
 
 <h4 class="pdoc-member-header" id="SecurityConfigurationState-configuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L126">property <b>configuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L126">property <b>configuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1695,7 +1695,7 @@ Input properties used for looking up and filtering SecurityConfiguration resourc
 A JSON formatted Security Configuration
 
 <h4 class="pdoc-member-header" id="SecurityConfigurationState-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L130">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L130">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1703,7 +1703,7 @@ A JSON formatted Security Configuration
 Date the Security Configuration was created
 
 <h4 class="pdoc-member-header" id="SecurityConfigurationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L134">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1711,7 +1711,7 @@ Date the Security Configuration was created
 The name of the EMR Security Configuration. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="SecurityConfigurationState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/emr/securityConfiguration.ts#L139">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/emr/securityConfiguration.ts#L139">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

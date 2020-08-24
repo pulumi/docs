@@ -66,43 +66,43 @@ import pulumi_aws as aws
 foobar = aws.cloudwatch.MetricAlarm("foobar",
     alarm_description="Request error rate has exceeded 10%",
     comparison_operator="GreaterThanOrEqualToThreshold",
-    evaluation_periods="2",
+    evaluation_periods=2,
     insufficient_data_actions=[],
     metric_queries=[
-        {
-            "expression": "m2/m1*100",
-            "id": "e1",
-            "label": "Error Rate",
-            "returnData": "true",
-        },
-        {
-            "id": "m1",
-            "metric": {
-                "dimensions": {
+        aws.cloudwatch.MetricAlarmMetricQueryArgs(
+            expression="m2/m1*100",
+            id="e1",
+            label="Error Rate",
+            return_data=True,
+        ),
+        aws.cloudwatch.MetricAlarmMetricQueryArgs(
+            id="m1",
+            metric=aws.cloudwatch.MetricAlarmMetricQueryMetricArgs(
+                dimensions={
                     "LoadBalancer": "app/web",
                 },
-                "metric_name": "RequestCount",
-                "namespace": "AWS/ApplicationELB",
-                "period": "120",
-                "stat": "Sum",
-                "unit": "Count",
-            },
-        },
-        {
-            "id": "m2",
-            "metric": {
-                "dimensions": {
+                metric_name="RequestCount",
+                namespace="AWS/ApplicationELB",
+                period=120,
+                stat="Sum",
+                unit="Count",
+            ),
+        ),
+        aws.cloudwatch.MetricAlarmMetricQueryArgs(
+            id="m2",
+            metric=aws.cloudwatch.MetricAlarmMetricQueryMetricArgs(
+                dimensions={
                     "LoadBalancer": "app/web",
                 },
-                "metric_name": "HTTPCode_ELB_5XX_Count",
-                "namespace": "AWS/ApplicationELB",
-                "period": "120",
-                "stat": "Sum",
-                "unit": "Count",
-            },
-        },
+                metric_name="HTTPCode_ELB_5XX_Count",
+                namespace="AWS/ApplicationELB",
+                period=120,
+                stat="Sum",
+                unit="Count",
+            ),
+        ),
     ],
-    threshold="10")
+    threshold=10)
 ```
 ```csharp
 using Pulumi;
@@ -268,29 +268,29 @@ import pulumi_aws as aws
 xx_anomaly_detection = aws.cloudwatch.MetricAlarm("xxAnomalyDetection",
     alarm_description="This metric monitors ec2 cpu utilization",
     comparison_operator="GreaterThanUpperThreshold",
-    evaluation_periods="2",
+    evaluation_periods=2,
     insufficient_data_actions=[],
     metric_queries=[
-        {
-            "expression": "ANOMALY_DETECTION_BAND(m1)",
-            "id": "e1",
-            "label": "CPUUtilization (Expected)",
-            "returnData": "true",
-        },
-        {
-            "id": "m1",
-            "metric": {
-                "dimensions": {
+        aws.cloudwatch.MetricAlarmMetricQueryArgs(
+            expression="ANOMALY_DETECTION_BAND(m1)",
+            id="e1",
+            label="CPUUtilization (Expected)",
+            return_data=True,
+        ),
+        aws.cloudwatch.MetricAlarmMetricQueryArgs(
+            id="m1",
+            metric=aws.cloudwatch.MetricAlarmMetricQueryMetricArgs(
+                dimensions={
                     "InstanceId": "i-abc123",
                 },
-                "metric_name": "CPUUtilization",
-                "namespace": "AWS/EC2",
-                "period": "120",
-                "stat": "Average",
-                "unit": "Count",
-            },
-            "returnData": "true",
-        },
+                metric_name="CPUUtilization",
+                namespace="AWS/EC2",
+                period=120,
+                stat="Average",
+                unit="Count",
+            ),
+            return_data=True,
+        ),
     ],
     threshold_metric_id="e1")
 ```
@@ -461,13 +461,13 @@ import pulumi_aws as aws
 foobar = aws.cloudwatch.MetricAlarm("foobar",
     alarm_description="This metric monitors ec2 cpu utilization",
     comparison_operator="GreaterThanOrEqualToThreshold",
-    evaluation_periods="2",
+    evaluation_periods=2,
     insufficient_data_actions=[],
     metric_name="CPUUtilization",
     namespace="AWS/EC2",
-    period="120",
+    period=120,
     statistic="Average",
-    threshold="80")
+    threshold=80)
 ```
 
 {{% /example %}}
@@ -505,7 +505,7 @@ const foobar = new aws.cloudwatch.MetricAlarm("foobar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.MetricAlarm">MetricAlarm</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>actions_enabled=None<span class="p">, </span>alarm_actions=None<span class="p">, </span>alarm_description=None<span class="p">, </span>comparison_operator=None<span class="p">, </span>datapoints_to_alarm=None<span class="p">, </span>dimensions=None<span class="p">, </span>evaluate_low_sample_count_percentiles=None<span class="p">, </span>evaluation_periods=None<span class="p">, </span>extended_statistic=None<span class="p">, </span>insufficient_data_actions=None<span class="p">, </span>metric_name=None<span class="p">, </span>metric_queries=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>ok_actions=None<span class="p">, </span>period=None<span class="p">, </span>statistic=None<span class="p">, </span>tags=None<span class="p">, </span>threshold=None<span class="p">, </span>threshold_metric_id=None<span class="p">, </span>treat_missing_data=None<span class="p">, </span>unit=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.MetricAlarm">MetricAlarm</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">alarm_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">alarm_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comparison_operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datapoints_to_alarm</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">evaluate_low_sample_count_percentiles</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_periods</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">extended_statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insufficient_data_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_queries</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlarmMetricQueryArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ok_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">threshold_metric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">treat_missing_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1487,7 +1487,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#alarm_actions_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Topic, Default=String>]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -1520,7 +1520,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -1558,7 +1558,7 @@ The following values are supported: `ignore`, and `evaluate`.
 <a href="#insufficient_data_actions_python" style="color: inherit; text-decoration: inherit;">insufficient_<wbr>data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Topic, Default=String>]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -1581,7 +1581,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#metric_queries_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquery">List[Metric<wbr>Alarm<wbr>Metric<wbr>Query]</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquery">List[Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 {{% /md %}}</dd>
@@ -1615,7 +1615,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#ok_actions_python" style="color: inherit; text-decoration: inherit;">ok_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Topic, Default=String>]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -1649,7 +1649,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1840,7 +1840,8 @@ Get an existing MetricAlarm resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>actions_enabled=None<span class="p">, </span>alarm_actions=None<span class="p">, </span>alarm_description=None<span class="p">, </span>arn=None<span class="p">, </span>comparison_operator=None<span class="p">, </span>datapoints_to_alarm=None<span class="p">, </span>dimensions=None<span class="p">, </span>evaluate_low_sample_count_percentiles=None<span class="p">, </span>evaluation_periods=None<span class="p">, </span>extended_statistic=None<span class="p">, </span>insufficient_data_actions=None<span class="p">, </span>metric_name=None<span class="p">, </span>metric_queries=None<span class="p">, </span>name=None<span class="p">, </span>namespace=None<span class="p">, </span>ok_actions=None<span class="p">, </span>period=None<span class="p">, </span>statistic=None<span class="p">, </span>tags=None<span class="p">, </span>threshold=None<span class="p">, </span>threshold_metric_id=None<span class="p">, </span>treat_missing_data=None<span class="p">, </span>unit=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">alarm_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">alarm_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comparison_operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">datapoints_to_alarm</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">evaluate_low_sample_count_percentiles</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">evaluation_periods</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">extended_statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insufficient_data_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_queries</span><span class="p">:</span> <span class="nx">Optional[List[MetricAlarmMetricQueryArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ok_actions</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">statistic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">threshold_metric_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">treat_missing_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> MetricAlarm</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1848,7 +1849,7 @@ Get an existing MetricAlarm resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.MetricAlarm.html">MetricAlarm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.MetricAlarmState.html">MetricAlarmState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.MetricAlarm.html">MetricAlarm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.MetricAlarmState.html">MetricAlarmState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2775,7 +2776,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_alarm_actions_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Topic, Default=String>]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -2830,7 +2831,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>
@@ -2879,7 +2880,7 @@ The following values are supported: `ignore`, and `evaluate`.
 <a href="#state_insufficient_data_actions_python" style="color: inherit; text-decoration: inherit;">insufficient_<wbr>data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Topic, Default=String>]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -2902,7 +2903,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#state_metric_queries_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>queries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquery">List[Metric<wbr>Alarm<wbr>Metric<wbr>Query]</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquery">List[Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 {{% /md %}}</dd>
@@ -2936,7 +2937,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
 <a href="#state_ok_actions_python" style="color: inherit; text-decoration: inherit;">ok_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">List[Topic, Default=String>]</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
 {{% /md %}}</dd>
@@ -2970,7 +2971,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -3277,15 +3278,15 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquerymetric">Dict[Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric]</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquerymetric">Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="returndata_python">
-<a href="#returndata_python" style="color: inherit; text-decoration: inherit;">return<wbr>Data</a>
+        <span id="return_data_python">
+<a href="#return_data_python" style="color: inherit; text-decoration: inherit;">return_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3587,7 +3588,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
 {{% /md %}}</dd>

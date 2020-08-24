@@ -157,10 +157,10 @@ role = aws.iam.Role("role", assume_role_policy="""{
 }
 """)
 foo = aws.cfg.Recorder("foo", role_arn=role.arn)
-rule = aws.cfg.Rule("rule", source={
-    "owner": "AWS",
-    "sourceIdentifier": "S3_BUCKET_VERSIONING_ENABLED",
-},
+rule = aws.cfg.Rule("rule", source=aws.cfg.RuleSourceArgs(
+    owner="AWS",
+    source_identifier="S3_BUCKET_VERSIONING_ENABLED",
+),
 opts=ResourceOptions(depends_on=[foo]))
 role_policy = aws.iam.RolePolicy("rolePolicy",
     role=role.id,
@@ -334,10 +334,10 @@ example_permission = aws.lambda_.Permission("examplePermission",
     function=example_function.arn,
     principal="config.amazonaws.com")
 # ... other configuration ...
-example_rule = aws.cfg.Rule("exampleRule", source={
-    "owner": "CUSTOM_LAMBDA",
-    "sourceIdentifier": example_function.arn,
-},
+example_rule = aws.cfg.Rule("exampleRule", source=aws.cfg.RuleSourceArgs(
+    owner="CUSTOM_LAMBDA",
+    source_identifier=example_function.arn,
+),
 opts=ResourceOptions(depends_on=[
         example_recorder,
         example_permission,
@@ -387,7 +387,7 @@ const exampleRule = new aws.cfg.Rule("exampleRule", {source: {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cfg/#pulumi_aws.cfg.Rule">Rule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>input_parameters=None<span class="p">, </span>maximum_execution_frequency=None<span class="p">, </span>name=None<span class="p">, </span>scope=None<span class="p">, </span>source=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cfg/#pulumi_aws.cfg.Rule">Rule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_parameters</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_execution_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[RuleScopeArgs]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[RuleSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -823,7 +823,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesource">Dict[Rule<wbr>Source]</a></span>
+        <span class="property-type"><a href="#rulesource">Rule<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause
 the function to evaluate your AWS resources as documented below.
@@ -880,7 +880,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulescope">Dict[Rule<wbr>Scope]</a></span>
+        <span class="property-type"><a href="#rulescope">Rule<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scope defines which resources can trigger an evaluation for the rule as documented below.
 {{% /md %}}</dd>
@@ -891,7 +891,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1082,7 +1082,8 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>input_parameters=None<span class="p">, </span>maximum_execution_frequency=None<span class="p">, </span>name=None<span class="p">, </span>rule_id=None<span class="p">, </span>scope=None<span class="p">, </span>source=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_parameters</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_execution_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[RuleScopeArgs]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[RuleSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Rule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1090,7 +1091,7 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Rule.html">Rule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.RuleState.html">RuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Rule.html">Rule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.RuleState.html">RuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1593,7 +1594,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
 <a href="#state_scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulescope">Dict[Rule<wbr>Scope]</a></span>
+        <span class="property-type"><a href="#rulescope">Rule<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scope defines which resources can trigger an evaluation for the rule as documented below.
 {{% /md %}}</dd>
@@ -1604,7 +1605,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesource">Dict[Rule<wbr>Source]</a></span>
+        <span class="property-type"><a href="#rulesource">Rule<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause
 the function to evaluate your AWS resources as documented below.
@@ -1616,7 +1617,7 @@ the function to evaluate your AWS resources as documented below.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1821,8 +1822,8 @@ want to trigger an evaluation for the rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="complianceresourceid_python">
-<a href="#complianceresourceid_python" style="color: inherit; text-decoration: inherit;">compliance<wbr>Resource<wbr>Id</a>
+        <span id="compliance_resource_id_python">
+<a href="#compliance_resource_id_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1833,8 +1834,8 @@ If you specify a resource ID, you must specify one resource type for `compliance
 
     <dt class="property-optional"
             title="Optional">
-        <span id="complianceresourcetypes_python">
-<a href="#complianceresourcetypes_python" style="color: inherit; text-decoration: inherit;">compliance<wbr>Resource<wbr>Types</a>
+        <span id="compliance_resource_types_python">
+<a href="#compliance_resource_types_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1846,8 +1847,8 @@ a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tagkey_python">
-<a href="#tagkey_python" style="color: inherit; text-decoration: inherit;">tag<wbr>Key</a>
+        <span id="tag_key_python">
+<a href="#tag_key_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1858,8 +1859,8 @@ want to trigger an evaluation for the rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tagvalue_python">
-<a href="#tagvalue_python" style="color: inherit; text-decoration: inherit;">tag<wbr>Value</a>
+        <span id="tag_value_python">
+<a href="#tag_value_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2025,8 +2026,8 @@ want to trigger an evaluation for the rule.
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceidentifier_python">
-<a href="#sourceidentifier_python" style="color: inherit; text-decoration: inherit;">source<wbr>Identifier</a>
+        <span id="source_identifier_python">
+<a href="#source_identifier_python" style="color: inherit; text-decoration: inherit;">source_<wbr>identifier</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2036,11 +2037,11 @@ want to trigger an evaluation for the rule.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcedetails_python">
-<a href="#sourcedetails_python" style="color: inherit; text-decoration: inherit;">source<wbr>Details</a>
+        <span id="source_details_python">
+<a href="#source_details_python" style="color: inherit; text-decoration: inherit;">source_<wbr>details</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulesourcesourcedetail">List[Rule<wbr>Source<wbr>Source<wbr>Detail]</a></span>
+        <span class="property-type"><a href="#rulesourcesourcedetail">List[Rule<wbr>Source<wbr>Source<wbr>Detail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Provides the source and type of the event that causes AWS Config to evaluate your AWS resources. Only valid if `owner` is `CUSTOM_LAMBDA`.
 {{% /md %}}</dd>
@@ -2198,8 +2199,8 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventsource_python">
-<a href="#eventsource_python" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
+        <span id="event_source_python">
+<a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2222,8 +2223,8 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagetype_python">
-<a href="#messagetype_python" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

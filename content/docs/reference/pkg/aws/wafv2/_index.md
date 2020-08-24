@@ -13,13 +13,17 @@ Explore the resources and functions of the wafv2 module in the AWS package.
 <ul class="api">
     <li><a href="ipset" title="IpSet"><span class="symbol resource"></span>IpSet</a></li>
     <li><a href="regexpatternset" title="RegexPatternSet"><span class="symbol resource"></span>RegexPatternSet</a></li>
+    <li><a href="rulegroup" title="RuleGroup"><span class="symbol resource"></span>RuleGroup</a></li>
+    <li><a href="webacl" title="WebAcl"><span class="symbol resource"></span>WebAcl</a></li>
     <li><a href="webaclassociation" title="WebAclAssociation"><span class="symbol resource"></span>WebAclAssociation</a></li>
+    <li><a href="webaclloggingconfiguration" title="WebAclLoggingConfiguration"><span class="symbol resource"></span>WebAclLoggingConfiguration</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getipset" title="GetIpSet"><span class="symbol function"></span>GetIpSet</a></li>
     <li><a href="getregexpatternset" title="GetRegexPatternSet"><span class="symbol function"></span>GetRegexPatternSet</a></li>
+    <li><a href="getrulegroup" title="GetRuleGroup"><span class="symbol function"></span>GetRuleGroup</a></li>
     <li><a href="getwebacl" title="GetWebAcl"><span class="symbol function"></span>GetWebAcl</a></li>
 </ul>
 
@@ -32,7 +36,7 @@ Explore the resources and functions of the wafv2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
+	<dd>3.2.0</dd>
 </dl>
 
 

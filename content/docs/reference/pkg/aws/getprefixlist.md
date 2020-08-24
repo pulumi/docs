@@ -228,10 +228,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-test = aws.get_prefix_list(filters=[{
-    "name": "prefix-list-id",
-    "values": ["pl-68a54001"],
-}])
+test = aws.get_prefix_list(filters=[aws.GetPrefixListFilterArgs(
+    name="prefix-list-id",
+    values=["pl-68a54001"],
+)])
 ```
 
 {{% /example %}}
@@ -266,7 +266,7 @@ const test = pulumi.output(aws.getPrefixList({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_prefix_list(</span>filters=None<span class="p">, </span>name=None<span class="p">, </span>prefix_list_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_prefix_list(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetPrefixListFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prefix_list_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPrefixListResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -417,7 +417,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getprefixlistfilter">List[Get<wbr>Prefix<wbr>List<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getprefixlistfilter">List[Get<wbr>Prefix<wbr>List<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
 {{% /md %}}</dd>

@@ -118,18 +118,18 @@ import pulumi_aws as aws
 
 example = aws.mq.Broker("example",
     broker_name="example",
-    configuration={
-        "id": aws_mq_configuration["test"]["id"],
-        "revision": aws_mq_configuration["test"]["latest_revision"],
-    },
+    configuration=aws.mq.BrokerConfigurationArgs(
+        id=aws_mq_configuration["test"]["id"],
+        revision=aws_mq_configuration["test"]["latest_revision"],
+    ),
     engine_type="ActiveMQ",
     engine_version="5.15.0",
     host_instance_type="mq.t2.micro",
     security_groups=[aws_security_group["test"]["id"]],
-    users=[{
-        "username": "ExampleUser",
-        "password": "MindTheGap",
-    }])
+    users=[aws.mq.BrokerUserArgs(
+        username="ExampleUser",
+        password="MindTheGap",
+    )])
 ```
 
 {{% /example %}}
@@ -171,7 +171,7 @@ const example = new aws.mq.Broker("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/mq/#pulumi_aws.mq.Broker">Broker</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>apply_immediately=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>broker_name=None<span class="p">, </span>configuration=None<span class="p">, </span>deployment_mode=None<span class="p">, </span>encryption_options=None<span class="p">, </span>engine_type=None<span class="p">, </span>engine_version=None<span class="p">, </span>host_instance_type=None<span class="p">, </span>logs=None<span class="p">, </span>maintenance_window_start_time=None<span class="p">, </span>publicly_accessible=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/mq/#pulumi_aws.mq.Broker">Broker</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">broker_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[BrokerConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_options</span><span class="p">:</span> <span class="nx">Optional[BrokerEncryptionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[BrokerLogsArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_start_time</span><span class="p">:</span> <span class="nx">Optional[BrokerMaintenanceWindowStartTimeArgs]</span> = None<span class="p">, </span><span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[List[BrokerUserArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -956,7 +956,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">List[Broker<wbr>User]</a></span>
+        <span class="property-type"><a href="#brokeruser">List[Broker<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
 {{% /md %}}</dd>
@@ -990,7 +990,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Dict[Broker<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -1012,7 +1012,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#encryption_options_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Dict[Broker<wbr>Encryption<wbr>Options]</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
 {{% /md %}}</dd>
@@ -1023,7 +1023,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Dict[Broker<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -1034,7 +1034,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#maintenance_window_start_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Dict[Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time]</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
 {{% /md %}}</dd>
@@ -1067,7 +1067,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1290,7 +1290,8 @@ Get an existing Broker resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>apply_immediately=None<span class="p">, </span>arn=None<span class="p">, </span>auto_minor_version_upgrade=None<span class="p">, </span>broker_name=None<span class="p">, </span>configuration=None<span class="p">, </span>deployment_mode=None<span class="p">, </span>encryption_options=None<span class="p">, </span>engine_type=None<span class="p">, </span>engine_version=None<span class="p">, </span>host_instance_type=None<span class="p">, </span>instances=None<span class="p">, </span>logs=None<span class="p">, </span>maintenance_window_start_time=None<span class="p">, </span>publicly_accessible=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>users=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">broker_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[BrokerConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">deployment_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_options</span><span class="p">:</span> <span class="nx">Optional[BrokerEncryptionOptionsArgs]</span> = None<span class="p">, </span><span class="nx">engine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[List[BrokerInstanceArgs]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[BrokerLogsArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_start_time</span><span class="p">:</span> <span class="nx">Optional[BrokerMaintenanceWindowStartTimeArgs]</span> = None<span class="p">, </span><span class="nx">publicly_accessible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[List[BrokerUserArgs]]</span> = None<span class="p">) -&gt;</span> Broker</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1298,7 +1299,7 @@ Get an existing Broker resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.Broker.html">Broker</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.BrokerState.html">BrokerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.Broker.html">Broker</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mq.BrokerState.html">BrokerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2097,7 +2098,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#state_configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Dict[Broker<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -2119,7 +2120,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#state_encryption_options_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Dict[Broker<wbr>Encryption<wbr>Options]</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
 {{% /md %}}</dd>
@@ -2163,7 +2164,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#state_instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerinstance">List[Broker<wbr>Instance]</a></span>
+        <span class="property-type"><a href="#brokerinstance">List[Broker<wbr>Instance<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -2182,7 +2183,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#state_logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Dict[Broker<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -2193,7 +2194,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#state_maintenance_window_start_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Dict[Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time]</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
 {{% /md %}}</dd>
@@ -2237,7 +2238,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2248,7 +2249,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">List[Broker<wbr>User]</a></span>
+        <span class="property-type"><a href="#brokeruser">List[Broker<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
 {{% /md %}}</dd>
@@ -2520,8 +2521,8 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
     <dt class="property-optional"
             title="Optional">
-        <span id="useawsownedkey_python">
-<a href="#useawsownedkey_python" style="color: inherit; text-decoration: inherit;">use<wbr>Aws<wbr>Owned<wbr>Key</a>
+        <span id="use_aws_owned_key_python">
+<a href="#use_aws_owned_key_python" style="color: inherit; text-decoration: inherit;">use_<wbr>aws_<wbr>owned_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2667,8 +2668,8 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consoleurl_python">
-<a href="#consoleurl_python" style="color: inherit; text-decoration: inherit;">console<wbr>Url</a>
+        <span id="console_url_python">
+<a href="#console_url_python" style="color: inherit; text-decoration: inherit;">console_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2976,8 +2977,8 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
     <dt class="property-required"
             title="Required">
-        <span id="dayofweek_python">
-<a href="#dayofweek_python" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
+        <span id="day_of_week_python">
+<a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2987,8 +2988,8 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
     <dt class="property-required"
             title="Required">
-        <span id="timeofday_python">
-<a href="#timeofday_python" style="color: inherit; text-decoration: inherit;">time<wbr>Of<wbr>Day</a>
+        <span id="time_of_day_python">
+<a href="#time_of_day_python" style="color: inherit; text-decoration: inherit;">time_<wbr>of_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2998,8 +2999,8 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
     <dt class="property-required"
             title="Required">
-        <span id="timezone_python">
-<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3209,8 +3210,8 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
     <dt class="property-optional"
             title="Optional">
-        <span id="consoleaccess_python">
-<a href="#consoleaccess_python" style="color: inherit; text-decoration: inherit;">console<wbr>Access</a>
+        <span id="console_access_python">
+<a href="#console_access_python" style="color: inherit; text-decoration: inherit;">console_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

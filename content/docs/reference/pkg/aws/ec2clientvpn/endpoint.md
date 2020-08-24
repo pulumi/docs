@@ -100,15 +100,15 @@ example = aws.ec2clientvpn.Endpoint("example",
     description="clientvpn-example",
     server_certificate_arn=aws_acm_certificate["cert"]["arn"],
     client_cidr_block="10.0.0.0/16",
-    authentication_options=[{
-        "type": "certificate-authentication",
-        "rootCertificateChainArn": aws_acm_certificate["root_cert"]["arn"],
-    }],
-    connection_log_options={
-        "enabled": True,
-        "cloudwatchLogGroup": aws_cloudwatch_log_group["lg"]["name"],
-        "cloudwatchLogStream": aws_cloudwatch_log_stream["ls"]["name"],
-    })
+    authentication_options=[aws.ec2clientvpn.EndpointAuthenticationOptionArgs(
+        type="certificate-authentication",
+        root_certificate_chain_arn=aws_acm_certificate["root_cert"]["arn"],
+    )],
+    connection_log_options=aws.ec2clientvpn.EndpointConnectionLogOptionsArgs(
+        enabled=True,
+        cloudwatch_log_group=aws_cloudwatch_log_group["lg"]["name"],
+        cloudwatch_log_stream=aws_cloudwatch_log_stream["ls"]["name"],
+    ))
 ```
 
 {{% /example %}}
@@ -149,7 +149,7 @@ const example = new aws.ec2clientvpn.Endpoint("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2clientvpn/#pulumi_aws.ec2clientvpn.Endpoint">Endpoint</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authentication_options=None<span class="p">, </span>client_cidr_block=None<span class="p">, </span>connection_log_options=None<span class="p">, </span>description=None<span class="p">, </span>dns_servers=None<span class="p">, </span>server_certificate_arn=None<span class="p">, </span>split_tunnel=None<span class="p">, </span>tags=None<span class="p">, </span>transport_protocol=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2clientvpn/#pulumi_aws.ec2clientvpn.Endpoint">Endpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication_options</span><span class="p">:</span> <span class="nx">Optional[List[EndpointAuthenticationOptionArgs]]</span> = None<span class="p">, </span><span class="nx">client_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_log_options</span><span class="p">:</span> <span class="nx">Optional[EndpointConnectionLogOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">server_certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">split_tunnel</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transport_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -645,7 +645,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#authentication_options_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointauthenticationoption">List[Endpoint<wbr>Authentication<wbr>Option]</a></span>
+        <span class="property-type"><a href="#endpointauthenticationoption">List[Endpoint<wbr>Authentication<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
 {{% /md %}}</dd>
@@ -667,7 +667,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#connection_log_options_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>log_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconnectionlogoptions">Dict[Endpoint<wbr>Connection<wbr>Log<wbr>Options]</a></span>
+        <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
 {{% /md %}}</dd>
@@ -722,7 +722,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -968,7 +968,8 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>authentication_options=None<span class="p">, </span>client_cidr_block=None<span class="p">, </span>connection_log_options=None<span class="p">, </span>description=None<span class="p">, </span>dns_name=None<span class="p">, </span>dns_servers=None<span class="p">, </span>server_certificate_arn=None<span class="p">, </span>split_tunnel=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>transport_protocol=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_options</span><span class="p">:</span> <span class="nx">Optional[List[EndpointAuthenticationOptionArgs]]</span> = None<span class="p">, </span><span class="nx">client_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_log_options</span><span class="p">:</span> <span class="nx">Optional[EndpointConnectionLogOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">server_certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">split_tunnel</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transport_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Endpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -976,7 +977,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2ClientVpn.Endpoint.html">Endpoint</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2ClientVpn.EndpointState.html">EndpointState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2ClientVpn.Endpoint.html">Endpoint</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2ClientVpn.EndpointState.html">EndpointState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1516,7 +1517,7 @@ The following state arguments are supported:
 <a href="#state_authentication_options_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointauthenticationoption">List[Endpoint<wbr>Authentication<wbr>Option]</a></span>
+        <span class="property-type"><a href="#endpointauthenticationoption">List[Endpoint<wbr>Authentication<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
 {{% /md %}}</dd>
@@ -1538,7 +1539,7 @@ The following state arguments are supported:
 <a href="#state_connection_log_options_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>log_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconnectionlogoptions">Dict[Endpoint<wbr>Connection<wbr>Log<wbr>Options]</a></span>
+        <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
 {{% /md %}}</dd>
@@ -1615,7 +1616,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1808,8 +1809,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rootcertificatechainarn_python">
-<a href="#rootcertificatechainarn_python" style="color: inherit; text-decoration: inherit;">root<wbr>Certificate<wbr>Chain<wbr>Arn</a>
+        <span id="root_certificate_chain_arn_python">
+<a href="#root_certificate_chain_arn_python" style="color: inherit; text-decoration: inherit;">root_<wbr>certificate_<wbr>chain_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1975,8 +1976,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cloudwatchloggroup_python">
-<a href="#cloudwatchloggroup_python" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Log<wbr>Group</a>
+        <span id="cloudwatch_log_group_python">
+<a href="#cloudwatch_log_group_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>log_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1986,8 +1987,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cloudwatchlogstream_python">
-<a href="#cloudwatchlogstream_python" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Log<wbr>Stream</a>
+        <span id="cloudwatch_log_stream_python">
+<a href="#cloudwatch_log_stream_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>log_<wbr>stream</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

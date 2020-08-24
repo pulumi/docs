@@ -292,14 +292,14 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.cloudtrail.Trail("example", event_selectors=[{
-    "dataResources": [{
-        "type": "AWS::Lambda::Function",
-        "values": ["arn:aws:lambda"],
-    }],
-    "includeManagementEvents": True,
-    "readWriteType": "All",
-}])
+example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
+    data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
+        type="AWS::Lambda::Function",
+        values=["arn:aws:lambda"],
+    )],
+    include_management_events=True,
+    read_write_type="All",
+)])
 ```
 
 {{% /example %}}
@@ -405,14 +405,14 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.cloudtrail.Trail("example", event_selectors=[{
-    "dataResources": [{
-        "type": "AWS::S3::Object",
-        "values": ["arn:aws:s3:::"],
-    }],
-    "includeManagementEvents": True,
-    "readWriteType": "All",
-}])
+example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
+    data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
+        type="AWS::S3::Object",
+        values=["arn:aws:s3:::"],
+    )],
+    include_management_events=True,
+    read_write_type="All",
+)])
 ```
 
 {{% /example %}}
@@ -532,14 +532,14 @@ import pulumi
 import pulumi_aws as aws
 
 important_bucket = aws.s3.get_bucket(bucket="important-bucket")
-example = aws.cloudtrail.Trail("example", event_selectors=[{
-    "dataResources": [{
-        "type": "AWS::S3::Object",
-        "values": [f"{important_bucket.arn}/"],
-    }],
-    "includeManagementEvents": True,
-    "readWriteType": "All",
-}])
+example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
+    data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
+        type="AWS::S3::Object",
+        values=[f"{important_bucket.arn}/"],
+    )],
+    include_management_events=True,
+    read_write_type="All",
+)])
 ```
 
 {{% /example %}}
@@ -581,7 +581,7 @@ const example = new aws.cloudtrail.Trail("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudtrail/#pulumi_aws.cloudtrail.Trail">Trail</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloud_watch_logs_group_arn=None<span class="p">, </span>cloud_watch_logs_role_arn=None<span class="p">, </span>enable_log_file_validation=None<span class="p">, </span>enable_logging=None<span class="p">, </span>event_selectors=None<span class="p">, </span>include_global_service_events=None<span class="p">, </span>is_multi_region_trail=None<span class="p">, </span>is_organization_trail=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>name=None<span class="p">, </span>s3_bucket_name=None<span class="p">, </span>s3_key_prefix=None<span class="p">, </span>sns_topic_name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudtrail/#pulumi_aws.cloudtrail.Trail">Trail</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_log_file_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_selectors</span><span class="p">:</span> <span class="nx">Optional[List[TrailEventSelectorArgs]]</span> = None<span class="p">, </span><span class="nx">include_global_service_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_multi_region_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1325,7 +1325,7 @@ Setting this to `false` will pause logging.
 <a href="#event_selectors_python" style="color: inherit; text-decoration: inherit;">event_<wbr>selectors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselector">List[Trail<wbr>Event<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#traileventselector">List[Trail<wbr>Event<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
 {{% /md %}}</dd>
@@ -1417,7 +1417,7 @@ defined for notification of log file delivery.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
@@ -1608,7 +1608,8 @@ Get an existing Trail resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>cloud_watch_logs_group_arn=None<span class="p">, </span>cloud_watch_logs_role_arn=None<span class="p">, </span>enable_log_file_validation=None<span class="p">, </span>enable_logging=None<span class="p">, </span>event_selectors=None<span class="p">, </span>home_region=None<span class="p">, </span>include_global_service_events=None<span class="p">, </span>is_multi_region_trail=None<span class="p">, </span>is_organization_trail=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>name=None<span class="p">, </span>s3_bucket_name=None<span class="p">, </span>s3_key_prefix=None<span class="p">, </span>sns_topic_name=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_log_file_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_selectors</span><span class="p">:</span> <span class="nx">Optional[List[TrailEventSelectorArgs]]</span> = None<span class="p">, </span><span class="nx">home_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">include_global_service_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_multi_region_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Trail</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1616,7 +1617,7 @@ Get an existing Trail resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Trail.html">Trail</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.TrailState.html">TrailState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Trail.html">Trail</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.TrailState.html">TrailState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2360,7 +2361,7 @@ Setting this to `false` will pause logging.
 <a href="#state_event_selectors_python" style="color: inherit; text-decoration: inherit;">event_<wbr>selectors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselector">List[Trail<wbr>Event<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#traileventselector">List[Trail<wbr>Event<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies an event selector for enabling data event logging. Fields documented below. Please note the [CloudTrail limits](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) when configuring these.
 {{% /md %}}</dd>
@@ -2474,7 +2475,7 @@ defined for notification of log file delivery.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the trail
 {{% /md %}}</dd>
@@ -2634,19 +2635,19 @@ defined for notification of log file delivery.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataresources_python">
-<a href="#dataresources_python" style="color: inherit; text-decoration: inherit;">data<wbr>Resources</a>
+        <span id="data_resources_python">
+<a href="#data_resources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#traileventselectordataresource">List[Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#traileventselectordataresource">List[Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies logging data events. Fields documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includemanagementevents_python">
-<a href="#includemanagementevents_python" style="color: inherit; text-decoration: inherit;">include<wbr>Management<wbr>Events</a>
+        <span id="include_management_events_python">
+<a href="#include_management_events_python" style="color: inherit; text-decoration: inherit;">include_<wbr>management_<wbr>events</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2656,8 +2657,8 @@ defined for notification of log file delivery.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="readwritetype_python">
-<a href="#readwritetype_python" style="color: inherit; text-decoration: inherit;">read<wbr>Write<wbr>Type</a>
+        <span id="read_write_type_python">
+<a href="#read_write_type_python" style="color: inherit; text-decoration: inherit;">read_<wbr>write_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -108,14 +108,14 @@ example_regex_pattern_set = aws.wafregional.RegexPatternSet("exampleRegexPattern
     "one",
     "two",
 ])
-example_regex_match_set = aws.wafregional.RegexMatchSet("exampleRegexMatchSet", regex_match_tuples=[{
-    "fieldToMatch": {
-        "data": "User-Agent",
-        "type": "HEADER",
-    },
-    "regexPatternSetId": example_regex_pattern_set.id,
-    "textTransformation": "NONE",
-}])
+example_regex_match_set = aws.wafregional.RegexMatchSet("exampleRegexMatchSet", regex_match_tuples=[aws.wafregional.RegexMatchSetRegexMatchTupleArgs(
+    field_to_match=aws.wafregional.RegexMatchSetRegexMatchTupleFieldToMatchArgs(
+        data="User-Agent",
+        type="HEADER",
+    ),
+    regex_pattern_set_id=example_regex_pattern_set.id,
+    text_transformation="NONE",
+)])
 ```
 
 {{% /example %}}
@@ -154,7 +154,7 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("exampleRegexMatc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafregional/#pulumi_aws.wafregional.RegexMatchSet">RegexMatchSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>regex_match_tuples=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafregional/#pulumi_aws.wafregional.RegexMatchSet">RegexMatchSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regex_match_tuples</span><span class="p">:</span> <span class="nx">Optional[List[RegexMatchSetRegexMatchTupleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -433,7 +433,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
 <a href="#regex_match_tuples_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match_<wbr>tuples</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple]</a></span>
+        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
 the location in requests that you want AWS WAF to search, and other settings. See below.
@@ -537,7 +537,8 @@ Get an existing RegexMatchSet resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>regex_match_tuples=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regex_match_tuples</span><span class="p">:</span> <span class="nx">Optional[List[RegexMatchSetRegexMatchTupleArgs]]</span> = None<span class="p">) -&gt;</span> RegexMatchSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -545,7 +546,7 @@ Get an existing RegexMatchSet resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.RegexMatchSet.html">RegexMatchSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.RegexMatchSetState.html">RegexMatchSetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.RegexMatchSet.html">RegexMatchSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.RegexMatchSetState.html">RegexMatchSetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -758,7 +759,7 @@ the location in requests that you want AWS WAF to search, and other settings. Se
 <a href="#state_regex_match_tuples_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match_<wbr>tuples</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple]</a></span>
+        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
 the location in requests that you want AWS WAF to search, and other settings. See below.
@@ -928,19 +929,19 @@ for all supported values.
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldtomatch_python">
-<a href="#fieldtomatch_python" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
+        <span id="field_to_match_python">
+<a href="#field_to_match_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexmatchsetregexmatchtuplefieldtomatch">Dict[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match]</a></span>
+        <span class="property-type"><a href="#regexmatchsetregexmatchtuplefieldtomatch">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want to search, such as a specified header or a query string.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="regexpatternsetid_python">
-<a href="#regexpatternsetid_python" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Id</a>
+        <span id="regex_pattern_set_id_python">
+<a href="#regex_pattern_set_id_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>pattern_<wbr>set_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -950,8 +951,8 @@ for all supported values.
 
     <dt class="property-required"
             title="Required">
-        <span id="texttransformation_python">
-<a href="#texttransformation_python" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
+        <span id="text_transformation_python">
+<a href="#text_transformation_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

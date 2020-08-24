@@ -3,7 +3,7 @@ title: "Module outposts"
 title_tag: "Module outposts | Package @pulumi/aws | Node.js SDK"
 linktitle: "outposts"
 meta_desc: "Explore members of the outposts module in the @pulumi/aws package."
-git_sha: "0a2e76f947fd9ea3ee41beab30d2121c4b385e5c"
+git_sha: "f41f492a44c487667f616da57823709362559b0c"
 block_external_search_index: true
 ---
 
@@ -45,7 +45,7 @@ block_external_search_index: true
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getOutpost" data-link-title="getOutpost">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L23">
         Function <strong>getOutpost</strong>
     </a>
 </h3>
@@ -68,7 +68,7 @@ const example = pulumi.output(aws.outposts.getOutpost({
 ```
 
 <h3 class="pdoc-module-header" id="getOutpostInstanceType" data-link-title="getOutpostInstanceType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L12">
         Function <strong>getOutpostInstanceType</strong>
     </a>
 </h3>
@@ -80,7 +80,7 @@ const example = pulumi.output(aws.outposts.getOutpost({
 Information about single Outpost Instance Type.
 
 <h3 class="pdoc-module-header" id="getOutpostInstanceTypes" data-link-title="getOutpostInstanceTypes">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L23">
         Function <strong>getOutpostInstanceTypes</strong>
     </a>
 </h3>
@@ -103,7 +103,7 @@ const example = aws.outposts.getOutpostInstanceTypes({
 ```
 
 <h3 class="pdoc-module-header" id="getOutposts" data-link-title="getOutposts">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L23">
         Function <strong>getOutposts</strong>
     </a>
 </h3>
@@ -126,7 +126,7 @@ const example = aws.outposts.getOutposts({
 ```
 
 <h3 class="pdoc-module-header" id="getSite" data-link-title="getSite">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSite.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSite.ts#L23">
         Function <strong>getSite</strong>
     </a>
 </h3>
@@ -149,7 +149,7 @@ const example = pulumi.output(aws.outposts.getSite({
 ```
 
 <h3 class="pdoc-module-header" id="getSites" data-link-title="getSites">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSites.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSites.ts#L21">
         Function <strong>getSites</strong>
     </a>
 </h3>
@@ -172,7 +172,7 @@ const all = pulumi.output(aws.outposts.getSites({ async: true }));
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetOutpostArgs" data-link-title="GetOutpostArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L41">
         interface <strong>GetOutpostArgs</strong>
     </a>
 </h3>
@@ -182,7 +182,7 @@ const all = pulumi.output(aws.outposts.getSites({ async: true }));
 A collection of arguments for invoking getOutpost.
 
 <h4 class="pdoc-member-header" id="GetOutpostArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -190,7 +190,7 @@ A collection of arguments for invoking getOutpost.
 Identifier of the Outpost.
 
 <h4 class="pdoc-member-header" id="GetOutpostArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -198,7 +198,7 @@ Identifier of the Outpost.
 Name of the Outpost.
 
 <h3 class="pdoc-module-header" id="GetOutpostInstanceTypeArgs" data-link-title="GetOutpostInstanceTypeArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L30">
         interface <strong>GetOutpostInstanceTypeArgs</strong>
     </a>
 </h3>
@@ -208,7 +208,7 @@ Name of the Outpost.
 A collection of arguments for invoking getOutpostInstanceType.
 
 <h4 class="pdoc-member-header" id="GetOutpostInstanceTypeArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L34">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L34">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -216,7 +216,7 @@ A collection of arguments for invoking getOutpostInstanceType.
 Outpost Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="GetOutpostInstanceTypeArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L38">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L38">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -224,7 +224,7 @@ Outpost Amazon Resource Name (ARN).
 Desired instance type. Conflicts with `preferredInstanceTypes`.
 
 <h4 class="pdoc-member-header" id="GetOutpostInstanceTypeArgs-preferredInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L42">property <b>preferredInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L42">property <b>preferredInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredInstanceTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -232,7 +232,7 @@ Desired instance type. Conflicts with `preferredInstanceTypes`.
 Ordered list of preferred instance types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. Conflicts with `instanceType`.
 
 <h3 class="pdoc-module-header" id="GetOutpostInstanceTypeResult" data-link-title="GetOutpostInstanceTypeResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L48">
         interface <strong>GetOutpostInstanceTypeResult</strong>
     </a>
 </h3>
@@ -242,12 +242,12 @@ Ordered list of preferred instance types. The first match in this list will be r
 A collection of values returned by getOutpostInstanceType.
 
 <h4 class="pdoc-member-header" id="GetOutpostInstanceTypeResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L49">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L49">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetOutpostInstanceTypeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -255,17 +255,17 @@ A collection of values returned by getOutpostInstanceType.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetOutpostInstanceTypeResult-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L54">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L54">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetOutpostInstanceTypeResult-preferredInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L55">property <b>preferredInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceType.ts#L55">property <b>preferredInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredInstanceTypes?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetOutpostInstanceTypesArgs" data-link-title="GetOutpostInstanceTypesArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L39">
         interface <strong>GetOutpostInstanceTypesArgs</strong>
     </a>
 </h3>
@@ -275,7 +275,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getOutpostInstanceTypes.
 
 <h4 class="pdoc-member-header" id="GetOutpostInstanceTypesArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L43">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L43">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -283,7 +283,7 @@ A collection of arguments for invoking getOutpostInstanceTypes.
 Outpost Amazon Resource Name (ARN).
 
 <h3 class="pdoc-module-header" id="GetOutpostInstanceTypesResult" data-link-title="GetOutpostInstanceTypesResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L49">
         interface <strong>GetOutpostInstanceTypesResult</strong>
     </a>
 </h3>
@@ -293,12 +293,12 @@ Outpost Amazon Resource Name (ARN).
 A collection of values returned by getOutpostInstanceTypes.
 
 <h4 class="pdoc-member-header" id="GetOutpostInstanceTypesResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L50">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L50">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetOutpostInstanceTypesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L54">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -306,7 +306,7 @@ A collection of values returned by getOutpostInstanceTypes.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetOutpostInstanceTypesResult-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L58">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpostInstanceTypes.ts#L58">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -314,7 +314,7 @@ The provider-assigned unique ID for this managed resource.
 Set of instance types.
 
 <h3 class="pdoc-module-header" id="GetOutpostResult" data-link-title="GetOutpostResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L55">
         interface <strong>GetOutpostResult</strong>
     </a>
 </h3>
@@ -324,7 +324,7 @@ Set of instance types.
 A collection of values returned by getOutpost.
 
 <h4 class="pdoc-member-header" id="GetOutpostResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L59">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L59">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -332,7 +332,7 @@ A collection of values returned by getOutpost.
 Amazon Resource Name (ARN).
 
 <h4 class="pdoc-member-header" id="GetOutpostResult-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L63">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L63">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -340,7 +340,7 @@ Amazon Resource Name (ARN).
 Availability Zone name.
 
 <h4 class="pdoc-member-header" id="GetOutpostResult-availabilityZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L67">property <b>availabilityZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L67">property <b>availabilityZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -348,7 +348,7 @@ Availability Zone name.
 Availability Zone identifier.
 
 <h4 class="pdoc-member-header" id="GetOutpostResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L71">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L71">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -356,17 +356,17 @@ Availability Zone identifier.
 Description.
 
 <h4 class="pdoc-member-header" id="GetOutpostResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetOutpostResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetOutpostResult-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L77">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L77">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -374,7 +374,7 @@ Description.
 AWS Account identifier of the Outpost owner.
 
 <h4 class="pdoc-member-header" id="GetOutpostResult-siteId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutpost.ts#L81">property <b>siteId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutpost.ts#L81">property <b>siteId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>siteId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -382,7 +382,7 @@ AWS Account identifier of the Outpost owner.
 Site identifier.
 
 <h3 class="pdoc-module-header" id="GetOutpostsArgs" data-link-title="GetOutpostsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L42">
         interface <strong>GetOutpostsArgs</strong>
     </a>
 </h3>
@@ -392,7 +392,7 @@ Site identifier.
 A collection of arguments for invoking getOutposts.
 
 <h4 class="pdoc-member-header" id="GetOutpostsArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L46">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L46">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -400,7 +400,7 @@ A collection of arguments for invoking getOutposts.
 Availability Zone name.
 
 <h4 class="pdoc-member-header" id="GetOutpostsArgs-availabilityZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L50">property <b>availabilityZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L50">property <b>availabilityZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZoneId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -408,7 +408,7 @@ Availability Zone name.
 Availability Zone identifier.
 
 <h4 class="pdoc-member-header" id="GetOutpostsArgs-siteId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L54">property <b>siteId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L54">property <b>siteId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>siteId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -416,7 +416,7 @@ Availability Zone identifier.
 Site identifier.
 
 <h3 class="pdoc-module-header" id="GetOutpostsResult" data-link-title="GetOutpostsResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L60">
         interface <strong>GetOutpostsResult</strong>
     </a>
 </h3>
@@ -426,7 +426,7 @@ Site identifier.
 A collection of values returned by getOutposts.
 
 <h4 class="pdoc-member-header" id="GetOutpostsResult-arns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L64">property <b>arns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L64">property <b>arns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -434,17 +434,17 @@ A collection of values returned by getOutposts.
 Set of Amazon Resource Names (ARNs).
 
 <h4 class="pdoc-member-header" id="GetOutpostsResult-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L65">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L65">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetOutpostsResult-availabilityZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L66">property <b>availabilityZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L66">property <b>availabilityZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetOutpostsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L70">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -452,7 +452,7 @@ Set of Amazon Resource Names (ARNs).
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetOutpostsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L74">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L74">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -460,12 +460,12 @@ The provider-assigned unique ID for this managed resource.
 Set of identifiers.
 
 <h4 class="pdoc-member-header" id="GetOutpostsResult-siteId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getOutposts.ts#L75">property <b>siteId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getOutposts.ts#L75">property <b>siteId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>siteId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSiteArgs" data-link-title="GetSiteArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSite.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSite.ts#L41">
         interface <strong>GetSiteArgs</strong>
     </a>
 </h3>
@@ -475,7 +475,7 @@ Set of identifiers.
 A collection of arguments for invoking getSite.
 
 <h4 class="pdoc-member-header" id="GetSiteArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSite.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSite.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -483,7 +483,7 @@ A collection of arguments for invoking getSite.
 Identifier of the Site.
 
 <h4 class="pdoc-member-header" id="GetSiteArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSite.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSite.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -491,7 +491,7 @@ Identifier of the Site.
 Name of the Site.
 
 <h3 class="pdoc-module-header" id="GetSiteResult" data-link-title="GetSiteResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSite.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSite.ts#L55">
         interface <strong>GetSiteResult</strong>
     </a>
 </h3>
@@ -501,7 +501,7 @@ Name of the Site.
 A collection of values returned by getSite.
 
 <h4 class="pdoc-member-header" id="GetSiteResult-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSite.ts#L59">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSite.ts#L59">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -509,7 +509,7 @@ A collection of values returned by getSite.
 AWS Account identifier.
 
 <h4 class="pdoc-member-header" id="GetSiteResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSite.ts#L63">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSite.ts#L63">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -517,17 +517,17 @@ AWS Account identifier.
 Description.
 
 <h4 class="pdoc-member-header" id="GetSiteResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSite.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSite.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSiteResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSite.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSite.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSitesResult" data-link-title="GetSitesResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSites.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSites.ts#L36">
         interface <strong>GetSitesResult</strong>
     </a>
 </h3>
@@ -537,7 +537,7 @@ Description.
 A collection of values returned by getSites.
 
 <h4 class="pdoc-member-header" id="GetSitesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSites.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSites.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -545,7 +545,7 @@ A collection of values returned by getSites.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSitesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/outposts/getSites.ts#L44">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f41f492a44c487667f616da57823709362559b0c/sdk/nodejs/outposts/getSites.ts#L44">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>

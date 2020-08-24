@@ -84,11 +84,11 @@ import pulumi_aws as aws
 
 tftest = aws.elasticbeanstalk.Application("tftest",
     description="tf-test-desc",
-    appversion_lifecycle={
-        "service_role": aws_iam_role["beanstalk_service"]["arn"],
-        "maxCount": 128,
-        "deleteSourceFromS3": True,
-    })
+    appversion_lifecycle=aws.elasticbeanstalk.ApplicationAppversionLifecycleArgs(
+        service_role=aws_iam_role["beanstalk_service"]["arn"],
+        max_count=128,
+        delete_source_from_s3=True,
+    ))
 ```
 
 {{% /example %}}
@@ -123,7 +123,7 @@ const tftest = new aws.elasticbeanstalk.Application("tftest", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticbeanstalk/#pulumi_aws.elasticbeanstalk.Application">Application</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>appversion_lifecycle=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticbeanstalk/#pulumi_aws.elasticbeanstalk.Application">Application</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">appversion_lifecycle</span><span class="p">:</span> <span class="nx">Optional[ApplicationAppversionLifecycleArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -451,7 +451,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#appversion_lifecycle_python" style="color: inherit; text-decoration: inherit;">appversion_<wbr>lifecycle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappversionlifecycle">Dict[Application<wbr>Appversion<wbr>Lifecycle]</a></span>
+        <span class="property-type"><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -483,7 +483,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application.
 {{% /md %}}</dd>
@@ -630,7 +630,8 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>appversion_lifecycle=None<span class="p">, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">appversion_lifecycle</span><span class="p">:</span> <span class="nx">Optional[ApplicationAppversionLifecycleArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -638,7 +639,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.ApplicationState.html">ApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.ApplicationState.html">ApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -933,7 +934,7 @@ The following state arguments are supported:
 <a href="#state_appversion_lifecycle_python" style="color: inherit; text-decoration: inherit;">appversion_<wbr>lifecycle</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappversionlifecycle">Dict[Application<wbr>Appversion<wbr>Lifecycle]</a></span>
+        <span class="property-type"><a href="#applicationappversionlifecycle">Application<wbr>Appversion<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -976,7 +977,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of tags for the Elastic Beanstalk Application.
 {{% /md %}}</dd>
@@ -1180,8 +1181,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deletesourcefroms3_python">
-<a href="#deletesourcefroms3_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Source<wbr>From<wbr>S3</a>
+        <span id="delete_source_from_s3_python">
+<a href="#delete_source_from_s3_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>source_<wbr>from_<wbr>s3</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1191,8 +1192,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxageindays_python">
-<a href="#maxageindays_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Days</a>
+        <span id="max_age_in_days_python">
+<a href="#max_age_in_days_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1202,8 +1203,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxcount_python">
-<a href="#maxcount_python" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
+        <span id="max_count_python">
+<a href="#max_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

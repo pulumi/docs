@@ -317,33 +317,33 @@ emr_profile = aws.iam.InstanceProfile("emrProfile", role=iam_emr_profile_role.na
 cluster = aws.emr.Cluster("cluster",
     release_label="emr-4.6.0",
     applications=["Spark"],
-    ec2_attributes={
-        "subnet_id": main_subnet.id,
-        "emrManagedMasterSecurityGroup": aws_security_group["allow_all"]["id"],
-        "emrManagedSlaveSecurityGroup": aws_security_group["allow_all"]["id"],
-        "instanceProfile": emr_profile.arn,
-    },
-    master_instance_group={
-        "instance_type": "m5.xlarge",
-    },
-    core_instance_group={
-        "instance_count": 1,
-        "instance_type": "m5.xlarge",
-    },
+    ec2_attributes=aws.emr.ClusterEc2AttributesArgs(
+        subnet_id=main_subnet.id,
+        emr_managed_master_security_group=aws_security_group["allow_all"]["id"],
+        emr_managed_slave_security_group=aws_security_group["allow_all"]["id"],
+        instance_profile=emr_profile.arn,
+    ),
+    master_instance_group=aws.emr.ClusterMasterInstanceGroupArgs(
+        instance_type="m5.xlarge",
+    ),
+    core_instance_group=aws.emr.ClusterCoreInstanceGroupArgs(
+        instance_count=1,
+        instance_type="m5.xlarge",
+    ),
     tags={
         "role": "rolename",
         "dns_zone": "env_zone",
         "env": "env",
         "name": "name-env",
     },
-    bootstrap_actions=[{
-        "path": "s3://elasticmapreduce/bootstrap-actions/run-if",
-        "name": "runif",
-        "args": [
+    bootstrap_actions=[aws.emr.ClusterBootstrapActionArgs(
+        path="s3://elasticmapreduce/bootstrap-actions/run-if",
+        name="runif",
+        args=[
             "instance.isMaster=true",
             "echo running on master node",
         ],
-    }],
+    )],
     configurations_json="""  [
     {
       "Classification": "hadoop-env",
@@ -375,18 +375,18 @@ cluster = aws.emr.Cluster("cluster",
 allow_access = aws.ec2.SecurityGroup("allowAccess",
     description="Allow inbound traffic",
     vpc_id=main_vpc.id,
-    ingress=[{
-        "from_port": 0,
-        "to_port": 0,
-        "protocol": "-1",
-        "cidr_blocks": main_vpc.cidr_block,
-    }],
-    egress=[{
-        "from_port": 0,
-        "to_port": 0,
-        "protocol": "-1",
-        "cidr_blocks": ["0.0.0.0/0"],
-    }],
+    ingress=[aws.ec2.SecurityGroupIngressArgs(
+        from_port=0,
+        to_port=0,
+        protocol="-1",
+        cidr_blocks=main_vpc.cidr_block,
+    )],
+    egress=[aws.ec2.SecurityGroupEgressArgs(
+        from_port=0,
+        to_port=0,
+        protocol="-1",
+        cidr_blocks=["0.0.0.0/0"],
+    )],
     tags={
         "name": "emr_test",
     },
@@ -394,10 +394,10 @@ allow_access = aws.ec2.SecurityGroup("allowAccess",
 gw = aws.ec2.InternetGateway("gw", vpc_id=main_vpc.id)
 route_table = aws.ec2.RouteTable("routeTable",
     vpc_id=main_vpc.id,
-    routes=[{
-        "cidr_block": "0.0.0.0/0",
-        "gateway_id": gw.id,
-    }])
+    routes=[aws.ec2.RouteTableRouteArgs(
+        cidr_block="0.0.0.0/0",
+        gateway_id=gw.id,
+    )])
 main_route_table_association = aws.ec2.MainRouteTableAssociation("mainRouteTableAssociation",
     vpc_id=main_vpc.id,
     route_table_id=route_table.id)
@@ -1204,25 +1204,25 @@ cluster = aws.emr.Cluster("cluster",
 """,
     termination_protection=False,
     keep_job_flow_alive_when_no_steps=True,
-    ec2_attributes={
-        "subnet_id": aws_subnet["main"]["id"],
-        "emrManagedMasterSecurityGroup": aws_security_group["sg"]["id"],
-        "emrManagedSlaveSecurityGroup": aws_security_group["sg"]["id"],
-        "instanceProfile": aws_iam_instance_profile["emr_profile"]["arn"],
-    },
-    master_instance_group={
-        "instance_type": "m4.large",
-    },
-    core_instance_group={
-        "instance_type": "c4.large",
-        "instance_count": 1,
-        "ebs_configs": [{
+    ec2_attributes=aws.emr.ClusterEc2AttributesArgs(
+        subnet_id=aws_subnet["main"]["id"],
+        emr_managed_master_security_group=aws_security_group["sg"]["id"],
+        emr_managed_slave_security_group=aws_security_group["sg"]["id"],
+        instance_profile=aws_iam_instance_profile["emr_profile"]["arn"],
+    ),
+    master_instance_group=aws.emr.ClusterMasterInstanceGroupArgs(
+        instance_type="m4.large",
+    ),
+    core_instance_group=aws.emr.ClusterCoreInstanceGroupArgs(
+        instance_type="c4.large",
+        instance_count=1,
+        ebs_configs=[{
             "size": "40",
             "type": "gp2",
             "volumesPerInstance": 1,
         }],
-        "bid_price": "0.30",
-        "autoscaling_policy": """{
+        bid_price="0.30",
+        autoscaling_policy="""{
 "Constraints": {
   "MinCapacity": 1,
   "MaxCapacity": 2
@@ -1254,20 +1254,20 @@ cluster = aws.emr.Cluster("cluster",
 ]
 }
 """,
-    },
+    ),
     ebs_root_volume_size=100,
     tags={
         "role": "rolename",
         "env": "env",
     },
-    bootstrap_actions=[{
-        "path": "s3://elasticmapreduce/bootstrap-actions/run-if",
-        "name": "runif",
-        "args": [
+    bootstrap_actions=[aws.emr.ClusterBootstrapActionArgs(
+        path="s3://elasticmapreduce/bootstrap-actions/run-if",
+        name="runif",
+        args=[
             "instance.isMaster=true",
             "echo running on master node",
         ],
-    }],
+    )],
     configurations_json="""  [
     {
       "Classification": "hadoop-env",
@@ -1493,14 +1493,14 @@ import pulumi
 import pulumi_aws as aws
 
 # ... other configuration ...
-example = aws.emr.Cluster("example", steps=[{
-    "actionOnFailure": "TERMINATE_CLUSTER",
-    "name": "Setup Hadoop Debugging",
-    "hadoopJarStep": {
-        "jar": "command-runner.jar",
-        "args": ["state-pusher-script"],
-    },
-}])
+example = aws.emr.Cluster("example", steps=[aws.emr.ClusterStepArgs(
+    action_on_failure="TERMINATE_CLUSTER",
+    name="Setup Hadoop Debugging",
+    hadoop_jar_step=aws.emr.ClusterStepHadoopJarStepArgs(
+        jar="command-runner.jar",
+        args=["state-pusher-script"],
+    ),
+)])
 ```
 
 {{% /example %}}
@@ -1617,13 +1617,13 @@ example_subnet = aws.ec2.Subnet("exampleSubnet", map_public_ip_on_launch=True)
 example_cluster = aws.emr.Cluster("exampleCluster",
     release_label="emr-5.24.1",
     termination_protection=True,
-    ec2_attributes={
-        "subnet_id": example_subnet.id,
-    },
-    master_instance_group={
-        "instance_count": 3,
-    },
-    core_instance_group={})
+    ec2_attributes=aws.emr.ClusterEc2AttributesArgs(
+        subnet_id=example_subnet.id,
+    ),
+    master_instance_group=aws.emr.ClusterMasterInstanceGroupArgs(
+        instance_count=3,
+    ),
+    core_instance_group=aws.emr.ClusterCoreInstanceGroupArgs())
 ```
 
 {{% /example %}}
@@ -1667,7 +1667,7 @@ const exampleCluster = new aws.emr.Cluster("exampleCluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/emr/#pulumi_aws.emr.Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_info=None<span class="p">, </span>applications=None<span class="p">, </span>autoscaling_role=None<span class="p">, </span>bootstrap_actions=None<span class="p">, </span>configurations=None<span class="p">, </span>configurations_json=None<span class="p">, </span>core_instance_group=None<span class="p">, </span>custom_ami_id=None<span class="p">, </span>ebs_root_volume_size=None<span class="p">, </span>ec2_attributes=None<span class="p">, </span>keep_job_flow_alive_when_no_steps=None<span class="p">, </span>kerberos_attributes=None<span class="p">, </span>log_uri=None<span class="p">, </span>master_instance_group=None<span class="p">, </span>name=None<span class="p">, </span>release_label=None<span class="p">, </span>scale_down_behavior=None<span class="p">, </span>security_configuration=None<span class="p">, </span>service_role=None<span class="p">, </span>step_concurrency_level=None<span class="p">, </span>steps=None<span class="p">, </span>tags=None<span class="p">, </span>termination_protection=None<span class="p">, </span>visible_to_all_users=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/emr/#pulumi_aws.emr.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[List[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[List[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2713,7 +2713,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
@@ -2746,7 +2746,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#core_instance_group_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Dict[Cluster<wbr>Core<wbr>Instance<wbr>Group]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd>
@@ -2779,7 +2779,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ec2_attributes_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Dict[Cluster<wbr>Ec2Attributes]</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
@@ -2801,7 +2801,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kerberos_attributes_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Dict[Cluster<wbr>Kerberos<wbr>Attributes]</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd>
@@ -2823,7 +2823,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#master_instance_group_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Dict[Cluster<wbr>Master<wbr>Instance<wbr>Group]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd>
@@ -2878,7 +2878,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">List[Cluster<wbr>Step]</a></span>
+        <span class="property-type"><a href="#clusterstep">List[Cluster<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd>
@@ -2889,7 +2889,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -3142,7 +3142,8 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_info=None<span class="p">, </span>applications=None<span class="p">, </span>arn=None<span class="p">, </span>autoscaling_role=None<span class="p">, </span>bootstrap_actions=None<span class="p">, </span>cluster_state=None<span class="p">, </span>configurations=None<span class="p">, </span>configurations_json=None<span class="p">, </span>core_instance_group=None<span class="p">, </span>custom_ami_id=None<span class="p">, </span>ebs_root_volume_size=None<span class="p">, </span>ec2_attributes=None<span class="p">, </span>keep_job_flow_alive_when_no_steps=None<span class="p">, </span>kerberos_attributes=None<span class="p">, </span>log_uri=None<span class="p">, </span>master_instance_group=None<span class="p">, </span>master_public_dns=None<span class="p">, </span>name=None<span class="p">, </span>release_label=None<span class="p">, </span>scale_down_behavior=None<span class="p">, </span>security_configuration=None<span class="p">, </span>service_role=None<span class="p">, </span>step_concurrency_level=None<span class="p">, </span>steps=None<span class="p">, </span>tags=None<span class="p">, </span>termination_protection=None<span class="p">, </span>visible_to_all_users=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_info</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">autoscaling_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bootstrap_actions</span><span class="p">:</span> <span class="nx">Optional[List[ClusterBootstrapActionArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configurations_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterCoreInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">custom_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ec2_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterEc2AttributesArgs]</span> = None<span class="p">, </span><span class="nx">keep_job_flow_alive_when_no_steps</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_attributes</span><span class="p">:</span> <span class="nx">Optional[ClusterKerberosAttributesArgs]</span> = None<span class="p">, </span><span class="nx">log_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_group</span><span class="p">:</span> <span class="nx">Optional[ClusterMasterInstanceGroupArgs]</span> = None<span class="p">, </span><span class="nx">master_public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">release_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_down_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">steps</span><span class="p">:</span> <span class="nx">Optional[List[ClusterStepArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visible_to_all_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3150,7 +3151,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Emr.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4214,7 +4215,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_actions_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action]</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
@@ -4257,7 +4258,7 @@ The following state arguments are supported:
 <a href="#state_core_instance_group_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Dict[Cluster<wbr>Core<wbr>Instance<wbr>Group]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
 {{% /md %}}</dd>
@@ -4290,7 +4291,7 @@ The following state arguments are supported:
 <a href="#state_ec2_attributes_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Dict[Cluster<wbr>Ec2Attributes]</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
@@ -4312,7 +4313,7 @@ The following state arguments are supported:
 <a href="#state_kerberos_attributes_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Dict[Cluster<wbr>Kerberos<wbr>Attributes]</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd>
@@ -4334,7 +4335,7 @@ The following state arguments are supported:
 <a href="#state_master_instance_group_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Dict[Cluster<wbr>Master<wbr>Instance<wbr>Group]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
 {{% /md %}}</dd>
@@ -4423,7 +4424,7 @@ The following state arguments are supported:
 <a href="#state_steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">List[Cluster<wbr>Step]</a></span>
+        <span class="property-type"><a href="#clusterstep">List[Cluster<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd>
@@ -4434,7 +4435,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -4963,7 +4964,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">List[Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">List[Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd>
@@ -5214,8 +5215,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumesperinstance_python">
-<a href="#volumesperinstance_python" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
+        <span id="volumes_per_instance_python">
+<a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5535,8 +5536,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="instanceprofile_python">
-<a href="#instanceprofile_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Profile</a>
+        <span id="instance_profile_python">
+<a href="#instance_profile_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5546,8 +5547,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalmastersecuritygroups_python">
-<a href="#additionalmastersecuritygroups_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Master<wbr>Security<wbr>Groups</a>
+        <span id="additional_master_security_groups_python">
+<a href="#additional_master_security_groups_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>master_<wbr>security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5557,8 +5558,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalslavesecuritygroups_python">
-<a href="#additionalslavesecuritygroups_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Slave<wbr>Security<wbr>Groups</a>
+        <span id="additional_slave_security_groups_python">
+<a href="#additional_slave_security_groups_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>slave_<wbr>security_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5568,8 +5569,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emrmanagedmastersecuritygroup_python">
-<a href="#emrmanagedmastersecuritygroup_python" style="color: inherit; text-decoration: inherit;">emr<wbr>Managed<wbr>Master<wbr>Security<wbr>Group</a>
+        <span id="emr_managed_master_security_group_python">
+<a href="#emr_managed_master_security_group_python" style="color: inherit; text-decoration: inherit;">emr_<wbr>managed_<wbr>master_<wbr>security_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5579,8 +5580,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="emrmanagedslavesecuritygroup_python">
-<a href="#emrmanagedslavesecuritygroup_python" style="color: inherit; text-decoration: inherit;">emr<wbr>Managed<wbr>Slave<wbr>Security<wbr>Group</a>
+        <span id="emr_managed_slave_security_group_python">
+<a href="#emr_managed_slave_security_group_python" style="color: inherit; text-decoration: inherit;">emr_<wbr>managed_<wbr>slave_<wbr>security_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5601,8 +5602,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="serviceaccesssecuritygroup_python">
-<a href="#serviceaccesssecuritygroup_python" style="color: inherit; text-decoration: inherit;">service<wbr>Access<wbr>Security<wbr>Group</a>
+        <span id="service_access_security_group_python">
+<a href="#service_access_security_group_python" style="color: inherit; text-decoration: inherit;">service_<wbr>access_<wbr>security_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5834,8 +5835,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="kdcadminpassword_python">
-<a href="#kdcadminpassword_python" style="color: inherit; text-decoration: inherit;">kdc<wbr>Admin<wbr>Password</a>
+        <span id="kdc_admin_password_python">
+<a href="#kdc_admin_password_python" style="color: inherit; text-decoration: inherit;">kdc_<wbr>admin_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5856,8 +5857,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="addomainjoinpassword_python">
-<a href="#addomainjoinpassword_python" style="color: inherit; text-decoration: inherit;">ad<wbr>Domain<wbr>Join<wbr>Password</a>
+        <span id="ad_domain_join_password_python">
+<a href="#ad_domain_join_password_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>domain_<wbr>join_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5867,8 +5868,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="addomainjoinuser_python">
-<a href="#addomainjoinuser_python" style="color: inherit; text-decoration: inherit;">ad<wbr>Domain<wbr>Join<wbr>User</a>
+        <span id="ad_domain_join_user_python">
+<a href="#ad_domain_join_user_python" style="color: inherit; text-decoration: inherit;">ad_<wbr>domain_<wbr>join_<wbr>user</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5878,8 +5879,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crossrealmtrustprincipalpassword_python">
-<a href="#crossrealmtrustprincipalpassword_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Principal<wbr>Password</a>
+        <span id="cross_realm_trust_principal_password_python">
+<a href="#cross_realm_trust_principal_password_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>principal_<wbr>password</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6159,7 +6160,7 @@ The following state arguments are supported:
 <a href="#ebs_configs_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">List[Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">List[Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
 {{% /md %}}</dd>
@@ -6410,8 +6411,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumesperinstance_python">
-<a href="#volumesperinstance_python" style="color: inherit; text-decoration: inherit;">volumes<wbr>Per<wbr>Instance</a>
+        <span id="volumes_per_instance_python">
+<a href="#volumes_per_instance_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6566,8 +6567,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="actiononfailure_python">
-<a href="#actiononfailure_python" style="color: inherit; text-decoration: inherit;">action<wbr>On<wbr>Failure</a>
+        <span id="action_on_failure_python">
+<a href="#action_on_failure_python" style="color: inherit; text-decoration: inherit;">action_<wbr>on_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6577,11 +6578,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="hadoopjarstep_python">
-<a href="#hadoopjarstep_python" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Jar<wbr>Step</a>
+        <span id="hadoop_jar_step_python">
+<a href="#hadoop_jar_step_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>jar_<wbr>step</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstephadoopjarstep">Dict[Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step]</a></span>
+        <span class="property-type"><a href="#clusterstephadoopjarstep">Cluster<wbr>Step<wbr>Hadoop<wbr>Jar<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JAR file used for the step. Defined below.
 {{% /md %}}</dd>
@@ -6799,8 +6800,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mainclass_python">
-<a href="#mainclass_python" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
+        <span id="main_class_python">
+<a href="#main_class_python" style="color: inherit; text-decoration: inherit;">main_<wbr>class</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6814,7 +6815,7 @@ The following state arguments are supported:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
 {{% /md %}}</dd>

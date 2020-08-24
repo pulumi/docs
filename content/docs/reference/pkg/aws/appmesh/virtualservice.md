@@ -85,13 +85,13 @@ import pulumi_aws as aws
 
 servicea = aws.appmesh.VirtualService("servicea",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
-    spec={
-        "provider": {
-            "virtualNode": {
-                "virtualNodeName": aws_appmesh_virtual_node["serviceb1"]["name"],
-            },
-        },
-    })
+    spec=aws.appmesh.VirtualServiceSpecArgs(
+        provider=aws.appmesh.VirtualServiceSpecProviderArgs(
+            virtual_node=aws.appmesh.VirtualServiceSpecProviderVirtualNodeArgs(
+                virtual_node_name=aws_appmesh_virtual_node["serviceb1"]["name"],
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -185,13 +185,13 @@ import pulumi_aws as aws
 
 servicea = aws.appmesh.VirtualService("servicea",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
-    spec={
-        "provider": {
-            "virtualRouter": {
-                "virtual_router_name": aws_appmesh_virtual_router["serviceb"]["name"],
-            },
-        },
-    })
+    spec=aws.appmesh.VirtualServiceSpecArgs(
+        provider=aws.appmesh.VirtualServiceSpecProviderArgs(
+            virtual_router=aws.appmesh.VirtualServiceSpecProviderVirtualRouterArgs(
+                virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -228,7 +228,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.VirtualService">VirtualService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.VirtualService">VirtualService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualServiceSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -570,7 +570,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespec">Dict[Virtual<wbr>Service<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd>
@@ -592,7 +592,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -827,7 +827,8 @@ Get an existing VirtualService resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>created_date=None<span class="p">, </span>last_updated_date=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualServiceSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> VirtualService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -835,7 +836,7 @@ Get an existing VirtualService resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualService.html">VirtualService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualServiceState.html">VirtualServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualService.html">VirtualService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualServiceState.html">VirtualServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1254,7 +1255,7 @@ The following state arguments are supported:
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespec">Dict[Virtual<wbr>Service<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd>
@@ -1265,7 +1266,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1363,7 +1364,7 @@ The following state arguments are supported:
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovider">Dict[Virtual<wbr>Service<wbr>Spec<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
 {{% /md %}}</dd>
@@ -1482,22 +1483,22 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualnode_python">
-<a href="#virtualnode_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
+        <span id="virtual_node_python">
+<a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Dict[Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node]</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual node associated with a virtual service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualrouter_python">
-<a href="#virtualrouter_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Router</a>
+        <span id="virtual_router_python">
+<a href="#virtual_router_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Dict[Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router]</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual router associated with a virtual service.
 {{% /md %}}</dd>
@@ -1583,8 +1584,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnodename_python">
-<a href="#virtualnodename_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node<wbr>Name</a>
+        <span id="virtual_node_name_python">
+<a href="#virtual_node_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

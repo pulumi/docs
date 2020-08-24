@@ -74,9 +74,9 @@ import pulumi
 import pulumi_aws as aws
 
 foo = aws.ecr.Repository("foo",
-    image_scanning_configuration={
-        "scanOnPush": True,
-    },
+    image_scanning_configuration=aws.ecr.RepositoryImageScanningConfigurationArgs(
+        scan_on_push=True,
+    ),
     image_tag_mutability="MUTABLE")
 ```
 
@@ -110,7 +110,7 @@ const foo = new aws.ecr.Repository("foo", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecr/#pulumi_aws.ecr.Repository">Repository</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>encryption_configurations=None<span class="p">, </span>image_scanning_configuration=None<span class="p">, </span>image_tag_mutability=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecr/#pulumi_aws.ecr.Repository">Repository</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">encryption_configurations</span><span class="p">:</span> <span class="nx">Optional[List[RepositoryEncryptionConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">image_scanning_configuration</span><span class="p">:</span> <span class="nx">Optional[RepositoryImageScanningConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">image_tag_mutability</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -474,7 +474,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#encryption_configurations_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryencryptionconfiguration">List[Repository<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">List[Repository<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
 {{% /md %}}</dd>
@@ -485,7 +485,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#image_scanning_configuration_python" style="color: inherit; text-decoration: inherit;">image_<wbr>scanning_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryimagescanningconfiguration">Dict[Repository<wbr>Image<wbr>Scanning<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
 {{% /md %}}</dd>
@@ -518,7 +518,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -753,7 +753,8 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>encryption_configurations=None<span class="p">, </span>image_scanning_configuration=None<span class="p">, </span>image_tag_mutability=None<span class="p">, </span>name=None<span class="p">, </span>registry_id=None<span class="p">, </span>repository_url=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configurations</span><span class="p">:</span> <span class="nx">Optional[List[RepositoryEncryptionConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">image_scanning_configuration</span><span class="p">:</span> <span class="nx">Optional[RepositoryImageScanningConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">image_tag_mutability</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registry_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repository_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Repository</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -761,7 +762,7 @@ Get an existing Repository resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecr.Repository.html">Repository</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecr.RepositoryState.html">RepositoryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecr.Repository.html">Repository</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecr.RepositoryState.html">RepositoryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1169,7 +1170,7 @@ The following state arguments are supported:
 <a href="#state_encryption_configurations_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryencryptionconfiguration">List[Repository<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#repositoryencryptionconfiguration">List[Repository<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Encryption configuration for the repository. See below for schema.
 {{% /md %}}</dd>
@@ -1180,7 +1181,7 @@ The following state arguments are supported:
 <a href="#state_image_scanning_configuration_python" style="color: inherit; text-decoration: inherit;">image_<wbr>scanning_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#repositoryimagescanningconfiguration">Dict[Repository<wbr>Image<wbr>Scanning<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#repositoryimagescanningconfiguration">Repository<wbr>Image<wbr>Scanning<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
 {{% /md %}}</dd>
@@ -1235,7 +1236,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1373,8 +1374,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="kmskey_python">
-<a href="#kmskey_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
+        <span id="kms_key_python">
+<a href="#kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1463,8 +1464,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="scanonpush_python">
-<a href="#scanonpush_python" style="color: inherit; text-decoration: inherit;">scan<wbr>On<wbr>Push</a>
+        <span id="scan_on_push_python">
+<a href="#scan_on_push_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>on_<wbr>push</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

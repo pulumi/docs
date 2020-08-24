@@ -130,16 +130,16 @@ import pulumi_aws as aws
 
 model = aws.sagemaker.Model("model",
     execution_role_arn=aws_iam_role["foo"]["arn"],
-    primary_container={
-        "image": "174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
-    })
-assume_role = aws.iam.get_policy_document(statements=[{
-    "actions": ["sts:AssumeRole"],
-    "principals": [{
-        "type": "Service",
-        "identifiers": ["sagemaker.amazonaws.com"],
-    }],
-}])
+    primary_container=aws.sagemaker.ModelPrimaryContainerArgs(
+        image="174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
+    ))
+assume_role = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    actions=["sts:AssumeRole"],
+    principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+        type="Service",
+        identifiers=["sagemaker.amazonaws.com"],
+    )],
+)])
 role = aws.iam.Role("role", assume_role_policy=assume_role.json)
 ```
 
@@ -183,7 +183,7 @@ const role = new aws.iam.Role("role", {assumeRolePolicy: assumeRole.then(assumeR
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/sagemaker/#pulumi_aws.sagemaker.Model">Model</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>containers=None<span class="p">, </span>enable_network_isolation=None<span class="p">, </span>execution_role_arn=None<span class="p">, </span>name=None<span class="p">, </span>primary_container=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/sagemaker/#pulumi_aws.sagemaker.Model">Model</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[List[ModelContainerArgs]]</span> = None<span class="p">, </span><span class="nx">enable_network_isolation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_container</span><span class="p">:</span> <span class="nx">Optional[ModelPrimaryContainerArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ModelVpcConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -624,7 +624,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelcontainer">List[Model<wbr>Container]</a></span>
+        <span class="property-type"><a href="#modelcontainer">List[Model<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
 {{% /md %}}</dd>
@@ -657,7 +657,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#primary_container_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelprimarycontainer">Dict[Model<wbr>Primary<wbr>Container]</a></span>
+        <span class="property-type"><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
 {{% /md %}}</dd>
@@ -668,7 +668,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -679,7 +679,7 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelvpcconfig">Dict[Model<wbr>Vpc<wbr>Config]</a></span>
+        <span class="property-type"><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
 {{% /md %}}</dd>
@@ -826,7 +826,8 @@ Get an existing Model resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>containers=None<span class="p">, </span>enable_network_isolation=None<span class="p">, </span>execution_role_arn=None<span class="p">, </span>name=None<span class="p">, </span>primary_container=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_config=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[List[ModelContainerArgs]]</span> = None<span class="p">, </span><span class="nx">enable_network_isolation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_container</span><span class="p">:</span> <span class="nx">Optional[ModelPrimaryContainerArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ModelVpcConfigArgs]</span> = None<span class="p">) -&gt;</span> Model</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -834,7 +835,7 @@ Get an existing Model resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Model.html">Model</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.ModelState.html">ModelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Model.html">Model</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.ModelState.html">ModelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1242,7 +1243,7 @@ The following state arguments are supported:
 <a href="#state_containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelcontainer">List[Model<wbr>Container]</a></span>
+        <span class="property-type"><a href="#modelcontainer">List[Model<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
 {{% /md %}}</dd>
@@ -1286,7 +1287,7 @@ The following state arguments are supported:
 <a href="#state_primary_container_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>container</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelprimarycontainer">Dict[Model<wbr>Primary<wbr>Container]</a></span>
+        <span class="property-type"><a href="#modelprimarycontainer">Model<wbr>Primary<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
 {{% /md %}}</dd>
@@ -1297,7 +1298,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1308,7 +1309,7 @@ The following state arguments are supported:
 <a href="#state_vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modelvpcconfig">Dict[Model<wbr>Vpc<wbr>Config]</a></span>
+        <span class="property-type"><a href="#modelvpcconfig">Model<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
 {{% /md %}}</dd>
@@ -1515,8 +1516,8 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerhostname_python">
-<a href="#containerhostname_python" style="color: inherit; text-decoration: inherit;">container<wbr>Hostname</a>
+        <span id="container_hostname_python">
+<a href="#container_hostname_python" style="color: inherit; text-decoration: inherit;">container_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1530,7 +1531,7 @@ A list of key value pairs.
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
@@ -1538,8 +1539,8 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modeldataurl_python">
-<a href="#modeldataurl_python" style="color: inherit; text-decoration: inherit;">model<wbr>Data<wbr>Url</a>
+        <span id="model_data_url_python">
+<a href="#model_data_url_python" style="color: inherit; text-decoration: inherit;">model_<wbr>data_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1741,8 +1742,8 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerhostname_python">
-<a href="#containerhostname_python" style="color: inherit; text-decoration: inherit;">container<wbr>Hostname</a>
+        <span id="container_hostname_python">
+<a href="#container_hostname_python" style="color: inherit; text-decoration: inherit;">container_<wbr>hostname</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1756,7 +1757,7 @@ A list of key value pairs.
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables for the Docker container.
 A list of key value pairs.
@@ -1764,8 +1765,8 @@ A list of key value pairs.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="modeldataurl_python">
-<a href="#modeldataurl_python" style="color: inherit; text-decoration: inherit;">model<wbr>Data<wbr>Url</a>
+        <span id="model_data_url_python">
+<a href="#model_data_url_python" style="color: inherit; text-decoration: inherit;">model_<wbr>data_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

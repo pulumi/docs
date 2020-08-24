@@ -133,19 +133,19 @@ mongo = aws.ecs.Service("mongo",
     task_definition=aws_ecs_task_definition["mongo"]["arn"],
     desired_count=3,
     iam_role=aws_iam_role["foo"]["arn"],
-    ordered_placement_strategies=[{
-        "type": "binpack",
-        "field": "cpu",
-    }],
-    load_balancers=[{
-        "target_group_arn": aws_lb_target_group["foo"]["arn"],
-        "container_name": "mongo",
-        "containerPort": 8080,
-    }],
-    placement_constraints=[{
-        "type": "memberOf",
-        "expression": "attribute:ecs.availability-zone in [us-west-2a, us-west-2b]",
-    }],
+    ordered_placement_strategies=[aws.ecs.ServiceOrderedPlacementStrategyArgs(
+        type="binpack",
+        field="cpu",
+    )],
+    load_balancers=[aws.ecs.ServiceLoadBalancerArgs(
+        target_group_arn=aws_lb_target_group["foo"]["arn"],
+        container_name="mongo",
+        container_port=8080,
+    )],
+    placement_constraints=[aws.ecs.ServicePlacementConstraintArgs(
+        type="memberOf",
+        expression="attribute:ecs.availability-zone in [us-west-2a, us-west-2b]",
+    )],
     opts=ResourceOptions(depends_on=[aws_iam_role_policy["foo"]]))
 ```
 
@@ -387,9 +387,9 @@ import pulumi_aws as aws
 
 example = aws.ecs.Service("example",
     cluster=aws_ecs_cluster["example"]["id"],
-    deployment_controller={
-        "type": "EXTERNAL",
-    })
+    deployment_controller=aws.ecs.ServiceDeploymentControllerArgs(
+        type="EXTERNAL",
+    ))
 ```
 
 {{% /example %}}
@@ -422,7 +422,7 @@ const example = new aws.ecs.Service("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecs/#pulumi_aws.ecs.Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>capacity_provider_strategies=None<span class="p">, </span>cluster=None<span class="p">, </span>deployment_controller=None<span class="p">, </span>deployment_maximum_percent=None<span class="p">, </span>deployment_minimum_healthy_percent=None<span class="p">, </span>desired_count=None<span class="p">, </span>enable_ecs_managed_tags=None<span class="p">, </span>force_new_deployment=None<span class="p">, </span>health_check_grace_period_seconds=None<span class="p">, </span>iam_role=None<span class="p">, </span>launch_type=None<span class="p">, </span>load_balancers=None<span class="p">, </span>name=None<span class="p">, </span>network_configuration=None<span class="p">, </span>ordered_placement_strategies=None<span class="p">, </span>placement_constraints=None<span class="p">, </span>platform_version=None<span class="p">, </span>propagate_tags=None<span class="p">, </span>scheduling_strategy=None<span class="p">, </span>service_registries=None<span class="p">, </span>tags=None<span class="p">, </span>task_definition=None<span class="p">, </span>wait_for_steady_state=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecs/#pulumi_aws.ecs.Service">Service</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[ServiceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[List[ServicePlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1377,7 +1377,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#capacity_provider_strategies_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>provider_<wbr>strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecapacityproviderstrategy">List[Service<wbr>Capacity<wbr>Provider<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#servicecapacityproviderstrategy">List[Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use for the service. Can be one or more.  Defined below.
 {{% /md %}}</dd>
@@ -1399,7 +1399,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#deployment_controller_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>controller</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcontroller">Dict[Service<wbr>Deployment<wbr>Controller]</a></span>
+        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing deployment controller configuration. Defined below.
 {{% /md %}}</dd>
@@ -1498,7 +1498,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadbalancer">List[Service<wbr>Load<wbr>Balancer]</a></span>
+        <span class="property-type"><a href="#serviceloadbalancer">List[Service<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A load balancer block. Load balancers documented below.
 {{% /md %}}</dd>
@@ -1520,7 +1520,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicenetworkconfiguration">Dict[Service<wbr>Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
 {{% /md %}}</dd>
@@ -1531,7 +1531,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ordered_placement_strategies_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>placement_<wbr>strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceorderedplacementstrategy">List[Service<wbr>Ordered<wbr>Placement<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#serviceorderedplacementstrategy">List[Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
 {{% /md %}}</dd>
@@ -1542,7 +1542,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementconstraint">List[Service<wbr>Placement<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#serviceplacementconstraint">List[Service<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Defined below.
 {{% /md %}}</dd>
@@ -1586,7 +1586,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_registries_python" style="color: inherit; text-decoration: inherit;">service_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistries">Dict[Service<wbr>Service<wbr>Registries]</a></span>
+        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
 {{% /md %}}</dd>
@@ -1597,7 +1597,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1721,7 +1721,8 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>capacity_provider_strategies=None<span class="p">, </span>cluster=None<span class="p">, </span>deployment_controller=None<span class="p">, </span>deployment_maximum_percent=None<span class="p">, </span>deployment_minimum_healthy_percent=None<span class="p">, </span>desired_count=None<span class="p">, </span>enable_ecs_managed_tags=None<span class="p">, </span>force_new_deployment=None<span class="p">, </span>health_check_grace_period_seconds=None<span class="p">, </span>iam_role=None<span class="p">, </span>launch_type=None<span class="p">, </span>load_balancers=None<span class="p">, </span>name=None<span class="p">, </span>network_configuration=None<span class="p">, </span>ordered_placement_strategies=None<span class="p">, </span>placement_constraints=None<span class="p">, </span>platform_version=None<span class="p">, </span>propagate_tags=None<span class="p">, </span>scheduling_strategy=None<span class="p">, </span>service_registries=None<span class="p">, </span>tags=None<span class="p">, </span>task_definition=None<span class="p">, </span>wait_for_steady_state=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capacity_provider_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ServiceCapacityProviderStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_controller</span><span class="p">:</span> <span class="nx">Optional[ServiceDeploymentControllerArgs]</span> = None<span class="p">, </span><span class="nx">deployment_maximum_percent</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">deployment_minimum_healthy_percent</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">desired_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">enable_ecs_managed_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_new_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">iam_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[List[ServiceLoadBalancerArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">ordered_placement_strategies</span><span class="p">:</span> <span class="nx">Optional[List[ServiceOrderedPlacementStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[List[ServicePlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">propagate_tags</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_registries</span><span class="p">:</span> <span class="nx">Optional[ServiceServiceRegistriesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_definition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_steady_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1729,7 +1730,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.ServiceState.html">ServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.ServiceState.html">ServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2618,7 +2619,7 @@ The following state arguments are supported:
 <a href="#state_capacity_provider_strategies_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>provider_<wbr>strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecapacityproviderstrategy">List[Service<wbr>Capacity<wbr>Provider<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#servicecapacityproviderstrategy">List[Service<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use for the service. Can be one or more.  Defined below.
 {{% /md %}}</dd>
@@ -2640,7 +2641,7 @@ The following state arguments are supported:
 <a href="#state_deployment_controller_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>controller</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicedeploymentcontroller">Dict[Service<wbr>Deployment<wbr>Controller]</a></span>
+        <span class="property-type"><a href="#servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing deployment controller configuration. Defined below.
 {{% /md %}}</dd>
@@ -2739,7 +2740,7 @@ The following state arguments are supported:
 <a href="#state_load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadbalancer">List[Service<wbr>Load<wbr>Balancer]</a></span>
+        <span class="property-type"><a href="#serviceloadbalancer">List[Service<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A load balancer block. Load balancers documented below.
 {{% /md %}}</dd>
@@ -2761,7 +2762,7 @@ The following state arguments are supported:
 <a href="#state_network_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicenetworkconfiguration">Dict[Service<wbr>Network<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.
 {{% /md %}}</dd>
@@ -2772,7 +2773,7 @@ The following state arguments are supported:
 <a href="#state_ordered_placement_strategies_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>placement_<wbr>strategies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceorderedplacementstrategy">List[Service<wbr>Ordered<wbr>Placement<wbr>Strategy]</a></span>
+        <span class="property-type"><a href="#serviceorderedplacementstrategy">List[Service<wbr>Ordered<wbr>Placement<wbr>Strategy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. Defined below.
 {{% /md %}}</dd>
@@ -2783,7 +2784,7 @@ The following state arguments are supported:
 <a href="#state_placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementconstraint">List[Service<wbr>Placement<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#serviceplacementconstraint">List[Service<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. Defined below.
 {{% /md %}}</dd>
@@ -2827,7 +2828,7 @@ The following state arguments are supported:
 <a href="#state_service_registries_python" style="color: inherit; text-decoration: inherit;">service_<wbr>registries</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceserviceregistries">Dict[Service<wbr>Service<wbr>Registries]</a></span>
+        <span class="property-type"><a href="#serviceserviceregistries">Service<wbr>Service<wbr>Registries<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`.
 {{% /md %}}</dd>
@@ -2838,7 +2839,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -3019,8 +3020,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="capacityprovider_python">
-<a href="#capacityprovider_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>Provider</a>
+        <span id="capacity_provider_python">
+<a href="#capacity_provider_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>provider</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3320,17 +3321,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="containerport_python">
-<a href="#containerport_python" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The port on the container to associate with the load balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span> 
@@ -3340,10 +3330,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the container to associate with the load balancer (as it appears in a container definition).
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="container_port_python">
+<a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The port on the container to associate with the load balancer.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
-        <span id="elbname_python">
-<a href="#elbname_python" style="color: inherit; text-decoration: inherit;">elb<wbr>Name</a>
+        <span id="elb_name_python">
+<a href="#elb_name_python" style="color: inherit; text-decoration: inherit;">elb_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3520,8 +3521,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="assignpublicip_python">
-<a href="#assignpublicip_python" style="color: inherit; text-decoration: inherit;">assign<wbr>Public<wbr>Ip</a>
+        <span id="assign_public_ip_python">
+<a href="#assign_public_ip_python" style="color: inherit; text-decoration: inherit;">assign_<wbr>public_<wbr>ip</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4016,24 +4017,13 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
 
     <dt class="property-required"
             title="Required">
-        <span id="registryarn_python">
-<a href="#registryarn_python" style="color: inherit; text-decoration: inherit;">registry<wbr>Arn</a>
+        <span id="registry_arn_python">
+<a href="#registry_arn_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="containerport_python">
-<a href="#containerport_python" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The port value, already specified in the task definition, to be used for your service discovery service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4045,6 +4035,17 @@ Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The container name value, already specified in the task definition, to be used for your service discovery service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_port_python">
+<a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The port value, already specified in the task definition, to be used for your service discovery service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

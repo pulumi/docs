@@ -83,10 +83,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-account = aws.cfg.ConfigurationAggregator("account", account_aggregation_source={
-    "accountIds": ["123456789012"],
-    "regions": ["us-west-2"],
-})
+account = aws.cfg.ConfigurationAggregator("account", account_aggregation_source=aws.cfg.ConfigurationAggregatorAccountAggregationSourceArgs(
+    account_ids=["123456789012"],
+    regions=["us-west-2"],
+))
 ```
 
 {{% /example %}}
@@ -227,10 +227,10 @@ organization_role = aws.iam.Role("organizationRole", assume_role_policy="""{
 organization_role_policy_attachment = aws.iam.RolePolicyAttachment("organizationRolePolicyAttachment",
     role=organization_role.name,
     policy_arn="arn:aws:iam::aws:policy/service-role/AWSConfigRoleForOrganizations")
-organization_configuration_aggregator = aws.cfg.ConfigurationAggregator("organizationConfigurationAggregator", organization_aggregation_source={
-    "allRegions": True,
-    "role_arn": organization_role.arn,
-},
+organization_configuration_aggregator = aws.cfg.ConfigurationAggregator("organizationConfigurationAggregator", organization_aggregation_source=aws.cfg.ConfigurationAggregatorOrganizationAggregationSourceArgs(
+    all_regions=True,
+    role_arn=organization_role.arn,
+),
 opts=ResourceOptions(depends_on=[organization_role_policy_attachment]))
 ```
 
@@ -282,7 +282,7 @@ const organizationConfigurationAggregator = new aws.cfg.ConfigurationAggregator(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cfg/#pulumi_aws.cfg.ConfigurationAggregator">ConfigurationAggregator</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>account_aggregation_source=None<span class="p">, </span>name=None<span class="p">, </span>organization_aggregation_source=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cfg/#pulumi_aws.cfg.ConfigurationAggregator">ConfigurationAggregator</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_aggregation_source</span><span class="p">:</span> <span class="nx">Optional[ConfigurationAggregatorAccountAggregationSourceArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">organization_aggregation_source</span><span class="p">:</span> <span class="nx">Optional[ConfigurationAggregatorOrganizationAggregationSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -613,7 +613,7 @@ The ConfigurationAggregator resource accepts the following [input]({{< relref "/
 <a href="#account_aggregation_source_python" style="color: inherit; text-decoration: inherit;">account_<wbr>aggregation_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source]</a></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
 {{% /md %}}</dd>
@@ -635,7 +635,7 @@ The ConfigurationAggregator resource accepts the following [input]({{< relref "/
 <a href="#organization_aggregation_source_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>aggregation_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source]</a></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The organization to aggregate config data from as documented below.
 {{% /md %}}</dd>
@@ -646,7 +646,7 @@ The ConfigurationAggregator resource accepts the following [input]({{< relref "/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -793,7 +793,8 @@ Get an existing ConfigurationAggregator resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_aggregation_source=None<span class="p">, </span>arn=None<span class="p">, </span>name=None<span class="p">, </span>organization_aggregation_source=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_aggregation_source</span><span class="p">:</span> <span class="nx">Optional[ConfigurationAggregatorAccountAggregationSourceArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">organization_aggregation_source</span><span class="p">:</span> <span class="nx">Optional[ConfigurationAggregatorOrganizationAggregationSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ConfigurationAggregator</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -801,7 +802,7 @@ Get an existing ConfigurationAggregator resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregator.html">ConfigurationAggregator</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregatorState.html">ConfigurationAggregatorState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregator.html">ConfigurationAggregator</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregatorState.html">ConfigurationAggregatorState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1099,7 +1100,7 @@ The following state arguments are supported:
 <a href="#state_account_aggregation_source_python" style="color: inherit; text-decoration: inherit;">account_<wbr>aggregation_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source]</a></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
 {{% /md %}}</dd>
@@ -1132,7 +1133,7 @@ The following state arguments are supported:
 <a href="#state_organization_aggregation_source_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>aggregation_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source]</a></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The organization to aggregate config data from as documented below.
 {{% /md %}}</dd>
@@ -1143,7 +1144,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1303,8 +1304,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="accountids_python">
-<a href="#accountids_python" style="color: inherit; text-decoration: inherit;">account<wbr>Ids</a>
+        <span id="account_ids_python">
+<a href="#account_ids_python" style="color: inherit; text-decoration: inherit;">account_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1314,8 +1315,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allregions_python">
-<a href="#allregions_python" style="color: inherit; text-decoration: inherit;">all<wbr>Regions</a>
+        <span id="all_regions_python">
+<a href="#all_regions_python" style="color: inherit; text-decoration: inherit;">all_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1492,8 +1493,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allregions_python">
-<a href="#allregions_python" style="color: inherit; text-decoration: inherit;">all<wbr>Regions</a>
+        <span id="all_regions_python">
+<a href="#all_regions_python" style="color: inherit; text-decoration: inherit;">all_<wbr>regions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

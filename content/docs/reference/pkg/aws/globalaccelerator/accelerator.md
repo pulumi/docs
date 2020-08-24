@@ -80,11 +80,11 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.globalaccelerator.Accelerator("example",
-    attributes={
-        "flowLogsEnabled": True,
-        "flowLogsS3Bucket": "example-bucket",
-        "flowLogsS3Prefix": "flow-logs/",
-    },
+    attributes=aws.globalaccelerator.AcceleratorAttributesArgs(
+        flow_logs_enabled=True,
+        flow_logs_s3_bucket="example-bucket",
+        flow_logs_s3_prefix="flow-logs/",
+    ),
     enabled=True,
     ip_address_type="IPV4")
 ```
@@ -122,7 +122,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/globalaccelerator/#pulumi_aws.globalaccelerator.Accelerator">Accelerator</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>enabled=None<span class="p">, </span>ip_address_type=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/globalaccelerator/#pulumi_aws.globalaccelerator.Accelerator">Accelerator</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[AcceleratorAttributesArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -486,7 +486,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorattributes">Dict[Accelerator<wbr>Attributes]</a></span>
+        <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
 {{% /md %}}</dd>
@@ -530,7 +530,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -773,7 +773,8 @@ Get an existing Accelerator resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attributes=None<span class="p">, </span>dns_name=None<span class="p">, </span>enabled=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>ip_address_type=None<span class="p">, </span>ip_sets=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[AcceleratorAttributesArgs]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_sets</span><span class="p">:</span> <span class="nx">Optional[List[AcceleratorIpSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Accelerator</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -781,7 +782,7 @@ Get an existing Accelerator resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Accelerator.html">Accelerator</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.AcceleratorState.html">AcceleratorState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.Accelerator.html">Accelerator</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.AcceleratorState.html">AcceleratorState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1184,7 +1185,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratorattributes">Dict[Accelerator<wbr>Attributes]</a></span>
+        <span class="property-type"><a href="#acceleratorattributes">Accelerator<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the accelerator. Fields documented below.
 {{% /md %}}</dd>
@@ -1241,7 +1242,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 <a href="#state_ip_sets_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sets</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#acceleratoripset">List[Accelerator<wbr>Ip<wbr>Set]</a></span>
+        <span class="property-type"><a href="#acceleratoripset">List[Accelerator<wbr>Ip<wbr>Set<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP address set associated with the accelerator.
 {{% /md %}}</dd>
@@ -1263,7 +1264,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1423,8 +1424,8 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="flowlogsenabled_python">
-<a href="#flowlogsenabled_python" style="color: inherit; text-decoration: inherit;">flow<wbr>Logs<wbr>Enabled</a>
+        <span id="flow_logs_enabled_python">
+<a href="#flow_logs_enabled_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>logs_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1434,8 +1435,8 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="flowlogss3bucket_python">
-<a href="#flowlogss3bucket_python" style="color: inherit; text-decoration: inherit;">flow<wbr>Logs<wbr>S3Bucket</a>
+        <span id="flow_logs_s3_bucket_python">
+<a href="#flow_logs_s3_bucket_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>logs_<wbr>s3_<wbr>bucket</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1445,8 +1446,8 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="flowlogss3prefix_python">
-<a href="#flowlogss3prefix_python" style="color: inherit; text-decoration: inherit;">flow<wbr>Logs<wbr>S3Prefix</a>
+        <span id="flow_logs_s3_prefix_python">
+<a href="#flow_logs_s3_prefix_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>logs_<wbr>s3_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1568,17 +1569,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipfamily_python">
-<a href="#ipfamily_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Family</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The types of IP addresses included in this IP set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
@@ -1586,6 +1576,17 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses in the IP address set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_family_python">
+<a href="#ip_family_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>family</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The types of IP addresses included in this IP set.
 {{% /md %}}</dd>
 
 </dl>

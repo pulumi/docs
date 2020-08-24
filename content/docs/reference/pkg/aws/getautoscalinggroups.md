@@ -132,14 +132,14 @@ import pulumi
 import pulumi_aws as aws
 
 groups = aws.get_autoscaling_groups(filters=[
-    {
-        "name": "key",
-        "values": ["Team"],
-    },
-    {
-        "name": "value",
-        "values": ["Pets"],
-    },
+    aws.GetAutoscalingGroupsFilterArgs(
+        name="key",
+        values=["Team"],
+    ),
+    aws.GetAutoscalingGroupsFilterArgs(
+        name="value",
+        values=["Pets"],
+    ),
 ])
 slack_notifications = aws.autoscaling.Notification("slackNotifications",
     group_names=groups.names,
@@ -200,7 +200,7 @@ const slackNotifications = new aws.autoscaling.Notification("slackNotifications"
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_autoscaling_groups(</span>filters=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_autoscaling_groups(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetAutoscalingGroupsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAutoscalingGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -285,7 +285,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getautoscalinggroupsfilter">List[Get<wbr>Autoscaling<wbr>Groups<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getautoscalinggroupsfilter">List[Get<wbr>Autoscaling<wbr>Groups<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
 {{% /md %}}</dd>

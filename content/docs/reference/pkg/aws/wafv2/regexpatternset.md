@@ -99,12 +99,12 @@ import pulumi_aws as aws
 example = aws.wafv2.RegexPatternSet("example",
     description="Example regex pattern set",
     regular_expressions=[
-        {
-            "regexString": "one",
-        },
-        {
-            "regexString": "two",
-        },
+        aws.wafv2.RegexPatternSetRegularExpressionArgs(
+            regex_string="one",
+        ),
+        aws.wafv2.RegexPatternSetRegularExpressionArgs(
+            regex_string="two",
+        ),
     ],
     scope="REGIONAL",
     tags={
@@ -153,7 +153,7 @@ const example = new aws.wafv2.RegexPatternSet("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.RegexPatternSet">RegexPatternSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>regular_expressions=None<span class="p">, </span>scope=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.RegexPatternSet">RegexPatternSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regular_expressions</span><span class="p">:</span> <span class="nx">Optional[List[RegexPatternSetRegularExpressionArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -550,7 +550,7 @@ The RegexPatternSet resource accepts the following [input]({{< relref "/docs/int
 <a href="#regular_expressions_python" style="color: inherit; text-decoration: inherit;">regular_<wbr>expressions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexpatternsetregularexpression">List[Regex<wbr>Pattern<wbr>Set<wbr>Regular<wbr>Expression]</a></span>
+        <span class="property-type"><a href="#regexpatternsetregularexpression">List[Regex<wbr>Pattern<wbr>Set<wbr>Regular<wbr>Expression<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
 {{% /md %}}</dd>
@@ -561,7 +561,7 @@ The RegexPatternSet resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
 {{% /md %}}</dd>
@@ -748,7 +748,8 @@ Get an existing RegexPatternSet resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>lock_token=None<span class="p">, </span>name=None<span class="p">, </span>regular_expressions=None<span class="p">, </span>scope=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lock_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regular_expressions</span><span class="p">:</span> <span class="nx">Optional[List[RegexPatternSetRegularExpressionArgs]]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> RegexPatternSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -756,7 +757,7 @@ Get an existing RegexPatternSet resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.RegexPatternSet.html">RegexPatternSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.RegexPatternSetState.html">RegexPatternSetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.RegexPatternSet.html">RegexPatternSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.RegexPatternSetState.html">RegexPatternSetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1160,7 +1161,7 @@ The following state arguments are supported:
 <a href="#state_regular_expressions_python" style="color: inherit; text-decoration: inherit;">regular_<wbr>expressions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexpatternsetregularexpression">List[Regex<wbr>Pattern<wbr>Set<wbr>Regular<wbr>Expression]</a></span>
+        <span class="property-type"><a href="#regexpatternsetregularexpression">List[Regex<wbr>Pattern<wbr>Set<wbr>Regular<wbr>Expression<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
 {{% /md %}}</dd>
@@ -1182,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}An array of key:value pairs to associate with the resource.
 {{% /md %}}</dd>
@@ -1276,8 +1277,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="regexstring_python">
-<a href="#regexstring_python" style="color: inherit; text-decoration: inherit;">regex<wbr>String</a>
+        <span id="regex_string_python">
+<a href="#regex_string_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

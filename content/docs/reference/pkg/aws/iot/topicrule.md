@@ -184,18 +184,18 @@ rule = aws.iot.TopicRule("rule",
     enabled=True,
     sql="SELECT * FROM 'topic/test'",
     sql_version="2016-03-23",
-    sns={
-        "messageFormat": "RAW",
-        "role_arn": role.arn,
-        "target_arn": mytopic.arn,
-    },
-    error_action={
-        "sns": {
-            "messageFormat": "RAW",
-            "role_arn": role.arn,
-            "target_arn": myerrortopic.arn,
-        },
-    })
+    sns=aws.iot.TopicRuleSnsArgs(
+        message_format="RAW",
+        role_arn=role.arn,
+        target_arn=mytopic.arn,
+    ),
+    error_action=aws.iot.TopicRuleErrorActionArgs(
+        sns=aws.iot.TopicRuleErrorActionSnsArgs(
+            message_format="RAW",
+            role_arn=role.arn,
+            target_arn=myerrortopic.arn,
+        ),
+    ))
 iam_policy_for_lambda = aws.iam.RolePolicy("iamPolicyForLambda",
     role=role.id,
     policy=mytopic.arn.apply(lambda arn: f"""{{
@@ -286,7 +286,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iamPolicyForLambda", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#pulumi_aws.iot.TopicRule">TopicRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>error_action=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>step_functions=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iot/#pulumi_aws.iot.TopicRule">TopicRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_alarm</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchAlarmArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_metric</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchMetricArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDynamodbArgs]</span> = None<span class="p">, </span><span class="nx">dynamodbv2s</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleDynamodbv2Args]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[TopicRuleElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">error_action</span><span class="p">:</span> <span class="nx">Optional[TopicRuleErrorActionArgs]</span> = None<span class="p">, </span><span class="nx">firehose</span><span class="p">:</span> <span class="nx">Optional[TopicRuleFirehoseArgs]</span> = None<span class="p">, </span><span class="nx">iot_analytics</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleIotAnalyticArgs]]</span> = None<span class="p">, </span><span class="nx">iot_events</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleIotEventArgs]]</span> = None<span class="p">, </span><span class="nx">kinesis</span><span class="p">:</span> <span class="nx">Optional[TopicRuleKinesisArgs]</span> = None<span class="p">, </span><span class="nx">lambda_</span><span class="p">:</span> <span class="nx">Optional[TopicRuleLambdaArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">republish</span><span class="p">:</span> <span class="nx">Optional[TopicRuleRepublishArgs]</span> = None<span class="p">, </span><span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[TopicRuleS3Args]</span> = None<span class="p">, </span><span class="nx">sns</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSnsArgs]</span> = None<span class="p">, </span><span class="nx">sql</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sqs</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSqsArgs]</span> = None<span class="p">, </span><span class="nx">step_functions</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleStepFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1199,7 +1199,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cloudwatch_alarm_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Dict[Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm]</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1209,7 +1209,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cloudwatch_metric_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>metric</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Dict[Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric]</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1230,7 +1230,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dynamodb_python" style="color: inherit; text-decoration: inherit;">dynamodb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Dict[Topic<wbr>Rule<wbr>Dynamodb]</a></span>
+        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1240,7 +1240,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#dynamodbv2s_python" style="color: inherit; text-decoration: inherit;">dynamodbv2s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2">List[Topic<wbr>Rule<wbr>Dynamodbv2]</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">List[Topic<wbr>Rule<wbr>Dynamodbv2Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1250,7 +1250,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Dict[Topic<wbr>Rule<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1260,7 +1260,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroraction">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action]</a></span>
+        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
 {{% /md %}}</dd>
@@ -1271,7 +1271,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#firehose_python" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Dict[Topic<wbr>Rule<wbr>Firehose]</a></span>
+        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1281,7 +1281,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#iot_analytics_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>analytics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotanalytic">List[Topic<wbr>Rule<wbr>Iot<wbr>Analytic]</a></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">List[Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1291,7 +1291,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#iot_events_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotevent">List[Topic<wbr>Rule<wbr>Iot<wbr>Event]</a></span>
+        <span class="property-type"><a href="#topicruleiotevent">List[Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1301,7 +1301,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#kinesis_python" style="color: inherit; text-decoration: inherit;">kinesis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Dict[Topic<wbr>Rule<wbr>Kinesis]</a></span>
+        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1311,7 +1311,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Dict[Topic<wbr>Rule<wbr>Lambda]</a></span>
+        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1332,7 +1332,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#republish_python" style="color: inherit; text-decoration: inherit;">republish</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Dict[Topic<wbr>Rule<wbr>Republish]</a></span>
+        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1342,7 +1342,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Dict[Topic<wbr>Rule<wbr>S3]</a></span>
+        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1352,7 +1352,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sns_python" style="color: inherit; text-decoration: inherit;">sns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Dict[Topic<wbr>Rule<wbr>Sns]</a></span>
+        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1362,7 +1362,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sqs_python" style="color: inherit; text-decoration: inherit;">sqs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Dict[Topic<wbr>Rule<wbr>Sqs]</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1372,7 +1372,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulestepfunction">List[Topic<wbr>Rule<wbr>Step<wbr>Function]</a></span>
+        <span class="property-type"><a href="#topicrulestepfunction">List[Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1382,7 +1382,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1529,7 +1529,8 @@ Get an existing TopicRule resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>cloudwatch_alarm=None<span class="p">, </span>cloudwatch_metric=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb=None<span class="p">, </span>dynamodbv2s=None<span class="p">, </span>elasticsearch=None<span class="p">, </span>enabled=None<span class="p">, </span>error_action=None<span class="p">, </span>firehose=None<span class="p">, </span>iot_analytics=None<span class="p">, </span>iot_events=None<span class="p">, </span>kinesis=None<span class="p">, </span>lambda_=None<span class="p">, </span>name=None<span class="p">, </span>republish=None<span class="p">, </span>s3=None<span class="p">, </span>sns=None<span class="p">, </span>sql=None<span class="p">, </span>sql_version=None<span class="p">, </span>sqs=None<span class="p">, </span>step_functions=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudwatch_alarm</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchAlarmArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_metric</span><span class="p">:</span> <span class="nx">Optional[TopicRuleCloudwatchMetricArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb</span><span class="p">:</span> <span class="nx">Optional[TopicRuleDynamodbArgs]</span> = None<span class="p">, </span><span class="nx">dynamodbv2s</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleDynamodbv2Args]]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[TopicRuleElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">error_action</span><span class="p">:</span> <span class="nx">Optional[TopicRuleErrorActionArgs]</span> = None<span class="p">, </span><span class="nx">firehose</span><span class="p">:</span> <span class="nx">Optional[TopicRuleFirehoseArgs]</span> = None<span class="p">, </span><span class="nx">iot_analytics</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleIotAnalyticArgs]]</span> = None<span class="p">, </span><span class="nx">iot_events</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleIotEventArgs]]</span> = None<span class="p">, </span><span class="nx">kinesis</span><span class="p">:</span> <span class="nx">Optional[TopicRuleKinesisArgs]</span> = None<span class="p">, </span><span class="nx">lambda_</span><span class="p">:</span> <span class="nx">Optional[TopicRuleLambdaArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">republish</span><span class="p">:</span> <span class="nx">Optional[TopicRuleRepublishArgs]</span> = None<span class="p">, </span><span class="nx">s3</span><span class="p">:</span> <span class="nx">Optional[TopicRuleS3Args]</span> = None<span class="p">, </span><span class="nx">sns</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSnsArgs]</span> = None<span class="p">, </span><span class="nx">sql</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sqs</span><span class="p">:</span> <span class="nx">Optional[TopicRuleSqsArgs]</span> = None<span class="p">, </span><span class="nx">step_functions</span><span class="p">:</span> <span class="nx">Optional[List[TopicRuleStepFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> TopicRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1537,7 +1538,7 @@ Get an existing TopicRule resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.TopicRule.html">TopicRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.TopicRuleState.html">TopicRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.TopicRule.html">TopicRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iot.TopicRuleState.html">TopicRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2395,7 +2396,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatch_alarm_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchalarm">Dict[Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm]</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2405,7 +2406,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatch_metric_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>metric</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulecloudwatchmetric">Dict[Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric]</a></span>
+        <span class="property-type"><a href="#topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2426,7 +2427,7 @@ The following state arguments are supported:
 <a href="#state_dynamodb_python" style="color: inherit; text-decoration: inherit;">dynamodb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodb">Dict[Topic<wbr>Rule<wbr>Dynamodb]</a></span>
+        <span class="property-type"><a href="#topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2436,7 +2437,7 @@ The following state arguments are supported:
 <a href="#state_dynamodbv2s_python" style="color: inherit; text-decoration: inherit;">dynamodbv2s</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2">List[Topic<wbr>Rule<wbr>Dynamodbv2]</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2">List[Topic<wbr>Rule<wbr>Dynamodbv2Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2446,7 +2447,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleelasticsearch">Dict[Topic<wbr>Rule<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2467,7 +2468,7 @@ The following state arguments are supported:
 <a href="#state_error_action_python" style="color: inherit; text-decoration: inherit;">error_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroraction">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action]</a></span>
+        <span class="property-type"><a href="#topicruleerroraction">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
 {{% /md %}}</dd>
@@ -2478,7 +2479,7 @@ The following state arguments are supported:
 <a href="#state_firehose_python" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulefirehose">Dict[Topic<wbr>Rule<wbr>Firehose]</a></span>
+        <span class="property-type"><a href="#topicrulefirehose">Topic<wbr>Rule<wbr>Firehose<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2488,7 +2489,7 @@ The following state arguments are supported:
 <a href="#state_iot_analytics_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>analytics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotanalytic">List[Topic<wbr>Rule<wbr>Iot<wbr>Analytic]</a></span>
+        <span class="property-type"><a href="#topicruleiotanalytic">List[Topic<wbr>Rule<wbr>Iot<wbr>Analytic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2498,7 +2499,7 @@ The following state arguments are supported:
 <a href="#state_iot_events_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleiotevent">List[Topic<wbr>Rule<wbr>Iot<wbr>Event]</a></span>
+        <span class="property-type"><a href="#topicruleiotevent">List[Topic<wbr>Rule<wbr>Iot<wbr>Event<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2508,7 +2509,7 @@ The following state arguments are supported:
 <a href="#state_kinesis_python" style="color: inherit; text-decoration: inherit;">kinesis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulekinesis">Dict[Topic<wbr>Rule<wbr>Kinesis]</a></span>
+        <span class="property-type"><a href="#topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2518,7 +2519,7 @@ The following state arguments are supported:
 <a href="#state_lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulelambda">Dict[Topic<wbr>Rule<wbr>Lambda]</a></span>
+        <span class="property-type"><a href="#topicrulelambda">Topic<wbr>Rule<wbr>Lambda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2539,7 +2540,7 @@ The following state arguments are supported:
 <a href="#state_republish_python" style="color: inherit; text-decoration: inherit;">republish</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulerepublish">Dict[Topic<wbr>Rule<wbr>Republish]</a></span>
+        <span class="property-type"><a href="#topicrulerepublish">Topic<wbr>Rule<wbr>Republish<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2549,7 +2550,7 @@ The following state arguments are supported:
 <a href="#state_s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrules3">Dict[Topic<wbr>Rule<wbr>S3]</a></span>
+        <span class="property-type"><a href="#topicrules3">Topic<wbr>Rule<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2559,7 +2560,7 @@ The following state arguments are supported:
 <a href="#state_sns_python" style="color: inherit; text-decoration: inherit;">sns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesns">Dict[Topic<wbr>Rule<wbr>Sns]</a></span>
+        <span class="property-type"><a href="#topicrulesns">Topic<wbr>Rule<wbr>Sns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2591,7 +2592,7 @@ The following state arguments are supported:
 <a href="#state_sqs_python" style="color: inherit; text-decoration: inherit;">sqs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulesqs">Dict[Topic<wbr>Rule<wbr>Sqs]</a></span>
+        <span class="property-type"><a href="#topicrulesqs">Topic<wbr>Rule<wbr>Sqs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2601,7 +2602,7 @@ The following state arguments are supported:
 <a href="#state_step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicrulestepfunction">List[Topic<wbr>Rule<wbr>Step<wbr>Function]</a></span>
+        <span class="property-type"><a href="#topicrulestepfunction">List[Topic<wbr>Rule<wbr>Step<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2611,7 +2612,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -2804,8 +2805,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="alarmname_python">
-<a href="#alarmname_python" style="color: inherit; text-decoration: inherit;">alarm<wbr>Name</a>
+        <span id="alarm_name_python">
+<a href="#alarm_name_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2826,8 +2827,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="statereason_python">
-<a href="#statereason_python" style="color: inherit; text-decoration: inherit;">state<wbr>Reason</a>
+        <span id="state_reason_python">
+<a href="#state_reason_python" style="color: inherit; text-decoration: inherit;">state_<wbr>reason</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2837,8 +2838,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="statevalue_python">
-<a href="#statevalue_python" style="color: inherit; text-decoration: inherit;">state<wbr>Value</a>
+        <span id="state_value_python">
+<a href="#state_value_python" style="color: inherit; text-decoration: inherit;">state_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3092,8 +3093,19 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricnamespace_python">
-<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3103,8 +3115,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricunit_python">
-<a href="#metricunit_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Unit</a>
+        <span id="metric_unit_python">
+<a href="#metric_unit_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3114,24 +3126,13 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricvalue_python">
-<a href="#metricvalue_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Value</a>
+        <span id="metric_value_python">
+<a href="#metric_value_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="metric_name_python">
-<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch metric name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3147,8 +3148,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metrictimestamp_python">
-<a href="#metrictimestamp_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Timestamp</a>
+        <span id="metric_timestamp_python">
+<a href="#metric_timestamp_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3534,8 +3535,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="hashkeyfield_python">
-<a href="#hashkeyfield_python" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Field</a>
+        <span id="hash_key_field_python">
+<a href="#hash_key_field_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>field</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3545,8 +3546,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="hashkeyvalue_python">
-<a href="#hashkeyvalue_python" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Value</a>
+        <span id="hash_key_value_python">
+<a href="#hash_key_value_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3578,8 +3579,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hashkeytype_python">
-<a href="#hashkeytype_python" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Type</a>
+        <span id="hash_key_type_python">
+<a href="#hash_key_type_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3600,8 +3601,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="payloadfield_python">
-<a href="#payloadfield_python" style="color: inherit; text-decoration: inherit;">payload<wbr>Field</a>
+        <span id="payload_field_python">
+<a href="#payload_field_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>field</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3611,8 +3612,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangekeyfield_python">
-<a href="#rangekeyfield_python" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Field</a>
+        <span id="range_key_field_python">
+<a href="#range_key_field_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>field</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3622,8 +3623,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangekeytype_python">
-<a href="#rangekeytype_python" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Type</a>
+        <span id="range_key_type_python">
+<a href="#range_key_type_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3633,8 +3634,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangekeyvalue_python">
-<a href="#rangekeyvalue_python" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Value</a>
+        <span id="range_key_value_python">
+<a href="#range_key_value_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3767,11 +3768,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="putitem_python">
-<a href="#putitem_python" style="color: inherit; text-decoration: inherit;">put<wbr>Item</a>
+        <span id="put_item_python">
+<a href="#put_item_python" style="color: inherit; text-decoration: inherit;">put_<wbr>item</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruledynamodbv2putitem">Dict[Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item]</a></span>
+        <span class="property-type"><a href="#topicruledynamodbv2putitem">Topic<wbr>Rule<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd>
@@ -4634,7 +4635,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_alarm_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm]</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchalarm">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Alarm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4644,7 +4645,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_metric_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>metric</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric]</a></span>
+        <span class="property-type"><a href="#topicruleerroractioncloudwatchmetric">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Cloudwatch<wbr>Metric<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4654,7 +4655,7 @@ The following state arguments are supported:
 <a href="#dynamodb_python" style="color: inherit; text-decoration: inherit;">dynamodb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodb">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb]</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodb">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4664,7 +4665,7 @@ The following state arguments are supported:
 <a href="#dynamodbv2_python" style="color: inherit; text-decoration: inherit;">dynamodbv2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2]</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4674,7 +4675,7 @@ The following state arguments are supported:
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch]</a></span>
+        <span class="property-type"><a href="#topicruleerroractionelasticsearch">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4684,7 +4685,7 @@ The following state arguments are supported:
 <a href="#firehose_python" style="color: inherit; text-decoration: inherit;">firehose</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionfirehose">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose]</a></span>
+        <span class="property-type"><a href="#topicruleerroractionfirehose">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Firehose<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4694,7 +4695,7 @@ The following state arguments are supported:
 <a href="#iot_analytics_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>analytics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics]</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotanalytics">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Analytics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4704,7 +4705,7 @@ The following state arguments are supported:
 <a href="#iot_events_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>events</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractioniotevents">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events]</a></span>
+        <span class="property-type"><a href="#topicruleerroractioniotevents">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Iot<wbr>Events<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4714,17 +4715,17 @@ The following state arguments are supported:
 <a href="#kinesis_python" style="color: inherit; text-decoration: inherit;">kinesis</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionkinesis">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis]</a></span>
+        <span class="property-type"><a href="#topicruleerroractionkinesis">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Kinesis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lambda_python">
-<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
+        <span id="lambda__python">
+<a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionlambda">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda]</a></span>
+        <span class="property-type"><a href="#topicruleerroractionlambda">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Lambda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4734,7 +4735,7 @@ The following state arguments are supported:
 <a href="#republish_python" style="color: inherit; text-decoration: inherit;">republish</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionrepublish">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish]</a></span>
+        <span class="property-type"><a href="#topicruleerroractionrepublish">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Republish<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4744,7 +4745,7 @@ The following state arguments are supported:
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractions3">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3]</a></span>
+        <span class="property-type"><a href="#topicruleerroractions3">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4754,7 +4755,7 @@ The following state arguments are supported:
 <a href="#sns_python" style="color: inherit; text-decoration: inherit;">sns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsns">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns]</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsns">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4764,7 +4765,7 @@ The following state arguments are supported:
 <a href="#sqs_python" style="color: inherit; text-decoration: inherit;">sqs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionsqs">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs]</a></span>
+        <span class="property-type"><a href="#topicruleerroractionsqs">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Sqs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4774,7 +4775,7 @@ The following state arguments are supported:
 <a href="#step_functions_python" style="color: inherit; text-decoration: inherit;">step_<wbr>functions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions]</a></span>
+        <span class="property-type"><a href="#topicruleerroractionstepfunctions">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Step<wbr>Functions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4958,8 +4959,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="alarmname_python">
-<a href="#alarmname_python" style="color: inherit; text-decoration: inherit;">alarm<wbr>Name</a>
+        <span id="alarm_name_python">
+<a href="#alarm_name_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4980,8 +4981,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="statereason_python">
-<a href="#statereason_python" style="color: inherit; text-decoration: inherit;">state<wbr>Reason</a>
+        <span id="state_reason_python">
+<a href="#state_reason_python" style="color: inherit; text-decoration: inherit;">state_<wbr>reason</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4991,8 +4992,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="statevalue_python">
-<a href="#statevalue_python" style="color: inherit; text-decoration: inherit;">state<wbr>Value</a>
+        <span id="state_value_python">
+<a href="#state_value_python" style="color: inherit; text-decoration: inherit;">state_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5246,8 +5247,19 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricnamespace_python">
-<a href="#metricnamespace_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5257,8 +5269,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricunit_python">
-<a href="#metricunit_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Unit</a>
+        <span id="metric_unit_python">
+<a href="#metric_unit_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>unit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5268,24 +5280,13 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricvalue_python">
-<a href="#metricvalue_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Value</a>
+        <span id="metric_value_python">
+<a href="#metric_value_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch metric value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="metric_name_python">
-<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch metric name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5301,8 +5302,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="metrictimestamp_python">
-<a href="#metrictimestamp_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Timestamp</a>
+        <span id="metric_timestamp_python">
+<a href="#metric_timestamp_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>timestamp</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5688,8 +5689,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="hashkeyfield_python">
-<a href="#hashkeyfield_python" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Field</a>
+        <span id="hash_key_field_python">
+<a href="#hash_key_field_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>field</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5699,8 +5700,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="hashkeyvalue_python">
-<a href="#hashkeyvalue_python" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Value</a>
+        <span id="hash_key_value_python">
+<a href="#hash_key_value_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5732,8 +5733,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hashkeytype_python">
-<a href="#hashkeytype_python" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Type</a>
+        <span id="hash_key_type_python">
+<a href="#hash_key_type_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5754,8 +5755,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="payloadfield_python">
-<a href="#payloadfield_python" style="color: inherit; text-decoration: inherit;">payload<wbr>Field</a>
+        <span id="payload_field_python">
+<a href="#payload_field_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>field</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5765,8 +5766,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangekeyfield_python">
-<a href="#rangekeyfield_python" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Field</a>
+        <span id="range_key_field_python">
+<a href="#range_key_field_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>field</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5776,8 +5777,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangekeytype_python">
-<a href="#rangekeytype_python" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Type</a>
+        <span id="range_key_type_python">
+<a href="#range_key_type_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5787,8 +5788,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangekeyvalue_python">
-<a href="#rangekeyvalue_python" style="color: inherit; text-decoration: inherit;">range<wbr>Key<wbr>Value</a>
+        <span id="range_key_value_python">
+<a href="#range_key_value_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5921,11 +5922,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="putitem_python">
-<a href="#putitem_python" style="color: inherit; text-decoration: inherit;">put<wbr>Item</a>
+        <span id="put_item_python">
+<a href="#put_item_python" style="color: inherit; text-decoration: inherit;">put_<wbr>item</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Dict[Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item]</a></span>
+        <span class="property-type"><a href="#topicruleerroractiondynamodbv2putitem">Topic<wbr>Rule<wbr>Error<wbr>Action<wbr>Dynamodbv2Put<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
 {{% /md %}}</dd>
@@ -6433,8 +6434,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="deliverystreamname_python">
-<a href="#deliverystreamname_python" style="color: inherit; text-decoration: inherit;">delivery<wbr>Stream<wbr>Name</a>
+        <span id="delivery_stream_name_python">
+<a href="#delivery_stream_name_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>stream_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6578,8 +6579,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="channelname_python">
-<a href="#channelname_python" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
+        <span id="channel_name_python">
+<a href="#channel_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6745,8 +6746,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="inputname_python">
-<a href="#inputname_python" style="color: inherit; text-decoration: inherit;">input<wbr>Name</a>
+        <span id="input_name_python">
+<a href="#input_name_python" style="color: inherit; text-decoration: inherit;">input_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6767,8 +6768,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageid_python">
-<a href="#messageid_python" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
+        <span id="message_id_python">
+<a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6934,8 +6935,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="streamname_python">
-<a href="#streamname_python" style="color: inherit; text-decoration: inherit;">stream<wbr>Name</a>
+        <span id="stream_name_python">
+<a href="#stream_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6945,8 +6946,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="partitionkey_python">
-<a href="#partitionkey_python" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
+        <span id="partition_key_python">
+<a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7569,8 +7570,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageformat_python">
-<a href="#messageformat_python" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
+        <span id="message_format_python">
+<a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7747,8 +7748,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="usebase64_python">
-<a href="#usebase64_python" style="color: inherit; text-decoration: inherit;">use<wbr>Base64</a>
+        <span id="use_base64_python">
+<a href="#use_base64_python" style="color: inherit; text-decoration: inherit;">use_<wbr>base64</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7914,8 +7915,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="statemachinename_python">
-<a href="#statemachinename_python" style="color: inherit; text-decoration: inherit;">state<wbr>Machine<wbr>Name</a>
+        <span id="state_machine_name_python">
+<a href="#state_machine_name_python" style="color: inherit; text-decoration: inherit;">state_<wbr>machine_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7925,8 +7926,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="executionnameprefix_python">
-<a href="#executionnameprefix_python" style="color: inherit; text-decoration: inherit;">execution<wbr>Name<wbr>Prefix</a>
+        <span id="execution_name_prefix_python">
+<a href="#execution_name_prefix_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>name_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8081,8 +8082,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="deliverystreamname_python">
-<a href="#deliverystreamname_python" style="color: inherit; text-decoration: inherit;">delivery<wbr>Stream<wbr>Name</a>
+        <span id="delivery_stream_name_python">
+<a href="#delivery_stream_name_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>stream_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8226,8 +8227,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="channelname_python">
-<a href="#channelname_python" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
+        <span id="channel_name_python">
+<a href="#channel_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8393,8 +8394,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="inputname_python">
-<a href="#inputname_python" style="color: inherit; text-decoration: inherit;">input<wbr>Name</a>
+        <span id="input_name_python">
+<a href="#input_name_python" style="color: inherit; text-decoration: inherit;">input_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8415,8 +8416,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageid_python">
-<a href="#messageid_python" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
+        <span id="message_id_python">
+<a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8582,8 +8583,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="streamname_python">
-<a href="#streamname_python" style="color: inherit; text-decoration: inherit;">stream<wbr>Name</a>
+        <span id="stream_name_python">
+<a href="#stream_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8593,8 +8594,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="partitionkey_python">
-<a href="#partitionkey_python" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
+        <span id="partition_key_python">
+<a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9217,8 +9218,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageformat_python">
-<a href="#messageformat_python" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
+        <span id="message_format_python">
+<a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9395,8 +9396,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="usebase64_python">
-<a href="#usebase64_python" style="color: inherit; text-decoration: inherit;">use<wbr>Base64</a>
+        <span id="use_base64_python">
+<a href="#use_base64_python" style="color: inherit; text-decoration: inherit;">use_<wbr>base64</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9562,8 +9563,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="statemachinename_python">
-<a href="#statemachinename_python" style="color: inherit; text-decoration: inherit;">state<wbr>Machine<wbr>Name</a>
+        <span id="state_machine_name_python">
+<a href="#state_machine_name_python" style="color: inherit; text-decoration: inherit;">state_<wbr>machine_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9573,8 +9574,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="executionnameprefix_python">
-<a href="#executionnameprefix_python" style="color: inherit; text-decoration: inherit;">execution<wbr>Name<wbr>Prefix</a>
+        <span id="execution_name_prefix_python">
+<a href="#execution_name_prefix_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>name_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

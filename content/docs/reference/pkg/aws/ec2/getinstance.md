@@ -102,14 +102,14 @@ import pulumi
 import pulumi_aws as aws
 
 foo = aws.ec2.get_instance(filters=[
-        {
-            "name": "image-id",
-            "values": ["ami-xxxxxxxx"],
-        },
-        {
-            "name": "tag:Name",
-            "values": ["instance-name-tag"],
-        },
+        aws.ec2.GetInstanceFilterArgs(
+            name="image-id",
+            values=["ami-xxxxxxxx"],
+        ),
+        aws.ec2.GetInstanceFilterArgs(
+            name="tag:Name",
+            values=["instance-name-tag"],
+        ),
     ],
     instance_id="i-instanceid")
 ```
@@ -153,7 +153,7 @@ const foo = pulumi.output(aws.ec2.getInstance({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance(</span>filters=None<span class="p">, </span>get_password_data=None<span class="p">, </span>get_user_data=None<span class="p">, </span>instance_id=None<span class="p">, </span>instance_tags=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetInstanceFilterArgs]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">get_user_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -414,7 +414,7 @@ exactly match a pair on the desired Instance.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancefilter">List[Get<wbr>Instance<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getinstancefilter">List[Get<wbr>Instance<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
@@ -460,7 +460,7 @@ several valid keys, for a full reference, check out
 <a href="#instance_tags_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must
 exactly match a pair on the desired Instance.
@@ -472,7 +472,7 @@ exactly match a pair on the desired Instance.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the Instance.
 {{% /md %}}</dd>
@@ -1986,7 +1986,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#instance_tags_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2189,7 +2189,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the Instance.
 {{% /md %}}</dd>
@@ -2362,8 +2362,8 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
-        <span id="cpucredits_python">
-<a href="#cpucredits_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Credits</a>
+        <span id="cpu_credits_python">
+<a href="#cpu_credits_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>credits</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2709,8 +2709,8 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2774,17 +2774,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the volume.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span> 
@@ -2802,6 +2791,17 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the volume.
 {{% /md %}}</dd>
 
 </dl>
@@ -2962,8 +2962,8 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodevice_python">
-<a href="#nodevice_python" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
+        <span id="no_device_python">
+<a href="#no_device_python" style="color: inherit; text-decoration: inherit;">no_<wbr>device</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2973,8 +2973,8 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualname_python">
-<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+        <span id="virtual_name_python">
+<a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3255,8 +3255,8 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
-        <span id="httpendpoint_python">
-<a href="#httpendpoint_python" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
+        <span id="http_endpoint_python">
+<a href="#http_endpoint_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3266,8 +3266,8 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
-        <span id="httpputresponsehoplimit_python">
-<a href="#httpputresponsehoplimit_python" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+        <span id="http_put_response_hop_limit_python">
+<a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3277,8 +3277,8 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
-        <span id="httptokens_python">
-<a href="#httptokens_python" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
+        <span id="http_tokens_python">
+<a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3592,8 +3592,8 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3646,17 +3646,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the volume.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span> 
@@ -3674,6 +3663,17 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the volume.
 {{% /md %}}</dd>
 
 </dl>

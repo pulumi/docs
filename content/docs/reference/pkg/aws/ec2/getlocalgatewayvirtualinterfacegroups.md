@@ -91,7 +91,7 @@ const all = pulumi.output(aws.ec2.getLocalGatewayVirtualInterfaceGroups({ async:
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_local_gateway_virtual_interface_groups(</span>filters=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_local_gateway_virtual_interface_groups(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetLocalGatewayVirtualInterfaceGroupsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLocalGatewayVirtualInterfaceGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -209,7 +209,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlocalgatewayvirtualinterfacegroupsfilter">List[Get<wbr>Local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Groups<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getlocalgatewayvirtualinterfacegroupsfilter">List[Get<wbr>Local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Groups<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaceGroups.html) for supported filters. Detailed below.
 {{% /md %}}</dd>
@@ -220,7 +220,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags, each pair of which must exactly match a pair on the desired local gateway route table.
 {{% /md %}}</dd>
@@ -464,7 +464,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
