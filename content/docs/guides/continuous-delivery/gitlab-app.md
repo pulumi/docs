@@ -41,7 +41,7 @@ Here's a preview of what it looks like.
 
 ![Merge Request Note](/images/docs/guides/continuous-delivery/gitlab-app/merge_request_note.png)
 
-## Disabling the integration
+## Disabling the Integration
 
 If would like to disable the integration for a specific execution of Pulumi,
 you can always set the `PULUMI_DISABLE_CI_DETECTION` env var to `false` without having to remove

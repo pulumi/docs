@@ -7,7 +7,7 @@ meta_desc: "We are excited to announce the launch of first-class support for int
 meta_image: pulumi_gitlab.png
 ---
 
-We are excited to announce the launch of first-class support for integrating GitLab Merge Requests with Pulumi.
+We are excited to announce the launch of native support for integrating GitLab Merge Requests with Pulumi.
 By integrating your GitLab Projects directly with Pulumi, you can now approve your merge requests
 with confidence.
 
