@@ -120,7 +120,7 @@ Existing programs that lookup the values in the `dict` continue to work as-is be
 
 ## Other improvements
 
-Another improvement we've made is hovering tooltips in IDEs. Hovering over members in PyCharm and VS Code with Pylance now shows the member's associated documentation:
+Another improvement we've made is to hover tooltips in IDEs. Hovering over members in PyCharm and VS Code with Pylance now shows the member's associated documentation:
 
 ![PyCharm](pycharm-hover.png)
 
