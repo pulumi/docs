@@ -46,7 +46,7 @@ Found 1 error in 1 file (checked 1 source file)
 
 ## Data Classes
 
-Consider an AWS bucket used to host a static website. Previously, the `website` and `cors_rules` inputs needed to be specified as raw `dict`s:
+Consider an AWS bucket hosting a static website. Previously, the `website` and `cors_rules` inputs needed to be specified as raw `dict`s:
 
 ```python
 from pulumi_aws import s3
@@ -67,7 +67,7 @@ my_bucket = s3.Bucket("my-bucket",
 )
 ```
 
-You would likely have several questions if writing the above example from scratch. What keys can be set for `website` and `cors_rules`? Should the keys be camelCase or snake_case? Which keys are required? What are the types of the values? To answer these questions, you'd need to refer to [`Bucket`]({{< relref "/docs/reference/pkg/aws/s3/bucket" >}})'s documentation.
+You would likely have several questions if writing the above example from scratch. What keys can be set for `website` and `cors_rules`? Should the keys be camelCase or snake_case? Which keys are required? What are the types of values? To answer these questions, you'd need to refer to [`Bucket`]({{< relref "/docs/reference/pkg/aws/s3/bucket" >}})'s documentation.
 
 We now allow optionally passing nested values using data classes:
 
@@ -98,29 +98,29 @@ Here's what this looks like in VS Code using the new [Pylance](https://devblogs.
 
 ![VS Code](vscode-bucket.png)
 
-Support for passing data classes is a fully compatible change. Nested data can be passed as either raw `dict`s or as data classes, so existing programs using `dict`s will continue to work as-is without modification.
+Support for passing data classes is a fully compatible change. Nested data are passed as either raw `dict`s or data classes, so existing programs using `dict`s will continue to work as-is without modification.
 
 ## Accessing Outputs
 
 Nested outputs can now be accessed in a more strongly-typed way as well.
 
-Consider accessing one of the website settings from the bucket. Previously, nested outputs were returned as raw `dict`s and you'd access the value by looking it up in the `dict` by its key:
+Consider accessing one of the website settings from the bucket. Previously, nested outputs were returned as raw `dict`s, and you'd get the value by looking it up in the `dict` by its key:
 
 ```python
 index_document = my_bucket.website.apply(lambda w: w["indexDocument"] if w else None)
 ```
 
-Now, nested outputs are returned as data classes and values can be accessed via properties.
+Now, nested outputs are returned as data classes, and values can be accessed via properties.
 
 ```python
 index_document = my_bucket.website.apply(lambda w: w.index_document if w else None)
 ```
 
-Existing programs that lookup the values in the `dict` continue to work as-is, because the new output data classes are subclasses of `dict` and continue to return the same data with the same keys as before.
+Existing programs that lookup the values in the `dict` continue to work as-is because the new output data classes are subclasses of `dict` and continue to return the same data with the same keys as before.
 
 ## Other improvements
 
-Another improvement we've made is around hover tooltips in IDEs. Hovering over members in PyCharm and VS Code with Pylance now shows the member's associated documentation:
+Another improvement we've made is hovering tooltips in IDEs. Hovering over members in PyCharm and VS Code with Pylance now shows the member's associated documentation:
 
 ![PyCharm](pycharm-hover.png)
 
@@ -130,6 +130,6 @@ We've additionally made some changes to reduce the amount of noise in IDE comple
 
 Altogether these changes provide a drastic improvement to the Python experience.
 
-The improvements are available in the latest releases of the [AWS](https://pypi.org/project/pulumi-aws/), [Azure](https://pypi.org/project/pulumi-azure/), [AzureAD](https://pypi.org/project/pulumi-azuread/), [Google Cloud](https://pypi.org/project/pulumi-gcp/), and [Random](https://pypi.org/project/pulumi-random/) providers, and will be rolling out to the rest of the providers this week, along with updates to examples and documentation.
+The improvements are available in the latest releases of the [AWS](https://pypi.org/project/pulumi-aws/), [Azure](https://pypi.org/project/pulumi-azure/), [AzureAD](https://pypi.org/project/pulumi-azuread/), [Google Cloud](https://pypi.org/project/pulumi-gcp/), and [Random](https://pypi.org/project/pulumi-random/) providers. They will be rolling out to the rest of the providers this week, along with updates to examples and documentation.
 
 Take the new providers for a spin and let us know what you think in the [Community Slack](https://slack.pulumi.com/)!
