@@ -128,7 +128,7 @@ We've additionally made some changes to reduce the amount of noise in IDE comple
 
 ## Conclusion
 
-Altogether these changes provide a drastic improvement to the Python experience.
+All considered, these changes provide a major improvement to the Python experience.
 
 The improvements are available in the latest releases of the [AWS](https://pypi.org/project/pulumi-aws/), [Azure](https://pypi.org/project/pulumi-azure/), [AzureAD](https://pypi.org/project/pulumi-azuread/), [Google Cloud](https://pypi.org/project/pulumi-gcp/), and [Random](https://pypi.org/project/pulumi-random/) providers. They will be rolling out to the rest of the providers this week, along with updates to examples and documentation.
 
