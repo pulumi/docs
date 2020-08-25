@@ -28,231 +28,6 @@ These resources are intended to convert the permissions system for BigQuery data
 
 > **Note:** `gcp.bigquery.DatasetIamBinding` resources **can be** used in conjunction with `gcp.bigquery.DatasetIamMember` resources **only if** they do not grant privilege to the same role.
 
-## google\bigquery\_dataset\_iam\_policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const owner = gcp.organizations.getIAMPolicy({
-    binding: [{
-        role: "roles/dataOwner",
-        members: ["user:jane@example.com"],
-    }],
-});
-const dataset = new gcp.bigquery.DatasetIamPolicy("dataset", {
-    datasetId: "your-dataset-id",
-    policyData: owner.then(owner => owner.policyData),
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-owner = gcp.organizations.get_iam_policy(binding=[{
-    "role": "roles/dataOwner",
-    "members": ["user:jane@example.com"],
-}])
-dataset = gcp.bigquery.DatasetIamPolicy("dataset",
-    dataset_id="your-dataset-id",
-    policy_data=owner.policy_data)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var owner = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
-        {
-            Binding = 
-            {
-                
-                {
-                    { "role", "roles/dataOwner" },
-                    { "members", 
-                    {
-                        "user:jane@example.com",
-                    } },
-                },
-            },
-        }));
-        var dataset = new Gcp.BigQuery.DatasetIamPolicy("dataset", new Gcp.BigQuery.DatasetIamPolicyArgs
-        {
-            DatasetId = "your-dataset-id",
-            PolicyData = owner.Apply(owner => owner.PolicyData),
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		owner, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
-			Binding: []map[string]interface{}{
-				map[string]interface{}{
-					"role": "roles/dataOwner",
-					"members": []string{
-						"user:jane@example.com",
-					},
-				},
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err = bigquery.NewDatasetIamPolicy(ctx, "dataset", &bigquery.DatasetIamPolicyArgs{
-			DatasetId:  pulumi.String("your-dataset-id"),
-			PolicyData: pulumi.String(owner.PolicyData),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## google\_bigquery\_dataset\_iam\_binding
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const reader = new gcp.bigquery.DatasetIamBinding("reader", {
-    datasetId: "your-dataset-id",
-    members: ["user:jane@example.com"],
-    role: "roles/bigquery.dataViewer",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-reader = gcp.bigquery.DatasetIamBinding("reader",
-    dataset_id="your-dataset-id",
-    members=["user:jane@example.com"],
-    role="roles/bigquery.dataViewer")
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var reader = new Gcp.BigQuery.DatasetIamBinding("reader", new Gcp.BigQuery.DatasetIamBindingArgs
-        {
-            DatasetId = "your-dataset-id",
-            Members = 
-            {
-                "user:jane@example.com",
-            },
-            Role = "roles/bigquery.dataViewer",
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = bigquery.NewDatasetIamBinding(ctx, "reader", &bigquery.DatasetIamBindingArgs{
-			DatasetId: pulumi.String("your-dataset-id"),
-			Members: pulumi.StringArray{
-				pulumi.String("user:jane@example.com"),
-			},
-			Role: pulumi.String("roles/bigquery.dataViewer"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## google\_bigquery\_dataset\_iam\_member
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const editor = new gcp.bigquery.DatasetIamMember("editor", {
-    datasetId: "your-dataset-id",
-    member: "user:jane@example.com",
-    role: "roles/bigquery.dataEditor",
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-editor = gcp.bigquery.DatasetIamMember("editor",
-    dataset_id="your-dataset-id",
-    member="user:jane@example.com",
-    role="roles/bigquery.dataEditor")
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var editor = new Gcp.BigQuery.DatasetIamMember("editor", new Gcp.BigQuery.DatasetIamMemberArgs
-        {
-            DatasetId = "your-dataset-id",
-            Member = "user:jane@example.com",
-            Role = "roles/bigquery.dataEditor",
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = bigquery.NewDatasetIamMember(ctx, "editor", &bigquery.DatasetIamMemberArgs{
-			DatasetId: pulumi.String("your-dataset-id"),
-			Member:    pulumi.String("user:jane@example.com"),
-			Role:      pulumi.String("roles/bigquery.dataEditor"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
 
 
 ## Create a DatasetIamPolicy Resource {#create}
@@ -264,7 +39,7 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#DatasetIamPolicy">DatasetIamPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset_id=None<span class="p">, </span>policy_data=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#pulumi_gcp.bigquery.DatasetIamPolicy">DatasetIamPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -444,7 +219,7 @@ The DatasetIamPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The dataset ID, in the form `projects/{project}/datasets/{dataset_id}`
+    <dd>{{% md %}}The dataset ID.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -484,7 +259,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The dataset ID, in the form `projects/{project}/datasets/{dataset_id}`
+    <dd>{{% md %}}The dataset ID.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -524,7 +299,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The dataset ID, in the form `projects/{project}/datasets/{dataset_id}`
+    <dd>{{% md %}}The dataset ID.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -564,7 +339,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The dataset ID, in the form `projects/{project}/datasets/{dataset_id}`
+    <dd>{{% md %}}The dataset ID.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -731,7 +506,8 @@ Get an existing DatasetIamPolicy resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dataset_id=None<span class="p">, </span>etag=None<span class="p">, </span>policy_data=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DatasetIamPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -739,7 +515,7 @@ Get an existing DatasetIamPolicy resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetIamPolicy.html">DatasetIamPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetIamPolicyState.html">DatasetIamPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetIamPolicy.html">DatasetIamPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.DatasetIamPolicyState.html">DatasetIamPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -853,7 +629,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The dataset ID, in the form `projects/{project}/datasets/{dataset_id}`
+    <dd>{{% md %}}The dataset ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -904,7 +680,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The dataset ID, in the form `projects/{project}/datasets/{dataset_id}`
+    <dd>{{% md %}}The dataset ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -955,7 +731,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The dataset ID, in the form `projects/{project}/datasets/{dataset_id}`
+    <dd>{{% md %}}The dataset ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1006,7 +782,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The dataset ID, in the form `projects/{project}/datasets/{dataset_id}`
+    <dd>{{% md %}}The dataset ID.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1062,6 +838,6 @@ a `gcp.organizations.getIAMPolicy` data source.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

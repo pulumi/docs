@@ -20,158 +20,6 @@ To get more information about AlertPolicy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/monitoring/alerts/)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Monitoring Alert Policy Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var alertPolicy = new Gcp.Monitoring.AlertPolicy("alertPolicy", new Gcp.Monitoring.AlertPolicyArgs
-        {
-            Combiner = "OR",
-            Conditions = 
-            {
-                new Gcp.Monitoring.Inputs.AlertPolicyConditionArgs
-                {
-                    ConditionThreshold = new Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdArgs
-                    {
-                        Aggregations = 
-                        {
-                            new Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs
-                            {
-                                AlignmentPeriod = "60s",
-                                PerSeriesAligner = "ALIGN_RATE",
-                            },
-                        },
-                        Comparison = "COMPARISON_GT",
-                        Duration = "60s",
-                        Filter = "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
-                    },
-                    DisplayName = "test condition",
-                },
-            },
-            DisplayName = "My Alert Policy",
-            UserLabels = 
-            {
-                { "foo", "bar" },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = monitoring.NewAlertPolicy(ctx, "alertPolicy", &monitoring.AlertPolicyArgs{
-			Combiner: pulumi.String("OR"),
-			Conditions: monitoring.AlertPolicyConditionArray{
-				&monitoring.AlertPolicyConditionArgs{
-					ConditionThreshold: &monitoring.AlertPolicyConditionConditionThresholdArgs{
-						Aggregations: monitoring.AlertPolicyConditionConditionThresholdAggregationArray{
-							&monitoring.AlertPolicyConditionConditionThresholdAggregationArgs{
-								AlignmentPeriod:  pulumi.String("60s"),
-								PerSeriesAligner: pulumi.String("ALIGN_RATE"),
-							},
-						},
-						Comparison: pulumi.String("COMPARISON_GT"),
-						Duration:   pulumi.String("60s"),
-						Filter:     pulumi.String("metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\""),
-					},
-					DisplayName: pulumi.String("test condition"),
-				},
-			},
-			DisplayName: pulumi.String("My Alert Policy"),
-			UserLabels: pulumi.Map{
-				"foo": pulumi.String("bar"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-alert_policy = gcp.monitoring.AlertPolicy("alertPolicy",
-    combiner="OR",
-    conditions=[{
-        "conditionThreshold": {
-            "aggregations": [{
-                "alignmentPeriod": "60s",
-                "perSeriesAligner": "ALIGN_RATE",
-            }],
-            "comparison": "COMPARISON_GT",
-            "duration": "60s",
-            "filter": "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
-        },
-        "display_name": "test condition",
-    }],
-    display_name="My Alert Policy",
-    user_labels={
-        "foo": "bar",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
-    combiner: "OR",
-    conditions: [{
-        conditionThreshold: {
-            aggregations: [{
-                alignmentPeriod: "60s",
-                perSeriesAligner: "ALIGN_RATE",
-            }],
-            comparison: "COMPARISON_GT",
-            duration: "60s",
-            filter: "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
-        },
-        displayName: "test condition",
-    }],
-    displayName: "My Alert Policy",
-    userLabels: {
-        foo: "bar",
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a AlertPolicy Resource {#create}
@@ -183,7 +31,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#AlertPolicy">AlertPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>combiner=None<span class="p">, </span>conditions=None<span class="p">, </span>display_name=None<span class="p">, </span>documentation=None<span class="p">, </span>enabled=None<span class="p">, </span>notification_channels=None<span class="p">, </span>project=None<span class="p">, </span>user_labels=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring/#pulumi_gcp.monitoring.AlertPolicy">AlertPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[List[AlertPolicyConditionArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyDocumentationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -365,6 +213,7 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
+Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -378,7 +227,8 @@ determine if an incident should be opened.
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
 evaluate to true, then an incident is created. A policy can have from
-one to six conditions.  Structure is documented below.
+one to six conditions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -407,7 +257,8 @@ policy.
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
 notifications, and incidents. To avoid confusion, don't use the same
 display name for multiple policies in the same project. The name is
-limited to 512 Unicode characters.  Structure is documented below.
+limited to 512 Unicode characters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -482,6 +333,7 @@ must begin with a letter.
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
+Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -495,7 +347,8 @@ determine if an incident should be opened.
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
 evaluate to true, then an incident is created. A policy can have from
-one to six conditions.  Structure is documented below.
+one to six conditions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -524,7 +377,8 @@ policy.
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
 notifications, and incidents. To avoid confusion, don't use the same
 display name for multiple policies in the same project. The name is
-limited to 512 Unicode characters.  Structure is documented below.
+limited to 512 Unicode characters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -599,6 +453,7 @@ must begin with a letter.
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
+Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -612,7 +467,8 @@ determine if an incident should be opened.
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
 evaluate to true, then an incident is created. A policy can have from
-one to six conditions.  Structure is documented below.
+one to six conditions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -641,7 +497,8 @@ policy.
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
 notifications, and incidents. To avoid confusion, don't use the same
 display name for multiple policies in the same project. The name is
-limited to 512 Unicode characters.  Structure is documented below.
+limited to 512 Unicode characters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -716,6 +573,7 @@ must begin with a letter.
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
+Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -724,12 +582,13 @@ determine if an incident should be opened.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">List[Alert<wbr>Policy<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#alertpolicycondition">List[Alert<wbr>Policy<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
 evaluate to true, then an incident is created. A policy can have from
-one to six conditions.  Structure is documented below.
+one to six conditions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -753,12 +612,13 @@ policy.
 <a href="#documentation_python" style="color: inherit; text-decoration: inherit;">documentation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Dict[Alert<wbr>Policy<wbr>Documentation]</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
 notifications, and incidents. To avoid confusion, don't use the same
 display name for multiple policies in the same project. The name is
-limited to 512 Unicode characters.  Structure is documented below.
+limited to 512 Unicode characters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -807,7 +667,7 @@ If it is not provided, the provider project is used.
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
 objects.The field can contain up to 64 entries. Each key and value is limited
@@ -978,7 +838,7 @@ policy.
 <a href="#creation_record_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>record</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Dict[Alert<wbr>Policy<wbr>Creation<wbr>Record]</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1030,7 +890,8 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>combiner=None<span class="p">, </span>conditions=None<span class="p">, </span>creation_record=None<span class="p">, </span>display_name=None<span class="p">, </span>documentation=None<span class="p">, </span>enabled=None<span class="p">, </span>name=None<span class="p">, </span>notification_channels=None<span class="p">, </span>project=None<span class="p">, </span>user_labels=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">combiner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[List[AlertPolicyConditionArgs]]</span> = None<span class="p">, </span><span class="nx">creation_record</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyCreationRecordArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">documentation</span><span class="p">:</span> <span class="nx">Optional[AlertPolicyDocumentationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_channels</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> AlertPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1038,7 +899,7 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicy.html">AlertPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicyState.html">AlertPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicy.html">AlertPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicyState.html">AlertPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1154,6 +1015,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
+Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1167,7 +1029,8 @@ determine if an incident should be opened.
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
 evaluate to true, then an incident is created. A policy can have from
-one to six conditions.  Structure is documented below.
+one to six conditions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1208,7 +1071,8 @@ policy.
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
 notifications, and incidents. To avoid confusion, don't use the same
 display name for multiple policies in the same project. The name is
-limited to 512 Unicode characters.  Structure is documented below.
+limited to 512 Unicode characters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1300,6 +1164,7 @@ must begin with a letter.
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
+Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1313,7 +1178,8 @@ determine if an incident should be opened.
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
 evaluate to true, then an incident is created. A policy can have from
-one to six conditions.  Structure is documented below.
+one to six conditions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1354,7 +1220,8 @@ policy.
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
 notifications, and incidents. To avoid confusion, don't use the same
 display name for multiple policies in the same project. The name is
-limited to 512 Unicode characters.  Structure is documented below.
+limited to 512 Unicode characters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1446,6 +1313,7 @@ must begin with a letter.
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
+Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1459,7 +1327,8 @@ determine if an incident should be opened.
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
 evaluate to true, then an incident is created. A policy can have from
-one to six conditions.  Structure is documented below.
+one to six conditions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1500,7 +1369,8 @@ policy.
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
 notifications, and incidents. To avoid confusion, don't use the same
 display name for multiple policies in the same project. The name is
-limited to 512 Unicode characters.  Structure is documented below.
+limited to 512 Unicode characters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1592,6 +1462,7 @@ must begin with a letter.
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
+Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1600,12 +1471,13 @@ determine if an incident should be opened.
 <a href="#state_conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">List[Alert<wbr>Policy<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#alertpolicycondition">List[Alert<wbr>Policy<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
 evaluate to true, then an incident is created. A policy can have from
-one to six conditions.  Structure is documented below.
+one to six conditions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1614,7 +1486,7 @@ one to six conditions.  Structure is documented below.
 <a href="#state_creation_record_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>record</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Dict[Alert<wbr>Policy<wbr>Creation<wbr>Record]</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1641,12 +1513,13 @@ policy.
 <a href="#state_documentation_python" style="color: inherit; text-decoration: inherit;">documentation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Dict[Alert<wbr>Policy<wbr>Documentation]</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards,
 notifications, and incidents. To avoid confusion, don't use the same
 display name for multiple policies in the same project. The name is
-limited to 512 Unicode characters.  Structure is documented below.
+limited to 512 Unicode characters.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1712,7 +1585,7 @@ If it is not provided, the provider project is used.
 <a href="#state_user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy
 objects.The field can contain up to 64 entries. Each key and value is limited
@@ -1778,7 +1651,8 @@ policy.
         <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series
-continues to receive new data points.  Structure is documented below.
+continues to receive new data points.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1790,7 +1664,8 @@ continues to receive new data points.  Structure is documented below.
         <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a
-threshold.  Structure is documented below.
+threshold.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1841,7 +1716,8 @@ policy.
         <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series
-continues to receive new data points.  Structure is documented below.
+continues to receive new data points.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1853,7 +1729,8 @@ continues to receive new data points.  Structure is documented below.
         <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a
-threshold.  Structure is documented below.
+threshold.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1904,7 +1781,8 @@ policy.
         <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series
-continues to receive new data points.  Structure is documented below.
+continues to receive new data points.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1916,7 +1794,8 @@ continues to receive new data points.  Structure is documented below.
         <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a
-threshold.  Structure is documented below.
+threshold.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1960,26 +1839,28 @@ policy.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="conditionabsent_python">
-<a href="#conditionabsent_python" style="color: inherit; text-decoration: inherit;">condition<wbr>Absent</a>
+        <span id="condition_absent_python">
+<a href="#condition_absent_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>absent</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Dict[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that checks that a time series
-continues to receive new data points.  Structure is documented below.
+continues to receive new data points.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="conditionthreshold_python">
-<a href="#conditionthreshold_python" style="color: inherit; text-decoration: inherit;">condition<wbr>Threshold</a>
+        <span id="condition_threshold_python">
+<a href="#condition_threshold_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Dict[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition that compares a time series against a
-threshold.  Structure is documented below.
+threshold.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2069,7 +1950,8 @@ order specified.This field is similar to the
 one in the MetricService.ListTimeSeries
 request. It is advisable to use the
 ListTimeSeries method when debugging this
-field.  Structure is documented below.
+field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2109,7 +1991,8 @@ the condition will trigger if the comparison
 is true for any of the time series that have
 been identified by filter and aggregations,
 or by the ratio, if denominator_filter and
-denominator_aggregations are specified.  Structure is documented below.
+denominator_aggregations are specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2164,7 +2047,8 @@ order specified.This field is similar to the
 one in the MetricService.ListTimeSeries
 request. It is advisable to use the
 ListTimeSeries method when debugging this
-field.  Structure is documented below.
+field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2204,7 +2088,8 @@ the condition will trigger if the comparison
 is true for any of the time series that have
 been identified by filter and aggregations,
 or by the ratio, if denominator_filter and
-denominator_aggregations are specified.  Structure is documented below.
+denominator_aggregations are specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2259,7 +2144,8 @@ order specified.This field is similar to the
 one in the MetricService.ListTimeSeries
 request. It is advisable to use the
 ListTimeSeries method when debugging this
-field.  Structure is documented below.
+field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2299,7 +2185,8 @@ the condition will trigger if the comparison
 is true for any of the time series that have
 been identified by filter and aggregations,
 or by the ratio, if denominator_filter and
-denominator_aggregations are specified.  Structure is documented below.
+denominator_aggregations are specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2340,7 +2227,7 @@ alerted on quickly.
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -2354,7 +2241,8 @@ order specified.This field is similar to the
 one in the MetricService.ListTimeSeries
 request. It is advisable to use the
 ListTimeSeries method when debugging this
-field.  Structure is documented below.
+field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2385,7 +2273,7 @@ in length.
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Dict[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -2394,7 +2282,8 @@ the condition will trigger if the comparison
 is true for any of the time series that have
 been identified by filter and aggregations,
 or by the ratio, if denominator_filter and
-denominator_aggregations are specified.  Structure is documented below.
+denominator_aggregations are specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2471,6 +2360,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2533,6 +2423,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2591,6 +2482,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2653,6 +2545,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2711,6 +2604,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2773,6 +2667,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2784,8 +2679,8 @@ returned.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alignmentperiod_python">
-<a href="#alignmentperiod_python" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
+        <span id="alignment_period_python">
+<a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2808,8 +2703,8 @@ otherwise an error is returned.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crossseriesreducer_python">
-<a href="#crossseriesreducer_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
+        <span id="cross_series_reducer_python">
+<a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2831,12 +2726,13 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupbyfields_python">
-<a href="#groupbyfields_python" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
+        <span id="group_by_fields_python">
+<a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2870,8 +2766,8 @@ ignored.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="perseriesaligner_python">
-<a href="#perseriesaligner_python" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
+        <span id="per_series_aligner_python">
+<a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2893,6 +2789,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3086,6 +2983,7 @@ on each time series, with the time series on
 the left-hand side and the threshold on the
 right-hand side. Only COMPARISON_LT and
 COMPARISON_GT are supported currently.
+Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARISON_LE`, `COMPARISON_EQ`, and `COMPARISON_NE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3133,7 +3031,8 @@ order specified.This field is similar to the
 one in the MetricService.ListTimeSeries
 request. It is advisable to use the
 ListTimeSeries method when debugging this
-field.  Structure is documented below.
+field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3159,7 +3058,8 @@ series that have the same periodicity and
 labels.This field is similar to the one in
 the MetricService.ListTimeSeries request. It
 is advisable to use the ListTimeSeries
-method when debugging this field.  Structure is documented below.
+method when debugging this field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3236,7 +3136,8 @@ the condition will trigger if the comparison
 is true for any of the time series that have
 been identified by filter and aggregations,
 or by the ratio, if denominator_filter and
-denominator_aggregations are specified.  Structure is documented below.
+denominator_aggregations are specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3262,6 +3163,7 @@ on each time series, with the time series on
 the left-hand side and the threshold on the
 right-hand side. Only COMPARISON_LT and
 COMPARISON_GT are supported currently.
+Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARISON_LE`, `COMPARISON_EQ`, and `COMPARISON_NE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3309,7 +3211,8 @@ order specified.This field is similar to the
 one in the MetricService.ListTimeSeries
 request. It is advisable to use the
 ListTimeSeries method when debugging this
-field.  Structure is documented below.
+field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3335,7 +3238,8 @@ series that have the same periodicity and
 labels.This field is similar to the one in
 the MetricService.ListTimeSeries request. It
 is advisable to use the ListTimeSeries
-method when debugging this field.  Structure is documented below.
+method when debugging this field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3412,7 +3316,8 @@ the condition will trigger if the comparison
 is true for any of the time series that have
 been identified by filter and aggregations,
 or by the ratio, if denominator_filter and
-denominator_aggregations are specified.  Structure is documented below.
+denominator_aggregations are specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3438,6 +3343,7 @@ on each time series, with the time series on
 the left-hand side and the threshold on the
 right-hand side. Only COMPARISON_LT and
 COMPARISON_GT are supported currently.
+Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARISON_LE`, `COMPARISON_EQ`, and `COMPARISON_NE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3485,7 +3391,8 @@ order specified.This field is similar to the
 one in the MetricService.ListTimeSeries
 request. It is advisable to use the
 ListTimeSeries method when debugging this
-field.  Structure is documented below.
+field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3511,7 +3418,8 @@ series that have the same periodicity and
 labels.This field is similar to the one in
 the MetricService.ListTimeSeries request. It
 is advisable to use the ListTimeSeries
-method when debugging this field.  Structure is documented below.
+method when debugging this field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3588,7 +3496,8 @@ the condition will trigger if the comparison
 is true for any of the time series that have
 been identified by filter and aggregations,
 or by the ratio, if denominator_filter and
-denominator_aggregations are specified.  Structure is documented below.
+denominator_aggregations are specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3614,6 +3523,7 @@ on each time series, with the time series on
 the left-hand side and the threshold on the
 right-hand side. Only COMPARISON_LT and
 COMPARISON_GT are supported currently.
+Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARISON_LE`, `COMPARISON_EQ`, and `COMPARISON_NE`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3647,7 +3557,7 @@ alerted on quickly.
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series as well as how to
@@ -3661,16 +3571,17 @@ order specified.This field is similar to the
 one in the MetricService.ListTimeSeries
 request. It is advisable to use the
 ListTimeSeries method when debugging this
-field.  Structure is documented below.
+field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="denominatoraggregations_python">
-<a href="#denominatoraggregations_python" style="color: inherit; text-decoration: inherit;">denominator<wbr>Aggregations</a>
+        <span id="denominator_aggregations_python">
+<a href="#denominator_aggregations_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>aggregations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the alignment of data points in
 individual time series selected by
@@ -3687,13 +3598,14 @@ series that have the same periodicity and
 labels.This field is similar to the one in
 the MetricService.ListTimeSeries request. It
 is advisable to use the ListTimeSeries
-method when debugging this field.  Structure is documented below.
+method when debugging this field.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="denominatorfilter_python">
-<a href="#denominatorfilter_python" style="color: inherit; text-decoration: inherit;">denominator<wbr>Filter</a>
+        <span id="denominator_filter_python">
+<a href="#denominator_filter_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3739,8 +3651,8 @@ in length.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thresholdvalue_python">
-<a href="#thresholdvalue_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Value</a>
+        <span id="threshold_value_python">
+<a href="#threshold_value_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3755,7 +3667,7 @@ series.
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Dict[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number/percent of time series for which
 the comparison must hold in order for the
@@ -3764,7 +3676,8 @@ the condition will trigger if the comparison
 is true for any of the time series that have
 been identified by filter and aggregations,
 or by the ratio, if denominator_filter and
-denominator_aggregations are specified.  Structure is documented below.
+denominator_aggregations are specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3841,6 +3754,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3903,6 +3817,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3961,6 +3876,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4023,6 +3939,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4081,6 +3998,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4143,6 +4061,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4154,8 +4073,8 @@ returned.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alignmentperiod_python">
-<a href="#alignmentperiod_python" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
+        <span id="alignment_period_python">
+<a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4178,8 +4097,8 @@ otherwise an error is returned.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crossseriesreducer_python">
-<a href="#crossseriesreducer_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
+        <span id="cross_series_reducer_python">
+<a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4201,12 +4120,13 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupbyfields_python">
-<a href="#groupbyfields_python" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
+        <span id="group_by_fields_python">
+<a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4240,8 +4160,8 @@ ignored.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="perseriesaligner_python">
-<a href="#perseriesaligner_python" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
+        <span id="per_series_aligner_python">
+<a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4263,6 +4183,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4339,6 +4260,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4401,6 +4323,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4459,6 +4382,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4521,6 +4445,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4579,6 +4504,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4641,6 +4567,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4652,8 +4579,8 @@ returned.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alignmentperiod_python">
-<a href="#alignmentperiod_python" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
+        <span id="alignment_period_python">
+<a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4676,8 +4603,8 @@ otherwise an error is returned.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="crossseriesreducer_python">
-<a href="#crossseriesreducer_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
+        <span id="cross_series_reducer_python">
+<a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4699,12 +4626,13 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="groupbyfields_python">
-<a href="#groupbyfields_python" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
+        <span id="group_by_fields_python">
+<a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4738,8 +4666,8 @@ ignored.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="perseriesaligner_python">
-<a href="#perseriesaligner_python" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
+        <span id="per_series_aligner_python">
+<a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4761,6 +4689,7 @@ specified and not equal ALIGN_NONE
 and alignmentPeriod must be
 specified; otherwise, an error is
 returned.
+Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
 
 </dl>
@@ -5021,8 +4950,8 @@ condition to be triggered.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mutatetime_python">
-<a href="#mutatetime_python" style="color: inherit; text-decoration: inherit;">mutate<wbr>Time</a>
+        <span id="mutate_time_python">
+<a href="#mutate_time_python" style="color: inherit; text-decoration: inherit;">mutate_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5031,8 +4960,8 @@ condition to be triggered.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mutatedby_python">
-<a href="#mutatedby_python" style="color: inherit; text-decoration: inherit;">mutated<wbr>By</a>
+        <span id="mutated_by_python">
+<a href="#mutated_by_python" style="color: inherit; text-decoration: inherit;">mutated_<wbr>by</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5179,8 +5108,8 @@ whichever is smaller.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mimetype_python">
-<a href="#mimetype_python" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
+        <span id="mime_type_python">
+<a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5207,6 +5136,6 @@ whichever is smaller.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -19,74 +19,6 @@ To get more information about GlobalAddress, see:
 * How-to Guides
     * [Reserving a Static External IP Address](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Global Address Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = new Gcp.Compute.GlobalAddress("default", new Gcp.Compute.GlobalAddressArgs
-        {
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewGlobalAddress(ctx, "default", nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.GlobalAddress("default")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const defaultGlobalAddress = new gcp.compute.GlobalAddress("default", {});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a GlobalAddress Resource {#create}
@@ -98,7 +30,7 @@ const defaultGlobalAddress = new gcp.compute.GlobalAddress("default", {});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#GlobalAddress">GlobalAddress</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>address=None<span class="p">, </span>address_type=None<span class="p">, </span>description=None<span class="p">, </span>ip_version=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>prefix_length=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.GlobalAddress">GlobalAddress</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -294,6 +226,8 @@ address or omitted to allow GCP to choose a valid one for you.
     <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -316,6 +250,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -396,6 +331,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
 * VPC_PEERING - for peer networks
 This should only be set when using an Internal address.
+Possible values are `VPC_PEERING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -429,6 +365,8 @@ address or omitted to allow GCP to choose a valid one for you.
     <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -451,6 +389,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -531,6 +470,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
 * VPC_PEERING - for peer networks
 This should only be set when using an Internal address.
+Possible values are `VPC_PEERING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -564,6 +504,8 @@ address or omitted to allow GCP to choose a valid one for you.
     <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -586,6 +528,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -666,6 +609,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
 * VPC_PEERING - for peer networks
 This should only be set when using an Internal address.
+Possible values are `VPC_PEERING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -699,6 +643,8 @@ address or omitted to allow GCP to choose a valid one for you.
     <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -721,6 +667,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -729,7 +676,7 @@ address or omitted to allow GCP to choose a valid one for you.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
@@ -801,6 +748,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
 * VPC_PEERING - for peer networks
 This should only be set when using an Internal address.
+Possible values are `VPC_PEERING`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1033,7 +981,8 @@ Get an existing GlobalAddress resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>address_type=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>ip_version=None<span class="p">, </span>label_fingerprint=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>prefix_length=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>self_link=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prefix_length</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GlobalAddress</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1041,7 +990,7 @@ Get an existing GlobalAddress resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalAddress.html">GlobalAddress</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalAddressState.html">GlobalAddressState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalAddress.html">GlobalAddress</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalAddressState.html">GlobalAddressState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1171,6 +1120,8 @@ address or omitted to allow GCP to choose a valid one for you.
     <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1204,6 +1155,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1295,6 +1247,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
 * VPC_PEERING - for peer networks
 This should only be set when using an Internal address.
+Possible values are `VPC_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1339,6 +1292,8 @@ address or omitted to allow GCP to choose a valid one for you.
     <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1372,6 +1327,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1463,6 +1419,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
 * VPC_PEERING - for peer networks
 This should only be set when using an Internal address.
+Possible values are `VPC_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1507,6 +1464,8 @@ address or omitted to allow GCP to choose a valid one for you.
     <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1540,6 +1499,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1631,6 +1591,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
 * VPC_PEERING - for peer networks
 This should only be set when using an Internal address.
+Possible values are `VPC_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1675,6 +1636,8 @@ address or omitted to allow GCP to choose a valid one for you.
     <dd>{{% md %}}The type of the address to reserve.
 * EXTERNAL indicates public/external single IP address.
 * INTERNAL indicates internal IP ranges belonging to some network.
+Default value is `EXTERNAL`.
+Possible values are `EXTERNAL` and `INTERNAL`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1708,6 +1671,7 @@ address or omitted to allow GCP to choose a valid one for you.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IP Version that will be used by this address. The default value is `IPV4`.
+Possible values are `IPV4` and `IPV6`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1727,7 +1691,7 @@ address or omitted to allow GCP to choose a valid one for you.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this address.  A list of key->value pairs.
 {{% /md %}}</dd>
@@ -1799,6 +1763,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The purpose of the resource. For global internal addresses it can be
 * VPC_PEERING - for peer networks
 This should only be set when using an Internal address.
+Possible values are `VPC_PEERING`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1832,6 +1797,6 @@ This should only be set when using an Internal address.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -12,59 +12,6 @@ meta_desc: "Explore the GetDefaultServiceAccount function of the compute module,
 
 Use this data source to retrieve default service account for this project
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = Output.Create(Gcp.Compute.GetDefaultServiceAccount.InvokeAsync());
-        this.DefaultAccount = @default.Apply(@default => @default.Email);
-    }
-
-    [Output("defaultAccount")]
-    public Output<string> DefaultAccount { get; set; }
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.get_default_service_account()
-pulumi.export("defaultAccount", default.email)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const default = gcp.compute.getDefaultServiceAccount({});
-export const defaultAccount = _default.then(_default => _default.email);
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetDefaultServiceAccount {#using}
@@ -78,7 +25,7 @@ export const defaultAccount = _default.then(_default => _default.email);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_default_service_account(</span>project=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_default_service_account(</span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDefaultServiceAccountResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -487,6 +434,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

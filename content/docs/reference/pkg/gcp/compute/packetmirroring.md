@@ -31,7 +31,7 @@ To get more information about PacketMirroring, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#PacketMirroring">PacketMirroring</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>collector_ilb=None<span class="p">, </span>description=None<span class="p">, </span>filter=None<span class="p">, </span>mirrored_resources=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.PacketMirroring">PacketMirroring</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collector_ilb</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringCollectorIlbArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringFilterArgs]</span> = None<span class="p">, </span><span class="nx">mirrored_resources</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringMirroredResourcesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringNetworkArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -214,7 +214,8 @@ The PacketMirroring resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -225,7 +226,8 @@ set to true.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -238,7 +240,8 @@ set to true.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -260,7 +263,8 @@ network. All mirrored subnetworks should belong to the given network.  Structure
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -329,7 +333,8 @@ If it is not provided, the provider region is used.
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -340,7 +345,8 @@ set to true.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -353,7 +359,8 @@ set to true.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -375,7 +382,8 @@ network. All mirrored subnetworks should belong to the given network.  Structure
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -444,7 +452,8 @@ If it is not provided, the provider region is used.
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -455,7 +464,8 @@ set to true.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -468,7 +478,8 @@ set to true.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -490,7 +501,8 @@ network. All mirrored subnetworks should belong to the given network.  Structure
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -554,12 +566,13 @@ If it is not provided, the provider region is used.
 <a href="#collector_ilb_python" style="color: inherit; text-decoration: inherit;">collector_<wbr>ilb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringcollectorilb">Dict[Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb]</a></span>
+        <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -568,9 +581,10 @@ set to true.  Structure is documented below.
 <a href="#mirrored_resources_python" style="color: inherit; text-decoration: inherit;">mirrored_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresources">Dict[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -579,11 +593,12 @@ set to true.  Structure is documented below.
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringnetwork">Dict[Packet<wbr>Mirroring<wbr>Network]</a></span>
+        <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -603,9 +618,10 @@ network. All mirrored subnetworks should belong to the given network.  Structure
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringfilter">Dict[Packet<wbr>Mirroring<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -754,7 +770,8 @@ Get an existing PacketMirroring resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>collector_ilb=None<span class="p">, </span>description=None<span class="p">, </span>filter=None<span class="p">, </span>mirrored_resources=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collector_ilb</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringCollectorIlbArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringFilterArgs]</span> = None<span class="p">, </span><span class="nx">mirrored_resources</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringMirroredResourcesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringNetworkArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PacketMirroring</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -762,7 +779,7 @@ Get an existing PacketMirroring resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PacketMirroring.html">PacketMirroring</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PacketMirroringState.html">PacketMirroringState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PacketMirroring.html">PacketMirroring</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PacketMirroringState.html">PacketMirroringState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -879,7 +896,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -901,7 +919,8 @@ set to true.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -912,7 +931,8 @@ set to true.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -936,7 +956,8 @@ set to true.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -994,7 +1015,8 @@ If it is not provided, the provider region is used.
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1016,7 +1038,8 @@ set to true.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1027,7 +1050,8 @@ set to true.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1051,7 +1075,8 @@ set to true.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1109,7 +1134,8 @@ If it is not provided, the provider region is used.
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1131,7 +1157,8 @@ set to true.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1142,7 +1169,8 @@ set to true.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1166,7 +1194,8 @@ set to true.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1219,12 +1248,13 @@ If it is not provided, the provider region is used.
 <a href="#state_collector_ilb_python" style="color: inherit; text-decoration: inherit;">collector_<wbr>ilb</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringcollectorilb">Dict[Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb]</a></span>
+        <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1244,9 +1274,10 @@ set to true.  Structure is documented below.
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringfilter">Dict[Packet<wbr>Mirroring<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1255,9 +1286,10 @@ set to true.  Structure is documented below.
 <a href="#state_mirrored_resources_python" style="color: inherit; text-decoration: inherit;">mirrored_<wbr>resources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresources">Dict[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1277,11 +1309,12 @@ set to true.  Structure is documented below.
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringnetwork">Dict[Packet<wbr>Mirroring<wbr>Network]</a></span>
+        <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1465,6 +1498,7 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+Each value may be one of `tcp`, `udp`, and `icmp`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1495,6 +1529,7 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+Each value may be one of `tcp`, `udp`, and `icmp`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1525,6 +1560,7 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+Each value may be one of `tcp`, `udp`, and `icmp`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1536,8 +1572,8 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cidrranges_python">
-<a href="#cidrranges_python" style="color: inherit; text-decoration: inherit;">cidr<wbr>Ranges</a>
+        <span id="cidr_ranges_python">
+<a href="#cidr_ranges_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1548,13 +1584,14 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipprotocols_python">
-<a href="#ipprotocols_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
+        <span id="ip_protocols_python">
+<a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+Each value may be one of `tcp`, `udp`, and `icmp`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1590,7 +1627,8 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">List&lt;Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1601,7 +1639,8 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">List&lt;Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1630,7 +1669,8 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">[]Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance</a></span>
     </dt>
-    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1641,7 +1681,8 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">[]Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork</a></span>
     </dt>
-    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1670,7 +1711,8 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance[]</a></span>
     </dt>
-    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1681,7 +1723,8 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork[]</a></span>
     </dt>
-    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1708,9 +1751,10 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">List[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">List[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1719,9 +1763,10 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">List[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">List[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2023,6 +2068,6 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -22,7 +22,7 @@ meta_desc: "Explore the Instance resource of the notebooks module, including exa
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/notebooks/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accelerator_config=None<span class="p">, </span>boot_disk_size_gb=None<span class="p">, </span>boot_disk_type=None<span class="p">, </span>container_image=None<span class="p">, </span>create_time=None<span class="p">, </span>custom_gpu_driver_path=None<span class="p">, </span>data_disk_size_gb=None<span class="p">, </span>data_disk_type=None<span class="p">, </span>disk_encryption=None<span class="p">, </span>install_gpu_driver=None<span class="p">, </span>instance_owners=None<span class="p">, </span>kms_key=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>machine_type=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>no_proxy_access=None<span class="p">, </span>no_public_ip=None<span class="p">, </span>no_remove_data_disk=None<span class="p">, </span>post_startup_script=None<span class="p">, </span>project=None<span class="p">, </span>service_account=None<span class="p">, </span>subnet=None<span class="p">, </span>update_time=None<span class="p">, </span>vm_image=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/notebooks/#pulumi_gcp.notebooks.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_config</span><span class="p">:</span> <span class="nx">Optional[InstanceAcceleratorConfigArgs]</span> = None<span class="p">, </span><span class="nx">boot_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">boot_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_image</span><span class="p">:</span> <span class="nx">Optional[InstanceContainerImageArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_gpu_driver_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">data_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_gpu_driver</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_owners</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_proxy_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_remove_data_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[InstanceVmImageArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -226,7 +226,8 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The hardware accelerator used on this instance. If you use accelerators,
 make sure that your configuration has enough vCPUs and memory to support the
-machineType you have selected.  Structure is documented below.
+machineType you have selected.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -251,6 +252,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -261,7 +263,8 @@ If not specified, this defaults to 100.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -310,6 +313,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -321,6 +325,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
+Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -513,7 +518,8 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -555,7 +561,8 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}The hardware accelerator used on this instance. If you use accelerators,
 make sure that your configuration has enough vCPUs and memory to support the
-machineType you have selected.  Structure is documented below.
+machineType you have selected.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -580,6 +587,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -590,7 +598,8 @@ If not specified, this defaults to 100.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -639,6 +648,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -650,6 +660,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
+Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -842,7 +853,8 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -884,7 +896,8 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}The hardware accelerator used on this instance. If you use accelerators,
 make sure that your configuration has enough vCPUs and memory to support the
-machineType you have selected.  Structure is documented below.
+machineType you have selected.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -909,6 +922,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -919,7 +933,8 @@ If not specified, this defaults to 100.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -968,6 +983,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -979,6 +995,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
+Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1171,7 +1188,8 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1209,11 +1227,12 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
 <a href="#accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceacceleratorconfig">Dict[Instance<wbr>Accelerator<wbr>Config]</a></span>
+        <span class="property-type"><a href="#instanceacceleratorconfig">Instance<wbr>Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hardware accelerator used on this instance. If you use accelerators,
 make sure that your configuration has enough vCPUs and memory to support the
-machineType you have selected.  Structure is documented below.
+machineType you have selected.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1238,6 +1257,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1246,9 +1266,10 @@ If not specified, this defaults to 100.
 <a href="#container_image_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecontainerimage">Dict[Instance<wbr>Container<wbr>Image]</a></span>
+        <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1297,6 +1318,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1308,6 +1330,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
+Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1355,7 +1378,7 @@ Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/crypto
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
@@ -1367,7 +1390,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Custom metadata to apply to this instance.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
@@ -1498,9 +1521,10 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
 <a href="#vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancevmimage">Dict[Instance<wbr>Vm<wbr>Image]</a></span>
+        <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1689,7 +1713,8 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accelerator_config=None<span class="p">, </span>boot_disk_size_gb=None<span class="p">, </span>boot_disk_type=None<span class="p">, </span>container_image=None<span class="p">, </span>create_time=None<span class="p">, </span>custom_gpu_driver_path=None<span class="p">, </span>data_disk_size_gb=None<span class="p">, </span>data_disk_type=None<span class="p">, </span>disk_encryption=None<span class="p">, </span>install_gpu_driver=None<span class="p">, </span>instance_owners=None<span class="p">, </span>kms_key=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>machine_type=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>no_proxy_access=None<span class="p">, </span>no_public_ip=None<span class="p">, </span>no_remove_data_disk=None<span class="p">, </span>post_startup_script=None<span class="p">, </span>project=None<span class="p">, </span>proxy_uri=None<span class="p">, </span>service_account=None<span class="p">, </span>state=None<span class="p">, </span>subnet=None<span class="p">, </span>update_time=None<span class="p">, </span>vm_image=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_config</span><span class="p">:</span> <span class="nx">Optional[InstanceAcceleratorConfigArgs]</span> = None<span class="p">, </span><span class="nx">boot_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">boot_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_image</span><span class="p">:</span> <span class="nx">Optional[InstanceContainerImageArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_gpu_driver_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">data_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">install_gpu_driver</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_owners</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_proxy_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">no_remove_data_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[InstanceVmImageArgs]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1697,7 +1722,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Notebooks.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Notebooks.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Notebooks.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Notebooks.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1813,7 +1838,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The hardware accelerator used on this instance. If you use accelerators,
 make sure that your configuration has enough vCPUs and memory to support the
-machineType you have selected.  Structure is documented below.
+machineType you have selected.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1838,6 +1864,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1848,7 +1875,8 @@ If not specified, this defaults to 100.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1897,6 +1925,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1908,6 +1937,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
+Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2144,7 +2174,8 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2164,7 +2195,8 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}The hardware accelerator used on this instance. If you use accelerators,
 make sure that your configuration has enough vCPUs and memory to support the
-machineType you have selected.  Structure is documented below.
+machineType you have selected.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2189,6 +2221,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2199,7 +2232,8 @@ If not specified, this defaults to 100.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2248,6 +2282,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2259,6 +2294,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
+Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2495,7 +2531,8 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2515,7 +2552,8 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}The hardware accelerator used on this instance. If you use accelerators,
 make sure that your configuration has enough vCPUs and memory to support the
-machineType you have selected.  Structure is documented below.
+machineType you have selected.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2540,6 +2578,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2550,7 +2589,8 @@ If not specified, this defaults to 100.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2599,6 +2639,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2610,6 +2651,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
+Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2846,7 +2888,8 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2862,11 +2905,12 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
 <a href="#state_accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceacceleratorconfig">Dict[Instance<wbr>Accelerator<wbr>Config]</a></span>
+        <span class="property-type"><a href="#instanceacceleratorconfig">Instance<wbr>Accelerator<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hardware accelerator used on this instance. If you use accelerators,
 make sure that your configuration has enough vCPUs and memory to support the
-machineType you have selected.  Structure is documented below.
+machineType you have selected.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2891,6 +2935,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2899,9 +2944,10 @@ If not specified, this defaults to 100.
 <a href="#state_container_image_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancecontainerimage">Dict[Instance<wbr>Container<wbr>Image]</a></span>
+        <span class="property-type"><a href="#instancecontainerimage">Instance<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2950,6 +2996,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
+Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, and `PD_SSD`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2961,6 +3008,7 @@ If not specified, this defaults to 100.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
+Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3008,7 +3056,7 @@ Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/crypto
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
@@ -3042,7 +3090,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Custom metadata to apply to this instance.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
@@ -3195,9 +3243,10 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
 <a href="#state_vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancevmimage">Dict[Instance<wbr>Vm<wbr>Image]</a></span>
+        <span class="property-type"><a href="#instancevmimage">Instance<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3253,6 +3302,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.
+Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `TPU_V2`, and `TPU_V3`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3282,6 +3332,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.
+Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `TPU_V2`, and `TPU_V3`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3311,6 +3362,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.
+Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `TPU_V2`, and `TPU_V3`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3322,8 +3374,8 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
 
     <dt class="property-required"
             title="Required">
-        <span id="corecount_python">
-<a href="#corecount_python" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
+        <span id="core_count_python">
+<a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3340,6 +3392,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of this accelerator.
+Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `TPU_V2`, and `TPU_V3`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3642,8 +3695,8 @@ Format: projects/{project_id}
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imagefamily_python">
-<a href="#imagefamily_python" style="color: inherit; text-decoration: inherit;">image<wbr>Family</a>
+        <span id="image_family_python">
+<a href="#image_family_python" style="color: inherit; text-decoration: inherit;">image_<wbr>family</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3653,8 +3706,8 @@ Format: projects/{project_id}
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imagename_python">
-<a href="#imagename_python" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
+        <span id="image_name_python">
+<a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3680,6 +3733,6 @@ Format: projects/{project_id}
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

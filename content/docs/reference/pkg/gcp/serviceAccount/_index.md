@@ -22,6 +22,7 @@ Explore the resources and functions of the serviceAccount module in the GCP pack
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getaccountaccesstoken" title="GetAccountAccessToken"><span class="symbol function"></span>GetAccountAccessToken</a></li>
+    <li><a href="getaccountidtoken" title="GetAccountIdToken"><span class="symbol function"></span>GetAccountIdToken</a></li>
     <li><a href="getaccountkey" title="GetAccountKey"><span class="symbol function"></span>GetAccountKey</a></li>
 </ul>
 
@@ -32,9 +33,9 @@ Explore the resources and functions of the serviceAccount module in the GCP pack
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
+	<dd>3.21.0</dd>
 </dl>
 
 
@@ -45,10 +46,10 @@ Explore the resources and functions of the serviceAccount module in the GCP pack
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ServiceAccount.html" title="Pulumi.Gcp.ServiceAccount">Pulumi.Gcp.ServiceAccount</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount?tab=doc#" title="gcp/serviceAccount">gcp/serviceAccount</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceaccount?tab=doc#" title="gcp/serviceaccount">gcp/serviceaccount</a></dd>
 
     <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/serviceAccount/#" title="@pulumi/gcp/serviceAccount">@pulumi/gcp/serviceAccount</a></dd>
+    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/serviceAccount/#" title="@pulumi/gcp/serviceaccount">@pulumi/gcp/serviceaccount</a></dd>
 
     <dt>Python</dt>
     <dd><a href="/docs/reference/pkg/python/pulumi_gcp/serviceaccount" title="pulumi_gcp/serviceaccount">pulumi_gcp/serviceaccount</a></dd>

@@ -18,103 +18,6 @@ special service account can be used to set up `gcp.storage.Notification` resourc
 For more information see
 [the API reference](https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount).
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var gcsAccount = Output.Create(Gcp.Storage.GetProjectServiceAccount.InvokeAsync());
-        var binding = new Gcp.PubSub.TopicIAMBinding("binding", new Gcp.PubSub.TopicIAMBindingArgs
-        {
-            Topic = google_pubsub_topic.Topic.Name,
-            Role = "roles/pubsub.publisher",
-            Members = 
-            {
-                gcsAccount.Apply(gcsAccount => $"serviceAccount:{gcsAccount.EmailAddress}"),
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"fmt"
-
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		gcsAccount, err := storage.GetProjectServiceAccount(ctx, nil, nil)
-		if err != nil {
-			return err
-		}
-		_, err = pubsub.NewTopicIAMBinding(ctx, "binding", &pubsub.TopicIAMBindingArgs{
-			Topic: pulumi.String(google_pubsub_topic.Topic.Name),
-			Role:  pulumi.String("roles/pubsub.publisher"),
-			Members: pulumi.StringArray{
-				pulumi.String(fmt.Sprintf("%v%v", "serviceAccount:", gcsAccount.EmailAddress)),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-gcs_account = gcp.storage.get_project_service_account()
-binding = gcp.pubsub.TopicIAMBinding("binding",
-    topic=google_pubsub_topic["topic"]["name"],
-    role="roles/pubsub.publisher",
-    members=[f"serviceAccount:{gcs_account.email_address}"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const gcsAccount = gcp.storage.getProjectServiceAccount({});
-const binding = new gcp.pubsub.TopicIAMBinding("binding", {
-    topic: google_pubsub_topic.topic.name,
-    role: "roles/pubsub.publisher",
-    members: [gcsAccount.then(gcsAccount => `serviceAccount:${gcsAccount.emailAddress}`)],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetProjectServiceAccount {#using}
@@ -128,7 +31,7 @@ const binding = new gcp.pubsub.TopicIAMBinding("binding", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_project_service_account(</span>project=None<span class="p">, </span>user_project=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_project_service_account(</span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectServiceAccountResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -497,6 +400,6 @@ in order to grant IAM permissions.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

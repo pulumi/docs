@@ -29,7 +29,7 @@ To get more information about GameServerConfig, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/gameservices/#GameServerConfig">GameServerConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>config_id=None<span class="p">, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>fleet_configs=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>scaling_configs=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/gameservices/#pulumi_gcp.gameservices.GameServerConfig">GameServerConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_configs</span><span class="p">:</span> <span class="nx">Optional[List[GameServerConfigFleetConfigArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_configs</span><span class="p">:</span> <span class="nx">Optional[List[GameServerConfigScalingConfigArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -232,7 +232,8 @@ The GameServerConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#gameserverconfigfleetconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
-will be only one.  Structure is documented below.
+will be only one.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -288,7 +289,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -329,7 +331,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
-will be only one.  Structure is documented below.
+will be only one.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -385,7 +388,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -426,7 +430,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
-will be only one.  Structure is documented below.
+will be only one.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -482,7 +487,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -520,10 +526,11 @@ If it is not provided, the provider project is used.
 <a href="#fleet_configs_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">List[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config]</a></span>
+        <span class="property-type"><a href="#gameserverconfigfleetconfig">List[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
-will be only one.  Structure is documented below.
+will be only one.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -543,7 +550,7 @@ will be only one.  Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
@@ -577,9 +584,10 @@ If it is not provided, the provider project is used.
 <a href="#scaling_configs_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -724,7 +732,8 @@ Get an existing GameServerConfig resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>config_id=None<span class="p">, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>fleet_configs=None<span class="p">, </span>labels=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>scaling_configs=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_configs</span><span class="p">:</span> <span class="nx">Optional[List[GameServerConfigFleetConfigArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_configs</span><span class="p">:</span> <span class="nx">Optional[List[GameServerConfigScalingConfigArgs]]</span> = None<span class="p">) -&gt;</span> GameServerConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -732,7 +741,7 @@ Get an existing GameServerConfig resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfig.html">GameServerConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfigState.html">GameServerConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfig.html">GameServerConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfigState.html">GameServerConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -880,7 +889,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gameserverconfigfleetconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
-will be only one.  Structure is documented below.
+will be only one.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -936,7 +946,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -988,7 +999,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
-will be only one.  Structure is documented below.
+will be only one.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1044,7 +1056,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1096,7 +1109,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
-will be only one.  Structure is documented below.
+will be only one.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1152,7 +1166,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1201,10 +1216,11 @@ If it is not provided, the provider project is used.
 <a href="#state_fleet_configs_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">List[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config]</a></span>
+        <span class="property-type"><a href="#gameserverconfigfleetconfig">List[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
-will be only one.  Structure is documented below.
+will be only one.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1213,7 +1229,7 @@ will be only one.  Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
@@ -1258,9 +1274,10 @@ If it is not provided, the provider project is used.
 <a href="#state_scaling_configs_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.  Structure is documented below.
+    <dd>{{% md %}}Optional. This contains the autoscaling settings.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1403,8 +1420,8 @@ The format of the spec can be found :
 
     <dt class="property-required"
             title="Required">
-        <span id="fleetspec_python">
-<a href="#fleetspec_python" style="color: inherit; text-decoration: inherit;">fleet<wbr>Spec</a>
+        <span id="fleet_spec_python">
+<a href="#fleet_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1486,7 +1503,8 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The schedules to which this scaling config applies.  Structure is documented below.
+    <dd>{{% md %}}The schedules to which this scaling config applies.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1499,7 +1517,8 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
     </dt>
     <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
 applies. A cluster is subject to this scaling config if its labels match
-any of the selector entries.  Structure is documented below.
+any of the selector entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1541,7 +1560,8 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}The schedules to which this scaling config applies.  Structure is documented below.
+    <dd>{{% md %}}The schedules to which this scaling config applies.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1554,7 +1574,8 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
     </dt>
     <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
 applies. A cluster is subject to this scaling config if its labels match
-any of the selector entries.  Structure is documented below.
+any of the selector entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1596,7 +1617,8 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}The schedules to which this scaling config applies.  Structure is documented below.
+    <dd>{{% md %}}The schedules to which this scaling config applies.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1609,7 +1631,8 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
     </dt>
     <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
 applies. A cluster is subject to this scaling config if its labels match
-any of the selector entries.  Structure is documented below.
+any of the selector entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1621,8 +1644,8 @@ any of the selector entries.  Structure is documented below.
 
     <dt class="property-required"
             title="Required">
-        <span id="fleetautoscalerspec_python">
-<a href="#fleetautoscalerspec_python" style="color: inherit; text-decoration: inherit;">fleet<wbr>Autoscaler<wbr>Spec</a>
+        <span id="fleet_autoscaler_spec_python">
+<a href="#fleet_autoscaler_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>autoscaler_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1649,9 +1672,10 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The schedules to which this scaling config applies.  Structure is documented below.
+    <dd>{{% md %}}The schedules to which this scaling config applies.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1660,11 +1684,12 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
 <a href="#selectors_python" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
 applies. A cluster is subject to this scaling config if its labels match
-any of the selector entries.  Structure is documented below.
+any of the selector entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1865,8 +1890,8 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cronjobduration_python">
-<a href="#cronjobduration_python" style="color: inherit; text-decoration: inherit;">cron<wbr>Job<wbr>Duration</a>
+        <span id="cron_job_duration_python">
+<a href="#cron_job_duration_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>job_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1878,8 +1903,8 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cronspec_python">
-<a href="#cronspec_python" style="color: inherit; text-decoration: inherit;">cron<wbr>Spec</a>
+        <span id="cron_spec_python">
+<a href="#cron_spec_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>spec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1891,8 +1916,8 @@ defined by the realm.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endtime_python">
-<a href="#endtime_python" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1903,8 +1928,8 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 
     <dt class="property-optional"
             title="Optional">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1998,7 +2023,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
@@ -2021,6 +2046,6 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

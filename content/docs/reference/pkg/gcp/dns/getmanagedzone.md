@@ -16,89 +16,6 @@ For more information see
 and
 [API](https://cloud.google.com/dns/api/v1/managedZones).
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const envDnsZone = gcp.dns.getManagedZone({
-    name: "qa-zone",
-});
-const dns = new gcp.dns.RecordSet("dns", {
-    type: "TXT",
-    ttl: 300,
-    managedZone: envDnsZone.then(envDnsZone => envDnsZone.name),
-    rrdatas: ["test"],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-env_dns_zone = gcp.dns.get_managed_zone(name="qa-zone")
-dns = gcp.dns.RecordSet("dns",
-    type="TXT",
-    ttl=300,
-    managed_zone=env_dns_zone.name,
-    rrdatas=["test"])
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var envDnsZone = Output.Create(Gcp.Dns.GetManagedZone.InvokeAsync(new Gcp.Dns.GetManagedZoneArgs
-        {
-            Name = "qa-zone",
-        }));
-        var dns = new Gcp.Dns.RecordSet("dns", new Gcp.Dns.RecordSetArgs
-        {
-            Type = "TXT",
-            Ttl = 300,
-            ManagedZone = envDnsZone.Apply(envDnsZone => envDnsZone.Name),
-            Rrdatas = 
-            {
-                "test",
-            },
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dns"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		envDnsZone, err := dns.LookupManagedZone(ctx, &dns.LookupManagedZoneArgs{
-			Name: "qa-zone",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		_, err = dns.NewRecordSet(ctx, "dns", &dns.RecordSetArgs{
-			Type:        pulumi.String("TXT"),
-			Ttl:         pulumi.Int(300),
-			ManagedZone: pulumi.String(envDnsZone.Name),
-			Rrdatas: pulumi.StringArray{
-				pulumi.String("test"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
 
 
 ## Using GetManagedZone {#using}
@@ -112,7 +29,7 @@ func main() {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_managed_zone(</span>name=None<span class="p">, </span>project=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_managed_zone(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetManagedZoneResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -619,6 +536,6 @@ while private zones are visible only to Virtual Private Cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

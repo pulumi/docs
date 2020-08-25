@@ -19,131 +19,6 @@ To get more information about AccessLevel, see:
 * How-to Guides
     * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Access Context Manager Access Level Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var access_policy = new Gcp.AccessContextManager.AccessPolicy("access-policy", new Gcp.AccessContextManager.AccessPolicyArgs
-        {
-            Parent = "organizations/123456789",
-            Title = "my policy",
-        });
-        var access_level = new Gcp.AccessContextManager.AccessLevel("access-level", new Gcp.AccessContextManager.AccessLevelArgs
-        {
-            Basic = new Gcp.AccessContextManager.Inputs.AccessLevelBasicArgs
-            {
-                Conditions = 
-                {
-                    new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionArgs
-                    {
-                        DevicePolicy = new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyArgs
-                        {
-                            OsConstraints = 
-                            {
-                                new Gcp.AccessContextManager.Inputs.AccessLevelBasicConditionDevicePolicyOsConstraintArgs
-                                {
-                                    OsType = "DESKTOP_CHROME_OS",
-                                },
-                            },
-                            RequireScreenLock = true,
-                        },
-                        Regions = 
-                        {
-                            "CH",
-                            "IT",
-                            "US",
-                        },
-                    },
-                },
-            },
-            Parent = access_policy.Name.Apply(name => $"accessPolicies/{name}"),
-            Title = "chromeos_no_lock",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
-    parent="organizations/123456789",
-    title="my policy")
-access_level = gcp.accesscontextmanager.AccessLevel("access-level",
-    basic={
-        "conditions": [{
-            "devicePolicy": {
-                "osConstraints": [{
-                    "osType": "DESKTOP_CHROME_OS",
-                }],
-                "requireScreenLock": True,
-            },
-            "regions": [
-                "CH",
-                "IT",
-                "US",
-            ],
-        }],
-    },
-    parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
-    title="chromeos_no_lock")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
-    parent: "organizations/123456789",
-    title: "my policy",
-});
-const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
-    basic: {
-        conditions: [{
-            devicePolicy: {
-                osConstraints: [{
-                    osType: "DESKTOP_CHROME_OS",
-                }],
-                requireScreenLock: true,
-            },
-            regions: [
-                "CH",
-                "IT",
-                "US",
-            ],
-        }],
-    },
-    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
-    title: "chromeos_no_lock",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a AccessLevel Resource {#create}
@@ -155,7 +30,7 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager/#AccessLevel">AccessLevel</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic=None<span class="p">, </span>custom=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>title=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager/#pulumi_gcp.accesscontextmanager.AccessLevel">AccessLevel</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic</span><span class="p">:</span> <span class="nx">Optional[AccessLevelBasicArgs]</span> = None<span class="p">, </span><span class="nx">custom</span><span class="p">:</span> <span class="nx">Optional[AccessLevelCustomArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -358,7 +233,8 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -370,7 +246,8 @@ Format: accessPolicies/{policy_id}
         <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
-See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+See CEL spec at: https://github.com/google/cel-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -435,7 +312,8 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -447,7 +325,8 @@ Format: accessPolicies/{policy_id}
         <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom</a></span>
     </dt>
     <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
-See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+See CEL spec at: https://github.com/google/cel-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,7 +391,8 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -524,7 +404,8 @@ Format: accessPolicies/{policy_id}
         <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom</a></span>
     </dt>
     <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
-See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+See CEL spec at: https://github.com/google/cel-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -587,9 +468,10 @@ Format: accessPolicies/{policy_id}
 <a href="#basic_python" style="color: inherit; text-decoration: inherit;">basic</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelbasic">Dict[Access<wbr>Level<wbr>Basic]</a></span>
+        <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -598,10 +480,11 @@ Format: accessPolicies/{policy_id}
 <a href="#custom_python" style="color: inherit; text-decoration: inherit;">custom</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelcustom">Dict[Access<wbr>Level<wbr>Custom]</a></span>
+        <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
-See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+See CEL spec at: https://github.com/google/cel-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -726,7 +609,8 @@ Get an existing AccessLevel resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>basic=None<span class="p">, </span>custom=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>title=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic</span><span class="p">:</span> <span class="nx">Optional[AccessLevelBasicArgs]</span> = None<span class="p">, </span><span class="nx">custom</span><span class="p">:</span> <span class="nx">Optional[AccessLevelCustomArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessLevel</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -734,7 +618,7 @@ Get an existing AccessLevel resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.AccessLevel.html">AccessLevel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.AccessLevelState.html">AccessLevelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.AccessLevel.html">AccessLevel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.AccessLevelState.html">AccessLevelState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -848,7 +732,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -860,7 +745,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
-See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+See CEL spec at: https://github.com/google/cel-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -925,7 +811,8 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -937,7 +824,8 @@ Format: accessPolicies/{policy_id}
         <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom</a></span>
     </dt>
     <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
-See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+See CEL spec at: https://github.com/google/cel-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1002,7 +890,8 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1014,7 +903,8 @@ Format: accessPolicies/{policy_id}
         <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom</a></span>
     </dt>
     <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
-See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+See CEL spec at: https://github.com/google/cel-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1077,9 +967,10 @@ Format: accessPolicies/{policy_id}
 <a href="#state_basic_python" style="color: inherit; text-decoration: inherit;">basic</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelbasic">Dict[Access<wbr>Level<wbr>Basic]</a></span>
+        <span class="property-type"><a href="#accesslevelbasic">Access<wbr>Level<wbr>Basic<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.  Structure is documented below.
+    <dd>{{% md %}}A set of predefined conditions for the access level and a combining function.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1088,10 +979,11 @@ Format: accessPolicies/{policy_id}
 <a href="#state_custom_python" style="color: inherit; text-decoration: inherit;">custom</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelcustom">Dict[Access<wbr>Level<wbr>Custom]</a></span>
+        <span class="property-type"><a href="#accesslevelcustom">Access<wbr>Level<wbr>Custom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
-See CEL spec at: https://github.com/google/cel-spec.  Structure is documented below.
+See CEL spec at: https://github.com/google/cel-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1182,7 +1074,8 @@ Format: accessPolicies/{policy_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasiccondition">List&lt;Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.  Structure is documented below.
+    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1198,6 +1091,8 @@ is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
 for the AccessLevel to be applied.
+Default value is `AND`.
+Possible values are `AND` and `OR`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1215,7 +1110,8 @@ for the AccessLevel to be applied.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasiccondition">[]Access<wbr>Level<wbr>Basic<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.  Structure is documented below.
+    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1231,6 +1127,8 @@ is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
 for the AccessLevel to be applied.
+Default value is `AND`.
+Possible values are `AND` and `OR`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1248,7 +1146,8 @@ for the AccessLevel to be applied.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesslevelbasiccondition">Access<wbr>Level<wbr>Basic<wbr>Condition[]</a></span>
     </dt>
-    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.  Structure is documented below.
+    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1264,6 +1163,8 @@ is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
 for the AccessLevel to be applied.
+Default value is `AND`.
+Possible values are `AND` and `OR`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1279,15 +1180,16 @@ for the AccessLevel to be applied.
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelbasiccondition">List[Access<wbr>Level<wbr>Basic<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#accesslevelbasiccondition">List[Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.  Structure is documented below.
+    <dd>{{% md %}}A set of requirements for the AccessLevel to be granted.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="combiningfunction_python">
-<a href="#combiningfunction_python" style="color: inherit; text-decoration: inherit;">combining<wbr>Function</a>
+        <span id="combining_function_python">
+<a href="#combining_function_python" style="color: inherit; text-decoration: inherit;">combining_<wbr>function</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1297,6 +1199,8 @@ is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
 for the AccessLevel to be applied.
+Default value is `AND`.
+Possible values are `AND` and `OR`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1334,7 +1238,8 @@ for the AccessLevel to be applied.
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
-allowed.  Structure is documented below.
+allowed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1432,7 +1337,8 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
-allowed.  Structure is documented below.
+allowed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1530,7 +1436,8 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
-allowed.  Structure is documented below.
+allowed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1620,21 +1527,22 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
     <dt class="property-optional"
             title="Optional">
-        <span id="devicepolicy_python">
-<a href="#devicepolicy_python" style="color: inherit; text-decoration: inherit;">device<wbr>Policy</a>
+        <span id="device_policy_python">
+<a href="#device_policy_python" style="color: inherit; text-decoration: inherit;">device_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicy">Dict[Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicy">Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
-allowed.  Structure is documented below.
+allowed.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipsubnetworks_python">
-<a href="#ipsubnetworks_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Subnetworks</a>
+        <span id="ip_subnetworks_python">
+<a href="#ip_subnetworks_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>subnetworks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1696,8 +1604,8 @@ Format: A valid ISO 3166-1 alpha-2 code.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requiredaccesslevels_python">
-<a href="#requiredaccesslevels_python" style="color: inherit; text-decoration: inherit;">required<wbr>Access<wbr>Levels</a>
+        <span id="required_access_levels_python">
+<a href="#required_access_levels_python" style="color: inherit; text-decoration: inherit;">required_<wbr>access_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1744,6 +1652,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
     </dt>
     <dd>{{% md %}}A list of allowed device management levels.
 An empty list allows all management levels.
+Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1756,6 +1665,7 @@ An empty list allows all management levels.
     </dt>
     <dd>{{% md %}}A list of allowed encryptions statuses.
 An empty list allows all statuses.
+Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1767,7 +1677,8 @@ An empty list allows all statuses.
         <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicyosconstraint">List&lt;Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed OS versions.
-An empty list allows all types and all versions.  Structure is documented below.
+An empty list allows all types and all versions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1821,6 +1732,7 @@ to be true. Defaults to false.
     </dt>
     <dd>{{% md %}}A list of allowed device management levels.
 An empty list allows all management levels.
+Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1833,6 +1745,7 @@ An empty list allows all management levels.
     </dt>
     <dd>{{% md %}}A list of allowed encryptions statuses.
 An empty list allows all statuses.
+Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1844,7 +1757,8 @@ An empty list allows all statuses.
         <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicyosconstraint">[]Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed OS versions.
-An empty list allows all types and all versions.  Structure is documented below.
+An empty list allows all types and all versions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1898,6 +1812,7 @@ to be true. Defaults to false.
     </dt>
     <dd>{{% md %}}A list of allowed device management levels.
 An empty list allows all management levels.
+Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1910,6 +1825,7 @@ An empty list allows all management levels.
     </dt>
     <dd>{{% md %}}A list of allowed encryptions statuses.
 An empty list allows all statuses.
+Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1921,7 +1837,8 @@ An empty list allows all statuses.
         <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicyosconstraint">Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint[]</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed OS versions.
-An empty list allows all types and all versions.  Structure is documented below.
+An empty list allows all types and all versions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1967,44 +1884,47 @@ to be true. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alloweddevicemanagementlevels_python">
-<a href="#alloweddevicemanagementlevels_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Device<wbr>Management<wbr>Levels</a>
+        <span id="allowed_device_management_levels_python">
+<a href="#allowed_device_management_levels_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>device_<wbr>management_<wbr>levels</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed device management levels.
 An empty list allows all management levels.
+Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedencryptionstatuses_python">
-<a href="#allowedencryptionstatuses_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Encryption<wbr>Statuses</a>
+        <span id="allowed_encryption_statuses_python">
+<a href="#allowed_encryption_statuses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>encryption_<wbr>statuses</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed encryptions statuses.
 An empty list allows all statuses.
+Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="osconstraints_python">
-<a href="#osconstraints_python" style="color: inherit; text-decoration: inherit;">os<wbr>Constraints</a>
+        <span id="os_constraints_python">
+<a href="#os_constraints_python" style="color: inherit; text-decoration: inherit;">os_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicyosconstraint">List[Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#accesslevelbasicconditiondevicepolicyosconstraint">List[Access<wbr>Level<wbr>Basic<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of allowed OS versions.
-An empty list allows all types and all versions.  Structure is documented below.
+An empty list allows all types and all versions.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requireadminapproval_python">
-<a href="#requireadminapproval_python" style="color: inherit; text-decoration: inherit;">require<wbr>Admin<wbr>Approval</a>
+        <span id="require_admin_approval_python">
+<a href="#require_admin_approval_python" style="color: inherit; text-decoration: inherit;">require_<wbr>admin_<wbr>approval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2014,8 +1934,8 @@ An empty list allows all types and all versions.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requirecorpowned_python">
-<a href="#requirecorpowned_python" style="color: inherit; text-decoration: inherit;">require<wbr>Corp<wbr>Owned</a>
+        <span id="require_corp_owned_python">
+<a href="#require_corp_owned_python" style="color: inherit; text-decoration: inherit;">require_<wbr>corp_<wbr>owned</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2025,8 +1945,8 @@ An empty list allows all types and all versions.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requirescreenlock_python">
-<a href="#requirescreenlock_python" style="color: inherit; text-decoration: inherit;">require<wbr>Screen<wbr>Lock</a>
+        <span id="require_screen_lock_python">
+<a href="#require_screen_lock_python" style="color: inherit; text-decoration: inherit;">require_<wbr>screen_<wbr>lock</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2069,6 +1989,7 @@ to be true. Defaults to false.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The operating system type of the device.
+Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, and `DESKTOP_CHROME_OS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2100,6 +2021,7 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The operating system type of the device.
+Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, and `DESKTOP_CHROME_OS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2131,6 +2053,7 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The operating system type of the device.
+Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, and `DESKTOP_CHROME_OS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2155,19 +2078,20 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
 
     <dt class="property-required"
             title="Required">
-        <span id="ostype_python">
-<a href="#ostype_python" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The operating system type of the device.
+Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, and `DESKTOP_CHROME_OS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minimumversion_python">
-<a href="#minimumversion_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Version</a>
+        <span id="minimum_version_python">
+<a href="#minimum_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2212,7 +2136,8 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
     </dt>
     <dd>{{% md %}}Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
 This page details the objects and attributes that are used to the build the CEL expressions for
-custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.  Structure is documented below.
+custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2232,7 +2157,8 @@ custom access levels - https://cloud.google.com/access-context-manager/docs/cust
     </dt>
     <dd>{{% md %}}Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
 This page details the objects and attributes that are used to the build the CEL expressions for
-custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.  Structure is documented below.
+custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2252,7 +2178,8 @@ custom access levels - https://cloud.google.com/access-context-manager/docs/cust
     </dt>
     <dd>{{% md %}}Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
 This page details the objects and attributes that are used to the build the CEL expressions for
-custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.  Structure is documented below.
+custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2268,11 +2195,12 @@ custom access levels - https://cloud.google.com/access-context-manager/docs/cust
 <a href="#expr_python" style="color: inherit; text-decoration: inherit;">expr</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesslevelcustomexpr">Dict[Access<wbr>Level<wbr>Custom<wbr>Expr]</a></span>
+        <span class="property-type"><a href="#accesslevelcustomexpr">Access<wbr>Level<wbr>Custom<wbr>Expr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
 This page details the objects and attributes that are used to the build the CEL expressions for
-custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.  Structure is documented below.
+custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2515,6 +2443,6 @@ custom access levels - https://cloud.google.com/access-context-manager/docs/cust
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

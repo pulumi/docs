@@ -53,6 +53,9 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="networkpeeringroutesconfig" title="NetworkPeeringRoutesConfig"><span class="symbol resource"></span>NetworkPeeringRoutesConfig</a></li>
     <li><a href="nodegroup" title="NodeGroup"><span class="symbol resource"></span>NodeGroup</a></li>
     <li><a href="nodetemplate" title="NodeTemplate"><span class="symbol resource"></span>NodeTemplate</a></li>
+    <li><a href="organizationsecuritypolicy" title="OrganizationSecurityPolicy"><span class="symbol resource"></span>OrganizationSecurityPolicy</a></li>
+    <li><a href="organizationsecuritypolicyassociation" title="OrganizationSecurityPolicyAssociation"><span class="symbol resource"></span>OrganizationSecurityPolicyAssociation</a></li>
+    <li><a href="organizationsecuritypolicyrule" title="OrganizationSecurityPolicyRule"><span class="symbol resource"></span>OrganizationSecurityPolicyRule</a></li>
     <li><a href="packetmirroring" title="PacketMirroring"><span class="symbol resource"></span>PacketMirroring</a></li>
     <li><a href="perinstanceconfig" title="PerInstanceConfig"><span class="symbol resource"></span>PerInstanceConfig</a></li>
     <li><a href="projectdefaultnetworktier" title="ProjectDefaultNetworkTier"><span class="symbol resource"></span>ProjectDefaultNetworkTier</a></li>
@@ -64,6 +67,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="regiondiskresourcepolicyattachment" title="RegionDiskResourcePolicyAttachment"><span class="symbol resource"></span>RegionDiskResourcePolicyAttachment</a></li>
     <li><a href="regionhealthcheck" title="RegionHealthCheck"><span class="symbol resource"></span>RegionHealthCheck</a></li>
     <li><a href="regioninstancegroupmanager" title="RegionInstanceGroupManager"><span class="symbol resource"></span>RegionInstanceGroupManager</a></li>
+    <li><a href="regionnetworkendpointgroup" title="RegionNetworkEndpointGroup"><span class="symbol resource"></span>RegionNetworkEndpointGroup</a></li>
     <li><a href="regionperinstanceconfig" title="RegionPerInstanceConfig"><span class="symbol resource"></span>RegionPerInstanceConfig</a></li>
     <li><a href="regionsslcertificate" title="RegionSslCertificate"><span class="symbol resource"></span>RegionSslCertificate</a></li>
     <li><a href="regiontargethttpproxy" title="RegionTargetHttpProxy"><span class="symbol resource"></span>RegionTargetHttpProxy</a></li>
@@ -133,9 +137,9 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
+	<dd>3.21.0</dd>
 </dl>
 
 

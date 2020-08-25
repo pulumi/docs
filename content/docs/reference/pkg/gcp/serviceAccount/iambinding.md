@@ -22,489 +22,6 @@ Three different resources help you manage your IAM policy for a service account.
 
 > **Note:** `gcp.serviceAccount.IAMBinding` resources **can be** used in conjunction with `gcp.serviceAccount.IAMMember` resources **only if** they do not grant privilege to the same role.
 
-## google\_service\_account\_iam\_policy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const admin = gcp.organizations.getIAMPolicy({
-    binding: [{
-        role: "roles/iam.serviceAccountUser",
-        members: ["user:jane@example.com"],
-    }],
-});
-const sa = new gcp.serviceAccount.Account("sa", {
-    accountId: "my-service-account",
-    displayName: "A service account that only Jane can interact with",
-});
-const admin_account_iam = new gcp.serviceAccount.IAMPolicy("admin-account-iam", {
-    serviceAccountId: sa.name,
-    policyData: admin.then(admin => admin.policyData),
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-admin = gcp.organizations.get_iam_policy(binding=[{
-    "role": "roles/iam.serviceAccountUser",
-    "members": ["user:jane@example.com"],
-}])
-sa = gcp.service_account.Account("sa",
-    account_id="my-service-account",
-    display_name="A service account that only Jane can interact with")
-admin_account_iam = gcp.service_account.IAMPolicy("admin-account-iam",
-    service_account_id=sa.name,
-    policy_data=admin.policy_data)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
-        {
-            Binding = 
-            {
-                
-                {
-                    { "role", "roles/iam.serviceAccountUser" },
-                    { "members", 
-                    {
-                        "user:jane@example.com",
-                    } },
-                },
-            },
-        }));
-        var sa = new Gcp.ServiceAccount.Account("sa", new Gcp.ServiceAccount.AccountArgs
-        {
-            AccountId = "my-service-account",
-            DisplayName = "A service account that only Jane can interact with",
-        });
-        var admin_account_iam = new Gcp.ServiceAccount.IAMPolicy("admin-account-iam", new Gcp.ServiceAccount.IAMPolicyArgs
-        {
-            ServiceAccountId = sa.Name,
-            PolicyData = admin.Apply(admin => admin.PolicyData),
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
-			Binding: []map[string]interface{}{
-				map[string]interface{}{
-					"role": "roles/iam.serviceAccountUser",
-					"members": []string{
-						"user:jane@example.com",
-					},
-				},
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
-		sa, err := serviceAccount.NewAccount(ctx, "sa", &serviceAccount.AccountArgs{
-			AccountId:   pulumi.String("my-service-account"),
-			DisplayName: pulumi.String("A service account that only Jane can interact with"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = serviceAccount.NewIAMPolicy(ctx, "admin-account-iam", &serviceAccount.IAMPolicyArgs{
-			ServiceAccountId: sa.Name,
-			PolicyData:       pulumi.String(admin.PolicyData),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## google\_service\_account\_iam\_binding
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const sa = new gcp.serviceAccount.Account("sa", {
-    accountId: "my-service-account",
-    displayName: "A service account that only Jane can use",
-});
-const admin_account_iam = new gcp.serviceAccount.IAMBinding("admin-account-iam", {
-    serviceAccountId: sa.name,
-    role: "roles/iam.serviceAccountUser",
-    members: ["user:jane@example.com"],
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-sa = gcp.service_account.Account("sa",
-    account_id="my-service-account",
-    display_name="A service account that only Jane can use")
-admin_account_iam = gcp.service_account.IAMBinding("admin-account-iam",
-    service_account_id=sa.name,
-    role="roles/iam.serviceAccountUser",
-    members=["user:jane@example.com"])
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sa = new Gcp.ServiceAccount.Account("sa", new Gcp.ServiceAccount.AccountArgs
-        {
-            AccountId = "my-service-account",
-            DisplayName = "A service account that only Jane can use",
-        });
-        var admin_account_iam = new Gcp.ServiceAccount.IAMBinding("admin-account-iam", new Gcp.ServiceAccount.IAMBindingArgs
-        {
-            ServiceAccountId = sa.Name,
-            Role = "roles/iam.serviceAccountUser",
-            Members = 
-            {
-                "user:jane@example.com",
-            },
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		sa, err := serviceAccount.NewAccount(ctx, "sa", &serviceAccount.AccountArgs{
-			AccountId:   pulumi.String("my-service-account"),
-			DisplayName: pulumi.String("A service account that only Jane can use"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = serviceAccount.NewIAMBinding(ctx, "admin-account-iam", &serviceAccount.IAMBindingArgs{
-			ServiceAccountId: sa.Name,
-			Role:             pulumi.String("roles/iam.serviceAccountUser"),
-			Members: pulumi.StringArray{
-				pulumi.String("user:jane@example.com"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-With IAM Conditions:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const sa = new gcp.serviceAccount.Account("sa", {
-    accountId: "my-service-account",
-    displayName: "A service account that only Jane can use",
-});
-const admin_account_iam = new gcp.serviceAccount.IAMBinding("admin-account-iam", {
-    condition: {
-        description: "Expiring at midnight of 2019-12-31",
-        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
-        title: "expires_after_2019_12_31",
-    },
-    members: ["user:jane@example.com"],
-    role: "roles/iam.serviceAccountUser",
-    serviceAccountId: sa.name,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-sa = gcp.service_account.Account("sa",
-    account_id="my-service-account",
-    display_name="A service account that only Jane can use")
-admin_account_iam = gcp.service_account.IAMBinding("admin-account-iam",
-    condition={
-        "description": "Expiring at midnight of 2019-12-31",
-        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
-        "title": "expires_after_2019_12_31",
-    },
-    members=["user:jane@example.com"],
-    role="roles/iam.serviceAccountUser",
-    service_account_id=sa.name)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sa = new Gcp.ServiceAccount.Account("sa", new Gcp.ServiceAccount.AccountArgs
-        {
-            AccountId = "my-service-account",
-            DisplayName = "A service account that only Jane can use",
-        });
-        var admin_account_iam = new Gcp.ServiceAccount.IAMBinding("admin-account-iam", new Gcp.ServiceAccount.IAMBindingArgs
-        {
-            Condition = new Gcp.ServiceAccount.Inputs.IAMBindingConditionArgs
-            {
-                Description = "Expiring at midnight of 2019-12-31",
-                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
-                Title = "expires_after_2019_12_31",
-            },
-            Members = 
-            {
-                "user:jane@example.com",
-            },
-            Role = "roles/iam.serviceAccountUser",
-            ServiceAccountId = sa.Name,
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		sa, err := serviceAccount.NewAccount(ctx, "sa", &serviceAccount.AccountArgs{
-			AccountId:   pulumi.String("my-service-account"),
-			DisplayName: pulumi.String("A service account that only Jane can use"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = serviceAccount.NewIAMBinding(ctx, "admin-account-iam", &serviceAccount.IAMBindingArgs{
-			Condition: &serviceAccount.IAMBindingConditionArgs{
-				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
-				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
-				Title:       pulumi.String("expires_after_2019_12_31"),
-			},
-			Members: pulumi.StringArray{
-				pulumi.String("user:jane@example.com"),
-			},
-			Role:             pulumi.String("roles/iam.serviceAccountUser"),
-			ServiceAccountId: sa.Name,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-## google\_service\_account\_iam\_member
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const default = gcp.compute.getDefaultServiceAccount({});
-const sa = new gcp.serviceAccount.Account("sa", {
-    accountId: "my-service-account",
-    displayName: "A service account that Jane can use",
-});
-const admin_account_iam = new gcp.serviceAccount.IAMMember("admin-account-iam", {
-    serviceAccountId: sa.name,
-    role: "roles/iam.serviceAccountUser",
-    member: "user:jane@example.com",
-});
-// Allow SA service account use the default GCE account
-const gce_default_account_iam = new gcp.serviceAccount.IAMMember("gce-default-account-iam", {
-    serviceAccountId: _default.then(_default => _default.name),
-    role: "roles/iam.serviceAccountUser",
-    member: pulumi.interpolate`serviceAccount:${sa.email}`,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-default = gcp.compute.get_default_service_account()
-sa = gcp.service_account.Account("sa",
-    account_id="my-service-account",
-    display_name="A service account that Jane can use")
-admin_account_iam = gcp.service_account.IAMMember("admin-account-iam",
-    service_account_id=sa.name,
-    role="roles/iam.serviceAccountUser",
-    member="user:jane@example.com")
-# Allow SA service account use the default GCE account
-gce_default_account_iam = gcp.service_account.IAMMember("gce-default-account-iam",
-    service_account_id=default.name,
-    role="roles/iam.serviceAccountUser",
-    member=sa.email.apply(lambda email: f"serviceAccount:{email}"))
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var @default = Output.Create(Gcp.Compute.GetDefaultServiceAccount.InvokeAsync());
-        var sa = new Gcp.ServiceAccount.Account("sa", new Gcp.ServiceAccount.AccountArgs
-        {
-            AccountId = "my-service-account",
-            DisplayName = "A service account that Jane can use",
-        });
-        var admin_account_iam = new Gcp.ServiceAccount.IAMMember("admin-account-iam", new Gcp.ServiceAccount.IAMMemberArgs
-        {
-            ServiceAccountId = sa.Name,
-            Role = "roles/iam.serviceAccountUser",
-            Member = "user:jane@example.com",
-        });
-        // Allow SA service account use the default GCE account
-        var gce_default_account_iam = new Gcp.ServiceAccount.IAMMember("gce-default-account-iam", new Gcp.ServiceAccount.IAMMemberArgs
-        {
-            ServiceAccountId = @default.Apply(@default => @default.Name),
-            Role = "roles/iam.serviceAccountUser",
-            Member = sa.Email.Apply(email => $"serviceAccount:{email}"),
-        });
-    }
-
-}
-```
-
-With IAM Conditions:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const sa = new gcp.serviceAccount.Account("sa", {
-    accountId: "my-service-account",
-    displayName: "A service account that Jane can use",
-});
-const admin_account_iam = new gcp.serviceAccount.IAMMember("admin-account-iam", {
-    condition: {
-        description: "Expiring at midnight of 2019-12-31",
-        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
-        title: "expires_after_2019_12_31",
-    },
-    member: "user:jane@example.com",
-    role: "roles/iam.serviceAccountUser",
-    serviceAccountId: sa.name,
-});
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-sa = gcp.service_account.Account("sa",
-    account_id="my-service-account",
-    display_name="A service account that Jane can use")
-admin_account_iam = gcp.service_account.IAMMember("admin-account-iam",
-    condition={
-        "description": "Expiring at midnight of 2019-12-31",
-        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
-        "title": "expires_after_2019_12_31",
-    },
-    member="user:jane@example.com",
-    role="roles/iam.serviceAccountUser",
-    service_account_id=sa.name)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var sa = new Gcp.ServiceAccount.Account("sa", new Gcp.ServiceAccount.AccountArgs
-        {
-            AccountId = "my-service-account",
-            DisplayName = "A service account that Jane can use",
-        });
-        var admin_account_iam = new Gcp.ServiceAccount.IAMMember("admin-account-iam", new Gcp.ServiceAccount.IAMMemberArgs
-        {
-            Condition = new Gcp.ServiceAccount.Inputs.IAMMemberConditionArgs
-            {
-                Description = "Expiring at midnight of 2019-12-31",
-                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
-                Title = "expires_after_2019_12_31",
-            },
-            Member = "user:jane@example.com",
-            Role = "roles/iam.serviceAccountUser",
-            ServiceAccountId = sa.Name,
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		sa, err := serviceAccount.NewAccount(ctx, "sa", &serviceAccount.AccountArgs{
-			AccountId:   pulumi.String("my-service-account"),
-			DisplayName: pulumi.String("A service account that Jane can use"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = serviceAccount.NewIAMMember(ctx, "admin-account-iam", &serviceAccount.IAMMemberArgs{
-			Condition: &serviceAccount.IAMMemberConditionArgs{
-				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
-				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
-				Title:       pulumi.String("expires_after_2019_12_31"),
-			},
-			Member:           pulumi.String("user:jane@example.com"),
-			Role:             pulumi.String("roles/iam.serviceAccountUser"),
-			ServiceAccountId: sa.Name,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
 
 
 ## Create a IAMBinding Resource {#create}
@@ -516,11 +33,11 @@ func main() {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/serviceAccount/#IAMBinding">IAMBinding</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition=None<span class="p">, </span>members=None<span class="p">, </span>role=None<span class="p">, </span>service_account_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/serviceAccount/#pulumi_gcp.serviceAccount.IAMBinding">IAMBinding</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[_serviceaccount.IAMBindingConditionArgs]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount?tab=doc#IAMBinding">NewIAMBinding</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount?tab=doc#IAMBindingArgs">IAMBindingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount?tab=doc#IAMBinding">IAMBinding</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceaccount?tab=doc#IAMBinding">NewIAMBinding</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceaccount?tab=doc#IAMBindingArgs">IAMBindingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceaccount?tab=doc#IAMBinding">IAMBinding</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -614,7 +131,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount?tab=doc#IAMBindingArgs">IAMBindingArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceaccount?tab=doc#IAMBindingArgs">IAMBindingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -730,7 +247,7 @@ The IAMBinding resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -783,7 +300,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -836,7 +353,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -887,9 +404,9 @@ Structure is documented below.
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iambindingcondition">Dict[IAMBinding<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1035,15 +552,16 @@ Get an existing IAMBinding resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>condition=None<span class="p">, </span>etag=None<span class="p">, </span>members=None<span class="p">, </span>role=None<span class="p">, </span>service_account_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[_serviceaccount.IAMBindingConditionArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IAMBinding</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIAMBinding<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount?tab=doc#IAMBindingState">IAMBindingState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount?tab=doc#IAMBinding">IAMBinding</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIAMBinding<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceaccount?tab=doc#IAMBindingState">IAMBindingState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceaccount?tab=doc#IAMBinding">IAMBinding</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ServiceAccount.IAMBinding.html">IAMBinding</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ServiceAccount.IAMBindingState.html">IAMBindingState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ServiceAccount.IAMBinding.html">IAMBinding</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ServiceAccount.IAMBindingState.html">IAMBindingState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1157,7 +675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1221,7 +739,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1285,7 +803,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1347,9 +865,9 @@ Structure is documented below.
 <a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iambindingcondition">Dict[IAMBinding<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#iambindingcondition">IAMBinding<wbr>Condition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}) An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
 {{% /md %}}</dd>
 
@@ -1419,7 +937,7 @@ Structure is documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount?tab=doc#IAMBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceAccount?tab=doc#IAMBindingConditionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceaccount?tab=doc#IAMBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/serviceaccount?tab=doc#IAMBindingConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ServiceAccount.Inputs.IAMBindingConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ServiceAccount.Outputs.IAMBindingCondition.html">output</a> API doc for this type.
@@ -1602,6 +1120,6 @@ Structure is documented below.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

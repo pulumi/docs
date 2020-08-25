@@ -29,7 +29,7 @@ To get more information about Budget, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/billing/#Budget">Budget</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>all_updates_rule=None<span class="p">, </span>amount=None<span class="p">, </span>billing_account=None<span class="p">, </span>budget_filter=None<span class="p">, </span>display_name=None<span class="p">, </span>threshold_rules=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/billing/#pulumi_gcp.billing.Budget">Budget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[BudgetAllUpdatesRuleArgs]</span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[BudgetAmountArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[BudgetBudgetFilterArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[List[BudgetThresholdRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -209,7 +209,8 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The budgeted amount for each usage period.  Structure is documented below.
+    <dd>{{% md %}}The budgeted amount for each usage period.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -233,7 +234,8 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
-budget.  Structure is documented below.
+budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -246,7 +248,8 @@ budget.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
-using threshold rules.  Structure is documented below.
+using threshold rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -258,7 +261,8 @@ using threshold rules.  Structure is documented below.
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
-spend against the budget.  Structure is documented below.
+spend against the budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -287,7 +291,8 @@ spend against the budget.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
     </dt>
-    <dd>{{% md %}}The budgeted amount for each usage period.  Structure is documented below.
+    <dd>{{% md %}}The budgeted amount for each usage period.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -311,7 +316,8 @@ spend against the budget.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
-budget.  Structure is documented below.
+budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -324,7 +330,8 @@ budget.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
-using threshold rules.  Structure is documented below.
+using threshold rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -336,7 +343,8 @@ using threshold rules.  Structure is documented below.
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
-spend against the budget.  Structure is documented below.
+spend against the budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -365,7 +373,8 @@ spend against the budget.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
     </dt>
-    <dd>{{% md %}}The budgeted amount for each usage period.  Structure is documented below.
+    <dd>{{% md %}}The budgeted amount for each usage period.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -389,7 +398,8 @@ spend against the budget.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
-budget.  Structure is documented below.
+budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -402,7 +412,8 @@ budget.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
-using threshold rules.  Structure is documented below.
+using threshold rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -414,7 +425,8 @@ using threshold rules.  Structure is documented below.
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
-spend against the budget.  Structure is documented below.
+spend against the budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -441,9 +453,10 @@ spend against the budget.  Structure is documented below.
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamount">Dict[Budget<wbr>Amount]</a></span>
+        <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The budgeted amount for each usage period.  Structure is documented below.
+    <dd>{{% md %}}The budgeted amount for each usage period.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -463,11 +476,12 @@ spend against the budget.  Structure is documented below.
 <a href="#threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetthresholdrule">List[Budget<wbr>Threshold<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#budgetthresholdrule">List[Budget<wbr>Threshold<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
-budget.  Structure is documented below.
+budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -476,11 +490,12 @@ budget.  Structure is documented below.
 <a href="#all_updates_rule_python" style="color: inherit; text-decoration: inherit;">all_<wbr>updates_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetallupdatesrule">Dict[Budget<wbr>All<wbr>Updates<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
-using threshold rules.  Structure is documented below.
+using threshold rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -489,10 +504,11 @@ using threshold rules.  Structure is documented below.
 <a href="#budget_filter_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetbudgetfilter">Dict[Budget<wbr>Budget<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
-spend against the budget.  Structure is documented below.
+spend against the budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -652,7 +668,8 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>all_updates_rule=None<span class="p">, </span>amount=None<span class="p">, </span>billing_account=None<span class="p">, </span>budget_filter=None<span class="p">, </span>display_name=None<span class="p">, </span>name=None<span class="p">, </span>threshold_rules=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_updates_rule</span><span class="p">:</span> <span class="nx">Optional[BudgetAllUpdatesRuleArgs]</span> = None<span class="p">, </span><span class="nx">amount</span><span class="p">:</span> <span class="nx">Optional[BudgetAmountArgs]</span> = None<span class="p">, </span><span class="nx">billing_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_filter</span><span class="p">:</span> <span class="nx">Optional[BudgetBudgetFilterArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_rules</span><span class="p">:</span> <span class="nx">Optional[List[BudgetThresholdRuleArgs]]</span> = None<span class="p">) -&gt;</span> Budget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -660,7 +677,7 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Budget.html">Budget</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.BudgetState.html">BudgetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.Budget.html">Budget</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.BudgetState.html">BudgetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -776,7 +793,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
-using threshold rules.  Structure is documented below.
+using threshold rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -787,7 +805,8 @@ using threshold rules.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The budgeted amount for each usage period.  Structure is documented below.
+    <dd>{{% md %}}The budgeted amount for each usage period.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -810,7 +829,8 @@ using threshold rules.  Structure is documented below.
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
-spend against the budget.  Structure is documented below.
+spend against the budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -846,7 +866,8 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
-budget.  Structure is documented below.
+budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -866,7 +887,8 @@ budget.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
-using threshold rules.  Structure is documented below.
+using threshold rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -877,7 +899,8 @@ using threshold rules.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
     </dt>
-    <dd>{{% md %}}The budgeted amount for each usage period.  Structure is documented below.
+    <dd>{{% md %}}The budgeted amount for each usage period.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -900,7 +923,8 @@ using threshold rules.  Structure is documented below.
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
-spend against the budget.  Structure is documented below.
+spend against the budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -936,7 +960,8 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
-budget.  Structure is documented below.
+budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -956,7 +981,8 @@ budget.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
-using threshold rules.  Structure is documented below.
+using threshold rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -967,7 +993,8 @@ using threshold rules.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount</a></span>
     </dt>
-    <dd>{{% md %}}The budgeted amount for each usage period.  Structure is documented below.
+    <dd>{{% md %}}The budgeted amount for each usage period.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -990,7 +1017,8 @@ using threshold rules.  Structure is documented below.
         <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
-spend against the budget.  Structure is documented below.
+spend against the budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1026,7 +1054,8 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
-budget.  Structure is documented below.
+budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1042,11 +1071,12 @@ budget.  Structure is documented below.
 <a href="#state_all_updates_rule_python" style="color: inherit; text-decoration: inherit;">all_<wbr>updates_<wbr>rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetallupdatesrule">Dict[Budget<wbr>All<wbr>Updates<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines notifications that are sent on every update to the
 billing account's spend, regardless of the thresholds defined
-using threshold rules.  Structure is documented below.
+using threshold rules.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1055,9 +1085,10 @@ using threshold rules.  Structure is documented below.
 <a href="#state_amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamount">Dict[Budget<wbr>Amount]</a></span>
+        <span class="property-type"><a href="#budgetamount">Budget<wbr>Amount<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The budgeted amount for each usage period.  Structure is documented below.
+    <dd>{{% md %}}The budgeted amount for each usage period.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1077,10 +1108,11 @@ using threshold rules.  Structure is documented below.
 <a href="#state_budget_filter_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetbudgetfilter">Dict[Budget<wbr>Budget<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
-spend against the budget.  Structure is documented below.
+spend against the budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1112,11 +1144,12 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
 <a href="#state_threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetthresholdrule">List[Budget<wbr>Threshold<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#budgetthresholdrule">List[Budget<wbr>Threshold<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
-budget.  Structure is documented below.
+budget.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1152,8 +1185,22 @@ budget.  Structure is documented below.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monitoringnotificationchannels_csharp">
+<a href="#monitoringnotificationchannels_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Notification<wbr>Channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The full resource name of a monitoring notification
+channel in the form
+projects/{project_id}/notificationChannels/{channel_id}.
+A maximum of 5 channels are allowed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="pubsubtopic_csharp">
 <a href="#pubsubtopic_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
 </span> 
@@ -1186,8 +1233,22 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monitoringnotificationchannels_go">
+<a href="#monitoringnotificationchannels_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Notification<wbr>Channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The full resource name of a monitoring notification
+channel in the form
+projects/{project_id}/notificationChannels/{channel_id}.
+A maximum of 5 channels are allowed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="pubsubtopic_go">
 <a href="#pubsubtopic_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
 </span> 
@@ -1220,8 +1281,22 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monitoringnotificationchannels_nodejs">
+<a href="#monitoringnotificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Notification<wbr>Channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The full resource name of a monitoring notification
+channel in the form
+projects/{project_id}/notificationChannels/{channel_id}.
+A maximum of 5 channels are allowed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="pubsubtopic_nodejs">
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span> 
@@ -1254,10 +1329,24 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="pubsubtopic_python">
-<a href="#pubsubtopic_python" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monitoring_notification_channels_python">
+<a href="#monitoring_notification_channels_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>notification_<wbr>channels</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The full resource name of a monitoring notification
+channel in the form
+projects/{project_id}/notificationChannels/{channel_id}.
+A maximum of 5 channels are allowed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pubsub_topic_python">
+<a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1270,8 +1359,8 @@ at regular intervals to the topic.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schemaversion_python">
-<a href="#schemaversion_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Version</a>
+        <span id="schema_version_python">
+<a href="#schema_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1306,8 +1395,22 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastperiodamount_csharp">
+<a href="#lastperiodamount_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Period<wbr>Amount</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Configures a budget amount that is automatically set to 100% of
+last period's spend.
+Boolean. Set value to true to use. Do not set to false, instead
+use the `specified_amount` block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="specifiedamount_csharp">
 <a href="#specifiedamount_csharp" style="color: inherit; text-decoration: inherit;">Specified<wbr>Amount</a>
 </span> 
@@ -1316,7 +1419,8 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. currencyCode is
 optional. If specified, it must match the currency of the
-billing account. The currencyCode is provided on output.  Structure is documented below.
+billing account. The currencyCode is provided on output.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1326,8 +1430,22 @@ billing account. The currencyCode is provided on output.  Structure is documente
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastperiodamount_go">
+<a href="#lastperiodamount_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Period<wbr>Amount</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Configures a budget amount that is automatically set to 100% of
+last period's spend.
+Boolean. Set value to true to use. Do not set to false, instead
+use the `specified_amount` block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="specifiedamount_go">
 <a href="#specifiedamount_go" style="color: inherit; text-decoration: inherit;">Specified<wbr>Amount</a>
 </span> 
@@ -1336,7 +1454,8 @@ billing account. The currencyCode is provided on output.  Structure is documente
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. currencyCode is
 optional. If specified, it must match the currency of the
-billing account. The currencyCode is provided on output.  Structure is documented below.
+billing account. The currencyCode is provided on output.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1346,8 +1465,22 @@ billing account. The currencyCode is provided on output.  Structure is documente
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastperiodamount_nodejs">
+<a href="#lastperiodamount_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Period<wbr>Amount</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Configures a budget amount that is automatically set to 100% of
+last period's spend.
+Boolean. Set value to true to use. Do not set to false, instead
+use the `specified_amount` block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="specifiedamount_nodejs">
 <a href="#specifiedamount_nodejs" style="color: inherit; text-decoration: inherit;">specified<wbr>Amount</a>
 </span> 
@@ -1356,7 +1489,8 @@ billing account. The currencyCode is provided on output.  Structure is documente
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. currencyCode is
 optional. If specified, it must match the currency of the
-billing account. The currencyCode is provided on output.  Structure is documented below.
+billing account. The currencyCode is provided on output.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1366,17 +1500,32 @@ billing account. The currencyCode is provided on output.  Structure is documente
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="specifiedamount_python">
-<a href="#specifiedamount_python" style="color: inherit; text-decoration: inherit;">specified<wbr>Amount</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_period_amount_python">
+<a href="#last_period_amount_python" style="color: inherit; text-decoration: inherit;">last_<wbr>period_<wbr>amount</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetamountspecifiedamount">Dict[Budget<wbr>Amount<wbr>Specified<wbr>Amount]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Configures a budget amount that is automatically set to 100% of
+last period's spend.
+Boolean. Set value to true to use. Do not set to false, instead
+use the `specified_amount` block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="specified_amount_python">
+<a href="#specified_amount_python" style="color: inherit; text-decoration: inherit;">specified_<wbr>amount</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specified amount to use as the budget. currencyCode is
 optional. If specified, it must match the currency of the
-billing account. The currencyCode is provided on output.  Structure is documented below.
+billing account. The currencyCode is provided on output.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1547,8 +1696,8 @@ is "USD", then 1 unit is one US dollar.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="currencycode_python">
-<a href="#currencycode_python" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
+        <span id="currency_code_python">
+<a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1620,6 +1769,8 @@ is "USD", then 1 unit is one US dollar.
     </dt>
     <dd>{{% md %}}Specifies how credits should be treated when determining spend
 for threshold calculations.
+Default value is `INCLUDE_ALL_CREDITS`.
+Possible values are `INCLUDE_ALL_CREDITS` and `EXCLUDE_ALL_CREDITS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1671,6 +1822,8 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
     </dt>
     <dd>{{% md %}}Specifies how credits should be treated when determining spend
 for threshold calculations.
+Default value is `INCLUDE_ALL_CREDITS`.
+Possible values are `INCLUDE_ALL_CREDITS` and `EXCLUDE_ALL_CREDITS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1722,6 +1875,8 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
     </dt>
     <dd>{{% md %}}Specifies how credits should be treated when determining spend
 for threshold calculations.
+Default value is `INCLUDE_ALL_CREDITS`.
+Possible values are `INCLUDE_ALL_CREDITS` and `EXCLUDE_ALL_CREDITS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1765,14 +1920,16 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="credittypestreatment_python">
-<a href="#credittypestreatment_python" style="color: inherit; text-decoration: inherit;">credit<wbr>Types<wbr>Treatment</a>
+        <span id="credit_types_treatment_python">
+<a href="#credit_types_treatment_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>types_<wbr>treatment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies how credits should be treated when determining spend
 for threshold calculations.
+Default value is `INCLUDE_ALL_CREDITS`.
+Possible values are `INCLUDE_ALL_CREDITS` and `EXCLUDE_ALL_CREDITS`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1854,6 +2011,8 @@ https://cloud.google.com/billing/v1/how-tos/catalog-api.
     </dt>
     <dd>{{% md %}}The type of basis used to determine if spend has passed
 the threshold.
+Default value is `CURRENT_SPEND`.
+Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1885,6 +2044,8 @@ the threshold.
     </dt>
     <dd>{{% md %}}The type of basis used to determine if spend has passed
 the threshold.
+Default value is `CURRENT_SPEND`.
+Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1916,6 +2077,8 @@ the threshold.
     </dt>
     <dd>{{% md %}}The type of basis used to determine if spend has passed
 the threshold.
+Default value is `CURRENT_SPEND`.
+Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1927,8 +2090,8 @@ the threshold.
 
     <dt class="property-required"
             title="Required">
-        <span id="thresholdpercent_python">
-<a href="#thresholdpercent_python" style="color: inherit; text-decoration: inherit;">threshold<wbr>Percent</a>
+        <span id="threshold_percent_python">
+<a href="#threshold_percent_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1939,14 +2102,16 @@ the threshold.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spendbasis_python">
-<a href="#spendbasis_python" style="color: inherit; text-decoration: inherit;">spend<wbr>Basis</a>
+        <span id="spend_basis_python">
+<a href="#spend_basis_python" style="color: inherit; text-decoration: inherit;">spend_<wbr>basis</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of basis used to determine if spend has passed
 the threshold.
+Default value is `CURRENT_SPEND`.
+Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1967,6 +2132,6 @@ the threshold.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

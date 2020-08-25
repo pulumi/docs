@@ -30,7 +30,7 @@ To get more information about FhirStore, see:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/healthcare/#FhirStore">FhirStore</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset=None<span class="p">, </span>disable_referential_integrity=None<span class="p">, </span>disable_resource_versioning=None<span class="p">, </span>enable_history_import=None<span class="p">, </span>enable_update_create=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>stream_configs=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/healthcare/#pulumi_gcp.healthcare.FhirStore">FhirStore</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_referential_integrity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disable_resource_versioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_history_import</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_update_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[FhirStoreNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">stream_configs</span><span class="p">:</span> <span class="nx">Optional[List[FhirStoreStreamConfigArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -316,7 +316,8 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -332,7 +333,8 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -344,6 +346,8 @@ the order of dozens of seconds) is expected before the results show up in the st
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
 
 </dl>
@@ -467,7 +471,8 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -483,7 +488,8 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -495,6 +501,8 @@ the order of dozens of seconds) is expected before the results show up in the st
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
 
 </dl>
@@ -618,7 +626,8 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -634,7 +643,8 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -646,6 +656,8 @@ the order of dozens of seconds) is expected before the results show up in the st
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
 
 </dl>
@@ -737,7 +749,7 @@ notifications.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
@@ -767,9 +779,10 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorenotificationconfig">Dict[Fhir<wbr>Store<wbr>Notification<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -778,14 +791,15 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#stream_configs_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfig">List[Fhir<wbr>Store<wbr>Stream<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">List[Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
 this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -797,6 +811,8 @@ the order of dozens of seconds) is expected before the results show up in the st
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
 
 </dl>
@@ -941,7 +957,8 @@ Get an existing FhirStore resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dataset=None<span class="p">, </span>disable_referential_integrity=None<span class="p">, </span>disable_resource_versioning=None<span class="p">, </span>enable_history_import=None<span class="p">, </span>enable_update_create=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>self_link=None<span class="p">, </span>stream_configs=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_referential_integrity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disable_resource_versioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_history_import</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_update_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[FhirStoreNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_configs</span><span class="p">:</span> <span class="nx">Optional[List[FhirStoreStreamConfigArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FhirStore</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -949,7 +966,7 @@ Get an existing FhirStore resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStore.html">FhirStore</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStoreState.html">FhirStoreState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStore.html">FhirStore</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStoreState.html">FhirStoreState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1169,7 +1186,8 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1196,7 +1214,8 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1208,6 +1227,8 @@ the order of dozens of seconds) is expected before the results show up in the st
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1331,7 +1352,8 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1358,7 +1380,8 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1370,6 +1393,8 @@ the order of dozens of seconds) is expected before the results show up in the st
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1493,7 +1518,8 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1520,7 +1546,8 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1532,6 +1559,8 @@ the order of dozens of seconds) is expected before the results show up in the st
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1623,7 +1652,7 @@ notifications.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
@@ -1653,9 +1682,10 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#state_notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorenotificationconfig">Dict[Fhir<wbr>Store<wbr>Notification<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1675,14 +1705,15 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#state_stream_configs_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>configs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfig">List[Fhir<wbr>Store<wbr>Stream<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">List[Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
 this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1694,6 +1725,8 @@ the order of dozens of seconds) is expected before the results show up in the st
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1800,8 +1833,8 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 
     <dt class="property-required"
             title="Required">
-        <span id="pubsubtopic_python">
-<a href="#pubsubtopic_python" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
+        <span id="pubsub_topic_python">
+<a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1851,7 +1884,8 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
 are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
 resource type, the server attempts to create one.
-See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1886,7 +1920,8 @@ an empty list as an intent to stream all the supported resource types in this FH
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
 are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
 resource type, the server attempts to create one.
-See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1921,7 +1956,8 @@ an empty list as an intent to stream all the supported resource types in this FH
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
 are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
 resource type, the server attempts to create one.
-See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1946,23 +1982,24 @@ an empty list as an intent to stream all the supported resource types in this FH
 
     <dt class="property-required"
             title="Required">
-        <span id="bigquerydestination_python">
-<a href="#bigquerydestination_python" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
+        <span id="bigquery_destination_python">
+<a href="#bigquery_destination_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Dict[Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config.
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
 are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
 resource type, the server attempts to create one.
-See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcetypes_python">
-<a href="#resourcetypes_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
+        <span id="resource_types_python">
+<a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2016,7 +2053,8 @@ an empty list as an intent to stream all the supported resource types in this FH
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2045,7 +2083,8 @@ an empty list as an intent to stream all the supported resource types in this FH
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2074,7 +2113,8 @@ an empty list as an intent to stream all the supported resource types in this FH
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2086,8 +2126,8 @@ an empty list as an intent to stream all the supported resource types in this FH
 
     <dt class="property-required"
             title="Required">
-        <span id="dataseturi_python">
-<a href="#dataseturi_python" style="color: inherit; text-decoration: inherit;">dataset<wbr>Uri</a>
+        <span id="dataset_uri_python">
+<a href="#dataset_uri_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>uri</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2097,13 +2137,14 @@ an empty list as an intent to stream all the supported resource types in this FH
 
     <dt class="property-required"
             title="Required">
-        <span id="schemaconfig_python">
-<a href="#schemaconfig_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Config</a>
+        <span id="schema_config_python">
+<a href="#schema_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Dict[Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2156,6 +2197,8 @@ value 2. The maximum depth allowed is 5.
     <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
 * ANALYTICS: Analytics schema defined by the FHIR community.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+Default value is `ANALYTICS`.
+Possible values are `ANALYTICS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2190,6 +2233,8 @@ value 2. The maximum depth allowed is 5.
     <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
 * ANALYTICS: Analytics schema defined by the FHIR community.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+Default value is `ANALYTICS`.
+Possible values are `ANALYTICS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2224,6 +2269,8 @@ value 2. The maximum depth allowed is 5.
     <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
 * ANALYTICS: Analytics schema defined by the FHIR community.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+Default value is `ANALYTICS`.
+Possible values are `ANALYTICS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2235,8 +2282,8 @@ See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
 
     <dt class="property-required"
             title="Required">
-        <span id="recursivestructuredepth_python">
-<a href="#recursivestructuredepth_python" style="color: inherit; text-decoration: inherit;">recursive<wbr>Structure<wbr>Depth</a>
+        <span id="recursive_structure_depth_python">
+<a href="#recursive_structure_depth_python" style="color: inherit; text-decoration: inherit;">recursive_<wbr>structure_<wbr>depth</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2249,8 +2296,8 @@ value 2. The maximum depth allowed is 5.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="schematype_python">
-<a href="#schematype_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Type</a>
+        <span id="schema_type_python">
+<a href="#schema_type_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2258,6 +2305,8 @@ value 2. The maximum depth allowed is 5.
     <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
 * ANALYTICS: Analytics schema defined by the FHIR community.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+Default value is `ANALYTICS`.
+Possible values are `ANALYTICS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2278,6 +2327,6 @@ See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

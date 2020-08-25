@@ -40,78 +40,6 @@ To get more information about Subnetwork, see:
     * [Private Google Access](https://cloud.google.com/vpc/docs/configure-private-google-access)
     * [Cloud Networking](https://cloud.google.com/vpc/docs/using-vpc)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Subnetwork Internal L7lb
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var custom_test = new Gcp.Compute.Network("custom-test", new Gcp.Compute.NetworkArgs
-        {
-            AutoCreateSubnetworks = false,
-        });
-        var network_for_l7lb = new Gcp.Compute.Subnetwork("network-for-l7lb", new Gcp.Compute.SubnetworkArgs
-        {
-            IpCidrRange = "10.0.0.0/22",
-            Region = "us-central1",
-            Purpose = "INTERNAL_HTTPS_LOAD_BALANCER",
-            Role = "ACTIVE",
-            Network = custom_test.Id,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
-network_for_l7lb = gcp.compute.Subnetwork("network-for-l7lb",
-    ip_cidr_range="10.0.0.0/22",
-    region="us-central1",
-    purpose="INTERNAL_HTTPS_LOAD_BALANCER",
-    role="ACTIVE",
-    network=custom_test.id)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const custom_test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false});
-const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
-    ipCidrRange: "10.0.0.0/22",
-    region: "us-central1",
-    purpose: "INTERNAL_HTTPS_LOAD_BALANCER",
-    role: "ACTIVE",
-    network: custom_test.id,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Subnetwork Resource {#create}
@@ -123,7 +51,7 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#Subnetwork">Subnetwork</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>ip_cidr_range=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>private_ip_google_access=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>region=None<span class="p">, </span>role=None<span class="p">, </span>secondary_ip_ranges=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.Subnetwork">Subnetwork</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[SubnetworkLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_google_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[List[SubnetworkSecondaryIpRangeArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -344,7 +272,8 @@ creation time.
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -402,6 +331,7 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -428,6 +358,7 @@ purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -500,7 +431,8 @@ creation time.
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -558,6 +490,7 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -584,6 +517,7 @@ purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -656,7 +590,8 @@ creation time.
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -714,6 +649,7 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -740,6 +676,7 @@ purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -808,11 +745,12 @@ creation time.
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworklogconfig">Dict[Subnetwork<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -870,6 +808,7 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -896,6 +835,7 @@ purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -904,7 +844,7 @@ is ready to be promoted to ACTIVE or is currently draining.
 <a href="#secondary_ip_ranges_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworksecondaryiprange">List[Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range]</a></span>
+        <span class="property-type"><a href="#subnetworksecondaryiprange">List[Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
@@ -1186,7 +1126,8 @@ Get an existing Subnetwork resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>fingerprint=None<span class="p">, </span>gateway_address=None<span class="p">, </span>ip_cidr_range=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>private_ip_google_access=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>region=None<span class="p">, </span>role=None<span class="p">, </span>secondary_ip_ranges=None<span class="p">, </span>self_link=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[SubnetworkLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_google_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[List[SubnetworkSecondaryIpRangeArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subnetwork</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1194,7 +1135,7 @@ Get an existing Subnetwork resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Subnetwork.html">Subnetwork</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.SubnetworkState.html">SubnetworkState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Subnetwork.html">Subnetwork</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.SubnetworkState.html">SubnetworkState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1370,7 +1311,8 @@ secondary IP ranges within a network. Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1440,6 +1382,7 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1466,6 +1409,7 @@ purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1570,7 +1514,8 @@ secondary IP ranges within a network. Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1640,6 +1585,7 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1666,6 +1612,7 @@ purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1770,7 +1717,8 @@ secondary IP ranges within a network. Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1840,6 +1788,7 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1866,6 +1815,7 @@ purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1966,11 +1916,12 @@ secondary IP ranges within a network. Only IPv4 is supported.
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworklogconfig">Dict[Subnetwork<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2040,6 +1991,7 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2066,6 +2018,7 @@ purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2074,7 +2027,7 @@ is ready to be promoted to ACTIVE or is currently draining.
 <a href="#state_secondary_ip_ranges_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>ranges</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworksecondaryiprange">List[Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range]</a></span>
+        <span class="property-type"><a href="#subnetworksecondaryiprange">List[Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
@@ -2138,8 +2091,8 @@ to either primary or secondary ranges. Structure is documented below.
 Toggles the aggregation interval for collecting flow logs. Increasing the
 interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
-Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
-INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+Default value is `INTERVAL_5_SEC`.
+Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2168,6 +2121,8 @@ half of all collected logs are reported.
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
+Default value is `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2189,8 +2144,8 @@ flow logs.
 Toggles the aggregation interval for collecting flow logs. Increasing the
 interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
-Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
-INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+Default value is `INTERVAL_5_SEC`.
+Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2219,6 +2174,8 @@ half of all collected logs are reported.
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
+Default value is `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2240,8 +2197,8 @@ flow logs.
 Toggles the aggregation interval for collecting flow logs. Increasing the
 interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
-Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
-INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+Default value is `INTERVAL_5_SEC`.
+Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2270,6 +2227,8 @@ half of all collected logs are reported.
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
+Default value is `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2281,8 +2240,8 @@ flow logs.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aggregationinterval_python">
-<a href="#aggregationinterval_python" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Interval</a>
+        <span id="aggregation_interval_python">
+<a href="#aggregation_interval_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2291,14 +2250,14 @@ flow logs.
 Toggles the aggregation interval for collecting flow logs. Increasing the
 interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
-Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
-INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+Default value is `INTERVAL_5_SEC`.
+Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="flowsampling_python">
-<a href="#flowsampling_python" style="color: inherit; text-decoration: inherit;">flow<wbr>Sampling</a>
+        <span id="flow_sampling_python">
+<a href="#flow_sampling_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>sampling</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2321,6 +2280,8 @@ half of all collected logs are reported.
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
+Default value is `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2469,8 +2430,8 @@ secondary IP ranges within a network. Only IPv4 is supported.
 
     <dt class="property-required"
             title="Required">
-        <span id="rangename_python">
-<a href="#rangename_python" style="color: inherit; text-decoration: inherit;">range<wbr>Name</a>
+        <span id="range_name_python">
+<a href="#range_name_python" style="color: inherit; text-decoration: inherit;">range_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2499,6 +2460,6 @@ must be unique within the subnetwork.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -20,84 +20,6 @@ To get more information about NodeTemplate, see:
 * How-to Guides
     * [Sole-Tenant Nodes](https://cloud.google.com/compute/docs/nodes/)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Node Template Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var template = new Gcp.Compute.NodeTemplate("template", new Gcp.Compute.NodeTemplateArgs
-        {
-            NodeType = "n1-node-96-624",
-            Region = "us-central1",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewNodeTemplate(ctx, "template", &compute.NodeTemplateArgs{
-			NodeType: pulumi.String("n1-node-96-624"),
-			Region:   pulumi.String("us-central1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-template = gcp.compute.NodeTemplate("template",
-    node_type="n1-node-96-624",
-    region="us-central1")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const template = new gcp.compute.NodeTemplate("template", {
-    nodeType: "n1-node-96-624",
-    region: "us-central1",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a NodeTemplate Resource {#create}
@@ -109,7 +31,7 @@ const template = new gcp.compute.NodeTemplate("template", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#NodeTemplate">NodeTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cpu_overcommit_type=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_affinity_labels=None<span class="p">, </span>node_type=None<span class="p">, </span>node_type_flexibility=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>server_binding=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.NodeTemplate">NodeTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cpu_overcommit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_affinity_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_type_flexibility</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateNodeTypeFlexibilityArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_binding</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateServerBindingArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -349,7 +271,8 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
 these properties. Only one of nodeTypeFlexibility and nodeType can
-be specified.  Structure is documented below.
+be specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -385,7 +308,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines
-where the nodes should restart following a maintenance event.  Structure is documented below.
+where the nodes should restart following a maintenance event.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -463,7 +387,8 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
 these properties. Only one of nodeTypeFlexibility and nodeType can
-be specified.  Structure is documented below.
+be specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -499,7 +424,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines
-where the nodes should restart following a maintenance event.  Structure is documented below.
+where the nodes should restart following a maintenance event.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -577,7 +503,8 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
 these properties. Only one of nodeTypeFlexibility and nodeType can
-be specified.  Structure is documented below.
+be specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -613,7 +540,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines
-where the nodes should restart following a maintenance event.  Structure is documented below.
+where the nodes should restart following a maintenance event.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -662,7 +590,7 @@ where the nodes should restart following a maintenance event.  Structure is docu
 <a href="#node_affinity_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinity_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to use for node affinity, which will be used in
 instance scheduling.
@@ -686,12 +614,13 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 <a href="#node_type_flexibility_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type_<wbr>flexibility</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Dict[Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility]</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
 these properties. Only one of nodeTypeFlexibility and nodeType can
-be specified.  Structure is documented below.
+be specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -724,10 +653,11 @@ If it is not provided, the provider region is used.
 <a href="#server_binding_python" style="color: inherit; text-decoration: inherit;">server_<wbr>binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Dict[Node<wbr>Template<wbr>Server<wbr>Binding]</a></span>
+        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines
-where the nodes should restart following a maintenance event.  Structure is documented below.
+where the nodes should restart following a maintenance event.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -916,7 +846,8 @@ Get an existing NodeTemplate resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cpu_overcommit_type=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_affinity_labels=None<span class="p">, </span>node_type=None<span class="p">, </span>node_type_flexibility=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>server_binding=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cpu_overcommit_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_affinity_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_type_flexibility</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateNodeTypeFlexibilityArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_binding</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateServerBindingArgs]</span> = None<span class="p">) -&gt;</span> NodeTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -924,7 +855,7 @@ Get an existing NodeTemplate resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NodeTemplate.html">NodeTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NodeTemplateState.html">NodeTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NodeTemplate.html">NodeTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NodeTemplateState.html">NodeTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1109,7 +1040,8 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
 these properties. Only one of nodeTypeFlexibility and nodeType can
-be specified.  Structure is documented below.
+be specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1156,7 +1088,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines
-where the nodes should restart following a maintenance event.  Structure is documented below.
+where the nodes should restart following a maintenance event.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1245,7 +1178,8 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
 these properties. Only one of nodeTypeFlexibility and nodeType can
-be specified.  Structure is documented below.
+be specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1292,7 +1226,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines
-where the nodes should restart following a maintenance event.  Structure is documented below.
+where the nodes should restart following a maintenance event.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1381,7 +1316,8 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
 these properties. Only one of nodeTypeFlexibility and nodeType can
-be specified.  Structure is documented below.
+be specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1428,7 +1364,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines
-where the nodes should restart following a maintenance event.  Structure is documented below.
+where the nodes should restart following a maintenance event.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1488,7 +1425,7 @@ where the nodes should restart following a maintenance event.  Structure is docu
 <a href="#state_node_affinity_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinity_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to use for node affinity, which will be used in
 instance scheduling.
@@ -1512,12 +1449,13 @@ Only one of nodeTypeFlexibility and nodeType can be specified.
 <a href="#state_node_type_flexibility_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type_<wbr>flexibility</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Dict[Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility]</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
 these properties. Only one of nodeTypeFlexibility and nodeType can
-be specified.  Structure is documented below.
+be specified.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1561,10 +1499,11 @@ If it is not provided, the provider region is used.
 <a href="#state_server_binding_python" style="color: inherit; text-decoration: inherit;">server_<wbr>binding</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Dict[Node<wbr>Template<wbr>Server<wbr>Binding]</a></span>
+        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines
-where the nodes should restart following a maintenance event.  Structure is documented below.
+where the nodes should restart following a maintenance event.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1736,8 +1675,8 @@ Use local SSD
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localssd_python">
-<a href="#localssd_python" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd</a>
+        <span id="local_ssd_python">
+<a href="#local_ssd_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1801,6 +1740,7 @@ software licenses tied to the underlying server characteristics
 such as physical sockets or cores, to avoid the need for
 additional licenses when maintenance occurs. However, VMs on such
 nodes will experience outages while maintenance is applied.
+Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SERVERS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1829,6 +1769,7 @@ software licenses tied to the underlying server characteristics
 such as physical sockets or cores, to avoid the need for
 additional licenses when maintenance occurs. However, VMs on such
 nodes will experience outages while maintenance is applied.
+Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SERVERS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1857,6 +1798,7 @@ software licenses tied to the underlying server characteristics
 such as physical sockets or cores, to avoid the need for
 additional licenses when maintenance occurs. However, VMs on such
 nodes will experience outages while maintenance is applied.
+Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SERVERS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1885,6 +1827,7 @@ software licenses tied to the underlying server characteristics
 such as physical sockets or cores, to avoid the need for
 additional licenses when maintenance occurs. However, VMs on such
 nodes will experience outages while maintenance is applied.
+Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SERVERS`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1905,6 +1848,6 @@ nodes will experience outages while maintenance is applied.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -27,7 +27,7 @@ and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServ
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_backend_service(</span>name=None<span class="p">, </span>project=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_backend_service(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBackendServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -1679,8 +1679,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="balancingmode_python">
-<a href="#balancingmode_python" style="color: inherit; text-decoration: inherit;">balancing<wbr>Mode</a>
+        <span id="balancing_mode_python">
+<a href="#balancing_mode_python" style="color: inherit; text-decoration: inherit;">balancing_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1689,8 +1689,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="capacityscaler_python">
-<a href="#capacityscaler_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>Scaler</a>
+        <span id="capacity_scaler_python">
+<a href="#capacity_scaler_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>scaler</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1720,8 +1720,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxconnections_python">
-<a href="#maxconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
+        <span id="max_connections_python">
+<a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1730,8 +1730,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxconnectionsperendpoint_python">
-<a href="#maxconnectionsperendpoint_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Endpoint</a>
+        <span id="max_connections_per_endpoint_python">
+<a href="#max_connections_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1740,8 +1740,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxconnectionsperinstance_python">
-<a href="#maxconnectionsperinstance_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Instance</a>
+        <span id="max_connections_per_instance_python">
+<a href="#max_connections_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1750,8 +1750,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxrate_python">
-<a href="#maxrate_python" style="color: inherit; text-decoration: inherit;">max<wbr>Rate</a>
+        <span id="max_rate_python">
+<a href="#max_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1760,8 +1760,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxrateperendpoint_python">
-<a href="#maxrateperendpoint_python" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Endpoint</a>
+        <span id="max_rate_per_endpoint_python">
+<a href="#max_rate_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1770,8 +1770,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxrateperinstance_python">
-<a href="#maxrateperinstance_python" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Instance</a>
+        <span id="max_rate_per_instance_python">
+<a href="#max_rate_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>instance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1780,8 +1780,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxutilization_python">
-<a href="#maxutilization_python" style="color: inherit; text-decoration: inherit;">max<wbr>Utilization</a>
+        <span id="max_utilization_python">
+<a href="#max_utilization_python" style="color: inherit; text-decoration: inherit;">max_<wbr>utilization</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1896,18 +1896,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="cachekeypolicies_python">
-<a href="#cachekeypolicies_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Policies</a>
+        <span id="cache_key_policies_python">
+<a href="#cache_key_policies_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecdnpolicycachekeypolicy">List[Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getbackendservicecdnpolicycachekeypolicy">List[Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="signedurlcachemaxagesec_python">
-<a href="#signedurlcachemaxagesec_python" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
+        <span id="signed_url_cache_max_age_sec_python">
+<a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2112,8 +2112,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="includehost_python">
-<a href="#includehost_python" style="color: inherit; text-decoration: inherit;">include<wbr>Host</a>
+        <span id="include_host_python">
+<a href="#include_host_python" style="color: inherit; text-decoration: inherit;">include_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2122,8 +2122,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="includeprotocol_python">
-<a href="#includeprotocol_python" style="color: inherit; text-decoration: inherit;">include<wbr>Protocol</a>
+        <span id="include_protocol_python">
+<a href="#include_protocol_python" style="color: inherit; text-decoration: inherit;">include_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2132,8 +2132,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="includequerystring_python">
-<a href="#includequerystring_python" style="color: inherit; text-decoration: inherit;">include<wbr>Query<wbr>String</a>
+        <span id="include_query_string_python">
+<a href="#include_query_string_python" style="color: inherit; text-decoration: inherit;">include_<wbr>query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2142,8 +2142,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="querystringblacklists_python">
-<a href="#querystringblacklists_python" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Blacklists</a>
+        <span id="query_string_blacklists_python">
+<a href="#query_string_blacklists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>blacklists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2152,8 +2152,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="querystringwhitelists_python">
-<a href="#querystringwhitelists_python" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Whitelists</a>
+        <span id="query_string_whitelists_python">
+<a href="#query_string_whitelists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>whitelists</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2388,28 +2388,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="connecttimeouts_python">
-<a href="#connecttimeouts_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeouts</a>
+        <span id="connect_timeouts_python">
+<a href="#connect_timeouts_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeouts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendservicecircuitbreakerconnecttimeout">List[Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker<wbr>Connect<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="#getbackendservicecircuitbreakerconnecttimeout">List[Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker<wbr>Connect<wbr>Timeout<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="maxconnections_python">
-<a href="#maxconnections_python" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="maxpendingrequests_python">
-<a href="#maxpendingrequests_python" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Requests</a>
+        <span id="max_connections_python">
+<a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2418,8 +2408,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxrequests_python">
-<a href="#maxrequests_python" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
+        <span id="max_pending_requests_python">
+<a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2428,8 +2418,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxrequestsperconnection_python">
-<a href="#maxrequestsperconnection_python" style="color: inherit; text-decoration: inherit;">max<wbr>Requests<wbr>Per<wbr>Connection</a>
+        <span id="max_requests_python">
+<a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2438,8 +2428,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxretries_python">
-<a href="#maxretries_python" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
+        <span id="max_requests_per_connection_python">
+<a href="#max_requests_per_connection_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests_<wbr>per_<wbr>connection</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_retries_python">
+<a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2710,18 +2710,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="httpcookies_python">
-<a href="#httpcookies_python" style="color: inherit; text-decoration: inherit;">http<wbr>Cookies</a>
+        <span id="http_cookies_python">
+<a href="#http_cookies_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcooky">List[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky]</a></span>
+        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcooky">List[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="httpheadername_python">
-<a href="#httpheadername_python" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Name</a>
+        <span id="http_header_name_python">
+<a href="#http_header_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2730,8 +2730,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="minimumringsize_python">
-<a href="#minimumringsize_python" style="color: inherit; text-decoration: inherit;">minimum<wbr>Ring<wbr>Size</a>
+        <span id="minimum_ring_size_python">
+<a href="#minimum_ring_size_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ring_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2904,7 +2904,7 @@ The following output properties are available:
 <a href="#ttls_python" style="color: inherit; text-decoration: inherit;">ttls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcookyttl">List[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Ttl]</a></span>
+        <span class="property-type"><a href="#getbackendserviceconsistenthashhttpcookyttl">List[Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Ttl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3172,8 +3172,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="oauth2clientid_python">
-<a href="#oauth2clientid_python" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Id</a>
+        <span id="oauth2_client_id_python">
+<a href="#oauth2_client_id_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3182,8 +3182,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="oauth2clientsecret_python">
-<a href="#oauth2clientsecret_python" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret</a>
+        <span id="oauth2_client_secret_python">
+<a href="#oauth2_client_secret_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3192,8 +3192,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="oauth2clientsecretsha256_python">
-<a href="#oauth2clientsecretsha256_python" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret<wbr>Sha256</a>
+        <span id="oauth2_client_secret_sha256_python">
+<a href="#oauth2_client_secret_sha256_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret_<wbr>sha256</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3318,8 +3318,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="samplerate_python">
-<a href="#samplerate_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
+        <span id="sample_rate_python">
+<a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3704,28 +3704,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="baseejectiontimes_python">
-<a href="#baseejectiontimes_python" style="color: inherit; text-decoration: inherit;">base<wbr>Ejection<wbr>Times</a>
+        <span id="base_ejection_times_python">
+<a href="#base_ejection_times_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>times</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceoutlierdetectionbaseejectiontime">List[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time]</a></span>
+        <span class="property-type"><a href="#getbackendserviceoutlierdetectionbaseejectiontime">List[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="consecutiveerrors_python">
-<a href="#consecutiveerrors_python" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Errors</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="consecutivegatewayfailure_python">
-<a href="#consecutivegatewayfailure_python" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Gateway<wbr>Failure</a>
+        <span id="consecutive_errors_python">
+<a href="#consecutive_errors_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3734,8 +3724,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enforcingconsecutiveerrors_python">
-<a href="#enforcingconsecutiveerrors_python" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Errors</a>
+        <span id="consecutive_gateway_failure_python">
+<a href="#consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>gateway_<wbr>failure</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3744,8 +3734,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enforcingconsecutivegatewayfailure_python">
-<a href="#enforcingconsecutivegatewayfailure_python" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Gateway<wbr>Failure</a>
+        <span id="enforcing_consecutive_errors_python">
+<a href="#enforcing_consecutive_errors_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>errors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3754,8 +3744,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enforcingsuccessrate_python">
-<a href="#enforcingsuccessrate_python" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Success<wbr>Rate</a>
+        <span id="enforcing_consecutive_gateway_failure_python">
+<a href="#enforcing_consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>gateway_<wbr>failure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enforcing_success_rate_python">
+<a href="#enforcing_success_rate_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>success_<wbr>rate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3768,14 +3768,14 @@ The following output properties are available:
 <a href="#intervals_python" style="color: inherit; text-decoration: inherit;">intervals</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbackendserviceoutlierdetectioninterval">List[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval]</a></span>
+        <span class="property-type"><a href="#getbackendserviceoutlierdetectioninterval">List[Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="maxejectionpercent_python">
-<a href="#maxejectionpercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Ejection<wbr>Percent</a>
+        <span id="max_ejection_percent_python">
+<a href="#max_ejection_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ejection_<wbr>percent</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3784,8 +3784,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="successrateminimumhosts_python">
-<a href="#successrateminimumhosts_python" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Minimum<wbr>Hosts</a>
+        <span id="success_rate_minimum_hosts_python">
+<a href="#success_rate_minimum_hosts_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>minimum_<wbr>hosts</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3794,8 +3794,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="successraterequestvolume_python">
-<a href="#successraterequestvolume_python" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Request<wbr>Volume</a>
+        <span id="success_rate_request_volume_python">
+<a href="#success_rate_request_volume_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>request_<wbr>volume</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3804,8 +3804,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="successratestdevfactor_python">
-<a href="#successratestdevfactor_python" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Stdev<wbr>Factor</a>
+        <span id="success_rate_stdev_factor_python">
+<a href="#success_rate_stdev_factor_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>stdev_<wbr>factor</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4082,6 +4082,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -40,221 +40,6 @@ default 'root'@'%' user with no password. This user will be deleted by the provi
 instance creation. You should use `gcp.sql.User` to define a custom user with
 a restricted host and strong password.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### SQL Second Generation Instance
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var master = new Gcp.Sql.DatabaseInstance("master", new Gcp.Sql.DatabaseInstanceArgs
-        {
-            DatabaseVersion = "POSTGRES_11",
-            Region = "us-central1",
-            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
-            {
-                Tier = "db-f1-micro",
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = sql.NewDatabaseInstance(ctx, "master", &sql.DatabaseInstanceArgs{
-			DatabaseVersion: pulumi.String("POSTGRES_11"),
-			Region:          pulumi.String("us-central1"),
-			Settings: &sql.DatabaseInstanceSettingsArgs{
-				Tier: pulumi.String("db-f1-micro"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-master = gcp.sql.DatabaseInstance("master",
-    database_version="POSTGRES_11",
-    region="us-central1",
-    settings={
-        "tier": "db-f1-micro",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const master = new gcp.sql.DatabaseInstance("master", {
-    databaseVersion: "POSTGRES_11",
-    region: "us-central1",
-    settings: {
-        // Second-generation instance tiers are based on the machine
-        // type. See argument reference below.
-        tier: "db-f1-micro",
-    },
-});
-```
-
-{{% /example %}}
-
-### Private IP Instance
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-using Random = Pulumi.Random;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var privateNetwork = new Gcp.Compute.Network("privateNetwork", new Gcp.Compute.NetworkArgs
-        {
-        });
-        var privateIpAddress = new Gcp.Compute.GlobalAddress("privateIpAddress", new Gcp.Compute.GlobalAddressArgs
-        {
-            Purpose = "VPC_PEERING",
-            AddressType = "INTERNAL",
-            PrefixLength = 16,
-            Network = privateNetwork.Id,
-        });
-        var privateVpcConnection = new Gcp.ServiceNetworking.Connection("privateVpcConnection", new Gcp.ServiceNetworking.ConnectionArgs
-        {
-            Network = privateNetwork.Id,
-            Service = "servicenetworking.googleapis.com",
-            ReservedPeeringRanges = 
-            {
-                privateIpAddress.Name,
-            },
-        });
-        var dbNameSuffix = new Random.RandomId("dbNameSuffix", new Random.RandomIdArgs
-        {
-            ByteLength = 4,
-        });
-        var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
-        {
-            Region = "us-central1",
-            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
-            {
-                Tier = "db-f1-micro",
-                Ip_configuration = 
-                {
-                    { "ipv4Enabled", false },
-                    { "privateNetwork", privateNetwork.Id },
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-import pulumi_random as random
-
-private_network = gcp.compute.Network("privateNetwork")
-private_ip_address = gcp.compute.GlobalAddress("privateIpAddress",
-    purpose="VPC_PEERING",
-    address_type="INTERNAL",
-    prefix_length=16,
-    network=private_network.id)
-private_vpc_connection = gcp.servicenetworking.Connection("privateVpcConnection",
-    network=private_network.id,
-    service="servicenetworking.googleapis.com",
-    reserved_peering_ranges=[private_ip_address.name])
-db_name_suffix = random.RandomId("dbNameSuffix", byte_length=4)
-instance = gcp.sql.DatabaseInstance("instance",
-    region="us-central1",
-    settings={
-        "tier": "db-f1-micro",
-        "ip_configuration": {
-            "ipv4Enabled": False,
-            "privateNetwork": private_network.id,
-        },
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-import * as random from "@pulumi/random";
-
-const privateNetwork = new gcp.compute.Network("privateNetwork", {});
-const privateIpAddress = new gcp.compute.GlobalAddress("privateIpAddress", {
-    purpose: "VPC_PEERING",
-    addressType: "INTERNAL",
-    prefixLength: 16,
-    network: privateNetwork.id,
-});
-const privateVpcConnection = new gcp.servicenetworking.Connection("privateVpcConnection", {
-    network: privateNetwork.id,
-    service: "servicenetworking.googleapis.com",
-    reservedPeeringRanges: [privateIpAddress.name],
-});
-const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
-const instance = new gcp.sql.DatabaseInstance("instance", {
-    region: "us-central1",
-    settings: {
-        tier: "db-f1-micro",
-        ip_configuration: {
-            ipv4Enabled: false,
-            privateNetwork: privateNetwork.id,
-        },
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a DatabaseInstance Resource {#create}
@@ -266,7 +51,7 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/sql/#DatabaseInstance">DatabaseInstance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>database_version=None<span class="p">, </span>encryption_key_name=None<span class="p">, </span>master_instance_name=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>replica_configuration=None<span class="p">, </span>root_password=None<span class="p">, </span>settings=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/sql/#pulumi_gcp.sql.DatabaseInstance">DatabaseInstance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -828,7 +613,7 @@ configuration is detailed below.
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettings">Dict[Database<wbr>Instance<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettings">Database<wbr>Instance<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below.
@@ -926,7 +711,7 @@ make sure you understand this.
 <a href="#replica_configuration_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Dict[Database<wbr>Instance<wbr>Replica<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
@@ -1358,7 +1143,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
 <a href="#server_ca_cert_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceservercacert">Dict[Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert]</a></span>
+        <span class="property-type"><a href="#databaseinstanceservercacert">Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1393,7 +1178,8 @@ Get an existing DatabaseInstance resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>connection_name=None<span class="p">, </span>database_version=None<span class="p">, </span>encryption_key_name=None<span class="p">, </span>first_ip_address=None<span class="p">, </span>ip_addresses=None<span class="p">, </span>master_instance_name=None<span class="p">, </span>name=None<span class="p">, </span>private_ip_address=None<span class="p">, </span>project=None<span class="p">, </span>public_ip_address=None<span class="p">, </span>region=None<span class="p">, </span>replica_configuration=None<span class="p">, </span>root_password=None<span class="p">, </span>self_link=None<span class="p">, </span>server_ca_cert=None<span class="p">, </span>service_account_email_address=None<span class="p">, </span>settings=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[List[DatabaseInstanceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_ca_cert</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceServerCaCertArgs]</span> = None<span class="p">, </span><span class="nx">service_account_email_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">) -&gt;</span> DatabaseInstance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1401,7 +1187,7 @@ Get an existing DatabaseInstance resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.DatabaseInstance.html">DatabaseInstance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.DatabaseInstanceState.html">DatabaseInstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.DatabaseInstance.html">DatabaseInstance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.DatabaseInstanceState.html">DatabaseInstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2218,7 +2004,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
 <a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceipaddress">List[Database<wbr>Instance<wbr>Ip<wbr>Address]</a></span>
+        <span class="property-type"><a href="#databaseinstanceipaddress">List[Database<wbr>Instance<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2302,7 +2088,7 @@ make sure you understand this.
 <a href="#state_replica_configuration_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Dict[Database<wbr>Instance<wbr>Replica<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
@@ -2336,7 +2122,7 @@ configuration is detailed below.
 <a href="#state_server_ca_cert_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ca_<wbr>cert</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstanceservercacert">Dict[Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert]</a></span>
+        <span class="property-type"><a href="#databaseinstanceservercacert">Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2358,7 +2144,7 @@ instance.
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettings">Dict[Database<wbr>Instance<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettings">Database<wbr>Instance<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below.
@@ -2520,8 +2306,8 @@ configuration is detailed below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timetoretire_python">
-<a href="#timetoretire_python" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Retire</a>
+        <span id="time_to_retire_python">
+<a href="#time_to_retire_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>retire</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2976,8 +2762,8 @@ value is checked during the SSL handshake.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cacertificate_python">
-<a href="#cacertificate_python" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate</a>
+        <span id="ca_certificate_python">
+<a href="#ca_certificate_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2988,8 +2774,8 @@ certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientcertificate_python">
-<a href="#clientcertificate_python" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
+        <span id="client_certificate_python">
+<a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3000,8 +2786,8 @@ certificate.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clientkey_python">
-<a href="#clientkey_python" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3012,8 +2798,8 @@ corresponding public key in encoded in the `client_certificate`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="connectretryinterval_python">
-<a href="#connectretryinterval_python" style="color: inherit; text-decoration: inherit;">connect<wbr>Retry<wbr>Interval</a>
+        <span id="connect_retry_interval_python">
+<a href="#connect_retry_interval_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>retry_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3024,8 +2810,8 @@ between connect retries.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dumpfilepath_python">
-<a href="#dumpfilepath_python" style="color: inherit; text-decoration: inherit;">dump<wbr>File<wbr>Path</a>
+        <span id="dump_file_path_python">
+<a href="#dump_file_path_python" style="color: inherit; text-decoration: inherit;">dump_<wbr>file_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3036,8 +2822,8 @@ instances are created. Format is `gs://bucket/filename`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="failovertarget_python">
-<a href="#failovertarget_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Target</a>
+        <span id="failover_target_python">
+<a href="#failover_target_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>target</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3050,8 +2836,8 @@ the new master instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="masterheartbeatperiod_python">
-<a href="#masterheartbeatperiod_python" style="color: inherit; text-decoration: inherit;">master<wbr>Heartbeat<wbr>Period</a>
+        <span id="master_heartbeat_period_python">
+<a href="#master_heartbeat_period_python" style="color: inherit; text-decoration: inherit;">master_<wbr>heartbeat_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3073,8 +2859,8 @@ heartbeats.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sslcipher_python">
-<a href="#sslcipher_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cipher</a>
+        <span id="ssl_cipher_python">
+<a href="#ssl_cipher_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cipher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3094,8 +2880,8 @@ heartbeats.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="verifyservercertificate_python">
-<a href="#verifyservercertificate_python" style="color: inherit; text-decoration: inherit;">verify<wbr>Server<wbr>Certificate</a>
+        <span id="verify_server_certificate_python">
+<a href="#verify_server_certificate_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>server_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4010,8 +3796,8 @@ and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Ty
 
     <dt class="property-optional"
             title="Optional">
-        <span id="activationpolicy_python">
-<a href="#activationpolicy_python" style="color: inherit; text-decoration: inherit;">activation<wbr>Policy</a>
+        <span id="activation_policy_python">
+<a href="#activation_policy_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4022,8 +3808,8 @@ active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="authorizedgaeapplications_python">
-<a href="#authorizedgaeapplications_python" style="color: inherit; text-decoration: inherit;">authorized<wbr>Gae<wbr>Applications</a>
+        <span id="authorized_gae_applications_python">
+<a href="#authorized_gae_applications_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>gae_<wbr>applications</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4036,8 +3822,8 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availabilitytype_python">
-<a href="#availabilitytype_python" style="color: inherit; text-decoration: inherit;">availability<wbr>Type</a>
+        <span id="availability_type_python">
+<a href="#availability_type_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4050,18 +3836,18 @@ instances, ensure that `settings.backup_configuration.enabled` and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="backupconfiguration_python">
-<a href="#backupconfiguration_python" style="color: inherit; text-decoration: inherit;">backup<wbr>Configuration</a>
+        <span id="backup_configuration_python">
+<a href="#backup_configuration_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Dict[Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="crashsafereplication_python">
-<a href="#crashsafereplication_python" style="color: inherit; text-decoration: inherit;">crash<wbr>Safe<wbr>Replication</a>
+        <span id="crash_safe_replication_python">
+<a href="#crash_safe_replication_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>safe_<wbr>replication</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4075,18 +3861,18 @@ when crash-safe replication flags are enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="databaseflags_python">
-<a href="#databaseflags_python" style="color: inherit; text-decoration: inherit;">database<wbr>Flags</a>
+        <span id="database_flags_python">
+<a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">List[Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">List[Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskautoresize_python">
-<a href="#diskautoresize_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Autoresize</a>
+        <span id="disk_autoresize_python">
+<a href="#disk_autoresize_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>autoresize</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4096,8 +3882,8 @@ when crash-safe replication flags are enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disksize_python">
-<a href="#disksize_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
+        <span id="disk_size_python">
+<a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4107,8 +3893,8 @@ when crash-safe replication flags are enabled.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="disktype_python">
-<a href="#disktype_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4122,34 +3908,34 @@ when crash-safe replication flags are enabled.
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Dict[Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="locationpreference_python">
-<a href="#locationpreference_python" style="color: inherit; text-decoration: inherit;">location<wbr>Preference</a>
+        <span id="location_preference_python">
+<a href="#location_preference_python" style="color: inherit; text-decoration: inherit;">location_<wbr>preference</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Dict[Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maintenancewindow_python">
-<a href="#maintenancewindow_python" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Dict[Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pricingplan_python">
-<a href="#pricingplan_python" style="color: inherit; text-decoration: inherit;">pricing<wbr>Plan</a>
+        <span id="pricing_plan_python">
+<a href="#pricing_plan_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>plan</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4159,8 +3945,8 @@ when crash-safe replication flags are enabled.
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="replicationtype_python">
-<a href="#replicationtype_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Type</a>
+        <span id="replication_type_python">
+<a href="#replication_type_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4177,7 +3963,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value user label pairs to assign to the instance.
 {{% /md %}}</dd>
@@ -4253,6 +4039,17 @@ Cannot be used with Postgres.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="pointintimerecoveryenabled_csharp">
+<a href="#pointintimerecoveryenabled_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span> 
@@ -4303,6 +4100,17 @@ Cannot be used with Postgres.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pointintimerecoveryenabled_go">
+<a href="#pointintimerecoveryenabled_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4359,6 +4167,17 @@ Cannot be used with Postgres.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="pointintimerecoveryenabled_nodejs">
+<a href="#pointintimerecoveryenabled_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time<wbr>Recovery<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span> 
@@ -4378,8 +4197,8 @@ configuration starts.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="binarylogenabled_python">
-<a href="#binarylogenabled_python" style="color: inherit; text-decoration: inherit;">binary<wbr>Log<wbr>Enabled</a>
+        <span id="binary_log_enabled_python">
+<a href="#binary_log_enabled_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>log_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4412,8 +4231,19 @@ Cannot be used with Postgres.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+        <span id="point_in_time_recovery_enabled_python">
+<a href="#point_in_time_recovery_enabled_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>recovery_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4762,18 +4592,18 @@ for users connecting over IP.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authorizednetworks_python">
-<a href="#authorizednetworks_python" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
+        <span id="authorized_networks_python">
+<a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">List[Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network]</a></span>
+        <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">List[Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv4enabled_python">
-<a href="#ipv4enabled_python" style="color: inherit; text-decoration: inherit;">ipv4Enabled</a>
+        <span id="ipv4_enabled_python">
+<a href="#ipv4_enabled_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4785,8 +4615,8 @@ a public IPV4 address. Either `ipv4_enabled` must be enabled or a
 
     <dt class="property-optional"
             title="Optional">
-        <span id="privatenetwork_python">
-<a href="#privatenetwork_python" style="color: inherit; text-decoration: inherit;">private<wbr>Network</a>
+        <span id="private_network_python">
+<a href="#private_network_python" style="color: inherit; text-decoration: inherit;">private_<wbr>network</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4800,8 +4630,8 @@ This setting can be updated, but it cannot be removed after it is set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requiressl_python">
-<a href="#requiressl_python" style="color: inherit; text-decoration: inherit;">require<wbr>Ssl</a>
+        <span id="require_ssl_python">
+<a href="#require_ssl_python" style="color: inherit; text-decoration: inherit;">require_<wbr>ssl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5120,8 +4950,8 @@ in. Must be in the same region as this instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="followgaeapplication_python">
-<a href="#followgaeapplication_python" style="color: inherit; text-decoration: inherit;">follow<wbr>Gae<wbr>Application</a>
+        <span id="follow_gae_application_python">
+<a href="#follow_gae_application_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>gae_<wbr>application</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5314,8 +5144,8 @@ in. Must be in the same region as this instance.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="updatetrack_python">
-<a href="#updatetrack_python" style="color: inherit; text-decoration: inherit;">update<wbr>Track</a>
+        <span id="update_track_python">
+<a href="#update_track_python" style="color: inherit; text-decoration: inherit;">update_<wbr>track</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5342,6 +5172,6 @@ in. Must be in the same region as this instance.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

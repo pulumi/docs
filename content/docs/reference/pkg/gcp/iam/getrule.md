@@ -12,63 +12,6 @@ meta_desc: "Explore the GetRule function of the iam module, including examples, 
 
 Use this data source to get information about a Google IAM Role.
 
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const roleinfo = gcp.iam.getRule({
-    name: "roles/compute.viewer",
-});
-export const theRolePermissions = roleinfo.then(roleinfo => roleinfo.includedPermissions);
-```
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-roleinfo = gcp.iam.get_rule(name="roles/compute.viewer")
-pulumi.export("theRolePermissions", roleinfo.included_permissions)
-```
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var roleinfo = Output.Create(Gcp.Iam.GetRule.InvokeAsync(new Gcp.Iam.GetRuleArgs
-        {
-            Name = "roles/compute.viewer",
-        }));
-        this.TheRolePermissions = roleinfo.Apply(roleinfo => roleinfo.IncludedPermissions);
-    }
-
-    [Output("theRolePermissions")]
-    public Output<string> TheRolePermissions { get; set; }
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iam"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		roleinfo, err := iam.GetRule(ctx, &iam.GetRuleArgs{
-			Name: "roles/compute.viewer",
-		}, nil)
-		if err != nil {
-			return err
-		}
-		ctx.Export("theRolePermissions", roleinfo.IncludedPermissions)
-		return nil
-	})
-}
-```
-
 
 
 ## Using GetRule {#using}
@@ -82,7 +25,7 @@ func main() {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_rule(</span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_rule(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRuleResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -447,6 +390,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

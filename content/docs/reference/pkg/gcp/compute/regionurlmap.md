@@ -24,7 +24,7 @@ that you define for the host and path of an incoming URL.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#RegionUrlMap">RegionUrlMap</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_service=None<span class="p">, </span>default_url_redirect=None<span class="p">, </span>description=None<span class="p">, </span>host_rules=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>tests=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionUrlMap">RegionUrlMap</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[RegionUrlMapDefaultUrlRedirectArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[List[RegionUrlMapHostRuleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[List[RegionUrlMapPathMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[List[RegionUrlMapTestArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -219,7 +219,8 @@ the URL's path portion.
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -241,7 +242,8 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmaphostrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
+    <dd>{{% md %}}The list of HostRules to use against the URL.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -301,7 +303,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#regionurlmaptest">List&lt;Region<wbr>Url<wbr>Map<wbr>Test<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will
-succeed only if all of the test cases pass.  Structure is documented below.
+succeed only if all of the test cases pass.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -334,7 +337,8 @@ the URL's path portion.
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -356,7 +360,8 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmaphostrule">[]Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
+    <dd>{{% md %}}The list of HostRules to use against the URL.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -416,7 +421,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#regionurlmaptest">[]Region<wbr>Url<wbr>Map<wbr>Test</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will
-succeed only if all of the test cases pass.  Structure is documented below.
+succeed only if all of the test cases pass.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -449,7 +455,8 @@ the URL's path portion.
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -471,7 +478,8 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmaphostrule">Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
+    <dd>{{% md %}}The list of HostRules to use against the URL.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -531,7 +539,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#regionurlmaptest">Region<wbr>Url<wbr>Map<wbr>Test[]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will
-succeed only if all of the test cases pass.  Structure is documented below.
+succeed only if all of the test cases pass.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -560,11 +569,12 @@ the URL's path portion.
 <a href="#default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Dict[Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect]</a></span>
+        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -584,9 +594,10 @@ defaultRouteAction must not be set.  Structure is documented below.
 <a href="#host_rules_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaphostrule">List[Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#regionurlmaphostrule">List[Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
+    <dd>{{% md %}}The list of HostRules to use against the URL.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -607,7 +618,7 @@ request, in the absence of which the request match fails.
 <a href="#path_matchers_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcher">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcher">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of
 the URL if the hostRule matches the URL's host portion.
@@ -643,10 +654,11 @@ If it is not provided, the provider region is used.
 <a href="#tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaptest">List[Region<wbr>Url<wbr>Map<wbr>Test]</a></span>
+        <span class="property-type"><a href="#regionurlmaptest">List[Region<wbr>Url<wbr>Map<wbr>Test<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will
-succeed only if all of the test cases pass.  Structure is documented below.
+succeed only if all of the test cases pass.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -923,7 +935,8 @@ Get an existing RegionUrlMap resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>creation_timestamp=None<span class="p">, </span>default_service=None<span class="p">, </span>default_url_redirect=None<span class="p">, </span>description=None<span class="p">, </span>fingerprint=None<span class="p">, </span>host_rules=None<span class="p">, </span>map_id=None<span class="p">, </span>name=None<span class="p">, </span>path_matchers=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>tests=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[RegionUrlMapDefaultUrlRedirectArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[List[RegionUrlMapHostRuleArgs]]</span> = None<span class="p">, </span><span class="nx">map_id</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[List[RegionUrlMapPathMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[List[RegionUrlMapTestArgs]]</span> = None<span class="p">) -&gt;</span> RegionUrlMap</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -931,7 +944,7 @@ Get an existing RegionUrlMap resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionUrlMap.html">RegionUrlMap</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionUrlMapState.html">RegionUrlMapState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionUrlMap.html">RegionUrlMap</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionUrlMapState.html">RegionUrlMapState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1071,7 +1084,8 @@ the URL's path portion.
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1104,7 +1118,8 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmaphostrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
+    <dd>{{% md %}}The list of HostRules to use against the URL.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1186,7 +1201,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#regionurlmaptest">List&lt;Region<wbr>Url<wbr>Map<wbr>Test<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will
-succeed only if all of the test cases pass.  Structure is documented below.
+succeed only if all of the test cases pass.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1230,7 +1246,8 @@ the URL's path portion.
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1263,7 +1280,8 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmaphostrule">[]Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
+    <dd>{{% md %}}The list of HostRules to use against the URL.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1345,7 +1363,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#regionurlmaptest">[]Region<wbr>Url<wbr>Map<wbr>Test</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will
-succeed only if all of the test cases pass.  Structure is documented below.
+succeed only if all of the test cases pass.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1389,7 +1408,8 @@ the URL's path portion.
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1422,7 +1442,8 @@ defaultRouteAction must not be set.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmaphostrule">Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
+    <dd>{{% md %}}The list of HostRules to use against the URL.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1504,7 +1525,8 @@ If it is not provided, the provider region is used.
         <span class="property-type"><a href="#regionurlmaptest">Region<wbr>Url<wbr>Map<wbr>Test[]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will
-succeed only if all of the test cases pass.  Structure is documented below.
+succeed only if all of the test cases pass.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1544,11 +1566,12 @@ the URL's path portion.
 <a href="#state_default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Dict[Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect]</a></span>
+        <span class="property-type"><a href="#regionurlmapdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1579,9 +1602,10 @@ defaultRouteAction must not be set.  Structure is documented below.
 <a href="#state_host_rules_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaphostrule">List[Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#regionurlmaphostrule">List[Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.  Structure is documented below.
+    <dd>{{% md %}}The list of HostRules to use against the URL.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1613,7 +1637,7 @@ request, in the absence of which the request match fails.
 <a href="#state_path_matchers_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matchers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcher">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcher">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of
 the URL if the hostRule matches the URL's host portion.
@@ -1660,10 +1684,11 @@ If it is not provided, the provider region is used.
 <a href="#state_tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaptest">List[Region<wbr>Url<wbr>Map<wbr>Test]</a></span>
+        <span class="property-type"><a href="#regionurlmaptest">List[Region<wbr>Url<wbr>Map<wbr>Test<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will
-succeed only if all of the test cases pass.  Structure is documented below.
+succeed only if all of the test cases pass.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1778,12 +1803,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -1873,12 +1898,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -1968,12 +1993,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -1986,8 +2011,8 @@ the request method will be retained.
 
     <dt class="property-required"
             title="Required">
-        <span id="stripquery_python">
-<a href="#stripquery_python" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
+        <span id="strip_query_python">
+<a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2000,8 +2025,8 @@ This field is required to ensure an empty block is not set. The normal default v
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostredirect_python">
-<a href="#hostredirect_python" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
+        <span id="host_redirect_python">
+<a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2012,8 +2037,8 @@ supplied in the request. The value must be between 1 and 255 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpsredirect_python">
-<a href="#httpsredirect_python" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
+        <span id="https_redirect_python">
+<a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2026,8 +2051,8 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathredirect_python">
-<a href="#pathredirect_python" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
+        <span id="path_redirect_python">
+<a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2041,8 +2066,8 @@ characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixredirect_python">
-<a href="#prefixredirect_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
+        <span id="prefix_redirect_python">
+<a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2056,19 +2081,19 @@ the redirect. The value must be between 1 and 1024 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectresponsecode_python">
-<a href="#redirectresponsecode_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
+        <span id="redirect_response_code_python">
+<a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -2245,8 +2270,8 @@ the pattern by either - or ..
 
     <dt class="property-required"
             title="Required">
-        <span id="pathmatcher_python">
-<a href="#pathmatcher_python" style="color: inherit; text-decoration: inherit;">path<wbr>Matcher</a>
+        <span id="path_matcher_python">
+<a href="#path_matcher_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matcher</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2326,7 +2351,8 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2353,7 +2379,8 @@ on simple path matching is all that's required. The order by which path rules
 are specified does not matter. Matches are always done on the longest-path-first
 basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
 irrespective of the order in which those paths appear in this list. Within a
-given pathMatcher, only one of pathRules or routeRules must be set.  Structure is documented below.
+given pathMatcher, only one of pathRules or routeRules must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2369,7 +2396,8 @@ advanced route matching and routing actions are desired. The order of specifying
 routeRules matters: the first rule that matches will cause its specified routing
 action to take effect. Within a given pathMatcher, only one of pathRules or
 routeRules must be set. routeRules are not supported in UrlMaps intended for
-External load balancers.  Structure is documented below.
+External load balancers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2414,7 +2442,8 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2441,7 +2470,8 @@ on simple path matching is all that's required. The order by which path rules
 are specified does not matter. Matches are always done on the longest-path-first
 basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
 irrespective of the order in which those paths appear in this list. Within a
-given pathMatcher, only one of pathRules or routeRules must be set.  Structure is documented below.
+given pathMatcher, only one of pathRules or routeRules must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2457,7 +2487,8 @@ advanced route matching and routing actions are desired. The order of specifying
 routeRules matters: the first rule that matches will cause its specified routing
 action to take effect. Within a given pathMatcher, only one of pathRules or
 routeRules must be set. routeRules are not supported in UrlMaps intended for
-External load balancers.  Structure is documented below.
+External load balancers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2502,7 +2533,8 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2529,7 +2561,8 @@ on simple path matching is all that's required. The order by which path rules
 are specified does not matter. Matches are always done on the longest-path-first
 basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
 irrespective of the order in which those paths appear in this list. Within a
-given pathMatcher, only one of pathRules or routeRules must be set.  Structure is documented below.
+given pathMatcher, only one of pathRules or routeRules must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2545,7 +2578,8 @@ advanced route matching and routing actions are desired. The order of specifying
 routeRules matters: the first rule that matches will cause its specified routing
 action to take effect. Within a given pathMatcher, only one of pathRules or
 routeRules must be set. routeRules are not supported in UrlMaps intended for
-External load balancers.  Structure is documented below.
+External load balancers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2586,11 +2620,12 @@ request, in the absence of which the request match fails.
 <a href="#default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherdefaulturlredirect">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherdefaulturlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set.  Structure is documented below.
+defaultRouteAction must not be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2606,34 +2641,36 @@ defaultRouteAction must not be set.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathrules_python">
-<a href="#pathrules_python" style="color: inherit; text-decoration: inherit;">path<wbr>Rules</a>
+        <span id="path_rules_python">
+<a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrule">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrule">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
 on simple path matching is all that's required. The order by which path rules
 are specified does not matter. Matches are always done on the longest-path-first
 basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
 irrespective of the order in which those paths appear in this list. Within a
-given pathMatcher, only one of pathRules or routeRules must be set.  Structure is documented below.
+given pathMatcher, only one of pathRules or routeRules must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routerules_python">
-<a href="#routerules_python" style="color: inherit; text-decoration: inherit;">route<wbr>Rules</a>
+        <span id="route_rules_python">
+<a href="#route_rules_python" style="color: inherit; text-decoration: inherit;">route_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterule">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterule">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
 advanced route matching and routing actions are desired. The order of specifying
 routeRules matters: the first rule that matches will cause its specified routing
 action to take effect. Within a given pathMatcher, only one of pathRules or
 routeRules must be set. routeRules are not supported in UrlMaps intended for
-External load balancers.  Structure is documented below.
+External load balancers.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2740,12 +2777,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -2835,12 +2872,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -2930,12 +2967,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -2948,8 +2985,8 @@ the request method will be retained.
 
     <dt class="property-required"
             title="Required">
-        <span id="stripquery_python">
-<a href="#stripquery_python" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
+        <span id="strip_query_python">
+<a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2962,8 +2999,8 @@ This field is required to ensure an empty block is not set. The normal default v
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostredirect_python">
-<a href="#hostredirect_python" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
+        <span id="host_redirect_python">
+<a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2974,8 +3011,8 @@ supplied in the request. The value must be between 1 and 255 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpsredirect_python">
-<a href="#httpsredirect_python" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
+        <span id="https_redirect_python">
+<a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2988,8 +3025,8 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathredirect_python">
-<a href="#pathredirect_python" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
+        <span id="path_redirect_python">
+<a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3003,8 +3040,8 @@ characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixredirect_python">
-<a href="#prefixredirect_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
+        <span id="prefix_redirect_python">
+<a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3018,19 +3055,19 @@ the redirect. The value must be between 1 and 1024 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectresponsecode_python">
-<a href="#redirectresponsecode_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
+        <span id="redirect_response_code_python">
+<a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -3086,7 +3123,8 @@ actions like URL rewrites, header transformations, etc. prior to forwarding the
 request to the selected backend. If routeAction specifies any
 weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
-or urlRedirect must be set.  Structure is documented below.
+or urlRedirect must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3110,7 +3148,8 @@ or urlRedirect must be set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
 by urlRedirect. If urlRedirect is specified, service or routeAction must not
-be set.  Structure is documented below.
+be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3147,7 +3186,8 @@ actions like URL rewrites, header transformations, etc. prior to forwarding the
 request to the selected backend. If routeAction specifies any
 weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
-or urlRedirect must be set.  Structure is documented below.
+or urlRedirect must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3171,7 +3211,8 @@ or urlRedirect must be set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
 by urlRedirect. If urlRedirect is specified, service or routeAction must not
-be set.  Structure is documented below.
+be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3208,7 +3249,8 @@ actions like URL rewrites, header transformations, etc. prior to forwarding the
 request to the selected backend. If routeAction specifies any
 weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
-or urlRedirect must be set.  Structure is documented below.
+or urlRedirect must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3232,7 +3274,8 @@ or urlRedirect must be set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
 by urlRedirect. If urlRedirect is specified, service or routeAction must not
-be set.  Structure is documented below.
+be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3258,18 +3301,19 @@ allowed here.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routeaction_python">
-<a href="#routeaction_python" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
+        <span id="route_action_python">
+<a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteaction">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching path, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
 request to the selected backend. If routeAction specifies any
 weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
-or urlRedirect must be set.  Structure is documented below.
+or urlRedirect must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3285,15 +3329,16 @@ or urlRedirect must be set.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlredirect_python">
-<a href="#urlredirect_python" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
+        <span id="url_redirect_python">
+<a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
 by urlRedirect. If urlRedirect is specified, service or routeAction must not
-be set.  Structure is documented below.
+be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3330,7 +3375,8 @@ be set.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+Recommendation for Cross Origin Resource Sharing
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3347,7 +3393,8 @@ when clients send requests to a backend service, delays can be introduced by
 Loadbalancer on a percentage of requests before sending those request to the
 backend service. Similarly requests from clients can be aborted by the
 Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+ignored by clients that are configured with a fault_injection_policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3361,7 +3408,8 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
 shadowed to a separate mirrored backend service. Loadbalancer does not wait for
 responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+service, the host / authority header is suffixed with -shadow.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3372,7 +3420,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+    <dd>{{% md %}}Specifies the retry policy associated with this route.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3386,7 +3435,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
 the request is has been fully processed (i.e. end-of-stream) up until the
 response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+specified, the default value is 15 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3398,7 +3448,8 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+the matched service
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3416,7 +3467,8 @@ service, there must be one  weightedBackendService with weight set to a non 0
 number. Once a backendService is identified and before forwarding the request to
 the backend service, advanced routing actions like Url rewrites and header
 transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+HttpRouteAction.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3435,7 +3487,8 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+Recommendation for Cross Origin Resource Sharing
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3452,7 +3505,8 @@ when clients send requests to a backend service, delays can be introduced by
 Loadbalancer on a percentage of requests before sending those request to the
 backend service. Similarly requests from clients can be aborted by the
 Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+ignored by clients that are configured with a fault_injection_policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3466,7 +3520,8 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
 shadowed to a separate mirrored backend service. Loadbalancer does not wait for
 responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+service, the host / authority header is suffixed with -shadow.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3477,7 +3532,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+    <dd>{{% md %}}Specifies the retry policy associated with this route.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3491,7 +3547,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
 the request is has been fully processed (i.e. end-of-stream) up until the
 response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+specified, the default value is 15 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3503,7 +3560,8 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+the matched service
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3521,7 +3579,8 @@ service, there must be one  weightedBackendService with weight set to a non 0
 number. Once a backendService is identified and before forwarding the request to
 the backend service, advanced routing actions like Url rewrites and header
 transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+HttpRouteAction.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3540,7 +3599,8 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+Recommendation for Cross Origin Resource Sharing
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3557,7 +3617,8 @@ when clients send requests to a backend service, delays can be introduced by
 Loadbalancer on a percentage of requests before sending those request to the
 backend service. Similarly requests from clients can be aborted by the
 Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+ignored by clients that are configured with a fault_injection_policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3571,7 +3632,8 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
 shadowed to a separate mirrored backend service. Loadbalancer does not wait for
 responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+service, the host / authority header is suffixed with -shadow.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3582,7 +3644,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+    <dd>{{% md %}}Specifies the retry policy associated with this route.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3596,7 +3659,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
 the request is has been fully processed (i.e. end-of-stream) up until the
 response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+specified, the default value is 15 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3608,7 +3672,8 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+the matched service
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3626,7 +3691,8 @@ service, there must be one  weightedBackendService with weight set to a non 0
 number. Once a backendService is identified and before forwarding the request to
 the backend service, advanced routing actions like Url rewrites and header
 transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+HttpRouteAction.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3638,23 +3704,24 @@ HttpRouteAction.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="corspolicy_python">
-<a href="#corspolicy_python" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
+        <span id="cors_policy_python">
+<a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactioncorspolicy">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+Recommendation for Cross Origin Resource Sharing
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="faultinjectionpolicy_python">
-<a href="#faultinjectionpolicy_python" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
+        <span id="fault_injection_policy_python">
+<a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicy">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
 resiliency of clients to backend service failure. As part of fault injection,
@@ -3662,32 +3729,35 @@ when clients send requests to a backend service, delays can be introduced by
 Loadbalancer on a percentage of requests before sending those request to the
 backend service. Similarly requests from clients can be aborted by the
 Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+ignored by clients that are configured with a fault_injection_policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmirrorpolicy_python">
-<a href="#requestmirrorpolicy_python" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
+        <span id="request_mirror_policy_python">
+<a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionrequestmirrorpolicy">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
 shadowed to a separate mirrored backend service. Loadbalancer does not wait for
 responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+service, the host / authority header is suffixed with -shadow.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retrypolicy_python">
-<a href="#retrypolicy_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+        <span id="retry_policy_python">
+<a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicy">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+    <dd>{{% md %}}Specifies the retry policy associated with this route.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3696,33 +3766,35 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactiontimeout">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
 the request is has been fully processed (i.e. end-of-stream) up until the
 response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+specified, the default value is 15 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlrewrite_python">
-<a href="#urlrewrite_python" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
+        <span id="url_rewrite_python">
+<a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionurlrewrite">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+the matched service
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="weightedbackendservices_python">
-<a href="#weightedbackendservices_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
+        <span id="weighted_backend_services_python">
+<a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendservice">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendservice">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
 occurs. The weights determine the fraction of traffic that flows to their
@@ -3731,7 +3803,8 @@ service, there must be one  weightedBackendService with weight set to a non 0
 number. Once a backendService is identified and before forwarding the request to
 the backend service, advanced routing actions like Url rewrites and header
 transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+HttpRouteAction.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4075,8 +4148,8 @@ translates to the content for the Access-Control-Max-Age header.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowcredentials_python">
-<a href="#allowcredentials_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+        <span id="allow_credentials_python">
+<a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4088,8 +4161,8 @@ Control-Allow-Credentials header. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowheaders_python">
-<a href="#allowheaders_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+        <span id="allow_headers_python">
+<a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4099,8 +4172,8 @@ Control-Allow-Credentials header. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowmethods_python">
-<a href="#allowmethods_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+        <span id="allow_methods_python">
+<a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4110,8 +4183,8 @@ Control-Allow-Credentials header. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alloworiginregexes_python">
-<a href="#alloworiginregexes_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
+        <span id="allow_origin_regexes_python">
+<a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4123,8 +4196,8 @@ An origin is allowed if it matches either allow_origins or allow_origin_regex.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alloworigins_python">
-<a href="#alloworigins_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+        <span id="allow_origins_python">
+<a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4135,8 +4208,8 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="exposeheaders_python">
-<a href="#exposeheaders_python" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+        <span id="expose_headers_python">
+<a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4146,8 +4219,8 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxage_python">
-<a href="#maxage_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4190,7 +4263,8 @@ translates to the content for the Access-Control-Max-Age header.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+injection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4202,7 +4276,8 @@ injection.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+injection, before being sent to a backend service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4221,7 +4296,8 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+injection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4233,7 +4309,8 @@ injection.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+injection, before being sent to a backend service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4252,7 +4329,8 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+injection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4264,7 +4342,8 @@ injection.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+injection, before being sent to a backend service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4280,10 +4359,11 @@ injection, before being sent to a backend service.  Structure is documented belo
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+injection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4292,10 +4372,11 @@ injection.  Structure is documented below.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+injection, before being sent to a backend service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -4421,8 +4502,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
     <dt class="property-required"
             title="Required">
-        <span id="httpstatus_python">
-<a href="#httpstatus_python" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
+        <span id="http_status_python">
+<a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4477,7 +4558,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4508,7 +4590,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4539,7 +4622,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4564,13 +4648,14 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
     <dt class="property-required"
             title="Required">
-        <span id="fixeddelay_python">
-<a href="#fixeddelay_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
+        <span id="fixed_delay_python">
+<a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4874,7 +4959,8 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.  Structure is documented below.
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4934,7 +5020,8 @@ the gRPC status code in the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.  Structure is documented below.
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4994,7 +5081,8 @@ the gRPC status code in the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.  Structure is documented below.
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5037,8 +5125,8 @@ the gRPC status code in the response header is set to unavailable
 
     <dt class="property-optional"
             title="Optional">
-        <span id="numretries_python">
-<a href="#numretries_python" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
+        <span id="num_retries_python">
+<a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5048,19 +5136,20 @@ the gRPC status code in the response header is set to unavailable
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pertrytimeout_python">
-<a href="#pertrytimeout_python" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
+        <span id="per_try_timeout_python">
+<a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.  Structure is documented below.
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retryconditions_python">
-<a href="#retryconditions_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
+        <span id="retry_conditions_python">
+<a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5506,8 +5595,8 @@ be between 1 and 1024 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostrewrite_python">
-<a href="#hostrewrite_python" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
+        <span id="host_rewrite_python">
+<a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5519,8 +5608,8 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathprefixrewrite_python">
-<a href="#pathprefixrewrite_python" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
+        <span id="path_prefix_rewrite_python">
+<a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5594,7 +5683,8 @@ The value must be between 0 and 1000
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5643,7 +5733,8 @@ The value must be between 0 and 1000
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5692,7 +5783,8 @@ The value must be between 0 and 1000
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5737,11 +5829,12 @@ The value must be between 0 and 1000
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -5778,7 +5871,8 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5801,7 +5895,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5832,7 +5927,8 @@ prior to sending the response back to the client.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">[]Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5855,7 +5951,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">[]Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5886,7 +5983,8 @@ prior to sending the response back to the client.
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5909,7 +6007,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5933,20 +6032,21 @@ prior to sending the response back to the client.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaderstoadds_python">
-<a href="#requestheaderstoadds_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
+        <span id="request_headers_to_adds_python">
+<a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaderstoremoves_python">
-<a href="#requestheaderstoremoves_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
+        <span id="request_headers_to_removes_python">
+<a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5957,19 +6057,20 @@ prior to forwarding the request to the backendService.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responseheaderstoadds_python">
-<a href="#responseheaderstoadds_python" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
+        <span id="response_headers_to_adds_python">
+<a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responseheaderstoremoves_python">
-<a href="#responseheaderstoremoves_python" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
+        <span id="response_headers_to_removes_python">
+<a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6131,8 +6232,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6142,8 +6243,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headervalue_python">
-<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+        <span id="header_value_python">
+<a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6317,8 +6418,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6328,8 +6429,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headervalue_python">
-<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+        <span id="header_value_python">
+<a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6454,12 +6555,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -6549,12 +6650,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -6644,12 +6745,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -6662,8 +6763,8 @@ the request method will be retained.
 
     <dt class="property-required"
             title="Required">
-        <span id="stripquery_python">
-<a href="#stripquery_python" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
+        <span id="strip_query_python">
+<a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6676,8 +6777,8 @@ This field is required to ensure an empty block is not set. The normal default v
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostredirect_python">
-<a href="#hostredirect_python" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
+        <span id="host_redirect_python">
+<a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6688,8 +6789,8 @@ supplied in the request. The value must be between 1 and 255 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpsredirect_python">
-<a href="#httpsredirect_python" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
+        <span id="https_redirect_python">
+<a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6702,8 +6803,8 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathredirect_python">
-<a href="#pathredirect_python" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
+        <span id="path_redirect_python">
+<a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6717,8 +6818,8 @@ characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixredirect_python">
-<a href="#prefixredirect_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
+        <span id="prefix_redirect_python">
+<a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6732,19 +6833,19 @@ the redirect. The value must be between 1 and 1024 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectresponsecode_python">
-<a href="#redirectresponsecode_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
+        <span id="redirect_response_code_python">
+<a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -6806,7 +6907,8 @@ future without any impact on existing rules.
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6817,7 +6919,8 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The rules for determining a match.  Structure is documented below.
+    <dd>{{% md %}}The rules for determining a match.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6833,7 +6936,8 @@ actions like URL rewrites, header transformations, etc. prior to forwarding the
 request to the selected backend. If routeAction specifies any
 weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
-or urlRedirect must be set.  Structure is documented below.
+or urlRedirect must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6857,7 +6961,8 @@ or urlRedirect must be set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
 by urlRedirect. If urlRedirect is specified, service or routeAction must not
-be set.  Structure is documented below.
+be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -6900,7 +7005,8 @@ future without any impact on existing rules.
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6911,7 +7017,8 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrule">[]Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}The rules for determining a match.  Structure is documented below.
+    <dd>{{% md %}}The rules for determining a match.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6927,7 +7034,8 @@ actions like URL rewrites, header transformations, etc. prior to forwarding the
 request to the selected backend. If routeAction specifies any
 weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
-or urlRedirect must be set.  Structure is documented below.
+or urlRedirect must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6951,7 +7059,8 @@ or urlRedirect must be set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
 by urlRedirect. If urlRedirect is specified, service or routeAction must not
-be set.  Structure is documented below.
+be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -6994,7 +7103,8 @@ future without any impact on existing rules.
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7005,7 +7115,8 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrule">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}The rules for determining a match.  Structure is documented below.
+    <dd>{{% md %}}The rules for determining a match.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7021,7 +7132,8 @@ actions like URL rewrites, header transformations, etc. prior to forwarding the
 request to the selected backend. If routeAction specifies any
 weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
-or urlRedirect must be set.  Structure is documented below.
+or urlRedirect must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7045,7 +7157,8 @@ or urlRedirect must be set.  Structure is documented below.
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
 by urlRedirect. If urlRedirect is specified, service or routeAction must not
-be set.  Structure is documented below.
+be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -7084,38 +7197,41 @@ future without any impact on existing rules.
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderaction">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchrules_python">
-<a href="#matchrules_python" style="color: inherit; text-decoration: inherit;">match<wbr>Rules</a>
+        <span id="match_rules_python">
+<a href="#match_rules_python" style="color: inherit; text-decoration: inherit;">match_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrule">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrule">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The rules for determining a match.  Structure is documented below.
+    <dd>{{% md %}}The rules for determining a match.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routeaction_python">
-<a href="#routeaction_python" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
+        <span id="route_action_python">
+<a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteaction">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching path, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
 request to the selected backend. If routeAction specifies any
 weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
-or urlRedirect must be set.  Structure is documented below.
+or urlRedirect must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7131,15 +7247,16 @@ or urlRedirect must be set.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlredirect_python">
-<a href="#urlredirect_python" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
+        <span id="url_redirect_python">
+<a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When a path pattern is matched, the request is redirected to a URL specified
 by urlRedirect. If urlRedirect is specified, service or routeAction must not
-be set.  Structure is documented below.
+be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -7176,7 +7293,8 @@ be set.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7199,7 +7317,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionresponseheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7230,7 +7349,8 @@ prior to sending the response back to the client.
         <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionrequestheaderstoadd">[]Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7253,7 +7373,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionresponseheaderstoadd">[]Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7284,7 +7405,8 @@ prior to sending the response back to the client.
         <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionrequestheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7307,7 +7429,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionresponseheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7331,20 +7454,21 @@ prior to sending the response back to the client.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaderstoadds_python">
-<a href="#requestheaderstoadds_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
+        <span id="request_headers_to_adds_python">
+<a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaderstoremoves_python">
-<a href="#requestheaderstoremoves_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
+        <span id="request_headers_to_removes_python">
+<a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7355,19 +7479,20 @@ prior to forwarding the request to the backendService.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responseheaderstoadds_python">
-<a href="#responseheaderstoadds_python" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
+        <span id="response_headers_to_adds_python">
+<a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionresponseheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionresponseheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responseheaderstoremoves_python">
-<a href="#responseheaderstoremoves_python" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
+        <span id="response_headers_to_removes_python">
+<a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -7529,8 +7654,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7540,8 +7665,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headervalue_python">
-<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+        <span id="header_value_python">
+<a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7715,8 +7840,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7726,8 +7851,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headervalue_python">
-<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+        <span id="header_value_python">
+<a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7797,7 +7922,8 @@ be specified.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatch">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
-headers in the request.  Structure is documented below.
+headers in the request.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7830,7 +7956,8 @@ filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
 with corresponding labels in the provided metadata. metadataFilters specified
 here can be overrides those specified in ForwardingRule that refers to this
 UrlMap. metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7855,7 +7982,8 @@ must be set.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulequeryparametermatch">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
-corresponding query parameters in the request.  Structure is documented below.
+corresponding query parameters in the request.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7903,7 +8031,8 @@ be specified.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatch">[]Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
-headers in the request.  Structure is documented below.
+headers in the request.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7936,7 +8065,8 @@ filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
 with corresponding labels in the provided metadata. metadataFilters specified
 here can be overrides those specified in ForwardingRule that refers to this
 UrlMap. metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7961,7 +8091,8 @@ must be set.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulequeryparametermatch">[]Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
-corresponding query parameters in the request.  Structure is documented below.
+corresponding query parameters in the request.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8009,7 +8140,8 @@ be specified.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
-headers in the request.  Structure is documented below.
+headers in the request.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8042,7 +8174,8 @@ filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
 with corresponding labels in the provided metadata. metadataFilters specified
 here can be overrides those specified in ForwardingRule that refers to this
 UrlMap. metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8067,7 +8200,8 @@ must be set.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulequeryparametermatch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
-corresponding query parameters in the request.  Structure is documented below.
+corresponding query parameters in the request.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8093,8 +8227,8 @@ exactMatch and regexMatch must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fullpathmatch_python">
-<a href="#fullpathmatch_python" style="color: inherit; text-decoration: inherit;">full<wbr>Path<wbr>Match</a>
+        <span id="full_path_match_python">
+<a href="#full_path_match_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8108,20 +8242,21 @@ be specified.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="headermatches_python">
-<a href="#headermatches_python" style="color: inherit; text-decoration: inherit;">header<wbr>Matches</a>
+        <span id="header_matches_python">
+<a href="#header_matches_python" style="color: inherit; text-decoration: inherit;">header_<wbr>matches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatch">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatch">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
-headers in the request.  Structure is documented below.
+headers in the request.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ignorecase_python">
-<a href="#ignorecase_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Case</a>
+        <span id="ignore_case_python">
+<a href="#ignore_case_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>case</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8136,7 +8271,7 @@ Defaults to false.
 <a href="#metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulemetadatafilter">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulemetadatafilter">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
 a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
@@ -8148,13 +8283,14 @@ filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
 with corresponding labels in the provided metadata. metadataFilters specified
 here can be overrides those specified in ForwardingRule that refers to this
 UrlMap. metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED.  Structure is documented below.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixmatch_python">
-<a href="#prefixmatch_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
+        <span id="prefix_match_python">
+<a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8166,20 +8302,21 @@ must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="queryparametermatches_python">
-<a href="#queryparametermatches_python" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter<wbr>Matches</a>
+        <span id="query_parameter_matches_python">
+<a href="#query_parameter_matches_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter_<wbr>matches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulequeryparametermatch">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulequeryparametermatch">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
-corresponding query parameters in the request.  Structure is documented below.
+corresponding query parameters in the request.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regexmatch_python">
-<a href="#regexmatch_python" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
+        <span id="regex_match_python">
+<a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8291,7 +8428,8 @@ in rangeMatch. If the header does not contain an integer, number or is empty,
 the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
 not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-must be set.  Structure is documented below.
+must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8404,7 +8542,8 @@ in rangeMatch. If the header does not contain an integer, number or is empty,
 the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
 not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-must be set.  Structure is documented below.
+must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8517,7 +8656,8 @@ in rangeMatch. If the header does not contain an integer, number or is empty,
 the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
 not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-must be set.  Structure is documented below.
+must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8556,8 +8696,8 @@ must be set.
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8567,8 +8707,8 @@ must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="exactmatch_python">
-<a href="#exactmatch_python" style="color: inherit; text-decoration: inherit;">exact<wbr>Match</a>
+        <span id="exact_match_python">
+<a href="#exact_match_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8580,8 +8720,8 @@ must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="invertmatch_python">
-<a href="#invertmatch_python" style="color: inherit; text-decoration: inherit;">invert<wbr>Match</a>
+        <span id="invert_match_python">
+<a href="#invert_match_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8593,8 +8733,8 @@ match criteria above are NOT met. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixmatch_python">
-<a href="#prefixmatch_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
+        <span id="prefix_match_python">
+<a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8606,8 +8746,8 @@ must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="presentmatch_python">
-<a href="#presentmatch_python" style="color: inherit; text-decoration: inherit;">present<wbr>Match</a>
+        <span id="present_match_python">
+<a href="#present_match_python" style="color: inherit; text-decoration: inherit;">present_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -8619,24 +8759,25 @@ presentMatch, exactMatch and regexMatch must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rangematch_python">
-<a href="#rangematch_python" style="color: inherit; text-decoration: inherit;">range<wbr>Match</a>
+        <span id="range_match_python">
+<a href="#range_match_python" style="color: inherit; text-decoration: inherit;">range_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatchrangematch">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatchrangematch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
 in rangeMatch. If the header does not contain an integer, number or is empty,
 the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
 not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-must be set.  Structure is documented below.
+must be set.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regexmatch_python">
-<a href="#regexmatch_python" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
+        <span id="regex_match_python">
+<a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8649,8 +8790,8 @@ exactMatch and regexMatch must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="suffixmatch_python">
-<a href="#suffixmatch_python" style="color: inherit; text-decoration: inherit;">suffix<wbr>Match</a>
+        <span id="suffix_match_python">
+<a href="#suffix_match_python" style="color: inherit; text-decoration: inherit;">suffix_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8774,8 +8915,8 @@ must be set.
 
     <dt class="property-required"
             title="Required">
-        <span id="rangeend_python">
-<a href="#rangeend_python" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
+        <span id="range_end_python">
+<a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8785,8 +8926,8 @@ must be set.
 
     <dt class="property-required"
             title="Required">
-        <span id="rangestart_python">
-<a href="#rangestart_python" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
+        <span id="range_start_python">
+<a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8829,7 +8970,8 @@ must be set.
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
-most 64 entries.  Structure is documented below.
+most 64 entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8846,6 +8988,7 @@ contribute towards the overall metadataFilter match. Supported values are:
 provided metadata.
 - MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
+Possible values are `MATCH_ALL` and `MATCH_ANY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -8865,7 +9008,8 @@ the provided metadata.
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
-most 64 entries.  Structure is documented below.
+most 64 entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8882,6 +9026,7 @@ contribute towards the overall metadataFilter match. Supported values are:
 provided metadata.
 - MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
+Possible values are `MATCH_ALL` and `MATCH_ANY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -8901,7 +9046,8 @@ the provided metadata.
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
-most 64 entries.  Structure is documented below.
+most 64 entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8918,6 +9064,7 @@ contribute towards the overall metadataFilter match. Supported values are:
 provided metadata.
 - MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
+Possible values are `MATCH_ALL` and `MATCH_ANY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -8929,21 +9076,22 @@ the provided metadata.
 
     <dt class="property-required"
             title="Required">
-        <span id="filterlabels_python">
-<a href="#filterlabels_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
+        <span id="filter_labels_python">
+<a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
-most 64 entries.  Structure is documented below.
+most 64 entries.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="filtermatchcriteria_python">
-<a href="#filtermatchcriteria_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Match<wbr>Criteria</a>
+        <span id="filter_match_criteria_python">
+<a href="#filter_match_criteria_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>match_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8954,6 +9102,7 @@ contribute towards the overall metadataFilter match. Supported values are:
 provided metadata.
 - MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
+Possible values are `MATCH_ALL` and `MATCH_ANY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -9314,8 +9463,8 @@ request, in the absence of which the request match fails.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="exactmatch_python">
-<a href="#exactmatch_python" style="color: inherit; text-decoration: inherit;">exact<wbr>Match</a>
+        <span id="exact_match_python">
+<a href="#exact_match_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9327,8 +9476,8 @@ must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="presentmatch_python">
-<a href="#presentmatch_python" style="color: inherit; text-decoration: inherit;">present<wbr>Match</a>
+        <span id="present_match_python">
+<a href="#present_match_python" style="color: inherit; text-decoration: inherit;">present_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -9340,8 +9489,8 @@ presentMatch, exactMatch and regexMatch must be set.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="regexmatch_python">
-<a href="#regexmatch_python" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
+        <span id="regex_match_python">
+<a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9386,7 +9535,8 @@ exactMatch and regexMatch must be set.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+Recommendation for Cross Origin Resource Sharing
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9403,7 +9553,8 @@ when clients send requests to a backend service, delays can be introduced by
 Loadbalancer on a percentage of requests before sending those request to the
 backend service. Similarly requests from clients can be aborted by the
 Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+ignored by clients that are configured with a fault_injection_policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9417,7 +9568,8 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
 shadowed to a separate mirrored backend service. Loadbalancer does not wait for
 responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+service, the host / authority header is suffixed with -shadow.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9428,7 +9580,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+    <dd>{{% md %}}Specifies the retry policy associated with this route.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9442,7 +9595,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
 the request is has been fully processed (i.e. end-of-stream) up until the
 response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+specified, the default value is 15 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9454,7 +9608,8 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+the matched service
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9472,7 +9627,8 @@ service, there must be one  weightedBackendService with weight set to a non 0
 number. Once a backendService is identified and before forwarding the request to
 the backend service, advanced routing actions like Url rewrites and header
 transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+HttpRouteAction.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -9491,7 +9647,8 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+Recommendation for Cross Origin Resource Sharing
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9508,7 +9665,8 @@ when clients send requests to a backend service, delays can be introduced by
 Loadbalancer on a percentage of requests before sending those request to the
 backend service. Similarly requests from clients can be aborted by the
 Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+ignored by clients that are configured with a fault_injection_policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9522,7 +9680,8 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
 shadowed to a separate mirrored backend service. Loadbalancer does not wait for
 responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+service, the host / authority header is suffixed with -shadow.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9533,7 +9692,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+    <dd>{{% md %}}Specifies the retry policy associated with this route.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9547,7 +9707,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
 the request is has been fully processed (i.e. end-of-stream) up until the
 response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+specified, the default value is 15 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9559,7 +9720,8 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+the matched service
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9577,7 +9739,8 @@ service, there must be one  weightedBackendService with weight set to a non 0
 number. Once a backendService is identified and before forwarding the request to
 the backend service, advanced routing actions like Url rewrites and header
 transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+HttpRouteAction.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -9596,7 +9759,8 @@ HttpRouteAction.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+Recommendation for Cross Origin Resource Sharing
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9613,7 +9777,8 @@ when clients send requests to a backend service, delays can be introduced by
 Loadbalancer on a percentage of requests before sending those request to the
 backend service. Similarly requests from clients can be aborted by the
 Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+ignored by clients that are configured with a fault_injection_policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9627,7 +9792,8 @@ ignored by clients that are configured with a fault_injection_policy.  Structure
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
 shadowed to a separate mirrored backend service. Loadbalancer does not wait for
 responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+service, the host / authority header is suffixed with -shadow.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9638,7 +9804,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+    <dd>{{% md %}}Specifies the retry policy associated with this route.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9652,7 +9819,8 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
 the request is has been fully processed (i.e. end-of-stream) up until the
 response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+specified, the default value is 15 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9664,7 +9832,8 @@ specified, the default value is 15 seconds.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+the matched service
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9682,7 +9851,8 @@ service, there must be one  weightedBackendService with weight set to a non 0
 number. Once a backendService is identified and before forwarding the request to
 the backend service, advanced routing actions like Url rewrites and header
 transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+HttpRouteAction.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -9694,23 +9864,24 @@ HttpRouteAction.  Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="corspolicy_python">
-<a href="#corspolicy_python" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
+        <span id="cors_policy_python">
+<a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactioncorspolicy">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing  Structure is documented below.
+Recommendation for Cross Origin Resource Sharing
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="faultinjectionpolicy_python">
-<a href="#faultinjectionpolicy_python" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
+        <span id="fault_injection_policy_python">
+<a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicy">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the
 resiliency of clients to backend service failure. As part of fault injection,
@@ -9718,32 +9889,35 @@ when clients send requests to a backend service, delays can be introduced by
 Loadbalancer on a percentage of requests before sending those request to the
 backend service. Similarly requests from clients can be aborted by the
 Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy.  Structure is documented below.
+ignored by clients that are configured with a fault_injection_policy.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestmirrorpolicy_python">
-<a href="#requestmirrorpolicy_python" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
+        <span id="request_mirror_policy_python">
+<a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionrequestmirrorpolicy">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are
 shadowed to a separate mirrored backend service. Loadbalancer does not wait for
 responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow.  Structure is documented below.
+service, the host / authority header is suffixed with -shadow.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retrypolicy_python">
-<a href="#retrypolicy_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+        <span id="retry_policy_python">
+<a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicy">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the retry policy associated with this route.  Structure is documented below.
+    <dd>{{% md %}}Specifies the retry policy associated with this route.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -9752,33 +9926,35 @@ service, the host / authority header is suffixed with -shadow.  Structure is doc
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactiontimeout">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time
 the request is has been fully processed (i.e. end-of-stream) up until the
 response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds.  Structure is documented below.
+specified, the default value is 15 seconds.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="urlrewrite_python">
-<a href="#urlrewrite_python" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
+        <span id="url_rewrite_python">
+<a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionurlrewrite">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to
-the matched service  Structure is documented below.
+the matched service
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="weightedbackendservices_python">
-<a href="#weightedbackendservices_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
+        <span id="weighted_backend_services_python">
+<a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendservice">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendservice">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match
 occurs. The weights determine the fraction of traffic that flows to their
@@ -9787,7 +9963,8 @@ service, there must be one  weightedBackendService with weight set to a non 0
 number. Once a backendService is identified and before forwarding the request to
 the backend service, advanced routing actions like Url rewrites and header
 transformations are applied depending on additional settings specified in this
-HttpRouteAction.  Structure is documented below.
+HttpRouteAction.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -10120,8 +10297,8 @@ translates to the content for the Access-Control-Max-Age header.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowcredentials_python">
-<a href="#allowcredentials_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
+        <span id="allow_credentials_python">
+<a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -10133,8 +10310,8 @@ Control-Allow-Credentials header. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowheaders_python">
-<a href="#allowheaders_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
+        <span id="allow_headers_python">
+<a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10144,8 +10321,8 @@ Control-Allow-Credentials header. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowmethods_python">
-<a href="#allowmethods_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
+        <span id="allow_methods_python">
+<a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10155,8 +10332,8 @@ Control-Allow-Credentials header. Defaults to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alloworiginregexes_python">
-<a href="#alloworiginregexes_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
+        <span id="allow_origin_regexes_python">
+<a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10168,8 +10345,8 @@ An origin is allowed if it matches either allow_origins or allow_origin_regex.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alloworigins_python">
-<a href="#alloworigins_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
+        <span id="allow_origins_python">
+<a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10191,8 +10368,8 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="exposeheaders_python">
-<a href="#exposeheaders_python" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+        <span id="expose_headers_python">
+<a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -10202,8 +10379,8 @@ origin is allowed if it matches either allow_origins or allow_origin_regex.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxage_python">
-<a href="#maxage_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10246,7 +10423,8 @@ translates to the content for the Access-Control-Max-Age header.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+injection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10258,7 +10436,8 @@ injection.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+injection, before being sent to a backend service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -10277,7 +10456,8 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+injection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10289,7 +10469,8 @@ injection.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+injection, before being sent to a backend service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -10308,7 +10489,8 @@ injection, before being sent to a backend service.  Structure is documented belo
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+injection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10320,7 +10502,8 @@ injection.  Structure is documented below.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+injection, before being sent to a backend service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -10336,10 +10519,11 @@ injection, before being sent to a backend service.  Structure is documented belo
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault
-injection.  Structure is documented below.
+injection.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10348,10 +10532,11 @@ injection.  Structure is documented below.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service.  Structure is documented below.
+injection, before being sent to a backend service.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -10477,8 +10662,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpstatus_python">
-<a href="#httpstatus_python" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
+        <span id="http_status_python">
+<a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10533,7 +10718,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10564,7 +10750,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10595,7 +10782,8 @@ be introduced as part of fault injection. The value must be between 0.0 and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10620,13 +10808,14 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixeddelay_python">
-<a href="#fixeddelay_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
+        <span id="fixed_delay_python">
+<a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the fixed delay interval.  Structure is documented below.
+    <dd>{{% md %}}Specifies the value of the fixed delay interval.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10930,7 +11119,8 @@ headerActions specified as part of this backendServiceWeight.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.  Structure is documented below.
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10990,7 +11180,8 @@ the gRPC status code in the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.  Structure is documented below.
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11050,7 +11241,8 @@ the gRPC status code in the response header is set to unavailable
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.  Structure is documented below.
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11093,8 +11285,8 @@ the gRPC status code in the response header is set to unavailable
 
     <dt class="property-required"
             title="Required">
-        <span id="numretries_python">
-<a href="#numretries_python" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
+        <span id="num_retries_python">
+<a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -11104,19 +11296,20 @@ the gRPC status code in the response header is set to unavailable
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pertrytimeout_python">
-<a href="#pertrytimeout_python" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
+        <span id="per_try_timeout_python">
+<a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.  Structure is documented below.
+    <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retryconditions_python">
-<a href="#retryconditions_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
+        <span id="retry_conditions_python">
+<a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -11562,8 +11755,8 @@ be between 1 and 1024 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostrewrite_python">
-<a href="#hostrewrite_python" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
+        <span id="host_rewrite_python">
+<a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11575,8 +11768,8 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathprefixrewrite_python">
-<a href="#pathprefixrewrite_python" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
+        <span id="path_prefix_rewrite_python">
+<a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -11650,7 +11843,8 @@ The value must be between 0 and 1000
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -11699,7 +11893,8 @@ The value must be between 0 and 1000
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -11748,7 +11943,8 @@ The value must be between 0 and 1000
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -11793,11 +11989,12 @@ The value must be between 0 and 1000
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure is documented below.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -11834,7 +12031,8 @@ headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.  Structure 
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11857,7 +12055,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11888,7 +12087,8 @@ prior to sending the response back to the client.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">[]Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11911,7 +12111,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">[]Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11942,7 +12143,8 @@ prior to sending the response back to the client.
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11965,7 +12167,8 @@ prior to forwarding the request to the backendService.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -11989,20 +12192,21 @@ prior to sending the response back to the client.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaderstoadds_python">
-<a href="#requestheaderstoadds_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
+        <span id="request_headers_to_adds_python">
+<a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the
-backendService.  Structure is documented below.
+backendService.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="requestheaderstoremoves_python">
-<a href="#requestheaderstoremoves_python" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
+        <span id="request_headers_to_removes_python">
+<a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -12013,19 +12217,20 @@ prior to forwarding the request to the backendService.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responseheaderstoadds_python">
-<a href="#responseheaderstoadds_python" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
+        <span id="response_headers_to_adds_python">
+<a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add]</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.  Structure is documented below.
+    <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="responseheaderstoremoves_python">
-<a href="#responseheaderstoremoves_python" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
+        <span id="response_headers_to_removes_python">
+<a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -12187,8 +12392,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12198,8 +12403,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headervalue_python">
-<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+        <span id="header_value_python">
+<a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12373,8 +12578,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headername_python">
-<a href="#headername_python" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
+        <span id="header_name_python">
+<a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12384,8 +12589,8 @@ were set for that header.
 
     <dt class="property-required"
             title="Required">
-        <span id="headervalue_python">
-<a href="#headervalue_python" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
+        <span id="header_value_python">
+<a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12496,12 +12701,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -12591,12 +12796,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -12686,12 +12891,12 @@ the redirect. The value must be between 1 and 1024 characters.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
@@ -12718,8 +12923,8 @@ This field is required to ensure an empty block is not set. The normal default v
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostredirect_python">
-<a href="#hostredirect_python" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
+        <span id="host_redirect_python">
+<a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12730,8 +12935,8 @@ supplied in the request. The value must be between 1 and 255 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpsredirect_python">
-<a href="#httpsredirect_python" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
+        <span id="https_redirect_python">
+<a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -12744,8 +12949,8 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pathredirect_python">
-<a href="#pathredirect_python" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
+        <span id="path_redirect_python">
+<a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12759,8 +12964,8 @@ characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="prefixredirect_python">
-<a href="#prefixredirect_python" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
+        <span id="prefix_redirect_python">
+<a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -12774,26 +12979,26 @@ the redirect. The value must be between 1 and 1024 characters.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectresponsecode_python">
-<a href="#redirectresponsecode_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
+        <span id="redirect_response_code_python">
+<a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
-- MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
-- FOUND, which corresponds to 302.
-- SEE_OTHER which corresponds to 303.
-- TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
+* MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
+* FOUND, which corresponds to 302.
+* SEE_OTHER which corresponds to 303.
+* TEMPORARY_REDIRECT, which corresponds to 307. In this case, the request method
 will be retained.
-- PERMANENT_REDIRECT, which corresponds to 308. In this case,
+* PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stripquery_python">
-<a href="#stripquery_python" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
+        <span id="strip_query_python">
+<a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -13044,6 +13249,6 @@ This field is required to ensure an empty block is not set. The normal default v
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

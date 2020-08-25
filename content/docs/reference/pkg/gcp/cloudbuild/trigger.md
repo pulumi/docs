@@ -18,114 +18,6 @@ To get more information about Trigger, see:
 * How-to Guides
     * [Automating builds using build triggers](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Cloudbuild Trigger Filename
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var filename_trigger = new Gcp.CloudBuild.Trigger("filename-trigger", new Gcp.CloudBuild.TriggerArgs
-        {
-            Filename = "cloudbuild.yaml",
-            Substitutions = 
-            {
-                { "_BAZ", "qux" },
-                { "_FOO", "bar" },
-            },
-            TriggerTemplate = new Gcp.CloudBuild.Inputs.TriggerTriggerTemplateArgs
-            {
-                BranchName = "master",
-                RepoName = "my-repo",
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cloudbuild.NewTrigger(ctx, "filename-trigger", &cloudbuild.TriggerArgs{
-			Filename: pulumi.String("cloudbuild.yaml"),
-			Substitutions: pulumi.Map{
-				"_BAZ": pulumi.String("qux"),
-				"_FOO": pulumi.String("bar"),
-			},
-			TriggerTemplate: &cloudbuild.TriggerTriggerTemplateArgs{
-				BranchName: pulumi.String("master"),
-				RepoName:   pulumi.String("my-repo"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-filename_trigger = gcp.cloudbuild.Trigger("filename-trigger",
-    filename="cloudbuild.yaml",
-    substitutions={
-        "_BAZ": "qux",
-        "_FOO": "bar",
-    },
-    trigger_template={
-        "branchName": "master",
-        "repoName": "my-repo",
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
-    filename: "cloudbuild.yaml",
-    substitutions: {
-        _BAZ: "qux",
-        _FOO: "bar",
-    },
-    triggerTemplate: {
-        branchName: "master",
-        repoName: "my-repo",
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Trigger Resource {#create}
@@ -137,7 +29,7 @@ const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudbuild/#Trigger">Trigger</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>build=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>filename=None<span class="p">, </span>github=None<span class="p">, </span>ignored_files=None<span class="p">, </span>included_files=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>substitutions=None<span class="p">, </span>trigger_template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudbuild/#pulumi_gcp.cloudbuild.Trigger">Trigger</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[TriggerBuildArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[TriggerGithubArgs]</span> = None<span class="p">, </span><span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -317,7 +209,8 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,7 +255,8 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -434,7 +328,18 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Substitutions data for Build resource.
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -449,7 +354,8 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -467,7 +373,8 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -512,7 +419,8 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -584,7 +492,18 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Substitutions data for Build resource.
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -599,7 +518,8 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -617,7 +537,8 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -662,7 +583,8 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -734,7 +656,18 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Substitutions data for Build resource.
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -749,7 +682,8 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -765,9 +699,10 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
 <a href="#build_python" style="color: inherit; text-decoration: inherit;">build</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuild">Dict[Trigger<wbr>Build]</a></span>
+        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -809,10 +744,11 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithub">Dict[Trigger<wbr>Github]</a></span>
+        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -882,9 +818,20 @@ If it is not provided, the provider project is used.
 <a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Substitutions data for Build resource.
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -893,13 +840,14 @@ If it is not provided, the provider project is used.
 <a href="#trigger_template_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertriggertemplate">Dict[Trigger<wbr>Trigger<wbr>Template]</a></span>
+        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template describing the types of source changes to trigger a build.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1088,7 +1036,8 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>build=None<span class="p">, </span>create_time=None<span class="p">, </span>description=None<span class="p">, </span>disabled=None<span class="p">, </span>filename=None<span class="p">, </span>github=None<span class="p">, </span>ignored_files=None<span class="p">, </span>included_files=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>substitutions=None<span class="p">, </span>trigger_id=None<span class="p">, </span>trigger_template=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[TriggerBuildArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[TriggerGithubArgs]</span> = None<span class="p">, </span><span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">) -&gt;</span> Trigger</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1096,7 +1045,7 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Trigger.html">Trigger</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.TriggerState.html">TriggerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Trigger.html">Trigger</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.TriggerState.html">TriggerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1210,7 +1159,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1266,7 +1216,8 @@ The following state arguments are supported:
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1338,7 +1289,18 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Substitutions data for Build resource.
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1364,7 +1326,8 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1382,7 +1345,8 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1438,7 +1402,8 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1510,7 +1475,18 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Substitutions data for Build resource.
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1536,7 +1512,8 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1554,7 +1531,8 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1610,7 +1588,8 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1682,7 +1661,18 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Substitutions data for Build resource.
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1708,7 +1698,8 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1724,9 +1715,10 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
 <a href="#state_build_python" style="color: inherit; text-decoration: inherit;">build</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuild">Dict[Trigger<wbr>Build]</a></span>
+        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.  Structure is documented below.
+    <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1779,10 +1771,11 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
 <a href="#state_github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithub">Dict[Trigger<wbr>Github]</a></span>
+        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1852,9 +1845,20 @@ If it is not provided, the provider project is used.
 <a href="#state_substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Substitutions data for Build resource.
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1874,13 +1878,14 @@ If it is not provided, the provider project is used.
 <a href="#state_trigger_template_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>template</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertriggertemplate">Dict[Trigger<wbr>Trigger<wbr>Template]</a></span>
+        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template describing the types of source changes to trigger a build.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.  Structure is documented below.
+One of `trigger_template` or `github` must be provided.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1924,7 +1929,8 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstep">List&lt;Trigger<wbr>Build<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The operations to be performed on the workspace.  Structure is documented below.
+    <dd>{{% md %}}The operations to be performed on the workspace.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1939,6 +1945,68 @@ One of `trigger_template` or `github` must be provided.  Structure is documented
 The images are pushed using the builder service account's credentials.
 The digests of the pushed images will be stored in the Build resource's results field.
 If any of the images fail to be pushed, the build status is marked FAILURE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logsbucket_csharp">
+<a href="#logsbucket_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>Bucket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage bucket where logs should be written.
+Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queuettl_csharp">
+<a href="#queuettl_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}TTL in queue for this build. If provided and the build is enqueued longer than this value,
+the build will expire and the build status will be EXPIRED.
+The TTL starts ticking from createTime.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secrets_csharp">
+<a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsecret">List&lt;Trigger<wbr>Build<wbr>Secret<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_csharp">
+<a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the source files to build.
+One of `storageSource` or `repoSource` must be provided.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitutions_csharp">
+<a href="#substitutions_csharp" style="color: inherit; text-decoration: inherit;">Substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1981,7 +2049,8 @@ completes or the build itself times out.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstep">[]Trigger<wbr>Build<wbr>Step</a></span>
     </dt>
-    <dd>{{% md %}}The operations to be performed on the workspace.  Structure is documented below.
+    <dd>{{% md %}}The operations to be performed on the workspace.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1996,6 +2065,68 @@ completes or the build itself times out.
 The images are pushed using the builder service account's credentials.
 The digests of the pushed images will be stored in the Build resource's results field.
 If any of the images fail to be pushed, the build status is marked FAILURE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logsbucket_go">
+<a href="#logsbucket_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>Bucket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage bucket where logs should be written.
+Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queuettl_go">
+<a href="#queuettl_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}TTL in queue for this build. If provided and the build is enqueued longer than this value,
+the build will expire and the build status will be EXPIRED.
+The TTL starts ticking from createTime.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secrets_go">
+<a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsecret">[]Trigger<wbr>Build<wbr>Secret</a></span>
+    </dt>
+    <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_go">
+<a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the source files to build.
+One of `storageSource` or `repoSource` must be provided.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitutions_go">
+<a href="#substitutions_go" style="color: inherit; text-decoration: inherit;">Substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2038,7 +2169,8 @@ completes or the build itself times out.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerbuildstep">Trigger<wbr>Build<wbr>Step[]</a></span>
     </dt>
-    <dd>{{% md %}}The operations to be performed on the workspace.  Structure is documented below.
+    <dd>{{% md %}}The operations to be performed on the workspace.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2053,6 +2185,68 @@ completes or the build itself times out.
 The images are pushed using the builder service account's credentials.
 The digests of the pushed images will be stored in the Build resource's results field.
 If any of the images fail to be pushed, the build status is marked FAILURE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logsbucket_nodejs">
+<a href="#logsbucket_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Bucket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage bucket where logs should be written.
+Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queuettl_nodejs">
+<a href="#queuettl_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}TTL in queue for this build. If provided and the build is enqueued longer than this value,
+the build will expire and the build status will be EXPIRED.
+The TTL starts ticking from createTime.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secrets_nodejs">
+<a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsecret">Trigger<wbr>Build<wbr>Secret[]</a></span>
+    </dt>
+    <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_nodejs">
+<a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the source files to build.
+One of `storageSource` or `repoSource` must be provided.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitutions_nodejs">
+<a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2093,9 +2287,10 @@ completes or the build itself times out.
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstep">List[Trigger<wbr>Build<wbr>Step]</a></span>
+        <span class="property-type"><a href="#triggerbuildstep">List[Trigger<wbr>Build<wbr>Step<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The operations to be performed on the workspace.  Structure is documented below.
+    <dd>{{% md %}}The operations to be performed on the workspace.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2110,6 +2305,68 @@ completes or the build itself times out.
 The images are pushed using the builder service account's credentials.
 The digests of the pushed images will be stored in the Build resource's results field.
 If any of the images fail to be pushed, the build status is marked FAILURE.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logs_bucket_python">
+<a href="#logs_bucket_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>bucket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage bucket where logs should be written.
+Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="queue_ttl_python">
+<a href="#queue_ttl_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}TTL in queue for this build. If provided and the build is enqueued longer than this value,
+the build will expire and the build status will be EXPIRED.
+The TTL starts ticking from createTime.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secrets_python">
+<a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsecret">List[Trigger<wbr>Build<wbr>Secret<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_python">
+<a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the source files to build.
+One of `storageSource` or `repoSource` must be provided.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitutions_python">
+<a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2135,6 +2392,930 @@ If any of the images fail to be pushed, the build status is marked FAILURE.
 the step has no
 time limit and will be allowed to continue to run until either it
 completes or the build itself times out.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="triggerbuildsecret">Trigger<wbr>Build<wbr>Secret</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildSecret">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildSecret">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSecretArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSecretOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildSecretArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildSecret.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_csharp">
+<a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud KMS key name to use to decrypt these envs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretenv_csharp">
+<a href="#secretenv_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Env</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of environment variables which are encrypted using
+a Cloud Key
+Management Service crypto key. These values must be specified in
+the build's `Secret`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_go">
+<a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud KMS key name to use to decrypt these envs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretenv_go">
+<a href="#secretenv_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Env</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A list of environment variables which are encrypted using
+a Cloud Key
+Management Service crypto key. These values must be specified in
+the build's `Secret`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kmskeyname_nodejs">
+<a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud KMS key name to use to decrypt these envs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secretenv_nodejs">
+<a href="#secretenv_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Env</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A list of environment variables which are encrypted using
+a Cloud Key
+Management Service crypto key. These values must be specified in
+the build's `Secret`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="kms_key_name_python">
+<a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud KMS key name to use to decrypt these envs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_env_python">
+<a href="#secret_env_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>env</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A list of environment variables which are encrypted using
+a Cloud Key
+Management Service crypto key. These values must be specified in
+the build's `Secret`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="triggerbuildsource">Trigger<wbr>Build<wbr>Source</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildSource">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildSource.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reposource_csharp">
+<a href="#reposource_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the source in a Google Cloud Source Repository.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storagesource_csharp">
+<a href="#storagesource_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the source in an archive file in Google Cloud Storage.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reposource_go">
+<a href="#reposource_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the source in a Google Cloud Source Repository.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storagesource_go">
+<a href="#storagesource_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the source in an archive file in Google Cloud Storage.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reposource_nodejs">
+<a href="#reposource_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the source in a Google Cloud Source Repository.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storagesource_nodejs">
+<a href="#storagesource_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the source in an archive file in Google Cloud Storage.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_source_python">
+<a href="#repo_source_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the source in a Google Cloud Source Repository.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_source_python">
+<a href="#storage_source_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Location of the source in an archive file in Google Cloud Storage.
+Structure is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildSourceRepoSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildSourceRepoSource">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceRepoSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceRepoSourceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildSourceRepoSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildSourceRepoSource.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reponame_csharp">
+<a href="#reponame_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the Cloud Source Repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branchname_csharp">
+<a href="#branchname_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitsha_csharp">
+<a href="#commitsha_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Sha</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dir_csharp">
+<a href="#dir_csharp" style="color: inherit; text-decoration: inherit;">Dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invertregex_csharp">
+<a href="#invertregex_csharp" style="color: inherit; text-decoration: inherit;">Invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
+If omitted, the project ID requesting the build is assumed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitutions_csharp">
+<a href="#substitutions_csharp" style="color: inherit; text-decoration: inherit;">Substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tagname_csharp">
+<a href="#tagname_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reponame_go">
+<a href="#reponame_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the Cloud Source Repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branchname_go">
+<a href="#branchname_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitsha_go">
+<a href="#commitsha_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Sha</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dir_go">
+<a href="#dir_go" style="color: inherit; text-decoration: inherit;">Dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invertregex_go">
+<a href="#invertregex_go" style="color: inherit; text-decoration: inherit;">Invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
+If omitted, the project ID requesting the build is assumed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitutions_go">
+<a href="#substitutions_go" style="color: inherit; text-decoration: inherit;">Substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tagname_go">
+<a href="#tagname_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reponame_nodejs">
+<a href="#reponame_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the Cloud Source Repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branchname_nodejs">
+<a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commitsha_nodejs">
+<a href="#commitsha_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Sha</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dir_nodejs">
+<a href="#dir_nodejs" style="color: inherit; text-decoration: inherit;">dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invertregex_nodejs">
+<a href="#invertregex_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
+If omitted, the project ID requesting the build is assumed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitutions_nodejs">
+<a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tagname_nodejs">
+<a href="#tagname_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="repo_name_python">
+<a href="#repo_name_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the Cloud Source Repository.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_name_python">
+<a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="commit_sha_python">
+<a href="#commit_sha_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>sha</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dir_python">
+<a href="#dir_python" style="color: inherit; text-decoration: inherit;">dir</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Working directory to use when running this step's container.
+If this value is a relative path, it is relative to the build's working
+directory. If this value is absolute, it may be outside the build's working
+directory, in which case the contents of the path may not be persisted
+across build step executions, unless a `volume` for that path is specified.
+If the build specifies a `RepoSource` with `dir` and a step with a
+`dir`,
+which specifies an absolute path, the `RepoSource` `dir` is ignored
+for the step's execution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invert_regex_python">
+<a href="#invert_regex_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>regex</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
+If omitted, the project ID requesting the build is assumed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="substitutions_python">
+<a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tag_name_python">
+<a href="#tag_name_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildSourceStorageSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildSourceStorageSource">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceStorageSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudbuild?tab=doc#TriggerBuildSourceStorageSourceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Inputs.TriggerBuildSourceStorageSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudBuild.Outputs.TriggerBuildSourceStorageSource.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucket_csharp">
+<a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage bucket containing the source.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="object_csharp">
+<a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage object containing the source.
+This object must be a gzipped archive file (.tar.gz) containing source to build.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="generation_csharp">
+<a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage generation for the object.
+If the generation is omitted, the latest generation will be used
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucket_go">
+<a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage bucket containing the source.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="object_go">
+<a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage object containing the source.
+This object must be a gzipped archive file (.tar.gz) containing source to build.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="generation_go">
+<a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage generation for the object.
+If the generation is omitted, the latest generation will be used
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucket_nodejs">
+<a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage bucket containing the source.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="object_nodejs">
+<a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage object containing the source.
+This object must be a gzipped archive file (.tar.gz) containing source to build.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="generation_nodejs">
+<a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage generation for the object.
+If the generation is omitted, the latest generation will be used
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bucket_python">
+<a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage bucket containing the source.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="object_python">
+<a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage object containing the source.
+This object must be a gzipped archive file (.tar.gz) containing source to build.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="generation_python">
+<a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Google Cloud Storage generation for the object.
+If the generation is omitted, the latest generation will be used
 {{% /md %}}</dd>
 
 </dl>
@@ -2301,7 +3482,8 @@ Each volume is created as an empty volume prior to execution of the
 build step. Upon completion of the build, volumes and their contents
 are discarded.
 Using a named volume in only one step is not valid as it is
-indicative of a build request with an incorrect configuration.  Structure is documented below.
+indicative of a build request with an incorrect configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2465,7 +3647,8 @@ Each volume is created as an empty volume prior to execution of the
 build step. Upon completion of the build, volumes and their contents
 are discarded.
 Using a named volume in only one step is not valid as it is
-indicative of a build request with an incorrect configuration.  Structure is documented below.
+indicative of a build request with an incorrect configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2629,7 +3812,8 @@ Each volume is created as an empty volume prior to execution of the
 build step. Upon completion of the build, volumes and their contents
 are discarded.
 Using a named volume in only one step is not valid as it is
-indicative of a build request with an incorrect configuration.  Structure is documented below.
+indicative of a build request with an incorrect configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2742,8 +3926,8 @@ reference this build step as a dependency.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="secretenvs_python">
-<a href="#secretenvs_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Envs</a>
+        <span id="secret_envs_python">
+<a href="#secret_envs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>envs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2786,20 +3970,21 @@ build step.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstepvolume">List[Trigger<wbr>Build<wbr>Step<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#triggerbuildstepvolume">List[Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of volumes to mount into the build step.
 Each volume is created as an empty volume prior to execution of the
 build step. Upon completion of the build, volumes and their contents
 are discarded.
 Using a named volume in only one step is not valid as it is
-indicative of a build request with an incorrect configuration.  Structure is documented below.
+indicative of a build request with an incorrect configuration.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="waitfors_python">
-<a href="#waitfors_python" style="color: inherit; text-decoration: inherit;">wait<wbr>Fors</a>
+        <span id="wait_fors_python">
+<a href="#wait_fors_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>fors</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3019,7 +4204,8 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.  Structure is documented below.
+    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3030,7 +4216,8 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.  Structure is documented below.
+    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3073,7 +4260,8 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request</a></span>
     </dt>
-    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.  Structure is documented below.
+    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3084,7 +4272,8 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push</a></span>
     </dt>
-    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.  Structure is documented below.
+    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3127,7 +4316,8 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request</a></span>
     </dt>
-    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.  Structure is documented below.
+    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3138,7 +4328,8 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push</a></span>
     </dt>
-    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.  Structure is documented below.
+    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3175,13 +4366,14 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pullrequest_python">
-<a href="#pullrequest_python" style="color: inherit; text-decoration: inherit;">pull<wbr>Request</a>
+        <span id="pull_request_python">
+<a href="#pull_request_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpullrequest">Dict[Trigger<wbr>Github<wbr>Pull<wbr>Request]</a></span>
+        <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.  Structure is documented below.
+    <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3190,9 +4382,10 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 <a href="#push_python" style="color: inherit; text-decoration: inherit;">push</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpush">Dict[Trigger<wbr>Github<wbr>Push]</a></span>
+        <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.  Structure is documented below.
+    <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -3240,6 +4433,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3250,7 +4444,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
 </dl>
@@ -3280,6 +4474,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3290,7 +4485,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
 </dl>
@@ -3320,6 +4515,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3330,7 +4526,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
 </dl>
@@ -3353,24 +4549,25 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commentcontrol_python">
-<a href="#commentcontrol_python" style="color: inherit; text-decoration: inherit;">comment<wbr>Control</a>
+        <span id="comment_control_python">
+<a href="#comment_control_python" style="color: inherit; text-decoration: inherit;">comment_<wbr>control</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
+Possible values are `COMMENTS_DISABLED` and `COMMENTS_ENABLED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="invertregex_python">
-<a href="#invertregex_python" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
+        <span id="invert_regex_python">
+<a href="#invert_regex_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
 </dl>
@@ -3417,7 +4614,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3457,7 +4654,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3497,7 +4694,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3531,13 +4728,13 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 
     <dt class="property-optional"
             title="Optional">
-        <span id="invertregex_python">
-<a href="#invertregex_python" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
+        <span id="invert_regex_python">
+<a href="#invert_regex_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3584,8 +4781,9 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
-This field is a regular expression.
+    <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3596,7 +4794,7 @@ This field is a regular expression.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Explicit commit SHA to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3626,7 +4824,7 @@ for the step's execution.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3637,8 +4835,8 @@ for the step's execution.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If
-omitted, the project ID requesting the build is assumed.
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
+If omitted, the project ID requesting the build is assumed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3649,7 +4847,7 @@ omitted, the project ID requesting the build is assumed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+    <dd>{{% md %}}Name of the Cloud Source Repository.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3660,8 +4858,9 @@ omitted, the project ID requesting the build is assumed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
-This field is a regular expression.
+    <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
 {{% /md %}}</dd>
 
 </dl>
@@ -3679,8 +4878,9 @@ This field is a regular expression.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
-This field is a regular expression.
+    <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3691,7 +4891,7 @@ This field is a regular expression.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Explicit commit SHA to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3721,7 +4921,7 @@ for the step's execution.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3732,8 +4932,8 @@ for the step's execution.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If
-omitted, the project ID requesting the build is assumed.
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
+If omitted, the project ID requesting the build is assumed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3744,7 +4944,7 @@ omitted, the project ID requesting the build is assumed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+    <dd>{{% md %}}Name of the Cloud Source Repository.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3755,8 +4955,9 @@ omitted, the project ID requesting the build is assumed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
-This field is a regular expression.
+    <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
 {{% /md %}}</dd>
 
 </dl>
@@ -3774,8 +4975,9 @@ This field is a regular expression.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
-This field is a regular expression.
+    <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3786,7 +4988,7 @@ This field is a regular expression.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Explicit commit SHA to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3816,7 +5018,7 @@ for the step's execution.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3827,8 +5029,8 @@ for the step's execution.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If
-omitted, the project ID requesting the build is assumed.
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
+If omitted, the project ID requesting the build is assumed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3839,7 +5041,7 @@ omitted, the project ID requesting the build is assumed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+    <dd>{{% md %}}Name of the Cloud Source Repository.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3850,8 +5052,9 @@ omitted, the project ID requesting the build is assumed.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
-This field is a regular expression.
+    <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
 {{% /md %}}</dd>
 
 </dl>
@@ -3863,25 +5066,26 @@ This field is a regular expression.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="branchname_python">
-<a href="#branchname_python" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
+        <span id="branch_name_python">
+<a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the branch to build. Exactly one a of branch name, tag, or commit SHA must be provided.
-This field is a regular expression.
+    <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="commitsha_python">
-<a href="#commitsha_python" style="color: inherit; text-decoration: inherit;">commit<wbr>Sha</a>
+        <span id="commit_sha_python">
+<a href="#commit_sha_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>sha</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Explicit commit SHA to build. Exactly one of a branch name, tag, or commit SHA must be provided.
+    <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3905,13 +5109,13 @@ for the step's execution.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="invertregex_python">
-<a href="#invertregex_python" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
+        <span id="invert_regex_python">
+<a href="#invert_regex_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+    <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3922,31 +5126,32 @@ for the step's execution.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository. If
-omitted, the project ID requesting the build is assumed.
+    <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
+If omitted, the project ID requesting the build is assumed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reponame_python">
-<a href="#reponame_python" style="color: inherit; text-decoration: inherit;">repo<wbr>Name</a>
+        <span id="repo_name_python">
+<a href="#repo_name_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Cloud Source Repository. If omitted, the name "default" is assumed.
+    <dd>{{% md %}}Name of the Cloud Source Repository.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tagname_python">
-<a href="#tagname_python" style="color: inherit; text-decoration: inherit;">tag<wbr>Name</a>
+        <span id="tag_name_python">
+<a href="#tag_name_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided.
-This field is a regular expression.
+    <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
+described at https://github.com/google/re2/wiki/Syntax
 {{% /md %}}</dd>
 
 </dl>
@@ -3967,6 +5172,6 @@ This field is a regular expression.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

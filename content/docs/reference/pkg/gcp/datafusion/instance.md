@@ -18,203 +18,6 @@ To get more information about Instance, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-fusion/docs/)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Data Fusion Instance Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var basicInstance = new Gcp.DataFusion.Instance("basicInstance", new Gcp.DataFusion.InstanceArgs
-        {
-            Region = "us-central1",
-            Type = "BASIC",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = datafusion.NewInstance(ctx, "basicInstance", &datafusion.InstanceArgs{
-			Region: pulumi.String("us-central1"),
-			Type:   pulumi.String("BASIC"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-basic_instance = gcp.datafusion.Instance("basicInstance",
-    region="us-central1",
-    type="BASIC")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as google_beta from "@pulumi/google-beta";
-
-const basicInstance = new google_beta.datafusion.Instance("basic_instance", {
-    region: "us-central1",
-    type: "BASIC",
-});
-```
-
-{{% /example %}}
-
-### Data Fusion Instance Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var extendedInstance = new Gcp.DataFusion.Instance("extendedInstance", new Gcp.DataFusion.InstanceArgs
-        {
-            Description = "My Data Fusion instance",
-            EnableStackdriverLogging = true,
-            EnableStackdriverMonitoring = true,
-            Labels = 
-            {
-                { "example_key", "example_value" },
-            },
-            NetworkConfig = new Gcp.DataFusion.Inputs.InstanceNetworkConfigArgs
-            {
-                IpAllocation = "10.89.48.0/22",
-                Network = "default",
-            },
-            PrivateInstance = true,
-            Region = "us-central1",
-            Type = "BASIC",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = datafusion.NewInstance(ctx, "extendedInstance", &datafusion.InstanceArgs{
-			Description:                 pulumi.String("My Data Fusion instance"),
-			EnableStackdriverLogging:    pulumi.Bool(true),
-			EnableStackdriverMonitoring: pulumi.Bool(true),
-			Labels: pulumi.Map{
-				"example_key": pulumi.String("example_value"),
-			},
-			NetworkConfig: &datafusion.InstanceNetworkConfigArgs{
-				IpAllocation: pulumi.String("10.89.48.0/22"),
-				Network:      pulumi.String("default"),
-			},
-			PrivateInstance: pulumi.Bool(true),
-			Region:          pulumi.String("us-central1"),
-			Type:            pulumi.String("BASIC"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-extended_instance = gcp.datafusion.Instance("extendedInstance",
-    description="My Data Fusion instance",
-    enable_stackdriver_logging=True,
-    enable_stackdriver_monitoring=True,
-    labels={
-        "example_key": "example_value",
-    },
-    network_config={
-        "ipAllocation": "10.89.48.0/22",
-        "network": "default",
-    },
-    private_instance=True,
-    region="us-central1",
-    type="BASIC")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as google_beta from "@pulumi/google-beta";
-
-const extendedInstance = new google_beta.datafusion.Instance("extended_instance", {
-    description: "My Data Fusion instance",
-    enableStackdriverLogging: true,
-    enableStackdriverMonitoring: true,
-    labels: {
-        example_key: "example_value",
-    },
-    networkConfig: {
-        ipAllocation: "10.89.48.0/22",
-        network: "default",
-    },
-    privateInstance: true,
-    region: "us-central1",
-    type: "BASIC",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Instance Resource {#create}
@@ -226,7 +29,7 @@ const extendedInstance = new google_beta.datafusion.Instance("extended_instance"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datafusion/#Instance">Instance</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>enable_stackdriver_logging=None<span class="p">, </span>enable_stackdriver_monitoring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network_config=None<span class="p">, </span>options=None<span class="p">, </span>private_instance=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datafusion/#pulumi_gcp.datafusion.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_config</span><span class="p">:</span> <span class="nx">Optional[InstanceNetworkConfigArgs]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">private_instance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -413,6 +216,7 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+Possible values are `BASIC` and `ENTERPRISE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -479,7 +283,8 @@ such as Compute Engine VMs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -529,6 +334,17 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The region of the Data Fusion instance.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current version of the Data Fusion.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -551,6 +367,7 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+Possible values are `BASIC` and `ENTERPRISE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -617,7 +434,8 @@ such as Compute Engine VMs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -667,6 +485,17 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The region of the Data Fusion instance.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current version of the Data Fusion.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -689,6 +518,7 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+Possible values are `BASIC` and `ENTERPRISE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -755,7 +585,8 @@ such as Compute Engine VMs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -805,6 +636,17 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The region of the Data Fusion instance.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Current version of the Data Fusion.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -827,6 +669,7 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+Possible values are `BASIC` and `ENTERPRISE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -868,7 +711,7 @@ available, such as support for streaming pipelines, higher number of concurrent 
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
 such as Compute Engine VMs.
@@ -891,9 +734,10 @@ such as Compute Engine VMs.
 <a href="#network_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">Dict[Instance<wbr>Network<wbr>Config]</a></span>
+        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -902,7 +746,7 @@ such as Compute Engine VMs.
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
 {{% /md %}}</dd>
@@ -941,6 +785,17 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Current version of the Data Fusion.
 {{% /md %}}</dd>
 
 </dl>
@@ -1039,17 +894,6 @@ being upgraded - RESTARTING: Instance is being restarted
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="version_csharp">
-<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Current version of the Data Fusion.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1133,17 +977,6 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="version_go">
-<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Current version of the Data Fusion.
 {{% /md %}}</dd>
 
 </dl>
@@ -1231,17 +1064,6 @@ being upgraded - RESTARTING: Instance is being restarted
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="version_nodejs">
-<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Current version of the Data Fusion.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1327,17 +1149,6 @@ being upgraded - RESTARTING: Instance is being restarted
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span id="version_python">
-<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Current version of the Data Fusion.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1357,7 +1168,8 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_time=None<span class="p">, </span>description=None<span class="p">, </span>enable_stackdriver_logging=None<span class="p">, </span>enable_stackdriver_monitoring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>network_config=None<span class="p">, </span>options=None<span class="p">, </span>private_instance=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>service_account=None<span class="p">, </span>service_endpoint=None<span class="p">, </span>state=None<span class="p">, </span>state_message=None<span class="p">, </span>type=None<span class="p">, </span>update_time=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_stackdriver_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_config</span><span class="p">:</span> <span class="nx">Optional[InstanceNetworkConfigArgs]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">private_instance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1365,7 +1177,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1546,7 +1358,8 @@ such as Compute Engine VMs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1657,6 +1470,7 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+Possible values are `BASIC` and `ENTERPRISE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1763,7 +1577,8 @@ such as Compute Engine VMs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1874,6 +1689,7 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+Possible values are `BASIC` and `ENTERPRISE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1980,7 +1796,8 @@ such as Compute Engine VMs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2091,6 +1908,7 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+Possible values are `BASIC` and `ENTERPRISE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2172,7 +1990,7 @@ available, such as support for streaming pipelines, higher number of concurrent 
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
 such as Compute Engine VMs.
@@ -2195,9 +2013,10 @@ such as Compute Engine VMs.
 <a href="#state_network_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">Dict[Instance<wbr>Network<wbr>Config]</a></span>
+        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.  Structure is documented below.
+    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2206,7 +2025,7 @@ such as Compute Engine VMs.
 <a href="#state_options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
 {{% /md %}}</dd>
@@ -2308,6 +2127,7 @@ using point and click UI. However, there are certain limitations, such as fewer 
 of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+Possible values are `BASIC` and `ENTERPRISE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2463,8 +2283,8 @@ project the network should specified in the form of projects/{host-project-id}/g
 
     <dt class="property-required"
             title="Required">
-        <span id="ipallocation_python">
-<a href="#ipallocation_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation</a>
+        <span id="ip_allocation_python">
+<a href="#ip_allocation_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2504,6 +2324,6 @@ project the network should specified in the form of projects/{host-project-id}/g
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

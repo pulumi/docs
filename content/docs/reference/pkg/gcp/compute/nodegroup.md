@@ -23,81 +23,6 @@ number of nodes in a node group and changes to node group size either
 through provider config or through external changes will cause
 the provider to delete and recreate the node group.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Node Group Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var soletenant_tmpl = new Gcp.Compute.NodeTemplate("soletenant-tmpl", new Gcp.Compute.NodeTemplateArgs
-        {
-            Region = "us-central1",
-            NodeType = "n1-node-96-624",
-        });
-        var nodes = new Gcp.Compute.NodeGroup("nodes", new Gcp.Compute.NodeGroupArgs
-        {
-            Zone = "us-central1-a",
-            Description = "example google_compute_node_group for the Google Provider",
-            Size = 1,
-            NodeTemplate = soletenant_tmpl.Id,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-soletenant_tmpl = gcp.compute.NodeTemplate("soletenant-tmpl",
-    region="us-central1",
-    node_type="n1-node-96-624")
-nodes = gcp.compute.NodeGroup("nodes",
-    zone="us-central1-a",
-    description="example google_compute_node_group for the Google Provider",
-    size=1,
-    node_template=soletenant_tmpl.id)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const soletenant_tmpl = new gcp.compute.NodeTemplate("soletenant-tmpl", {
-    region: "us-central1",
-    nodeType: "n1-node-96-624",
-});
-const nodes = new gcp.compute.NodeGroup("nodes", {
-    zone: "us-central1-a",
-    description: "example google_compute_node_group for the Google Provider",
-    size: 1,
-    nodeTemplate: soletenant_tmpl.id,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a NodeGroup Resource {#create}
@@ -109,7 +34,7 @@ const nodes = new gcp.compute.NodeGroup("nodes", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#NodeGroup">NodeGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autoscaling_policy=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_template=None<span class="p">, </span>project=None<span class="p">, </span>size=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.NodeGroup">NodeGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[NodeGroupAutoscalingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -313,7 +238,8 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}-
 If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
+group autoscaler to automatically manage the sizes of your node groups.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -400,7 +326,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}-
 If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
+group autoscaler to automatically manage the sizes of your node groups.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -487,7 +414,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}-
 If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
+group autoscaler to automatically manage the sizes of your node groups.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -570,11 +498,12 @@ If it is not provided, the provider project is used.
 <a href="#autoscaling_policy_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupautoscalingpolicy">Dict[Node<wbr>Group<wbr>Autoscaling<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}-
 If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
+group autoscaler to automatically manage the sizes of your node groups.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -808,7 +737,8 @@ Get an existing NodeGroup resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscaling_policy=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>node_template=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>size=None<span class="p">, </span>zone=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[NodeGroupAutoscalingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NodeGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -816,7 +746,7 @@ Get an existing NodeGroup resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NodeGroup.html">NodeGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NodeGroupState.html">NodeGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NodeGroup.html">NodeGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.NodeGroupState.html">NodeGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -932,7 +862,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}-
 If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
+group autoscaler to automatically manage the sizes of your node groups.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1041,7 +972,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}-
 If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
+group autoscaler to automatically manage the sizes of your node groups.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1150,7 +1082,8 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}-
 If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
+group autoscaler to automatically manage the sizes of your node groups.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1255,11 +1188,12 @@ If it is not provided, the provider project is used.
 <a href="#state_autoscaling_policy_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupautoscalingpolicy">Dict[Node<wbr>Group<wbr>Autoscaling<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#nodegroupautoscalingpolicy">Node<wbr>Group<wbr>Autoscaling<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}-
 If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups.  Structure is documented below.
+group autoscaler to automatically manage the sizes of your node groups.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1422,6 +1356,7 @@ than or equal to max-nodes. The default value is 0.
 - ONLY_SCALE_OUT: Enables only scaling out.
 You must use this mode if your node groups are configured to
 restart their hosted VMs on minimal servers.
+Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1469,6 +1404,7 @@ than or equal to max-nodes. The default value is 0.
 - ONLY_SCALE_OUT: Enables only scaling out.
 You must use this mode if your node groups are configured to
 restart their hosted VMs on minimal servers.
+Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1516,6 +1452,7 @@ than or equal to max-nodes. The default value is 0.
 - ONLY_SCALE_OUT: Enables only scaling out.
 You must use this mode if your node groups are configured to
 restart their hosted VMs on minimal servers.
+Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1527,8 +1464,8 @@ restart their hosted VMs on minimal servers.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxnodes_python">
-<a href="#maxnodes_python" style="color: inherit; text-decoration: inherit;">max<wbr>Nodes</a>
+        <span id="max_nodes_python">
+<a href="#max_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1539,8 +1476,8 @@ to 100 and greater than or equal to min-nodes.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minnodes_python">
-<a href="#minnodes_python" style="color: inherit; text-decoration: inherit;">min<wbr>Nodes</a>
+        <span id="min_nodes_python">
+<a href="#min_nodes_python" style="color: inherit; text-decoration: inherit;">min_<wbr>nodes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1563,6 +1500,7 @@ than or equal to max-nodes. The default value is 0.
 - ONLY_SCALE_OUT: Enables only scaling out.
 You must use this mode if your node groups are configured to
 restart their hosted VMs on minimal servers.
+Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1583,6 +1521,6 @@ restart their hosted VMs on minimal servers.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

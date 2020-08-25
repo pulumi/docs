@@ -19,6 +19,9 @@ Explore the resources and functions of the bigquery module in the GCP package.
     <li><a href="datasetiambinding" title="DatasetIamBinding"><span class="symbol resource"></span>DatasetIamBinding</a></li>
     <li><a href="datasetiammember" title="DatasetIamMember"><span class="symbol resource"></span>DatasetIamMember</a></li>
     <li><a href="datasetiampolicy" title="DatasetIamPolicy"><span class="symbol resource"></span>DatasetIamPolicy</a></li>
+    <li><a href="iambinding" title="IamBinding"><span class="symbol resource"></span>IamBinding</a></li>
+    <li><a href="iammember" title="IamMember"><span class="symbol resource"></span>IamMember</a></li>
+    <li><a href="iampolicy" title="IamPolicy"><span class="symbol resource"></span>IamPolicy</a></li>
     <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
     <li><a href="reservation" title="Reservation"><span class="symbol resource"></span>Reservation</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
@@ -36,9 +39,9 @@ Explore the resources and functions of the bigquery module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
+	<dd>3.21.0</dd>
 </dl>
 
 

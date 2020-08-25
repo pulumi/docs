@@ -14,67 +14,6 @@ Retrieve information about a set of projects based on a filter. See the
 [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list)
 for more details.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Searching For Projects About To Be Deleted In An Org
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var my_org_projects = Output.Create(Gcp.Projects.GetProject.InvokeAsync(new Gcp.Projects.GetProjectArgs
-        {
-            Filter = "parent.id:012345678910 lifecycleState:DELETE_REQUESTED",
-        }));
-        var deletion_candidate = my_org_projects.Apply(my_org_projects => Output.Create(Gcp.Organizations.GetProject.InvokeAsync(new Gcp.Organizations.GetProjectArgs
-        {
-            ProjectId = my_org_projects.Projects[0].ProjectId,
-        })));
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-Coming soon!
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-my_org_projects = gcp.projects.get_project(filter="parent.id:012345678910 lifecycleState:DELETE_REQUESTED")
-deletion_candidate = gcp.organizations.get_project(project_id=my_org_projects.projects[0]["project_id"])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const my-org-projects = gcp.projects.getProject({
-    filter: "parent.id:012345678910 lifecycleState:DELETE_REQUESTED",
-});
-const deletion-candidate = my_org_projects.then(my_org_projects => gcp.organizations.getProject({
-    projectId: my_org_projects.projects[0].projectId,
-}));
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetProject {#using}
@@ -88,7 +27,7 @@ const deletion-candidate = my_org_projects.then(my_org_projects => gcp.organizat
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_project(</span>filter=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_project(</span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -461,6 +400,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

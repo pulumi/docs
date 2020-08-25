@@ -20,235 +20,6 @@ To get more information about Note, see:
     * [Official Documentation](https://cloud.google.com/container-analysis/)
     * [Creating Attestations (Occurrences)](https://cloud.google.com/binary-authorization/docs/making-attestations)
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-### Container Analysis Note Basic
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
-        {
-            AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
-            {
-                Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
-                {
-                    HumanReadableName = "Attestor Note",
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
-			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
-				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
-					HumanReadableName: pulumi.String("Attestor Note"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-note = gcp.containeranalysis.Note("note", attestation_authority={
-    "hint": {
-        "humanReadableName": "Attestor Note",
-    },
-})
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const note = new gcp.containeranalysis.Note("note", {
-    attestationAuthority: {
-        hint: {
-            humanReadableName: "Attestor Note",
-        },
-    },
-});
-```
-
-{{% /example %}}
-
-### Container Analysis Note Attestation Full
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Gcp = Pulumi.Gcp;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
-        {
-            AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
-            {
-                Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
-                {
-                    HumanReadableName = "Attestor Note",
-                },
-            },
-            ExpirationTime = "2120-10-02T15:01:23.045123456Z",
-            LongDescription = "a longer description of test note",
-            RelatedUrls = 
-            {
-                new Gcp.ContainerAnalysis.Inputs.NoteRelatedUrlArgs
-                {
-                    Label = "foo",
-                    Url = "some.url",
-                },
-                new Gcp.ContainerAnalysis.Inputs.NoteRelatedUrlArgs
-                {
-                    Url = "google.com",
-                },
-            },
-            ShortDescription = "test note",
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
-			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
-				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
-					HumanReadableName: pulumi.String("Attestor Note"),
-				},
-			},
-			ExpirationTime:  pulumi.String("2120-10-02T15:01:23.045123456Z"),
-			LongDescription: pulumi.String("a longer description of test note"),
-			RelatedUrls: containeranalysis.NoteRelatedUrlArray{
-				&containeranalysis.NoteRelatedUrlArgs{
-					Label: pulumi.String("foo"),
-					Url:   pulumi.String("some.url"),
-				},
-				&containeranalysis.NoteRelatedUrlArgs{
-					Url: pulumi.String("google.com"),
-				},
-			},
-			ShortDescription: pulumi.String("test note"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_gcp as gcp
-
-note = gcp.containeranalysis.Note("note",
-    attestation_authority={
-        "hint": {
-            "humanReadableName": "Attestor Note",
-        },
-    },
-    expiration_time="2120-10-02T15:01:23.045123456Z",
-    long_description="a longer description of test note",
-    related_urls=[
-        {
-            "label": "foo",
-            "url": "some.url",
-        },
-        {
-            "url": "google.com",
-        },
-    ],
-    short_description="test note")
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as gcp from "@pulumi/gcp";
-
-const note = new gcp.containeranalysis.Note("note", {
-    attestationAuthority: {
-        hint: {
-            humanReadableName: "Attestor Note",
-        },
-    },
-    expirationTime: "2120-10-02T15:01:23.045123456Z",
-    longDescription: "a longer description of test note",
-    relatedUrls: [
-        {
-            label: "foo",
-            url: "some.url",
-        },
-        {
-            url: "google.com",
-        },
-    ],
-    shortDescription: "test note",
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a Note Resource {#create}
@@ -260,7 +31,7 @@ const note = new gcp.containeranalysis.Note("note", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/containeranalysis/#Note">Note</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attestation_authority=None<span class="p">, </span>expiration_time=None<span class="p">, </span>long_description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>related_note_names=None<span class="p">, </span>related_urls=None<span class="p">, </span>short_description=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/containeranalysis/#pulumi_gcp.containeranalysis.Note">Note</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[NoteAttestationAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[List[NoteRelatedUrlArgs]]</span> = None<span class="p">, </span><span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -448,7 +219,8 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -515,7 +287,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">List&lt;Note<wbr>Related<wbr>Url<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -552,7 +325,8 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -619,7 +393,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">[]Note<wbr>Related<wbr>Url</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -656,7 +431,8 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -723,7 +499,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">Note<wbr>Related<wbr>Url[]</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -750,7 +527,7 @@ If it is not provided, the provider project is used.
 <a href="#attestation_authority_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthority">Dict[Note<wbr>Attestation<wbr>Authority]</a></span>
+        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
 For example, an organization might have one AttestationAuthority for
@@ -760,7 +537,8 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -825,9 +603,10 @@ If it is not provided, the provider project is used.
 <a href="#related_urls_python" style="color: inherit; text-decoration: inherit;">related_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">List[Note<wbr>Related<wbr>Url]</a></span>
+        <span class="property-type"><a href="#noterelatedurl">List[Note<wbr>Related<wbr>Url<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1071,7 +850,8 @@ Get an existing Note resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attestation_authority=None<span class="p">, </span>create_time=None<span class="p">, </span>expiration_time=None<span class="p">, </span>kind=None<span class="p">, </span>long_description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>related_note_names=None<span class="p">, </span>related_urls=None<span class="p">, </span>short_description=None<span class="p">, </span>update_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[NoteAttestationAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[List[NoteRelatedUrlArgs]]</span> = None<span class="p">, </span><span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Note</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1079,7 +859,7 @@ Get an existing Note resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Note.html">Note</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.NoteState.html">NoteState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Note.html">Note</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.NoteState.html">NoteState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1201,7 +981,8 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1290,7 +1071,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">List&lt;Note<wbr>Related<wbr>Url<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1338,7 +1120,8 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1427,7 +1210,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">[]Note<wbr>Related<wbr>Url</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1475,7 +1259,8 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1564,7 +1349,8 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">Note<wbr>Related<wbr>Url[]</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1602,7 +1388,7 @@ If it is not provided, the provider project is used.
 <a href="#state_attestation_authority_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthority">Dict[Note<wbr>Attestation<wbr>Authority]</a></span>
+        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
 For example, an organization might have one AttestationAuthority for
@@ -1612,7 +1398,8 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1699,9 +1486,10 @@ If it is not provided, the provider project is used.
 <a href="#state_related_urls_python" style="color: inherit; text-decoration: inherit;">related_<wbr>urls</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">List[Note<wbr>Related<wbr>Url]</a></span>
+        <span class="property-type"><a href="#noterelatedurl">List[Note<wbr>Related<wbr>Url<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1774,7 +1562,8 @@ name of the Note (which might be a UUID for security purposes)
 from "readable" names more suitable for debug output. Note that
 these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
-Attestations to verify.  Structure is documented below.
+Attestations to verify.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1799,7 +1588,8 @@ name of the Note (which might be a UUID for security purposes)
 from "readable" names more suitable for debug output. Note that
 these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
-Attestations to verify.  Structure is documented below.
+Attestations to verify.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1824,7 +1614,8 @@ name of the Note (which might be a UUID for security purposes)
 from "readable" names more suitable for debug output. Note that
 these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
-Attestations to verify.  Structure is documented below.
+Attestations to verify.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1840,7 +1631,7 @@ Attestations to verify.  Structure is documented below.
 <a href="#hint_python" style="color: inherit; text-decoration: inherit;">hint</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthorityhint">Dict[Note<wbr>Attestation<wbr>Authority<wbr>Hint]</a></span>
+        <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This submessage provides human-readable hints about the purpose of
 the AttestationAuthority. Because the name of a Note acts as its
@@ -1849,7 +1640,8 @@ name of the Note (which might be a UUID for security purposes)
 from "readable" names more suitable for debug output. Note that
 these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
-Attestations to verify.  Structure is documented below.
+Attestations to verify.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1936,8 +1728,8 @@ example "qa".
 
     <dt class="property-required"
             title="Required">
-        <span id="humanreadablename_python">
-<a href="#humanreadablename_python" style="color: inherit; text-decoration: inherit;">human<wbr>Readable<wbr>Name</a>
+        <span id="human_readable_name_python">
+<a href="#human_readable_name_python" style="color: inherit; text-decoration: inherit;">human_<wbr>readable_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2098,6 +1890,6 @@ example "qa".
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -22,7 +22,7 @@ meta_desc: "Explore the Environment resource of the notebooks module, including 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/notebooks/#Environment">Environment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_image=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>post_startup_script=None<span class="p">, </span>project=None<span class="p">, </span>vm_image=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/notebooks/#pulumi_gcp.notebooks.Environment">Environment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_image</span><span class="p">:</span> <span class="nx">Optional[EnvironmentContainerImageArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[EnvironmentVmImageArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -213,7 +213,8 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -282,7 +283,8 @@ Format: projects/{project_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -311,7 +313,8 @@ Format: projects/{project_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -380,7 +383,8 @@ Format: projects/{project_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -409,7 +413,8 @@ Format: projects/{project_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -478,7 +483,8 @@ Format: projects/{project_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -505,9 +511,10 @@ Format: projects/{project_id}
 <a href="#container_image_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentcontainerimage">Dict[Environment<wbr>Container<wbr>Image]</a></span>
+        <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -574,9 +581,10 @@ Format: projects/{project_id}
 <a href="#vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvmimage">Dict[Environment<wbr>Vm<wbr>Image]</a></span>
+        <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -721,7 +729,8 @@ Get an existing Environment resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>container_image=None<span class="p">, </span>create_time=None<span class="p">, </span>description=None<span class="p">, </span>display_name=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>post_startup_script=None<span class="p">, </span>project=None<span class="p">, </span>vm_image=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_image</span><span class="p">:</span> <span class="nx">Optional[EnvironmentContainerImageArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">post_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[EnvironmentVmImageArgs]</span> = None<span class="p">) -&gt;</span> Environment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -729,7 +738,7 @@ Get an existing Environment resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Notebooks.Environment.html">Environment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Notebooks.EnvironmentState.html">EnvironmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Notebooks.Environment.html">Environment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Notebooks.EnvironmentState.html">EnvironmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -843,7 +852,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -934,7 +944,8 @@ Format: projects/{project_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -952,7 +963,8 @@ Format: projects/{project_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1043,7 +1055,8 @@ Format: projects/{project_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1061,7 +1074,8 @@ Format: projects/{project_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1152,7 +1166,8 @@ Format: projects/{project_id}
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1168,9 +1183,10 @@ Format: projects/{project_id}
 <a href="#state_container_image_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentcontainerimage">Dict[Environment<wbr>Container<wbr>Image]</a></span>
+        <span class="property-type"><a href="#environmentcontainerimage">Environment<wbr>Container<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a container image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a container image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1259,9 +1275,10 @@ Format: projects/{project_id}
 <a href="#state_vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvmimage">Dict[Environment<wbr>Vm<wbr>Image]</a></span>
+        <span class="property-type"><a href="#environmentvmimage">Environment<wbr>Vm<wbr>Image<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.  Structure is documented below.
+    <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1572,8 +1589,8 @@ Format: projects/{project_id}
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imagefamily_python">
-<a href="#imagefamily_python" style="color: inherit; text-decoration: inherit;">image<wbr>Family</a>
+        <span id="image_family_python">
+<a href="#image_family_python" style="color: inherit; text-decoration: inherit;">image_<wbr>family</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1583,8 +1600,8 @@ Format: projects/{project_id}
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imagename_python">
-<a href="#imagename_python" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
+        <span id="image_name_python">
+<a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1610,6 +1627,6 @@ Format: projects/{project_id}
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -35,7 +35,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/deploymentmanager/#Deployment">Deployment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>create_policy=None<span class="p">, </span>delete_policy=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>preview=None<span class="p">, </span>project=None<span class="p">, </span>target=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/deploymentmanager/#pulumi_gcp.deploymentmanager.Deployment">Deployment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentLabelArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[DeploymentTargetArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -216,7 +216,8 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -232,6 +233,8 @@ create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -248,6 +251,8 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -269,7 +274,8 @@ actually change the deployment, just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">List&lt;Deployment<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -296,7 +302,7 @@ configuration.
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
@@ -330,7 +336,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -346,6 +353,8 @@ create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,6 +371,8 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -383,7 +394,8 @@ actually change the deployment, just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">[]Deployment<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -410,7 +422,7 @@ configuration.
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
@@ -444,7 +456,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -460,6 +473,8 @@ create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -476,6 +491,8 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -497,7 +514,8 @@ actually change the deployment, just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">Deployment<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -524,7 +542,7 @@ configuration.
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
@@ -555,10 +573,11 @@ If it is not provided, the provider project is used.
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttarget">Dict[Deployment<wbr>Target]</a></span>
+        <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -574,6 +593,8 @@ create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -590,6 +611,8 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -609,9 +632,10 @@ actually change the deployment, just how it is updated.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentlabel">List[Deployment<wbr>Label]</a></span>
+        <span class="property-type"><a href="#deploymentlabel">List[Deployment<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -638,7 +662,7 @@ configuration.
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
@@ -886,7 +910,8 @@ Get an existing Deployment resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_policy=None<span class="p">, </span>delete_policy=None<span class="p">, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>manifest=None<span class="p">, </span>name=None<span class="p">, </span>preview=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>target=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[DeploymentLabelArgs]]</span> = None<span class="p">, </span><span class="nx">manifest</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[DeploymentTargetArgs]</span> = None<span class="p">) -&gt;</span> Deployment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -894,7 +919,7 @@ Get an existing Deployment resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Deployment.html">Deployment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.DeploymentState.html">DeploymentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Deployment.html">Deployment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.DeploymentState.html">DeploymentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1013,6 +1038,8 @@ create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1029,6 +1056,8 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1061,7 +1090,8 @@ actually change the deployment, just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">List&lt;Deployment<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1099,7 +1129,7 @@ configuration.
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
@@ -1137,7 +1167,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1160,6 +1191,8 @@ create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1176,6 +1209,8 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1208,7 +1243,8 @@ actually change the deployment, just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">[]Deployment<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1246,7 +1282,7 @@ configuration.
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
@@ -1284,7 +1320,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1307,6 +1344,8 @@ create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1323,6 +1362,8 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1355,7 +1396,8 @@ actually change the deployment, just how it is updated.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">Deployment<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1393,7 +1435,7 @@ configuration.
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
@@ -1431,7 +1473,8 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1454,6 +1497,8 @@ create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1470,6 +1515,8 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1500,9 +1547,10 @@ actually change the deployment, just how it is updated.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentlabel">List[Deployment<wbr>Label]</a></span>
+        <span class="property-type"><a href="#deploymentlabel">List[Deployment<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1540,7 +1588,7 @@ configuration.
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
@@ -1575,10 +1623,11 @@ If it is not provided, the provider project is used.
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttarget">Dict[Deployment<wbr>Target]</a></span>
+        <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1756,7 +1805,8 @@ configuration and relevant templates.  Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+    <dd>{{% md %}}The root configuration file to use for this deployment.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1769,7 +1819,8 @@ configuration and relevant templates.  Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might
-import a text file in order to use the file in a template.  Structure is documented below.
+import a text file in order to use the file in a template.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1787,7 +1838,8 @@ import a text file in order to use the file in a template.  Structure is documen
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+    <dd>{{% md %}}The root configuration file to use for this deployment.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1800,7 +1852,8 @@ import a text file in order to use the file in a template.  Structure is documen
     </dt>
     <dd>{{% md %}}Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might
-import a text file in order to use the file in a template.  Structure is documented below.
+import a text file in order to use the file in a template.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1818,7 +1871,8 @@ import a text file in order to use the file in a template.  Structure is documen
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+    <dd>{{% md %}}The root configuration file to use for this deployment.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1831,7 +1885,8 @@ import a text file in order to use the file in a template.  Structure is documen
     </dt>
     <dd>{{% md %}}Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might
-import a text file in order to use the file in a template.  Structure is documented below.
+import a text file in order to use the file in a template.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1847,9 +1902,10 @@ import a text file in order to use the file in a template.  Structure is documen
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttargetconfig">Dict[Deployment<wbr>Target<wbr>Config]</a></span>
+        <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+    <dd>{{% md %}}The root configuration file to use for this deployment.
+Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1858,11 +1914,12 @@ import a text file in order to use the file in a template.  Structure is documen
 <a href="#imports_python" style="color: inherit; text-decoration: inherit;">imports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttargetimport">List[Deployment<wbr>Target<wbr>Import]</a></span>
+        <span class="property-type"><a href="#deploymenttargetimport">List[Deployment<wbr>Target<wbr>Import<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might
-import a text file in order to use the file in a template.  Structure is documented below.
+import a text file in order to use the file in a template.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -2111,6 +2168,6 @@ configuration.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 
