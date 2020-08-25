@@ -3,7 +3,7 @@ title: "Announcing Python Tooling Improvements"
 date: 2020-08-25
 draft: false
 meta_desc: "Type annotations and support for passing nested values with data classes provides a significant improvement to the Python experience."
-meta_image: meta.png
+meta_image: python-tooling.png
 authors:
     - justin-vanpatten
 tags:
