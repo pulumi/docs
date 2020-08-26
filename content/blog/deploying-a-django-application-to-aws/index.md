@@ -387,8 +387,7 @@ django_image = docker.Image("django-dockerimage",
 )
 ```
 
-To help with debugging our application, we will create a Cloudwatch instance to automatically
-store all logs.
+To help with debugging our application, we will create a Cloudwatch instance to store all logs.
 
 ```python
 django_log_group = aws.cloudwatch.LogGroup("django-log-group",
