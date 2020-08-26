@@ -28,7 +28,7 @@ $ django-admin startproject mysite
 $ cd mysite
 ```
 
-This tutorial was written for the [aws-django-voting-app example](https://github.com/jetvova/examples/tree/vova/aws-py-sql-dynamicresource/aws-py-dynamicresource) but will work with any other Django application. The most important file is `./mysite/settings.py`, which we will modify to accept secrets and configuration parameters in the form of environment variables. A common mistake that programmers make is to submit files with important data to source code repositories. Even if it is a private repository, it is still not recommended to leave passwords and private keys in your files.
+This tutorial was written for the [aws-django-voting-app example](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app) but will work with any other Django application. The most important file is `./mysite/settings.py`, which we will modify to accept secrets and configuration parameters in the form of environment variables. A common mistake that programmers make is to submit files with important data to source code repositories. Even if it is a private repository, it is still not recommended to leave passwords and private keys in your files.
 
 ```python
 SECRET_KEY = os.environ['SECRET_KEY']
@@ -396,8 +396,14 @@ django_log_group = aws.cloudwatch.LogGroup("django-log-group",
 )
 ```
 
-Our project is special because it uses two unique ECS services---one that sets up the MySQL
+Our project is special because it uses two independant ECS services---one that sets up the MySQL
 database, and one that continuously runs and handles the website.
+
+While it is possible to have a single ECS service set up both the database and the server, doing
+so presents the risk of exposing important information to the internet. To set up the database,
+the ECS service would need to know our MySQL admin credendtials. However, since the service would
+also handle the website, it would mean that a successful attack on our Django website
+could allow the attacker to access the credentials for our backend.
 
 First, let's create the task definition that runs once and sets up the database.
 
