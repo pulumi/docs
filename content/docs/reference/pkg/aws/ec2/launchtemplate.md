@@ -23,7 +23,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.LaunchTemplate">LaunchTemplate</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>block_device_mappings=None<span class="p">, </span>capacity_reservation_specification=None<span class="p">, </span>cpu_options=None<span class="p">, </span>credit_specification=None<span class="p">, </span>default_version=None<span class="p">, </span>description=None<span class="p">, </span>disable_api_termination=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_gpu_specifications=None<span class="p">, </span>elastic_inference_accelerator=None<span class="p">, </span>hibernation_options=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_initiated_shutdown_behavior=None<span class="p">, </span>instance_market_options=None<span class="p">, </span>instance_type=None<span class="p">, </span>kernel_id=None<span class="p">, </span>key_name=None<span class="p">, </span>license_specifications=None<span class="p">, </span>metadata_options=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>placement=None<span class="p">, </span>ram_disk_id=None<span class="p">, </span>security_group_names=None<span class="p">, </span>tag_specifications=None<span class="p">, </span>tags=None<span class="p">, </span>update_default_version=None<span class="p">, </span>user_data=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.LaunchTemplate">LaunchTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCapacityReservationSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCpuOptionsArgs]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_gpu_specifications</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateElasticGpuSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_inference_accelerator</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateElasticInferenceAcceleratorArgs]</span> = None<span class="p">, </span><span class="nx">hibernation_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateHibernationOptionsArgs]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateIamInstanceProfileArgs]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_market_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateInstanceMarketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_specifications</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateLicenseSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMonitoringArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplatePlacementArgs]</span> = None<span class="p">, </span><span class="nx">ram_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateTagSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1305,7 +1305,7 @@ Interfaces below for more details.
 <a href="#block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">List[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemapping">List[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -1317,7 +1317,7 @@ See Block Devices below for details.
 <a href="#capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Dict[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd>
@@ -1328,7 +1328,7 @@ See Block Devices below for details.
 <a href="#cpu_options_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Dict[Launch<wbr>Template<wbr>Cpu<wbr>Options]</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd>
@@ -1339,7 +1339,7 @@ See Block Devices below for details.
 <a href="#credit_specification_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Dict[Launch<wbr>Template<wbr>Credit<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -1396,7 +1396,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a href="#elastic_gpu_specifications_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>gpu_<wbr>specifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -1408,7 +1408,7 @@ below for more details.
 <a href="#elastic_inference_accelerator_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>inference_<wbr>accelerator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Dict[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd>
@@ -1419,7 +1419,7 @@ below for more details.
 <a href="#hibernation_options_python" style="color: inherit; text-decoration: inherit;">hibernation_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Dict[Launch<wbr>Template<wbr>Hibernation<wbr>Options]</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
@@ -1430,7 +1430,7 @@ below for more details.
 <a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Dict[Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -1465,7 +1465,7 @@ below for more details.
 <a href="#instance_market_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>market_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Dict[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options]</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -1510,7 +1510,7 @@ below for details.
 <a href="#license_specifications_python" style="color: inherit; text-decoration: inherit;">license_<wbr>specifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">List[Launch<wbr>Template<wbr>License<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#launchtemplatelicensespecification">List[Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
 {{% /md %}}</dd>
@@ -1521,7 +1521,7 @@ below for details.
 <a href="#metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Dict[Launch<wbr>Template<wbr>Metadata<wbr>Options]</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -1532,7 +1532,7 @@ below for details.
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Dict[Launch<wbr>Template<wbr>Monitoring]</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd>
@@ -1565,7 +1565,7 @@ below for details.
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">List[Launch<wbr>Template<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterface">List[Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -1577,7 +1577,7 @@ Interfaces below for more details.
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Dict[Launch<wbr>Template<wbr>Placement]</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd>
@@ -1611,7 +1611,7 @@ Interfaces below for more details.
 <a href="#tag_specifications_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>specifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">List[Launch<wbr>Template<wbr>Tag<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#launchtemplatetagspecification">List[Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
 {{% /md %}}</dd>
@@ -1622,7 +1622,7 @@ Interfaces below for more details.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd>
@@ -1846,7 +1846,8 @@ Get an existing LaunchTemplate resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>block_device_mappings=None<span class="p">, </span>capacity_reservation_specification=None<span class="p">, </span>cpu_options=None<span class="p">, </span>credit_specification=None<span class="p">, </span>default_version=None<span class="p">, </span>description=None<span class="p">, </span>disable_api_termination=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_gpu_specifications=None<span class="p">, </span>elastic_inference_accelerator=None<span class="p">, </span>hibernation_options=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_initiated_shutdown_behavior=None<span class="p">, </span>instance_market_options=None<span class="p">, </span>instance_type=None<span class="p">, </span>kernel_id=None<span class="p">, </span>key_name=None<span class="p">, </span>latest_version=None<span class="p">, </span>license_specifications=None<span class="p">, </span>metadata_options=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>placement=None<span class="p">, </span>ram_disk_id=None<span class="p">, </span>security_group_names=None<span class="p">, </span>tag_specifications=None<span class="p">, </span>tags=None<span class="p">, </span>update_default_version=None<span class="p">, </span>user_data=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCapacityReservationSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCpuOptionsArgs]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_gpu_specifications</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateElasticGpuSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_inference_accelerator</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateElasticInferenceAcceleratorArgs]</span> = None<span class="p">, </span><span class="nx">hibernation_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateHibernationOptionsArgs]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateIamInstanceProfileArgs]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_market_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateInstanceMarketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">latest_version</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">license_specifications</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateLicenseSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMonitoringArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplatePlacementArgs]</span> = None<span class="p">, </span><span class="nx">ram_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[List[LaunchTemplateTagSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> LaunchTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1854,7 +1855,7 @@ Get an existing LaunchTemplate resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchTemplate.html">LaunchTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchTemplateState.html">LaunchTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchTemplate.html">LaunchTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchTemplateState.html">LaunchTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3147,7 +3148,7 @@ Interfaces below for more details.
 <a href="#state_block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">List[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemapping">List[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -3159,7 +3160,7 @@ See Block Devices below for details.
 <a href="#state_capacity_reservation_specification_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Dict[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd>
@@ -3170,7 +3171,7 @@ See Block Devices below for details.
 <a href="#state_cpu_options_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Dict[Launch<wbr>Template<wbr>Cpu<wbr>Options]</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd>
@@ -3181,7 +3182,7 @@ See Block Devices below for details.
 <a href="#state_credit_specification_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Dict[Launch<wbr>Template<wbr>Credit<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -3238,7 +3239,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
 <a href="#state_elastic_gpu_specifications_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>gpu_<wbr>specifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -3250,7 +3251,7 @@ below for more details.
 <a href="#state_elastic_inference_accelerator_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>inference_<wbr>accelerator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Dict[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd>
@@ -3261,7 +3262,7 @@ below for more details.
 <a href="#state_hibernation_options_python" style="color: inherit; text-decoration: inherit;">hibernation_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Dict[Launch<wbr>Template<wbr>Hibernation<wbr>Options]</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
@@ -3272,7 +3273,7 @@ below for more details.
 <a href="#state_iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Dict[Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -3307,7 +3308,7 @@ below for more details.
 <a href="#state_instance_market_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>market_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Dict[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options]</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -3363,7 +3364,7 @@ below for details.
 <a href="#state_license_specifications_python" style="color: inherit; text-decoration: inherit;">license_<wbr>specifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">List[Launch<wbr>Template<wbr>License<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#launchtemplatelicensespecification">List[Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
 {{% /md %}}</dd>
@@ -3374,7 +3375,7 @@ below for details.
 <a href="#state_metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Dict[Launch<wbr>Template<wbr>Metadata<wbr>Options]</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -3385,7 +3386,7 @@ below for details.
 <a href="#state_monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Dict[Launch<wbr>Template<wbr>Monitoring]</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd>
@@ -3418,7 +3419,7 @@ below for details.
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">List[Launch<wbr>Template<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterface">List[Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -3430,7 +3431,7 @@ Interfaces below for more details.
 <a href="#state_placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Dict[Launch<wbr>Template<wbr>Placement]</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd>
@@ -3464,7 +3465,7 @@ Interfaces below for more details.
 <a href="#state_tag_specifications_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>specifications</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">List[Launch<wbr>Template<wbr>Tag<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#launchtemplatetagspecification">List[Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
 {{% /md %}}</dd>
@@ -3475,7 +3476,7 @@ Interfaces below for more details.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the launch template.
 {{% /md %}}</dd>
@@ -3722,15 +3723,15 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 <a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Dict[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs]</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure EBS volume properties.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nodevice_python">
-<a href="#nodevice_python" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
+        <span id="no_device_python">
+<a href="#no_device_python" style="color: inherit; text-decoration: inherit;">no_<wbr>device</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3740,8 +3741,8 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualname_python">
-<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+        <span id="virtual_name_python">
+<a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4042,8 +4043,8 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4101,17 +4102,6 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, or `"io1"`. (Default: `"standard"`).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
@@ -4119,6 +4109,17 @@ This must be set with a `volume_type` of `"io1"`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, or `"io1"`. (Default: `"standard"`).
 {{% /md %}}</dd>
 
 </dl>
@@ -4235,8 +4236,8 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="capacityreservationpreference_python">
-<a href="#capacityreservationpreference_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Preference</a>
+        <span id="capacity_reservation_preference_python">
+<a href="#capacity_reservation_preference_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>preference</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4246,11 +4247,11 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="capacityreservationtarget_python">
-<a href="#capacityreservationtarget_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Target</a>
+        <span id="capacity_reservation_target_python">
+<a href="#capacity_reservation_target_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>target</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Dict[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target]</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to target a specific Capacity Reservation:
 {{% /md %}}</dd>
@@ -4336,8 +4337,8 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="capacityreservationid_python">
-<a href="#capacityreservationid_python" style="color: inherit; text-decoration: inherit;">capacity<wbr>Reservation<wbr>Id</a>
+        <span id="capacity_reservation_id_python">
+<a href="#capacity_reservation_id_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>reservation_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4462,8 +4463,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="corecount_python">
-<a href="#corecount_python" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
+        <span id="core_count_python">
+<a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4473,8 +4474,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="threadspercore_python">
-<a href="#threadspercore_python" style="color: inherit; text-decoration: inherit;">threads<wbr>Per<wbr>Core</a>
+        <span id="threads_per_core_python">
+<a href="#threads_per_core_python" style="color: inherit; text-decoration: inherit;">threads_<wbr>per_<wbr>core</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4564,8 +4565,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpucredits_python">
-<a href="#cpucredits_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Credits</a>
+        <span id="cpu_credits_python">
+<a href="#cpu_credits_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>credits</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5091,8 +5092,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="markettype_python">
-<a href="#markettype_python" style="color: inherit; text-decoration: inherit;">market<wbr>Type</a>
+        <span id="market_type_python">
+<a href="#market_type_python" style="color: inherit; text-decoration: inherit;">market_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5106,7 +5107,7 @@ Otherwise, specify the default value of 2.
 <a href="#spot_options_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Dict[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options]</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
 {{% /md %}}</dd>
@@ -5338,8 +5339,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="instanceinterruptionbehavior_python">
-<a href="#instanceinterruptionbehavior_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behavior</a>
+        <span id="instance_interruption_behavior_python">
+<a href="#instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5350,8 +5351,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxprice_python">
-<a href="#maxprice_python" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
+        <span id="max_price_python">
+<a href="#max_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>price</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5361,8 +5362,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spotinstancetype_python">
-<a href="#spotinstancetype_python" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Type</a>
+        <span id="spot_instance_type_python">
+<a href="#spot_instance_type_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5618,8 +5619,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpendpoint_python">
-<a href="#httpendpoint_python" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
+        <span id="http_endpoint_python">
+<a href="#http_endpoint_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5629,8 +5630,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httpputresponsehoplimit_python">
-<a href="#httpputresponsehoplimit_python" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+        <span id="http_put_response_hop_limit_python">
+<a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5640,8 +5641,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httptokens_python">
-<a href="#httptokens_python" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
+        <span id="http_tokens_python">
+<a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6194,8 +6195,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6227,8 +6228,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv4addresscount_python">
-<a href="#ipv4addresscount_python" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Count</a>
+        <span id="ipv4_address_count_python">
+<a href="#ipv4_address_count_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6238,8 +6239,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipv4addresses_python">
-<a href="#ipv4addresses_python" style="color: inherit; text-decoration: inherit;">ipv4Addresses</a>
+        <span id="ipv4_addresses_python">
+<a href="#ipv4_addresses_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6636,8 +6637,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="partitionnumber_python">
-<a href="#partitionnumber_python" style="color: inherit; text-decoration: inherit;">partition<wbr>Number</a>
+        <span id="partition_number_python">
+<a href="#partition_number_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6647,8 +6648,8 @@ Otherwise, specify the default value of 2.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="spreaddomain_python">
-<a href="#spreaddomain_python" style="color: inherit; text-decoration: inherit;">spread<wbr>Domain</a>
+        <span id="spread_domain_python">
+<a href="#spread_domain_python" style="color: inherit; text-decoration: inherit;">spread_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6796,7 +6797,7 @@ Otherwise, specify the default value of 2.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>

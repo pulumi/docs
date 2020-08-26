@@ -136,34 +136,34 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.pricing.get_product(filters=[
-        {
-            "field": "instanceType",
-            "value": "c5.xlarge",
-        },
-        {
-            "field": "operatingSystem",
-            "value": "Linux",
-        },
-        {
-            "field": "location",
-            "value": "US East (N. Virginia)",
-        },
-        {
-            "field": "preInstalledSw",
-            "value": "NA",
-        },
-        {
-            "field": "licenseModel",
-            "value": "No License required",
-        },
-        {
-            "field": "tenancy",
-            "value": "Shared",
-        },
-        {
-            "field": "capacitystatus",
-            "value": "Used",
-        },
+        aws.pricing.GetProductFilterArgs(
+            field="instanceType",
+            value="c5.xlarge",
+        ),
+        aws.pricing.GetProductFilterArgs(
+            field="operatingSystem",
+            value="Linux",
+        ),
+        aws.pricing.GetProductFilterArgs(
+            field="location",
+            value="US East (N. Virginia)",
+        ),
+        aws.pricing.GetProductFilterArgs(
+            field="preInstalledSw",
+            value="NA",
+        ),
+        aws.pricing.GetProductFilterArgs(
+            field="licenseModel",
+            value="No License required",
+        ),
+        aws.pricing.GetProductFilterArgs(
+            field="tenancy",
+            value="Shared",
+        ),
+        aws.pricing.GetProductFilterArgs(
+            field="capacitystatus",
+            value="Used",
+        ),
     ],
     service_code="AmazonEC2")
 ```
@@ -227,7 +227,7 @@ const example = pulumi.output(aws.pricing.getProduct({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_product(</span>filters=None<span class="p">, </span>service_code=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_product(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetProductFilterArgs]]</span> = None<span class="p">, </span><span class="nx">service_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProductResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -345,7 +345,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductfilter">List[Get<wbr>Product<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getproductfilter">List[Get<wbr>Product<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of filters. Passed directly to the API (see GetProducts API reference). These filters must describe a single product, this resource will fail if more than one product is returned by the API.
 {{% /md %}}</dd>

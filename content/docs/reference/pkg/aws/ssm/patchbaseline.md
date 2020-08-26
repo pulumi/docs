@@ -105,7 +105,7 @@ const production = new aws.ssm.PatchBaseline("production", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ssm/#pulumi_aws.ssm.PatchBaseline">PatchBaseline</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>approval_rules=None<span class="p">, </span>approved_patches=None<span class="p">, </span>approved_patches_compliance_level=None<span class="p">, </span>description=None<span class="p">, </span>global_filters=None<span class="p">, </span>name=None<span class="p">, </span>operating_system=None<span class="p">, </span>rejected_patches=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ssm/#pulumi_aws.ssm.PatchBaseline">PatchBaseline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approval_rules</span><span class="p">:</span> <span class="nx">Optional[List[PatchBaselineApprovalRuleArgs]]</span> = None<span class="p">, </span><span class="nx">approved_patches</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">approved_patches_compliance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_filters</span><span class="p">:</span> <span class="nx">Optional[List[PatchBaselineGlobalFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejected_patches</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -601,7 +601,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#approval_rules_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrule">List[Patch<wbr>Baseline<wbr>Approval<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrule">List[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
 {{% /md %}}</dd>
@@ -645,7 +645,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#global_filters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineglobalfilter">List[Patch<wbr>Baseline<wbr>Global<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#patchbaselineglobalfilter">List[Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 {{% /md %}}</dd>
@@ -689,7 +689,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -792,7 +792,8 @@ Get an existing PatchBaseline resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>approval_rules=None<span class="p">, </span>approved_patches=None<span class="p">, </span>approved_patches_compliance_level=None<span class="p">, </span>description=None<span class="p">, </span>global_filters=None<span class="p">, </span>name=None<span class="p">, </span>operating_system=None<span class="p">, </span>rejected_patches=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approval_rules</span><span class="p">:</span> <span class="nx">Optional[List[PatchBaselineApprovalRuleArgs]]</span> = None<span class="p">, </span><span class="nx">approved_patches</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">approved_patches_compliance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_filters</span><span class="p">:</span> <span class="nx">Optional[List[PatchBaselineGlobalFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejected_patches</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> PatchBaseline</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -800,7 +801,7 @@ Get an existing PatchBaseline resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.PatchBaseline.html">PatchBaseline</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.PatchBaselineState.html">PatchBaselineState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.PatchBaseline.html">PatchBaseline</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.PatchBaselineState.html">PatchBaselineState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1230,7 +1231,7 @@ The following state arguments are supported:
 <a href="#state_approval_rules_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrule">List[Patch<wbr>Baseline<wbr>Approval<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrule">List[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
 {{% /md %}}</dd>
@@ -1274,7 +1275,7 @@ The following state arguments are supported:
 <a href="#state_global_filters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineglobalfilter">List[Patch<wbr>Baseline<wbr>Global<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#patchbaselineglobalfilter">List[Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 {{% /md %}}</dd>
@@ -1318,7 +1319,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1511,8 +1512,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="approveafterdays_python">
-<a href="#approveafterdays_python" style="color: inherit; text-decoration: inherit;">approve<wbr>After<wbr>Days</a>
+        <span id="approve_after_days_python">
+<a href="#approve_after_days_python" style="color: inherit; text-decoration: inherit;">approve_<wbr>after_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1522,19 +1523,19 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="patchfilters_python">
-<a href="#patchfilters_python" style="color: inherit; text-decoration: inherit;">patch<wbr>Filters</a>
+        <span id="patch_filters_python">
+<a href="#patch_filters_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">List[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">List[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compliancelevel_python">
-<a href="#compliancelevel_python" style="color: inherit; text-decoration: inherit;">compliance<wbr>Level</a>
+        <span id="compliance_level_python">
+<a href="#compliance_level_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1544,8 +1545,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablenonsecurity_python">
-<a href="#enablenonsecurity_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Non<wbr>Security</a>
+        <span id="enable_non_security_python">
+<a href="#enable_non_security_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>non_<wbr>security</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

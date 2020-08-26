@@ -127,24 +127,24 @@ import pulumi_aws as aws
 
 serviceb1 = aws.appmesh.VirtualNode("serviceb1",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
-    spec={
-        "backends": [{
-            "virtualService": {
-                "virtualServiceName": "servicea.simpleapp.local",
-            },
-        }],
-        "listener": {
-            "portMapping": {
-                "port": 8080,
-                "protocol": "http",
-            },
-        },
-        "serviceDiscovery": {
-            "dns": {
-                "hostname": "serviceb.simpleapp.local",
-            },
-        },
-    })
+    spec=aws.appmesh.VirtualNodeSpecArgs(
+        backends=[aws.appmesh.VirtualNodeSpecBackendArgs(
+            virtual_service=aws.appmesh.VirtualNodeSpecBackendVirtualServiceArgs(
+                virtual_service_name="servicea.simpleapp.local",
+            ),
+        )],
+        listener=aws.appmesh.VirtualNodeSpecListenerArgs(
+            port_mapping=aws.appmesh.VirtualNodeSpecListenerPortMappingArgs(
+                port=8080,
+                protocol="http",
+            ),
+        ),
+        service_discovery=aws.appmesh.VirtualNodeSpecServiceDiscoveryArgs(
+            dns=aws.appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs(
+                hostname="serviceb.simpleapp.local",
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -298,28 +298,28 @@ import pulumi_aws as aws
 example = aws.servicediscovery.HttpNamespace("example")
 serviceb1 = aws.appmesh.VirtualNode("serviceb1",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
-    spec={
-        "backends": [{
-            "virtualService": {
-                "virtualServiceName": "servicea.simpleapp.local",
-            },
-        }],
-        "listener": {
-            "portMapping": {
-                "port": 8080,
-                "protocol": "http",
-            },
-        },
-        "serviceDiscovery": {
-            "awsCloudMap": {
-                "attributes": {
+    spec=aws.appmesh.VirtualNodeSpecArgs(
+        backends=[aws.appmesh.VirtualNodeSpecBackendArgs(
+            virtual_service=aws.appmesh.VirtualNodeSpecBackendVirtualServiceArgs(
+                virtual_service_name="servicea.simpleapp.local",
+            ),
+        )],
+        listener=aws.appmesh.VirtualNodeSpecListenerArgs(
+            port_mapping=aws.appmesh.VirtualNodeSpecListenerPortMappingArgs(
+                port=8080,
+                protocol="http",
+            ),
+        ),
+        service_discovery=aws.appmesh.VirtualNodeSpecServiceDiscoveryArgs(
+            aws_cloud_map=aws.appmesh.VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs(
+                attributes={
                     "stack": "blue",
                 },
-                "service_name": "serviceb1",
-                "namespaceName": example.name,
-            },
-        },
-    })
+                service_name="serviceb1",
+                namespace_name=example.name,
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -477,18 +477,18 @@ import pulumi_aws as aws
 
 serviceb1 = aws.appmesh.VirtualNode("serviceb1",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
-    spec={
-        "backends": [{
-            "virtualService": {
-                "virtualServiceName": "servicea.simpleapp.local",
-            },
-        }],
-        "listener": {
-            "portMapping": {
-                "port": 8080,
-                "protocol": "http",
-            },
-            "health_check": {
+    spec=aws.appmesh.VirtualNodeSpecArgs(
+        backends=[aws.appmesh.VirtualNodeSpecBackendArgs(
+            virtual_service=aws.appmesh.VirtualNodeSpecBackendVirtualServiceArgs(
+                virtual_service_name="servicea.simpleapp.local",
+            ),
+        )],
+        listener=aws.appmesh.VirtualNodeSpecListenerArgs(
+            port_mapping=aws.appmesh.VirtualNodeSpecListenerPortMappingArgs(
+                port=8080,
+                protocol="http",
+            ),
+            health_check={
                 "protocol": "http",
                 "path": "/ping",
                 "healthyThreshold": 2,
@@ -496,13 +496,13 @@ serviceb1 = aws.appmesh.VirtualNode("serviceb1",
                 "timeoutMillis": 2000,
                 "intervalMillis": 5000,
             },
-        },
-        "serviceDiscovery": {
-            "dns": {
-                "hostname": "serviceb.simpleapp.local",
-            },
-        },
-    })
+        ),
+        service_discovery=aws.appmesh.VirtualNodeSpecServiceDiscoveryArgs(
+            dns=aws.appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs(
+                hostname="serviceb.simpleapp.local",
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -663,31 +663,31 @@ import pulumi_aws as aws
 
 serviceb1 = aws.appmesh.VirtualNode("serviceb1",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
-    spec={
-        "backends": [{
-            "virtualService": {
-                "virtualServiceName": "servicea.simpleapp.local",
-            },
-        }],
-        "listener": {
-            "portMapping": {
-                "port": 8080,
-                "protocol": "http",
-            },
-        },
-        "serviceDiscovery": {
-            "dns": {
-                "hostname": "serviceb.simpleapp.local",
-            },
-        },
-        "logging": {
-            "accessLog": {
-                "file": {
-                    "path": "/dev/stdout",
-                },
-            },
-        },
-    })
+    spec=aws.appmesh.VirtualNodeSpecArgs(
+        backends=[aws.appmesh.VirtualNodeSpecBackendArgs(
+            virtual_service=aws.appmesh.VirtualNodeSpecBackendVirtualServiceArgs(
+                virtual_service_name="servicea.simpleapp.local",
+            ),
+        )],
+        listener=aws.appmesh.VirtualNodeSpecListenerArgs(
+            port_mapping=aws.appmesh.VirtualNodeSpecListenerPortMappingArgs(
+                port=8080,
+                protocol="http",
+            ),
+        ),
+        service_discovery=aws.appmesh.VirtualNodeSpecServiceDiscoveryArgs(
+            dns=aws.appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs(
+                hostname="serviceb.simpleapp.local",
+            ),
+        ),
+        logging=aws.appmesh.VirtualNodeSpecLoggingArgs(
+            access_log=aws.appmesh.VirtualNodeSpecLoggingAccessLogArgs(
+                file=aws.appmesh.VirtualNodeSpecLoggingAccessLogFileArgs(
+                    path="/dev/stdout",
+                ),
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -742,7 +742,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.VirtualNode">VirtualNode</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.VirtualNode">VirtualNode</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualNodeSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1084,7 +1084,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Dict[Virtual<wbr>Node<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
 {{% /md %}}</dd>
@@ -1106,7 +1106,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1341,7 +1341,8 @@ Get an existing VirtualNode resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>created_date=None<span class="p">, </span>last_updated_date=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualNodeSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> VirtualNode</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1349,7 +1350,7 @@ Get an existing VirtualNode resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNode.html">VirtualNode</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNodeState.html">VirtualNodeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNode.html">VirtualNode</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualNodeState.html">VirtualNodeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1768,7 +1769,7 @@ The following state arguments are supported:
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespec">Dict[Virtual<wbr>Node<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#virtualnodespec">Virtual<wbr>Node<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual node specification to apply.
 {{% /md %}}</dd>
@@ -1779,7 +1780,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1976,7 +1977,7 @@ The following state arguments are supported:
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackend">List[Virtual<wbr>Node<wbr>Spec<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackend">List[Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The backends to which the virtual node is expected to send outbound traffic.
 {{% /md %}}</dd>
@@ -1987,7 +1988,7 @@ The following state arguments are supported:
 <a href="#listener_python" style="color: inherit; text-decoration: inherit;">listener</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistener">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Listener]</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listeners from which the virtual node is expected to receive inbound traffic.
 {{% /md %}}</dd>
@@ -1998,18 +1999,18 @@ The following state arguments are supported:
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclogging">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Logging]</a></span>
+        <span class="property-type"><a href="#virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual node.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="servicediscovery_python">
-<a href="#servicediscovery_python" style="color: inherit; text-decoration: inherit;">service<wbr>Discovery</a>
+        <span id="service_discovery_python">
+<a href="#service_discovery_python" style="color: inherit; text-decoration: inherit;">service_<wbr>discovery</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscovery">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery]</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service discovery information for the virtual node.
 {{% /md %}}</dd>
@@ -2095,11 +2096,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualservice_python">
-<a href="#virtualservice_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Service</a>
+        <span id="virtual_service_python">
+<a href="#virtual_service_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service]</a></span>
+        <span class="property-type"><a href="#virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a virtual service to use as a backend for a virtual node.
 {{% /md %}}</dd>
@@ -2185,8 +2186,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualservicename_python">
-<a href="#virtualservicename_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Service<wbr>Name</a>
+        <span id="virtual_service_name_python">
+<a href="#virtual_service_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>service_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2308,11 +2309,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="portmapping_python">
-<a href="#portmapping_python" style="color: inherit; text-decoration: inherit;">port<wbr>Mapping</a>
+        <span id="port_mapping_python">
+<a href="#port_mapping_python" style="color: inherit; text-decoration: inherit;">port_<wbr>mapping</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerportmapping">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd>
@@ -2323,7 +2324,7 @@ The following state arguments are supported:
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd>
@@ -2607,8 +2608,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthythreshold_python">
-<a href="#healthythreshold_python" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
+        <span id="healthy_threshold_python">
+<a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2618,8 +2619,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="intervalmillis_python">
-<a href="#intervalmillis_python" style="color: inherit; text-decoration: inherit;">interval<wbr>Millis</a>
+        <span id="interval_millis_python">
+<a href="#interval_millis_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>millis</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2640,8 +2641,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="timeoutmillis_python">
-<a href="#timeoutmillis_python" style="color: inherit; text-decoration: inherit;">timeout<wbr>Millis</a>
+        <span id="timeout_millis_python">
+<a href="#timeout_millis_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>millis</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2651,8 +2652,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="unhealthythreshold_python">
-<a href="#unhealthythreshold_python" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
+        <span id="unhealthy_threshold_python">
+<a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2897,11 +2898,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesslog_python">
-<a href="#accesslog_python" style="color: inherit; text-decoration: inherit;">access<wbr>Log</a>
+        <span id="access_log_python">
+<a href="#access_log_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log]</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual node.
 {{% /md %}}</dd>
@@ -2991,7 +2992,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File]</a></span>
+        <span class="property-type"><a href="#virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual node access logs to.
 {{% /md %}}</dd>
@@ -3200,11 +3201,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="awscloudmap_python">
-<a href="#awscloudmap_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Cloud<wbr>Map</a>
+        <span id="aws_cloud_map_python">
+<a href="#aws_cloud_map_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>cloud_<wbr>map</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map]</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies any AWS Cloud Map information for the virtual node.
 {{% /md %}}</dd>
@@ -3215,7 +3216,7 @@ The following state arguments are supported:
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Dict[Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns]</a></span>
+        <span class="property-type"><a href="#virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the DNS service name for the virtual node.
 {{% /md %}}</dd>
@@ -3370,8 +3371,8 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
 
     <dt class="property-required"
             title="Required">
-        <span id="namespacename_python">
-<a href="#namespacename_python" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
+        <span id="namespace_name_python">
+<a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3397,7 +3398,7 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
 {{% /md %}}</dd>

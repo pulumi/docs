@@ -287,7 +287,7 @@ const exampleCluster = new aws.eks.Cluster("exampleCluster", {enabledClusterLogT
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/eks/#pulumi_aws.eks.Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>enabled_cluster_log_types=None<span class="p">, </span>encryption_config=None<span class="p">, </span>name=None<span class="p">, </span>role_arn=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vpc_config=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/eks/#pulumi_aws.eks.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled_cluster_log_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">encryption_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEncryptionConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ClusterVpcConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -728,7 +728,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervpcconfig">Dict[Cluster<wbr>Vpc<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
 {{% /md %}}</dd>
@@ -750,7 +750,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptionconfig">Dict[Cluster<wbr>Encryption<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd>
@@ -772,7 +772,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
@@ -1102,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificateauthority">Dict[Cluster<wbr>Certificate<wbr>Authority]</a></span>
+        <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing `certificate-authority-data` for your cluster.
 {{% /md %}}</dd>
@@ -1190,7 +1190,8 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>certificate_authority=None<span class="p">, </span>created_at=None<span class="p">, </span>enabled_cluster_log_types=None<span class="p">, </span>encryption_config=None<span class="p">, </span>endpoint=None<span class="p">, </span>identities=None<span class="p">, </span>name=None<span class="p">, </span>platform_version=None<span class="p">, </span>role_arn=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vpc_config=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_authority</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled_cluster_log_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">encryption_config</span><span class="p">:</span> <span class="nx">Optional[ClusterEncryptionConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identities</span><span class="p">:</span> <span class="nx">Optional[List[ClusterIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ClusterVpcConfigArgs]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1198,7 +1199,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1801,7 +1802,7 @@ The following state arguments are supported:
 <a href="#state_certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificateauthority">Dict[Cluster<wbr>Certificate<wbr>Authority]</a></span>
+        <span class="property-type"><a href="#clustercertificateauthority">Cluster<wbr>Certificate<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing `certificate-authority-data` for your cluster.
 {{% /md %}}</dd>
@@ -1833,7 +1834,7 @@ The following state arguments are supported:
 <a href="#state_encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptionconfig">Dict[Cluster<wbr>Encryption<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterencryptionconfig">Cluster<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
 {{% /md %}}</dd>
@@ -1855,7 +1856,7 @@ The following state arguments are supported:
 <a href="#state_identities_python" style="color: inherit; text-decoration: inherit;">identities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">List[Cluster<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#clusteridentity">List[Cluster<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
 {{% /md %}}</dd>
@@ -1910,7 +1911,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
@@ -1932,7 +1933,7 @@ The following state arguments are supported:
 <a href="#state_vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustervpcconfig">Dict[Cluster<wbr>Vpc<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clustervpcconfig">Cluster<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Configuration detailed below.
 {{% /md %}}</dd>
@@ -2153,7 +2154,7 @@ The following state arguments are supported:
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterencryptionconfigprovider">Dict[Cluster<wbr>Encryption<wbr>Config<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#clusterencryptionconfigprovider">Cluster<wbr>Encryption<wbr>Config<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with provider for encryption. Detailed below.
 {{% /md %}}</dd>
@@ -2344,7 +2345,7 @@ The following state arguments are supported:
 <a href="#oidcs_python" style="color: inherit; text-decoration: inherit;">oidcs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentityoidc">List[Cluster<wbr>Identity<wbr>Oidc]</a></span>
+        <span class="property-type"><a href="#clusteridentityoidc">List[Cluster<wbr>Identity<wbr>Oidc<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
 {{% /md %}}</dd>
@@ -2729,8 +2730,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="clustersecuritygroupid_python">
-<a href="#clustersecuritygroupid_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Group<wbr>Id</a>
+        <span id="cluster_security_group_id_python">
+<a href="#cluster_security_group_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>security_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2740,8 +2741,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointprivateaccess_python">
-<a href="#endpointprivateaccess_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Private<wbr>Access</a>
+        <span id="endpoint_private_access_python">
+<a href="#endpoint_private_access_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2751,8 +2752,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointpublicaccess_python">
-<a href="#endpointpublicaccess_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Public<wbr>Access</a>
+        <span id="endpoint_public_access_python">
+<a href="#endpoint_public_access_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2762,8 +2763,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publicaccesscidrs_python">
-<a href="#publicaccesscidrs_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access<wbr>Cidrs</a>
+        <span id="public_access_cidrs_python">
+<a href="#public_access_cidrs_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access_<wbr>cidrs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

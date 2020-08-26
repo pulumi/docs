@@ -99,11 +99,11 @@ import pulumi
 import pulumi_aws as aws
 
 current = aws.get_partition()
-s3_policy = aws.iam.get_policy_document(statements=[{
-    "actions": ["s3:ListBucket"],
-    "resources": [f"arn:{current.partition}:s3:::my-bucket"],
-    "sid": "1",
-}])
+s3_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    actions=["s3:ListBucket"],
+    resources=[f"arn:{current.partition}:s3:::my-bucket"],
+    sid="1",
+)])
 ```
 
 {{% /example %}}
@@ -140,7 +140,7 @@ const s3Policy = current.apply(current => aws.iam.getPolicyDocument({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_partition(</span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_partition(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPartitionResult</code></pre></div>
 {{% /choosable %}}
 
 

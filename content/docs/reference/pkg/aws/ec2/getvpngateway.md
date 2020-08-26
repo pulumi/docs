@@ -88,10 +88,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-selected = aws.ec2.get_vpn_gateway(filters=[{
-    "name": "tag:Name",
-    "values": ["vpn-gw"],
-}])
+selected = aws.ec2.get_vpn_gateway(filters=[aws.ec2.GetVpnGatewayFilterArgs(
+    name="tag:Name",
+    values=["vpn-gw"],
+)])
 pulumi.export("vpnGatewayId", selected.id)
 ```
 
@@ -128,7 +128,7 @@ export const vpnGatewayId = selected.then(selected => selected.id);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_vpn_gateway(</span>amazon_side_asn=None<span class="p">, </span>attached_vpc_id=None<span class="p">, </span>availability_zone=None<span class="p">, </span>filters=None<span class="p">, </span>id=None<span class="p">, </span>state=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_vpn_gateway(</span><span class="nx">amazon_side_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">attached_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetVpnGatewayFilterArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVpnGatewayResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -449,7 +449,7 @@ a pair on the desired VPN Gateway.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpngatewayfilter">List[Get<wbr>Vpn<wbr>Gateway<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getvpngatewayfilter">List[Get<wbr>Vpn<wbr>Gateway<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ a pair on the desired VPN Gateway.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired VPN Gateway.
@@ -835,7 +835,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

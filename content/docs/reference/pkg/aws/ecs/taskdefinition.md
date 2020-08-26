@@ -64,17 +64,17 @@ import pulumi_aws as aws
 service = aws.ecs.TaskDefinition("service",
     family="service",
     container_definitions=(lambda path: open(path).read())("task-definitions/service.json"),
-    proxy_configuration={
-        "type": "APPMESH",
-        "container_name": "applicationContainerName",
-        "properties": {
+    proxy_configuration=aws.ecs.TaskDefinitionProxyConfigurationArgs(
+        type="APPMESH",
+        container_name="applicationContainerName",
+        properties={
             "AppPorts": "8080",
             "EgressIgnoredIPs": "169.254.170.2,169.254.169.254",
             "IgnoredUID": "1337",
-            "ProxyEgressPort": 15001,
-            "ProxyIngressPort": 15000,
+            "ProxyEgressPort": "15001",
+            "ProxyIngressPort": "15000",
         },
-    })
+    ))
 ```
 
 {{% /example %}}
@@ -117,7 +117,7 @@ const service = new aws.ecs.TaskDefinition("service", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecs/#pulumi_aws.ecs.TaskDefinition">TaskDefinition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>container_definitions=None<span class="p">, </span>cpu=None<span class="p">, </span>execution_role_arn=None<span class="p">, </span>family=None<span class="p">, </span>inference_accelerators=None<span class="p">, </span>ipc_mode=None<span class="p">, </span>memory=None<span class="p">, </span>network_mode=None<span class="p">, </span>pid_mode=None<span class="p">, </span>placement_constraints=None<span class="p">, </span>proxy_configuration=None<span class="p">, </span>requires_compatibilities=None<span class="p">, </span>tags=None<span class="p">, </span>task_role_arn=None<span class="p">, </span>volumes=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ecs/#pulumi_aws.ecs.TaskDefinition">TaskDefinition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionInferenceAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionPlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionProxyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionVolumeArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -875,7 +875,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#inference_accelerators_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">List[Task<wbr>Definition<wbr>Inference<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">List[Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Inference Accelerators settings. Detailed below.
 {{% /md %}}</dd>
@@ -930,7 +930,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionplacementconstraint">List[Task<wbr>Definition<wbr>Placement<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">List[Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
 {{% /md %}}</dd>
@@ -941,7 +941,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#proxy_configuration_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Dict[Task<wbr>Definition<wbr>Proxy<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The proxy configuration details for the App Mesh proxy.
 {{% /md %}}</dd>
@@ -963,7 +963,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -985,7 +985,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolume">List[Task<wbr>Definition<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolume">List[Task<wbr>Definition<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of volume blocks that containers in your task may use.
 {{% /md %}}</dd>
@@ -1176,7 +1176,8 @@ Get an existing TaskDefinition resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>container_definitions=None<span class="p">, </span>cpu=None<span class="p">, </span>execution_role_arn=None<span class="p">, </span>family=None<span class="p">, </span>inference_accelerators=None<span class="p">, </span>ipc_mode=None<span class="p">, </span>memory=None<span class="p">, </span>network_mode=None<span class="p">, </span>pid_mode=None<span class="p">, </span>placement_constraints=None<span class="p">, </span>proxy_configuration=None<span class="p">, </span>requires_compatibilities=None<span class="p">, </span>revision=None<span class="p">, </span>tags=None<span class="p">, </span>task_role_arn=None<span class="p">, </span>volumes=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inference_accelerators</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionInferenceAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionPlacementConstraintArgs]]</span> = None<span class="p">, </span><span class="nx">proxy_configuration</span><span class="p">:</span> <span class="nx">Optional[TaskDefinitionProxyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">requires_compatibilities</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">task_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[List[TaskDefinitionVolumeArgs]]</span> = None<span class="p">) -&gt;</span> TaskDefinition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1184,7 +1185,7 @@ Get an existing TaskDefinition resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.TaskDefinition.html">TaskDefinition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.TaskDefinitionState.html">TaskDefinitionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.TaskDefinition.html">TaskDefinition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ecs.TaskDefinitionState.html">TaskDefinitionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1953,7 +1954,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#state_inference_accelerators_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>accelerators</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">List[Task<wbr>Definition<wbr>Inference<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#taskdefinitioninferenceaccelerator">List[Task<wbr>Definition<wbr>Inference<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with Inference Accelerators settings. Detailed below.
 {{% /md %}}</dd>
@@ -2008,7 +2009,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#state_placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionplacementconstraint">List[Task<wbr>Definition<wbr>Placement<wbr>Constraint]</a></span>
+        <span class="property-type"><a href="#taskdefinitionplacementconstraint">List[Task<wbr>Definition<wbr>Placement<wbr>Constraint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of placement constraints rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`.
 {{% /md %}}</dd>
@@ -2019,7 +2020,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#state_proxy_configuration_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Dict[Task<wbr>Definition<wbr>Proxy<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#taskdefinitionproxyconfiguration">Task<wbr>Definition<wbr>Proxy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The proxy configuration details for the App Mesh proxy.
 {{% /md %}}</dd>
@@ -2052,7 +2053,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -2074,7 +2075,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 <a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolume">List[Task<wbr>Definition<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolume">List[Task<wbr>Definition<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of volume blocks that containers in your task may use.
 {{% /md %}}</dd>
@@ -2201,17 +2202,6 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 
     <dt class="property-required"
             title="Required">
-        <span id="devicetype_python">
-<a href="#devicetype_python" style="color: inherit; text-decoration: inherit;">device<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Elastic Inference accelerator type to use.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span> 
@@ -2219,6 +2209,17 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="device_type_python">
+<a href="#device_type_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Elastic Inference accelerator type to use.
 {{% /md %}}</dd>
 
 </dl>
@@ -2529,7 +2530,7 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
 {{% /md %}}</dd>
@@ -2740,30 +2741,30 @@ parameter of container definition in the `mountPoints` section.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dockervolumeconfiguration_python">
-<a href="#dockervolumeconfiguration_python" style="color: inherit; text-decoration: inherit;">docker<wbr>Volume<wbr>Configuration</a>
+        <span id="docker_volume_configuration_python">
+<a href="#docker_volume_configuration_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>volume_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">Dict[Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumedockervolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Docker<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to configure a docker volume
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="efsvolumeconfiguration_python">
-<a href="#efsvolumeconfiguration_python" style="color: inherit; text-decoration: inherit;">efs<wbr>Volume<wbr>Configuration</a>
+        <span id="efs_volume_configuration_python">
+<a href="#efs_volume_configuration_python" style="color: inherit; text-decoration: inherit;">efs_<wbr>volume_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Dict[Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfiguration">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to configure a EFS volume.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hostpath_python">
-<a href="#hostpath_python" style="color: inherit; text-decoration: inherit;">host<wbr>Path</a>
+        <span id="host_path_python">
+<a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3006,11 +3007,11 @@ parameter of container definition in the `mountPoints` section.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="driveropts_python">
-<a href="#driveropts_python" style="color: inherit; text-decoration: inherit;">driver<wbr>Opts</a>
+        <span id="driver_opts_python">
+<a href="#driver_opts_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>opts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Docker driver specific options.
 {{% /md %}}</dd>
@@ -3021,7 +3022,7 @@ parameter of container definition in the `mountPoints` section.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of custom metadata to add to your Docker volume.
 {{% /md %}}</dd>
@@ -3261,11 +3262,11 @@ parameter of container definition in the `mountPoints` section.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authorizationconfig_python">
-<a href="#authorizationconfig_python" style="color: inherit; text-decoration: inherit;">authorization<wbr>Config</a>
+        <span id="authorization_config_python">
+<a href="#authorization_config_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Dict[Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config]</a></span>
+        <span class="property-type"><a href="#taskdefinitionvolumeefsvolumeconfigurationauthorizationconfig">Task<wbr>Definition<wbr>Volume<wbr>Efs<wbr>Volume<wbr>Configuration<wbr>Authorization<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization configuration details for the Amazon EFS file system.
 {{% /md %}}</dd>
@@ -3283,8 +3284,8 @@ parameter of container definition in the `mountPoints` section.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transitencryption_python">
-<a href="#transitencryption_python" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption</a>
+        <span id="transit_encryption_python">
+<a href="#transit_encryption_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3294,8 +3295,8 @@ parameter of container definition in the `mountPoints` section.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transitencryptionport_python">
-<a href="#transitencryptionport_python" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption<wbr>Port</a>
+        <span id="transit_encryption_port_python">
+<a href="#transit_encryption_port_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3417,8 +3418,8 @@ parameter of container definition in the `mountPoints` section.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesspointid_python">
-<a href="#accesspointid_python" style="color: inherit; text-decoration: inherit;">access<wbr>Point<wbr>Id</a>
+        <span id="access_point_id_python">
+<a href="#access_point_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>point_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

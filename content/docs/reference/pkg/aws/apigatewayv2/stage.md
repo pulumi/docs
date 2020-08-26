@@ -95,7 +95,7 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigatewayv2/#pulumi_aws.apigatewayv2.Stage">Stage</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_log_settings=None<span class="p">, </span>api_id=None<span class="p">, </span>auto_deploy=None<span class="p">, </span>client_certificate_id=None<span class="p">, </span>default_route_settings=None<span class="p">, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>route_settings=None<span class="p">, </span>stage_variables=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigatewayv2/#pulumi_aws.apigatewayv2.Stage">Stage</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_log_settings</span><span class="p">:</span> <span class="nx">Optional[StageAccessLogSettingsArgs]</span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_deploy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_certificate_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_route_settings</span><span class="p">:</span> <span class="nx">Optional[StageDefaultRouteSettingsArgs]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_settings</span><span class="p">:</span> <span class="nx">Optional[List[StageRouteSettingArgs]]</span> = None<span class="p">, </span><span class="nx">stage_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -674,7 +674,7 @@ Supported only for WebSocket APIs.
 <a href="#access_log_settings_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageaccesslogsettings">Dict[Stage<wbr>Access<wbr>Log<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
@@ -709,7 +709,7 @@ Supported only for WebSocket APIs.
 <a href="#default_route_settings_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagedefaultroutesettings">Dict[Stage<wbr>Default<wbr>Route<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
 {{% /md %}}</dd>
@@ -753,7 +753,7 @@ Supported only for WebSocket APIs.
 <a href="#route_settings_python" style="color: inherit; text-decoration: inherit;">route_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageroutesetting">List[Stage<wbr>Route<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#stageroutesetting">List[Stage<wbr>Route<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
 {{% /md %}}</dd>
@@ -764,7 +764,7 @@ Supported only for WebSocket APIs.
 <a href="#stage_variables_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables for the stage.
 {{% /md %}}</dd>
@@ -775,7 +775,7 @@ Supported only for WebSocket APIs.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the stage.
 {{% /md %}}</dd>
@@ -1026,7 +1026,8 @@ Get an existing Stage resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_log_settings=None<span class="p">, </span>api_id=None<span class="p">, </span>arn=None<span class="p">, </span>auto_deploy=None<span class="p">, </span>client_certificate_id=None<span class="p">, </span>default_route_settings=None<span class="p">, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>execution_arn=None<span class="p">, </span>invoke_url=None<span class="p">, </span>name=None<span class="p">, </span>route_settings=None<span class="p">, </span>stage_variables=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_log_settings</span><span class="p">:</span> <span class="nx">Optional[StageAccessLogSettingsArgs]</span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_deploy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_certificate_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_route_settings</span><span class="p">:</span> <span class="nx">Optional[StageDefaultRouteSettingsArgs]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">invoke_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_settings</span><span class="p">:</span> <span class="nx">Optional[List[StageRouteSettingArgs]]</span> = None<span class="p">, </span><span class="nx">stage_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Stage</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1034,7 +1035,7 @@ Get an existing Stage resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Stage.html">Stage</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.StageState.html">StageState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Stage.html">Stage</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.StageState.html">StageState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1647,7 +1648,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
 <a href="#state_access_log_settings_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageaccesslogsettings">Dict[Stage<wbr>Access<wbr>Log<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#stageaccesslogsettings">Stage<wbr>Access<wbr>Log<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
@@ -1704,7 +1705,7 @@ Supported only for WebSocket APIs.
 <a href="#state_default_route_settings_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagedefaultroutesettings">Dict[Stage<wbr>Default<wbr>Route<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#stagedefaultroutesettings">Stage<wbr>Default<wbr>Route<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default route settings for the stage.
 {{% /md %}}</dd>
@@ -1774,7 +1775,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
 <a href="#state_route_settings_python" style="color: inherit; text-decoration: inherit;">route_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stageroutesetting">List[Stage<wbr>Route<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#stageroutesetting">List[Stage<wbr>Route<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Route settings for the stage.
 {{% /md %}}</dd>
@@ -1785,7 +1786,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
 <a href="#state_stage_variables_python" style="color: inherit; text-decoration: inherit;">stage_<wbr>variables</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map that defines the stage variables for the stage.
 {{% /md %}}</dd>
@@ -1796,7 +1797,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the stage.
 {{% /md %}}</dd>
@@ -2162,8 +2163,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datatraceenabled_python">
-<a href="#datatraceenabled_python" style="color: inherit; text-decoration: inherit;">data<wbr>Trace<wbr>Enabled</a>
+        <span id="data_trace_enabled_python">
+<a href="#data_trace_enabled_python" style="color: inherit; text-decoration: inherit;">data_<wbr>trace_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2174,8 +2175,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="detailedmetricsenabled_python">
-<a href="#detailedmetricsenabled_python" style="color: inherit; text-decoration: inherit;">detailed<wbr>Metrics<wbr>Enabled</a>
+        <span id="detailed_metrics_enabled_python">
+<a href="#detailed_metrics_enabled_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>metrics_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2185,8 +2186,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logginglevel_python">
-<a href="#logginglevel_python" style="color: inherit; text-decoration: inherit;">logging<wbr>Level</a>
+        <span id="logging_level_python">
+<a href="#logging_level_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2197,8 +2198,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
 
     <dt class="property-optional"
             title="Optional">
-        <span id="throttlingburstlimit_python">
-<a href="#throttlingburstlimit_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>Burst<wbr>Limit</a>
+        <span id="throttling_burst_limit_python">
+<a href="#throttling_burst_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>burst_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2208,8 +2209,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
 
     <dt class="property-optional"
             title="Optional">
-        <span id="throttlingratelimit_python">
-<a href="#throttlingratelimit_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>Rate<wbr>Limit</a>
+        <span id="throttling_rate_limit_python">
+<a href="#throttling_rate_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>rate_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2480,8 +2481,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datatraceenabled_python">
-<a href="#datatraceenabled_python" style="color: inherit; text-decoration: inherit;">data<wbr>Trace<wbr>Enabled</a>
+        <span id="data_trace_enabled_python">
+<a href="#data_trace_enabled_python" style="color: inherit; text-decoration: inherit;">data_<wbr>trace_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2492,8 +2493,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="detailedmetricsenabled_python">
-<a href="#detailedmetricsenabled_python" style="color: inherit; text-decoration: inherit;">detailed<wbr>Metrics<wbr>Enabled</a>
+        <span id="detailed_metrics_enabled_python">
+<a href="#detailed_metrics_enabled_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>metrics_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2503,8 +2504,8 @@ Defaults to `false`. Supported only for WebSocket APIs.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logginglevel_python">
-<a href="#logginglevel_python" style="color: inherit; text-decoration: inherit;">logging<wbr>Level</a>
+        <span id="logging_level_python">
+<a href="#logging_level_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2515,8 +2516,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
 
     <dt class="property-optional"
             title="Optional">
-        <span id="throttlingburstlimit_python">
-<a href="#throttlingburstlimit_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>Burst<wbr>Limit</a>
+        <span id="throttling_burst_limit_python">
+<a href="#throttling_burst_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>burst_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2526,8 +2527,8 @@ Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebS
 
     <dt class="property-optional"
             title="Optional">
-        <span id="throttlingratelimit_python">
-<a href="#throttlingratelimit_python" style="color: inherit; text-decoration: inherit;">throttling<wbr>Rate<wbr>Limit</a>
+        <span id="throttling_rate_limit_python">
+<a href="#throttling_rate_limit_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>rate_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>

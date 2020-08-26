@@ -134,23 +134,23 @@ example = aws.rds.OptionGroup("example",
     engine_name="sqlserver-ee",
     major_engine_version="11.00",
     options=[
-        {
-            "optionName": "Timezone",
-            "optionSettings": [{
-                "name": "TIME_ZONE",
-                "value": "UTC",
-            }],
-        },
-        {
-            "optionName": "SQLSERVER_BACKUP_RESTORE",
-            "optionSettings": [{
-                "name": "IAM_ROLE_ARN",
-                "value": aws_iam_role["example"]["arn"],
-            }],
-        },
-        {
-            "optionName": "TDE",
-        },
+        aws.rds.OptionGroupOptionArgs(
+            option_name="Timezone",
+            option_settings=[aws.rds.OptionGroupOptionOptionSettingArgs(
+                name="TIME_ZONE",
+                value="UTC",
+            )],
+        ),
+        aws.rds.OptionGroupOptionArgs(
+            option_name="SQLSERVER_BACKUP_RESTORE",
+            option_settings=[aws.rds.OptionGroupOptionOptionSettingArgs(
+                name="IAM_ROLE_ARN",
+                value=aws_iam_role["example"]["arn"],
+            )],
+        ),
+        aws.rds.OptionGroupOptionArgs(
+            option_name="TDE",
+        ),
     ])
 ```
 
@@ -202,7 +202,7 @@ const example = new aws.rds.OptionGroup("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#pulumi_aws.rds.OptionGroup">OptionGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>engine_name=None<span class="p">, </span>major_engine_version=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>option_group_description=None<span class="p">, </span>options=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/rds/#pulumi_aws.rds.OptionGroup">OptionGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">engine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">major_engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">option_group_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[List[OptionGroupOptionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -687,7 +687,7 @@ The OptionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optiongroupoption">List[Option<wbr>Group<wbr>Option]</a></span>
+        <span class="property-type"><a href="#optiongroupoption">List[Option<wbr>Group<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Options to apply.
 {{% /md %}}</dd>
@@ -698,7 +698,7 @@ The OptionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -845,7 +845,8 @@ Get an existing OptionGroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>engine_name=None<span class="p">, </span>major_engine_version=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>option_group_description=None<span class="p">, </span>options=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">major_engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">option_group_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[List[OptionGroupOptionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> OptionGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -853,7 +854,7 @@ Get an existing OptionGroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.OptionGroup.html">OptionGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.OptionGroupState.html">OptionGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.OptionGroup.html">OptionGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.OptionGroupState.html">OptionGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1316,7 +1317,7 @@ The following state arguments are supported:
 <a href="#state_options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optiongroupoption">List[Option<wbr>Group<wbr>Option]</a></span>
+        <span class="property-type"><a href="#optiongroupoption">List[Option<wbr>Group<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Options to apply.
 {{% /md %}}</dd>
@@ -1327,7 +1328,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1586,8 +1587,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="optionname_python">
-<a href="#optionname_python" style="color: inherit; text-decoration: inherit;">option<wbr>Name</a>
+        <span id="option_name_python">
+<a href="#option_name_python" style="color: inherit; text-decoration: inherit;">option_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1597,8 +1598,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dbsecuritygroupmemberships_python">
-<a href="#dbsecuritygroupmemberships_python" style="color: inherit; text-decoration: inherit;">db<wbr>Security<wbr>Group<wbr>Memberships</a>
+        <span id="db_security_group_memberships_python">
+<a href="#db_security_group_memberships_python" style="color: inherit; text-decoration: inherit;">db_<wbr>security_<wbr>group_<wbr>memberships</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1608,11 +1609,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="optionsettings_python">
-<a href="#optionsettings_python" style="color: inherit; text-decoration: inherit;">option<wbr>Settings</a>
+        <span id="option_settings_python">
+<a href="#option_settings_python" style="color: inherit; text-decoration: inherit;">option_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#optiongroupoptionoptionsetting">List[Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#optiongroupoptionoptionsetting">List[Option<wbr>Group<wbr>Option<wbr>Option<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of option settings to apply.
 {{% /md %}}</dd>
@@ -1641,8 +1642,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="vpcsecuritygroupmemberships_python">
-<a href="#vpcsecuritygroupmemberships_python" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Memberships</a>
+        <span id="vpc_security_group_memberships_python">
+<a href="#vpc_security_group_memberships_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>memberships</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

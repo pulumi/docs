@@ -26,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/#pulumi_aws.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_key=None<span class="p">, </span>allowed_account_ids=None<span class="p">, </span>assume_role=None<span class="p">, </span>endpoints=None<span class="p">, </span>forbidden_account_ids=None<span class="p">, </span>ignore_tags=None<span class="p">, </span>insecure=None<span class="p">, </span>max_retries=None<span class="p">, </span>profile=None<span class="p">, </span>region=None<span class="p">, </span>s3_force_path_style=None<span class="p">, </span>secret_key=None<span class="p">, </span>shared_credentials_file=None<span class="p">, </span>skip_credentials_validation=None<span class="p">, </span>skip_get_ec2_platforms=None<span class="p">, </span>skip_metadata_api_check=None<span class="p">, </span>skip_region_validation=None<span class="p">, </span>skip_requesting_account_id=None<span class="p">, </span>token=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/#pulumi_aws.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_account_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">assume_role</span><span class="p">:</span> <span class="nx">Optional[ProviderAssumeRoleArgs]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[List[ProviderEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">forbidden_account_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">ignore_tags</span><span class="p">:</span> <span class="nx">Optional[ProviderIgnoreTagsArgs]</span> = None<span class="p">, </span><span class="nx">insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_force_path_style</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">secret_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_credentials_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_credentials_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_get_ec2_platforms</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_metadata_api_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_region_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">skip_requesting_account_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -870,7 +870,7 @@ not public (yet).
 <a href="#assume_role_python" style="color: inherit; text-decoration: inherit;">assume_<wbr>role</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerassumerole">Dict[Provider<wbr>Assume<wbr>Role]</a></span>
+        <span class="property-type"><a href="#providerassumerole">Provider<wbr>Assume<wbr>Role<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -880,7 +880,7 @@ not public (yet).
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerendpoint">List[Provider<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#providerendpoint">List[Provider<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -900,7 +900,7 @@ not public (yet).
 <a href="#ignore_tags_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerignoretags">Dict[Provider<wbr>Ignore<wbr>Tags]</a></span>
+        <span class="property-type"><a href="#providerignoretags">Provider<wbr>Ignore<wbr>Tags<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with settings to ignore resource tags across all resources.
 {{% /md %}}</dd>
@@ -1427,8 +1427,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="durationseconds_python">
-<a href="#durationseconds_python" style="color: inherit; text-decoration: inherit;">duration<wbr>Seconds</a>
+        <span id="duration_seconds_python">
+<a href="#duration_seconds_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1437,8 +1437,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="externalid_python">
-<a href="#externalid_python" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
+        <span id="external_id_python">
+<a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1457,8 +1457,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="policyarns_python">
-<a href="#policyarns_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Arns</a>
+        <span id="policy_arns_python">
+<a href="#policy_arns_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1491,14 +1491,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="transitivetagkeys_python">
-<a href="#transitivetagkeys_python" style="color: inherit; text-decoration: inherit;">transitive<wbr>Tag<wbr>Keys</a>
+        <span id="transitive_tag_keys_python">
+<a href="#transitive_tag_keys_python" style="color: inherit; text-decoration: inherit;">transitive_<wbr>tag_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6513,8 +6513,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="lambda_python">
-<a href="#lambda_python" style="color: inherit; text-decoration: inherit;">lambda</a>
+        <span id="lambda__python">
+<a href="#lambda__python" style="color: inherit; text-decoration: inherit;">lambda_</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7219,8 +7219,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keyprefixes_python">
-<a href="#keyprefixes_python" style="color: inherit; text-decoration: inherit;">key<wbr>Prefixes</a>
+        <span id="key_prefixes_python">
+<a href="#key_prefixes_python" style="color: inherit; text-decoration: inherit;">key_<wbr>prefixes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

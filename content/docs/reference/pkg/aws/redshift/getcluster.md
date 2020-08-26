@@ -121,22 +121,22 @@ import pulumi_aws as aws
 test_cluster = aws.redshift.get_cluster(cluster_identifier="test-cluster")
 test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
     destination="redshift",
-    s3_configuration={
-        "role_arn": aws_iam_role["firehose_role"]["arn"],
-        "bucketArn": aws_s3_bucket["bucket"]["arn"],
-        "bufferSize": 10,
-        "bufferInterval": 400,
-        "compressionFormat": "GZIP",
-    },
-    redshift_configuration={
-        "role_arn": aws_iam_role["firehose_role"]["arn"],
-        "clusterJdbcurl": f"jdbc:redshift://{test_cluster.endpoint}/{test_cluster.database_name}",
-        "username": "testuser",
-        "password": "T3stPass",
-        "dataTableName": "test-table",
-        "copyOptions": "delimiter '|'",
-        "dataTableColumns": "test-col",
-    })
+    s3_configuration=aws.kinesis.FirehoseDeliveryStreamS3ConfigurationArgs(
+        role_arn=aws_iam_role["firehose_role"]["arn"],
+        bucket_arn=aws_s3_bucket["bucket"]["arn"],
+        buffer_size=10,
+        buffer_interval=400,
+        compression_format="GZIP",
+    ),
+    redshift_configuration=aws.kinesis.FirehoseDeliveryStreamRedshiftConfigurationArgs(
+        role_arn=aws_iam_role["firehose_role"]["arn"],
+        cluster_jdbcurl=f"jdbc:redshift://{test_cluster.endpoint}/{test_cluster.database_name}",
+        username="testuser",
+        password="T3stPass",
+        data_table_name="test-table",
+        copy_options="delimiter '|'",
+        data_table_columns="test-col",
+    ))
 ```
 
 {{% /example %}}
@@ -187,7 +187,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cluster(</span>cluster_identifier=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster(</span><span class="nx">cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -318,7 +318,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
 {{% /md %}}</dd>
@@ -1719,7 +1719,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
 {{% /md %}}</dd>

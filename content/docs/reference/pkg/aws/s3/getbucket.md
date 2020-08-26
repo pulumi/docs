@@ -115,10 +115,10 @@ example = aws.route53.Record("example",
     zone_id=test_zone.id,
     name="bucket",
     type="A",
-    aliases=[{
-        "name": selected.website_domain,
-        "zone_id": selected.hosted_zone_id,
-    }])
+    aliases=[aws.route53.RecordAliasArgs(
+        name=selected.website_domain,
+        zone_id=selected.hosted_zone_id,
+    )])
 ```
 
 {{% /example %}}
@@ -222,10 +222,10 @@ import pulumi
 import pulumi_aws as aws
 
 selected = aws.s3.get_bucket(bucket="a-test-bucket")
-test = aws.cloudfront.Distribution("test", origins=[{
-    "domain_name": selected.bucket_domain_name,
-    "originId": "s3-selected-bucket",
-}])
+test = aws.cloudfront.Distribution("test", origins=[aws.cloudfront.DistributionOriginArgs(
+    domain_name=selected.bucket_domain_name,
+    origin_id="s3-selected-bucket",
+)])
 ```
 
 {{% /example %}}
@@ -261,7 +261,7 @@ const test = new aws.cloudfront.Distribution("test", {origins: [{
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_bucket(</span>bucket=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bucket(</span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBucketResult</code></pre></div>
 {{% /choosable %}}
 
 

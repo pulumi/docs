@@ -151,10 +151,10 @@ import pulumi_aws as aws
 bucket = aws.s3.Bucket("bucket",
     acl="public-read",
     policy=(lambda path: open(path).read())("policy.json"),
-    website={
-        "indexDocument": "index.html",
-        "errorDocument": "error.html",
-        "routingRules": """[{
+    website=aws.s3.BucketWebsiteArgs(
+        index_document="index.html",
+        error_document="error.html",
+        routing_rules="""[{
     "Condition": {
         "KeyPrefixEquals": "docs/"
     },
@@ -163,7 +163,7 @@ bucket = aws.s3.Bucket("bucket",
     }
 }]
 """,
-    })
+    ))
 ```
 
 {{% /example %}}
@@ -290,16 +290,16 @@ import pulumi_aws as aws
 
 bucket = aws.s3.Bucket("bucket",
     acl="public-read",
-    cors_rules=[{
-        "allowedHeaders": ["*"],
-        "allowedMethods": [
+    cors_rules=[aws.s3.BucketCorsRuleArgs(
+        allowed_headers=["*"],
+        allowed_methods=[
             "PUT",
             "POST",
         ],
-        "allowedOrigins": ["https://s3-website-test.mydomain.com"],
-        "exposeHeaders": ["ETag"],
-        "maxAgeSeconds": 3000,
-    }])
+        allowed_origins=["https://s3-website-test.mydomain.com"],
+        expose_headers=["ETag"],
+        max_age_seconds=3000,
+    )])
 ```
 
 {{% /example %}}
@@ -386,9 +386,9 @@ import pulumi_aws as aws
 
 bucket = aws.s3.Bucket("bucket",
     acl="private",
-    versioning={
-        "enabled": True,
-    })
+    versioning=aws.s3.BucketVersioningArgs(
+        enabled=True,
+    ))
 ```
 
 {{% /example %}}
@@ -486,10 +486,10 @@ import pulumi_aws as aws
 log_bucket = aws.s3.Bucket("logBucket", acl="log-delivery-write")
 bucket = aws.s3.Bucket("bucket",
     acl="private",
-    loggings=[{
-        "targetBucket": log_bucket.id,
-        "targetPrefix": "log/",
-    }])
+    loggings=[aws.s3.BucketLoggingArgs(
+        target_bucket=log_bucket.id,
+        target_prefix="log/",
+    )])
 ```
 
 {{% /example %}}
@@ -699,59 +699,59 @@ import pulumi_aws as aws
 bucket = aws.s3.Bucket("bucket",
     acl="private",
     lifecycle_rules=[
-        {
-            "enabled": True,
-            "expiration": {
-                "days": 90,
-            },
-            "id": "log",
-            "prefix": "log/",
-            "tags": {
+        aws.s3.BucketLifecycleRuleArgs(
+            enabled=True,
+            expiration=aws.s3.BucketLifecycleRuleExpirationArgs(
+                days=90,
+            ),
+            id="log",
+            prefix="log/",
+            tags={
                 "autoclean": "true",
                 "rule": "log",
             },
-            "transitions": [
-                {
-                    "days": 30,
-                    "storage_class": "STANDARD_IA",
-                },
-                {
-                    "days": 60,
-                    "storage_class": "GLACIER",
-                },
+            transitions=[
+                aws.s3.BucketLifecycleRuleTransitionArgs(
+                    days=30,
+                    storage_class="STANDARD_IA",
+                ),
+                aws.s3.BucketLifecycleRuleTransitionArgs(
+                    days=60,
+                    storage_class="GLACIER",
+                ),
             ],
-        },
-        {
-            "enabled": True,
-            "expiration": {
-                "date": "2016-01-12",
-            },
-            "id": "tmp",
-            "prefix": "tmp/",
-        },
+        ),
+        aws.s3.BucketLifecycleRuleArgs(
+            enabled=True,
+            expiration=aws.s3.BucketLifecycleRuleExpirationArgs(
+                date="2016-01-12",
+            ),
+            id="tmp",
+            prefix="tmp/",
+        ),
     ])
 versioning_bucket = aws.s3.Bucket("versioningBucket",
     acl="private",
-    lifecycle_rules=[{
-        "enabled": True,
-        "noncurrentVersionExpiration": {
-            "days": 90,
-        },
-        "noncurrentVersionTransitions": [
-            {
-                "days": 30,
-                "storage_class": "STANDARD_IA",
-            },
-            {
-                "days": 60,
-                "storage_class": "GLACIER",
-            },
+    lifecycle_rules=[aws.s3.BucketLifecycleRuleArgs(
+        enabled=True,
+        noncurrent_version_expiration=aws.s3.BucketLifecycleRuleNoncurrentVersionExpirationArgs(
+            days=90,
+        ),
+        noncurrent_version_transitions=[
+            aws.s3.BucketLifecycleRuleNoncurrentVersionTransitionArgs(
+                days=30,
+                storage_class="STANDARD_IA",
+            ),
+            aws.s3.BucketLifecycleRuleNoncurrentVersionTransitionArgs(
+                days=60,
+                storage_class="GLACIER",
+            ),
         ],
-        "prefix": "config/",
-    }],
-    versioning={
-        "enabled": True,
-    })
+        prefix="config/",
+    )],
+    versioning=aws.s3.BucketVersioningArgs(
+        enabled=True,
+    ))
 ```
 
 {{% /example %}}
@@ -1050,26 +1050,26 @@ replication_role = aws.iam.Role("replicationRole", assume_role_policy="""{
   ]
 }
 """)
-destination = aws.s3.Bucket("destination", versioning={
-    "enabled": True,
-})
+destination = aws.s3.Bucket("destination", versioning=aws.s3.BucketVersioningArgs(
+    enabled=True,
+))
 bucket = aws.s3.Bucket("bucket",
     acl="private",
-    versioning={
-        "enabled": True,
-    },
-    replication_configuration={
-        "role": replication_role.arn,
-        "rules": [{
-            "id": "foobar",
-            "prefix": "foo",
-            "status": "Enabled",
-            "destination": {
-                "bucket": destination.arn,
-                "storage_class": "STANDARD",
-            },
-        }],
-    },
+    versioning=aws.s3.BucketVersioningArgs(
+        enabled=True,
+    ),
+    replication_configuration=aws.s3.BucketReplicationConfigurationArgs(
+        role=replication_role.arn,
+        rules=[aws.s3.BucketReplicationConfigurationRuleArgs(
+            id="foobar",
+            prefix="foo",
+            status="Enabled",
+            destination=aws.s3.BucketReplicationConfigurationRuleDestinationArgs(
+                bucket=destination.arn,
+                storage_class="STANDARD",
+            ),
+        )],
+    ),
     opts=ResourceOptions(provider=aws["central"]))
 replication_policy = aws.iam.Policy("replicationPolicy", policy=pulumi.Output.all(bucket.arn, bucket.arn, destination.arn).apply(lambda bucketArn, bucketArn1, destinationArn: f"""{{
   "Version": "2012-10-17",
@@ -1281,14 +1281,14 @@ import pulumi_aws as aws
 mykey = aws.kms.Key("mykey",
     description="This key is used to encrypt bucket objects",
     deletion_window_in_days=10)
-mybucket = aws.s3.Bucket("mybucket", server_side_encryption_configuration={
-    "rule": {
-        "applyServerSideEncryptionByDefault": {
-            "kms_master_key_id": mykey.arn,
-            "sseAlgorithm": "aws:kms",
-        },
-    },
-})
+mybucket = aws.s3.Bucket("mybucket", server_side_encryption_configuration=aws.s3.BucketServerSideEncryptionConfigurationArgs(
+    rule=aws.s3.BucketServerSideEncryptionConfigurationRuleArgs(
+        apply_server_side_encryption_by_default=aws.s3.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs(
+            kms_master_key_id=mykey.arn,
+            sse_algorithm="aws:kms",
+        ),
+    ),
+))
 ```
 
 {{% /example %}}
@@ -1410,19 +1410,19 @@ import pulumi_aws as aws
 
 current_user = aws.get_canonical_user_id()
 bucket = aws.s3.Bucket("bucket", grants=[
-    {
-        "id": current_user.id,
-        "type": "CanonicalUser",
-        "permissions": ["FULL_CONTROL"],
-    },
-    {
-        "type": "Group",
-        "permissions": [
+    aws.s3.BucketGrantArgs(
+        id=current_user.id,
+        type="CanonicalUser",
+        permissions=["FULL_CONTROL"],
+    ),
+    aws.s3.BucketGrantArgs(
+        type="Group",
+        permissions=[
             "READ",
             "WRITE",
         ],
-        "uri": "http://acs.amazonaws.com/groups/s3/LogDelivery",
-    },
+        uri="http://acs.amazonaws.com/groups/s3/LogDelivery",
+    ),
 ])
 ```
 
@@ -1466,7 +1466,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.Bucket">Bucket</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acceleration_status=None<span class="p">, </span>acl=None<span class="p">, </span>arn=None<span class="p">, </span>bucket=None<span class="p">, </span>bucket_prefix=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>grants=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>loggings=None<span class="p">, </span>object_lock_configuration=None<span class="p">, </span>policy=None<span class="p">, </span>replication_configuration=None<span class="p">, </span>request_payer=None<span class="p">, </span>server_side_encryption_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, </span>website_domain=None<span class="p">, </span>website_endpoint=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.Bucket">Bucket</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceleration_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[List[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[List[BucketGrantArgs]]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[List[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">loggings</span><span class="p">:</span> <span class="nx">Optional[List[BucketLoggingArgs]]</span> = None<span class="p">, </span><span class="nx">object_lock_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketObjectLockConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketReplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">, </span><span class="nx">website_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">website_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2378,7 +2378,7 @@ developer guide for more information.
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".  Conflicts with `grant`.
 {{% /md %}}</dd>
@@ -2422,7 +2422,7 @@ developer guide for more information.
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">List[Bucket<wbr>Cors<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketcorsrule">List[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd>
@@ -2444,7 +2444,7 @@ developer guide for more information.
 <a href="#grants_python" style="color: inherit; text-decoration: inherit;">grants</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketgrant">List[Bucket<wbr>Grant]</a></span>
+        <span class="property-type"><a href="#bucketgrant">List[Bucket<wbr>Grant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd>
@@ -2466,7 +2466,7 @@ developer guide for more information.
 <a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd>
@@ -2477,7 +2477,7 @@ developer guide for more information.
 <a href="#loggings_python" style="color: inherit; text-decoration: inherit;">loggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">List[Bucket<wbr>Logging]</a></span>
+        <span class="property-type"><a href="#bucketlogging">List[Bucket<wbr>Logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd>
@@ -2488,7 +2488,7 @@ developer guide for more information.
 <a href="#object_lock_configuration_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfiguration">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd>
@@ -2499,7 +2499,7 @@ developer guide for more information.
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd>
@@ -2510,7 +2510,7 @@ developer guide for more information.
 <a href="#replication_configuration_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfiguration">Dict[Bucket<wbr>Replication<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd>
@@ -2535,7 +2535,7 @@ developer guide for more information.
 <a href="#server_side_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd>
@@ -2546,7 +2546,7 @@ developer guide for more information.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
@@ -2557,7 +2557,7 @@ developer guide for more information.
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Dict[Bucket<wbr>Versioning]</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd>
@@ -2568,7 +2568,7 @@ developer guide for more information.
 <a href="#website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Dict[Bucket<wbr>Website]</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd>
@@ -2825,7 +2825,8 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acceleration_status=None<span class="p">, </span>acl=None<span class="p">, </span>arn=None<span class="p">, </span>bucket=None<span class="p">, </span>bucket_domain_name=None<span class="p">, </span>bucket_prefix=None<span class="p">, </span>bucket_regional_domain_name=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>grants=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>loggings=None<span class="p">, </span>object_lock_configuration=None<span class="p">, </span>policy=None<span class="p">, </span>region=None<span class="p">, </span>replication_configuration=None<span class="p">, </span>request_payer=None<span class="p">, </span>server_side_encryption_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, </span>website_domain=None<span class="p">, </span>website_endpoint=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceleration_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_regional_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[List[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[List[BucketGrantArgs]]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[List[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">loggings</span><span class="p">:</span> <span class="nx">Optional[List[BucketLoggingArgs]]</span> = None<span class="p">, </span><span class="nx">object_lock_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketObjectLockConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketReplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">, </span><span class="nx">website_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">website_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Bucket</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2833,7 +2834,7 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Bucket.html">Bucket</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketState.html">BucketState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Bucket.html">Bucket</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketState.html">BucketState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3778,7 +3779,7 @@ developer guide for more information.
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".  Conflicts with `grant`.
 {{% /md %}}</dd>
@@ -3844,7 +3845,7 @@ developer guide for more information.
 <a href="#state_cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">List[Bucket<wbr>Cors<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketcorsrule">List[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd>
@@ -3866,7 +3867,7 @@ developer guide for more information.
 <a href="#state_grants_python" style="color: inherit; text-decoration: inherit;">grants</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketgrant">List[Bucket<wbr>Grant]</a></span>
+        <span class="property-type"><a href="#bucketgrant">List[Bucket<wbr>Grant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd>
@@ -3888,7 +3889,7 @@ developer guide for more information.
 <a href="#state_lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd>
@@ -3899,7 +3900,7 @@ developer guide for more information.
 <a href="#state_loggings_python" style="color: inherit; text-decoration: inherit;">loggings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">List[Bucket<wbr>Logging]</a></span>
+        <span class="property-type"><a href="#bucketlogging">List[Bucket<wbr>Logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd>
@@ -3910,7 +3911,7 @@ developer guide for more information.
 <a href="#state_object_lock_configuration_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfiguration">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd>
@@ -3921,7 +3922,7 @@ developer guide for more information.
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd>
@@ -3943,7 +3944,7 @@ developer guide for more information.
 <a href="#state_replication_configuration_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfiguration">Dict[Bucket<wbr>Replication<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd>
@@ -3968,7 +3969,7 @@ developer guide for more information.
 <a href="#state_server_side_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd>
@@ -3979,7 +3980,7 @@ developer guide for more information.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
@@ -3990,7 +3991,7 @@ developer guide for more information.
 <a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Dict[Bucket<wbr>Versioning]</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd>
@@ -4001,7 +4002,7 @@ developer guide for more information.
 <a href="#state_website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Dict[Bucket<wbr>Website]</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd>
@@ -4249,8 +4250,8 @@ developer guide for more information.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedmethods_python">
-<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4260,8 +4261,8 @@ developer guide for more information.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedorigins_python">
-<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+        <span id="allowed_origins_python">
+<a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4271,8 +4272,8 @@ developer guide for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedheaders_python">
-<a href="#allowedheaders_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+        <span id="allowed_headers_python">
+<a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4282,8 +4283,8 @@ developer guide for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="exposeheaders_python">
-<a href="#exposeheaders_python" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
+        <span id="expose_headers_python">
+<a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4293,8 +4294,8 @@ developer guide for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxageseconds_python">
-<a href="#maxageseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
+        <span id="max_age_seconds_python">
+<a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4880,8 +4881,8 @@ developer guide for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="abortincompletemultipartuploaddays_python">
-<a href="#abortincompletemultipartuploaddays_python" style="color: inherit; text-decoration: inherit;">abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
+        <span id="abort_incomplete_multipart_upload_days_python">
+<a href="#abort_incomplete_multipart_upload_days_python" style="color: inherit; text-decoration: inherit;">abort_<wbr>incomplete_<wbr>multipart_<wbr>upload_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4895,7 +4896,7 @@ developer guide for more information.
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleexpiration">Dict[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's expire (documented below).
 {{% /md %}}</dd>
@@ -4913,22 +4914,22 @@ developer guide for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="noncurrentversionexpiration_python">
-<a href="#noncurrentversionexpiration_python" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Expiration</a>
+        <span id="noncurrent_version_expiration_python">
+<a href="#noncurrent_version_expiration_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>expiration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">Dict[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions expire (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="noncurrentversiontransitions_python">
-<a href="#noncurrentversiontransitions_python" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Transitions</a>
+        <span id="noncurrent_version_transitions_python">
+<a href="#noncurrent_version_transitions_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>transitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions transitions (documented below).
 {{% /md %}}</dd>
@@ -4950,7 +4951,7 @@ developer guide for more information.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies object tags key and value.
 {{% /md %}}</dd>
@@ -4961,7 +4962,7 @@ developer guide for more information.
 <a href="#transitions_python" style="color: inherit; text-decoration: inherit;">transitions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruletransition">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruletransition">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's transitions (documented below).
 {{% /md %}}</dd>
@@ -5135,8 +5136,8 @@ developer guide for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="expiredobjectdeletemarker_python">
-<a href="#expiredobjectdeletemarker_python" style="color: inherit; text-decoration: inherit;">expired<wbr>Object<wbr>Delete<wbr>Marker</a>
+        <span id="expired_object_delete_marker_python">
+<a href="#expired_object_delete_marker_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>object_<wbr>delete_<wbr>marker</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5660,8 +5661,8 @@ developer guide for more information.
 
     <dt class="property-required"
             title="Required">
-        <span id="targetbucket_python">
-<a href="#targetbucket_python" style="color: inherit; text-decoration: inherit;">target<wbr>Bucket</a>
+        <span id="target_bucket_python">
+<a href="#target_bucket_python" style="color: inherit; text-decoration: inherit;">target_<wbr>bucket</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5671,8 +5672,8 @@ developer guide for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetprefix_python">
-<a href="#targetprefix_python" style="color: inherit; text-decoration: inherit;">target<wbr>Prefix</a>
+        <span id="target_prefix_python">
+<a href="#target_prefix_python" style="color: inherit; text-decoration: inherit;">target_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5794,8 +5795,8 @@ developer guide for more information.
 
     <dt class="property-required"
             title="Required">
-        <span id="objectlockenabled_python">
-<a href="#objectlockenabled_python" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Enabled</a>
+        <span id="object_lock_enabled_python">
+<a href="#object_lock_enabled_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5809,7 +5810,7 @@ developer guide for more information.
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfigurationrule">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfigurationrule">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Object Lock rule in place for this bucket.
 {{% /md %}}</dd>
@@ -5895,11 +5896,11 @@ developer guide for more information.
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultretention_python">
-<a href="#defaultretention_python" style="color: inherit; text-decoration: inherit;">default<wbr>Retention</a>
+        <span id="default_retention_python">
+<a href="#default_retention_python" style="color: inherit; text-decoration: inherit;">default_<wbr>retention</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfigurationruledefaultretention">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfigurationruledefaultretention">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default retention period that you want to apply to new objects placed in this bucket.
 {{% /md %}}</dd>
@@ -6211,7 +6212,7 @@ developer guide for more information.
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrule">List[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrule">List[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the rules managing the replication (documented below).
 {{% /md %}}</dd>
@@ -6499,7 +6500,7 @@ developer guide for more information.
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationruledestination">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestination">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the rule (documented below).
 {{% /md %}}</dd>
@@ -6521,7 +6522,7 @@ developer guide for more information.
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulefilter">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulefilter">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter that identifies subset of objects to which the replication rule applies (documented below).
 {{% /md %}}</dd>
@@ -6561,11 +6562,11 @@ developer guide for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceselectioncriteria_python">
-<a href="#sourceselectioncriteria_python" style="color: inherit; text-decoration: inherit;">source<wbr>Selection<wbr>Criteria</a>
+        <span id="source_selection_criteria_python">
+<a href="#source_selection_criteria_python" style="color: inherit; text-decoration: inherit;">source_<wbr>selection_<wbr>criteria</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies special object selection criteria (documented below).
 {{% /md %}}</dd>
@@ -6797,11 +6798,11 @@ developer guide for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesscontroltranslation_python">
-<a href="#accesscontroltranslation_python" style="color: inherit; text-decoration: inherit;">access<wbr>Control<wbr>Translation</a>
+        <span id="access_control_translation_python">
+<a href="#access_control_translation_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control_<wbr>translation</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
 {{% /md %}}</dd>
@@ -6819,8 +6820,8 @@ developer guide for more information.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replicakmskeyid_python">
-<a href="#replicakmskeyid_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Kms<wbr>Key<wbr>Id</a>
+        <span id="replica_kms_key_id_python">
+<a href="#replica_kms_key_id_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>kms_<wbr>key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7062,7 +7063,7 @@ The rule applies only to objects having all the tags in its tagset.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
@@ -7152,11 +7153,11 @@ in `destination` must be specified as well.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ssekmsencryptedobjects_python">
-<a href="#ssekmsencryptedobjects_python" style="color: inherit; text-decoration: inherit;">sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a>
+        <span id="sse_kms_encrypted_objects_python">
+<a href="#sse_kms_encrypted_objects_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>kms_<wbr>encrypted_<wbr>objects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Match SSE-KMS encrypted objects (documented below). If specified, `replica_kms_key_id`
 in `destination` must be specified as well.
@@ -7337,7 +7338,7 @@ in `destination` must be specified as well.
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfigurationrule">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfigurationrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A single object for server-side encryption by default configuration. (documented below)
 {{% /md %}}</dd>
@@ -7423,11 +7424,11 @@ in `destination` must be specified as well.
 
     <dt class="property-required"
             title="Required">
-        <span id="applyserversideencryptionbydefault_python">
-<a href="#applyserversideencryptionbydefault_python" style="color: inherit; text-decoration: inherit;">apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a>
+        <span id="apply_server_side_encryption_by_default_python">
+<a href="#apply_server_side_encryption_by_default_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>server_<wbr>side_<wbr>encryption_<wbr>by_<wbr>default</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A single object for setting server-side encryption by default. (documented below)
 {{% /md %}}</dd>
@@ -7546,8 +7547,8 @@ in `destination` must be specified as well.
 
     <dt class="property-required"
             title="Required">
-        <span id="ssealgorithm_python">
-<a href="#ssealgorithm_python" style="color: inherit; text-decoration: inherit;">sse<wbr>Algorithm</a>
+        <span id="sse_algorithm_python">
+<a href="#sse_algorithm_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>algorithm</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7691,8 +7692,8 @@ in `destination` must be specified as well.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mfadelete_python">
-<a href="#mfadelete_python" style="color: inherit; text-decoration: inherit;">mfa<wbr>Delete</a>
+        <span id="mfa_delete_python">
+<a href="#mfa_delete_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>delete</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7883,8 +7884,8 @@ describing redirect behavior and when redirects are applied.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errordocument_python">
-<a href="#errordocument_python" style="color: inherit; text-decoration: inherit;">error<wbr>Document</a>
+        <span id="error_document_python">
+<a href="#error_document_python" style="color: inherit; text-decoration: inherit;">error_<wbr>document</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7894,8 +7895,8 @@ describing redirect behavior and when redirects are applied.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indexdocument_python">
-<a href="#indexdocument_python" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
+        <span id="index_document_python">
+<a href="#index_document_python" style="color: inherit; text-decoration: inherit;">index_<wbr>document</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7905,8 +7906,8 @@ describing redirect behavior and when redirects are applied.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectallrequeststo_python">
-<a href="#redirectallrequeststo_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>All<wbr>Requests<wbr>To</a>
+        <span id="redirect_all_requests_to_python">
+<a href="#redirect_all_requests_to_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>all_<wbr>requests_<wbr>to</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7916,11 +7917,11 @@ describing redirect behavior and when redirects are applied.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="routingrules_python">
-<a href="#routingrules_python" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
+        <span id="routing_rules_python">
+<a href="#routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string | List[Routing<wbr>Rule]</span>
+        <span class="property-type">Union[str, List[str]]</span>
     </dt>
     <dd>{{% md %}}A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
 describing redirect behavior and when redirects are applied.

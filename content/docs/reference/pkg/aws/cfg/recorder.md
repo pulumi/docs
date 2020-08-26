@@ -150,7 +150,7 @@ const foo = new aws.cfg.Recorder("foo", {roleArn: role.arn});
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cfg/#pulumi_aws.cfg.Recorder">Recorder</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>recording_group=None<span class="p">, </span>role_arn=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cfg/#pulumi_aws.cfg.Recorder">Recorder</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recording_group</span><span class="p">:</span> <span class="nx">Optional[RecorderRecordingGroupArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -478,7 +478,7 @@ See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-p
 <a href="#recording_group_python" style="color: inherit; text-decoration: inherit;">recording_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorderrecordinggroup">Dict[Recorder<wbr>Recording<wbr>Group]</a></span>
+        <span class="property-type"><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recording group - see below.
 {{% /md %}}</dd>
@@ -581,7 +581,8 @@ Get an existing Recorder resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>recording_group=None<span class="p">, </span>role_arn=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recording_group</span><span class="p">:</span> <span class="nx">Optional[RecorderRecordingGroupArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Recorder</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -589,7 +590,7 @@ Get an existing Recorder resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Recorder.html">Recorder</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.RecorderState.html">RecorderState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.Recorder.html">Recorder</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.RecorderState.html">RecorderState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -838,7 +839,7 @@ See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-p
 <a href="#state_recording_group_python" style="color: inherit; text-decoration: inherit;">recording_<wbr>group</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorderrecordinggroup">Dict[Recorder<wbr>Recording<wbr>Group]</a></span>
+        <span class="property-type"><a href="#recorderrecordinggroup">Recorder<wbr>Recording<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Recording group - see below.
 {{% /md %}}</dd>
@@ -1026,8 +1027,8 @@ See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIRefe
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allsupported_python">
-<a href="#allsupported_python" style="color: inherit; text-decoration: inherit;">all<wbr>Supported</a>
+        <span id="all_supported_python">
+<a href="#all_supported_python" style="color: inherit; text-decoration: inherit;">all_<wbr>supported</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1039,8 +1040,8 @@ Conflicts with `resource_types`. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includeglobalresourcetypes_python">
-<a href="#includeglobalresourcetypes_python" style="color: inherit; text-decoration: inherit;">include<wbr>Global<wbr>Resource<wbr>Types</a>
+        <span id="include_global_resource_types_python">
+<a href="#include_global_resource_types_python" style="color: inherit; text-decoration: inherit;">include_<wbr>global_<wbr>resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1051,8 +1052,8 @@ with the resources that it records. Requires `all_supported = true`. Conflicts w
 
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcetypes_python">
-<a href="#resourcetypes_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
+        <span id="resource_types_python">
+<a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

@@ -127,7 +127,7 @@ const byName = aws.mq.getBroker({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_broker(</span>broker_id=None<span class="p">, </span>broker_name=None<span class="p">, </span>logs=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_broker(</span><span class="nx">broker_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">broker_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[GetBrokerLogsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBrokerResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -329,7 +329,7 @@ The following arguments are supported:
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokerlogs">Dict[Get<wbr>Broker<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -339,7 +339,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1003,7 +1003,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokerconfiguration">Dict[Get<wbr>Broker<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getbrokerconfiguration">Get<wbr>Broker<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1084,7 +1084,7 @@ The following output properties are available:
 <a href="#maintenance_window_start_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>start_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokermaintenancewindowstarttime">Dict[Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time]</a></span>
+        <span class="property-type"><a href="#getbrokermaintenancewindowstarttime">Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1124,7 +1124,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1144,7 +1144,7 @@ The following output properties are available:
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbrokerlogs">Dict[Get<wbr>Broker<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#getbrokerlogs">Get<wbr>Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1398,8 +1398,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="useawsownedkey_python">
-<a href="#useawsownedkey_python" style="color: inherit; text-decoration: inherit;">use<wbr>Aws<wbr>Owned<wbr>Key</a>
+        <span id="use_aws_owned_key_python">
+<a href="#use_aws_owned_key_python" style="color: inherit; text-decoration: inherit;">use_<wbr>aws_<wbr>owned_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1544,8 +1544,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="consoleurl_python">
-<a href="#consoleurl_python" style="color: inherit; text-decoration: inherit;">console<wbr>Url</a>
+        <span id="console_url_python">
+<a href="#console_url_python" style="color: inherit; text-decoration: inherit;">console_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1836,8 +1836,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dayofweek_python">
-<a href="#dayofweek_python" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
+        <span id="day_of_week_python">
+<a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1846,8 +1846,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="timeofday_python">
-<a href="#timeofday_python" style="color: inherit; text-decoration: inherit;">time<wbr>Of<wbr>Day</a>
+        <span id="time_of_day_python">
+<a href="#time_of_day_python" style="color: inherit; text-decoration: inherit;">time_<wbr>of_<wbr>day</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1856,8 +1856,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="timezone_python">
-<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2002,8 +2002,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="consoleaccess_python">
-<a href="#consoleaccess_python" style="color: inherit; text-decoration: inherit;">console<wbr>Access</a>
+        <span id="console_access_python">
+<a href="#console_access_python" style="color: inherit; text-decoration: inherit;">console_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

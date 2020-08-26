@@ -162,31 +162,31 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-ipset = aws.waf.IpSet("ipset", ip_set_descriptors=[{
-    "type": "IPV4",
-    "value": "192.0.7.0/24",
-}])
+ipset = aws.waf.IpSet("ipset", ip_set_descriptors=[aws.waf.IpSetIpSetDescriptorArgs(
+    type="IPV4",
+    value="192.0.7.0/24",
+)])
 wafrule = aws.waf.Rule("wafrule",
     metric_name="tfWAFRule",
-    predicates=[{
-        "dataId": ipset.id,
-        "negated": False,
-        "type": "IPMatch",
-    }],
+    predicates=[aws.waf.RulePredicateArgs(
+        data_id=ipset.id,
+        negated=False,
+        type="IPMatch",
+    )],
     opts=ResourceOptions(depends_on=[ipset]))
 waf_acl = aws.waf.WebAcl("wafAcl",
     metric_name="tfWebACL",
-    default_action={
-        "type": "ALLOW",
-    },
-    rules=[{
-        "action": {
-            "type": "BLOCK",
-        },
-        "priority": 1,
-        "rule_id": wafrule.id,
-        "type": "REGULAR",
-    }],
+    default_action=aws.waf.WebAclDefaultActionArgs(
+        type="ALLOW",
+    ),
+    rules=[aws.waf.WebAclRuleArgs(
+        action=aws.waf.WebAclRuleActionArgs(
+            type="BLOCK",
+        ),
+        priority=1,
+        rule_id=wafrule.id,
+        type="REGULAR",
+    )],
     opts=ResourceOptions(depends_on=[
             ipset,
             wafrule,
@@ -319,9 +319,9 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.waf.WebAcl("example", logging_configuration={
-    "log_destination": aws_kinesis_firehose_delivery_stream["example"]["arn"],
-    "redactedFields": {
+example = aws.waf.WebAcl("example", logging_configuration=aws.waf.WebAclLoggingConfigurationArgs(
+    log_destination=aws_kinesis_firehose_delivery_stream["example"]["arn"],
+    redacted_fields={
         "fieldToMatches": [
             {
                 "type": "URI",
@@ -332,7 +332,7 @@ example = aws.waf.WebAcl("example", logging_configuration={
             },
         ],
     },
-})
+))
 ```
 
 {{% /example %}}
@@ -373,7 +373,7 @@ const example = new aws.waf.WebAcl("example", {loggingConfiguration: {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.WebAcl">WebAcl</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>default_action=None<span class="p">, </span>logging_configuration=None<span class="p">, </span>metric_name=None<span class="p">, </span>name=None<span class="p">, </span>rules=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/waf/#pulumi_aws.waf.WebAcl">WebAcl</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_action</span><span class="p">:</span> <span class="nx">Optional[WebAclDefaultActionArgs]</span> = None<span class="p">, </span><span class="nx">logging_configuration</span><span class="p">:</span> <span class="nx">Optional[WebAclLoggingConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[WebAclRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -770,7 +770,7 @@ The WebAcl resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webacldefaultaction">Dict[Web<wbr>Acl<wbr>Default<wbr>Action]</a></span>
+        <span class="property-type"><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.
 {{% /md %}}</dd>
@@ -792,7 +792,7 @@ The WebAcl resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#logging_configuration_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfiguration">Dict[Web<wbr>Acl<wbr>Logging<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to enable WAF logging. Detailed below.
 {{% /md %}}</dd>
@@ -814,7 +814,7 @@ The WebAcl resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclrule">List[Web<wbr>Acl<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#webaclrule">List[Web<wbr>Acl<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.
 {{% /md %}}</dd>
@@ -825,7 +825,7 @@ The WebAcl resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -972,7 +972,8 @@ Get an existing WebAcl resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>default_action=None<span class="p">, </span>logging_configuration=None<span class="p">, </span>metric_name=None<span class="p">, </span>name=None<span class="p">, </span>rules=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_action</span><span class="p">:</span> <span class="nx">Optional[WebAclDefaultActionArgs]</span> = None<span class="p">, </span><span class="nx">logging_configuration</span><span class="p">:</span> <span class="nx">Optional[WebAclLoggingConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[WebAclRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> WebAcl</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -980,7 +981,7 @@ Get an existing WebAcl resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.WebAcl.html">WebAcl</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.WebAclState.html">WebAclState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.WebAcl.html">WebAcl</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Waf.WebAclState.html">WebAclState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1355,7 +1356,7 @@ The following state arguments are supported:
 <a href="#state_default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webacldefaultaction">Dict[Web<wbr>Acl<wbr>Default<wbr>Action]</a></span>
+        <span class="property-type"><a href="#webacldefaultaction">Web<wbr>Acl<wbr>Default<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.
 {{% /md %}}</dd>
@@ -1366,7 +1367,7 @@ The following state arguments are supported:
 <a href="#state_logging_configuration_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfiguration">Dict[Web<wbr>Acl<wbr>Logging<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#webaclloggingconfiguration">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to enable WAF logging. Detailed below.
 {{% /md %}}</dd>
@@ -1399,7 +1400,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclrule">List[Web<wbr>Acl<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#webaclrule">List[Web<wbr>Acl<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.
 {{% /md %}}</dd>
@@ -1410,7 +1411,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1638,11 +1639,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redactedfields_python">
-<a href="#redactedfields_python" style="color: inherit; text-decoration: inherit;">redacted<wbr>Fields</a>
+        <span id="redacted_fields_python">
+<a href="#redacted_fields_python" style="color: inherit; text-decoration: inherit;">redacted_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfields">Dict[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields]</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfields">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
 {{% /md %}}</dd>
@@ -1728,11 +1729,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldtomatches_python">
-<a href="#fieldtomatches_python" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Matches</a>
+        <span id="field_to_matches_python">
+<a href="#field_to_matches_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>matches</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">List[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match]</a></span>
+        <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsfieldtomatch">List[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Fields<wbr>Field<wbr>To<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks for fields to redact. Detailed below.
 {{% /md %}}</dd>
@@ -2114,18 +2115,18 @@ Rules with a lower value are evaluated before rules with a higher value.
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclruleaction">Dict[Web<wbr>Acl<wbr>Rule<wbr>Action]</a></span>
+        <span class="property-type"><a href="#webaclruleaction">Web<wbr>Acl<wbr>Rule<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule. Not used if `type` is `GROUP`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="overrideaction_python">
-<a href="#overrideaction_python" style="color: inherit; text-decoration: inherit;">override<wbr>Action</a>
+        <span id="override_action_python">
+<a href="#override_action_python" style="color: inherit; text-decoration: inherit;">override_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webaclruleoverrideaction">Dict[Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action]</a></span>
+        <span class="property-type"><a href="#webaclruleoverrideaction">Web<wbr>Acl<wbr>Rule<wbr>Override<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule. Only used if `type` is `GROUP`.
 {{% /md %}}</dd>

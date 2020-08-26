@@ -157,29 +157,29 @@ import pulumi_aws as aws
 
 basic_dynamodb_table = aws.dynamodb.Table("basic-dynamodb-table",
     attributes=[
-        {
-            "name": "UserId",
-            "type": "S",
-        },
-        {
-            "name": "GameTitle",
-            "type": "S",
-        },
-        {
-            "name": "TopScore",
-            "type": "N",
-        },
+        aws.dynamodb.TableAttributeArgs(
+            name="UserId",
+            type="S",
+        ),
+        aws.dynamodb.TableAttributeArgs(
+            name="GameTitle",
+            type="S",
+        ),
+        aws.dynamodb.TableAttributeArgs(
+            name="TopScore",
+            type="N",
+        ),
     ],
     billing_mode="PROVISIONED",
-    global_secondary_indexes=[{
-        "hash_key": "GameTitle",
-        "name": "GameTitleIndex",
-        "nonKeyAttributes": ["UserId"],
-        "projectionType": "INCLUDE",
-        "range_key": "TopScore",
-        "read_capacity": 10,
-        "write_capacity": 10,
-    }],
+    global_secondary_indexes=[aws.dynamodb.TableGlobalSecondaryIndexArgs(
+        hash_key="GameTitle",
+        name="GameTitleIndex",
+        non_key_attributes=["UserId"],
+        projection_type="INCLUDE",
+        range_key="TopScore",
+        read_capacity=10,
+        write_capacity=10,
+    )],
     hash_key="UserId",
     range_key="GameTitle",
     read_capacity=20,
@@ -187,10 +187,10 @@ basic_dynamodb_table = aws.dynamodb.Table("basic-dynamodb-table",
         "Environment": "production",
         "Name": "dynamodb-table-1",
     },
-    ttl={
-        "attributeName": "TimeToExist",
-        "enabled": False,
-    },
+    ttl=aws.dynamodb.TableTtlArgs(
+        attribute_name="TimeToExist",
+        enabled=False,
+    ),
     write_capacity=20)
 ```
 
@@ -334,19 +334,19 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.dynamodb.Table("example",
-    attributes=[{
-        "name": "TestTableHashKey",
-        "type": "S",
-    }],
+    attributes=[aws.dynamodb.TableAttributeArgs(
+        name="TestTableHashKey",
+        type="S",
+    )],
     billing_mode="PAY_PER_REQUEST",
     hash_key="TestTableHashKey",
     replicas=[
-        {
-            "regionName": "us-east-2",
-        },
-        {
-            "regionName": "us-west-2",
-        },
+        aws.dynamodb.TableReplicaArgs(
+            region_name="us-east-2",
+        ),
+        aws.dynamodb.TableReplicaArgs(
+            region_name="us-west-2",
+        ),
     ],
     stream_enabled=True,
     stream_view_type="NEW_AND_OLD_IMAGES")
@@ -394,7 +394,7 @@ const example = new aws.dynamodb.Table("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/dynamodb/#pulumi_aws.dynamodb.Table">Table</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attributes=None<span class="p">, </span>billing_mode=None<span class="p">, </span>global_secondary_indexes=None<span class="p">, </span>hash_key=None<span class="p">, </span>local_secondary_indexes=None<span class="p">, </span>name=None<span class="p">, </span>point_in_time_recovery=None<span class="p">, </span>range_key=None<span class="p">, </span>read_capacity=None<span class="p">, </span>replicas=None<span class="p">, </span>server_side_encryption=None<span class="p">, </span>stream_enabled=None<span class="p">, </span>stream_view_type=None<span class="p">, </span>tags=None<span class="p">, </span>ttl=None<span class="p">, </span>write_capacity=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/dynamodb/#pulumi_aws.dynamodb.Table">Table</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[List[TableAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">billing_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[List[TableGlobalSecondaryIndexArgs]]</span> = None<span class="p">, </span><span class="nx">hash_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[List[TableLocalSecondaryIndexArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">point_in_time_recovery</span><span class="p">:</span> <span class="nx">Optional[TablePointInTimeRecoveryArgs]</span> = None<span class="p">, </span><span class="nx">range_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[List[TableReplicaArgs]]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[TableServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">stream_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stream_view_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[TableTtlArgs]</span> = None<span class="p">, </span><span class="nx">write_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1136,7 +1136,7 @@ definition after you have created the resource.
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableattribute">List[Table<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#tableattribute">List[Table<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 {{% /md %}}</dd>
@@ -1170,7 +1170,7 @@ defined as an attribute in the resource.
 <a href="#global_secondary_indexes_python" style="color: inherit; text-decoration: inherit;">global_<wbr>secondary_<wbr>indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableglobalsecondaryindex">List[Table<wbr>Global<wbr>Secondary<wbr>Index]</a></span>
+        <span class="property-type"><a href="#tableglobalsecondaryindex">List[Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -1183,7 +1183,7 @@ attributes, etc.
 <a href="#local_secondary_indexes_python" style="color: inherit; text-decoration: inherit;">local_<wbr>secondary_<wbr>indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablelocalsecondaryindex">List[Table<wbr>Local<wbr>Secondary<wbr>Index]</a></span>
+        <span class="property-type"><a href="#tablelocalsecondaryindex">List[Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -1207,7 +1207,7 @@ definition after you have created the resource.
 <a href="#point_in_time_recovery_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>recovery</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablepointintimerecovery">Dict[Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery]</a></span>
+        <span class="property-type"><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Point-in-time recovery options.
 {{% /md %}}</dd>
@@ -1240,7 +1240,7 @@ definition after you have created the resource.
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereplica">List[Table<wbr>Replica]</a></span>
+        <span class="property-type"><a href="#tablereplica">List[Table<wbr>Replica<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
 {{% /md %}}</dd>
@@ -1251,7 +1251,7 @@ definition after you have created the resource.
 <a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableserversideencryption">Dict[Table<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
 {{% /md %}}</dd>
@@ -1284,7 +1284,7 @@ definition after you have created the resource.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd>
@@ -1295,7 +1295,7 @@ definition after you have created the resource.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablettl">Dict[Table<wbr>Ttl]</a></span>
+        <span class="property-type"><a href="#tablettl">Table<wbr>Ttl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines ttl, has two properties, and can only be specified once:
 {{% /md %}}</dd>
@@ -1553,7 +1553,8 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>attributes=None<span class="p">, </span>billing_mode=None<span class="p">, </span>global_secondary_indexes=None<span class="p">, </span>hash_key=None<span class="p">, </span>local_secondary_indexes=None<span class="p">, </span>name=None<span class="p">, </span>point_in_time_recovery=None<span class="p">, </span>range_key=None<span class="p">, </span>read_capacity=None<span class="p">, </span>replicas=None<span class="p">, </span>server_side_encryption=None<span class="p">, </span>stream_arn=None<span class="p">, </span>stream_enabled=None<span class="p">, </span>stream_label=None<span class="p">, </span>stream_view_type=None<span class="p">, </span>tags=None<span class="p">, </span>ttl=None<span class="p">, </span>write_capacity=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[List[TableAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">billing_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[List[TableGlobalSecondaryIndexArgs]]</span> = None<span class="p">, </span><span class="nx">hash_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[List[TableLocalSecondaryIndexArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">point_in_time_recovery</span><span class="p">:</span> <span class="nx">Optional[TablePointInTimeRecoveryArgs]</span> = None<span class="p">, </span><span class="nx">range_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[List[TableReplicaArgs]]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[TableServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">stream_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stream_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_view_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[TableTtlArgs]</span> = None<span class="p">, </span><span class="nx">write_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1561,7 +1562,7 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Table.html">Table</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.TableState.html">TableState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Table.html">Table</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.TableState.html">TableState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2356,7 +2357,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableattribute">List[Table<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#tableattribute">List[Table<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 {{% /md %}}</dd>
@@ -2378,7 +2379,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_global_secondary_indexes_python" style="color: inherit; text-decoration: inherit;">global_<wbr>secondary_<wbr>indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableglobalsecondaryindex">List[Table<wbr>Global<wbr>Secondary<wbr>Index]</a></span>
+        <span class="property-type"><a href="#tableglobalsecondaryindex">List[Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -2403,7 +2404,7 @@ defined as an attribute in the resource.
 <a href="#state_local_secondary_indexes_python" style="color: inherit; text-decoration: inherit;">local_<wbr>secondary_<wbr>indexes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablelocalsecondaryindex">List[Table<wbr>Local<wbr>Secondary<wbr>Index]</a></span>
+        <span class="property-type"><a href="#tablelocalsecondaryindex">List[Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -2427,7 +2428,7 @@ definition after you have created the resource.
 <a href="#state_point_in_time_recovery_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>recovery</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablepointintimerecovery">Dict[Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery]</a></span>
+        <span class="property-type"><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Point-in-time recovery options.
 {{% /md %}}</dd>
@@ -2460,7 +2461,7 @@ definition after you have created the resource.
 <a href="#state_replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereplica">List[Table<wbr>Replica]</a></span>
+        <span class="property-type"><a href="#tablereplica">List[Table<wbr>Replica<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
 {{% /md %}}</dd>
@@ -2471,7 +2472,7 @@ definition after you have created the resource.
 <a href="#state_server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableserversideencryption">Dict[Table<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
 {{% /md %}}</dd>
@@ -2529,7 +2530,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd>
@@ -2540,7 +2541,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablettl">Dict[Table<wbr>Ttl]</a></span>
+        <span class="property-type"><a href="#tablettl">Table<wbr>Ttl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines ttl, has two properties, and can only be specified once:
 {{% /md %}}</dd>
@@ -3021,8 +3022,8 @@ defined as an attribute in the resource.
 
     <dt class="property-required"
             title="Required">
-        <span id="projectiontype_python">
-<a href="#projectiontype_python" style="color: inherit; text-decoration: inherit;">projection<wbr>Type</a>
+        <span id="projection_type_python">
+<a href="#projection_type_python" style="color: inherit; text-decoration: inherit;">projection_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3036,8 +3037,8 @@ parameter.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nonkeyattributes_python">
-<a href="#nonkeyattributes_python" style="color: inherit; text-decoration: inherit;">non<wbr>Key<wbr>Attributes</a>
+        <span id="non_key_attributes_python">
+<a href="#non_key_attributes_python" style="color: inherit; text-decoration: inherit;">non_<wbr>key_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3289,8 +3290,8 @@ do not need to be defined as attributes on the table.
 
     <dt class="property-required"
             title="Required">
-        <span id="projectiontype_python">
-<a href="#projectiontype_python" style="color: inherit; text-decoration: inherit;">projection<wbr>Type</a>
+        <span id="projection_type_python">
+<a href="#projection_type_python" style="color: inherit; text-decoration: inherit;">projection_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3315,8 +3316,8 @@ parameter.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="nonkeyattributes_python">
-<a href="#nonkeyattributes_python" style="color: inherit; text-decoration: inherit;">non<wbr>Key<wbr>Attributes</a>
+        <span id="non_key_attributes_python">
+<a href="#non_key_attributes_python" style="color: inherit; text-decoration: inherit;">non_<wbr>key_<wbr>attributes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3497,8 +3498,8 @@ do not need to be defined as attributes on the table.
 
     <dt class="property-required"
             title="Required">
-        <span id="regionname_python">
-<a href="#regionname_python" style="color: inherit; text-decoration: inherit;">region<wbr>Name</a>
+        <span id="region_name_python">
+<a href="#region_name_python" style="color: inherit; text-decoration: inherit;">region_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3758,8 +3759,8 @@ This attribute should only be specified if the key is different from the default
 
     <dt class="property-required"
             title="Required">
-        <span id="attributename_python">
-<a href="#attributename_python" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
+        <span id="attribute_name_python">
+<a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -112,7 +112,7 @@ const test = aws.elb.getLoadBalancer({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_load_balancer(</span>name=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_load_balancer(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLoadBalancerResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -240,7 +240,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -894,7 +894,7 @@ The following output properties are available:
 <a href="#access_logs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>logs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalanceraccesslogs">Dict[Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></span>
+        <span class="property-type"><a href="#getloadbalanceraccesslogs">Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -964,7 +964,7 @@ The following output properties are available:
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getloadbalancerhealthcheck">Dict[Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check]</a></span>
+        <span class="property-type"><a href="#getloadbalancerhealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1075,7 +1075,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1499,8 +1499,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="healthythreshold_python">
-<a href="#healthythreshold_python" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
+        <span id="healthy_threshold_python">
+<a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1539,8 +1539,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="unhealthythreshold_python">
-<a href="#unhealthythreshold_python" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
+        <span id="unhealthy_threshold_python">
+<a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1745,16 +1745,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="instanceprotocol_python">
-<a href="#instanceprotocol_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Protocol</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="instance_port_python">
 <a href="#instance_port_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>port</a>
 </span> 
@@ -1765,8 +1755,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="lbprotocol_python">
-<a href="#lbprotocol_python" style="color: inherit; text-decoration: inherit;">lb<wbr>Protocol</a>
+        <span id="instance_protocol_python">
+<a href="#instance_protocol_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1785,8 +1775,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sslcertificateid_python">
-<a href="#sslcertificateid_python" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificate<wbr>Id</a>
+        <span id="lb_protocol_python">
+<a href="#lb_protocol_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ssl_certificate_id_python">
+<a href="#ssl_certificate_id_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificate_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

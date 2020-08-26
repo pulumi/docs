@@ -152,10 +152,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-test = aws.ec2.get_launch_template(filters=[{
-    "name": "launch-template-name",
-    "values": ["some-template"],
-}])
+test = aws.ec2.get_launch_template(filters=[aws.ec2.GetLaunchTemplateFilterArgs(
+    name="launch-template-name",
+    values=["some-template"],
+)])
 ```
 
 {{% /example %}}
@@ -190,7 +190,7 @@ const test = pulumi.output(aws.ec2.getLaunchTemplate({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_launch_template(</span>filters=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_launch_template(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetLaunchTemplateFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLaunchTemplateResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -343,7 +343,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlaunchtemplatefilter">List[Get<wbr>Launch<wbr>Template<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getlaunchtemplatefilter">List[Get<wbr>Launch<wbr>Template<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
 {{% /md %}}</dd>
@@ -365,7 +365,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>
@@ -1708,7 +1708,7 @@ Interfaces below for more details.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
 {{% /md %}}</dd>
@@ -1943,14 +1943,14 @@ Interfaces below for more details.
 <a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlaunchtemplateblockdevicemappingeb">List[Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb]</a></span>
+        <span class="property-type"><a href="#getlaunchtemplateblockdevicemappingeb">List[Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="nodevice_python">
-<a href="#nodevice_python" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
+        <span id="no_device_python">
+<a href="#no_device_python" style="color: inherit; text-decoration: inherit;">no_<wbr>device</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1959,8 +1959,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualname_python">
-<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
+        <span id="virtual_name_python">
+<a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2225,8 +2225,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2275,21 +2275,21 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2371,8 +2371,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="cpucredits_python">
-<a href="#cpucredits_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Credits</a>
+        <span id="cpu_credits_python">
+<a href="#cpu_credits_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>credits</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2927,8 +2927,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="markettype_python">
-<a href="#markettype_python" style="color: inherit; text-decoration: inherit;">market<wbr>Type</a>
+        <span id="market_type_python">
+<a href="#market_type_python" style="color: inherit; text-decoration: inherit;">market_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2941,7 +2941,7 @@ Interfaces below for more details.
 <a href="#spot_options_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlaunchtemplateinstancemarketoptionspotoption">List[Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getlaunchtemplateinstancemarketoptionspotoption">List[Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3153,8 +3153,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="instanceinterruptionbehavior_python">
-<a href="#instanceinterruptionbehavior_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behavior</a>
+        <span id="instance_interruption_behavior_python">
+<a href="#instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behavior</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3163,8 +3163,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="maxprice_python">
-<a href="#maxprice_python" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
+        <span id="max_price_python">
+<a href="#max_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>price</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3173,8 +3173,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="spotinstancetype_python">
-<a href="#spotinstancetype_python" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Type</a>
+        <span id="spot_instance_type_python">
+<a href="#spot_instance_type_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3338,8 +3338,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="httpendpoint_python">
-<a href="#httpendpoint_python" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
+        <span id="http_endpoint_python">
+<a href="#http_endpoint_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3349,8 +3349,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="httpputresponsehoplimit_python">
-<a href="#httpputresponsehoplimit_python" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+        <span id="http_put_response_hop_limit_python">
+<a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3360,8 +3360,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="httptokens_python">
-<a href="#httptokens_python" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
+        <span id="http_tokens_python">
+<a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3866,8 +3866,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="deleteontermination_python">
-<a href="#deleteontermination_python" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
+        <span id="delete_on_termination_python">
+<a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3897,8 +3897,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="ipv4addresscount_python">
-<a href="#ipv4addresscount_python" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Count</a>
+        <span id="ipv4_address_count_python">
+<a href="#ipv4_address_count_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3907,8 +3907,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="ipv4addresses_python">
-<a href="#ipv4addresses_python" style="color: inherit; text-decoration: inherit;">ipv4Addresses</a>
+        <span id="ipv4_addresses_python">
+<a href="#ipv4_addresses_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4283,8 +4283,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="partitionnumber_python">
-<a href="#partitionnumber_python" style="color: inherit; text-decoration: inherit;">partition<wbr>Number</a>
+        <span id="partition_number_python">
+<a href="#partition_number_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>number</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4293,8 +4293,8 @@ Interfaces below for more details.
 
     <dt class="property-required"
             title="Required">
-        <span id="spreaddomain_python">
-<a href="#spreaddomain_python" style="color: inherit; text-decoration: inherit;">spread<wbr>Domain</a>
+        <span id="spread_domain_python">
+<a href="#spread_domain_python" style="color: inherit; text-decoration: inherit;">spread_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4436,7 +4436,7 @@ Interfaces below for more details.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
 {{% /md %}}</dd>

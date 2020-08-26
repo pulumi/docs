@@ -146,7 +146,7 @@ const selected443 = selected.then(selected => aws.lb.getListener({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_listener(</span>arn=None<span class="p">, </span>load_balancer_arn=None<span class="p">, </span>port=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_listener(</span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetListenerResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -955,31 +955,31 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticatecognitos_python">
-<a href="#authenticatecognitos_python" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Cognitos</a>
+        <span id="authenticate_cognitos_python">
+<a href="#authenticate_cognitos_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>cognitos</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionauthenticatecognito">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito]</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionauthenticatecognito">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticateoidcs_python">
-<a href="#authenticateoidcs_python" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Oidcs</a>
+        <span id="authenticate_oidcs_python">
+<a href="#authenticate_oidcs_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>oidcs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionauthenticateoidc">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc]</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionauthenticateoidc">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="fixedresponses_python">
-<a href="#fixedresponses_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Responses</a>
+        <span id="fixed_responses_python">
+<a href="#fixed_responses_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>responses</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response]</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -999,7 +999,7 @@ The following output properties are available:
 <a href="#redirects_python" style="color: inherit; text-decoration: inherit;">redirects</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionredirect">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect]</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionredirect">List[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1311,18 +1311,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationrequestextraparams_python">
-<a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
+        <span id="authentication_request_extra_params_python">
+<a href="#authentication_request_extra_params_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>request_<wbr>extra_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="onunauthenticatedrequest_python">
-<a href="#onunauthenticatedrequest_python" style="color: inherit; text-decoration: inherit;">on<wbr>Unauthenticated<wbr>Request</a>
+        <span id="on_unauthenticated_request_python">
+<a href="#on_unauthenticated_request_python" style="color: inherit; text-decoration: inherit;">on_<wbr>unauthenticated_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1341,8 +1341,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sessioncookiename_python">
-<a href="#sessioncookiename_python" style="color: inherit; text-decoration: inherit;">session<wbr>Cookie<wbr>Name</a>
+        <span id="session_cookie_name_python">
+<a href="#session_cookie_name_python" style="color: inherit; text-decoration: inherit;">session_<wbr>cookie_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1351,8 +1351,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sessiontimeout_python">
-<a href="#sessiontimeout_python" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout</a>
+        <span id="session_timeout_python">
+<a href="#session_timeout_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1361,8 +1361,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="userpoolarn_python">
-<a href="#userpoolarn_python" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Arn</a>
+        <span id="user_pool_arn_python">
+<a href="#user_pool_arn_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1371,8 +1371,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="userpoolclientid_python">
-<a href="#userpoolclientid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Client<wbr>Id</a>
+        <span id="user_pool_client_id_python">
+<a href="#user_pool_client_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1381,8 +1381,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="userpooldomain_python">
-<a href="#userpooldomain_python" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Domain</a>
+        <span id="user_pool_domain_python">
+<a href="#user_pool_domain_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1767,18 +1767,18 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="authenticationrequestextraparams_python">
-<a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
+        <span id="authentication_request_extra_params_python">
+<a href="#authentication_request_extra_params_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>request_<wbr>extra_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="authorizationendpoint_python">
-<a href="#authorizationendpoint_python" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
+        <span id="authorization_endpoint_python">
+<a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1817,8 +1817,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="onunauthenticatedrequest_python">
-<a href="#onunauthenticatedrequest_python" style="color: inherit; text-decoration: inherit;">on<wbr>Unauthenticated<wbr>Request</a>
+        <span id="on_unauthenticated_request_python">
+<a href="#on_unauthenticated_request_python" style="color: inherit; text-decoration: inherit;">on_<wbr>unauthenticated_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1837,8 +1837,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sessioncookiename_python">
-<a href="#sessioncookiename_python" style="color: inherit; text-decoration: inherit;">session<wbr>Cookie<wbr>Name</a>
+        <span id="session_cookie_name_python">
+<a href="#session_cookie_name_python" style="color: inherit; text-decoration: inherit;">session_<wbr>cookie_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1847,8 +1847,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sessiontimeout_python">
-<a href="#sessiontimeout_python" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout</a>
+        <span id="session_timeout_python">
+<a href="#session_timeout_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1857,8 +1857,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="tokenendpoint_python">
-<a href="#tokenendpoint_python" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
+        <span id="token_endpoint_python">
+<a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1867,8 +1867,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="userinfoendpoint_python">
-<a href="#userinfoendpoint_python" style="color: inherit; text-decoration: inherit;">user<wbr>Info<wbr>Endpoint</a>
+        <span id="user_info_endpoint_python">
+<a href="#user_info_endpoint_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2023,8 +2023,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="messagebody_python">
-<a href="#messagebody_python" style="color: inherit; text-decoration: inherit;">message<wbr>Body</a>
+        <span id="message_body_python">
+<a href="#message_body_python" style="color: inherit; text-decoration: inherit;">message_<wbr>body</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

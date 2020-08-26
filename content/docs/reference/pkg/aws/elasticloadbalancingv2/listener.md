@@ -112,14 +112,14 @@ front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
 # ...
 front_end_listener = aws.lb.Listener("frontEndListener",
     load_balancer_arn=front_end_load_balancer.arn,
-    port="443",
+    port=443,
     protocol="HTTPS",
     ssl_policy="ELBSecurityPolicy-2016-08",
     certificate_arn="arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4",
-    default_actions=[{
-        "type": "forward",
-        "target_group_arn": front_end_target_group.arn,
-    }])
+    default_actions=[aws.lb.ListenerDefaultActionArgs(
+        type="forward",
+        target_group_arn=front_end_target_group.arn,
+    )])
 ```
 
 {{% /example %}}
@@ -238,16 +238,16 @@ front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
 # ...
 front_end_listener = aws.lb.Listener("frontEndListener",
     load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
+    port=80,
     protocol="HTTP",
-    default_actions=[{
-        "type": "redirect",
-        "redirect": {
-            "port": "443",
-            "protocol": "HTTPS",
-            "status_code": "HTTP_301",
-        },
-    }])
+    default_actions=[aws.lb.ListenerDefaultActionArgs(
+        type="redirect",
+        redirect=aws.lb.ListenerDefaultActionRedirectArgs(
+            port="443",
+            protocol="HTTPS",
+            status_code="HTTP_301",
+        ),
+    )])
 ```
 
 {{% /example %}}
@@ -366,16 +366,16 @@ front_end_load_balancer = aws.lb.LoadBalancer("frontEndLoadBalancer")
 # ...
 front_end_listener = aws.lb.Listener("frontEndListener",
     load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
+    port=80,
     protocol="HTTP",
-    default_actions=[{
-        "type": "fixed-response",
-        "fixedResponse": {
-            "content_type": "text/plain",
-            "messageBody": "Fixed response content",
-            "status_code": "200",
-        },
-    }])
+    default_actions=[aws.lb.ListenerDefaultActionArgs(
+        type="fixed-response",
+        fixed_response=aws.lb.ListenerDefaultActionFixedResponseArgs(
+            content_type="text/plain",
+            message_body="Fixed response content",
+            status_code="200",
+        ),
+    )])
 ```
 
 {{% /example %}}
@@ -544,21 +544,21 @@ domain = aws.cognito.UserPoolDomain("domain")
 # ...
 front_end_listener = aws.lb.Listener("frontEndListener",
     load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
+    port=80,
     protocol="HTTP",
     default_actions=[
-        {
-            "type": "authenticate-cognito",
-            "authenticateCognito": {
-                "userPoolArn": pool.arn,
-                "userPoolClientId": client.id,
-                "userPoolDomain": domain.domain,
-            },
-        },
-        {
-            "type": "forward",
-            "target_group_arn": front_end_target_group.arn,
-        },
+        aws.lb.ListenerDefaultActionArgs(
+            type="authenticate-cognito",
+            authenticate_cognito=aws.lb.ListenerDefaultActionAuthenticateCognitoArgs(
+                user_pool_arn=pool.arn,
+                user_pool_client_id=client.id,
+                user_pool_domain=domain.domain,
+            ),
+        ),
+        aws.lb.ListenerDefaultActionArgs(
+            type="forward",
+            target_group_arn=front_end_target_group.arn,
+        ),
     ])
 ```
 
@@ -717,24 +717,24 @@ front_end_target_group = aws.lb.TargetGroup("frontEndTargetGroup")
 # ...
 front_end_listener = aws.lb.Listener("frontEndListener",
     load_balancer_arn=front_end_load_balancer.arn,
-    port="80",
+    port=80,
     protocol="HTTP",
     default_actions=[
-        {
-            "type": "authenticate-oidc",
-            "authenticateOidc": {
-                "authorizationEndpoint": "https://example.com/authorization_endpoint",
-                "client_id": "client_id",
-                "client_secret": "client_secret",
-                "issuer": "https://example.com",
-                "tokenEndpoint": "https://example.com/token_endpoint",
-                "userInfoEndpoint": "https://example.com/user_info_endpoint",
-            },
-        },
-        {
-            "type": "forward",
-            "target_group_arn": front_end_target_group.arn,
-        },
+        aws.lb.ListenerDefaultActionArgs(
+            type="authenticate-oidc",
+            authenticate_oidc=aws.lb.ListenerDefaultActionAuthenticateOidcArgs(
+                authorization_endpoint="https://example.com/authorization_endpoint",
+                client_id="client_id",
+                client_secret="client_secret",
+                issuer="https://example.com",
+                token_endpoint="https://example.com/token_endpoint",
+                user_info_endpoint="https://example.com/user_info_endpoint",
+            ),
+        ),
+        aws.lb.ListenerDefaultActionArgs(
+            type="forward",
+            target_group_arn=front_end_target_group.arn,
+        ),
     ])
 ```
 
@@ -789,7 +789,7 @@ const frontEndListener = new aws.lb.Listener("frontEndListener", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticloadbalancingv2/#pulumi_aws.elasticloadbalancingv2.Listener">Listener</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_arn=None<span class="p">, </span>default_actions=None<span class="p">, </span>load_balancer_arn=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>ssl_policy=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elasticloadbalancingv2/#pulumi_aws.elasticloadbalancingv2.Listener">Listener</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[List[ListenerDefaultActionArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1186,7 +1186,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#default_actions_python" style="color: inherit; text-decoration: inherit;">default_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultaction">List[Listener<wbr>Default<wbr>Action]</a></span>
+        <span class="property-type"><a href="#listenerdefaultaction">List[Listener<wbr>Default<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd>
@@ -1388,7 +1388,8 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>certificate_arn=None<span class="p">, </span>default_actions=None<span class="p">, </span>load_balancer_arn=None<span class="p">, </span>port=None<span class="p">, </span>protocol=None<span class="p">, </span>ssl_policy=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[List[ListenerDefaultActionArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Listener</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1396,7 +1397,7 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Listener.html">Listener</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.ListenerState.html">ListenerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Listener.html">Listener</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.ListenerState.html">ListenerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1782,7 +1783,7 @@ The following state arguments are supported:
 <a href="#state_default_actions_python" style="color: inherit; text-decoration: inherit;">default_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultaction">List[Listener<wbr>Default<wbr>Action]</a></span>
+        <span class="property-type"><a href="#listenerdefaultaction">List[Listener<wbr>Default<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd>
@@ -2153,31 +2154,31 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticatecognito_python">
-<a href="#authenticatecognito_python" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Cognito</a>
+        <span id="authenticate_cognito_python">
+<a href="#authenticate_cognito_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>cognito</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Dict[Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticateoidc_python">
-<a href="#authenticateoidc_python" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Oidc</a>
+        <span id="authenticate_oidc_python">
+<a href="#authenticate_oidc_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>oidc</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Dict[Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixedresponse_python">
-<a href="#fixedresponse_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Response</a>
+        <span id="fixed_response_python">
+<a href="#fixed_response_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>response</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Dict[Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 {{% /md %}}</dd>
@@ -2188,7 +2189,7 @@ The following state arguments are supported:
 <a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforward">Dict[Listener<wbr>Default<wbr>Action<wbr>Forward]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
 {{% /md %}}</dd>
@@ -2209,7 +2210,7 @@ The following state arguments are supported:
 <a href="#redirect_python" style="color: inherit; text-decoration: inherit;">redirect</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionredirect">Dict[Listener<wbr>Default<wbr>Action<wbr>Redirect]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating a redirect action. Required if `type` is `redirect`.
 {{% /md %}}</dd>
@@ -2537,8 +2538,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="userpoolarn_python">
-<a href="#userpoolarn_python" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Arn</a>
+        <span id="user_pool_arn_python">
+<a href="#user_pool_arn_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2548,8 +2549,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="userpoolclientid_python">
-<a href="#userpoolclientid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Client<wbr>Id</a>
+        <span id="user_pool_client_id_python">
+<a href="#user_pool_client_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>client_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2559,8 +2560,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="userpooldomain_python">
-<a href="#userpooldomain_python" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Domain</a>
+        <span id="user_pool_domain_python">
+<a href="#user_pool_domain_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2570,19 +2571,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationrequestextraparams_python">
-<a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
+        <span id="authentication_request_extra_params_python">
+<a href="#authentication_request_extra_params_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>request_<wbr>extra_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onunauthenticatedrequest_python">
-<a href="#onunauthenticatedrequest_python" style="color: inherit; text-decoration: inherit;">on<wbr>Unauthenticated<wbr>Request</a>
+        <span id="on_unauthenticated_request_python">
+<a href="#on_unauthenticated_request_python" style="color: inherit; text-decoration: inherit;">on_<wbr>unauthenticated_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2603,8 +2604,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessioncookiename_python">
-<a href="#sessioncookiename_python" style="color: inherit; text-decoration: inherit;">session<wbr>Cookie<wbr>Name</a>
+        <span id="session_cookie_name_python">
+<a href="#session_cookie_name_python" style="color: inherit; text-decoration: inherit;">session_<wbr>cookie_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2614,8 +2615,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessiontimeout_python">
-<a href="#sessiontimeout_python" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout</a>
+        <span id="session_timeout_python">
+<a href="#session_timeout_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3034,8 +3035,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="authorizationendpoint_python">
-<a href="#authorizationendpoint_python" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
+        <span id="authorization_endpoint_python">
+<a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3078,8 +3079,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="tokenendpoint_python">
-<a href="#tokenendpoint_python" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
+        <span id="token_endpoint_python">
+<a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3089,8 +3090,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="userinfoendpoint_python">
-<a href="#userinfoendpoint_python" style="color: inherit; text-decoration: inherit;">user<wbr>Info<wbr>Endpoint</a>
+        <span id="user_info_endpoint_python">
+<a href="#user_info_endpoint_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3100,19 +3101,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authenticationrequestextraparams_python">
-<a href="#authenticationrequestextraparams_python" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
+        <span id="authentication_request_extra_params_python">
+<a href="#authentication_request_extra_params_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>request_<wbr>extra_<wbr>params</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="onunauthenticatedrequest_python">
-<a href="#onunauthenticatedrequest_python" style="color: inherit; text-decoration: inherit;">on<wbr>Unauthenticated<wbr>Request</a>
+        <span id="on_unauthenticated_request_python">
+<a href="#on_unauthenticated_request_python" style="color: inherit; text-decoration: inherit;">on_<wbr>unauthenticated_<wbr>request</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3133,8 +3134,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessioncookiename_python">
-<a href="#sessioncookiename_python" style="color: inherit; text-decoration: inherit;">session<wbr>Cookie<wbr>Name</a>
+        <span id="session_cookie_name_python">
+<a href="#session_cookie_name_python" style="color: inherit; text-decoration: inherit;">session_<wbr>cookie_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3144,8 +3145,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessiontimeout_python">
-<a href="#sessiontimeout_python" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout</a>
+        <span id="session_timeout_python">
+<a href="#session_timeout_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3311,8 +3312,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messagebody_python">
-<a href="#messagebody_python" style="color: inherit; text-decoration: inherit;">message<wbr>Body</a>
+        <span id="message_body_python">
+<a href="#message_body_python" style="color: inherit; text-decoration: inherit;">message_<wbr>body</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3445,11 +3446,11 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetgroups_python">
-<a href="#targetgroups_python" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
+        <span id="target_groups_python">
+<a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">List[Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">List[Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more target groups block.
 {{% /md %}}</dd>
@@ -3460,7 +3461,7 @@ The following state arguments are supported:
 <a href="#stickiness_python" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Dict[Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target group stickiness for the rule.
 {{% /md %}}</dd>

@@ -196,13 +196,13 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.get_availability_zones(all_availability_zones=True,
-    filters=[{
-        "name": "opt-in-status",
-        "values": [
+    filters=[aws.GetAvailabilityZonesFilterArgs(
+        name="opt-in-status",
+        values=[
             "not-opted-in",
             "opted-in",
         ],
-    }])
+    )])
 ```
 
 {{% /example %}}
@@ -241,7 +241,7 @@ const example = pulumi.output(aws.getAvailabilityZones({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_availability_zones(</span>all_availability_zones=None<span class="p">, </span>exclude_names=None<span class="p">, </span>exclude_zone_ids=None<span class="p">, </span>filters=None<span class="p">, </span>state=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_availability_zones(</span><span class="nx">all_availability_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_names</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">exclude_zone_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetAvailabilityZonesFilterArgs]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAvailabilityZonesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -500,7 +500,7 @@ to which the underlying AWS account has access, regardless of their state.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonesfilter">List[Get<wbr>Availability<wbr>Zones<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getavailabilityzonesfilter">List[Get<wbr>Availability<wbr>Zones<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
 {{% /md %}}</dd>

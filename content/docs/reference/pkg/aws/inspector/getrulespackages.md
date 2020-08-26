@@ -118,7 +118,7 @@ group = aws.inspector.ResourceGroup("group", tags={
 assessment_assessment_target = aws.inspector.AssessmentTarget("assessmentAssessmentTarget", resource_group_arn=group.arn)
 assessment_assessment_template = aws.inspector.AssessmentTemplate("assessmentAssessmentTemplate",
     target_arn=assessment_assessment_target.arn,
-    duration="60",
+    duration=60,
     rules_package_arns=rules.arns)
 ```
 
@@ -159,7 +159,7 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_rules_packages(</span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_rules_packages(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRulesPackagesResult</code></pre></div>
 {{% /choosable %}}
 
 

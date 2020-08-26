@@ -153,20 +153,20 @@ lambda_processor = aws.lambda_.Function("lambdaProcessor",
     runtime="nodejs8.10")
 extended_s3_stream = aws.kinesis.FirehoseDeliveryStream("extendedS3Stream",
     destination="extended_s3",
-    extended_s3_configuration={
-        "role_arn": firehose_role.arn,
-        "bucketArn": bucket.arn,
-        "processingConfiguration": {
-            "enabled": "true",
-            "processors": [{
-                "type": "Lambda",
-                "parameters": [{
-                    "parameterName": "LambdaArn",
-                    "parameterValue": lambda_processor.arn.apply(lambda arn: f"{arn}:$LATEST"),
-                }],
-            }],
-        },
-    })
+    extended_s3_configuration=aws.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationArgs(
+        role_arn=firehose_role.arn,
+        bucket_arn=bucket.arn,
+        processing_configuration=aws.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationArgs(
+            enabled=True,
+            processors=[aws.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs(
+                type="Lambda",
+                parameters=[aws.kinesis.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterArgs(
+                    parameter_name="LambdaArn",
+                    parameter_value=lambda_processor.arn.apply(lambda arn: f"{arn}:$LATEST"),
+                )],
+            )],
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -346,10 +346,10 @@ firehose_role = aws.iam.Role("firehoseRole", assume_role_policy="""{
 """)
 test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
     destination="s3",
-    s3_configuration={
-        "role_arn": firehose_role.arn,
-        "bucketArn": bucket.arn,
-    })
+    s3_configuration=aws.kinesis.FirehoseDeliveryStreamS3ConfigurationArgs(
+        role_arn=firehose_role.arn,
+        bucket_arn=bucket.arn,
+    ))
 ```
 
 {{% /example %}}
@@ -528,30 +528,30 @@ test_cluster = aws.redshift.Cluster("testCluster",
     cluster_type="single-node")
 test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
     destination="redshift",
-    s3_configuration={
-        "role_arn": aws_iam_role["firehose_role"]["arn"],
-        "bucketArn": aws_s3_bucket["bucket"]["arn"],
-        "bufferSize": 10,
-        "bufferInterval": 400,
-        "compressionFormat": "GZIP",
-    },
-    redshift_configuration={
-        "role_arn": aws_iam_role["firehose_role"]["arn"],
-        "clusterJdbcurl": pulumi.Output.all(test_cluster.endpoint, test_cluster.database_name).apply(lambda endpoint, database_name: f"jdbc:redshift://{endpoint}/{database_name}"),
-        "username": "testuser",
-        "password": "T3stPass",
-        "dataTableName": "test-table",
-        "copyOptions": "delimiter '|'",
-        "dataTableColumns": "test-col",
-        "s3BackupMode": "Enabled",
-        "s3BackupConfiguration": {
-            "role_arn": aws_iam_role["firehose_role"]["arn"],
-            "bucketArn": aws_s3_bucket["bucket"]["arn"],
-            "bufferSize": 15,
-            "bufferInterval": 300,
-            "compressionFormat": "GZIP",
-        },
-    })
+    s3_configuration=aws.kinesis.FirehoseDeliveryStreamS3ConfigurationArgs(
+        role_arn=aws_iam_role["firehose_role"]["arn"],
+        bucket_arn=aws_s3_bucket["bucket"]["arn"],
+        buffer_size=10,
+        buffer_interval=400,
+        compression_format="GZIP",
+    ),
+    redshift_configuration=aws.kinesis.FirehoseDeliveryStreamRedshiftConfigurationArgs(
+        role_arn=aws_iam_role["firehose_role"]["arn"],
+        cluster_jdbcurl=pulumi.Output.all(test_cluster.endpoint, test_cluster.database_name).apply(lambda endpoint, database_name: f"jdbc:redshift://{endpoint}/{database_name}"),
+        username="testuser",
+        password="T3stPass",
+        data_table_name="test-table",
+        copy_options="delimiter '|'",
+        data_table_columns="test-col",
+        s3_backup_mode="Enabled",
+        s3_backup_configuration=aws.kinesis.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs(
+            role_arn=aws_iam_role["firehose_role"]["arn"],
+            bucket_arn=aws_s3_bucket["bucket"]["arn"],
+            buffer_size=15,
+            buffer_interval=300,
+            compression_format="GZIP",
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -725,29 +725,29 @@ import pulumi_aws as aws
 test_cluster = aws.elasticsearch.Domain("testCluster")
 test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
     destination="elasticsearch",
-    s3_configuration={
-        "role_arn": aws_iam_role["firehose_role"]["arn"],
-        "bucketArn": aws_s3_bucket["bucket"]["arn"],
-        "bufferSize": 10,
-        "bufferInterval": 400,
-        "compressionFormat": "GZIP",
-    },
-    elasticsearch_configuration={
-        "domainArn": test_cluster.arn,
-        "role_arn": aws_iam_role["firehose_role"]["arn"],
-        "indexName": "test",
-        "typeName": "test",
-        "processingConfiguration": {
-            "enabled": "true",
-            "processors": [{
-                "type": "Lambda",
-                "parameters": [{
-                    "parameterName": "LambdaArn",
-                    "parameterValue": f"{aws_lambda_function['lambda_processor']['arn']}:$LATEST",
-                }],
-            }],
-        },
-    })
+    s3_configuration=aws.kinesis.FirehoseDeliveryStreamS3ConfigurationArgs(
+        role_arn=aws_iam_role["firehose_role"]["arn"],
+        bucket_arn=aws_s3_bucket["bucket"]["arn"],
+        buffer_size=10,
+        buffer_interval=400,
+        compression_format="GZIP",
+    ),
+    elasticsearch_configuration=aws.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationArgs(
+        domain_arn=test_cluster.arn,
+        role_arn=aws_iam_role["firehose_role"]["arn"],
+        index_name="test",
+        type_name="test",
+        processing_configuration=aws.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationArgs(
+            enabled=True,
+            processors=[aws.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs(
+                type="Lambda",
+                parameters=[aws.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs(
+                    parameter_name="LambdaArn",
+                    parameter_value=f"{aws_lambda_function['lambda_processor']['arn']}:$LATEST",
+                )],
+            )],
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -871,20 +871,20 @@ import pulumi_aws as aws
 
 test_stream = aws.kinesis.FirehoseDeliveryStream("testStream",
     destination="splunk",
-    s3_configuration={
-        "role_arn": aws_iam_role["firehose"]["arn"],
-        "bucketArn": aws_s3_bucket["bucket"]["arn"],
-        "bufferSize": 10,
-        "bufferInterval": 400,
-        "compressionFormat": "GZIP",
-    },
-    splunk_configuration={
-        "hecEndpoint": "https://http-inputs-mydomain.splunkcloud.com:443",
-        "hecToken": "51D4DA16-C61B-4F5F-8EC7-ED4301342A4A",
-        "hecAcknowledgmentTimeout": 600,
-        "hecEndpointType": "Event",
-        "s3BackupMode": "FailedEventsOnly",
-    })
+    s3_configuration=aws.kinesis.FirehoseDeliveryStreamS3ConfigurationArgs(
+        role_arn=aws_iam_role["firehose"]["arn"],
+        bucket_arn=aws_s3_bucket["bucket"]["arn"],
+        buffer_size=10,
+        buffer_interval=400,
+        compression_format="GZIP",
+    ),
+    splunk_configuration=aws.kinesis.FirehoseDeliveryStreamSplunkConfigurationArgs(
+        hec_endpoint="https://http-inputs-mydomain.splunkcloud.com:443",
+        hec_token="51D4DA16-C61B-4F5F-8EC7-ED4301342A4A",
+        hec_acknowledgment_timeout=600,
+        hec_endpoint_type="Event",
+        s3_backup_mode="FailedEventsOnly",
+    ))
 ```
 
 {{% /example %}}
@@ -928,7 +928,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/kinesis/#pulumi_aws.kinesis.FirehoseDeliveryStream">FirehoseDeliveryStream</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>arn=None<span class="p">, </span>destination=None<span class="p">, </span>destination_id=None<span class="p">, </span>elasticsearch_configuration=None<span class="p">, </span>extended_s3_configuration=None<span class="p">, </span>kinesis_source_configuration=None<span class="p">, </span>name=None<span class="p">, </span>redshift_configuration=None<span class="p">, </span>s3_configuration=None<span class="p">, </span>server_side_encryption=None<span class="p">, </span>splunk_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>version_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/kinesis/#pulumi_aws.kinesis.FirehoseDeliveryStream">FirehoseDeliveryStream</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamElasticsearchConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">extended_s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamExtendedS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_source_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamKinesisSourceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redshift_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamRedshiftConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">splunk_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamSplunkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1597,7 +1597,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#elasticsearch_configuration_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd>
@@ -1608,7 +1608,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#extended_s3_configuration_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>s3_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd>
@@ -1619,7 +1619,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#kinesis_source_configuration_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>source_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd>
@@ -1642,7 +1642,7 @@ AWS account and region the Stream is created in.
 <a href="#redshift_configuration_python" style="color: inherit; text-decoration: inherit;">redshift_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -1655,7 +1655,7 @@ Using `redshift_configuration` requires the user to also specify a
 <a href="#s3_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -1667,7 +1667,7 @@ is redshift). More details are given below.
 <a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -1679,7 +1679,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#splunk_configuration_python" style="color: inherit; text-decoration: inherit;">splunk_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1689,7 +1689,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1803,7 +1803,8 @@ Get an existing FirehoseDeliveryStream resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>destination=None<span class="p">, </span>destination_id=None<span class="p">, </span>elasticsearch_configuration=None<span class="p">, </span>extended_s3_configuration=None<span class="p">, </span>kinesis_source_configuration=None<span class="p">, </span>name=None<span class="p">, </span>redshift_configuration=None<span class="p">, </span>s3_configuration=None<span class="p">, </span>server_side_encryption=None<span class="p">, </span>splunk_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>version_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamElasticsearchConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">extended_s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamExtendedS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_source_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamKinesisSourceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redshift_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamRedshiftConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">s3_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamS3ConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">splunk_configuration</span><span class="p">:</span> <span class="nx">Optional[FirehoseDeliveryStreamSplunkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FirehoseDeliveryStream</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1811,7 +1812,7 @@ Get an existing FirehoseDeliveryStream resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.FirehoseDeliveryStream.html">FirehoseDeliveryStream</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.FirehoseDeliveryStreamState.html">FirehoseDeliveryStreamState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.FirehoseDeliveryStream.html">FirehoseDeliveryStream</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.FirehoseDeliveryStreamState.html">FirehoseDeliveryStreamState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2414,7 +2415,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_elasticsearch_configuration_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd>
@@ -2425,7 +2426,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_extended_s3_configuration_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>s3_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd>
@@ -2436,7 +2437,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_kinesis_source_configuration_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>source_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd>
@@ -2459,7 +2460,7 @@ AWS account and region the Stream is created in.
 <a href="#state_redshift_configuration_python" style="color: inherit; text-decoration: inherit;">redshift_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -2472,7 +2473,7 @@ Using `redshift_configuration` requires the user to also specify a
 <a href="#state_s3_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -2484,7 +2485,7 @@ is redshift). More details are given below.
 <a href="#state_server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -2496,7 +2497,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_splunk_configuration_python" style="color: inherit; text-decoration: inherit;">splunk_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2506,7 +2507,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2941,8 +2942,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span id="domainarn_python">
-<a href="#domainarn_python" style="color: inherit; text-decoration: inherit;">domain<wbr>Arn</a>
+        <span id="domain_arn_python">
+<a href="#domain_arn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2952,8 +2953,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span id="indexname_python">
-<a href="#indexname_python" style="color: inherit; text-decoration: inherit;">index<wbr>Name</a>
+        <span id="index_name_python">
+<a href="#index_name_python" style="color: inherit; text-decoration: inherit;">index_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2974,8 +2975,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bufferinginterval_python">
-<a href="#bufferinginterval_python" style="color: inherit; text-decoration: inherit;">buffering<wbr>Interval</a>
+        <span id="buffering_interval_python">
+<a href="#buffering_interval_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2985,8 +2986,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bufferingsize_python">
-<a href="#bufferingsize_python" style="color: inherit; text-decoration: inherit;">buffering<wbr>Size</a>
+        <span id="buffering_size_python">
+<a href="#buffering_size_python" style="color: inherit; text-decoration: inherit;">buffering_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3000,15 +3001,15 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indexrotationperiod_python">
-<a href="#indexrotationperiod_python" style="color: inherit; text-decoration: inherit;">index<wbr>Rotation<wbr>Period</a>
+        <span id="index_rotation_period_python">
+<a href="#index_rotation_period_python" style="color: inherit; text-decoration: inherit;">index_<wbr>rotation_<wbr>period</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3018,19 +3019,19 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span id="processingconfiguration_python">
-<a href="#processingconfiguration_python" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+        <span id="processing_configuration_python">
+<a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retryduration_python">
-<a href="#retryduration_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
+        <span id="retry_duration_python">
+<a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3040,8 +3041,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3backupmode_python">
-<a href="#s3backupmode_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+        <span id="s3_backup_mode_python">
+<a href="#s3_backup_mode_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3051,8 +3052,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span id="typename_python">
-<a href="#typename_python" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
+        <span id="type_name_python">
+<a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3218,17 +3219,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logstreamname_python">
-<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="log_group_name_python">
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span> 
@@ -3236,6 +3226,17 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_stream_name_python">
+<a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -3367,7 +3368,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -3501,7 +3502,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
@@ -3620,8 +3621,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span id="parametername_python">
-<a href="#parametername_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+        <span id="parameter_name_python">
+<a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3631,8 +3632,8 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-required"
             title="Required">
-        <span id="parametervalue_python">
-<a href="#parametervalue_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+        <span id="parameter_value_python">
+<a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4123,8 +4124,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketarn_python">
-<a href="#bucketarn_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+        <span id="bucket_arn_python">
+<a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4145,8 +4146,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bufferinterval_python">
-<a href="#bufferinterval_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+        <span id="buffer_interval_python">
+<a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4156,8 +4157,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="buffersize_python">
-<a href="#buffersize_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+        <span id="buffer_size_python">
+<a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4172,15 +4173,15 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressionformat_python">
-<a href="#compressionformat_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+        <span id="compression_format_python">
+<a href="#compression_format_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4190,19 +4191,19 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataformatconversionconfiguration_python">
-<a href="#dataformatconversionconfiguration_python" style="color: inherit; text-decoration: inherit;">data<wbr>Format<wbr>Conversion<wbr>Configuration</a>
+        <span id="data_format_conversion_configuration_python">
+<a href="#data_format_conversion_configuration_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format_<wbr>conversion_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="erroroutputprefix_python">
-<a href="#erroroutputprefix_python" style="color: inherit; text-decoration: inherit;">error<wbr>Output<wbr>Prefix</a>
+        <span id="error_output_prefix_python">
+<a href="#error_output_prefix_python" style="color: inherit; text-decoration: inherit;">error_<wbr>output_<wbr>prefix</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4235,30 +4236,30 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="processingconfiguration_python">
-<a href="#processingconfiguration_python" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+        <span id="processing_configuration_python">
+<a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3backupconfiguration_python">
-<a href="#s3backupconfiguration_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Configuration</a>
+        <span id="s3_backup_configuration_python">
+<a href="#s3_backup_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3backupmode_python">
-<a href="#s3backupmode_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+        <span id="s3_backup_mode_python">
+<a href="#s3_backup_mode_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4424,17 +4425,6 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logstreamname_python">
-<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="log_group_name_python">
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span> 
@@ -4442,6 +4432,17 @@ be used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_stream_name_python">
+<a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -4624,33 +4625,33 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="inputformatconfiguration_python">
-<a href="#inputformatconfiguration_python" style="color: inherit; text-decoration: inherit;">input<wbr>Format<wbr>Configuration</a>
+        <span id="input_format_configuration_python">
+<a href="#input_format_configuration_python" style="color: inherit; text-decoration: inherit;">input_<wbr>format_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the deserializer that you want Kinesis Data Firehose to use to convert the format of your data from JSON. More details below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="outputformatconfiguration_python">
-<a href="#outputformatconfiguration_python" style="color: inherit; text-decoration: inherit;">output<wbr>Format<wbr>Configuration</a>
+        <span id="output_format_configuration_python">
+<a href="#output_format_configuration_python" style="color: inherit; text-decoration: inherit;">output_<wbr>format_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the serializer that you want Kinesis Data Firehose to use to convert the format of your data to the Parquet or ORC format. More details below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="schemaconfiguration_python">
-<a href="#schemaconfiguration_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Configuration</a>
+        <span id="schema_configuration_python">
+<a href="#schema_configuration_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the AWS Glue Data Catalog table that contains the column information. More details below.
 {{% /md %}}</dd>
@@ -4751,7 +4752,7 @@ be used.
 <a href="#deserializer_python" style="color: inherit; text-decoration: inherit;">deserializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which deserializer to use. You can choose either the Apache Hive JSON SerDe or the OpenX JSON SerDe. More details below.
 {{% /md %}}</dd>
@@ -4870,22 +4871,22 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hivejsonserde_python">
-<a href="#hivejsonserde_python" style="color: inherit; text-decoration: inherit;">hive<wbr>Json<wbr>Ser<wbr>De</a>
+        <span id="hive_json_ser_de_python">
+<a href="#hive_json_ser_de_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>json_<wbr>ser_<wbr>de</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="openxjsonserde_python">
-<a href="#openxjsonserde_python" style="color: inherit; text-decoration: inherit;">open<wbr>XJson<wbr>Ser<wbr>De</a>
+        <span id="open_x_json_ser_de_python">
+<a href="#open_x_json_ser_de_python" style="color: inherit; text-decoration: inherit;">open_<wbr>x_<wbr>json_<wbr>ser_<wbr>de</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the OpenX SerDe. More details below.
 {{% /md %}}</dd>
@@ -4971,8 +4972,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampformats_python">
-<a href="#timestampformats_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Formats</a>
+        <span id="timestamp_formats_python">
+<a href="#timestamp_formats_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>formats</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5127,8 +5128,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="caseinsensitive_python">
-<a href="#caseinsensitive_python" style="color: inherit; text-decoration: inherit;">case<wbr>Insensitive</a>
+        <span id="case_insensitive_python">
+<a href="#case_insensitive_python" style="color: inherit; text-decoration: inherit;">case_<wbr>insensitive</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5138,19 +5139,19 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="columntojsonkeymappings_python">
-<a href="#columntojsonkeymappings_python" style="color: inherit; text-decoration: inherit;">column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</a>
+        <span id="column_to_json_key_mappings_python">
+<a href="#column_to_json_key_mappings_python" style="color: inherit; text-decoration: inherit;">column_<wbr>to_<wbr>json_<wbr>key_<wbr>mappings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of column names to JSON keys that aren't identical to the column names. This is useful when the JSON contains keys that are Hive keywords. For example, timestamp is a Hive keyword. If you have a JSON key named timestamp, set this parameter to `{ ts = "timestamp" }` to map this key to a column named ts.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="convertdotsinjsonkeystounderscores_python">
-<a href="#convertdotsinjsonkeystounderscores_python" style="color: inherit; text-decoration: inherit;">convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</a>
+        <span id="convert_dots_in_json_keys_to_underscores_python">
+<a href="#convert_dots_in_json_keys_to_underscores_python" style="color: inherit; text-decoration: inherit;">convert_<wbr>dots_<wbr>in_<wbr>json_<wbr>keys_<wbr>to_<wbr>underscores</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5243,7 +5244,7 @@ be used.
 <a href="#serializer_python" style="color: inherit; text-decoration: inherit;">serializer</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializer">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies which serializer to use. You can choose either the ORC SerDe or the Parquet SerDe. More details below.
 {{% /md %}}</dd>
@@ -5362,22 +5363,22 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="orcserde_python">
-<a href="#orcserde_python" style="color: inherit; text-decoration: inherit;">orc<wbr>Ser<wbr>De</a>
+        <span id="orc_ser_de_python">
+<a href="#orc_ser_de_python" style="color: inherit; text-decoration: inherit;">orc_<wbr>ser_<wbr>de</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the ORC format before storing it in Amazon S3. For more information, see [Apache ORC](https://orc.apache.org/docs/). More details below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="parquetserde_python">
-<a href="#parquetserde_python" style="color: inherit; text-decoration: inherit;">parquet<wbr>Ser<wbr>De</a>
+        <span id="parquet_ser_de_python">
+<a href="#parquet_ser_de_python" style="color: inherit; text-decoration: inherit;">parquet_<wbr>ser_<wbr>de</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the Parquet format before storing it in Amazon S3. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/). More details below.
 {{% /md %}}</dd>
@@ -5760,8 +5761,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blocksizebytes_python">
-<a href="#blocksizebytes_python" style="color: inherit; text-decoration: inherit;">block<wbr>Size<wbr>Bytes</a>
+        <span id="block_size_bytes_python">
+<a href="#block_size_bytes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5771,8 +5772,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bloomfiltercolumns_python">
-<a href="#bloomfiltercolumns_python" style="color: inherit; text-decoration: inherit;">bloom<wbr>Filter<wbr>Columns</a>
+        <span id="bloom_filter_columns_python">
+<a href="#bloom_filter_columns_python" style="color: inherit; text-decoration: inherit;">bloom_<wbr>filter_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5782,8 +5783,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bloomfilterfalsepositiveprobability_python">
-<a href="#bloomfilterfalsepositiveprobability_python" style="color: inherit; text-decoration: inherit;">bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</a>
+        <span id="bloom_filter_false_positive_probability_python">
+<a href="#bloom_filter_false_positive_probability_python" style="color: inherit; text-decoration: inherit;">bloom_<wbr>filter_<wbr>false_<wbr>positive_<wbr>probability</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5804,8 +5805,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dictionarykeythreshold_python">
-<a href="#dictionarykeythreshold_python" style="color: inherit; text-decoration: inherit;">dictionary<wbr>Key<wbr>Threshold</a>
+        <span id="dictionary_key_threshold_python">
+<a href="#dictionary_key_threshold_python" style="color: inherit; text-decoration: inherit;">dictionary_<wbr>key_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5815,8 +5816,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enablepadding_python">
-<a href="#enablepadding_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Padding</a>
+        <span id="enable_padding_python">
+<a href="#enable_padding_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>padding</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5826,8 +5827,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="formatversion_python">
-<a href="#formatversion_python" style="color: inherit; text-decoration: inherit;">format<wbr>Version</a>
+        <span id="format_version_python">
+<a href="#format_version_python" style="color: inherit; text-decoration: inherit;">format_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5837,8 +5838,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="paddingtolerance_python">
-<a href="#paddingtolerance_python" style="color: inherit; text-decoration: inherit;">padding<wbr>Tolerance</a>
+        <span id="padding_tolerance_python">
+<a href="#padding_tolerance_python" style="color: inherit; text-decoration: inherit;">padding_<wbr>tolerance</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5848,8 +5849,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rowindexstride_python">
-<a href="#rowindexstride_python" style="color: inherit; text-decoration: inherit;">row<wbr>Index<wbr>Stride</a>
+        <span id="row_index_stride_python">
+<a href="#row_index_stride_python" style="color: inherit; text-decoration: inherit;">row_<wbr>index_<wbr>stride</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5859,8 +5860,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="stripesizebytes_python">
-<a href="#stripesizebytes_python" style="color: inherit; text-decoration: inherit;">stripe<wbr>Size<wbr>Bytes</a>
+        <span id="stripe_size_bytes_python">
+<a href="#stripe_size_bytes_python" style="color: inherit; text-decoration: inherit;">stripe_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6114,8 +6115,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="blocksizebytes_python">
-<a href="#blocksizebytes_python" style="color: inherit; text-decoration: inherit;">block<wbr>Size<wbr>Bytes</a>
+        <span id="block_size_bytes_python">
+<a href="#block_size_bytes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6136,8 +6137,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="enabledictionarycompression_python">
-<a href="#enabledictionarycompression_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Dictionary<wbr>Compression</a>
+        <span id="enable_dictionary_compression_python">
+<a href="#enable_dictionary_compression_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>dictionary_<wbr>compression</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6147,8 +6148,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxpaddingbytes_python">
-<a href="#maxpaddingbytes_python" style="color: inherit; text-decoration: inherit;">max<wbr>Padding<wbr>Bytes</a>
+        <span id="max_padding_bytes_python">
+<a href="#max_padding_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>padding_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6158,8 +6159,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="pagesizebytes_python">
-<a href="#pagesizebytes_python" style="color: inherit; text-decoration: inherit;">page<wbr>Size<wbr>Bytes</a>
+        <span id="page_size_bytes_python">
+<a href="#page_size_bytes_python" style="color: inherit; text-decoration: inherit;">page_<wbr>size_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6169,8 +6170,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="writerversion_python">
-<a href="#writerversion_python" style="color: inherit; text-decoration: inherit;">writer<wbr>Version</a>
+        <span id="writer_version_python">
+<a href="#writer_version_python" style="color: inherit; text-decoration: inherit;">writer_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6617,7 +6618,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -6751,7 +6752,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
@@ -6870,8 +6871,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="parametername_python">
-<a href="#parametername_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+        <span id="parameter_name_python">
+<a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6881,8 +6882,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="parametervalue_python">
-<a href="#parametervalue_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+        <span id="parameter_value_python">
+<a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7208,8 +7209,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketarn_python">
-<a href="#bucketarn_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+        <span id="bucket_arn_python">
+<a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7230,8 +7231,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bufferinterval_python">
-<a href="#bufferinterval_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+        <span id="buffer_interval_python">
+<a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7241,8 +7242,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="buffersize_python">
-<a href="#buffersize_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+        <span id="buffer_size_python">
+<a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7257,15 +7258,15 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressionformat_python">
-<a href="#compressionformat_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+        <span id="compression_format_python">
+<a href="#compression_format_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7454,17 +7455,6 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logstreamname_python">
-<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="log_group_name_python">
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span> 
@@ -7472,6 +7462,17 @@ be used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_stream_name_python">
+<a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -7588,8 +7589,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="kinesisstreamarn_python">
-<a href="#kinesisstreamarn_python" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Stream<wbr>Arn</a>
+        <span id="kinesis_stream_arn_python">
+<a href="#kinesis_stream_arn_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>stream_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8052,8 +8053,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="clusterjdbcurl_python">
-<a href="#clusterjdbcurl_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Jdbcurl</a>
+        <span id="cluster_jdbcurl_python">
+<a href="#cluster_jdbcurl_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>jdbcurl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8063,8 +8064,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="datatablename_python">
-<a href="#datatablename_python" style="color: inherit; text-decoration: inherit;">data<wbr>Table<wbr>Name</a>
+        <span id="data_table_name_python">
+<a href="#data_table_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>table_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8111,15 +8112,15 @@ be used.
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="copyoptions_python">
-<a href="#copyoptions_python" style="color: inherit; text-decoration: inherit;">copy<wbr>Options</a>
+        <span id="copy_options_python">
+<a href="#copy_options_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8129,8 +8130,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="datatablecolumns_python">
-<a href="#datatablecolumns_python" style="color: inherit; text-decoration: inherit;">data<wbr>Table<wbr>Columns</a>
+        <span id="data_table_columns_python">
+<a href="#data_table_columns_python" style="color: inherit; text-decoration: inherit;">data_<wbr>table_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8140,19 +8141,19 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="processingconfiguration_python">
-<a href="#processingconfiguration_python" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+        <span id="processing_configuration_python">
+<a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retryduration_python">
-<a href="#retryduration_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
+        <span id="retry_duration_python">
+<a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -8162,19 +8163,19 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3backupconfiguration_python">
-<a href="#s3backupconfiguration_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Configuration</a>
+        <span id="s3_backup_configuration_python">
+<a href="#s3_backup_configuration_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3backupmode_python">
-<a href="#s3backupmode_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+        <span id="s3_backup_mode_python">
+<a href="#s3_backup_mode_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8340,17 +8341,6 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logstreamname_python">
-<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="log_group_name_python">
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span> 
@@ -8358,6 +8348,17 @@ be used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_stream_name_python">
+<a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -8489,7 +8490,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -8623,7 +8624,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
@@ -8742,8 +8743,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="parametername_python">
-<a href="#parametername_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+        <span id="parameter_name_python">
+<a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8753,8 +8754,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="parametervalue_python">
-<a href="#parametervalue_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+        <span id="parameter_value_python">
+<a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9080,8 +9081,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketarn_python">
-<a href="#bucketarn_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+        <span id="bucket_arn_python">
+<a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9102,8 +9103,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bufferinterval_python">
-<a href="#bufferinterval_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+        <span id="buffer_interval_python">
+<a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9113,8 +9114,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="buffersize_python">
-<a href="#buffersize_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+        <span id="buffer_size_python">
+<a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9129,15 +9130,15 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressionformat_python">
-<a href="#compressionformat_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+        <span id="compression_format_python">
+<a href="#compression_format_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9326,17 +9327,6 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logstreamname_python">
-<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="log_group_name_python">
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span> 
@@ -9344,6 +9334,17 @@ be used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_stream_name_python">
+<a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -9664,8 +9665,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="bucketarn_python">
-<a href="#bucketarn_python" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
+        <span id="bucket_arn_python">
+<a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9686,8 +9687,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="bufferinterval_python">
-<a href="#bufferinterval_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Interval</a>
+        <span id="buffer_interval_python">
+<a href="#buffer_interval_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>interval</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9697,8 +9698,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="buffersize_python">
-<a href="#buffersize_python" style="color: inherit; text-decoration: inherit;">buffer<wbr>Size</a>
+        <span id="buffer_size_python">
+<a href="#buffer_size_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -9713,15 +9714,15 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="compressionformat_python">
-<a href="#compressionformat_python" style="color: inherit; text-decoration: inherit;">compression<wbr>Format</a>
+        <span id="compression_format_python">
+<a href="#compression_format_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -9910,17 +9911,6 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logstreamname_python">
-<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="log_group_name_python">
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span> 
@@ -9928,6 +9918,17 @@ be used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_stream_name_python">
+<a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -10332,8 +10333,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="hecendpoint_python">
-<a href="#hecendpoint_python" style="color: inherit; text-decoration: inherit;">hec<wbr>Endpoint</a>
+        <span id="hec_endpoint_python">
+<a href="#hec_endpoint_python" style="color: inherit; text-decoration: inherit;">hec_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10343,8 +10344,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="hectoken_python">
-<a href="#hectoken_python" style="color: inherit; text-decoration: inherit;">hec<wbr>Token</a>
+        <span id="hec_token_python">
+<a href="#hec_token_python" style="color: inherit; text-decoration: inherit;">hec_<wbr>token</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10358,15 +10359,15 @@ be used.
 <a href="#cloudwatch_logging_options_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logging_<wbr>options</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hecacknowledgmenttimeout_python">
-<a href="#hecacknowledgmenttimeout_python" style="color: inherit; text-decoration: inherit;">hec<wbr>Acknowledgment<wbr>Timeout</a>
+        <span id="hec_acknowledgment_timeout_python">
+<a href="#hec_acknowledgment_timeout_python" style="color: inherit; text-decoration: inherit;">hec_<wbr>acknowledgment_<wbr>timeout</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10376,8 +10377,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hecendpointtype_python">
-<a href="#hecendpointtype_python" style="color: inherit; text-decoration: inherit;">hec<wbr>Endpoint<wbr>Type</a>
+        <span id="hec_endpoint_type_python">
+<a href="#hec_endpoint_type_python" style="color: inherit; text-decoration: inherit;">hec_<wbr>endpoint_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10387,19 +10388,19 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="processingconfiguration_python">
-<a href="#processingconfiguration_python" style="color: inherit; text-decoration: inherit;">processing<wbr>Configuration</a>
+        <span id="processing_configuration_python">
+<a href="#processing_configuration_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retryduration_python">
-<a href="#retryduration_python" style="color: inherit; text-decoration: inherit;">retry<wbr>Duration</a>
+        <span id="retry_duration_python">
+<a href="#retry_duration_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>duration</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -10409,8 +10410,8 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="s3backupmode_python">
-<a href="#s3backupmode_python" style="color: inherit; text-decoration: inherit;">s3Backup<wbr>Mode</a>
+        <span id="s3_backup_mode_python">
+<a href="#s3_backup_mode_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>backup_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10576,17 +10577,6 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="logstreamname_python">
-<a href="#logstreamname_python" style="color: inherit; text-decoration: inherit;">log<wbr>Stream<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="log_group_name_python">
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
 </span> 
@@ -10594,6 +10584,17 @@ be used.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_stream_name_python">
+<a href="#log_stream_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>stream_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -10725,7 +10726,7 @@ be used.
 <a href="#processors_python" style="color: inherit; text-decoration: inherit;">processors</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -10859,7 +10860,7 @@ be used.
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
@@ -10978,8 +10979,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="parametername_python">
-<a href="#parametername_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name</a>
+        <span id="parameter_name_python">
+<a href="#parameter_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -10989,8 +10990,8 @@ be used.
 
     <dt class="property-required"
             title="Required">
-        <span id="parametervalue_python">
-<a href="#parametervalue_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
+        <span id="parameter_value_python">
+<a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -137,11 +137,11 @@ example_record = aws.route53.Record("exampleRecord",
     name=example_domain_name.domain_name,
     type="A",
     zone_id=aws_route53_zone["example"]["id"],
-    aliases=[{
-        "evaluateTargetHealth": True,
-        "name": example_domain_name.cloudfront_domain_name,
-        "zone_id": example_domain_name.cloudfront_zone_id,
-    }])
+    aliases=[aws.route53.RecordAliasArgs(
+        evaluate_target_health=True,
+        name=example_domain_name.cloudfront_domain_name,
+        zone_id=example_domain_name.cloudfront_zone_id,
+    )])
 ```
 
 {{% /example %}}
@@ -236,11 +236,11 @@ example_record = aws.route53.Record("exampleRecord",
     zone_id=aws_route53_zone["example"]["id"],
     name=example_domain_name.domain_name,
     type="A",
-    aliases=[{
-        "name": example_domain_name.cloudfront_domain_name,
-        "zone_id": example_domain_name.cloudfront_zone_id,
-        "evaluateTargetHealth": True,
-    }])
+    aliases=[aws.route53.RecordAliasArgs(
+        name=example_domain_name.cloudfront_domain_name,
+        zone_id=example_domain_name.cloudfront_zone_id,
+        evaluate_target_health=True,
+    )])
 ```
 
 {{% /example %}}
@@ -375,20 +375,20 @@ import pulumi_aws as aws
 example_domain_name = aws.apigateway.DomainName("exampleDomainName",
     domain_name="api.example.com",
     regional_certificate_arn=aws_acm_certificate_validation["example"]["certificate_arn"],
-    endpoint_configuration={
-        "types": ["REGIONAL"],
-    })
+    endpoint_configuration=aws.apigateway.DomainNameEndpointConfigurationArgs(
+        types=["REGIONAL"],
+    ))
 # Example DNS record using Route53.
 # Route53 is not specifically required; any DNS host can be used.
 example_record = aws.route53.Record("exampleRecord",
     name=example_domain_name.domain_name,
     type="A",
     zone_id=aws_route53_zone["example"]["id"],
-    aliases=[{
-        "evaluateTargetHealth": True,
-        "name": example_domain_name.regional_domain_name,
-        "zone_id": example_domain_name.regional_zone_id,
-    }])
+    aliases=[aws.route53.RecordAliasArgs(
+        evaluate_target_health=True,
+        name=example_domain_name.regional_domain_name,
+        zone_id=example_domain_name.regional_zone_id,
+    )])
 ```
 
 {{% /example %}}
@@ -487,20 +487,20 @@ example_domain_name = aws.apigateway.DomainName("exampleDomainName",
     certificate_private_key=(lambda path: open(path).read())(f"{path['module']}/example.com/example.key"),
     domain_name="api.example.com",
     regional_certificate_name="example-api",
-    endpoint_configuration={
-        "types": ["REGIONAL"],
-    })
+    endpoint_configuration=aws.apigateway.DomainNameEndpointConfigurationArgs(
+        types=["REGIONAL"],
+    ))
 # Example DNS record using Route53.
 # Route53 is not specifically required; any DNS host can be used.
 example_record = aws.route53.Record("exampleRecord",
     name=example_domain_name.domain_name,
     type="A",
     zone_id=aws_route53_zone["example"]["id"],
-    aliases=[{
-        "evaluateTargetHealth": True,
-        "name": example_domain_name.regional_domain_name,
-        "zone_id": example_domain_name.regional_zone_id,
-    }])
+    aliases=[aws.route53.RecordAliasArgs(
+        evaluate_target_health=True,
+        name=example_domain_name.regional_domain_name,
+        zone_id=example_domain_name.regional_zone_id,
+    )])
 ```
 
 {{% /example %}}
@@ -550,7 +550,7 @@ const exampleRecord = new aws.route53.Record("exampleRecord", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.DomainName">DomainName</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>certificate_arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>certificate_name=None<span class="p">, </span>certificate_private_key=None<span class="p">, </span>domain_name=None<span class="p">, </span>endpoint_configuration=None<span class="p">, </span>regional_certificate_arn=None<span class="p">, </span>regional_certificate_name=None<span class="p">, </span>security_policy=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.DomainName">DomainName</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[DomainNameEndpointConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">regional_certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1213,7 +1213,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
 <a href="#endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnameendpointconfiguration">Dict[Domain<wbr>Name<wbr>Endpoint<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
 {{% /md %}}</dd>
@@ -1258,7 +1258,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
@@ -1633,7 +1633,8 @@ Get an existing DomainName resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>certificate_arn=None<span class="p">, </span>certificate_body=None<span class="p">, </span>certificate_chain=None<span class="p">, </span>certificate_name=None<span class="p">, </span>certificate_private_key=None<span class="p">, </span>certificate_upload_date=None<span class="p">, </span>cloudfront_domain_name=None<span class="p">, </span>cloudfront_zone_id=None<span class="p">, </span>domain_name=None<span class="p">, </span>endpoint_configuration=None<span class="p">, </span>regional_certificate_arn=None<span class="p">, </span>regional_certificate_name=None<span class="p">, </span>regional_domain_name=None<span class="p">, </span>regional_zone_id=None<span class="p">, </span>security_policy=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_upload_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudfront_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudfront_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[DomainNameEndpointConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">regional_certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> DomainName</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1641,7 +1642,7 @@ Get an existing DomainName resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.DomainName.html">DomainName</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.DomainNameState.html">DomainNameState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.DomainName.html">DomainName</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.DomainNameState.html">DomainNameState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2488,7 +2489,7 @@ that can be used to create a Route53 alias record for the distribution.
 <a href="#state_endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnameendpointconfiguration">Dict[Domain<wbr>Name<wbr>Endpoint<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
 {{% /md %}}</dd>
@@ -2555,7 +2556,7 @@ that can be used to create a Route53 alias record for the distribution.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>

@@ -98,14 +98,14 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.ec2.get_instance_type_offering(filters=[{
-        "name": "instance-type",
-        "values": [
+example = aws.ec2.get_instance_type_offering(filters=[aws.ec2.GetInstanceTypeOfferingFilterArgs(
+        name="instance-type",
+        values=[
             "t1.micro",
             "t2.micro",
             "t3.micro",
         ],
-    }],
+    )],
     preferred_instance_types=[
         "t3.micro",
         "t2.micro",
@@ -154,7 +154,7 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOffering({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance_type_offering(</span>filters=None<span class="p">, </span>location_type=None<span class="p">, </span>preferred_instance_types=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_type_offering(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetInstanceTypeOfferingFilterArgs]]</span> = None<span class="p">, </span><span class="nx">location_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_instance_types</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypeOfferingResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -305,7 +305,7 @@ The following arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeofferingfilter">List[Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getinstancetypeofferingfilter">List[Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypeOfferings.html) for supported filters. Detailed below.
 {{% /md %}}</dd>

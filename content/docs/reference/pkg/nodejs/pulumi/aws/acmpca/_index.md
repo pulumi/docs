@@ -3,7 +3,7 @@ title: "Module acmpca"
 title_tag: "Module acmpca | Package @pulumi/aws | Node.js SDK"
 linktitle: "acmpca"
 meta_desc: "Explore members of the acmpca module in the @pulumi/aws package."
-git_sha: "0a2e76f947fd9ea3ee41beab30d2121c4b385e5c"
+git_sha: "96a856ed11314bec542cd860851b3cc05711aaab"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="CertificateAuthority" data-link-title="CertificateAuthority">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L82">
         Resource <strong>CertificateAuthority</strong>
     </a>
 </h3>
@@ -116,7 +116,7 @@ const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("example
 ```
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L165"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L165"> <b>constructor</b></a>
 </h4>
 
 
@@ -130,7 +130,7 @@ Create a CertificateAuthority resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L92">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L92">method <b>get</b></a>
 </h4>
 
 
@@ -141,14 +141,14 @@ Get an existing CertificateAuthority resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L82">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L82">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L103">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L103">method <b>isInstance</b></a>
 </h4>
 
 
@@ -159,7 +159,7 @@ Returns true if the given object is an instance of CertificateAuthority.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L113">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L113">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -167,7 +167,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name (ARN) of the certificate authority.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L117">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L117">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -175,7 +175,7 @@ Amazon Resource Name (ARN) of the certificate authority.
 Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-certificateAuthorityConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L121">property <b>certificateAuthorityConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L121">property <b>certificateAuthorityConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateAuthorityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateAuthorityCertificateAuthorityConfiguration'>CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</code></pre>
@@ -183,7 +183,7 @@ Base64-encoded certificate authority (CA) certificate. Only available after the 
 Nested argument containing algorithms and certificate subject information. Defined below.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L125">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L125">property <b>certificateChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateChain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -191,7 +191,7 @@ Nested argument containing algorithms and certificate subject information. Defin
 Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-certificateSigningRequest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L129">property <b>certificateSigningRequest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L129">property <b>certificateSigningRequest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateSigningRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ Base64-encoded certificate chain that includes any intermediate certificates and
 The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L133">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L133">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ The base64 PEM-encoded certificate signing request (CSR) for your private CA cer
 Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -216,7 +216,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-notAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L137">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L137">property <b>notAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notAfter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -224,7 +224,7 @@ deployments and may be missing (undefined) during planning phases.
 Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-notBefore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L141">property <b>notBefore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L141">property <b>notBefore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notBefore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -232,7 +232,7 @@ Date and time after which the certificate authority is not valid. Only available
 Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-permanentDeletionTimeInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L145">property <b>permanentDeletionTimeInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L145">property <b>permanentDeletionTimeInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permanentDeletionTimeInDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -240,7 +240,7 @@ Date and time before which the certificate authority is not valid. Only availabl
 The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-revocationConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L149">property <b>revocationConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L149">property <b>revocationConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>revocationConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CertificateAuthorityRevocationConfiguration'>CertificateAuthorityRevocationConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -248,7 +248,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
 Nested argument containing revocation configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L153">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L153">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serial: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -256,7 +256,7 @@ Nested argument containing revocation configuration. Defined below.
 Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L157">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L157">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -264,7 +264,7 @@ Serial number of the certificate authority. Only available after the certificate
 Status of the certificate authority.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L161">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L161">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -272,7 +272,7 @@ Status of the certificate authority.
 Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L165">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L165">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -280,7 +280,7 @@ Specifies a key-value map of user-defined tags that are attached to the certific
 The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
 
 <h4 class="pdoc-member-header" id="CertificateAuthority-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L82">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L82">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -291,7 +291,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCertificateAuthority" data-link-title="getCertificateAuthority">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L23">
         Function <strong>getCertificateAuthority</strong>
     </a>
 </h3>
@@ -316,7 +316,7 @@ const example = pulumi.output(aws.acmpca.getCertificateAuthority({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CertificateAuthorityArgs" data-link-title="CertificateAuthorityArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L289">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L289">
         interface <strong>CertificateAuthorityArgs</strong>
     </a>
 </h3>
@@ -326,7 +326,7 @@ const example = pulumi.output(aws.acmpca.getCertificateAuthority({
 The set of arguments for constructing a CertificateAuthority resource.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityArgs-certificateAuthorityConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L293">property <b>certificateAuthorityConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L293">property <b>certificateAuthorityConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateAuthorityConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityCertificateAuthorityConfiguration'>CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</code></pre>
@@ -334,7 +334,7 @@ The set of arguments for constructing a CertificateAuthority resource.
 Nested argument containing algorithms and certificate subject information. Defined below.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L297">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L297">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -342,7 +342,7 @@ Nested argument containing algorithms and certificate subject information. Defin
 Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityArgs-permanentDeletionTimeInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L301">property <b>permanentDeletionTimeInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L301">property <b>permanentDeletionTimeInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permanentDeletionTimeInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -350,7 +350,7 @@ Boolean value that specifies whether certificate revocation lists (CRLs) are ena
 The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityArgs-revocationConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L305">property <b>revocationConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L305">property <b>revocationConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revocationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityRevocationConfiguration'>CertificateAuthorityRevocationConfiguration</a>&gt;;</code></pre>
@@ -358,7 +358,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
 Nested argument containing revocation configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L309">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L309">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -366,7 +366,7 @@ Nested argument containing revocation configuration. Defined below.
 Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L313">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L313">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ Specifies a key-value map of user-defined tags that are attached to the certific
 The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
 
 <h3 class="pdoc-module-header" id="CertificateAuthorityState" data-link-title="CertificateAuthorityState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L227">
         interface <strong>CertificateAuthorityState</strong>
     </a>
 </h3>
@@ -384,7 +384,7 @@ The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: 
 Input properties used for looking up and filtering CertificateAuthority resources.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L231">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L231">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -392,7 +392,7 @@ Input properties used for looking up and filtering CertificateAuthority resource
 Amazon Resource Name (ARN) of the certificate authority.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L235">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L235">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -400,7 +400,7 @@ Amazon Resource Name (ARN) of the certificate authority.
 Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-certificateAuthorityConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L239">property <b>certificateAuthorityConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L239">property <b>certificateAuthorityConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateAuthorityConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityCertificateAuthorityConfiguration'>CertificateAuthorityCertificateAuthorityConfiguration</a>&gt;;</code></pre>
@@ -408,7 +408,7 @@ Base64-encoded certificate authority (CA) certificate. Only available after the 
 Nested argument containing algorithms and certificate subject information. Defined below.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L243">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L243">property <b>certificateChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -416,7 +416,7 @@ Nested argument containing algorithms and certificate subject information. Defin
 Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-certificateSigningRequest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L247">property <b>certificateSigningRequest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L247">property <b>certificateSigningRequest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateSigningRequest?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -424,7 +424,7 @@ Base64-encoded certificate chain that includes any intermediate certificates and
 The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L251">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L251">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -432,7 +432,7 @@ The base64 PEM-encoded certificate signing request (CSR) for your private CA cer
 Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-notAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L255">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L255">property <b>notAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notAfter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -440,7 +440,7 @@ Boolean value that specifies whether certificate revocation lists (CRLs) are ena
 Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-notBefore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L259">property <b>notBefore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L259">property <b>notBefore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notBefore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -448,7 +448,7 @@ Date and time after which the certificate authority is not valid. Only available
 Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-permanentDeletionTimeInDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L263">property <b>permanentDeletionTimeInDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L263">property <b>permanentDeletionTimeInDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permanentDeletionTimeInDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -456,7 +456,7 @@ Date and time before which the certificate authority is not valid. Only availabl
 The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-revocationConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L267">property <b>revocationConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L267">property <b>revocationConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revocationConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CertificateAuthorityRevocationConfiguration'>CertificateAuthorityRevocationConfiguration</a>&gt;;</code></pre>
@@ -464,7 +464,7 @@ The number of days to make a CA restorable after it has been deleted, must be be
 Nested argument containing revocation configuration. Defined below.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L271">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L271">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -472,7 +472,7 @@ Nested argument containing revocation configuration. Defined below.
 Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L275">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L275">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,7 +480,7 @@ Serial number of the certificate authority. Only available after the certificate
 Status of the certificate authority.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L279">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L279">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -488,7 +488,7 @@ Status of the certificate authority.
 Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 
 <h4 class="pdoc-member-header" id="CertificateAuthorityState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/certificateAuthority.ts#L283">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/certificateAuthority.ts#L283">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -496,7 +496,7 @@ Specifies a key-value map of user-defined tags that are attached to the certific
 The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
 
 <h3 class="pdoc-module-header" id="GetCertificateAuthorityArgs" data-link-title="GetCertificateAuthorityArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L41">
         interface <strong>GetCertificateAuthorityArgs</strong>
     </a>
 </h3>
@@ -506,7 +506,7 @@ The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: 
 A collection of arguments for invoking getCertificateAuthority.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L45">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L45">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -514,7 +514,7 @@ A collection of arguments for invoking getCertificateAuthority.
 Amazon Resource Name (ARN) of the certificate authority.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityArgs-revocationConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L54">property <b>revocationConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L54">property <b>revocationConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revocationConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetCertificateAuthorityRevocationConfiguration'>GetCertificateAuthorityRevocationConfiguration</a>[];</code></pre>
@@ -527,7 +527,7 @@ Nested attribute containing revocation configuration.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L58">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L58">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -535,7 +535,7 @@ Nested attribute containing revocation configuration.
 Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 
 <h3 class="pdoc-module-header" id="GetCertificateAuthorityResult" data-link-title="GetCertificateAuthorityResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L64">
         interface <strong>GetCertificateAuthorityResult</strong>
     </a>
 </h3>
@@ -545,12 +545,12 @@ Specifies a key-value map of user-defined tags that are attached to the certific
 A collection of values returned by getCertificateAuthority.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L65">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L65">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L69">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L69">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -558,7 +558,7 @@ A collection of values returned by getCertificateAuthority.
 Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-certificateChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L73">property <b>certificateChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L73">property <b>certificateChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateChain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -566,7 +566,7 @@ Base64-encoded certificate authority (CA) certificate. Only available after the 
 Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-certificateSigningRequest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L77">property <b>certificateSigningRequest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L77">property <b>certificateSigningRequest</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateSigningRequest: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -574,7 +574,7 @@ Base64-encoded certificate chain that includes any intermediate certificates and
 The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L81">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -582,7 +582,7 @@ The base64 PEM-encoded certificate signing request (CSR) for your private CA cer
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-notAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L85">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L85">property <b>notAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notAfter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -590,7 +590,7 @@ The provider-assigned unique ID for this managed resource.
 Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-notBefore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L89">property <b>notBefore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L89">property <b>notBefore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notBefore: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -598,7 +598,7 @@ Date and time after which the certificate authority is not valid. Only available
 Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-revocationConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L98">property <b>revocationConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L98">property <b>revocationConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revocationConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCertificateAuthorityRevocationConfiguration'>GetCertificateAuthorityRevocationConfiguration</a>[];</code></pre>
@@ -611,7 +611,7 @@ Nested attribute containing revocation configuration.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L102">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L102">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -619,7 +619,7 @@ Nested attribute containing revocation configuration.
 Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L106">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L106">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -627,7 +627,7 @@ Serial number of the certificate authority. Only available after the certificate
 Status of the certificate authority.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L110">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L110">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -635,7 +635,7 @@ Status of the certificate authority.
 Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 
 <h4 class="pdoc-member-header" id="GetCertificateAuthorityResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/0a2e76f947fd9ea3ee41beab30d2121c4b385e5c/sdk/nodejs/acmpca/getCertificateAuthority.ts#L114">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/96a856ed11314bec542cd860851b3cc05711aaab/sdk/nodejs/acmpca/getCertificateAuthority.ts#L114">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

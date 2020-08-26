@@ -173,10 +173,10 @@ example_table = aws.dynamodb.Table("exampleTable",
     read_capacity=1,
     write_capacity=1,
     hash_key="UserId",
-    attributes=[{
-        "name": "UserId",
-        "type": "S",
-    }])
+    attributes=[aws.dynamodb.TableAttributeArgs(
+        name="UserId",
+        type="S",
+    )])
 example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -212,9 +212,9 @@ example_data_source = aws.appsync.DataSource("exampleDataSource",
     api_id=example_graph_ql_api.id,
     service_role_arn=example_role.arn,
     type="AMAZON_DYNAMODB",
-    dynamodb_config={
-        "table_name": example_table.name,
-    })
+    dynamodb_config=aws.appsync.DataSourceDynamodbConfigArgs(
+        table_name=example_table.name,
+    ))
 ```
 
 {{% /example %}}
@@ -290,7 +290,7 @@ const exampleDataSource = new aws.appsync.DataSource("exampleDataSource", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appsync/#pulumi_aws.appsync.DataSource">DataSource</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_id=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb_config=None<span class="p">, </span>elasticsearch_config=None<span class="p">, </span>http_config=None<span class="p">, </span>lambda_config=None<span class="p">, </span>name=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appsync/#pulumi_aws.appsync.DataSource">DataSource</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceDynamodbConfigArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceElasticsearchConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -819,7 +819,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#dynamodb_config_python" style="color: inherit; text-decoration: inherit;">dynamodb_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedynamodbconfig">Dict[Data<wbr>Source<wbr>Dynamodb<wbr>Config]</a></span>
+        <span class="property-type"><a href="#datasourcedynamodbconfig">Data<wbr>Source<wbr>Dynamodb<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DynamoDB settings. See below
 {{% /md %}}</dd>
@@ -830,7 +830,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#elasticsearch_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceelasticsearchconfig">Dict[Data<wbr>Source<wbr>Elasticsearch<wbr>Config]</a></span>
+        <span class="property-type"><a href="#datasourceelasticsearchconfig">Data<wbr>Source<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon Elasticsearch settings. See below
 {{% /md %}}</dd>
@@ -841,7 +841,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#http_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcehttpconfig">Dict[Data<wbr>Source<wbr>Http<wbr>Config]</a></span>
+        <span class="property-type"><a href="#datasourcehttpconfig">Data<wbr>Source<wbr>Http<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP settings. See below
 {{% /md %}}</dd>
@@ -852,7 +852,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#lambda_config_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcelambdaconfig">Dict[Data<wbr>Source<wbr>Lambda<wbr>Config]</a></span>
+        <span class="property-type"><a href="#datasourcelambdaconfig">Data<wbr>Source<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS Lambda settings. See below
 {{% /md %}}</dd>
@@ -1021,7 +1021,8 @@ Get an existing DataSource resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_id=None<span class="p">, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>dynamodb_config=None<span class="p">, </span>elasticsearch_config=None<span class="p">, </span>http_config=None<span class="p">, </span>lambda_config=None<span class="p">, </span>name=None<span class="p">, </span>service_role_arn=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceDynamodbConfigArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceElasticsearchConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DataSource</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1029,7 +1030,7 @@ Get an existing DataSource resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.DataSource.html">DataSource</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.DataSourceState.html">DataSourceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.DataSource.html">DataSource</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.DataSourceState.html">DataSourceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1525,7 +1526,7 @@ The following state arguments are supported:
 <a href="#state_dynamodb_config_python" style="color: inherit; text-decoration: inherit;">dynamodb_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedynamodbconfig">Dict[Data<wbr>Source<wbr>Dynamodb<wbr>Config]</a></span>
+        <span class="property-type"><a href="#datasourcedynamodbconfig">Data<wbr>Source<wbr>Dynamodb<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DynamoDB settings. See below
 {{% /md %}}</dd>
@@ -1536,7 +1537,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceelasticsearchconfig">Dict[Data<wbr>Source<wbr>Elasticsearch<wbr>Config]</a></span>
+        <span class="property-type"><a href="#datasourceelasticsearchconfig">Data<wbr>Source<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon Elasticsearch settings. See below
 {{% /md %}}</dd>
@@ -1547,7 +1548,7 @@ The following state arguments are supported:
 <a href="#state_http_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcehttpconfig">Dict[Data<wbr>Source<wbr>Http<wbr>Config]</a></span>
+        <span class="property-type"><a href="#datasourcehttpconfig">Data<wbr>Source<wbr>Http<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP settings. See below
 {{% /md %}}</dd>
@@ -1558,7 +1559,7 @@ The following state arguments are supported:
 <a href="#state_lambda_config_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcelambdaconfig">Dict[Data<wbr>Source<wbr>Lambda<wbr>Config]</a></span>
+        <span class="property-type"><a href="#datasourcelambdaconfig">Data<wbr>Source<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS Lambda settings. See below
 {{% /md %}}</dd>
@@ -1773,8 +1774,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usecallercredentials_python">
-<a href="#usecallercredentials_python" style="color: inherit; text-decoration: inherit;">use<wbr>Caller<wbr>Credentials</a>
+        <span id="use_caller_credentials_python">
+<a href="#use_caller_credentials_python" style="color: inherit; text-decoration: inherit;">use_<wbr>caller_<wbr>credentials</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

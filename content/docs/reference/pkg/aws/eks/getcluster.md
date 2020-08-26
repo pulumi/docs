@@ -25,7 +25,7 @@ Retrieve information about an EKS Cluster.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cluster(</span>name=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cluster(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -156,7 +156,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
@@ -678,7 +678,7 @@ The following output properties are available:
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustercertificateauthority">Dict[Get<wbr>Cluster<wbr>Certificate<wbr>Authority]</a></span>
+        <span class="property-type"><a href="#getclustercertificateauthority">Get<wbr>Cluster<wbr>Certificate<wbr>Authority</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing `certificate-authority-data` for your cluster.
 {{% /md %}}</dd>
@@ -787,7 +787,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd>
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclustervpcconfig">Dict[Get<wbr>Cluster<wbr>Vpc<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getclustervpcconfig">Get<wbr>Cluster<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Nested list containing VPC configuration for the cluster.
 {{% /md %}}</dd>
@@ -995,7 +995,7 @@ The following output properties are available:
 <a href="#oidcs_python" style="color: inherit; text-decoration: inherit;">oidcs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getclusteridentityoidc">List[Get<wbr>Cluster<wbr>Identity<wbr>Oidc]</a></span>
+        <span class="property-type"><a href="#getclusteridentityoidc">List[Get<wbr>Cluster<wbr>Identity<wbr>Oidc<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster.
 {{% /md %}}</dd>
@@ -1369,8 +1369,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="clustersecuritygroupid_python">
-<a href="#clustersecuritygroupid_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Group<wbr>Id</a>
+        <span id="cluster_security_group_id_python">
+<a href="#cluster_security_group_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>security_<wbr>group_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1380,8 +1380,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="endpointprivateaccess_python">
-<a href="#endpointprivateaccess_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Private<wbr>Access</a>
+        <span id="endpoint_private_access_python">
+<a href="#endpoint_private_access_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>private_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1391,8 +1391,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="endpointpublicaccess_python">
-<a href="#endpointpublicaccess_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Public<wbr>Access</a>
+        <span id="endpoint_public_access_python">
+<a href="#endpoint_public_access_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>public_<wbr>access</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1402,8 +1402,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="publicaccesscidrs_python">
-<a href="#publicaccesscidrs_python" style="color: inherit; text-decoration: inherit;">public<wbr>Access<wbr>Cidrs</a>
+        <span id="public_access_cidrs_python">
+<a href="#public_access_cidrs_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access_<wbr>cidrs</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

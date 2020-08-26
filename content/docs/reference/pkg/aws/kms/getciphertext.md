@@ -131,7 +131,7 @@ const oauth = oauthConfig.keyId.apply(keyId => aws.kms.getCipherText({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cipher_text(</span>context=None<span class="p">, </span>key_id=None<span class="p">, </span>plaintext=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cipher_text(</span><span class="nx">context</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plaintext</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCipherTextResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -304,7 +304,7 @@ The following arguments are supported:
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}An optional mapping that makes up the encryption context.
 {{% /md %}}</dd>
@@ -554,7 +554,7 @@ The following output properties are available:
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

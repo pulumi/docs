@@ -147,11 +147,11 @@ import pulumi_aws as aws
 
 example = aws.appsync.GraphQLApi("example",
     authentication_type="AMAZON_COGNITO_USER_POOLS",
-    user_pool_config={
-        "awsRegion": data["aws_region"]["current"]["name"],
-        "default_action": "DENY",
-        "user_pool_id": aws_cognito_user_pool["example"]["id"],
-    })
+    user_pool_config=aws.appsync.GraphQLApiUserPoolConfigArgs(
+        aws_region=data["aws_region"]["current"]["name"],
+        default_action="DENY",
+        user_pool_id=aws_cognito_user_pool["example"]["id"],
+    ))
 ```
 
 {{% /example %}}
@@ -396,9 +396,9 @@ import pulumi_aws as aws
 
 example = aws.appsync.GraphQLApi("example",
     authentication_type="OPENID_CONNECT",
-    openid_connect_config={
-        "issuer": "https://example.com",
-    })
+    openid_connect_config=aws.appsync.GraphQLApiOpenidConnectConfigArgs(
+        issuer="https://example.com",
+    ))
 ```
 
 {{% /example %}}
@@ -482,9 +482,9 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.appsync.GraphQLApi("example",
-    additional_authentication_providers=[{
-        "authentication_type": "AWS_IAM",
-    }],
+    additional_authentication_providers=[aws.appsync.GraphQLApiAdditionalAuthenticationProviderArgs(
+        authentication_type="AWS_IAM",
+    )],
     authentication_type="API_KEY")
 ```
 
@@ -618,10 +618,10 @@ example_role_policy_attachment = aws.iam.RolePolicyAttachment("exampleRolePolicy
     policy_arn="arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs",
     role=example_role.name)
 # ... other configuration ...
-example_graph_ql_api = aws.appsync.GraphQLApi("exampleGraphQLApi", log_config={
-    "cloudwatchLogsRoleArn": example_role.arn,
-    "fieldLogLevel": "ERROR",
-})
+example_graph_ql_api = aws.appsync.GraphQLApi("exampleGraphQLApi", log_config=aws.appsync.GraphQLApiLogConfigArgs(
+    cloudwatch_logs_role_arn=example_role.arn,
+    field_log_level="ERROR",
+))
 ```
 
 {{% /example %}}
@@ -670,7 +670,7 @@ const exampleGraphQLApi = new aws.appsync.GraphQLApi("exampleGraphQLApi", {logCo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appsync/#pulumi_aws.appsync.GraphQLApi">GraphQLApi</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_authentication_providers=None<span class="p">, </span>authentication_type=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>openid_connect_config=None<span class="p">, </span>schema=None<span class="p">, </span>tags=None<span class="p">, </span>user_pool_config=None<span class="p">, </span>xray_enabled=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appsync/#pulumi_aws.appsync.GraphQLApi">GraphQLApi</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_authentication_providers</span><span class="p">:</span> <span class="nx">Optional[List[GraphQLApiAdditionalAuthenticationProviderArgs]]</span> = None<span class="p">, </span><span class="nx">authentication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openid_connect_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiOpenidConnectConfigArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiUserPoolConfigArgs]</span> = None<span class="p">, </span><span class="nx">xray_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1177,7 +1177,7 @@ The GraphQLApi resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#additional_authentication_providers_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>authentication_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">List[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">List[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more additional authentication providers for the GraphqlApi. Defined below.
 {{% /md %}}</dd>
@@ -1188,7 +1188,7 @@ The GraphQLApi resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapilogconfig">Dict[Graph<wbr>QLApi<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing logging configuration. Defined below.
 {{% /md %}}</dd>
@@ -1210,7 +1210,7 @@ The GraphQLApi resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#openid_connect_config_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>connect_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiopenidconnectconfig">Dict[Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config]</a></span>
+        <span class="property-type"><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing OpenID Connect configuration. Defined below.
 {{% /md %}}</dd>
@@ -1232,7 +1232,7 @@ The GraphQLApi resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1243,7 +1243,7 @@ The GraphQLApi resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#user_pool_config_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiuserpoolconfig">Dict[Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config]</a></span>
+        <span class="property-type"><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Cognito User Pool configuration. Defined below.
 {{% /md %}}</dd>
@@ -1421,7 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of URIs associated with the API. e.g. `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
 {{% /md %}}</dd>
@@ -1445,7 +1445,8 @@ Get an existing GraphQLApi resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_authentication_providers=None<span class="p">, </span>arn=None<span class="p">, </span>authentication_type=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>openid_connect_config=None<span class="p">, </span>schema=None<span class="p">, </span>tags=None<span class="p">, </span>uris=None<span class="p">, </span>user_pool_config=None<span class="p">, </span>xray_enabled=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_authentication_providers</span><span class="p">:</span> <span class="nx">Optional[List[GraphQLApiAdditionalAuthenticationProviderArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">openid_connect_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiOpenidConnectConfigArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">uris</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_config</span><span class="p">:</span> <span class="nx">Optional[GraphQLApiUserPoolConfigArgs]</span> = None<span class="p">, </span><span class="nx">xray_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> GraphQLApi</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1453,7 +1454,7 @@ Get an existing GraphQLApi resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.GraphQLApi.html">GraphQLApi</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.GraphQLApiState.html">GraphQLApiState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.GraphQLApi.html">GraphQLApi</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppSync.GraphQLApiState.html">GraphQLApiState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1949,7 +1950,7 @@ The following state arguments are supported:
 <a href="#state_additional_authentication_providers_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>authentication_<wbr>providers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">List[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovider">List[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more additional authentication providers for the GraphqlApi. Defined below.
 {{% /md %}}</dd>
@@ -1982,7 +1983,7 @@ The following state arguments are supported:
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapilogconfig">Dict[Graph<wbr>QLApi<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing logging configuration. Defined below.
 {{% /md %}}</dd>
@@ -2004,7 +2005,7 @@ The following state arguments are supported:
 <a href="#state_openid_connect_config_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>connect_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiopenidconnectconfig">Dict[Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config]</a></span>
+        <span class="property-type"><a href="#graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing OpenID Connect configuration. Defined below.
 {{% /md %}}</dd>
@@ -2026,7 +2027,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2037,7 +2038,7 @@ The following state arguments are supported:
 <a href="#state_uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of URIs associated with the API. e.g. `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
 {{% /md %}}</dd>
@@ -2048,7 +2049,7 @@ The following state arguments are supported:
 <a href="#state_user_pool_config_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiuserpoolconfig">Dict[Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config]</a></span>
+        <span class="property-type"><a href="#graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Cognito User Pool configuration. Defined below.
 {{% /md %}}</dd>
@@ -2234,7 +2235,7 @@ The following state arguments are supported:
 <a href="#openid_connect_config_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>connect_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Dict[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config]</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideropenidconnectconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing OpenID Connect configuration. Defined below.
 {{% /md %}}</dd>
@@ -2245,7 +2246,7 @@ The following state arguments are supported:
 <a href="#user_pool_config_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Dict[Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config]</a></span>
+        <span class="property-type"><a href="#graphqlapiadditionalauthenticationprovideruserpoolconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Cognito User Pool configuration. Defined below.
 {{% /md %}}</dd>
@@ -2441,8 +2442,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authttl_python">
-<a href="#authttl_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Ttl</a>
+        <span id="auth_ttl_python">
+<a href="#auth_ttl_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2463,8 +2464,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iatttl_python">
-<a href="#iatttl_python" style="color: inherit; text-decoration: inherit;">iat<wbr>Ttl</a>
+        <span id="iat_ttl_python">
+<a href="#iat_ttl_python" style="color: inherit; text-decoration: inherit;">iat_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2630,8 +2631,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appidclientregex_python">
-<a href="#appidclientregex_python" style="color: inherit; text-decoration: inherit;">app<wbr>Id<wbr>Client<wbr>Regex</a>
+        <span id="app_id_client_regex_python">
+<a href="#app_id_client_regex_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id_<wbr>client_<wbr>regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2641,8 +2642,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="awsregion_python">
-<a href="#awsregion_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Region</a>
+        <span id="aws_region_python">
+<a href="#aws_region_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>region</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2797,8 +2798,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="cloudwatchlogsrolearn_python">
-<a href="#cloudwatchlogsrolearn_python" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logs<wbr>Role<wbr>Arn</a>
+        <span id="cloudwatch_logs_role_arn_python">
+<a href="#cloudwatch_logs_role_arn_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logs_<wbr>role_<wbr>arn</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2808,8 +2809,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldloglevel_python">
-<a href="#fieldloglevel_python" style="color: inherit; text-decoration: inherit;">field<wbr>Log<wbr>Level</a>
+        <span id="field_log_level_python">
+<a href="#field_log_level_python" style="color: inherit; text-decoration: inherit;">field_<wbr>log_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2819,8 +2820,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="excludeverbosecontent_python">
-<a href="#excludeverbosecontent_python" style="color: inherit; text-decoration: inherit;">exclude<wbr>Verbose<wbr>Content</a>
+        <span id="exclude_verbose_content_python">
+<a href="#exclude_verbose_content_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>verbose_<wbr>content</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3019,8 +3020,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authttl_python">
-<a href="#authttl_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Ttl</a>
+        <span id="auth_ttl_python">
+<a href="#auth_ttl_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3041,8 +3042,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="iatttl_python">
-<a href="#iatttl_python" style="color: inherit; text-decoration: inherit;">iat<wbr>Ttl</a>
+        <span id="iat_ttl_python">
+<a href="#iat_ttl_python" style="color: inherit; text-decoration: inherit;">iat_<wbr>ttl</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3252,8 +3253,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="appidclientregex_python">
-<a href="#appidclientregex_python" style="color: inherit; text-decoration: inherit;">app<wbr>Id<wbr>Client<wbr>Regex</a>
+        <span id="app_id_client_regex_python">
+<a href="#app_id_client_regex_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id_<wbr>client_<wbr>regex</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3263,8 +3264,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="awsregion_python">
-<a href="#awsregion_python" style="color: inherit; text-decoration: inherit;">aws<wbr>Region</a>
+        <span id="aws_region_python">
+<a href="#aws_region_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>region</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

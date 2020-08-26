@@ -94,23 +94,23 @@ foo_app = aws.opsworks.Application("foo-app",
         "example.com",
         "sub.example.com",
     ],
-    environments=[{
-        "key": "key",
-        "value": "value",
-        "secure": False,
-    }],
-    app_sources=[{
-        "type": "git",
-        "revision": "master",
-        "url": "https://github.com/example.git",
-    }],
+    environments=[aws.opsworks.ApplicationEnvironmentArgs(
+        key="key",
+        value="value",
+        secure=False,
+    )],
+    app_sources=[aws.opsworks.ApplicationAppSourceArgs(
+        type="git",
+        revision="master",
+        url="https://github.com/example.git",
+    )],
     enable_ssl=True,
-    ssl_configurations=[{
-        "private_key": (lambda path: open(path).read())("./foobar.key"),
-        "certificate": (lambda path: open(path).read())("./foobar.crt"),
-    }],
+    ssl_configurations=[aws.opsworks.ApplicationSslConfigurationArgs(
+        private_key=(lambda path: open(path).read())("./foobar.key"),
+        certificate=(lambda path: open(path).read())("./foobar.crt"),
+    )],
     document_root="public",
-    auto_bundle_on_deploy=True,
+    auto_bundle_on_deploy="true",
     rails_env="staging")
 ```
 
@@ -167,7 +167,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/opsworks/#pulumi_aws.opsworks.Application">Application</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_sources=None<span class="p">, </span>auto_bundle_on_deploy=None<span class="p">, </span>aws_flow_ruby_settings=None<span class="p">, </span>data_source_arn=None<span class="p">, </span>data_source_database_name=None<span class="p">, </span>data_source_type=None<span class="p">, </span>description=None<span class="p">, </span>document_root=None<span class="p">, </span>domains=None<span class="p">, </span>enable_ssl=None<span class="p">, </span>environments=None<span class="p">, </span>name=None<span class="p">, </span>rails_env=None<span class="p">, </span>short_name=None<span class="p">, </span>ssl_configurations=None<span class="p">, </span>stack_id=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/opsworks/#pulumi_aws.opsworks.Application">Application</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_sources</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationAppSourceArgs]]</span> = None<span class="p">, </span><span class="nx">auto_bundle_on_deploy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_flow_ruby_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_source_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_source_database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">document_root</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_ssl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environments</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationEnvironmentArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rails_env</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationSslConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">stack_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -949,7 +949,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#app_sources_python" style="color: inherit; text-decoration: inherit;">app_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">List[Application<wbr>App<wbr>Source]</a></span>
+        <span class="property-type"><a href="#applicationappsource">List[Application<wbr>App<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
 {{% /md %}}</dd>
@@ -1059,7 +1059,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#environments_python" style="color: inherit; text-decoration: inherit;">environments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">List[Application<wbr>Environment]</a></span>
+        <span class="property-type"><a href="#applicationenvironment">List[Application<wbr>Environment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
 {{% /md %}}</dd>
@@ -1103,7 +1103,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#ssl_configurations_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">List[Application<wbr>Ssl<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationsslconfiguration">List[Application<wbr>Ssl<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
 {{% /md %}}</dd>
@@ -1206,7 +1206,8 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_sources=None<span class="p">, </span>auto_bundle_on_deploy=None<span class="p">, </span>aws_flow_ruby_settings=None<span class="p">, </span>data_source_arn=None<span class="p">, </span>data_source_database_name=None<span class="p">, </span>data_source_type=None<span class="p">, </span>description=None<span class="p">, </span>document_root=None<span class="p">, </span>domains=None<span class="p">, </span>enable_ssl=None<span class="p">, </span>environments=None<span class="p">, </span>name=None<span class="p">, </span>rails_env=None<span class="p">, </span>short_name=None<span class="p">, </span>ssl_configurations=None<span class="p">, </span>stack_id=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_sources</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationAppSourceArgs]]</span> = None<span class="p">, </span><span class="nx">auto_bundle_on_deploy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">aws_flow_ruby_settings</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_source_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_source_database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">document_root</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domains</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">enable_ssl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environments</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationEnvironmentArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rails_env</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_configurations</span><span class="p">:</span> <span class="nx">Optional[List[ApplicationSslConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">stack_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1214,7 +1215,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.ApplicationState.html">ApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.ApplicationState.html">ApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1908,7 +1909,7 @@ The following state arguments are supported:
 <a href="#state_app_sources_python" style="color: inherit; text-decoration: inherit;">app_<wbr>sources</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">List[Application<wbr>App<wbr>Source]</a></span>
+        <span class="property-type"><a href="#applicationappsource">List[Application<wbr>App<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
 {{% /md %}}</dd>
@@ -2018,7 +2019,7 @@ The following state arguments are supported:
 <a href="#state_environments_python" style="color: inherit; text-decoration: inherit;">environments</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">List[Application<wbr>Environment]</a></span>
+        <span class="property-type"><a href="#applicationenvironment">List[Application<wbr>Environment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
 {{% /md %}}</dd>
@@ -2062,7 +2063,7 @@ The following state arguments are supported:
 <a href="#state_ssl_configurations_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>configurations</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">List[Application<wbr>Ssl<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#applicationsslconfiguration">List[Application<wbr>Ssl<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
 {{% /md %}}</dd>
@@ -2376,8 +2377,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkey_python">
-<a href="#sshkey_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key</a>
+        <span id="ssh_key_python">
+<a href="#ssh_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -108,14 +108,14 @@ import pulumi
 import pulumi_aws as aws
 
 ebs_volume = aws.ebs.get_snapshot(filters=[
-        {
-            "name": "volume-size",
-            "values": ["40"],
-        },
-        {
-            "name": "tag:Name",
-            "values": ["Example"],
-        },
+        aws.ebs.GetSnapshotFilterArgs(
+            name="volume-size",
+            values=["40"],
+        ),
+        aws.ebs.GetSnapshotFilterArgs(
+            name="tag:Name",
+            values=["Example"],
+        ),
     ],
     most_recent=True,
     owners=["self"])
@@ -161,7 +161,7 @@ const ebsVolume = pulumi.output(aws.ebs.getSnapshot({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_snapshot(</span>filters=None<span class="p">, </span>most_recent=None<span class="p">, </span>owners=None<span class="p">, </span>restorable_by_user_ids=None<span class="p">, </span>snapshot_ids=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_snapshot(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[GetSnapshotFilterArgs]]</span> = None<span class="p">, </span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">restorable_by_user_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">snapshot_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSnapshotResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -419,7 +419,7 @@ several valid keys, for a full reference, check out
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsnapshotfilter">List[Get<wbr>Snapshot<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getsnapshotfilter">List[Get<wbr>Snapshot<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more name/value pairs to filter off of. There are
 several valid keys, for a full reference, check out
@@ -476,7 +476,7 @@ several valid keys, for a full reference, check out
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>
@@ -1217,7 +1217,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags for the resource.
 {{% /md %}}</dd>

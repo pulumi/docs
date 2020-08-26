@@ -98,7 +98,7 @@ const example = pulumi.output(aws.workspaces.getDirectory({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_directory(</span>directory_id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_directory(</span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDirectoryResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
@@ -882,7 +882,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
@@ -1106,8 +1106,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="changecomputetype_python">
-<a href="#changecomputetype_python" style="color: inherit; text-decoration: inherit;">change<wbr>Compute<wbr>Type</a>
+        <span id="change_compute_type_python">
+<a href="#change_compute_type_python" style="color: inherit; text-decoration: inherit;">change_<wbr>compute_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1117,8 +1117,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="increasevolumesize_python">
-<a href="#increasevolumesize_python" style="color: inherit; text-decoration: inherit;">increase<wbr>Volume<wbr>Size</a>
+        <span id="increase_volume_size_python">
+<a href="#increase_volume_size_python" style="color: inherit; text-decoration: inherit;">increase_<wbr>volume_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1128,8 +1128,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rebuildworkspace_python">
-<a href="#rebuildworkspace_python" style="color: inherit; text-decoration: inherit;">rebuild<wbr>Workspace</a>
+        <span id="rebuild_workspace_python">
+<a href="#rebuild_workspace_python" style="color: inherit; text-decoration: inherit;">rebuild_<wbr>workspace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1139,8 +1139,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="restartworkspace_python">
-<a href="#restartworkspace_python" style="color: inherit; text-decoration: inherit;">restart<wbr>Workspace</a>
+        <span id="restart_workspace_python">
+<a href="#restart_workspace_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>workspace</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1150,8 +1150,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="switchrunningmode_python">
-<a href="#switchrunningmode_python" style="color: inherit; text-decoration: inherit;">switch<wbr>Running<wbr>Mode</a>
+        <span id="switch_running_mode_python">
+<a href="#switch_running_mode_python" style="color: inherit; text-decoration: inherit;">switch_<wbr>running_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
