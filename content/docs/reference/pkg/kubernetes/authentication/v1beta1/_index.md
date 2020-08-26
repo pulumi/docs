@@ -21,7 +21,7 @@ Explore the resources and functions of the authentication/v1beta1 module in the 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.4.3</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 
@@ -35,7 +35,7 @@ Explore the resources and functions of the authentication/v1beta1 module in the 
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/authentication/v1beta1/#" title="@pulumi/kubernetes/authentication/v1beta1">@pulumi/kubernetes/authentication/v1beta1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/authentication.k8s.io/v1beta1" title="pulumi_kubernetes/authentication.k8s.io/v1beta1">pulumi_kubernetes/authentication.k8s.io/v1beta1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/authentication/v1beta1" title="pulumi_kubernetes/authentication/v1beta1">pulumi_kubernetes/authentication/v1beta1</a></dd>
 
 </dl>
 

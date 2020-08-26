@@ -12,7 +12,7 @@ block_external_search_index: true
 <span id="pulumi-kubernetes"></span><h1>Pulumi Kubernetes<a class="headerlink" href="#module-pulumi_kubernetes" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="pulumi_kubernetes.ConfigFile">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.</code><code class="sig-name descname">ConfigFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transformations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.ConfigFile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.</code><code class="sig-name descname">ConfigFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">file</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transformations</span><span class="p">:</span> <span class="n">Optional[List[Callable[[Any, pulumi.resource.ResourceOptions], None]]]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_prefix</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">file_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.ConfigFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>ConfigFile creates a set of Kubernetes resources from a Kubernetes YAML file.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pulumi_kubernetes.yaml</span> <span class="kn">import</span> <span class="n">ConfigFile</span>
 
@@ -59,9 +59,9 @@ block_external_search_index: true
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – A name for a resource.</p></li>
-<li><p><strong>file</strong> (<em>str</em>) – Path or a URL that uniquely identifies a file.</p></li>
+<li><p><strong>file</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Path or a URL that uniquely identifies a file.</p></li>
 <li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a><em>]</em>) – A bag of optional settings that control a resource’s behavior.</p></li>
-<li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Tuple</em><em>[</em><em>Callable</em><em>,</em>) – A set of
+<li><p><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>, </strong><strong>None</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Callable</em><em>[</em><em>[</em><em>Any</em><em>,</em>) – A set of
 transformations to apply to Kubernetes resource definitions before registering with engine.</p></li>
 <li><p><strong>resource_prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional prefix for the auto-generated resource names.
 Example: A resource created with resource_prefix=”foo” would produce a resource named “foo-resourceName”.</p></li>
@@ -112,7 +112,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_kubernetes.ConfigFile.get_resource">
-<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_version_kind</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><a class="headerlink" href="#pulumi_kubernetes.ConfigFile.get_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_version_kind</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><a class="headerlink" href="#pulumi_kubernetes.ConfigFile.get_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>get_resource returns a resource defined by a built-in Kubernetes group/version/kind and
 name. For example: <code class="docutils literal notranslate"><span class="pre">get_resource(&quot;apps/v1/Deployment&quot;,</span> <span class="pre">&quot;nginx&quot;)</span></code></p>
 <dl class="field-list simple">
@@ -120,7 +120,7 @@ name. For example: <code class="docutils literal notranslate"><span class="pre">
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>group_version_kind</strong> (<em>str</em>) – Group/Version/Kind of the resource, e.g., <code class="docutils literal notranslate"><span class="pre">apps/v1/Deployment</span></code></p></li>
 <li><p><strong>name</strong> (<em>str</em>) – Name of the resource to retrieve</p></li>
-<li><p><strong>namespace</strong> (<em>str</em>) – Optional namespace of the resource to retrieve</p></li>
+<li><p><strong>namespace</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional namespace of the resource to retrieve</p></li>
 </ul>
 </dd>
 </dl>
@@ -130,7 +130,7 @@ name. For example: <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="py class">
 <dt id="pulumi_kubernetes.ConfigGroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.</code><code class="sig-name descname">ConfigGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">files</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">yaml</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transformations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.ConfigGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.</code><code class="sig-name descname">ConfigGroup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">files</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">yaml</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transformations</span><span class="p">:</span> <span class="n">Optional[List[Callable[[Any, pulumi.resource.ResourceOptions], None]]]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_prefix</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.ConfigGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>ConfigGroup creates a set of Kubernetes resources from Kubernetes YAML text. The YAML text
 may be supplied using any of the following methods:</p>
 <ol class="arabic simple">
@@ -224,7 +224,7 @@ may be supplied using any of the following methods:</p>
 <li><p><strong>files</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Set of paths or a URLs that uniquely identify files.</p></li>
 <li><p><strong>yaml</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – YAML text containing Kubernetes resource definitions.</p></li>
 <li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a><em>]</em>) – A bag of optional settings that control a resource’s behavior.</p></li>
-<li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Tuple</em><em>[</em><em>Callable</em><em>,</em>) – A set of
+<li><p><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>, </strong><strong>None</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Callable</em><em>[</em><em>[</em><em>Any</em><em>,</em>) – A set of
 transformations to apply to Kubernetes resource definitions before registering with engine.</p></li>
 <li><p><strong>resource_prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional prefix for the auto-generated resource names.
 Example: A resource created with resource_prefix=”foo” would produce a resource named “foo-resourceName”.</p></li>
@@ -275,7 +275,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_kubernetes.ConfigGroup.get_resource">
-<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_version_kind</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><a class="headerlink" href="#pulumi_kubernetes.ConfigGroup.get_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_version_kind</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><a class="headerlink" href="#pulumi_kubernetes.ConfigGroup.get_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>get_resource returns a resource defined by a built-in Kubernetes group/version/kind and
 name. For example: <code class="docutils literal notranslate"><span class="pre">get_resource(&quot;apps/v1/Deployment&quot;,</span> <span class="pre">&quot;nginx&quot;)</span></code></p>
 <dl class="field-list simple">
@@ -283,7 +283,7 @@ name. For example: <code class="docutils literal notranslate"><span class="pre">
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>group_version_kind</strong> (<em>str</em>) – Group/Version/Kind of the resource, e.g., <code class="docutils literal notranslate"><span class="pre">apps/v1/Deployment</span></code></p></li>
 <li><p><strong>name</strong> (<em>str</em>) – Name of the resource to retrieve</p></li>
-<li><p><strong>namespace</strong> (<em>str</em>) – Optional namespace of the resource to retrieve</p></li>
+<li><p><strong>namespace</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional namespace of the resource to retrieve</p></li>
 </ul>
 </dd>
 </dl>
@@ -293,7 +293,7 @@ name. For example: <code class="docutils literal notranslate"><span class="pre">
 
 <dl class="py class">
 <dt id="pulumi_kubernetes.Directory">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.</code><code class="sig-name descname">Directory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">directory</span></em>, <em class="sig-param"><span class="n">opts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transformations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.Directory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.</code><code class="sig-name descname">Directory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">directory</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transformations</span><span class="p">:</span> <span class="n">Optional[List[Callable[[Any, pulumi.resource.ResourceOptions], None]]]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resource_prefix</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.Directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Directory is a component representing a collection of resources described by a kustomize directory
 (kustomization).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pulumi_kubernetes.kustomize</span> <span class="kn">import</span> <span class="n">Directory</span>
@@ -354,7 +354,7 @@ or a folder in a git repository.
 Example: ./helloWorld
 Example: <a class="reference external" href="https://github.com/kubernetes-sigs/kustomize/tree/master/examples/helloWorld">https://github.com/kubernetes-sigs/kustomize/tree/master/examples/helloWorld</a></p></li>
 <li><p><strong>opts</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a><em>]</em>) – A bag of optional settings that control a resource’s behavior.</p></li>
-<li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Tuple</em><em>[</em><em>Callable</em><em>,</em>) – A set of
+<li><p><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>, </strong><strong>None</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Callable</em><em>[</em><em>[</em><em>Any</em><em>,</em>) – A set of
 transformations to apply to Kubernetes resource definitions before registering with engine.</p></li>
 <li><p><strong>resource_prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional prefix for the auto-generated resource names.
 Example: A resource created with resource_prefix=”foo” would produce a resource named “foo-resourceName”.</p></li>
@@ -405,7 +405,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py method">
 <dt id="pulumi_kubernetes.Directory.get_resource">
-<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_version_kind</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><a class="headerlink" href="#pulumi_kubernetes.Directory.get_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group_version_kind</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><span class="p">[</span>pulumi.resource.CustomResource<span class="p">]</span><a class="headerlink" href="#pulumi_kubernetes.Directory.get_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>get_resource returns a resource defined by a built-in Kubernetes group/version/kind and
 name. For example: <code class="docutils literal notranslate"><span class="pre">get_resource(&quot;apps/v1/Deployment&quot;,</span> <span class="pre">&quot;nginx&quot;)</span></code></p>
 <dl class="field-list simple">
@@ -413,7 +413,7 @@ name. For example: <code class="docutils literal notranslate"><span class="pre">
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>group_version_kind</strong> (<em>str</em>) – Group/Version/Kind of the resource, e.g., <code class="docutils literal notranslate"><span class="pre">apps/v1/Deployment</span></code></p></li>
 <li><p><strong>name</strong> (<em>str</em>) – Name of the resource to retrieve</p></li>
-<li><p><strong>namespace</strong> (<em>str</em>) – Optional namespace of the resource to retrieve</p></li>
+<li><p><strong>namespace</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Optional namespace of the resource to retrieve</p></li>
 </ul>
 </dd>
 </dl>
@@ -445,7 +445,7 @@ This feature is in developer preview, and is disabled by default.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>kubeconfig</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.</p></li>
+<li><p><strong>kubeconfig</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.</p></li>
 <li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If present, the default namespace to use. This flag is ignored for cluster-scoped resources.</p></li>
 </ul>
 </dd>

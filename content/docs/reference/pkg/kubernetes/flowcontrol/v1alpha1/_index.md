@@ -24,7 +24,7 @@ Explore the resources and functions of the flowcontrol/v1alpha1 module in the Ku
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.4.3</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 
@@ -38,7 +38,7 @@ Explore the resources and functions of the flowcontrol/v1alpha1 module in the Ku
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/flowcontrol/v1alpha1/#" title="@pulumi/kubernetes/flowcontrol/v1alpha1">@pulumi/kubernetes/flowcontrol/v1alpha1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/flowcontrol.apiserver.k8s.io/v1alpha1" title="pulumi_kubernetes/flowcontrol.apiserver.k8s.io/v1alpha1">pulumi_kubernetes/flowcontrol.apiserver.k8s.io/v1alpha1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/flowcontrol/v1alpha1" title="pulumi_kubernetes/flowcontrol/v1alpha1">pulumi_kubernetes/flowcontrol/v1alpha1</a></dd>
 
 </dl>
 

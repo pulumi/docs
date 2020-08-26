@@ -22,7 +22,7 @@ Explore the resources and functions of the yaml module in the Kubernetes package
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.4.3</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 

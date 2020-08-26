@@ -3,7 +3,7 @@ title: "Module policy/v1beta1"
 title_tag: "Module policy/v1beta1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1beta1"
 meta_desc: "Explore members of the v1beta1 module in the @pulumi/kubernetes package."
-git_sha: "2d5f66dff2f98c399f6df3e47fdd05918ad66597"
+git_sha: "b3ffacd65ad82373223bf20029b72799ae0d8158"
 block_external_search_index: true
 ---
 
@@ -35,7 +35,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="PodDisruptionBudget" data-link-title="PodDisruptionBudget">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L12">
         Resource <strong>PodDisruptionBudget</strong>
     </a>
 </h3>
@@ -45,7 +45,7 @@ block_external_search_index: true
 PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudget-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L55"> <b>constructor</b></a>
 </h4>
 
 
@@ -58,8 +58,17 @@ Create a PodDisruptionBudget resource with the given unique name, arguments, and
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> PodDisruptionBudget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</code></pre>
+
+
+Create a PodDisruptionBudget resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
 <h4 class="pdoc-member-header" id="PodDisruptionBudget-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -70,14 +79,14 @@ Get an existing PodDisruptionBudget resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudget-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudget-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -88,7 +97,7 @@ Returns true if the given object is an instance of PodDisruptionBudget.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudget-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</code></pre>
@@ -96,7 +105,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudget-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -105,7 +114,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudget-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L46">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L46">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodDisruptionBudget"</span>&gt;;</code></pre>
@@ -113,12 +122,12 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudget-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L47">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L47">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PodDisruptionBudget-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L51">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L51">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodDisruptionBudgetSpec'>PodDisruptionBudgetSpec</a>&gt;;</code></pre>
@@ -126,7 +135,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Specification of the desired behavior of the PodDisruptionBudget.
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudget-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L55">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L55">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodDisruptionBudgetStatus'>PodDisruptionBudgetStatus</a>&gt;;</code></pre>
@@ -134,7 +143,7 @@ Specification of the desired behavior of the PodDisruptionBudget.
 Most recently observed status of the PodDisruptionBudget.
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudget-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -143,7 +152,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PodDisruptionBudgetList" data-link-title="PodDisruptionBudgetList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L12">
         Resource <strong>PodDisruptionBudgetList</strong>
     </a>
 </h3>
@@ -153,7 +162,7 @@ deployments.
 PodDisruptionBudgetList is a collection of PodDisruptionBudgets.
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L48"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L48"> <b>constructor</b></a>
 </h4>
 
 
@@ -166,8 +175,17 @@ Create a PodDisruptionBudgetList resource with the given unique name, arguments,
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> PodDisruptionBudgetList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</code></pre>
+
+
+Create a PodDisruptionBudgetList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -178,14 +196,14 @@ Get an existing PodDisruptionBudgetList resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -196,7 +214,7 @@ Returns true if the given object is an instance of PodDisruptionBudgetList.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</code></pre>
@@ -204,7 +222,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -213,12 +231,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L43">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L43">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodDisruptionBudget'>PodDisruptionBudget</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L47">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L47">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodDisruptionBudgetList"</span>&gt;;</code></pre>
@@ -226,12 +244,12 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L48">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L48">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -240,7 +258,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PodSecurityPolicy" data-link-title="PodSecurityPolicy">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L12">
         Resource <strong>PodSecurityPolicy</strong>
     </a>
 </h3>
@@ -250,7 +268,7 @@ deployments.
 PodSecurityPolicy governs the ability to make requests that affect the Security Context that will be applied to a pod and container.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -263,8 +281,17 @@ Create a PodSecurityPolicy resource with the given unique name, arguments, and o
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</code></pre>
+
+
+Create a PodSecurityPolicy resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -275,14 +302,14 @@ Get an existing PodSecurityPolicy resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -293,7 +320,7 @@ Returns true if the given object is an instance of PodSecurityPolicy.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</code></pre>
@@ -301,7 +328,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -310,7 +337,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L46">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L46">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodSecurityPolicy"</span>&gt;;</code></pre>
@@ -318,7 +345,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L50">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L50">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -326,7 +353,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L54">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L54">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSecurityPolicySpec'>PodSecurityPolicySpec</a>&gt;;</code></pre>
@@ -334,7 +361,7 @@ Standard object's metadata. More info: https://git.k8s.io/community/contributors
 spec defines the policy enforced.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -343,7 +370,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PodSecurityPolicyList" data-link-title="PodSecurityPolicyList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L12">
         Resource <strong>PodSecurityPolicyList</strong>
     </a>
 </h3>
@@ -353,7 +380,7 @@ deployments.
 PodSecurityPolicyList is a list of PodSecurityPolicy objects.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L54"> <b>constructor</b></a>
 </h4>
 
 
@@ -366,8 +393,17 @@ Create a PodSecurityPolicyList resource with the given unique name, arguments, a
 * `args` The arguments to use to populate this resource&#39;s properties.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> PodSecurityPolicyList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</code></pre>
+
+
+Create a PodSecurityPolicyList resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -378,14 +414,14 @@ Get an existing PodSecurityPolicyList resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -396,7 +432,7 @@ Returns true if the given object is an instance of PodSecurityPolicyList.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L42">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L42">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</code></pre>
@@ -404,7 +440,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -413,7 +449,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L46">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L46">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSecurityPolicy'>PodSecurityPolicy</a>[]&gt;;</code></pre>
@@ -421,7 +457,7 @@ deployments and may be missing (undefined) during planning phases.
 items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L50">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L50">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"PodSecurityPolicyList"</span>&gt;;</code></pre>
@@ -429,7 +465,7 @@ items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L54">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L54">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -437,7 +473,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -449,7 +485,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="PodDisruptionBudgetArgs" data-link-title="PodDisruptionBudgetArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L90">
         interface <strong>PodDisruptionBudgetArgs</strong>
     </a>
 </h3>
@@ -459,7 +495,7 @@ deployments.
 The set of arguments for constructing a PodDisruptionBudget resource.
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L89">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L94">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</code></pre>
@@ -467,7 +503,7 @@ The set of arguments for constructing a PodDisruptionBudget resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L93">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L98">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PodDisruptionBudget"</span>&gt;;</code></pre>
@@ -475,12 +511,12 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L94">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L99">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L98">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudget.ts#L103">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodDisruptionBudgetSpec'>PodDisruptionBudgetSpec</a>&gt;;</code></pre>
@@ -488,7 +524,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Specification of the desired behavior of the PodDisruptionBudget.
 
 <h3 class="pdoc-module-header" id="PodDisruptionBudgetListArgs" data-link-title="PodDisruptionBudgetListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L85">
         interface <strong>PodDisruptionBudgetListArgs</strong>
     </a>
 </h3>
@@ -498,7 +534,7 @@ Specification of the desired behavior of the PodDisruptionBudget.
 The set of arguments for constructing a PodDisruptionBudgetList resource.
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L84">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L89">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</code></pre>
@@ -506,12 +542,12 @@ The set of arguments for constructing a PodDisruptionBudgetList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L85">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L90">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodDisruptionBudget'>PodDisruptionBudget</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L89">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L94">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PodDisruptionBudgetList"</span>&gt;;</code></pre>
@@ -519,12 +555,12 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodDisruptionBudgetListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L90">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podDisruptionBudgetList.ts#L95">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="PodSecurityPolicyArgs" data-link-title="PodSecurityPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L90">
         interface <strong>PodSecurityPolicyArgs</strong>
     </a>
 </h3>
@@ -534,7 +570,7 @@ Kind is a string value representing the REST resource this object represents. Se
 The set of arguments for constructing a PodSecurityPolicy resource.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L89">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L94">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</code></pre>
@@ -542,7 +578,7 @@ The set of arguments for constructing a PodSecurityPolicy resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L93">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L98">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PodSecurityPolicy"</span>&gt;;</code></pre>
@@ -550,7 +586,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L97">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L102">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -558,7 +594,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L101">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicy.ts#L106">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodSecurityPolicySpec'>PodSecurityPolicySpec</a>&gt;;</code></pre>
@@ -566,7 +602,7 @@ Standard object's metadata. More info: https://git.k8s.io/community/contributors
 spec defines the policy enforced.
 
 <h3 class="pdoc-module-header" id="PodSecurityPolicyListArgs" data-link-title="PodSecurityPolicyListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L91">
         interface <strong>PodSecurityPolicyListArgs</strong>
     </a>
 </h3>
@@ -576,7 +612,7 @@ spec defines the policy enforced.
 The set of arguments for constructing a PodSecurityPolicyList resource.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L90">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L95">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"policy/v1beta1"</span>&gt;;</code></pre>
@@ -584,7 +620,7 @@ The set of arguments for constructing a PodSecurityPolicyList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L94">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L99">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodSecurityPolicy'>PodSecurityPolicy</a>&gt;[]&gt;;</code></pre>
@@ -592,7 +628,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L98">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L103">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"PodSecurityPolicyList"</span>&gt;;</code></pre>
@@ -600,7 +636,7 @@ items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="PodSecurityPolicyListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/2d5f66dff2f98c399f6df3e47fdd05918ad66597/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L102">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/b3ffacd65ad82373223bf20029b72799ae0d8158/sdk/nodejs/policy/v1beta1/podSecurityPolicyList.ts#L107">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>

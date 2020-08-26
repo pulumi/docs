@@ -22,7 +22,7 @@ Explore the resources and functions of the coordination/v1 module in the Kuberne
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.4.3</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 
@@ -36,7 +36,7 @@ Explore the resources and functions of the coordination/v1 module in the Kuberne
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/coordination/v1/#" title="@pulumi/kubernetes/coordination/v1">@pulumi/kubernetes/coordination/v1</a></dd>
 
     <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/coordination.k8s.io/v1" title="pulumi_kubernetes/coordination.k8s.io/v1">pulumi_kubernetes/coordination.k8s.io/v1</a></dd>
+    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/coordination/v1" title="pulumi_kubernetes/coordination/v1">pulumi_kubernetes/coordination/v1</a></dd>
 
 </dl>
 
