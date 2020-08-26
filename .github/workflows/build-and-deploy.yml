@@ -53,7 +53,10 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
+          # AWS_SESSION_TOKEN is optional.
+          AWS_SESSION_TOKEN: ${{ secrets.CI_AWS_SESSION_TOKEN }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          PULUMI_STACK_NAME: ${{ secrets.PULUMI_STACK_NAME }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -70,6 +73,7 @@ jobs:
           path: origin-bucket-metadata.json
 
       - name: Archive Sentry release
+        if: ${{ github.repository == 'pulumi/docs' }}
         uses: actions/upload-artifact@v2
         with:
           name: sentry-release
