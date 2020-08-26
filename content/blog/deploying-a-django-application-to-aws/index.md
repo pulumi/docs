@@ -89,7 +89,7 @@ ADD mysite /mysite
 CMD [ "python3", "/mysite/manage.py", "runserver", "0.0.0.0:80" ]
 ```
 
-Now that our Django application and Dockerfile are ready, we can return to the main `aws-django-voting-app` folder. The Pulumi project requires several configuration variables, which we set using `pulumi config set`. They are used to configure the MySQL admin account, a user account for initializing the table, and the Django website admin account.
+Now that our Django application and Dockerfile are ready, we can return to the main `aws-django-voting-app` folder. The Pulumi project requires several configuration variables, which we set using `pulumi config set`. They are used to configure the MySQL admin account, a user account for initializing the table, and the Django website admin account. The private key that Django uses will also be passed in the same way.
 
 ```bash
 $ pulumi config set sql-admin-name <NAME>
@@ -98,6 +98,7 @@ $ pulumi config set sql-user-name <NAME>
 $ pulumi config set sql-user-password <PASSWORD> --secret
 $ pulumi config set django-admin-name <NAME>
 $ pulumi config set django-admin-password <PASSWORD> --secret
+$ pulumi config set django_secret_key = <VALUE> --secret
 ```
 
 The `requirements.txt` file lists the libraries used by the project. We will need to add the following:
