@@ -2,9 +2,15 @@
 
 set -o errexit -o pipefail
 
-echo "Assuming the production CI role..."
-eval $(assume-role "arn:aws:iam::058607598222:role/ContinuousIntegrationRole")
+if [ -n "${CI_ASSUME_ROLE_ARN:-}" ]; then
+  echo "Assuming the production CI role..."
+  eval "$(assume-role "${CI_ASSUME_ROLE_ARN}")"
+fi
 
-echo "Selecting the pulumi/production stack"
-pulumi login
-pulumi -C infrastructure stack select pulumi/production
+if [ -n "${PULUMI_STACK_NAME:-}" ]; then
+  pulumi login
+  echo "Selecting the ${PULUMI_STACK_NAME} stack"
+  pulumi -C infrastructure stack select "${PULUMI_STACK_NAME}"
+else
+  echo "Could not select a stack. PULUMI_STACK_NAME is empty."
+fi

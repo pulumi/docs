@@ -336,3 +336,4 @@ async function createAliasRecord(
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
+export const cloudFrontDistributionUrn = cdn.urn;

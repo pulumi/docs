@@ -40,7 +40,8 @@ destination_bucket_uri="s3://${destination_bucket}"
 node scripts/translate-redirects.js "$build_dir" "$(pulumi -C infrastructure config get redirectDomain 2>/dev/null || echo '')"
 
 # Read the region from the stack's config -- we use it below.
-aws_region="$(pulumi -C infrastructure config get 'aws:region')"
+aws_region="$(pulumi -C infrastructure config get 'aws:region')" || aws_region="us-west-2"
+echo "Using AWS region ${aws_region}"
 
 # Make the bucket. If this fails, there are two explanations, given the way we're naming
 # our buckets: either a previous run failed at some point after creating the bucket, in
