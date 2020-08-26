@@ -20,7 +20,7 @@ $ mkdir aws-django-voting-app && cd aws-django-voting-app
 $ pulumi new aws-python
 ```
 
-Next, let's create a folder to hold our application, and start a Django project in it.
+Next, let's create a folder to hold our application and start a Django project in it.
 
 ```bash
 $ mkdir frontend && cd frontend
@@ -28,7 +28,7 @@ $ django-admin startproject mysite
 $ cd mysite
 ```
 
-This tutorial was written for the [aws-django-voting-app example](https://github.com/jetvova/examples/tree/vova/aws-py-sql-dynamicresource/aws-py-dynamicresource), but works just as well with any other Django application. The most important file is `./mysite/settings.py`, which we will modify to accept secrets and configuration parameters in the form of environment variables. A common mistake that programmers make is to submit files with important data to source code repositories. Even if it is a private repository, it is still not recommended practice to leave passwords and private keys in your files.
+This tutorial was written for the [aws-django-voting-app example](https://github.com/jetvova/examples/tree/vova/aws-py-sql-dynamicresource/aws-py-dynamicresource) but will work with any other Django application. The most important file is `./mysite/settings.py`, which we will modify to accept secrets and configuration parameters in the form of environment variables. A common mistake that programmers make is to submit files with important data to source code repositories. Even if it is a private repository, it is still not recommended to leave passwords and private keys in your files.
 
 ```python
 SECRET_KEY = os.environ['SECRET_KEY']
@@ -47,7 +47,7 @@ DATABASES = {
 }
 ```
 
-In order to be able to perform database migrations as part of the deployment, we will create a `setupDatabase.sh` script inside the `aws-django-voting-app/frontend/mysite` folder. As a bonus, the script will create an admin account that we can use to log into our website with. Make sure the file has exec permissions.
+To perform database migrations as part of the deployment, we will create a `setupDatabase.sh` script inside the `aws-django-voting-app/frontend/mysite` folder. As a bonus, the script will create an admin account that we can use to log into our website. Make sure the file has exec permissions.
 
 ```bash
 #!/bin/bash
@@ -61,7 +61,7 @@ python3 /mysite/manage.py createsuperuser \
     --email=$DJANGO_NAME@example.com
 ```
 
-The next step, is to go back into the `aws-django-voting-app/frontend` folder, and set up Docker to turn our application into a container. First, we will list the libraries our application uses by creating a `requirements.txt` file with the following lines.
+The next step is to go back into the `aws-django-voting-app/frontend` folder and containerize our application with Docker. First, we will list the libraries our application uses by creating a `requirements.txt` file with the following lines.
 
 ```python
 django==3.1
@@ -89,7 +89,7 @@ ADD mysite /mysite
 CMD [ "python3", "/mysite/manage.py", "runserver", "0.0.0.0:80" ]
 ```
 
-Now that our Djano application and Dockerfile are ready, we can return to the main `aws-django-voting-app` folder. The Pulumi project requires several configuration variables, which we set using `pulumi config set`. They are used to configure the MySQL admin account, a user account for initializing the table, and the Django website admin account.
+Now that our Django application and Dockerfile are ready, we can return to the main `aws-django-voting-app` folder. The Pulumi project requires several configuration variables, which we set using `pulumi config set`. They are used to configure the MySQL admin account, a user account for initializing the table, and the Django website admin account.
 
 ```bash
 $ pulumi config set sql-admin-name <NAME>
@@ -108,7 +108,7 @@ pulumi-mysql>=2.0.0,<3.0.0
 mysql-connector-python>=1.0.0,<10.0.0
 ```
 
-The fist few lines of our `__main__.py` file indicate the libraries to import and describe the application's configuration options.
+The first few lines of our `__main__.py` file indicate the libraries to import and describe the application's configuration options.
 
 ```python
 import json
@@ -139,7 +139,7 @@ this instance, the purpose is to provide users with a voting application.
 app_cluster = aws.ecs.Cluster("app-cluster")
 ```
 
-To allow different tasks within our cluster to communicate, we create a Virtual Private
+To allow tasks within our cluster to communicate, we create a Virtual Private
 Cloud and an associated subnet. Two subnets are required for the project, so the availability zone suffix is set to "a".
 
 ```python
@@ -194,7 +194,7 @@ app_security_group = aws.ec2.SecurityGroup("security-group",
     }])
 ```
 
-To start our services, we need to create an Identity and Access Management (IAM) role,
+To start our services, we need to create an Identity and Access Management (IAM) role
 and attach execution permissions to it.
 
 ```python
@@ -216,7 +216,7 @@ exec_policy_attachment = aws.iam.RolePolicyAttachment("app-exec-policy", role=ap
 	policy_arn="arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy")
 ```
 
-Likewise, our ECS service will need to have a task role to manage it, along with its own set
+Likewise, our ECS service will need to have a task role to manage it and its own set
 of permissions.
 
 ```python
@@ -268,7 +268,7 @@ app_lifecycle_policy = aws.ecr.LifecyclePolicy("app-lifecycle-policy",
     }""")
 ```
 
-With the basic infrastructure in place, we can start writing the backend for the application.
+With the infrastructure in place, we can start writing the backend for the application.
 
 Our MySQL database is created with an RDS instance. To create the instance, Amazon requires
 that it be given two subnets in different availability zones.
@@ -280,7 +280,7 @@ extra_rds_subnet = aws.ec2.Subnet("extra-rds-subnet",
     vpc_id=app_vpc)
 ```
 
-Both subnets are assigned to a SubnetGroup which belongs to the RDS instance.
+Both subnets are assigned to a SubnetGroup that belongs to the RDS instance.
 
 ```python
 app_database_subnetgroup = aws.rds.SubnetGroup("app-database-subnetgroup",
@@ -322,7 +322,7 @@ mysql_user = mysql.User("mysql-standard-user",
 ```
 
 The user account which we will give to Django only needs the "SELECT", "UPDATE", "INSERT",
-and "DELETE" permissions to function.
+and DELETE permissions to function.
 
 ```python
 mysql_access_grant = mysql.Grant("mysql-access-grant",
@@ -336,7 +336,7 @@ mysql_access_grant = mysql.Grant("mysql-access-grant",
 Our RDS instance has been set up, and the MySQL backend is complete. All that's left is to
 create the Django frontend.
 
-A target group, balancer, and listener is created for the frontend.
+A target group, balancer, and listener are created for the frontend.
 
 ```python
 django_targetgroup = aws.lb.TargetGroup("django-targetgroup",
@@ -398,7 +398,7 @@ django_log_group = aws.cloudwatch.LogGroup("django-log-group",
 ```
 
 Our project is special because it uses two unique ECS services---one that sets up the MySQL
-database and stops, and one that continuously runs and handles the website.
+database, and one that continuously runs and handles the website.
 
 First, let's create the task definition that runs once and sets up the database.
 
@@ -546,16 +546,16 @@ django_site_service = aws.ecs.Service("django-site-service",
     opts=pulumi.ResourceOptions(depends_on=[django_listener]),
 ```
 
-To connect to our application, we export the DNS name of the Django balancer, and open it
-in a browser window. To access Django administration, add "/admin/" to the end of the url,
-and login using your Django admin credentials.
+To connect to our application, we export the DNS name of the Django balancer and open it
+in a browser window. To access Django administration, add "/admin/" to the end of the URL,
+and log in using your Django admin credentials.
 
 ```python
 pulumi.export("app-url", django_balancer.dns_name)
 ```
 
-In this example, I described how to set up a basic Django voting application, and deploy it to AWS. Although our Django and Flask applications use very different AWS services, we were able to seamlessly replace the previous infrastructure with what was needed.
+In this example, I described how to set up a basic Django voting application and deploy it to AWS. Although our Django and Flask applications use very different AWS services, we seamlessly replaced the previous infrastructure with what was needed.
 
-Next week, we'll explore PostgreSQL, Express, React, and Node.js, and will use them together to create a simple application.
+Next week, we'll explore PostgreSQL, Express, React, and Node.js, and use them to create a simple application.
 
-The blog post's full code and an in-depth explanation for each component can be [found on Github](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app).
+The blog post's full code and an in-depth explanation for each component are on [Github](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app).
