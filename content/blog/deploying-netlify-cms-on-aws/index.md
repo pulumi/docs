@@ -11,39 +11,39 @@ authors: ["zephyr-zhou"]
 tags: ["aws", "netlify-cms", "github-OAuth", "github-actions"]
 ---
 
-[Netlify CMS ](https://www.netlifycms.org/docs/intro/) is an open source content management system that provides UI for editing content and adopting Git workflow. Initially, we want to take advantage of it to increase effiency to edit Pulumi's website. However, during development we found few examples are deploying the CMS application on AWS instead of Netlify, its home platform. Therefore, in this blog post, we would like to share the way to organize Netlify's file structure and use Pulumi to store the content on S3 buckets, connect to CloudFront, and configure certificate in Certificate Manager. 
+[Netlify CMS ](https://www.netlifycms.org/docs/intro/) is an open-source content management system that provides UI for editing content and adopting Git workflow. Initially, we want to take advantage of it to increase efficiency to edit Pulumi's website. However, during development, we found few examples are deploying the CMS application on AWS instead of Netlify, its home platform. Therefore, in this blog post, we would like to share the way to organize Netlify's file structure and use Pulumi to store the content on S3 buckets, connect to CloudFront, and configure certificate in Certificate Manager. 
 
-[Note**: Because of the fact that we are deploying CMS on AWS, we could not use Netlify's Identity Service, which handles access token send by Github API. For the alternatives, we will introduce the way to write the [External OAuth Client Server](https://www.netlifycms.org/docs/external-oauth-clients/) and deploy it on AWS in the next post.]
+[Note**: Because we are deploying CMS on AWS, we could not use Netlify's Identity Service, which handles access token send by Github API. For the alternatives, we will introduce the way to write the [External OAuth Client Server](https://www.netlifycms.org/docs/external-oauth-clients/) and deploy it on AWS in the next post.]
+
 
 <!--more-->
 
-In general, we will first separate the CMS as a stand-alone React web application using a template and organize the file structure of it. Then we will build the web app and deploy it on AWS. The file path in this blog post is refer to the example repository [TODO: PUT LINK HERE AFTER EXAMPLE IS UPLOADED]. Check the repository for more details of implementation.
 
-For environment details, we are using [Nelify CMS's Github backend](https://www.netlifycms.org/docs/github-backend/). Our CMS app is changing website content stored in another Github repository under same account. The website is using Hugo as the static site generator.
+For environment details, we are using [Nelify CMS's Github backend](https://www.netlifycms.org/docs/github-backend/). Our CMS app is changing website content stored in another Github repository under the same account. The website is using Hugo as the static site generator.
 
 ## Separating CMS Into a Stand-alone React App
-The [starter template](https://www.netlifycms.org/docs/start-with-a-template/) provided by Netlify CMS has the CMS application implemented inside the target repository that contains the website contents CMS is aimed to edit. To improve the modularity, we have separated the CMS application from the target domain to another repository under the same account.
+The [starter template](https://www.netlifycms.org/docs/start-with-a-template/) provided by Netlify CMS has the CMS application implemented inside the target repository. To improve the modularity, we have separated the CMS application from the target repository and implement it in another repository under the same Github account.
 
 We used the [templates from @talves](https://github.com/ADARTA/netlify-cms-react-example) to separate the CMS as a simple stand-alone React application.
 
 ### CMS Configuration File
 
-The `config.yml` is the configuration for Netlify CMS to look for configuration of required content segments that need to be editted and backend instructions that it needs to follow.
+The `config.yml` is the configuration for Netlify CMS to look for which content segments that need to be edited and which backend instructions that it needs to follow.
 
-Inside the template, `cms/public/index.html` is the key html that contains the entry point for React to insert the generated content under `<div id=root>`. We could change the title of the website to what we want. But more importantly, we linked the configuration file `cms/public/config.yml` of the Netlify CMS following the [instructurion](https://www.netlifycms.org/docs/configuration-options/). 
+Inside the template, `cms/public/index.html` is the key HTML that contains the entry point for React to insert the generated content under `<div id=root>`. We could change the title of the website to what we want. But more importantly, we linked the configuration file `cms/public/config.yml` of the Netlify CMS following the [instructurion](https://www.netlifycms.org/docs/configuration-options/). 
 
 ![Custom Neltify Config File](./custom-config-file.png)
 
-The template uses the json configuration file config.json, puts this under `./src/components/NetlifyCMS/config.json`, and sets [CMS Manual Init](https://www.netlifycms.org/docs/beta-features/#manual-initialization) in file `./src/components/NetlifyCMS/setup.js` and file `./src/components/NetlifyCMS/index.js`.
+The template uses the JSON configuration file config.json, puts this under `./src/components/NetlifyCMS/config.json`, and sets [CMS Manual Init](https://www.netlifycms.org/docs/beta-features/#manual-initialization) in file `./src/components/NetlifyCMS/setup.js` and file `./src/components/NetlifyCMS/index.js`.
 
 ![Template's CMS config](./template-cms-config1.jpg)
 ![Template's CMS config](./template-cms-config2.jpg)
 
-However, by specify link to config.yml file in the index.html and put config.yml under the public folder, we reduce the step to set the CMS manual init step, which is confusing to beginners. Also, we can have similar yaml config file similar to provided example from Netlify CMS. 
+However, by specify the link to config.yml file in the index.html and put config.yml under the public folder, we reduce the step to set the CMS manual to init step, which is confusing to beginners. Also, we can have a YAML config file similar to the provided example from Netlify CMS. 
 
-### Let CMS Points to Another Repository
+###  Let CMS Points to Another Repository
 
-The template only separate the CMS to a simple React app but CMS is still lies inside target repo that contains the content CMS is going to change. It turns out we could simply change the value field `repo:` in the `backend:` field of the `config.yml` file to point to the specific repository we would like CMS to change. 
+The template only separates the CMS as a stand-alone React app but CMS still lies inside the target repository. It turns out we could change the value field `repo:` in the `backend:` field of the `config.yml` file to point to the specific repository we would like CMS to change. 
 
 ![Change Repo Name](./change-repo-name.jpg)
 
@@ -57,17 +57,17 @@ Simplify the file and delete unnecessaries would produce this:
 
 Then run `yarn start` will bring out the server that we could preview the CMS app content.
 
-Now that we have preprocess the file structure. Let's deploy the CMS onto the AWS!
+Now that we have preprocessed the file structure. Let's deploy the CMS onto the AWS!
 
 ## Implement Infrastructure
 
-First of all, we should create a `infrastructure` folder to store the Pulumi Program. Then as usual, we will generate a new Pulumi project by running command `pulumi new typescript` to generate a typescript template. 
+First of all, we should create an `infrastructure` folder to store the Pulumi Program. Then, as usual, we will generate a new Pulumi project by running command `pulumi new typescript` to generate a typescript template. 
 
-Because the CMS app itself is a React web app, we can use exactly same code as [Pulumi's deploying static website example](https://github.com/pulumi/examples/tree/master/aws-ts-static-website). The static website example with other cloud and other languages are also available insided the [Pulumi's example repositories](https://github.com/pulumi/examples)
+Because the CMS app itself is a React web app, we can use the same code as [Pulumi's deploying static website example](https://github.com/pulumi/examples/tree/master/aws-ts-static-website). The static website example with other cloud and other languages are also available inside the [Pulumi's example repositories](https://github.com/pulumi/examples)
 
 ### Step 1: Build the CMS App
 
-Before introducing the Pulumi code, we need to build the website by `yarn build`. This will create a `build` folder under the root directory, which is the React compiled version of the website contents that we should upload to S3 bucket. In this way, S3 would contain a working version of our CMS app and reduce the number of unnecessary file to upload.
+Before introducing the Pulumi code, we need to build the website by `yarn build`. This will create a `build` folder under the root directory, which is the React compiled version of the website contents that we should upload to S3 bucket. In this way, S3 would contain a working version of our CMS app and reduce the number of the unnecessary file to upload.
 
 ### Step 2: Fetch Configuration
 
@@ -83,14 +83,14 @@ const config = {
 };
 ```
 
-The configuration takes three parameter. We could set them using Pulumi CLI
+The configuration takes three parameters. We could set them using Pulumi CLI
 
 ```bash
 $ pulumi config set pulumi-website-cms:pathToWebsiteContent ../build
 ```
-pathToWebsiteContent would specify the path to the folder that stores the website content, so it could crawl the directory by using `crawlDirectory` method and sync the S3 bucket with the content. In the case of CMS, we should pass in the build folder under the root directory, which is the directory that stores our builded CMS website.
+pathToWebsiteContent would specify the path to the folder that stores the website content, so it could crawl the directory by using the `crawlDirectory` method and sync the S3 bucket with the content. In the case of CMS, we should pass in the build folder under the root directory, which is the directory that stores our built CMS website.
 
-Similarly, we could set the CMS's target domain name and the optional certificate arn parameter ( which needs `stackConfig.get` instead of `stackConfig.require` to get value). For target domain, we could come up with any subdomain name of an existing parent domain. The code would create the subdomain under the parent domain automatically. For certificate arn, if we already have a certificate registered for CMS then we could pass in as certificate arn. Otherwise, the code would generate a new certificate.
+Similarly, we could set the CMS's target domain name and the optional certificate arn parameter ( which needs `stackConfig.get` instead of `stackConfig.require` to get the value). For the target domain, we could come up with any subdomain name of an existing parent domain. The code would create the subdomain under the parent domain automatically. For certificate arn, if we already have a certificate registered for CMS then we could pass in as certificate arn. Otherwise, the code would generate a new certificate.
 
 ```bash
 # subdomain name: some-cms-domain and parent domain is pulumi-demos.com which is an existing one.
@@ -98,7 +98,7 @@ $ pulumi config set pulumi-website-cms:targetDomain https://some-cms-domain.pulu
 # replace the value of certificateArn with the correct one
 $ pulumi config set pulumi-website-cms:certificateArn arnarnarnxxx
 ```
-Also, don't forget to set region of AWS to be us-east-1. It couldn't be other value because ACM certificate has to be in this region.
+Also, don't forget to set the region of AWS to be us-east-1. It couldn't be a different value because the ACM certificate has to be in this region.
 
 ```bash
 $ pulumi config set aws:region us-east-1
@@ -122,7 +122,7 @@ const contentBucket = new aws.s3.Bucket("contentBucket",
         },
     });
 ```
-Then we crawl the content directory and for every file in the `../build` directory we passed in, we are creating content files as a form of bucket objects and place it under the parent bucket we created. In this way we filled the bucket up with the content inside of the `../build` folder. 
+Then we crawl the content directory and for every file in the `../build` directory we passed in, we are creating content files as a form of bucket objects and place it under the parent bucket we created. In this way, we filled the bucket up with the content inside of the `../build` folder. 
 
 ```typescript
 function crawlDirectory(dir: string, f: (_: string) => void) {
@@ -161,7 +161,7 @@ crawlDirectory(
             });
     });
 ```
-We also created the private CDN request log bucket just for developing.
+We also created the private CDN request log bucket just for development needs.
 
 ```typescript
 // logsBucket is an S3 bucket that will contain the CDN's request logs.
@@ -176,7 +176,7 @@ const logsBucket = new aws.s3.Bucket("requestLogs",
 
 If the certificateArn is not provided as a configuration, the code will create a new certificate.
 
-First it is creating an east region, which is the required region for ACM Certificate.
+Therefore, the first step is to create an east region, which is the required region for ACM Certificate.
 
 Then we will create a new certificate by doing:
 
@@ -187,7 +187,7 @@ const certificate = new aws.acm.Certificate("certificate", {
     }, { provider: eastRegion });
 ```
 
-Then create a Route53 Record to prove we own the domain that we are requesting certificate for.
+Then create a Route53 Record to prove we own the domain that we are requesting the certificate for.
 
 ```typescript
 const domainParts = getDomainAndSubdomain(config.targetDomain);
@@ -310,7 +310,7 @@ const cdn = new aws.cloudfront.Distribution("cdn", distributionArgs);
 ```
 
 ### Step 5: Alias Record
-Then, we are able to create an alias record that points to the CloudFront distribution that we configured. Here is the function for it.
+Then, we can create an alias record that points to the CloudFront distribution that we configured. Here is the function for it.
 
 ```typescript
 function createAliasRecord(
@@ -337,19 +337,19 @@ const aRecord = createAliasRecord(config.targetDomain, cdn);
 ```
 ---
 
-Now that we have finished implementing the infrastructure of deploying. After setting the AWS configuration we could run `pulumi up` to execute the Pulumi code to deploy this on AWS. However, there is a more convienent way to do so.
+Now that we have finished implementing the infrastructure of deploying. After setting the AWS configuration we could run `pulumi up` to execute the Pulumi code to deploy this on AWS. However, there is a more convenient way to do so.
 
 ## Github Workflow (Optional)
 
-Github Workflow adopt the Continuous Delivery/Intergration concept and specifies series of steps to run and deploy program. We could take advantage of it with our CMS.
+Github Workflow adopts the Continuous Delivery/Integration concept and specifies a series of steps to run and deploy the program. We could take advantage of it with our CMS.
 
-Under the `.github/workflow` we have implemented the workflow that we described above. The sixth step "Assume Role" is for people who had an AWS IAM user access token and want to assume the role of admin in one of AWS account, then the code in `./scripts/assume-role.sh` contains a great function to assume role into AWS account.
+Under the `.github/workflow` we have implemented the workflow that we described above. The sixth step "Assume Role" is for people who had an AWS IAM user access token and want to assume the role of admin in one of AWS account, then the code in `./scripts/assume-role.sh` contains a great function to assume a role in the AWS account.
 
-In the workflow, multiple Github Secret are refered to as `${{ secrets.ACCESS_TOKEN }}` where `ACCESS_TOKEN` is any Github secret. We could specify the secret inside the project setting of Github. 
+In the workflow, multiple Github Secret are referred to as `${{ secrets.ACCESS_TOKEN }}` where `ACCESS_TOKEN` is any Github secret. We could specify the secret inside the project setting of Github. 
 
 ![Github Secrets Settings](./github-secrets.jpg)
 
-`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` is the IAM user tokens. `IAM_ROLE_ARN` and `EXTERNAL_ID` is the information for the role that we cwould like to assume. `PULUMI_ACCESS_TOKEN` is required for automatic process and could be generated by clicking the blue button "New Access Token" on the Settings of https://app.pulumi.com
+`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` is the IAM user tokens. `IAM_ROLE_ARN` and `EXTERNAL_ID` is the information for the role that we would like to assume. `PULUMI_ACCESS_TOKEN` is required for the automatic process and could be generated by clicking the blue button "New Access Token" on the Settings of https://app.pulumi.com
 
 ![Pulumi Tokens](./pulumi-token.jpg)
 
@@ -357,10 +357,9 @@ In the workflow, multiple Github Secret are refered to as `${{ secrets.ACCESS_TO
 
 ## Summary and Next Step
 
-Now we have deployed the stand-alone React CMS application on AWS. The full code is included in ![Pulumi's Example Repository](https://github.com/pulumi/examples) with the link [TODO: FILL IN THE LINK]
+Now we have deployed the stand-alone React CMS application on AWS. The full code is included in [Pulumi's Example Repository](https://github.com/pulumi/examples) with the link [TODO: FILL IN THE LINK]
 
-As mentioned previously, because we are deploying on AWS instead of Netlify, we have to found a way to substitute the Netlify Identity Service. Thus, the next step is to write an Exteral OAuth Client Server and deploy it on AWS as well. We would introduce that in our next blog post.
-
+As mentioned previously, because we are deploying on AWS instead of Netlify, we have to found a way to substitute the Netlify Identity Service. Thus, the next step is to write an External OAuth Client-Server and deploy it on AWS as well. We would introduce that in our next blog post.
 
 
 
