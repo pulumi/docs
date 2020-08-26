@@ -1,0 +1,561 @@
+---
+title: "Creating and Deploying a Django application to AWS"
+date: 2020-08-28
+meta_desc: Using Pulumi to create and deploy a simple Django MySQL application to AWS
+meta_image: meta.png
+authors: ["vova-ivanov"]
+tags: ["aws", "python", "mysql", "docker"]
+---
+
+In this blog post, we will finish swapping out the frontend and backend of our [Python AWS application]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}). Although Flask and Redis are different from Django and MySQL in many ways, the underlying infrastructure behind their deployment is nonetheless very similar, and can be effortlessly updated as we transition from one to the other. 
+
+<!--more-->
+
+We will be paying additional attention to security, and will be making use of Pulumi's secret management tools to protect our passwords and private keys. 
+
+The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-python`.
+
+```bash
+$ mkdir aws-django-voting-app && cd aws-django-voting-app
+$ pulumi new aws-python
+```
+
+Next, let's create a folder to hold our application, and start a Django project in it.
+
+```bash
+$ mkdir frontend && cd frontend
+$ django-admin startproject mysite
+$ cd mysite
+```
+
+This tutorial was written for the [aws-django-voting-app example](https://github.com/jetvova/examples/tree/vova/aws-py-sql-dynamicresource/aws-py-dynamicresource), but works just as well with any other Django application. The most important file is `./mysite/settings.py`, which we will modify to accept secrets and configuration parameters in the form of environment variables. A common mistake that programmers make is to submit files with important data to source code repositories. Even if it is a private repository, it is still not recommended practice to leave passwords and private keys in your files.
+
+```python
+SECRET_KEY = os.environ['SECRET_KEY']
+```
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ['DATABASE_NAME'],
+        'USER': os.environ['USER_NAME'],
+        'PASSWORD': os.environ['USER_PASSWORD'],
+        'HOST': os.environ['DATABASE_ADDRESS'],
+        'PORT': os.environ['DATABASE_PORT'],
+    }
+}
+```
+
+In order to be able to perform database migrations as part of the deployment, we will create a `setupDatabase.sh` script inside the `aws-django-voting-app/frontend/mysite` folder. As a bonus, the script will create an admin account that we can use to log into our website with. Make sure the file has exec permissions.
+
+```bash
+#!/bin/bash
+set -exu
+python3 /mysite/manage.py makemigrations
+python3 /mysite/manage.py migrate
+export DJANGO_SUPERUSER_PASSWORD=$DJANGO_PASSWORD 
+python3 /mysite/manage.py createsuperuser \
+    --no-input \
+    --username=$DJANGO_NAME \
+    --email=$DJANGO_NAME@example.com
+```
+
+The next step, is to go back into the `aws-django-voting-app/frontend` folder, and set up Docker to turn our application into a container. First, we will list the libraries our application uses by creating a `requirements.txt` file with the following lines.
+
+```python
+django==3.1
+mysqlclient==1.4.0
+```
+
+And lastly, we can create the `Dockerfile`.
+
+```bash
+FROM ubuntu:18.04
+
+WORKDIR /
+
+EXPOSE 80
+
+RUN apt-get update && \
+    apt install -y gcc python3-dev python3-pip mysql-client-core-5.7 libmysqlclient-dev
+
+ADD requirements.txt /
+
+RUN pip3 install -r requirements.txt
+
+ADD mysite /mysite
+
+CMD [ "python3", "/mysite/manage.py", "runserver", "0.0.0.0:80" ]
+```
+
+Now that our Djano application and Dockerfile are ready, we can return to the main `aws-django-voting-app` folder. The Pulumi project requires several configuration variables, which we set using `pulumi config set`. They are used to configure the MySQL admin account, a user account for initializing the table, and the Django website admin account.
+
+```bash
+$ pulumi config set sql-admin-name <NAME>
+$ pulumi config set sql-admin-password <PASSWORD> --secret
+$ pulumi config set sql-user-name <NAME>
+$ pulumi config set sql-user-password <PASSWORD> --secret
+$ pulumi config set django-admin-name <NAME>
+$ pulumi config set django-admin-password <PASSWORD> --secret
+```
+
+The `requirements.txt` file lists the libraries used by the project. We will need to add the following:
+
+```python
+pulumi-docker>=2.0.0,<3.0.0
+pulumi-mysql>=2.0.0,<3.0.0
+mysql-connector-python>=1.0.0,<10.0.0
+```
+
+The fist few lines of our `__main__.py` file indicate the libraries to import and describe the application's configuration options.
+
+```python
+import json
+import base64
+import pulumi
+import pulumi_aws as aws
+import pulumi_docker as docker
+import pulumi_mysql as mysql
+
+config = pulumi.Config()
+sql_admin_name = config.require("sql-admin-name")
+sql_admin_password = config.require_secret("sql-admin-password")
+sql_user_name = config.require("sql-user-name")
+sql_user_password = config.require_secret("sql-user-password")
+availability_zone = pulumi.Config("aws").get("region")
+
+django_admin_name = config.require("django-admin-name")
+django_admin_password = config.require_secret("django-admin-password")
+
+django_secret_key = config.require_secret("django-secret-key")
+```
+
+After setting up the imports and configurations, we create an Elastic Container Service Cluster.
+A Cluster represents a group of tasks and services that work together for a certain purpose. In
+this instance, the purpose is to provide users with a voting application.
+
+```python
+app_cluster = aws.ecs.Cluster("app-cluster")
+```
+
+To allow different tasks within our cluster to communicate, we create a Virtual Private
+Cloud and an associated subnet. Two subnets are required for the project, so the availability zone suffix is set to "a".
+
+```python
+app_vpc = aws.ec2.Vpc("app-vpc",
+    cidr_block="172.31.0.0/16",
+    enable_dns_hostnames=True)
+
+app_vpc_subnet = aws.ec2.Subnet("app-vpc-subnet",
+    cidr_block="172.31.0.0/20",
+    availability_zone=availability_zone + "a",
+    vpc_id=app_vpc)
+```
+
+A gateway and routing table are needed to allow the VPC to communicate with the Internet.
+Once created, we associate the routing table with our VPC.
+
+```python
+app_gateway = aws.ec2.InternetGateway("app-gateway",
+    vpc_id=app_vpc.id)
+
+app_routetable = aws.ec2.RouteTable("app-routetable",
+    routes=[
+        {
+            "cidr_block": "0.0.0.0/0",
+            "gateway_id": app_gateway.id,
+        }
+    ],
+    vpc_id=app_vpc.id)
+
+app_routetable_association = aws.ec2.MainRouteTableAssociation("app_routetable_association",
+    route_table_id=app_routetable.id,
+    vpc_id=app_vpc)
+```
+
+To control traffic flow between applications running inside our VPC, we create a security group.
+
+```python
+app_security_group = aws.ec2.SecurityGroup("security-group",
+	vpc_id=app_vpc.id,
+	description="Enables HTTP access",
+    ingress=[{
+		'protocol': 'tcp',
+		'from_port': 0,
+		'to_port': 65535,
+		'cidr_blocks': ['0.0.0.0/0'],
+    }],
+    egress=[{
+		'protocol': '-1',
+		'from_port': 0,
+		'to_port': 0,
+		'cidr_blocks': ['0.0.0.0/0'],
+    }])
+```
+
+To start our services, we need to create an Identity and Access Management (IAM) role,
+and attach execution permissions to it.
+
+```python
+app_exec_role = aws.iam.Role("app-exec-role",
+    assume_role_policy="""{
+        "Version": "2012-10-17",
+        "Statement": [
+        {
+            "Action": "sts:AssumeRole",
+            "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+            },
+            "Effect": "Allow",
+            "Sid": ""
+        }]
+    }""")
+
+exec_policy_attachment = aws.iam.RolePolicyAttachment("app-exec-policy", role=app_exec_role.name,
+	policy_arn="arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy")
+```
+
+Likewise, our ECS service will need to have a task role to manage it, along with its own set
+of permissions.
+
+```python
+app_task_role = aws.iam.Role("app-task-role",
+    assume_role_policy="""{
+        "Version": "2012-10-17",
+        "Statement": [
+        {
+            "Action": "sts:AssumeRole",
+            "Principal": {
+                "Service": "ecs-tasks.amazonaws.com"
+            },
+            "Effect": "Allow",
+            "Sid": ""
+        }]
+    }""")
+
+task_policy_attachment = aws.iam.RolePolicyAttachment("app-access-policy", role=app_task_role.name,
+	policy_arn="arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess")
+
+task_policy_attachment = aws.iam.RolePolicyAttachment("app-lambda-policy", role=app_task_role.name,
+	policy_arn="arn:aws:iam::aws:policy/AWSLambdaFullAccess")
+```
+
+An Elastic Container Registry Repository stores the application Docker images that we want
+to run. The life cycle policy automatically removes the oldest untagged image that we uploaded.
+
+```python
+app_ecr_repo = aws.ecr.Repository("app-ecr-repo",
+    image_tag_mutability="MUTABLE")
+
+app_lifecycle_policy = aws.ecr.LifecyclePolicy("app-lifecycle-policy",
+    repository=app_ecr_repo.name,
+    policy="""{
+        "rules": [
+            {
+                "rulePriority": 10,
+                "description": "Remove untagged images",
+                "selection": {
+                    "tagStatus": "untagged",
+                    "countType": "imageCountMoreThan",
+                    "countNumber": 1
+                },
+                "action": {
+                    "type": "expire"
+                }
+            }
+        ]
+    }""")
+```
+
+With the basic infrastructure in place, we can start writing the backend for the application.
+
+Our MySQL database is created with an RDS instance. To create the instance, Amazon requires 
+that it be given two subnets in different availability zones.
+
+```python
+extra_rds_subnet = aws.ec2.Subnet("extra-rds-subnet",
+    cidr_block="172.31.128.0/20",
+    availability_zone=availability_zone + "b",
+    vpc_id=app_vpc)
+```
+
+Both subnets are assigned to a SubnetGroup which belongs to the RDS instance.
+
+```python
+app_database_subnetgroup = aws.rds.SubnetGroup("app-database-subnetgroup",
+    subnet_ids=[app_vpc_subnet.id, extra_rds_subnet.id])
+
+mysql_rds_server = aws.rds.Instance("mysql-server",
+    engine="mysql",
+    username=sql_admin_name,
+    password=sql_admin_password,
+    instance_class="db.t2.micro",
+    allocated_storage=20,
+    skip_final_snapshot=True,
+    publicly_accessible=True,
+    db_subnet_group_name=app_database_subnetgroup.id,
+    vpc_security_group_ids=[app_security_group.id])
+```
+
+Pulumi offers some additional tools to make handling MySQL easier.
+
+```python
+mysql_provider = mysql.Provider("mysql-provider",
+    endpoint=mysql_rds_server.endpoint,
+    username=sql_admin_name,
+    password=sql_admin_password)
+```
+
+We initialize the example database and create a user to manage it.
+
+```python
+mysql_database = mysql.Database("mysql-database",
+    name="votes-database",
+    opts=pulumi.ResourceOptions(provider=mysql_provider))
+
+mysql_user = mysql.User("mysql-standard-user",
+    user=sql_user_name,
+    host="example.com",
+    plaintext_password=sql_user_password,
+    opts=pulumi.ResourceOptions(provider=mysql_provider))
+```
+
+The user account which we will give to Django only needs the "SELECT", "UPDATE", "INSERT", 
+and "DELETE" permissions to function.
+
+```python
+mysql_access_grant = mysql.Grant("mysql-access-grant",
+    user=mysql_user.user,
+    host=mysql_user.host,
+    database=mysql_database.name,
+    privileges= ["SELECT", "UPDATE", "INSERT", "DELETE"],
+    opts=pulumi.ResourceOptions(provider=mysql_provider))
+```
+
+Our RDS instance has been set up, and the MySQL backend is complete. All that's left is to 
+create the Django frontend.
+
+A target group, balancer, and listener is created for the frontend.
+
+```python
+django_targetgroup = aws.lb.TargetGroup("django-targetgroup",
+	port=80,
+	protocol="TCP",
+	target_type="ip",
+    stickiness= {
+        "enabled": False,
+        "type": "lb_cookie",
+    },
+	vpc_id=app_vpc.id)
+
+django_balancer = aws.lb.LoadBalancer("django-balancer",
+    load_balancer_type="network",
+    internal=False,
+    security_groups=[],
+    subnets=[app_vpc_subnet.id])
+
+django_listener = aws.lb.Listener("django-listener",
+	load_balancer_arn=django_balancer.arn,
+	port=80,
+    protocol="TCP",
+	default_actions=[{
+		"type": "forward",
+		"target_group_arn": django_targetgroup.arn
+	}])
+```
+
+The application is built into a Docker image and pushed to our ECR repository we created
+earlier.
+
+```python
+def get_registry_info(rid):
+    creds = aws.ecr.get_credentials(registry_id=rid)
+    decoded = base64.b64decode(creds.authorization_token).decode()
+    parts = decoded.split(':')
+    if len(parts) != 2:
+        raise Exception("Invalid credentials")
+    return docker.ImageRegistry(creds.proxy_endpoint, parts[0], parts[1])
+
+app_registry = app_ecr_repo.registry_id.apply(get_registry_info)
+
+django_image = docker.Image("django-dockerimage",
+    image_name=app_ecr_repo.repository_url,
+    build="./frontend",
+    skip_push=False,
+    registry=app_registry
+)
+```
+
+To help with debugging our application, we will create a Cloudwatch instance to automatically 
+store all logs.
+
+```python
+django_log_group = aws.cloudwatch.LogGroup("django-log-group",
+    retention_in_days=1,
+    name="django-log-group"
+)
+```
+
+Our project is special because it uses two unique ECS services---one that sets up the MySQL 
+database and stops, and one that continuously runs and handles the website.
+
+First, let's create the task definition that runs once and sets up the database.
+
+```python
+django_database_task_definition = aws.ecs.TaskDefinition("django-database-task-definition",
+    family="django_database_task_definition-family",
+    cpu="256",
+    memory="512",
+    network_mode="awsvpc",
+    requires_compatibilities=["FARGATE"],
+    execution_role_arn=app_exec_role.arn,
+    task_role_arn=app_task_role.arn,
+    container_definitions=pulumi.Output.all(
+            # We must do Output.all() to access Pulumi secrets 
+            django_image.image_name,
+            django_secret_key,
+            mysql_database.name,
+            sql_admin_name,
+            sql_admin_password, 
+            django_admin_name,
+            django_admin_password, 
+            mysql_rds_server.address,
+            mysql_rds_server.port).apply(lambda args: json.dumps([{
+        "name": "django-container",
+        "image": args[0],
+        "memory": 512,
+        "essential": True,
+        "portMappings": [{
+            "containerPort": 80,
+            "hostPort": 80,
+            "protocol": "tcp"
+        }],
+        "environment": [
+            { "name": "SECRET_KEY", "value": args[1]  },
+            { "name": "DATABASE_NAME", "value": args[2]  },
+            { "name": "USER_NAME", "value": args[3]  },
+            { "name": "USER_PASSWORD", "value": args[4]  },
+            { "name": "DJANGO_NAME", "value": args[5]  },
+            { "name": "DJANGO_PASSWORD", "value": args[6]  },
+            { "name": "DATABASE_ADDRESS", "value": args[7]  },
+            { "name": "DATABASE_PORT", "value": str(int(args[8]))  },
+        ],
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-group": "django-log-group",
+                "awslogs-region": "us-west-2",
+                "awslogs-stream-prefix": "djangoApp-database",           
+            },
+        },
+        # We override the command in the Dockerfile with a new one
+        "command": ["/mysite/setupDatabase.sh"]
+    }])))
+```
+
+We can now launch our first service on Fargate.
+
+```python
+django_database_service = aws.ecs.Service("django-database-service",
+	cluster=app_cluster.arn,
+    desired_count=1,
+    launch_type="FARGATE",
+    task_definition=django_database_task_definition.arn,
+    wait_for_steady_state=False,
+    network_configuration={
+		"assign_public_ip": "true",
+		"subnets": [app_vpc_subnet.id],
+		"security_groups": [app_security_group.id]
+	},
+    load_balancers=[{
+		"target_group_arn": django_targetgroup.arn,
+		"container_name": "django-container",
+		"container_port": 80,
+	}],
+    opts=pulumi.ResourceOptions(depends_on=[django_listener]),
+)
+```
+
+Finally, let's create the second task definition to run the website.
+
+```python
+django_site_task_definition = aws.ecs.TaskDefinition("django-site-task-definition",
+    family="django-site-task-definition-family",
+    cpu="256",
+    memory="512",
+    network_mode="awsvpc",
+    requires_compatibilities=["FARGATE"],
+    execution_role_arn=app_exec_role.arn,
+    task_role_arn=app_task_role.arn,
+    container_definitions=pulumi.Output.all(
+            django_image.image_name,
+            django_secret_key,
+            mysql_database.name,
+            sql_user_name,
+            sql_user_password, 
+            mysql_rds_server.address,
+            mysql_rds_server.port).apply(lambda args: json.dumps([{
+        "name": "django-container",
+        "image": args[0],
+        "memory": 512,
+        "essential": True,
+        "portMappings": [{
+            "containerPort": 80,
+            "hostPort": 80,
+            "protocol": "tcp"
+        }],
+        "environment": [
+            { "name": "SECRET_KEY", "value": args[1]  },
+            { "name": "DATABASE_NAME", "value": args[2]  },
+            { "name": "USER_NAME", "value": args[3]  },
+            { "name": "USER_PASSWORD", "value": args[4]  },
+            { "name": "DATABASE_ADDRESS", "value": args[5]  },
+            { "name": "DATABASE_PORT", "value": str(int(args[6]))  },
+        ],
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-group": "django-log-group",
+                "awslogs-region": "us-west-2",
+                "awslogs-stream-prefix": "djangoApp-site",           
+            },
+        },
+    }])))
+```
+
+Similarly, we will launch our second task definition on Fargate.
+
+```python
+django_site_service = aws.ecs.Service("django-site-service",
+	cluster=app_cluster.arn,
+    desired_count=1,
+    launch_type="FARGATE",
+    task_definition=django_site_task_definition.arn,
+    wait_for_steady_state=False,
+    network_configuration={
+		"assign_public_ip": "true",
+		"subnets": [app_vpc_subnet.id],
+		"security_groups": [app_security_group.id]
+	},
+    load_balancers=[{
+		"target_group_arn": django_targetgroup.arn,
+		"container_name": "django-container",
+		"container_port": 80,
+	}],
+    opts=pulumi.ResourceOptions(depends_on=[django_listener]),
+```
+
+To connect to our application, we export the DNS name of the Django balancer, and open it
+in a browser window. To access Django administration, add "/admin/" to the end of the url,
+and login using your Django admin credentials.
+
+```python
+pulumi.export("app-url", django_balancer.dns_name)
+```
+
+In this example, I described how to set up a basic Django voting application, and deploy it to AWS. Although our Django and Flask applications use very different AWS services, we were able to seamlessly replace the previous infrastructure with what was needed.
+
+Next week, I'll ________.
+
+The blog post's full code and an in-depth explanation for each component can be [found on Github](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app).
