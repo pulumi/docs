@@ -192,3 +192,11 @@ pulumi stack select product-catalog-service
 pulumi config set mysetting myvalue
 pulumi up --yes
 ```
+
+## Enhance Merge Requests With Pulumi
+
+Pulumi now supports enhancing your merge requests with insights into changes to your infrastructure.
+Never miss another unintended change with the infrastructure change summary shown inline with the rest of your
+merge request notes. Learn how to [configure]({{< relref "gitlab-app" >}}) the integration with Pulumi.
+
+![Merge Request Note](/images/docs/guides/continuous-delivery/gitlab-app/merge_request_note.png)
