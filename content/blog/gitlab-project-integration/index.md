@@ -42,7 +42,7 @@ Here's a _preview_ of what that looks like 😉
 
 ![Merge Request Note](/images/docs/guides/continuous-delivery/gitlab-app/merge_request_note.png)  
 
-Head over to our docs to learn how to [configure the GitLab integration]({{< relref "docs/guides/continuous-delivery/gitlab-app" >}}) whether it's for
+Head over to our docs to learn how to [configure the GitLab integration]({{< relref "docs/guides/continuous-delivery/gitlab-app" >}}), whether for
 a single project or all of the projects under a GitLab Group.
 
 GitLab provides lots of tools for streamlining your application delivery, and the new integration with Pulumi makes things even better.
