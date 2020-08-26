@@ -556,6 +556,6 @@ pulumi.export("app-url", django_balancer.dns_name)
 
 In this example, I described how to set up a basic Django voting application, and deploy it to AWS. Although our Django and Flask applications use very different AWS services, we were able to seamlessly replace the previous infrastructure with what was needed.
 
-Next week, I'll ________.
+Next week, we'll explore PostgreSQL, Express, React, and Node.js, and will use them together to create a simple application.
 
 The blog post's full code and an in-depth explanation for each component can be [found on Github](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app).
