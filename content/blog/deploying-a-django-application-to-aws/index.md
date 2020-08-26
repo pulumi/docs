@@ -7,11 +7,11 @@ authors: ["vova-ivanov"]
 tags: ["aws", "python", "mysql", "docker"]
 ---
 
-In this blog post, we will finish swapping out the frontend and backend of our [Python AWS application]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}). Although Flask and Redis are different from Django and MySQL in many ways, the underlying infrastructure behind their deployment is nonetheless very similar, and can be effortlessly updated as we transition from one to the other. 
+In this blog post, we will finish swapping out the frontend and backend of our [Python AWS application]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}). Although Flask and Redis are different from Django and MySQL in many ways, the underlying infrastructure behind their deployment is nonetheless very similar, and can be effortlessly updated as we transition from one to the other.
 
 <!--more-->
 
-We will be paying additional attention to security, and will be making use of Pulumi's secret management tools to protect our passwords and private keys. 
+We will be paying additional attention to security, and will be making use of Pulumi's secret management tools to protect our passwords and private keys.
 
 The first step is to create a new directory and initialize a Pulumi project with `pulumi new aws-python`.
 
@@ -54,7 +54,7 @@ In order to be able to perform database migrations as part of the deployment, we
 set -exu
 python3 /mysite/manage.py makemigrations
 python3 /mysite/manage.py migrate
-export DJANGO_SUPERUSER_PASSWORD=$DJANGO_PASSWORD 
+export DJANGO_SUPERUSER_PASSWORD=$DJANGO_PASSWORD
 python3 /mysite/manage.py createsuperuser \
     --no-input \
     --username=$DJANGO_NAME \
@@ -270,7 +270,7 @@ app_lifecycle_policy = aws.ecr.LifecyclePolicy("app-lifecycle-policy",
 
 With the basic infrastructure in place, we can start writing the backend for the application.
 
-Our MySQL database is created with an RDS instance. To create the instance, Amazon requires 
+Our MySQL database is created with an RDS instance. To create the instance, Amazon requires
 that it be given two subnets in different availability zones.
 
 ```python
@@ -321,7 +321,7 @@ mysql_user = mysql.User("mysql-standard-user",
     opts=pulumi.ResourceOptions(provider=mysql_provider))
 ```
 
-The user account which we will give to Django only needs the "SELECT", "UPDATE", "INSERT", 
+The user account which we will give to Django only needs the "SELECT", "UPDATE", "INSERT",
 and "DELETE" permissions to function.
 
 ```python
@@ -333,7 +333,7 @@ mysql_access_grant = mysql.Grant("mysql-access-grant",
     opts=pulumi.ResourceOptions(provider=mysql_provider))
 ```
 
-Our RDS instance has been set up, and the MySQL backend is complete. All that's left is to 
+Our RDS instance has been set up, and the MySQL backend is complete. All that's left is to
 create the Django frontend.
 
 A target group, balancer, and listener is created for the frontend.
@@ -387,7 +387,7 @@ django_image = docker.Image("django-dockerimage",
 )
 ```
 
-To help with debugging our application, we will create a Cloudwatch instance to automatically 
+To help with debugging our application, we will create a Cloudwatch instance to automatically
 store all logs.
 
 ```python
@@ -397,7 +397,7 @@ django_log_group = aws.cloudwatch.LogGroup("django-log-group",
 )
 ```
 
-Our project is special because it uses two unique ECS services---one that sets up the MySQL 
+Our project is special because it uses two unique ECS services---one that sets up the MySQL
 database and stops, and one that continuously runs and handles the website.
 
 First, let's create the task definition that runs once and sets up the database.
@@ -412,14 +412,14 @@ django_database_task_definition = aws.ecs.TaskDefinition("django-database-task-d
     execution_role_arn=app_exec_role.arn,
     task_role_arn=app_task_role.arn,
     container_definitions=pulumi.Output.all(
-            # We must do Output.all() to access Pulumi secrets 
+            # We must do Output.all() to access Pulumi secrets
             django_image.image_name,
             django_secret_key,
             mysql_database.name,
             sql_admin_name,
-            sql_admin_password, 
+            sql_admin_password,
             django_admin_name,
-            django_admin_password, 
+            django_admin_password,
             mysql_rds_server.address,
             mysql_rds_server.port).apply(lambda args: json.dumps([{
         "name": "django-container",
@@ -446,7 +446,7 @@ django_database_task_definition = aws.ecs.TaskDefinition("django-database-task-d
             "options": {
                 "awslogs-group": "django-log-group",
                 "awslogs-region": "us-west-2",
-                "awslogs-stream-prefix": "djangoApp-database",           
+                "awslogs-stream-prefix": "djangoApp-database",
             },
         },
         # We override the command in the Dockerfile with a new one
@@ -493,7 +493,7 @@ django_site_task_definition = aws.ecs.TaskDefinition("django-site-task-definitio
             django_secret_key,
             mysql_database.name,
             sql_user_name,
-            sql_user_password, 
+            sql_user_password,
             mysql_rds_server.address,
             mysql_rds_server.port).apply(lambda args: json.dumps([{
         "name": "django-container",
@@ -518,7 +518,7 @@ django_site_task_definition = aws.ecs.TaskDefinition("django-site-task-definitio
             "options": {
                 "awslogs-group": "django-log-group",
                 "awslogs-region": "us-west-2",
-                "awslogs-stream-prefix": "djangoApp-site",           
+                "awslogs-stream-prefix": "djangoApp-site",
             },
         },
     }])))
