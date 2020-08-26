@@ -853,8 +853,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="recommendationname_python">
-<a href="#recommendationname_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Name</a>
+        <span id="recommendation_name_python">
+<a href="#recommendation_name_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -864,8 +864,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="recommendationtypeid_python">
-<a href="#recommendationtypeid_python" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Type<wbr>Id</a>
+        <span id="recommendation_type_id_python">
+<a href="#recommendation_type_id_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>type_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -875,8 +875,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourcename_python">
-<a href="#resourcename_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
+        <span id="resource_name_python">
+<a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -886,8 +886,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourcetype_python">
-<a href="#resourcetype_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -897,8 +897,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="suppressionnames_python">
-<a href="#suppressionnames_python" style="color: inherit; text-decoration: inherit;">suppression<wbr>Names</a>
+        <span id="suppression_names_python">
+<a href="#suppression_names_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -908,8 +908,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="updatedtime_python">
-<a href="#updatedtime_python" style="color: inherit; text-decoration: inherit;">updated<wbr>Time</a>
+        <span id="updated_time_python">
+<a href="#updated_time_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

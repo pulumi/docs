@@ -114,7 +114,7 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.Factory">Factory</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">github_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryGithubConfiguration]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vsts_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryVstsConfiguration]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.Factory">Factory</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">github_configuration</span><span class="p">:</span> <span class="nx">Optional[FactoryGithubConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FactoryIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vsts_configuration</span><span class="p">:</span> <span class="nx">Optional[FactoryVstsConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -555,7 +555,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#github_configuration_python" style="color: inherit; text-decoration: inherit;">github_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factorygithubconfiguration">Dict[Factory<wbr>Github<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -566,7 +566,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentity">Dict[Factory<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -599,7 +599,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -610,7 +610,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vsts_configuration_python" style="color: inherit; text-decoration: inherit;">vsts_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryvstsconfiguration">Dict[Factory<wbr>Vsts<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#factoryvstsconfiguration">Factory<wbr>Vsts<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vsts_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -714,7 +714,7 @@ Get an existing Factory resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">github_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryGithubConfiguration]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">vsts_configuration</span><span class="p">:</span> <span class="nx">Optional[Dict[FactoryVstsConfiguration]]</span> = None<span class="p">) -&gt;</span> Factory</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">github_configuration</span><span class="p">:</span> <span class="nx">Optional[FactoryGithubConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FactoryIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vsts_configuration</span><span class="p">:</span> <span class="nx">Optional[FactoryVstsConfigurationArgs]</span> = None<span class="p">) -&gt;</span> Factory</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1086,7 +1086,7 @@ The following state arguments are supported:
 <a href="#state_github_configuration_python" style="color: inherit; text-decoration: inherit;">github_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factorygithubconfiguration">Dict[Factory<wbr>Github<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1097,7 +1097,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentity">Dict[Factory<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -1141,7 +1141,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1152,7 +1152,7 @@ The following state arguments are supported:
 <a href="#state_vsts_configuration_python" style="color: inherit; text-decoration: inherit;">vsts_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryvstsconfiguration">Dict[Factory<wbr>Vsts<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#factoryvstsconfiguration">Factory<wbr>Vsts<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vsts_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1389,8 +1389,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="branchname_python">
-<a href="#branchname_python" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
+        <span id="branch_name_python">
+<a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1400,8 +1400,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="giturl_python">
-<a href="#giturl_python" style="color: inherit; text-decoration: inherit;">git<wbr>Url</a>
+        <span id="git_url_python">
+<a href="#git_url_python" style="color: inherit; text-decoration: inherit;">git_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1411,8 +1411,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="repositoryname_python">
-<a href="#repositoryname_python" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1422,8 +1422,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="rootfolder_python">
-<a href="#rootfolder_python" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1866,8 +1866,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="branchname_python">
-<a href="#branchname_python" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
+        <span id="branch_name_python">
+<a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1877,8 +1877,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="projectname_python">
-<a href="#projectname_python" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
+        <span id="project_name_python">
+<a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1888,8 +1888,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="repositoryname_python">
-<a href="#repositoryname_python" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1899,8 +1899,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="rootfolder_python">
-<a href="#rootfolder_python" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

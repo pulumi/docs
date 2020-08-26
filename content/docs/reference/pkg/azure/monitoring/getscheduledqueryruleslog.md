@@ -706,7 +706,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -834,15 +834,15 @@ The following output properties are available:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscheduledqueryruleslogcriteriadimension">List[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#getscheduledqueryruleslogcriteriadimension">List[Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `dimension` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

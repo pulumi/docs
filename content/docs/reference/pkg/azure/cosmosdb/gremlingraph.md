@@ -112,8 +112,8 @@ func main() {
 			return err
 		}
 		_, err = cosmosdb.NewGremlinGraph(ctx, "exampleGremlinGraph", &cosmosdb.GremlinGraphArgs{
-			ResourceGroupName: pulumi.String(azurerm_cosmosdb_account.Example.Resource_group_name),
-			AccountName:       pulumi.String(azurerm_cosmosdb_account.Example.Name),
+			ResourceGroupName: pulumi.Any(azurerm_cosmosdb_account.Example.Resource_group_name),
+			AccountName:       pulumi.Any(azurerm_cosmosdb_account.Example.Name),
 			DatabaseName:      exampleGremlinDatabase.Name,
 			PartitionKeyPath:  pulumi.String("/Example"),
 			Throughput:        pulumi.Int(400),
@@ -170,22 +170,22 @@ example_gremlin_graph = azure.cosmosdb.GremlinGraph("exampleGremlinGraph",
     database_name=example_gremlin_database.name,
     partition_key_path="/Example",
     throughput=400,
-    index_policies=[{
-        "automatic": True,
-        "indexingMode": "Consistent",
-        "includedPaths": ["/*"],
-        "excludedPaths": ["/\"_etag\"/?"],
-    }],
-    conflict_resolution_policies=[{
-        "mode": "LastWriterWins",
-        "conflictResolutionPath": "/_ts",
-    }],
-    unique_keys=[{
-        "paths": [
+    index_policies=[azure.cosmosdb.GremlinGraphIndexPolicyArgs(
+        automatic=True,
+        indexing_mode="Consistent",
+        included_paths=["/*"],
+        excluded_paths=["/\"_etag\"/?"],
+    )],
+    conflict_resolution_policies=[azure.cosmosdb.GremlinGraphConflictResolutionPolicyArgs(
+        mode="LastWriterWins",
+        conflict_resolution_path="/_ts",
+    )],
+    unique_keys=[azure.cosmosdb.GremlinGraphUniqueKeyArgs(
+        paths=[
             "/definition/id1",
             "/definition/id2",
         ],
-    }])
+    )])
 ```
 
 {{% /example %}}
@@ -243,7 +243,7 @@ const exampleGremlinGraph = new azure.cosmosdb.GremlinGraph("exampleGremlinGraph
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.GremlinGraph">GremlinGraph</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conflict_resolution_policies</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphConflictResolutionPolicy]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index_policies</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphIndexPolicy]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphUniqueKey]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.GremlinGraph">GremlinGraph</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conflict_resolution_policies</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphConflictResolutionPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index_policies</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphIndexPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphUniqueKeyArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -750,7 +750,7 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#conflict_resolution_policies_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">List[Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">List[Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph. One or more `conflict_resolution_policy` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -772,7 +772,7 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#index_policies_python" style="color: inherit; text-decoration: inherit;">index_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicy">List[Gremlin<wbr>Graph<wbr>Index<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicy">List[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -827,7 +827,7 @@ The GremlinGraph resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphuniquekey">List[Gremlin<wbr>Graph<wbr>Unique<wbr>Key]</a></span>
+        <span class="property-type"><a href="#gremlingraphuniquekey">List[Gremlin<wbr>Graph<wbr>Unique<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -931,7 +931,7 @@ Get an existing GremlinGraph resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conflict_resolution_policies</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphConflictResolutionPolicy]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index_policies</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphIndexPolicy]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphUniqueKey]]</span> = None<span class="p">) -&gt;</span> GremlinGraph</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conflict_resolution_policies</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphConflictResolutionPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index_policies</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphIndexPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">unique_keys</span><span class="p">:</span> <span class="nx">Optional[List[GremlinGraphUniqueKeyArgs]]</span> = None<span class="p">) -&gt;</span> GremlinGraph</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1380,7 +1380,7 @@ The following state arguments are supported:
 <a href="#state_conflict_resolution_policies_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">List[Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#gremlingraphconflictresolutionpolicy">List[Gremlin<wbr>Graph<wbr>Conflict<wbr>Resolution<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph. One or more `conflict_resolution_policy` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1402,7 +1402,7 @@ The following state arguments are supported:
 <a href="#state_index_policies_python" style="color: inherit; text-decoration: inherit;">index_<wbr>policies</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphindexpolicy">List[Gremlin<wbr>Graph<wbr>Index<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#gremlingraphindexpolicy">List[Gremlin<wbr>Graph<wbr>Index<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. One or more `index_policy` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1457,7 +1457,7 @@ The following state arguments are supported:
 <a href="#state_unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphuniquekey">List[Gremlin<wbr>Graph<wbr>Unique<wbr>Key]</a></span>
+        <span class="property-type"><a href="#gremlingraphuniquekey">List[Gremlin<wbr>Graph<wbr>Unique<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1628,8 +1628,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="conflictresolutionpath_python">
-<a href="#conflictresolutionpath_python" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Path</a>
+        <span id="conflict_resolution_path_python">
+<a href="#conflict_resolution_path_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1639,8 +1639,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="conflictresolutionprocedure_python">
-<a href="#conflictresolutionprocedure_python" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Procedure</a>
+        <span id="conflict_resolution_procedure_python">
+<a href="#conflict_resolution_procedure_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>procedure</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1828,8 +1828,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="indexingmode_python">
-<a href="#indexingmode_python" style="color: inherit; text-decoration: inherit;">indexing<wbr>Mode</a>
+        <span id="indexing_mode_python">
+<a href="#indexing_mode_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1850,8 +1850,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="excludedpaths_python">
-<a href="#excludedpaths_python" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
+        <span id="excluded_paths_python">
+<a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1861,8 +1861,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includedpaths_python">
-<a href="#includedpaths_python" style="color: inherit; text-decoration: inherit;">included<wbr>Paths</a>
+        <span id="included_paths_python">
+<a href="#included_paths_python" style="color: inherit; text-decoration: inherit;">included_<wbr>paths</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

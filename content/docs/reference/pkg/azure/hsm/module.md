@@ -282,16 +282,16 @@ example2 = azure.network.Subnet("example2",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
     address_prefixes=["10.2.1.0/24"],
-    delegations=[{
-        "name": "first",
-        "serviceDelegation": {
-            "name": "Microsoft.HardwareSecurityModules/dedicatedHSMs",
-            "actions": [
+    delegations=[azure.network.SubnetDelegationArgs(
+        name="first",
+        service_delegation=azure.network.SubnetDelegationServiceDelegationArgs(
+            name="Microsoft.HardwareSecurityModules/dedicatedHSMs",
+            actions=[
                 "Microsoft.Network/networkinterfaces/*",
                 "Microsoft.Network/virtualNetworks/subnets/join/action",
             ],
-        },
-    }])
+        ),
+    )])
 example3 = azure.network.Subnet("example3",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
@@ -306,19 +306,19 @@ example_virtual_network_gateway = azure.network.VirtualNetworkGateway("exampleVi
     type="ExpressRoute",
     vpn_type="PolicyBased",
     sku="Standard",
-    ip_configurations=[{
-        "public_ip_address_id": example_public_ip.id,
-        "privateIpAddressAllocation": "Dynamic",
-        "subnet_id": example3.id,
-    }])
+    ip_configurations=[azure.network.VirtualNetworkGatewayIpConfigurationArgs(
+        public_ip_address_id=example_public_ip.id,
+        private_ip_address_allocation="Dynamic",
+        subnet_id=example3.id,
+    )])
 example_module = azure.hsm.Module("exampleModule",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     sku_name="SafeNet Luna Network HSM A790",
-    network_profile={
-        "networkInterfacePrivateIpAddresses": ["10.2.1.8"],
-        "subnet_id": example2.id,
-    },
+    network_profile=azure.hsm.ModuleNetworkProfileArgs(
+        network_interface_private_ip_addresses=["10.2.1.8"],
+        subnet_id=example2.id,
+    ),
     stamp_id="stamp2",
     tags={
         "env": "Test",
@@ -413,7 +413,7 @@ const exampleModule = new azure.hsm.Module("exampleModule", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hsm/#pulumi_azure.hsm.Module">Module</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ModuleNetworkProfile]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stamp_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hsm/#pulumi_azure.hsm.Module">Module</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[ModuleNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stamp_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -876,7 +876,7 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulenetworkprofile">Dict[Module<wbr>Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#modulenetworkprofile">Module<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd>
@@ -942,7 +942,7 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Dedicated Hardware Security Module.
 {{% /md %}}</dd>
@@ -1057,7 +1057,7 @@ Get an existing Module resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ModuleNetworkProfile]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stamp_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Module</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[ModuleNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stamp_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Module</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1484,7 +1484,7 @@ The following state arguments are supported:
 <a href="#state_network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulenetworkprofile">Dict[Module<wbr>Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#modulenetworkprofile">Module<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd>
@@ -1528,7 +1528,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Dedicated Hardware Security Module.
 {{% /md %}}</dd>
@@ -1666,8 +1666,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="networkinterfaceprivateipaddresses_python">
-<a href="#networkinterfaceprivateipaddresses_python" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Private<wbr>Ip<wbr>Addresses</a>
+        <span id="network_interface_private_ip_addresses_python">
+<a href="#network_interface_private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>private_<wbr>ip_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

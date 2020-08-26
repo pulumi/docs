@@ -48,11 +48,11 @@ class MyStack : Stack
                 new Azure.ManagedApplication.Inputs.DefinitionAuthorizationArgs
                 {
                     ServicePrincipalId = current.Apply(current => current.ObjectId),
-                    RoleDefinitionId = Output.Tuple(builtin, builtin.Apply(builtin => builtin.Id.Split("/")).Length).Apply(values =>
+                    RoleDefinitionId = Output.Tuple(builtin.Apply(builtin => builtin.Id.Split("/")), builtin.Apply(builtin => builtin.Id.Split("/")).Length).Apply(values =>
                     {
-                        var builtin = values.Item1;
+                        var split = values.Item1;
                         var length = values.Item2;
-                        return builtin.Id.Split("/")[length - 1];
+                        return split[length - 1];
                     }),
                 },
             },
@@ -97,10 +97,10 @@ example_definition = azure.managedapplication.Definition("exampleDefinition",
     package_file_uri="https://github.com/Azure/azure-managedapp-samples/raw/master/Managed Application Sample Packages/201-managed-storage-account/managedstorage.zip",
     display_name="TestManagedAppDefinition",
     description="Test Managed App Definition",
-    authorizations=[{
-        "service_principal_id": current.object_id,
-        "role_definition_id": builtin.id.split("/")[len(builtin.id.split("/")) - 1],
-    }])
+    authorizations=[azure.managedapplication.DefinitionAuthorizationArgs(
+        service_principal_id=current.object_id,
+        role_definition_id=builtin.id.split("/")[len(builtin.id.split("/")) - 1],
+    )])
 example_application = azure.managedapplication.Application("exampleApplication",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -136,7 +136,7 @@ const exampleDefinition = new azure.managedapplication.Definition("exampleDefini
     description: "Test Managed App Definition",
     authorizations: [{
         servicePrincipalId: current.then(current => current.objectId),
-        roleDefinitionId: Promise.all([builtin, builtin.then(builtin => builtin.id.split("/")).length]).then(([builtin, length]) => builtin.id.split("/")[length - 1]),
+        roleDefinitionId: Promise.all([builtin.then(builtin => builtin.id.split("/")), builtin.then(builtin => builtin.id.split("/")).length]).then(([split, length]) => split[length - 1]),
     }],
 });
 const exampleApplication = new azure.managedapplication.Application("exampleApplication", {
@@ -167,7 +167,7 @@ const exampleApplication = new azure.managedapplication.Application("exampleAppl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/managedapplication/#pulumi_azure.managedapplication.Application">Application</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationPlan]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/managedapplication/#pulumi_azure.managedapplication.Application">Application</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ApplicationPlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -729,7 +729,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of name and value pairs to pass to the managed application as parameters.
 {{% /md %}}</dd>
@@ -740,7 +740,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationplan">Dict[Application<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#applicationplan">Application<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One `plan` block as defined below.
 {{% /md %}}</dd>
@@ -751,7 +751,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -874,7 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The name and value pairs that define the managed application outputs.
 {{% /md %}}</dd>
@@ -899,7 +899,7 @@ Get an existing Application resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[ApplicationPlan]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ApplicationPlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1425,7 +1425,7 @@ The following state arguments are supported:
 <a href="#state_outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The name and value pairs that define the managed application outputs.
 {{% /md %}}</dd>
@@ -1436,7 +1436,7 @@ The following state arguments are supported:
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of name and value pairs to pass to the managed application as parameters.
 {{% /md %}}</dd>
@@ -1447,7 +1447,7 @@ The following state arguments are supported:
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationplan">Dict[Application<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#applicationplan">Application<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One `plan` block as defined below.
 {{% /md %}}</dd>
@@ -1469,7 +1469,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1739,8 +1739,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="promotioncode_python">
-<a href="#promotioncode_python" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
+        <span id="promotion_code_python">
+<a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

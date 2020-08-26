@@ -111,7 +111,7 @@ func main() {
 			return err
 		}
 		_, err = synapse.NewFirewallRule(ctx, "exampleFirewallRule", &synapse.FirewallRuleArgs{
-			SynapseWorkspaceId: pulumi.String(azurerm_synapse_workspace.Test.Id),
+			SynapseWorkspaceId: pulumi.Any(azurerm_synapse_workspace.Test.Id),
 			StartIpAddress:     pulumi.String("0.0.0.0"),
 			EndIpAddress:       pulumi.String("255.255.255.255"),
 		})
@@ -137,7 +137,7 @@ example_account = azure.storage.Account("exampleAccount",
     account_tier="Standard",
     account_replication_type="LRS",
     account_kind="StorageV2",
-    is_hns_enabled="true")
+    is_hns_enabled=True)
 example_data_lake_gen2_filesystem = azure.storage.DataLakeGen2Filesystem("exampleDataLakeGen2Filesystem", storage_account_id=example_account.id)
 example_workspace = azure.synapse.Workspace("exampleWorkspace",
     resource_group_name=example_resource_group.name,

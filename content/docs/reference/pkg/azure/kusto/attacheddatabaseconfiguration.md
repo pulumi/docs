@@ -26,38 +26,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-rg = azure.core.ResourceGroup("rg", location="East US")
-follower_cluster = azure.kusto.Cluster("followerCluster",
-    location=rg.location,
-    resource_group_name=rg.name,
-    sku={
-        "name": "Dev(No SLA)_Standard_D11_v2",
-        "capacity": 1,
-    })
-followed_cluster = azure.kusto.Cluster("followedCluster",
-    location=rg.location,
-    resource_group_name=rg.name,
-    sku={
-        "name": "Dev(No SLA)_Standard_D11_v2",
-        "capacity": 1,
-    })
-followed_database = azure.kusto.Database("followedDatabase",
-    resource_group_name=rg.name,
-    location=rg.location,
-    cluster_name=azurerm_kusto_cluster["cluster2"]["name"])
-example = azure.kusto.AttachedDatabaseConfiguration("example",
-    resource_group_name=rg.name,
-    location=rg.location,
-    cluster_name=follower_cluster.name,
-    cluster_resource_id=followed_cluster.id,
-    database_name="*",
-    default_principal_modifications_kind="None")
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}

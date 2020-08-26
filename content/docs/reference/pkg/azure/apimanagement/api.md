@@ -133,10 +133,10 @@ example_api = azure.apimanagement.Api("exampleApi",
     display_name="Example API",
     path="example",
     protocols=["https"],
-    import_={
-        "contentFormat": "swagger-link-json",
-        "contentValue": "http://conferenceapi.azurewebsites.net/?format=json",
-    })
+    import_=azure.apimanagement.ApiImportArgs(
+        content_format="swagger-link-json",
+        content_value="http://conferenceapi.azurewebsites.net/?format=json",
+    ))
 ```
 
 {{% /example %}}
@@ -183,7 +183,7 @@ const exampleApi = new azure.apimanagement.Api("exampleApi", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.Api">Api</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiImport]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_authorization</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiOauth2Authorization]]</span> = None<span class="p">, </span><span class="nx">openid_authentication</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiOpenidAuthentication]]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soap_pass_through</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiSubscriptionKeyParameterNames]]</span> = None<span class="p">, </span><span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.Api">Api</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_</span><span class="p">:</span> <span class="nx">Optional[ApiImportArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_authorization</span><span class="p">:</span> <span class="nx">Optional[ApiOauth2AuthorizationArgs]</span> = None<span class="p">, </span><span class="nx">openid_authentication</span><span class="p">:</span> <span class="nx">Optional[ApiOpenidAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soap_pass_through</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[ApiSubscriptionKeyParameterNamesArgs]</span> = None<span class="p">, </span><span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1020,7 +1020,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#import__python" style="color: inherit; text-decoration: inherit;">import_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiimport">Dict[Api<wbr>Import]</a></span>
+        <span class="property-type"><a href="#apiimport">Api<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
 {{% /md %}}</dd>
@@ -1042,7 +1042,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#oauth2_authorization_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauth2authorization">Dict[Api<wbr>Oauth2Authorization]</a></span>
+        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
 {{% /md %}}</dd>
@@ -1053,7 +1053,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#openid_authentication_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiopenidauthentication">Dict[Api<wbr>Openid<wbr>Authentication]</a></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
 {{% /md %}}</dd>
@@ -1086,7 +1086,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#subscription_key_parameter_names_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>key_<wbr>parameter_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisubscriptionkeyparameternames">Dict[Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names]</a></span>
+        <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
 {{% /md %}}</dd>
@@ -1311,7 +1311,7 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiImport]]</span> = None<span class="p">, </span><span class="nx">is_current</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_online</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_authorization</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiOauth2Authorization]]</span> = None<span class="p">, </span><span class="nx">openid_authentication</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiOpenidAuthentication]]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soap_pass_through</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[Dict[ApiSubscriptionKeyParameterNames]]</span> = None<span class="p">, </span><span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Api</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_</span><span class="p">:</span> <span class="nx">Optional[ApiImportArgs]</span> = None<span class="p">, </span><span class="nx">is_current</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_online</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_authorization</span><span class="p">:</span> <span class="nx">Optional[ApiOauth2AuthorizationArgs]</span> = None<span class="p">, </span><span class="nx">openid_authentication</span><span class="p">:</span> <span class="nx">Optional[ApiOpenidAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soap_pass_through</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[ApiSubscriptionKeyParameterNamesArgs]</span> = None<span class="p">, </span><span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Api</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2112,7 +2112,7 @@ The following state arguments are supported:
 <a href="#state_import__python" style="color: inherit; text-decoration: inherit;">import_</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiimport">Dict[Api<wbr>Import]</a></span>
+        <span class="property-type"><a href="#apiimport">Api<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
 {{% /md %}}</dd>
@@ -2156,7 +2156,7 @@ The following state arguments are supported:
 <a href="#state_oauth2_authorization_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>authorization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauth2authorization">Dict[Api<wbr>Oauth2Authorization]</a></span>
+        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
 {{% /md %}}</dd>
@@ -2167,7 +2167,7 @@ The following state arguments are supported:
 <a href="#state_openid_authentication_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>authentication</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiopenidauthentication">Dict[Api<wbr>Openid<wbr>Authentication]</a></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
 {{% /md %}}</dd>
@@ -2244,7 +2244,7 @@ The following state arguments are supported:
 <a href="#state_subscription_key_parameter_names_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>key_<wbr>parameter_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisubscriptionkeyparameternames">Dict[Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names]</a></span>
+        <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
 {{% /md %}}</dd>
@@ -2437,8 +2437,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="contentformat_python">
-<a href="#contentformat_python" style="color: inherit; text-decoration: inherit;">content<wbr>Format</a>
+        <span id="content_format_python">
+<a href="#content_format_python" style="color: inherit; text-decoration: inherit;">content_<wbr>format</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2448,8 +2448,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="contentvalue_python">
-<a href="#contentvalue_python" style="color: inherit; text-decoration: inherit;">content<wbr>Value</a>
+        <span id="content_value_python">
+<a href="#content_value_python" style="color: inherit; text-decoration: inherit;">content_<wbr>value</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2459,11 +2459,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="wsdlselector_python">
-<a href="#wsdlselector_python" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Selector</a>
+        <span id="wsdl_selector_python">
+<a href="#wsdl_selector_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>selector</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiimportwsdlselector">Dict[Api<wbr>Import<wbr>Wsdl<wbr>Selector]</a></span>
+        <span class="property-type"><a href="#apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `wsdl_selector` block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when `content_format` is `wsdl` or `wsdl-link`.
 {{% /md %}}</dd>
@@ -2582,8 +2582,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="endpointname_python">
-<a href="#endpointname_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
+        <span id="endpoint_name_python">
+<a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2713,8 +2713,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="authorizationservername_python">
-<a href="#authorizationservername_python" style="color: inherit; text-decoration: inherit;">authorization<wbr>Server<wbr>Name</a>
+        <span id="authorization_server_name_python">
+<a href="#authorization_server_name_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>server_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2843,8 +2843,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="openidprovidername_python">
-<a href="#openidprovidername_python" style="color: inherit; text-decoration: inherit;">openid<wbr>Provider<wbr>Name</a>
+        <span id="openid_provider_name_python">
+<a href="#openid_provider_name_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>provider_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

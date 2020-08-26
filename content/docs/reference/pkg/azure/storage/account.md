@@ -279,11 +279,11 @@ example_account = azure.storage.Account("exampleAccount",
     location=example_resource_group.location,
     account_tier="Standard",
     account_replication_type="LRS",
-    network_rules={
-        "default_action": "Deny",
-        "ip_rules": ["100.0.0.1"],
-        "virtual_network_subnet_ids": [example_subnet.id],
-    },
+    network_rules=azure.storage.AccountNetworkRulesArgs(
+        default_action="Deny",
+        ip_rules=["100.0.0.1"],
+        virtual_network_subnet_ids=[example_subnet.id],
+    ),
     tags={
         "environment": "staging",
     })
@@ -342,7 +342,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#pulumi_azure.storage.Account">Account</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_replication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">blob_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountBlobProperties]]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountCustomDomain]]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountIdentity]]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountNetworkRules]]</span> = None<span class="p">, </span><span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountQueueProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountStaticWebsite]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#pulumi_azure.storage.Account">Account</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_replication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">blob_properties</span><span class="p">:</span> <span class="nx">Optional[AccountBlobPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[AccountCustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[AccountNetworkRulesArgs]</span> = None<span class="p">, </span><span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[AccountQueuePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[AccountStaticWebsiteArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1204,7 +1204,7 @@ for more information. Defaults to `true`.
 <a href="#blob_properties_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobproperties">Dict[Account<wbr>Blob<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
 {{% /md %}}</dd>
@@ -1215,7 +1215,7 @@ for more information. Defaults to `true`.
 <a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcustomdomain">Dict[Account<wbr>Custom<wbr>Domain]</a></span>
+        <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
 {{% /md %}}</dd>
@@ -1238,7 +1238,7 @@ for more information. Defaults to `true`.
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Dict[Account<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd>
@@ -1293,7 +1293,7 @@ for more information. Defaults to `true`.
 <a href="#network_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrules">Dict[Account<wbr>Network<wbr>Rules]</a></span>
+        <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd>
@@ -1304,7 +1304,7 @@ for more information. Defaults to `true`.
 <a href="#queue_properties_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueueproperties">Dict[Account<wbr>Queue<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
 {{% /md %}}</dd>
@@ -1315,7 +1315,7 @@ for more information. Defaults to `true`.
 <a href="#static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountstaticwebsite">Dict[Account<wbr>Static<wbr>Website]</a></span>
+        <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
 {{% /md %}}</dd>
@@ -1326,7 +1326,7 @@ for more information. Defaults to `true`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2838,7 +2838,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_replication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">blob_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountBlobProperties]]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountCustomDomain]]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountIdentity]]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountNetworkRules]]</span> = None<span class="p">, </span><span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_blob_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_blob_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_blob_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_dfs_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_dfs_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_file_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_file_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_queue_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_table_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_table_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_web_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_web_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountQueueProperties]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_blob_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_blob_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_blob_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_dfs_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_dfs_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_file_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_file_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_queue_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_table_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_table_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_web_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_web_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountStaticWebsite]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_replication_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">blob_properties</span><span class="p">:</span> <span class="nx">Optional[AccountBlobPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[AccountCustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_tls_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_rules</span><span class="p">:</span> <span class="nx">Optional[AccountNetworkRulesArgs]</span> = None<span class="p">, </span><span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_blob_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_blob_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_blob_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_dfs_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_dfs_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_file_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_file_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_queue_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_table_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_table_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_web_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_web_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[AccountQueuePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_blob_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_blob_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_blob_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_dfs_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_dfs_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_file_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_file_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_queue_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_table_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_table_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_web_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_web_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[AccountStaticWebsiteArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4687,7 +4687,7 @@ for more information. Defaults to `true`.
 <a href="#state_blob_properties_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobproperties">Dict[Account<wbr>Blob<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
 {{% /md %}}</dd>
@@ -4698,7 +4698,7 @@ for more information. Defaults to `true`.
 <a href="#state_custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcustomdomain">Dict[Account<wbr>Custom<wbr>Domain]</a></span>
+        <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
 {{% /md %}}</dd>
@@ -4721,7 +4721,7 @@ for more information. Defaults to `true`.
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Dict[Account<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd>
@@ -4776,7 +4776,7 @@ for more information. Defaults to `true`.
 <a href="#state_network_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrules">Dict[Account<wbr>Network<wbr>Rules]</a></span>
+        <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd>
@@ -4963,7 +4963,7 @@ for more information. Defaults to `true`.
 <a href="#state_queue_properties_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueueproperties">Dict[Account<wbr>Queue<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
 {{% /md %}}</dd>
@@ -5161,7 +5161,7 @@ for more information. Defaults to `true`.
 <a href="#state_static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountstaticwebsite">Dict[Account<wbr>Static<wbr>Website]</a></span>
+        <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
 {{% /md %}}</dd>
@@ -5172,7 +5172,7 @@ for more information. Defaults to `true`.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -5299,22 +5299,22 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="corsrules_python">
-<a href="#corsrules_python" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
+        <span id="cors_rules_python">
+<a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiescorsrule">List[Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#accountblobpropertiescorsrule">List[Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deleteretentionpolicy_python">
-<a href="#deleteretentionpolicy_python" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Policy</a>
+        <span id="delete_retention_policy_python">
+<a href="#delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>retention_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Dict[Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
 {{% /md %}}</dd>
@@ -5535,8 +5535,8 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedheaders_python">
-<a href="#allowedheaders_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+        <span id="allowed_headers_python">
+<a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5546,8 +5546,8 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedmethods_python">
-<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5558,8 +5558,8 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedorigins_python">
-<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+        <span id="allowed_origins_python">
+<a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5569,8 +5569,8 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span id="exposedheaders_python">
-<a href="#exposedheaders_python" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
+        <span id="exposed_headers_python">
+<a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5580,8 +5580,8 @@ for more information. Defaults to `true`.
 
     <dt class="property-required"
             title="Required">
-        <span id="maxageinseconds_python">
-<a href="#maxageinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
+        <span id="max_age_in_seconds_python">
+<a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -5804,8 +5804,8 @@ for more information. Defaults to `true`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="usesubdomain_python">
-<a href="#usesubdomain_python" style="color: inherit; text-decoration: inherit;">use<wbr>Subdomain</a>
+        <span id="use_subdomain_python">
+<a href="#use_subdomain_python" style="color: inherit; text-decoration: inherit;">use_<wbr>subdomain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6397,22 +6397,22 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="corsrules_python">
-<a href="#corsrules_python" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
+        <span id="cors_rules_python">
+<a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiescorsrule">List[Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiescorsrule">List[Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="hourmetrics_python">
-<a href="#hourmetrics_python" style="color: inherit; text-decoration: inherit;">hour<wbr>Metrics</a>
+        <span id="hour_metrics_python">
+<a href="#hour_metrics_python" style="color: inherit; text-decoration: inherit;">hour_<wbr>metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Dict[Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics]</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hour_metrics` block as defined below.
 {{% /md %}}</dd>
@@ -6423,18 +6423,18 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieslogging">Dict[Account<wbr>Queue<wbr>Properties<wbr>Logging]</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `logging` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="minutemetrics_python">
-<a href="#minutemetrics_python" style="color: inherit; text-decoration: inherit;">minute<wbr>Metrics</a>
+        <span id="minute_metrics_python">
+<a href="#minute_metrics_python" style="color: inherit; text-decoration: inherit;">minute_<wbr>metrics</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Dict[Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics]</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `minute_metrics` block as defined below.
 {{% /md %}}</dd>
@@ -6655,8 +6655,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedheaders_python">
-<a href="#allowedheaders_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+        <span id="allowed_headers_python">
+<a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6666,8 +6666,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedmethods_python">
-<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6678,8 +6678,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedorigins_python">
-<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+        <span id="allowed_origins_python">
+<a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6689,8 +6689,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="exposedheaders_python">
-<a href="#exposedheaders_python" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
+        <span id="exposed_headers_python">
+<a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -6700,8 +6700,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-required"
             title="Required">
-        <span id="maxageinseconds_python">
-<a href="#maxageinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
+        <span id="max_age_in_seconds_python">
+<a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -6911,8 +6911,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includeapis_python">
-<a href="#includeapis_python" style="color: inherit; text-decoration: inherit;">include<wbr>Apis</a>
+        <span id="include_apis_python">
+<a href="#include_apis_python" style="color: inherit; text-decoration: inherit;">include_<wbr>apis</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -6922,8 +6922,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionpolicydays_python">
-<a href="#retentionpolicydays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
+        <span id="retention_policy_days_python">
+<a href="#retention_policy_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7188,8 +7188,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionpolicydays_python">
-<a href="#retentionpolicydays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
+        <span id="retention_policy_days_python">
+<a href="#retention_policy_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7399,8 +7399,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="includeapis_python">
-<a href="#includeapis_python" style="color: inherit; text-decoration: inherit;">include<wbr>Apis</a>
+        <span id="include_apis_python">
+<a href="#include_apis_python" style="color: inherit; text-decoration: inherit;">include_<wbr>apis</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -7410,8 +7410,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="retentionpolicydays_python">
-<a href="#retentionpolicydays_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
+        <span id="retention_policy_days_python">
+<a href="#retention_policy_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy_<wbr>days</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -7533,8 +7533,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="error404document_python">
-<a href="#error404document_python" style="color: inherit; text-decoration: inherit;">error404Document</a>
+        <span id="error404_document_python">
+<a href="#error404_document_python" style="color: inherit; text-decoration: inherit;">error404_<wbr>document</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -7544,8 +7544,8 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
     <dt class="property-optional"
             title="Optional">
-        <span id="indexdocument_python">
-<a href="#indexdocument_python" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
+        <span id="index_document_python">
+<a href="#index_document_python" style="color: inherit; text-decoration: inherit;">index_<wbr>document</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

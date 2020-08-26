@@ -127,12 +127,12 @@ example_function_java_script_udf = azure.streamanalytics.FunctionJavaScriptUDF("
   return in;
 }
 """,
-    inputs=[{
-        "type": "bigint",
-    }],
-    output={
-        "type": "bigint",
-    })
+    inputs=[azure.streamanalytics.FunctionJavaScriptUDFInputArgs(
+        type="bigint",
+    )],
+    output=azure.streamanalytics.FunctionJavaScriptUDFOutputArgs(
+        type="bigint",
+    ))
 ```
 
 {{% /example %}}
@@ -180,7 +180,7 @@ const exampleFunctionJavaScriptUDF = new azure.streamanalytics.FunctionJavaScrip
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#pulumi_azure.streamanalytics.FunctionJavaScriptUDF">FunctionJavaScriptUDF</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[List[FunctionJavaScriptUDFInput]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output</span><span class="p">:</span> <span class="nx">Optional[Dict[FunctionJavaScriptUDFOutput]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#pulumi_azure.streamanalytics.FunctionJavaScriptUDF">FunctionJavaScriptUDF</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[List[FunctionJavaScriptUDFInputArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output</span><span class="p">:</span> <span class="nx">Optional[FunctionJavaScriptUDFOutputArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -577,7 +577,7 @@ The FunctionJavaScriptUDF resource accepts the following [input]({{< relref "/do
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionjavascriptudfinput">List[Function<wbr>Java<wbr>Script<wbr>UDFInput]</a></span>
+        <span class="property-type"><a href="#functionjavascriptudfinput">List[Function<wbr>Java<wbr>Script<wbr>UDFInput<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `input` blocks as defined below.
 {{% /md %}}</dd>
@@ -588,7 +588,7 @@ The FunctionJavaScriptUDF resource accepts the following [input]({{< relref "/do
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionjavascriptudfoutput">Dict[Function<wbr>Java<wbr>Script<wbr>UDFOutput]</a></span>
+        <span class="property-type"><a href="#functionjavascriptudfoutput">Function<wbr>Java<wbr>Script<wbr>UDFOutput<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `output` blocks as defined below.
 {{% /md %}}</dd>
@@ -736,7 +736,7 @@ Get an existing FunctionJavaScriptUDF resource's state with the given name, ID, 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[List[FunctionJavaScriptUDFInput]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output</span><span class="p">:</span> <span class="nx">Optional[Dict[FunctionJavaScriptUDFOutput]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FunctionJavaScriptUDF</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">inputs</span><span class="p">:</span> <span class="nx">Optional[List[FunctionJavaScriptUDFInputArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output</span><span class="p">:</span> <span class="nx">Optional[FunctionJavaScriptUDFOutputArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FunctionJavaScriptUDF</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1075,7 +1075,7 @@ The following state arguments are supported:
 <a href="#state_inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionjavascriptudfinput">List[Function<wbr>Java<wbr>Script<wbr>UDFInput]</a></span>
+        <span class="property-type"><a href="#functionjavascriptudfinput">List[Function<wbr>Java<wbr>Script<wbr>UDFInput<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `input` blocks as defined below.
 {{% /md %}}</dd>
@@ -1097,7 +1097,7 @@ The following state arguments are supported:
 <a href="#state_output_python" style="color: inherit; text-decoration: inherit;">output</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionjavascriptudfoutput">Dict[Function<wbr>Java<wbr>Script<wbr>UDFOutput]</a></span>
+        <span class="property-type"><a href="#functionjavascriptudfoutput">Function<wbr>Java<wbr>Script<wbr>UDFOutput<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `output` blocks as defined below.
 {{% /md %}}</dd>

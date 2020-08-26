@@ -901,7 +901,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Any Parameters defined in the Policy Set Definition.
 {{% /md %}}</dd>
@@ -918,8 +918,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="referenceid_python">
-<a href="#referenceid_python" style="color: inherit; text-decoration: inherit;">reference<wbr>Id</a>
+        <span id="reference_id_python">
+<a href="#reference_id_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

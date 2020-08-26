@@ -145,7 +145,7 @@ const exampleHub = new azure.notificationhub.Hub("exampleHub", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/notificationhub/#pulumi_azure.notificationhub.Hub">Hub</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apns_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[HubApnsCredential]]</span> = None<span class="p">, </span><span class="nx">gcm_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[HubGcmCredential]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/notificationhub/#pulumi_azure.notificationhub.Hub">Hub</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apns_credential</span><span class="p">:</span> <span class="nx">Optional[HubApnsCredentialArgs]</span> = None<span class="p">, </span><span class="nx">gcm_credential</span><span class="p">:</span> <span class="nx">Optional[HubGcmCredentialArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -597,7 +597,7 @@ The Hub resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apns_credential_python" style="color: inherit; text-decoration: inherit;">apns_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubapnscredential">Dict[Hub<wbr>Apns<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#hubapnscredential">Hub<wbr>Apns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `apns_credential` block as defined below.
 {{% /md %}}</dd>
@@ -608,7 +608,7 @@ The Hub resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#gcm_credential_python" style="color: inherit; text-decoration: inherit;">gcm_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubgcmcredential">Dict[Hub<wbr>Gcm<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#hubgcmcredential">Hub<wbr>Gcm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gcm_credential` block as defined below.
 {{% /md %}}</dd>
@@ -641,7 +641,7 @@ The Hub resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -745,7 +745,7 @@ Get an existing Hub resource's state with the given name, ID, and optional extra
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apns_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[HubApnsCredential]]</span> = None<span class="p">, </span><span class="nx">gcm_credential</span><span class="p">:</span> <span class="nx">Optional[Dict[HubGcmCredential]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> Hub</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apns_credential</span><span class="p">:</span> <span class="nx">Optional[HubApnsCredentialArgs]</span> = None<span class="p">, </span><span class="nx">gcm_credential</span><span class="p">:</span> <span class="nx">Optional[HubGcmCredentialArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Hub</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1117,7 +1117,7 @@ The following state arguments are supported:
 <a href="#state_apns_credential_python" style="color: inherit; text-decoration: inherit;">apns_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubapnscredential">Dict[Hub<wbr>Apns<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#hubapnscredential">Hub<wbr>Apns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `apns_credential` block as defined below.
 {{% /md %}}</dd>
@@ -1128,7 +1128,7 @@ The following state arguments are supported:
 <a href="#state_gcm_credential_python" style="color: inherit; text-decoration: inherit;">gcm_<wbr>credential</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubgcmcredential">Dict[Hub<wbr>Gcm<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#hubgcmcredential">Hub<wbr>Gcm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gcm_credential` block as defined below.
 {{% /md %}}</dd>
@@ -1183,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1409,8 +1409,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="applicationmode_python">
-<a href="#applicationmode_python" style="color: inherit; text-decoration: inherit;">application<wbr>Mode</a>
+        <span id="application_mode_python">
+<a href="#application_mode_python" style="color: inherit; text-decoration: inherit;">application_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1420,8 +1420,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="bundleid_python">
-<a href="#bundleid_python" style="color: inherit; text-decoration: inherit;">bundle<wbr>Id</a>
+        <span id="bundle_id_python">
+<a href="#bundle_id_python" style="color: inherit; text-decoration: inherit;">bundle_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1431,8 +1431,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyid_python">
-<a href="#keyid_python" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
+        <span id="key_id_python">
+<a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1442,8 +1442,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="teamid_python">
-<a href="#teamid_python" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
+        <span id="team_id_python">
+<a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

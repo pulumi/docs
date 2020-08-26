@@ -138,10 +138,10 @@ rg = azure.core.ResourceGroup("rg", location="East US")
 example_cluster = azure.kusto.Cluster("exampleCluster",
     location=rg.location,
     resource_group_name=rg.name,
-    sku={
-        "name": "Standard_D13_v2",
-        "capacity": 2,
-    })
+    sku=azure.kusto.ClusterSkuArgs(
+        name="Standard_D13_v2",
+        capacity=2,
+    ))
 example_database = azure.kusto.Database("exampleDatabase",
     resource_group_name=rg.name,
     location=rg.location,

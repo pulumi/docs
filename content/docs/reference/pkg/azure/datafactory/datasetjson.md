@@ -135,11 +135,11 @@ example_dataset_json = azure.datafactory.DatasetJson("exampleDatasetJson",
     resource_group_name=example_resource_group.name,
     data_factory_name=example_factory.name,
     linked_service_name=example_linked_service_web.name,
-    http_server_location={
-        "relative_url": "/fizz/buzz/",
-        "path": "foo/bar/",
-        "filename": "foo.txt",
-    },
+    http_server_location=azure.datafactory.DatasetJsonHttpServerLocationArgs(
+        relative_url="/fizz/buzz/",
+        path="foo/bar/",
+        filename="foo.txt",
+    ),
     encoding="UTF-8")
 ```
 
@@ -189,7 +189,7 @@ const exampleDatasetJson = new azure.datafactory.DatasetJson("exampleDatasetJson
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.DatasetJson">DatasetJson</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetJsonAzureBlobStorageLocation]]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetJsonHttpServerLocation]]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[List[DatasetJsonSchemaColumn]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/datafactory/#pulumi_azure.datafactory.DatasetJson">DatasetJson</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[DatasetJsonAzureBlobStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[DatasetJsonHttpServerLocationArgs]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[List[DatasetJsonSchemaColumnArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -850,7 +850,7 @@ The DatasetJson resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Dataset.
 {{% /md %}}</dd>
@@ -872,7 +872,7 @@ The DatasetJson resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azure_blob_storage_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonazureblobstoragelocation">Dict[Dataset<wbr>Json<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location]</a></span>
+        <span class="property-type"><a href="#datasetjsonazureblobstoragelocation">Dataset<wbr>Json<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd>
@@ -916,7 +916,7 @@ The DatasetJson resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#http_server_location_python" style="color: inherit; text-decoration: inherit;">http_<wbr>server_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonhttpserverlocation">Dict[Dataset<wbr>Json<wbr>Http<wbr>Server<wbr>Location]</a></span>
+        <span class="property-type"><a href="#datasetjsonhttpserverlocation">Dataset<wbr>Json<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_server_location` block as defined below.
 {{% /md %}}</dd>
@@ -938,7 +938,7 @@ The DatasetJson resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Dataset.
 {{% /md %}}</dd>
@@ -949,7 +949,7 @@ The DatasetJson resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#schema_columns_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonschemacolumn">List[Dataset<wbr>Json<wbr>Schema<wbr>Column]</a></span>
+        <span class="property-type"><a href="#datasetjsonschemacolumn">List[Dataset<wbr>Json<wbr>Schema<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd>
@@ -1053,7 +1053,7 @@ Get an existing DatasetJson resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetJsonAzureBlobStorageLocation]]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[Dict[DatasetJsonHttpServerLocation]]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[List[DatasetJsonSchemaColumn]]</span> = None<span class="p">) -&gt;</span> DatasetJson</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_blob_storage_location</span><span class="p">:</span> <span class="nx">Optional[DatasetJsonAzureBlobStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_server_location</span><span class="p">:</span> <span class="nx">Optional[DatasetJsonHttpServerLocationArgs]</span> = None<span class="p">, </span><span class="nx">linked_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_columns</span><span class="p">:</span> <span class="nx">Optional[List[DatasetJsonSchemaColumnArgs]]</span> = None<span class="p">) -&gt;</span> DatasetJson</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1623,7 +1623,7 @@ The following state arguments are supported:
 <a href="#state_additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Dataset.
 {{% /md %}}</dd>
@@ -1645,7 +1645,7 @@ The following state arguments are supported:
 <a href="#state_azure_blob_storage_location_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonazureblobstoragelocation">Dict[Dataset<wbr>Json<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location]</a></span>
+        <span class="property-type"><a href="#datasetjsonazureblobstoragelocation">Dataset<wbr>Json<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd>
@@ -1700,7 +1700,7 @@ The following state arguments are supported:
 <a href="#state_http_server_location_python" style="color: inherit; text-decoration: inherit;">http_<wbr>server_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonhttpserverlocation">Dict[Dataset<wbr>Json<wbr>Http<wbr>Server<wbr>Location]</a></span>
+        <span class="property-type"><a href="#datasetjsonhttpserverlocation">Dataset<wbr>Json<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_server_location` block as defined below.
 {{% /md %}}</dd>
@@ -1733,7 +1733,7 @@ The following state arguments are supported:
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Dataset.
 {{% /md %}}</dd>
@@ -1755,7 +1755,7 @@ The following state arguments are supported:
 <a href="#state_schema_columns_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>columns</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetjsonschemacolumn">List[Dataset<wbr>Json<wbr>Schema<wbr>Column]</a></span>
+        <span class="property-type"><a href="#datasetjsonschemacolumn">List[Dataset<wbr>Json<wbr>Schema<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd>

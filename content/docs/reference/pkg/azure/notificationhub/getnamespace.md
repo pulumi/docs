@@ -657,7 +657,7 @@ The following output properties are available:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnamespacesku">Dict[Get<wbr>Namespace<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#getnamespacesku">Get<wbr>Namespace<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
@@ -668,7 +668,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

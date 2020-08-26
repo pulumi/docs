@@ -128,7 +128,7 @@ const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#pulumi_azure.eventhub.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[Dict[DomainInputMappingDefaultValues]]</span> = None<span class="p">, </span><span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[Dict[DomainInputMappingFields]]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventhub/#pulumi_azure.eventhub.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingDefaultValuesArgs]</span> = None<span class="p">, </span><span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingFieldsArgs]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -569,7 +569,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#input_mapping_default_values_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>default_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Dict[Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values]</a></span>
+        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
 {{% /md %}}</dd>
@@ -580,7 +580,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#input_mapping_fields_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingfields">Dict[Domain<wbr>Input<wbr>Mapping<wbr>Fields]</a></span>
+        <span class="property-type"><a href="#domaininputmappingfields">Domain<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_fields` block as defined below.
 {{% /md %}}</dd>
@@ -624,7 +624,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -860,7 +860,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[Dict[DomainInputMappingDefaultValues]]</span> = None<span class="p">, </span><span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[Dict[DomainInputMappingFields]]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingDefaultValuesArgs]</span> = None<span class="p">, </span><span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingFieldsArgs]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1342,7 +1342,7 @@ The following state arguments are supported:
 <a href="#state_input_mapping_default_values_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>default_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Dict[Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values]</a></span>
+        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
 {{% /md %}}</dd>
@@ -1353,7 +1353,7 @@ The following state arguments are supported:
 <a href="#state_input_mapping_fields_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>fields</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingfields">Dict[Domain<wbr>Input<wbr>Mapping<wbr>Fields]</a></span>
+        <span class="property-type"><a href="#domaininputmappingfields">Domain<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_fields` block as defined below.
 {{% /md %}}</dd>
@@ -1430,7 +1430,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1590,8 +1590,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataversion_python">
-<a href="#dataversion_python" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
+        <span id="data_version_python">
+<a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1601,8 +1601,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventtype_python">
-<a href="#eventtype_python" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+        <span id="event_type_python">
+<a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1867,8 +1867,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataversion_python">
-<a href="#dataversion_python" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
+        <span id="data_version_python">
+<a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1878,8 +1878,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventtime_python">
-<a href="#eventtime_python" style="color: inherit; text-decoration: inherit;">event<wbr>Time</a>
+        <span id="event_time_python">
+<a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1889,8 +1889,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="eventtype_python">
-<a href="#eventtype_python" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
+        <span id="event_type_python">
+<a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

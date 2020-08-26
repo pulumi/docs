@@ -179,14 +179,14 @@ example_network_connection_monitor = azure.network.NetworkConnectionMonitor("exa
     location=example_network_watcher.location,
     auto_start=False,
     interval_in_seconds=30,
-    source={
-        "virtual_machine_id": src_virtual_machine.id,
-        "port": 20020,
-    },
-    destination={
-        "address": "mycompany.io",
-        "port": 443,
-    },
+    source=azure.network.NetworkConnectionMonitorSourceArgs(
+        virtual_machine_id=src_virtual_machine.id,
+        port=20020,
+    ),
+    destination=azure.network.NetworkConnectionMonitorDestinationArgs(
+        address="mycompany.io",
+        port=443,
+    ),
     tags={
         "foo": "bar",
     },
@@ -255,7 +255,7 @@ const exampleNetworkConnectionMonitor = new azure.network.NetworkConnectionMonit
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkConnectionMonitor">NetworkConnectionMonitor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkConnectionMonitorDestination]]</span> = None<span class="p">, </span><span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkConnectionMonitorSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.NetworkConnectionMonitor">NetworkConnectionMonitor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorDestinationArgs]</span> = None<span class="p">, </span><span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -751,7 +751,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitordestination">Dict[Network<wbr>Connection<wbr>Monitor<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `destination` block as defined below.
 {{% /md %}}</dd>
@@ -784,7 +784,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorsource">Dict[Network<wbr>Connection<wbr>Monitor<wbr>Source]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source` block as defined below.
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
 {{% /md %}}</dd>
@@ -943,7 +943,7 @@ Get an existing NetworkConnectionMonitor resource's state with the given name, I
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkConnectionMonitorDestination]]</span> = None<span class="p">, </span><span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Dict[NetworkConnectionMonitorSource]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> NetworkConnectionMonitor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorDestinationArgs]</span> = None<span class="p">, </span><span class="nx">interval_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[NetworkConnectionMonitorSourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> NetworkConnectionMonitor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1392,7 +1392,7 @@ The following state arguments are supported:
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitordestination">Dict[Network<wbr>Connection<wbr>Monitor<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `destination` block as defined below.
 {{% /md %}}</dd>
@@ -1458,7 +1458,7 @@ The following state arguments are supported:
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkconnectionmonitorsource">Dict[Network<wbr>Connection<wbr>Monitor<wbr>Source]</a></span>
+        <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source` block as defined below.
 {{% /md %}}</dd>
@@ -1469,7 +1469,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
 {{% /md %}}</dd>

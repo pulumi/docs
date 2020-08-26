@@ -28,78 +28,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_azure as azure
-
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
-example_network_watcher = azure.network.NetworkWatcher("exampleNetworkWatcher",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name)
-example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
-    address_spaces=["10.0.0.0/16"],
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name)
-example_subnet = azure.network.Subnet("exampleSubnet",
-    resource_group_name=example_resource_group.name,
-    virtual_network_name=example_virtual_network.name,
-    address_prefix="10.0.2.0/24")
-example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    ip_configurations=[{
-        "name": "testconfiguration1",
-        "subnet_id": example_subnet.id,
-        "privateIpAddressAllocation": "Dynamic",
-    }])
-example_virtual_machine = azure.compute.VirtualMachine("exampleVirtualMachine",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    network_interface_ids=[example_network_interface.id],
-    vm_size="Standard_F2",
-    storage_image_reference={
-        "publisher": "Canonical",
-        "offer": "UbuntuServer",
-        "sku": "16.04-LTS",
-        "version": "latest",
-    },
-    storage_os_disk={
-        "name": "osdisk",
-        "caching": "ReadWrite",
-        "create_option": "FromImage",
-        "managedDiskType": "Standard_LRS",
-    },
-    os_profile={
-        "computer_name": "pctest-vm",
-        "admin_username": "testadmin",
-        "admin_password": "Password1234!",
-    },
-    os_profile_linux_config={
-        "disable_password_authentication": False,
-    })
-example_extension = azure.compute.Extension("exampleExtension",
-    location=example_resource_group.location,
-    resource_group_name=example_resource_group.name,
-    virtual_machine_name=example_virtual_machine.name,
-    publisher="Microsoft.Azure.NetworkWatcher",
-    type="NetworkWatcherAgentLinux",
-    type_handler_version="1.4",
-    auto_upgrade_minor_version=True)
-example_account = azure.storage.Account("exampleAccount",
-    resource_group_name=example_resource_group.name,
-    location=example_resource_group.location,
-    account_tier="Standard",
-    account_replication_type="LRS")
-example_packet_capture = azure.network.PacketCapture("examplePacketCapture",
-    network_watcher_name=example_network_watcher.name,
-    resource_group_name=example_resource_group.name,
-    target_resource_id=example_virtual_machine.id,
-    storage_location={
-        "storage_account_id": example_account.id,
-    },
-    opts=ResourceOptions(depends_on=[example_extension]))
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
@@ -199,7 +128,7 @@ const examplePacketCapture = new azure.network.PacketCapture("examplePacketCaptu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.PacketCapture">PacketCapture</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[PacketCaptureFilter]]</span> = None<span class="p">, </span><span class="nx">maximum_bytes_per_packet</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">maximum_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">maximum_capture_duration</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[Dict[PacketCaptureStorageLocation]]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.PacketCapture">PacketCapture</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[PacketCaptureFilterArgs]]</span> = None<span class="p">, </span><span class="nx">maximum_bytes_per_packet</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">maximum_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">maximum_capture_duration</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[PacketCaptureStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -717,7 +646,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storage_location_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturestoragelocation">Dict[Packet<wbr>Capture<wbr>Storage<wbr>Location]</a></span>
+        <span class="property-type"><a href="#packetcapturestoragelocation">Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -739,7 +668,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturefilter">List[Packet<wbr>Capture<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#packetcapturefilter">List[Packet<wbr>Capture<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -887,7 +816,7 @@ Get an existing PacketCapture resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[PacketCaptureFilter]]</span> = None<span class="p">, </span><span class="nx">maximum_bytes_per_packet</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">maximum_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">maximum_capture_duration</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[Dict[PacketCaptureStorageLocation]]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PacketCapture</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[List[PacketCaptureFilterArgs]]</span> = None<span class="p">, </span><span class="nx">maximum_bytes_per_packet</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">maximum_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">maximum_capture_duration</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[PacketCaptureStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PacketCapture</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1325,7 +1254,7 @@ The following state arguments are supported:
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturefilter">List[Packet<wbr>Capture<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#packetcapturefilter">List[Packet<wbr>Capture<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1402,7 +1331,7 @@ The following state arguments are supported:
 <a href="#state_storage_location_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>location</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturestoragelocation">Dict[Packet<wbr>Capture<wbr>Storage<wbr>Location]</a></span>
+        <span class="property-type"><a href="#packetcapturestoragelocation">Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1650,8 +1579,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localipaddress_python">
-<a href="#localipaddress_python" style="color: inherit; text-decoration: inherit;">local<wbr>Ip<wbr>Address</a>
+        <span id="local_ip_address_python">
+<a href="#local_ip_address_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1661,8 +1590,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localport_python">
-<a href="#localport_python" style="color: inherit; text-decoration: inherit;">local<wbr>Port</a>
+        <span id="local_port_python">
+<a href="#local_port_python" style="color: inherit; text-decoration: inherit;">local_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1672,8 +1601,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteipaddress_python">
-<a href="#remoteipaddress_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Ip<wbr>Address</a>
+        <span id="remote_ip_address_python">
+<a href="#remote_ip_address_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1683,8 +1612,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="remoteport_python">
-<a href="#remoteport_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Port</a>
+        <span id="remote_port_python">
+<a href="#remote_port_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1850,17 +1779,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storagepath_python">
-<a href="#storagepath_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Path</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The URI of the storage path to save the packet capture.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span> 
@@ -1868,6 +1786,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the storage account to save the packet capture session
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_path_python">
+<a href="#storage_path_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>path</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The URI of the storage path to save the packet capture.
 {{% /md %}}</dd>
 
 </dl>

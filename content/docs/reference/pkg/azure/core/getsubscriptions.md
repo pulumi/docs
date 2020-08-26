@@ -71,7 +71,7 @@ import pulumi_azure as azure
 
 available = azure.core.get_subscriptions()
 pulumi.export("availableSubscriptions", available.subscriptions)
-pulumi.export("firstAvailableSubscriptionDisplayName", available.subscriptions[0]["display_name"])
+pulumi.export("firstAvailableSubscriptionDisplayName", available.subscriptions[0].display_name)
 ```
 
 {{% /example %}}
@@ -742,8 +742,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="locationplacementid_python">
-<a href="#locationplacementid_python" style="color: inherit; text-decoration: inherit;">location<wbr>Placement<wbr>Id</a>
+        <span id="location_placement_id_python">
+<a href="#location_placement_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>placement_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -753,8 +753,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="quotaid_python">
-<a href="#quotaid_python" style="color: inherit; text-decoration: inherit;">quota<wbr>Id</a>
+        <span id="quota_id_python">
+<a href="#quota_id_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -764,8 +764,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="spendinglimit_python">
-<a href="#spendinglimit_python" style="color: inherit; text-decoration: inherit;">spending<wbr>Limit</a>
+        <span id="spending_limit_python">
+<a href="#spending_limit_python" style="color: inherit; text-decoration: inherit;">spending_<wbr>limit</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -356,10 +356,10 @@ example_subscription_rule = azure.servicebus.SubscriptionRule("exampleSubscripti
     topic_name=example_topic.name,
     subscription_name=example_subscription.name,
     filter_type="CorrelationFilter",
-    correlation_filter={
-        "correlationId": "high",
-        "label": "red",
-    })
+    correlation_filter=azure.servicebus.SubscriptionRuleCorrelationFilterArgs(
+        correlation_id="high",
+        label="red",
+    ))
 ```
 
 {{% /example %}}
@@ -417,7 +417,7 @@ const exampleSubscriptionRule = new azure.servicebus.SubscriptionRule("exampleSu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicebus/#pulumi_azure.servicebus.SubscriptionRule">SubscriptionRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_filter</span><span class="p">:</span> <span class="nx">Optional[Dict[SubscriptionRuleCorrelationFilter]]</span> = None<span class="p">, </span><span class="nx">filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicebus/#pulumi_azure.servicebus.SubscriptionRule">SubscriptionRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_filter</span><span class="p">:</span> <span class="nx">Optional[SubscriptionRuleCorrelationFilterArgs]</span> = None<span class="p">, </span><span class="nx">filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -979,7 +979,7 @@ The SubscriptionRule resource accepts the following [input]({{< relref "/docs/in
 <a href="#correlation_filter_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionrulecorrelationfilter">Dict[Subscription<wbr>Rule<wbr>Correlation<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#subscriptionrulecorrelationfilter">Subscription<wbr>Rule<wbr>Correlation<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `correlation_filter` block as documented below to be evaluated against a BrokeredMessage. Required when `filter_type` is set to `CorrelationFilter`.
 {{% /md %}}</dd>
@@ -1105,7 +1105,7 @@ Get an existing SubscriptionRule resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_filter</span><span class="p">:</span> <span class="nx">Optional[Dict[SubscriptionRuleCorrelationFilter]]</span> = None<span class="p">, </span><span class="nx">filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SubscriptionRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_filter</span><span class="p">:</span> <span class="nx">Optional[SubscriptionRuleCorrelationFilterArgs]</span> = None<span class="p">, </span><span class="nx">filter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SubscriptionRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1554,7 +1554,7 @@ The following state arguments are supported:
 <a href="#state_correlation_filter_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>filter</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionrulecorrelationfilter">Dict[Subscription<wbr>Rule<wbr>Correlation<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#subscriptionrulecorrelationfilter">Subscription<wbr>Rule<wbr>Correlation<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `correlation_filter` block as documented below to be evaluated against a BrokeredMessage. Required when `filter_type` is set to `CorrelationFilter`.
 {{% /md %}}</dd>
@@ -1967,8 +1967,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="correlationid_python">
-<a href="#correlationid_python" style="color: inherit; text-decoration: inherit;">correlation<wbr>Id</a>
+        <span id="correlation_id_python">
+<a href="#correlation_id_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1989,8 +1989,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="messageid_python">
-<a href="#messageid_python" style="color: inherit; text-decoration: inherit;">message<wbr>Id</a>
+        <span id="message_id_python">
+<a href="#message_id_python" style="color: inherit; text-decoration: inherit;">message_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2000,8 +2000,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replyto_python">
-<a href="#replyto_python" style="color: inherit; text-decoration: inherit;">reply<wbr>To</a>
+        <span id="reply_to_python">
+<a href="#reply_to_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2011,8 +2011,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="replytosessionid_python">
-<a href="#replytosessionid_python" style="color: inherit; text-decoration: inherit;">reply<wbr>To<wbr>Session<wbr>Id</a>
+        <span id="reply_to_session_id_python">
+<a href="#reply_to_session_id_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to_<wbr>session_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2022,8 +2022,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessionid_python">
-<a href="#sessionid_python" style="color: inherit; text-decoration: inherit;">session<wbr>Id</a>
+        <span id="session_id_python">
+<a href="#session_id_python" style="color: inherit; text-decoration: inherit;">session_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

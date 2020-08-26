@@ -31,7 +31,7 @@ Explore the resources and functions of the authorization module in the Azure pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.17.0</dd>
+	<dd>3.18.1</dd>
 </dl>
 
 

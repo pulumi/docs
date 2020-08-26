@@ -915,7 +915,7 @@ for this Virtual Network Gateway.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
@@ -1126,8 +1126,8 @@ on the on-premises VPN devices.
 
     <dt class="property-required"
             title="Required">
-        <span id="peerweight_python">
-<a href="#peerweight_python" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
+        <span id="peer_weight_python">
+<a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1138,8 +1138,8 @@ through BGP peering.
 
     <dt class="property-required"
             title="Required">
-        <span id="peeringaddress_python">
-<a href="#peeringaddress_python" style="color: inherit; text-decoration: inherit;">peering<wbr>Address</a>
+        <span id="peering_address_python">
+<a href="#peering_address_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1355,8 +1355,8 @@ network can contain at most a single Virtual Network Gateway.
 
     <dt class="property-required"
             title="Required">
-        <span id="privateipaddressallocation_python">
-<a href="#privateipaddressallocation_python" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address<wbr>Allocation</a>
+        <span id="private_ip_address_allocation_python">
+<a href="#private_ip_address_allocation_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address_<wbr>allocation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1674,8 +1674,8 @@ in CIDR notation.
 
     <dt class="property-required"
             title="Required">
-        <span id="radiusserveraddress_python">
-<a href="#radiusserveraddress_python" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Address</a>
+        <span id="radius_server_address_python">
+<a href="#radius_server_address_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>address</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1686,8 +1686,8 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-required"
             title="Required">
-        <span id="radiusserversecret_python">
-<a href="#radiusserversecret_python" style="color: inherit; text-decoration: inherit;">radius<wbr>Server<wbr>Secret</a>
+        <span id="radius_server_secret_python">
+<a href="#radius_server_secret_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>secret</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1698,11 +1698,11 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
 
     <dt class="property-required"
             title="Required">
-        <span id="revokedcertificates_python">
-<a href="#revokedcertificates_python" style="color: inherit; text-decoration: inherit;">revoked<wbr>Certificates</a>
+        <span id="revoked_certificates_python">
+<a href="#revoked_certificates_python" style="color: inherit; text-decoration: inherit;">revoked_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrevokedcertificate">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrevokedcertificate">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
@@ -1710,11 +1710,11 @@ are defined below.
 
     <dt class="property-required"
             title="Required">
-        <span id="rootcertificates_python">
-<a href="#rootcertificates_python" style="color: inherit; text-decoration: inherit;">root<wbr>Certificates</a>
+        <span id="root_certificates_python">
+<a href="#root_certificates_python" style="color: inherit; text-decoration: inherit;">root_<wbr>certificates</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrootcertificate">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#getvirtualnetworkgatewayvpnclientconfigurationrootcertificate">List[Get<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
@@ -1723,8 +1723,8 @@ used by the VPN clients to connect to the gateway.
 
     <dt class="property-required"
             title="Required">
-        <span id="vpnclientprotocols_python">
-<a href="#vpnclientprotocols_python" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Protocols</a>
+        <span id="vpn_client_protocols_python">
+<a href="#vpn_client_protocols_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1988,8 +1988,8 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
     <dt class="property-required"
             title="Required">
-        <span id="publiccertdata_python">
-<a href="#publiccertdata_python" style="color: inherit; text-decoration: inherit;">public<wbr>Cert<wbr>Data</a>
+        <span id="public_cert_data_python">
+<a href="#public_cert_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>cert_<wbr>data</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

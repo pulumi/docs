@@ -200,37 +200,37 @@ example_hadoop_cluster = azure.hdinsight.HadoopCluster("exampleHadoopCluster",
     location=example_resource_group.location,
     cluster_version="3.6",
     tier="Standard",
-    component_version={
-        "hadoop": "2.7",
-    },
-    gateway={
-        "enabled": True,
-        "username": "acctestusrgw",
-        "password": "PAssword123!",
-    },
-    storage_accounts=[{
-        "storage_container_id": example_container.id,
-        "storage_account_key": example_account.primary_access_key,
-        "isDefault": True,
-    }],
-    roles={
-        "headNode": {
-            "vm_size": "Standard_D3_V2",
-            "username": "acctestusrvm",
-            "password": "AccTestvdSC4daf986!",
-        },
-        "workerNode": {
-            "vm_size": "Standard_D4_V2",
-            "username": "acctestusrvm",
-            "password": "AccTestvdSC4daf986!",
-            "targetInstanceCount": 3,
-        },
-        "zookeeperNode": {
-            "vm_size": "Standard_D3_V2",
-            "username": "acctestusrvm",
-            "password": "AccTestvdSC4daf986!",
-        },
-    })
+    component_version=azure.hdinsight.HadoopClusterComponentVersionArgs(
+        hadoop="2.7",
+    ),
+    gateway=azure.hdinsight.HadoopClusterGatewayArgs(
+        enabled=True,
+        username="acctestusrgw",
+        password="PAssword123!",
+    ),
+    storage_accounts=[azure.hdinsight.HadoopClusterStorageAccountArgs(
+        storage_container_id=example_container.id,
+        storage_account_key=example_account.primary_access_key,
+        is_default=True,
+    )],
+    roles=azure.hdinsight.HadoopClusterRolesArgs(
+        head_node=azure.hdinsight.HadoopClusterRolesHeadNodeArgs(
+            vm_size="Standard_D3_V2",
+            username="acctestusrvm",
+            password="AccTestvdSC4daf986!",
+        ),
+        worker_node=azure.hdinsight.HadoopClusterRolesWorkerNodeArgs(
+            vm_size="Standard_D4_V2",
+            username="acctestusrvm",
+            password="AccTestvdSC4daf986!",
+            target_instance_count=3,
+        ),
+        zookeeper_node=azure.hdinsight.HadoopClusterRolesZookeeperNodeArgs(
+            vm_size="Standard_D3_V2",
+            username="acctestusrvm",
+            password="AccTestvdSC4daf986!",
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -305,7 +305,7 @@ const exampleHadoopCluster = new azure.hdinsight.HadoopCluster("exampleHadoopClu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hdinsight/#pulumi_azure.hdinsight.HadoopCluster">HadoopCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterComponentVersion]]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterGateway]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterMetastores]]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterMonitor]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterRoles]]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterStorageAccountGen2]]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[HadoopClusterStorageAccount]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hdinsight/#pulumi_azure.hdinsight.HadoopCluster">HadoopCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterComponentVersionArgs]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterMetastoresArgs]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterMonitorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterStorageAccountGen2Args]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[HadoopClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -974,7 +974,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#component_version_python" style="color: inherit; text-decoration: inherit;">component_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustercomponentversion">Dict[Hadoop<wbr>Cluster<wbr>Component<wbr>Version]</a></span>
+        <span class="property-type"><a href="#hadoopclustercomponentversion">Hadoop<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
@@ -985,7 +985,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustergateway">Dict[Hadoop<wbr>Cluster<wbr>Gateway]</a></span>
+        <span class="property-type"><a href="#hadoopclustergateway">Hadoop<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
@@ -1007,7 +1007,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterroles">Dict[Hadoop<wbr>Cluster<wbr>Roles]</a></span>
+        <span class="property-type"><a href="#hadoopclusterroles">Hadoop<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
@@ -1040,7 +1040,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#metastores_python" style="color: inherit; text-decoration: inherit;">metastores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastores">Dict[Hadoop<wbr>Cluster<wbr>Metastores]</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastores">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
@@ -1051,7 +1051,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermonitor">Dict[Hadoop<wbr>Cluster<wbr>Monitor]</a></span>
+        <span class="property-type"><a href="#hadoopclustermonitor">Hadoop<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
@@ -1073,7 +1073,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storage_account_gen2_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>gen2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterstorageaccountgen2">Dict[Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2]</a></span>
+        <span class="property-type"><a href="#hadoopclusterstorageaccountgen2">Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
@@ -1084,7 +1084,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterstorageaccount">List[Hadoop<wbr>Cluster<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#hadoopclusterstorageaccount">List[Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
@@ -1095,7 +1095,7 @@ The HadoopCluster resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Hadoop Cluster.
 {{% /md %}}</dd>
@@ -1297,7 +1297,7 @@ Get an existing HadoopCluster resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterComponentVersion]]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterGateway]]</span> = None<span class="p">, </span><span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterMetastores]]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterMonitor]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterRoles]]</span> = None<span class="p">, </span><span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[Dict[HadoopClusterStorageAccountGen2]]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[HadoopClusterStorageAccount]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> HadoopCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterComponentVersionArgs]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterMetastoresArgs]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterMonitorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[HadoopClusterStorageAccountGen2Args]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[HadoopClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> HadoopCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1974,7 +1974,7 @@ The following state arguments are supported:
 <a href="#state_component_version_python" style="color: inherit; text-decoration: inherit;">component_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustercomponentversion">Dict[Hadoop<wbr>Cluster<wbr>Component<wbr>Version]</a></span>
+        <span class="property-type"><a href="#hadoopclustercomponentversion">Hadoop<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
@@ -1985,7 +1985,7 @@ The following state arguments are supported:
 <a href="#state_gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustergateway">Dict[Hadoop<wbr>Cluster<wbr>Gateway]</a></span>
+        <span class="property-type"><a href="#hadoopclustergateway">Hadoop<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
@@ -2018,7 +2018,7 @@ The following state arguments are supported:
 <a href="#state_metastores_python" style="color: inherit; text-decoration: inherit;">metastores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastores">Dict[Hadoop<wbr>Cluster<wbr>Metastores]</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastores">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
@@ -2029,7 +2029,7 @@ The following state arguments are supported:
 <a href="#state_monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermonitor">Dict[Hadoop<wbr>Cluster<wbr>Monitor]</a></span>
+        <span class="property-type"><a href="#hadoopclustermonitor">Hadoop<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
@@ -2062,7 +2062,7 @@ The following state arguments are supported:
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterroles">Dict[Hadoop<wbr>Cluster<wbr>Roles]</a></span>
+        <span class="property-type"><a href="#hadoopclusterroles">Hadoop<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
@@ -2084,7 +2084,7 @@ The following state arguments are supported:
 <a href="#state_storage_account_gen2_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>gen2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterstorageaccountgen2">Dict[Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2]</a></span>
+        <span class="property-type"><a href="#hadoopclusterstorageaccountgen2">Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
@@ -2095,7 +2095,7 @@ The following state arguments are supported:
 <a href="#state_storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterstorageaccount">List[Hadoop<wbr>Cluster<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#hadoopclusterstorageaccount">List[Hadoop<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
@@ -2106,7 +2106,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Hadoop Cluster.
 {{% /md %}}</dd>
@@ -2559,7 +2559,7 @@ The following state arguments are supported:
 <a href="#ambari_python" style="color: inherit; text-decoration: inherit;">ambari</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoresambari">Dict[Hadoop<wbr>Cluster<wbr>Metastores<wbr>Ambari]</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoresambari">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd>
@@ -2570,7 +2570,7 @@ The following state arguments are supported:
 <a href="#hive_python" style="color: inherit; text-decoration: inherit;">hive</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoreshive">Dict[Hadoop<wbr>Cluster<wbr>Metastores<wbr>Hive]</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoreshive">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd>
@@ -2581,7 +2581,7 @@ The following state arguments are supported:
 <a href="#oozie_python" style="color: inherit; text-decoration: inherit;">oozie</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclustermetastoresoozie">Dict[Hadoop<wbr>Cluster<wbr>Metastores<wbr>Oozie]</a></span>
+        <span class="property-type"><a href="#hadoopclustermetastoresoozie">Hadoop<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd>
@@ -3566,44 +3566,44 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="headnode_python">
-<a href="#headnode_python" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
+        <span id="head_node_python">
+<a href="#head_node_python" style="color: inherit; text-decoration: inherit;">head_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesheadnode">Dict[Hadoop<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node]</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesheadnode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="workernode_python">
-<a href="#workernode_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
+        <span id="worker_node_python">
+<a href="#worker_node_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesworkernode">Dict[Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node]</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesworkernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="zookeepernode_python">
-<a href="#zookeepernode_python" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
+        <span id="zookeeper_node_python">
+<a href="#zookeeper_node_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterroleszookeepernode">Dict[Hadoop<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node]</a></span>
+        <span class="property-type"><a href="#hadoopclusterroleszookeepernode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="edgenode_python">
-<a href="#edgenode_python" style="color: inherit; text-decoration: inherit;">edge<wbr>Node</a>
+        <span id="edge_node_python">
+<a href="#edge_node_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesedgenode">Dict[Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node]</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesedgenode">Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `edge_node` block as defined below.
 {{% /md %}}</dd>
@@ -3755,19 +3755,19 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="installscriptactions_python">
-<a href="#installscriptactions_python" style="color: inherit; text-decoration: inherit;">install<wbr>Script<wbr>Actions</a>
+        <span id="install_script_actions_python">
+<a href="#install_script_actions_python" style="color: inherit; text-decoration: inherit;">install_<wbr>script_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hadoopclusterrolesedgenodeinstallscriptaction">List[Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Install<wbr>Script<wbr>Action]</a></span>
+        <span class="property-type"><a href="#hadoopclusterrolesedgenodeinstallscriptaction">List[Hadoop<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Install<wbr>Script<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `install_script_action` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="targetinstancecount_python">
-<a href="#targetinstancecount_python" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
+        <span id="target_instance_count_python">
+<a href="#target_instance_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4199,8 +4199,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4542,8 +4542,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetinstancecount_python">
-<a href="#targetinstancecount_python" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
+        <span id="target_instance_count_python">
+<a href="#target_instance_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4575,8 +4575,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="mininstancecount_python">
-<a href="#mininstancecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4597,8 +4597,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4907,8 +4907,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -5085,8 +5085,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="isdefault_python">
-<a href="#isdefault_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5296,8 +5296,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="filesystemid_python">
-<a href="#filesystemid_python" style="color: inherit; text-decoration: inherit;">filesystem<wbr>Id</a>
+        <span id="filesystem_id_python">
+<a href="#filesystem_id_python" style="color: inherit; text-decoration: inherit;">filesystem_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5307,8 +5307,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="isdefault_python">
-<a href="#isdefault_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5318,8 +5318,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="managedidentityresourceid_python">
-<a href="#managedidentityresourceid_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+        <span id="managed_identity_resource_id_python">
+<a href="#managed_identity_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>identity_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5329,8 +5329,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="storageresourceid_python">
-<a href="#storageresourceid_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Resource<wbr>Id</a>
+        <span id="storage_resource_id_python">
+<a href="#storage_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

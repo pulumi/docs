@@ -777,8 +777,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="notactions_python">
-<a href="#notactions_python" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
+        <span id="not_actions_python">
+<a href="#not_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -788,8 +788,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dataactions_python">
-<a href="#dataactions_python" style="color: inherit; text-decoration: inherit;">data<wbr>Actions</a>
+        <span id="data_actions_python">
+<a href="#data_actions_python" style="color: inherit; text-decoration: inherit;">data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -798,8 +798,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="notdataactions_python">
-<a href="#notdataactions_python" style="color: inherit; text-decoration: inherit;">not<wbr>Data<wbr>Actions</a>
+        <span id="not_data_actions_python">
+<a href="#not_data_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>data_<wbr>actions</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

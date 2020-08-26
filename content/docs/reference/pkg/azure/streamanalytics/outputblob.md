@@ -163,11 +163,11 @@ example_output_blob = azure.streamanalytics.OutputBlob("exampleOutputBlob",
     path_pattern="some-pattern",
     date_format="yyyy-MM-dd",
     time_format="HH",
-    serialization={
-        "type": "Csv",
-        "encoding": "UTF8",
-        "fieldDelimiter": ",",
-    })
+    serialization=azure.streamanalytics.OutputBlobSerializationArgs(
+        type="Csv",
+        encoding="UTF8",
+        field_delimiter=",",
+    ))
 ```
 
 {{% /example %}}
@@ -226,7 +226,7 @@ const exampleOutputBlob = new azure.streamanalytics.OutputBlob("exampleOutputBlo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#pulumi_azure.streamanalytics.OutputBlob">OutputBlob</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">date_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[Dict[OutputBlobSerialization]]</span> = None<span class="p">, </span><span class="nx">storage_account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/streamanalytics/#pulumi_azure.streamanalytics.OutputBlob">OutputBlob</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">date_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[OutputBlobSerializationArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -788,7 +788,7 @@ The OutputBlob resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputblobserialization">Dict[Output<wbr>Blob<wbr>Serialization]</a></span>
+        <span class="property-type"><a href="#outputblobserialization">Output<wbr>Blob<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
 {{% /md %}}</dd>
@@ -958,7 +958,7 @@ Get an existing OutputBlob resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">date_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[Dict[OutputBlobSerialization]]</span> = None<span class="p">, </span><span class="nx">storage_account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OutputBlob</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">date_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[OutputBlobSerializationArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_analytics_job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OutputBlob</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1473,7 +1473,7 @@ The following state arguments are supported:
 <a href="#state_serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputblobserialization">Dict[Output<wbr>Blob<wbr>Serialization]</a></span>
+        <span class="property-type"><a href="#outputblobserialization">Output<wbr>Blob<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
 {{% /md %}}</dd>
@@ -1743,8 +1743,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fielddelimiter_python">
-<a href="#fielddelimiter_python" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
+        <span id="field_delimiter_python">
+<a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

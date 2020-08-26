@@ -118,13 +118,13 @@ example_cluster = azure.servicefabric.Cluster("exampleCluster",
     cluster_code_version="6.5.639.9590",
     vm_image="Windows",
     management_endpoint="https://example:80",
-    node_types=[{
-        "name": "first",
-        "instanceCount": 3,
-        "isPrimary": True,
-        "clientEndpointPort": 2020,
-        "httpEndpointPort": 80,
-    }])
+    node_types=[azure.servicefabric.ClusterNodeTypeArgs(
+        name="first",
+        instance_count=3,
+        is_primary=True,
+        client_endpoint_port=2020,
+        http_endpoint_port=80,
+    )])
 ```
 
 {{% /example %}}
@@ -168,7 +168,7 @@ const exampleCluster = new azure.servicefabric.Cluster("exampleCluster", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicefabric/#pulumi_azure.servicefabric.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterAzureActiveDirectory]]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterCertificate]]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterCertificateCommonNames]]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[List[ClusterClientCertificateCommonName]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[List[ClusterClientCertificateThumbprint]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterDiagnosticsConfig]]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[List[ClusterFabricSetting]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[List[ClusterNodeType]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterReverseProxyCertificate]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/servicefabric/#pulumi_azure.servicefabric.Cluster">Cluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[ClusterAzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[List[ClusterClientCertificateCommonNameArgs]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[List[ClusterClientCertificateThumbprintArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[ClusterDiagnosticsConfigArgs]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[List[ClusterFabricSettingArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[List[ClusterNodeTypeArgs]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1005,7 +1005,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#node_types_python" style="color: inherit; text-decoration: inherit;">node_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetype">List[Cluster<wbr>Node<wbr>Type]</a></span>
+        <span class="property-type"><a href="#clusternodetype">List[Cluster<wbr>Node<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `node_type` blocks as defined below.
 {{% /md %}}</dd>
@@ -1071,7 +1071,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#azure_active_directory_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterazureactivedirectory">Dict[Cluster<wbr>Azure<wbr>Active<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block as defined below.
 {{% /md %}}</dd>
@@ -1082,7 +1082,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificate">Dict[Cluster<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below. Conflicts with `certificate_common_names`.
 {{% /md %}}</dd>
@@ -1093,7 +1093,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificate_common_names_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnames">Dict[Cluster<wbr>Certificate<wbr>Common<wbr>Names]</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_common_names` block as defined below. Conflicts with `certificate`.
 {{% /md %}}</dd>
@@ -1104,7 +1104,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#client_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>common_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatecommonname">List[Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatecommonname">List[Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd>
@@ -1115,7 +1115,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#client_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>thumbprints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatethumbprint">List[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatethumbprint">List[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
@@ -1137,7 +1137,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#diagnostics_config_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdiagnosticsconfig">Dict[Cluster<wbr>Diagnostics<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics_config` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1148,7 +1148,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fabric_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterfabricsetting">List[Cluster<wbr>Fabric<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#clusterfabricsetting">List[Cluster<wbr>Fabric<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `fabric_settings` blocks as defined below.
 {{% /md %}}</dd>
@@ -1181,7 +1181,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverse_proxy_certificate_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificate">Dict[Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
 {{% /md %}}</dd>
@@ -1192,7 +1192,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1340,7 +1340,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterAzureActiveDirectory]]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterCertificate]]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterCertificateCommonNames]]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[List[ClusterClientCertificateCommonName]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[List[ClusterClientCertificateThumbprint]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterDiagnosticsConfig]]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[List[ClusterFabricSetting]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[List[ClusterNodeType]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[Dict[ClusterReverseProxyCertificate]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[ClusterAzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ClusterCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[List[ClusterClientCertificateCommonNameArgs]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[List[ClusterClientCertificateThumbprintArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_config</span><span class="p">:</span> <span class="nx">Optional[ClusterDiagnosticsConfigArgs]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[List[ClusterFabricSettingArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[List[ClusterNodeTypeArgs]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[ClusterReverseProxyCertificateArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2152,7 +2152,7 @@ The following state arguments are supported:
 <a href="#state_azure_active_directory_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterazureactivedirectory">Dict[Cluster<wbr>Azure<wbr>Active<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block as defined below.
 {{% /md %}}</dd>
@@ -2163,7 +2163,7 @@ The following state arguments are supported:
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificate">Dict[Cluster<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#clustercertificate">Cluster<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below. Conflicts with `certificate_common_names`.
 {{% /md %}}</dd>
@@ -2174,7 +2174,7 @@ The following state arguments are supported:
 <a href="#state_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnames">Dict[Cluster<wbr>Certificate<wbr>Common<wbr>Names]</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_common_names` block as defined below. Conflicts with `certificate`.
 {{% /md %}}</dd>
@@ -2185,7 +2185,7 @@ The following state arguments are supported:
 <a href="#state_client_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>common_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatecommonname">List[Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatecommonname">List[Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `client_certificate_common_name` block as defined below.
 {{% /md %}}</dd>
@@ -2196,7 +2196,7 @@ The following state arguments are supported:
 <a href="#state_client_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>thumbprints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclientcertificatethumbprint">List[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint]</a></span>
+        <span class="property-type"><a href="#clusterclientcertificatethumbprint">List[Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or two `client_certificate_thumbprint` blocks as defined below.
 {{% /md %}}</dd>
@@ -2229,7 +2229,7 @@ The following state arguments are supported:
 <a href="#state_diagnostics_config_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>config</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdiagnosticsconfig">Dict[Cluster<wbr>Diagnostics<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics_config` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2240,7 +2240,7 @@ The following state arguments are supported:
 <a href="#state_fabric_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterfabricsetting">List[Cluster<wbr>Fabric<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#clusterfabricsetting">List[Cluster<wbr>Fabric<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `fabric_settings` blocks as defined below.
 {{% /md %}}</dd>
@@ -2284,7 +2284,7 @@ The following state arguments are supported:
 <a href="#state_node_types_python" style="color: inherit; text-decoration: inherit;">node_<wbr>types</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetype">List[Cluster<wbr>Node<wbr>Type]</a></span>
+        <span class="property-type"><a href="#clusternodetype">List[Cluster<wbr>Node<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `node_type` blocks as defined below.
 {{% /md %}}</dd>
@@ -2317,7 +2317,7 @@ The following state arguments are supported:
 <a href="#state_reverse_proxy_certificate_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>certificate</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterreverseproxycertificate">Dict[Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `reverse_proxy_certificate` block as defined below.
 {{% /md %}}</dd>
@@ -2328,7 +2328,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2510,8 +2510,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientapplicationid_python">
-<a href="#clientapplicationid_python" style="color: inherit; text-decoration: inherit;">client<wbr>Application<wbr>Id</a>
+        <span id="client_application_id_python">
+<a href="#client_application_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>application_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2521,8 +2521,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="clusterapplicationid_python">
-<a href="#clusterapplicationid_python" style="color: inherit; text-decoration: inherit;">cluster<wbr>Application<wbr>Id</a>
+        <span id="cluster_application_id_python">
+<a href="#cluster_application_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>application_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2699,8 +2699,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="x509storename_python">
-<a href="#x509storename_python" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
+        <span id="x509_store_name_python">
+<a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2710,8 +2710,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thumbprintsecondary_python">
-<a href="#thumbprintsecondary_python" style="color: inherit; text-decoration: inherit;">thumbprint<wbr>Secondary</a>
+        <span id="thumbprint_secondary_python">
+<a href="#thumbprint_secondary_python" style="color: inherit; text-decoration: inherit;">thumbprint_<wbr>secondary</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2833,19 +2833,19 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="commonnames_python">
-<a href="#commonnames_python" style="color: inherit; text-decoration: inherit;">common<wbr>Names</a>
+        <span id="common_names_python">
+<a href="#common_names_python" style="color: inherit; text-decoration: inherit;">common_<wbr>names</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">List[Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name]</a></span>
+        <span class="property-type"><a href="#clustercertificatecommonnamescommonname">List[Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `common_names` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="x509storename_python">
-<a href="#x509storename_python" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
+        <span id="x509_store_name_python">
+<a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2967,8 +2967,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="certificatecommonname_python">
-<a href="#certificatecommonname_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Name</a>
+        <span id="certificate_common_name_python">
+<a href="#certificate_common_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2978,8 +2978,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateissuerthumbprint_python">
-<a href="#certificateissuerthumbprint_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Issuer<wbr>Thumbprint</a>
+        <span id="certificate_issuer_thumbprint_python">
+<a href="#certificate_issuer_thumbprint_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>issuer_<wbr>thumbprint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3128,8 +3128,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="commonname_python">
-<a href="#commonname_python" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3138,8 +3138,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="isadmin_python">
-<a href="#isadmin_python" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
+        <span id="is_admin_python">
+<a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3149,8 +3149,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="issuerthumbprint_python">
-<a href="#issuerthumbprint_python" style="color: inherit; text-decoration: inherit;">issuer<wbr>Thumbprint</a>
+        <span id="issuer_thumbprint_python">
+<a href="#issuer_thumbprint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>thumbprint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3271,8 +3271,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="isadmin_python">
-<a href="#isadmin_python" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
+        <span id="is_admin_python">
+<a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3504,8 +3504,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="blobendpoint_python">
-<a href="#blobendpoint_python" style="color: inherit; text-decoration: inherit;">blob<wbr>Endpoint</a>
+        <span id="blob_endpoint_python">
+<a href="#blob_endpoint_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3515,8 +3515,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="protectedaccountkeyname_python">
-<a href="#protectedaccountkeyname_python" style="color: inherit; text-decoration: inherit;">protected<wbr>Account<wbr>Key<wbr>Name</a>
+        <span id="protected_account_key_name_python">
+<a href="#protected_account_key_name_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>account_<wbr>key_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3526,8 +3526,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="queueendpoint_python">
-<a href="#queueendpoint_python" style="color: inherit; text-decoration: inherit;">queue<wbr>Endpoint</a>
+        <span id="queue_endpoint_python">
+<a href="#queue_endpoint_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3548,8 +3548,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="tableendpoint_python">
-<a href="#tableendpoint_python" style="color: inherit; text-decoration: inherit;">table<wbr>Endpoint</a>
+        <span id="table_endpoint_python">
+<a href="#table_endpoint_python" style="color: inherit; text-decoration: inherit;">table_<wbr>endpoint</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3686,7 +3686,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map containing settings for the specified Fabric Setting.
 {{% /md %}}</dd>
@@ -4102,8 +4102,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="clientendpointport_python">
-<a href="#clientendpointport_python" style="color: inherit; text-decoration: inherit;">client<wbr>Endpoint<wbr>Port</a>
+        <span id="client_endpoint_port_python">
+<a href="#client_endpoint_port_python" style="color: inherit; text-decoration: inherit;">client_<wbr>endpoint_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4113,8 +4113,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="httpendpointport_python">
-<a href="#httpendpointport_python" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint<wbr>Port</a>
+        <span id="http_endpoint_port_python">
+<a href="#http_endpoint_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4124,8 +4124,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="instancecount_python">
-<a href="#instancecount_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
+        <span id="instance_count_python">
+<a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4135,8 +4135,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="isprimary_python">
-<a href="#isprimary_python" style="color: inherit; text-decoration: inherit;">is<wbr>Primary</a>
+        <span id="is_primary_python">
+<a href="#is_primary_python" style="color: inherit; text-decoration: inherit;">is_<wbr>primary</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4157,11 +4157,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationports_python">
-<a href="#applicationports_python" style="color: inherit; text-decoration: inherit;">application<wbr>Ports</a>
+        <span id="application_ports_python">
+<a href="#application_ports_python" style="color: inherit; text-decoration: inherit;">application_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeapplicationports">Dict[Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports]</a></span>
+        <span class="property-type"><a href="#clusternodetypeapplicationports">Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `application_ports` block as defined below.
 {{% /md %}}</dd>
@@ -4172,15 +4172,15 @@ The following state arguments are supported:
 <a href="#capacities_python" style="color: inherit; text-decoration: inherit;">capacities</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="durabilitylevel_python">
-<a href="#durabilitylevel_python" style="color: inherit; text-decoration: inherit;">durability<wbr>Level</a>
+        <span id="durability_level_python">
+<a href="#durability_level_python" style="color: inherit; text-decoration: inherit;">durability_<wbr>level</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4190,30 +4190,30 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ephemeralports_python">
-<a href="#ephemeralports_python" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Ports</a>
+        <span id="ephemeral_ports_python">
+<a href="#ephemeral_ports_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusternodetypeephemeralports">Dict[Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports]</a></span>
+        <span class="property-type"><a href="#clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ephemeral_ports` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="placementproperties_python">
-<a href="#placementproperties_python" style="color: inherit; text-decoration: inherit;">placement<wbr>Properties</a>
+        <span id="placement_properties_python">
+<a href="#placement_properties_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="reverseproxyendpointport_python">
-<a href="#reverseproxyendpointport_python" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Endpoint<wbr>Port</a>
+        <span id="reverse_proxy_endpoint_port_python">
+<a href="#reverse_proxy_endpoint_port_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>endpoint_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4335,8 +4335,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="endport_python">
-<a href="#endport_python" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
+        <span id="end_port_python">
+<a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4346,8 +4346,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="startport_python">
-<a href="#startport_python" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
+        <span id="start_port_python">
+<a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4469,8 +4469,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="endport_python">
-<a href="#endport_python" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
+        <span id="end_port_python">
+<a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4480,8 +4480,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="startport_python">
-<a href="#startport_python" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
+        <span id="start_port_python">
+<a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4647,8 +4647,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="x509storename_python">
-<a href="#x509storename_python" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
+        <span id="x509_store_name_python">
+<a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4658,8 +4658,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="thumbprintsecondary_python">
-<a href="#thumbprintsecondary_python" style="color: inherit; text-decoration: inherit;">thumbprint<wbr>Secondary</a>
+        <span id="thumbprint_secondary_python">
+<a href="#thumbprint_secondary_python" style="color: inherit; text-decoration: inherit;">thumbprint_<wbr>secondary</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

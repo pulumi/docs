@@ -221,29 +221,29 @@ example_public_ip = azure.network.PublicIp("examplePublicIp",
 example_firewall = azure.network.Firewall("exampleFirewall",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    ip_configurations=[{
-        "name": "configuration",
-        "subnet_id": example_subnet.id,
-        "public_ip_address_id": example_public_ip.id,
-    }])
+    ip_configurations=[azure.network.FirewallIpConfigurationArgs(
+        name="configuration",
+        subnet_id=example_subnet.id,
+        public_ip_address_id=example_public_ip.id,
+    )])
 example_firewall_network_rule_collection = azure.network.FirewallNetworkRuleCollection("exampleFirewallNetworkRuleCollection",
     azure_firewall_name=example_firewall.name,
     resource_group_name=example_resource_group.name,
     priority=100,
     action="Allow",
-    rules=[{
-        "name": "testrule",
-        "sourceAddresses": ["10.0.0.0/16"],
-        "destinationPorts": ["53"],
-        "destinationAddresses": [
+    rules=[azure.network.FirewallNetworkRuleCollectionRuleArgs(
+        name="testrule",
+        source_addresses=["10.0.0.0/16"],
+        destination_ports=["53"],
+        destination_addresses=[
             "8.8.8.8",
             "8.8.4.4",
         ],
-        "protocols": [
+        protocols=[
             "TCP",
             "UDP",
         ],
-    }])
+    )])
 ```
 
 {{% /example %}}
@@ -315,7 +315,7 @@ const exampleFirewallNetworkRuleCollection = new azure.network.FirewallNetworkRu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.FirewallNetworkRuleCollection">FirewallNetworkRuleCollection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallNetworkRuleCollectionRule]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.FirewallNetworkRuleCollection">FirewallNetworkRuleCollection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallNetworkRuleCollectionRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -756,7 +756,7 @@ The FirewallNetworkRuleCollection resource accepts the following [input]({{< rel
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallnetworkrulecollectionrule">List[Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallnetworkrulecollectionrule">List[Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -871,7 +871,7 @@ Get an existing FirewallNetworkRuleCollection resource's state with the given na
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallNetworkRuleCollectionRule]]</span> = None<span class="p">) -&gt;</span> FirewallNetworkRuleCollection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallNetworkRuleCollectionRuleArgs]]</span> = None<span class="p">) -&gt;</span> FirewallNetworkRuleCollection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1265,7 +1265,7 @@ The following state arguments are supported:
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallnetworkrulecollectionrule">List[Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallnetworkrulecollectionrule">List[Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -1524,8 +1524,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationaddresses_python">
-<a href="#destinationaddresses_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1535,8 +1535,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationports_python">
-<a href="#destinationports_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
+        <span id="destination_ports_python">
+<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1568,8 +1568,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

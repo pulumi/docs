@@ -98,7 +98,7 @@ example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
     resource_group_name=example_resource_group.name,
     storage_account_type="Standard_LRS",
     create_option="Empty",
-    disk_size_gb="1",
+    disk_size_gb=1,
     tags={
         "environment": "staging",
     })
@@ -236,7 +236,7 @@ source = azure.compute.ManagedDisk("source",
     resource_group_name=example.name,
     storage_account_type="Standard_LRS",
     create_option="Empty",
-    disk_size_gb="1",
+    disk_size_gb=1,
     tags={
         "environment": "staging",
     })
@@ -246,7 +246,7 @@ copy = azure.compute.ManagedDisk("copy",
     storage_account_type="Standard_LRS",
     create_option="Copy",
     source_resource_id=source.id,
-    disk_size_gb="1",
+    disk_size_gb=1,
     tags={
         "environment": "staging",
     })
@@ -298,7 +298,7 @@ const copy = new azure.compute.ManagedDisk("copy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.ManagedDisk">ManagedDisk</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_mbps_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedDiskEncryptionSettings]]</span> = None<span class="p">, </span><span class="nx">image_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.ManagedDisk">ManagedDisk</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_mbps_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedDiskEncryptionSettingsArgs]</span> = None<span class="p">, </span><span class="nx">image_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1135,7 +1135,7 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskencryptionsettings">Dict[Managed<wbr>Disk<wbr>Encryption<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#manageddiskencryptionsettings">Managed<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `encryption_settings` block as defined below.
 {{% /md %}}</dd>
@@ -1223,7 +1223,7 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1338,7 +1338,7 @@ Get an existing ManagedDisk resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_mbps_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[Dict[ManagedDiskEncryptionSettings]]</span> = None<span class="p">, </span><span class="nx">image_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ManagedDisk</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_iops_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_mbps_read_write</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedDiskEncryptionSettingsArgs]</span> = None<span class="p">, </span><span class="nx">image_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ManagedDisk</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2095,7 +2095,7 @@ The following state arguments are supported:
 <a href="#state_encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskencryptionsettings">Dict[Managed<wbr>Disk<wbr>Encryption<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#manageddiskencryptionsettings">Managed<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `encryption_settings` block as defined below.
 {{% /md %}}</dd>
@@ -2205,7 +2205,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2387,22 +2387,22 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskencryptionkey_python">
-<a href="#diskencryptionkey_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
+        <span id="disk_encryption_key_python">
+<a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskencryptionsettingsdiskencryptionkey">Dict[Managed<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#manageddiskencryptionsettingsdiskencryptionkey">Managed<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `disk_encryption_key` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keyencryptionkey_python">
-<a href="#keyencryptionkey_python" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
+        <span id="key_encryption_key_python">
+<a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manageddiskencryptionsettingskeyencryptionkey">Dict[Managed<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Key<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#manageddiskencryptionsettingskeyencryptionkey">Managed<wbr>Disk<wbr>Encryption<wbr>Settings<wbr>Key<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `key_encryption_key` block as defined below.
 {{% /md %}}</dd>
@@ -2521,8 +2521,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="secreturl_python">
-<a href="#secreturl_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
+        <span id="secret_url_python">
+<a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2532,8 +2532,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcevaultid_python">
-<a href="#sourcevaultid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vault<wbr>Id</a>
+        <span id="source_vault_id_python">
+<a href="#source_vault_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2655,8 +2655,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyurl_python">
-<a href="#keyurl_python" style="color: inherit; text-decoration: inherit;">key<wbr>Url</a>
+        <span id="key_url_python">
+<a href="#key_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>url</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2666,8 +2666,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcevaultid_python">
-<a href="#sourcevaultid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vault<wbr>Id</a>
+        <span id="source_vault_id_python">
+<a href="#source_vault_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -224,59 +224,59 @@ example_autoscale_setting = azure.monitoring.AutoscaleSetting("exampleAutoscaleS
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
     target_resource_id=example_scale_set.id,
-    profiles=[{
-        "name": "defaultProfile",
-        "capacity": {
-            "default": 1,
-            "minimum": 1,
-            "maximum": 10,
-        },
-        "rules": [
-            {
-                "metricTrigger": {
-                    "metricName": "Percentage CPU",
-                    "metricResourceId": example_scale_set.id,
-                    "timeGrain": "PT1M",
-                    "statistic": "Average",
-                    "time_window": "PT5M",
-                    "timeAggregation": "Average",
-                    "operator": "GreaterThan",
-                    "threshold": 75,
-                },
-                "scaleAction": {
-                    "direction": "Increase",
-                    "type": "ChangeCount",
-                    "value": "1",
-                    "cooldown": "PT1M",
-                },
-            },
-            {
-                "metricTrigger": {
-                    "metricName": "Percentage CPU",
-                    "metricResourceId": example_scale_set.id,
-                    "timeGrain": "PT1M",
-                    "statistic": "Average",
-                    "time_window": "PT5M",
-                    "timeAggregation": "Average",
-                    "operator": "LessThan",
-                    "threshold": 25,
-                },
-                "scaleAction": {
-                    "direction": "Decrease",
-                    "type": "ChangeCount",
-                    "value": "1",
-                    "cooldown": "PT1M",
-                },
-            },
+    profiles=[azure.monitoring.AutoscaleSettingProfileArgs(
+        name="defaultProfile",
+        capacity=azure.monitoring.AutoscaleSettingProfileCapacityArgs(
+            default=1,
+            minimum=1,
+            maximum=10,
+        ),
+        rules=[
+            azure.monitoring.AutoscaleSettingProfileRuleArgs(
+                metric_trigger=azure.monitoring.AutoscaleSettingProfileRuleMetricTriggerArgs(
+                    metric_name="Percentage CPU",
+                    metric_resource_id=example_scale_set.id,
+                    time_grain="PT1M",
+                    statistic="Average",
+                    time_window="PT5M",
+                    time_aggregation="Average",
+                    operator="GreaterThan",
+                    threshold=75,
+                ),
+                scale_action=azure.monitoring.AutoscaleSettingProfileRuleScaleActionArgs(
+                    direction="Increase",
+                    type="ChangeCount",
+                    value=1,
+                    cooldown="PT1M",
+                ),
+            ),
+            azure.monitoring.AutoscaleSettingProfileRuleArgs(
+                metric_trigger=azure.monitoring.AutoscaleSettingProfileRuleMetricTriggerArgs(
+                    metric_name="Percentage CPU",
+                    metric_resource_id=example_scale_set.id,
+                    time_grain="PT1M",
+                    statistic="Average",
+                    time_window="PT5M",
+                    time_aggregation="Average",
+                    operator="LessThan",
+                    threshold=25,
+                ),
+                scale_action=azure.monitoring.AutoscaleSettingProfileRuleScaleActionArgs(
+                    direction="Decrease",
+                    type="ChangeCount",
+                    value=1,
+                    cooldown="PT1M",
+                ),
+            ),
         ],
-    }],
-    notification={
-        "email": {
-            "sendToSubscriptionAdministrator": True,
-            "sendToSubscriptionCoAdministrator": True,
-            "customEmails": ["admin@contoso.com"],
-        },
-    })
+    )],
+    notification=azure.monitoring.AutoscaleSettingNotificationArgs(
+        email=azure.monitoring.AutoscaleSettingNotificationEmailArgs(
+            send_to_subscription_administrator=True,
+            send_to_subscription_co_administrator=True,
+            custom_emails=["admin@contoso.com"],
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -592,69 +592,69 @@ example_autoscale_setting = azure.monitoring.AutoscaleSetting("exampleAutoscaleS
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
     target_resource_id=example_scale_set.id,
-    profiles=[{
-        "name": "Weekends",
-        "capacity": {
-            "default": 1,
-            "minimum": 1,
-            "maximum": 10,
-        },
-        "rules": [
-            {
-                "metricTrigger": {
-                    "metricName": "Percentage CPU",
-                    "metricResourceId": example_scale_set.id,
-                    "timeGrain": "PT1M",
-                    "statistic": "Average",
-                    "time_window": "PT5M",
-                    "timeAggregation": "Average",
-                    "operator": "GreaterThan",
-                    "threshold": 90,
-                },
-                "scaleAction": {
-                    "direction": "Increase",
-                    "type": "ChangeCount",
-                    "value": "2",
-                    "cooldown": "PT1M",
-                },
-            },
-            {
-                "metricTrigger": {
-                    "metricName": "Percentage CPU",
-                    "metricResourceId": example_scale_set.id,
-                    "timeGrain": "PT1M",
-                    "statistic": "Average",
-                    "time_window": "PT5M",
-                    "timeAggregation": "Average",
-                    "operator": "LessThan",
-                    "threshold": 10,
-                },
-                "scaleAction": {
-                    "direction": "Decrease",
-                    "type": "ChangeCount",
-                    "value": "2",
-                    "cooldown": "PT1M",
-                },
-            },
+    profiles=[azure.monitoring.AutoscaleSettingProfileArgs(
+        name="Weekends",
+        capacity=azure.monitoring.AutoscaleSettingProfileCapacityArgs(
+            default=1,
+            minimum=1,
+            maximum=10,
+        ),
+        rules=[
+            azure.monitoring.AutoscaleSettingProfileRuleArgs(
+                metric_trigger=azure.monitoring.AutoscaleSettingProfileRuleMetricTriggerArgs(
+                    metric_name="Percentage CPU",
+                    metric_resource_id=example_scale_set.id,
+                    time_grain="PT1M",
+                    statistic="Average",
+                    time_window="PT5M",
+                    time_aggregation="Average",
+                    operator="GreaterThan",
+                    threshold=90,
+                ),
+                scale_action=azure.monitoring.AutoscaleSettingProfileRuleScaleActionArgs(
+                    direction="Increase",
+                    type="ChangeCount",
+                    value=2,
+                    cooldown="PT1M",
+                ),
+            ),
+            azure.monitoring.AutoscaleSettingProfileRuleArgs(
+                metric_trigger=azure.monitoring.AutoscaleSettingProfileRuleMetricTriggerArgs(
+                    metric_name="Percentage CPU",
+                    metric_resource_id=example_scale_set.id,
+                    time_grain="PT1M",
+                    statistic="Average",
+                    time_window="PT5M",
+                    time_aggregation="Average",
+                    operator="LessThan",
+                    threshold=10,
+                ),
+                scale_action=azure.monitoring.AutoscaleSettingProfileRuleScaleActionArgs(
+                    direction="Decrease",
+                    type="ChangeCount",
+                    value=2,
+                    cooldown="PT1M",
+                ),
+            ),
         ],
-        "recurrence": {
-            "frequency": "Week",
-            "timezone": "Pacific Standard Time",
-            "days": [
+        recurrence=azure.monitoring.AutoscaleSettingProfileRecurrenceArgs(
+            frequency="Week",
+            timezone="Pacific Standard Time",
+            days=[
                 "Saturday",
                 "Sunday",
             ],
-            "hours": [12],
-            "minutes": [0],
-        },
-    }],
-    notification={
-        "email": {
-            "sendToSubscriptionAdministrator": True,
-            "sendToSubscriptionCoAdministrator": True,
-            "customEmails": ["admin@contoso.com"],
-        },
-    })
+            hours=[12],
+            minutes=[0],
+        ),
+    )],
+    notification=azure.monitoring.AutoscaleSettingNotificationArgs(
+        email=azure.monitoring.AutoscaleSettingNotificationEmailArgs(
+            send_to_subscription_administrator=True,
+            send_to_subscription_co_administrator=True,
+            custom_emails=["admin@contoso.com"],
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -962,64 +962,64 @@ example_autoscale_setting = azure.monitoring.AutoscaleSetting("exampleAutoscaleS
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
     target_resource_id=example_scale_set.id,
-    profiles=[{
-        "name": "forJuly",
-        "capacity": {
-            "default": 1,
-            "minimum": 1,
-            "maximum": 10,
-        },
-        "rules": [
-            {
-                "metricTrigger": {
-                    "metricName": "Percentage CPU",
-                    "metricResourceId": example_scale_set.id,
-                    "timeGrain": "PT1M",
-                    "statistic": "Average",
-                    "time_window": "PT5M",
-                    "timeAggregation": "Average",
-                    "operator": "GreaterThan",
-                    "threshold": 90,
-                },
-                "scaleAction": {
-                    "direction": "Increase",
-                    "type": "ChangeCount",
-                    "value": "2",
-                    "cooldown": "PT1M",
-                },
-            },
-            {
-                "metricTrigger": {
-                    "metricName": "Percentage CPU",
-                    "metricResourceId": example_scale_set.id,
-                    "timeGrain": "PT1M",
-                    "statistic": "Average",
-                    "time_window": "PT5M",
-                    "timeAggregation": "Average",
-                    "operator": "LessThan",
-                    "threshold": 10,
-                },
-                "scaleAction": {
-                    "direction": "Decrease",
-                    "type": "ChangeCount",
-                    "value": "2",
-                    "cooldown": "PT1M",
-                },
-            },
+    profiles=[azure.monitoring.AutoscaleSettingProfileArgs(
+        name="forJuly",
+        capacity=azure.monitoring.AutoscaleSettingProfileCapacityArgs(
+            default=1,
+            minimum=1,
+            maximum=10,
+        ),
+        rules=[
+            azure.monitoring.AutoscaleSettingProfileRuleArgs(
+                metric_trigger=azure.monitoring.AutoscaleSettingProfileRuleMetricTriggerArgs(
+                    metric_name="Percentage CPU",
+                    metric_resource_id=example_scale_set.id,
+                    time_grain="PT1M",
+                    statistic="Average",
+                    time_window="PT5M",
+                    time_aggregation="Average",
+                    operator="GreaterThan",
+                    threshold=90,
+                ),
+                scale_action=azure.monitoring.AutoscaleSettingProfileRuleScaleActionArgs(
+                    direction="Increase",
+                    type="ChangeCount",
+                    value=2,
+                    cooldown="PT1M",
+                ),
+            ),
+            azure.monitoring.AutoscaleSettingProfileRuleArgs(
+                metric_trigger=azure.monitoring.AutoscaleSettingProfileRuleMetricTriggerArgs(
+                    metric_name="Percentage CPU",
+                    metric_resource_id=example_scale_set.id,
+                    time_grain="PT1M",
+                    statistic="Average",
+                    time_window="PT5M",
+                    time_aggregation="Average",
+                    operator="LessThan",
+                    threshold=10,
+                ),
+                scale_action=azure.monitoring.AutoscaleSettingProfileRuleScaleActionArgs(
+                    direction="Decrease",
+                    type="ChangeCount",
+                    value=2,
+                    cooldown="PT1M",
+                ),
+            ),
         ],
-        "fixedDate": {
-            "timezone": "Pacific Standard Time",
-            "start": "2020-07-01T00:00:00Z",
-            "end": "2020-07-31T23:59:59Z",
-        },
-    }],
-    notification={
-        "email": {
-            "sendToSubscriptionAdministrator": True,
-            "sendToSubscriptionCoAdministrator": True,
-            "customEmails": ["admin@contoso.com"],
-        },
-    })
+        fixed_date=azure.monitoring.AutoscaleSettingProfileFixedDateArgs(
+            timezone="Pacific Standard Time",
+            start="2020-07-01T00:00:00Z",
+            end="2020-07-31T23:59:59Z",
+        ),
+    )],
+    notification=azure.monitoring.AutoscaleSettingNotificationArgs(
+        email=azure.monitoring.AutoscaleSettingNotificationEmailArgs(
+            send_to_subscription_administrator=True,
+            send_to_subscription_co_administrator=True,
+            custom_emails=["admin@contoso.com"],
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -1113,7 +1113,7 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("exampleAu
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.AutoscaleSetting">AutoscaleSetting</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification</span><span class="p">:</span> <span class="nx">Optional[Dict[AutoscaleSettingNotification]]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[List[AutoscaleSettingProfile]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.AutoscaleSetting">AutoscaleSetting</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification</span><span class="p">:</span> <span class="nx">Optional[AutoscaleSettingNotificationArgs]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[List[AutoscaleSettingProfileArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1576,7 +1576,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofile">List[Autoscale<wbr>Setting<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofile">List[Autoscale<wbr>Setting<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies one or more (up to 20) `profile` blocks as defined below.
 {{% /md %}}</dd>
@@ -1642,7 +1642,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#notification_python" style="color: inherit; text-decoration: inherit;">notification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Dict[Autoscale<wbr>Setting<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `notification` block as defined below.
 {{% /md %}}</dd>
@@ -1653,7 +1653,7 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1757,7 +1757,7 @@ Get an existing AutoscaleSetting resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification</span><span class="p">:</span> <span class="nx">Optional[Dict[AutoscaleSettingNotification]]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[List[AutoscaleSettingProfile]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AutoscaleSetting</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification</span><span class="p">:</span> <span class="nx">Optional[AutoscaleSettingNotificationArgs]</span> = None<span class="p">, </span><span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[List[AutoscaleSettingProfileArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AutoscaleSetting</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2195,7 +2195,7 @@ The following state arguments are supported:
 <a href="#state_notification_python" style="color: inherit; text-decoration: inherit;">notification</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Dict[Autoscale<wbr>Setting<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `notification` block as defined below.
 {{% /md %}}</dd>
@@ -2206,7 +2206,7 @@ The following state arguments are supported:
 <a href="#state_profiles_python" style="color: inherit; text-decoration: inherit;">profiles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofile">List[Autoscale<wbr>Setting<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofile">List[Autoscale<wbr>Setting<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies one or more (up to 20) `profile` blocks as defined below.
 {{% /md %}}</dd>
@@ -2228,7 +2228,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2370,7 +2370,7 @@ The following state arguments are supported:
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationemail">Dict[Autoscale<wbr>Setting<wbr>Notification<wbr>Email]</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `email` block as defined below.
 {{% /md %}}</dd>
@@ -2381,7 +2381,7 @@ The following state arguments are supported:
 <a href="#webhooks_python" style="color: inherit; text-decoration: inherit;">webhooks</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">List[Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook]</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">List[Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook` blocks as defined below.
 {{% /md %}}</dd>
@@ -2533,8 +2533,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customemails_python">
-<a href="#customemails_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
+        <span id="custom_emails_python">
+<a href="#custom_emails_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>emails</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2544,8 +2544,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sendtosubscriptionadministrator_python">
-<a href="#sendtosubscriptionadministrator_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Administrator</a>
+        <span id="send_to_subscription_administrator_python">
+<a href="#send_to_subscription_administrator_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>administrator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2555,8 +2555,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sendtosubscriptioncoadministrator_python">
-<a href="#sendtosubscriptioncoadministrator_python" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</a>
+        <span id="send_to_subscription_co_administrator_python">
+<a href="#send_to_subscription_co_administrator_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>subscription_<wbr>co_<wbr>administrator</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2693,7 +2693,7 @@ The following state arguments are supported:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of settings.
 {{% /md %}}</dd>
@@ -2915,7 +2915,7 @@ The following state arguments are supported:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilecapacity">Dict[Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilecapacity">Autoscale<wbr>Setting<wbr>Profile<wbr>Capacity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `capacity` block as defined below.
 {{% /md %}}</dd>
@@ -2933,11 +2933,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="fixeddate_python">
-<a href="#fixeddate_python" style="color: inherit; text-decoration: inherit;">fixed<wbr>Date</a>
+        <span id="fixed_date_python">
+<a href="#fixed_date_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>date</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Dict[Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_date` block as defined below. This cannot be specified if a `recurrence` block is specified.
 {{% /md %}}</dd>
@@ -2948,7 +2948,7 @@ The following state arguments are supported:
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Dict[Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `recurrence` block as defined below. This cannot be specified if a `fixed_date` block is specified.
 {{% /md %}}</dd>
@@ -2959,7 +2959,7 @@ The following state arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerule">List[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerule">List[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -3656,22 +3656,22 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metrictrigger_python">
-<a href="#metrictrigger_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
+        <span id="metric_trigger_python">
+<a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Dict[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictrigger">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metric_trigger` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="scaleaction_python">
-<a href="#scaleaction_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Action</a>
+        <span id="scale_action_python">
+<a href="#scale_action_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>action</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Dict[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action]</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulescaleaction">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Scale<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `scale_action` block as defined below.
 {{% /md %}}</dd>
@@ -3988,8 +3988,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3999,8 +3999,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="metricresourceid_python">
-<a href="#metricresourceid_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Resource<wbr>Id</a>
+        <span id="metric_resource_id_python">
+<a href="#metric_resource_id_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4043,8 +4043,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="timeaggregation_python">
-<a href="#timeaggregation_python" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
+        <span id="time_aggregation_python">
+<a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4054,8 +4054,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="timegrain_python">
-<a href="#timegrain_python" style="color: inherit; text-decoration: inherit;">time<wbr>Grain</a>
+        <span id="time_grain_python">
+<a href="#time_grain_python" style="color: inherit; text-decoration: inherit;">time_<wbr>grain</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

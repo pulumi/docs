@@ -218,10 +218,10 @@ example_client_config = azure.core.get_client_config()
 example_role_definition = azure.authorization.RoleDefinition("exampleRoleDefinition",
     role_definition_id="00000000-0000-0000-0000-000000000000",
     scope=primary.id,
-    permissions=[{
-        "actions": ["Microsoft.Resources/subscriptions/resourceGroups/read"],
-        "notActions": [],
-    }],
+    permissions=[azure.authorization.RoleDefinitionPermissionArgs(
+        actions=["Microsoft.Resources/subscriptions/resourceGroups/read"],
+        not_actions=[],
+    )],
     assignable_scopes=[primary.id])
 example_assignment = azure.authorization.Assignment("exampleAssignment",
     name="00000000-0000-0000-0000-000000000000",
@@ -369,10 +369,10 @@ example_client_config = azure.core.get_client_config()
 example_role_definition = azure.authorization.RoleDefinition("exampleRoleDefinition",
     role_definition_id="00000000-0000-0000-0000-000000000000",
     scope=primary.id,
-    permissions=[{
-        "actions": ["Microsoft.Resources/subscriptions/resourceGroups/read"],
-        "notActions": [],
-    }],
+    permissions=[azure.authorization.RoleDefinitionPermissionArgs(
+        actions=["Microsoft.Resources/subscriptions/resourceGroups/read"],
+        not_actions=[],
+    )],
     assignable_scopes=[primary.id])
 example_assignment = azure.authorization.Assignment("exampleAssignment",
     name="00000000-0000-0000-0000-000000000000",
@@ -502,7 +502,7 @@ func main() {
 		}
 		_, err = authorization.NewAssignment(ctx, "exampleAssignment", &authorization.AssignmentArgs{
 			Name:             pulumi.String("00000000-0000-0000-0000-000000000000"),
-			Scope:            pulumi.String(data.Azurerm_management_group.Primary.Id),
+			Scope:            pulumi.Any(data.Azurerm_management_group.Primary.Id),
 			RoleDefinitionId: exampleRoleDefinition.ID(),
 			PrincipalId:      pulumi.String(exampleClientConfig.ClientId),
 		})
@@ -527,10 +527,10 @@ example_group = azure.management.get_group()
 example_role_definition = azure.authorization.RoleDefinition("exampleRoleDefinition",
     role_definition_id="00000000-0000-0000-0000-000000000000",
     scope=primary.id,
-    permissions=[{
-        "actions": ["Microsoft.Resources/subscriptions/resourceGroups/read"],
-        "notActions": [],
-    }],
+    permissions=[azure.authorization.RoleDefinitionPermissionArgs(
+        actions=["Microsoft.Resources/subscriptions/resourceGroups/read"],
+        not_actions=[],
+    )],
     assignable_scopes=[primary.id])
 example_assignment = azure.authorization.Assignment("exampleAssignment",
     name="00000000-0000-0000-0000-000000000000",

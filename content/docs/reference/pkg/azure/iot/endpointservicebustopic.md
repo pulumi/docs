@@ -178,11 +178,11 @@ example_topic_authorization_rule = azure.servicebus.TopicAuthorizationRule("exam
 example_io_t_hub = azure.iot.IoTHub("exampleIoTHub",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
-    sku={
-        "name": "B1",
-        "tier": "Basic",
-        "capacity": "1",
-    },
+    sku=azure.iot.IoTHubSkuArgs(
+        name="B1",
+        tier="Basic",
+        capacity=1,
+    ),
     tags={
         "purpose": "example",
     })

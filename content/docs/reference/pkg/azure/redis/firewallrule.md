@@ -149,12 +149,12 @@ example_cache = azure.redis.Cache("exampleCache",
     family="P",
     sku_name="Premium",
     enable_non_ssl_port=False,
-    redis_configuration={
-        "maxclients": 256,
-        "maxmemoryReserved": 2,
-        "maxmemoryDelta": 2,
-        "maxmemoryPolicy": "allkeys-lru",
-    })
+    redis_configuration=azure.redis.CacheRedisConfigurationArgs(
+        maxclients=256,
+        maxmemory_reserved=2,
+        maxmemory_delta=2,
+        maxmemory_policy="allkeys-lru",
+    ))
 example_firewall_rule = azure.redis.FirewallRule("exampleFirewallRule",
     redis_cache_name=example_cache.name,
     resource_group_name=example_resource_group.name,

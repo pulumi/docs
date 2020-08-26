@@ -202,38 +202,38 @@ example_kafka_cluster = azure.hdinsight.KafkaCluster("exampleKafkaCluster",
     location=example_resource_group.location,
     cluster_version="4.0",
     tier="Standard",
-    component_version={
-        "kafka": "2.1",
-    },
-    gateway={
-        "enabled": True,
-        "username": "acctestusrgw",
-        "password": "Password123!",
-    },
-    storage_accounts=[{
-        "storage_container_id": example_container.id,
-        "storage_account_key": example_account.primary_access_key,
-        "isDefault": True,
-    }],
-    roles={
-        "headNode": {
-            "vm_size": "Standard_D3_V2",
-            "username": "acctestusrvm",
-            "password": "AccTestvdSC4daf986!",
-        },
-        "workerNode": {
-            "vm_size": "Standard_D3_V2",
-            "username": "acctestusrvm",
-            "password": "AccTestvdSC4daf986!",
-            "numberOfDisksPerNode": 3,
-            "targetInstanceCount": 3,
-        },
-        "zookeeperNode": {
-            "vm_size": "Standard_D3_V2",
-            "username": "acctestusrvm",
-            "password": "AccTestvdSC4daf986!",
-        },
-    })
+    component_version=azure.hdinsight.KafkaClusterComponentVersionArgs(
+        kafka="2.1",
+    ),
+    gateway=azure.hdinsight.KafkaClusterGatewayArgs(
+        enabled=True,
+        username="acctestusrgw",
+        password="Password123!",
+    ),
+    storage_accounts=[azure.hdinsight.KafkaClusterStorageAccountArgs(
+        storage_container_id=example_container.id,
+        storage_account_key=example_account.primary_access_key,
+        is_default=True,
+    )],
+    roles=azure.hdinsight.KafkaClusterRolesArgs(
+        head_node=azure.hdinsight.KafkaClusterRolesHeadNodeArgs(
+            vm_size="Standard_D3_V2",
+            username="acctestusrvm",
+            password="AccTestvdSC4daf986!",
+        ),
+        worker_node=azure.hdinsight.KafkaClusterRolesWorkerNodeArgs(
+            vm_size="Standard_D3_V2",
+            username="acctestusrvm",
+            password="AccTestvdSC4daf986!",
+            number_of_disks_per_node=3,
+            target_instance_count=3,
+        ),
+        zookeeper_node=azure.hdinsight.KafkaClusterRolesZookeeperNodeArgs(
+            vm_size="Standard_D3_V2",
+            username="acctestusrvm",
+            password="AccTestvdSC4daf986!",
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -309,7 +309,7 @@ const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("exampleKafkaCluste
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hdinsight/#pulumi_azure.hdinsight.KafkaCluster">KafkaCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterComponentVersion]]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterGateway]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterMetastores]]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterMonitor]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterRoles]]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterStorageAccountGen2]]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[KafkaClusterStorageAccount]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hdinsight/#pulumi_azure.hdinsight.KafkaCluster">KafkaCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterComponentVersionArgs]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMetastoresArgs]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMonitorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterStorageAccountGen2Args]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[KafkaClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -978,7 +978,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#component_version_python" style="color: inherit; text-decoration: inherit;">component_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustercomponentversion">Dict[Kafka<wbr>Cluster<wbr>Component<wbr>Version]</a></span>
+        <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
@@ -989,7 +989,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustergateway">Dict[Kafka<wbr>Cluster<wbr>Gateway]</a></span>
+        <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
@@ -1011,7 +1011,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroles">Dict[Kafka<wbr>Cluster<wbr>Roles]</a></span>
+        <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
@@ -1044,7 +1044,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#metastores_python" style="color: inherit; text-decoration: inherit;">metastores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastores">Dict[Kafka<wbr>Cluster<wbr>Metastores]</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
@@ -1055,7 +1055,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermonitor">Dict[Kafka<wbr>Cluster<wbr>Monitor]</a></span>
+        <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
@@ -1077,7 +1077,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storage_account_gen2_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>gen2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Dict[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
@@ -1088,7 +1088,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccount">List[Kafka<wbr>Cluster<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccount">List[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
@@ -1099,7 +1099,7 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
@@ -1301,7 +1301,7 @@ Get an existing KafkaCluster resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterComponentVersion]]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterGateway]]</span> = None<span class="p">, </span><span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterMetastores]]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterMonitor]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterRoles]]</span> = None<span class="p">, </span><span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterStorageAccountGen2]]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[KafkaClusterStorageAccount]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KafkaCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterComponentVersionArgs]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMetastoresArgs]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMonitorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterStorageAccountGen2Args]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[KafkaClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KafkaCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1978,7 +1978,7 @@ The following state arguments are supported:
 <a href="#state_component_version_python" style="color: inherit; text-decoration: inherit;">component_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustercomponentversion">Dict[Kafka<wbr>Cluster<wbr>Component<wbr>Version]</a></span>
+        <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
@@ -1989,7 +1989,7 @@ The following state arguments are supported:
 <a href="#state_gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustergateway">Dict[Kafka<wbr>Cluster<wbr>Gateway]</a></span>
+        <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
@@ -2022,7 +2022,7 @@ The following state arguments are supported:
 <a href="#state_metastores_python" style="color: inherit; text-decoration: inherit;">metastores</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastores">Dict[Kafka<wbr>Cluster<wbr>Metastores]</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
@@ -2033,7 +2033,7 @@ The following state arguments are supported:
 <a href="#state_monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermonitor">Dict[Kafka<wbr>Cluster<wbr>Monitor]</a></span>
+        <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
@@ -2066,7 +2066,7 @@ The following state arguments are supported:
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroles">Dict[Kafka<wbr>Cluster<wbr>Roles]</a></span>
+        <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
@@ -2088,7 +2088,7 @@ The following state arguments are supported:
 <a href="#state_storage_account_gen2_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>gen2</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Dict[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
@@ -2099,7 +2099,7 @@ The following state arguments are supported:
 <a href="#state_storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccount">List[Kafka<wbr>Cluster<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccount">List[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
@@ -2110,7 +2110,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
@@ -2563,7 +2563,7 @@ The following state arguments are supported:
 <a href="#ambari_python" style="color: inherit; text-decoration: inherit;">ambari</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoresambari">Dict[Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari]</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoresambari">Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd>
@@ -2574,7 +2574,7 @@ The following state arguments are supported:
 <a href="#hive_python" style="color: inherit; text-decoration: inherit;">hive</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoreshive">Dict[Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive]</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoreshive">Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd>
@@ -2585,7 +2585,7 @@ The following state arguments are supported:
 <a href="#oozie_python" style="color: inherit; text-decoration: inherit;">oozie</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoresoozie">Dict[Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie]</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoresoozie">Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd>
@@ -3537,33 +3537,33 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="headnode_python">
-<a href="#headnode_python" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
+        <span id="head_node_python">
+<a href="#head_node_python" style="color: inherit; text-decoration: inherit;">head_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrolesheadnode">Dict[Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node]</a></span>
+        <span class="property-type"><a href="#kafkaclusterrolesheadnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="workernode_python">
-<a href="#workernode_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
+        <span id="worker_node_python">
+<a href="#worker_node_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrolesworkernode">Dict[Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node]</a></span>
+        <span class="property-type"><a href="#kafkaclusterrolesworkernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="zookeepernode_python">
-<a href="#zookeepernode_python" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
+        <span id="zookeeper_node_python">
+<a href="#zookeeper_node_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroleszookeepernode">Dict[Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node]</a></span>
+        <span class="property-type"><a href="#kafkaclusterroleszookeepernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd>
@@ -3847,8 +3847,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4223,8 +4223,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="numberofdiskspernode_python">
-<a href="#numberofdiskspernode_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Disks<wbr>Per<wbr>Node</a>
+        <span id="number_of_disks_per_node_python">
+<a href="#number_of_disks_per_node_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>disks_<wbr>per_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4234,8 +4234,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetinstancecount_python">
-<a href="#targetinstancecount_python" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
+        <span id="target_instance_count_python">
+<a href="#target_instance_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4267,8 +4267,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="mininstancecount_python">
-<a href="#mininstancecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -4289,8 +4289,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4599,8 +4599,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4777,8 +4777,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="isdefault_python">
-<a href="#isdefault_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4988,8 +4988,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="filesystemid_python">
-<a href="#filesystemid_python" style="color: inherit; text-decoration: inherit;">filesystem<wbr>Id</a>
+        <span id="filesystem_id_python">
+<a href="#filesystem_id_python" style="color: inherit; text-decoration: inherit;">filesystem_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4999,8 +4999,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="isdefault_python">
-<a href="#isdefault_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -5010,8 +5010,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="managedidentityresourceid_python">
-<a href="#managedidentityresourceid_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Identity<wbr>Resource<wbr>Id</a>
+        <span id="managed_identity_resource_id_python">
+<a href="#managed_identity_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>identity_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5021,8 +5021,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="storageresourceid_python">
-<a href="#storageresourceid_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Resource<wbr>Id</a>
+        <span id="storage_resource_id_python">
+<a href="#storage_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

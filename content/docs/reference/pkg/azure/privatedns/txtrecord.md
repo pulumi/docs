@@ -73,13 +73,13 @@ func main() {
 			return err
 		}
 		testZone, err := privatedns.NewZone(ctx, "testZone", &privatedns.ZoneArgs{
-			ResourceGroupName: pulumi.String(azurerm_resource_group.Test.Name),
+			ResourceGroupName: pulumi.Any(azurerm_resource_group.Test.Name),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = privatedns.NewTxtRecord(ctx, "testTxtRecord", &privatedns.TxtRecordArgs{
-			ResourceGroupName: pulumi.String(azurerm_resource_group.Test.Name),
+			ResourceGroupName: pulumi.Any(azurerm_resource_group.Test.Name),
 			ZoneName:          testZone.Name,
 			Ttl:               pulumi.Int(300),
 			Records: privatedns.TxtRecordRecordArray{
@@ -109,9 +109,9 @@ test_txt_record = azure.privatedns.TxtRecord("testTxtRecord",
     resource_group_name=azurerm_resource_group["test"]["name"],
     zone_name=test_zone.name,
     ttl=300,
-    records=[{
-        "value": "v=spf1 mx ~all",
-    }])
+    records=[azure.privatedns.TxtRecordRecordArgs(
+        value="v=spf1 mx ~all",
+    )])
 ```
 
 {{% /example %}}
@@ -148,7 +148,7 @@ const testTxtRecord = new azure.privatedns.TxtRecord("testTxtRecord", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#pulumi_azure.privatedns.TxtRecord">TxtRecord</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">records</span><span class="p">:</span> <span class="nx">Optional[List[TxtRecordRecord]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/privatedns/#pulumi_azure.privatedns.TxtRecord">TxtRecord</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">records</span><span class="p">:</span> <span class="nx">Optional[List[TxtRecordRecordArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -542,7 +542,7 @@ The TxtRecord resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#records_python" style="color: inherit; text-decoration: inherit;">records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#txtrecordrecord">List[Txt<wbr>Record<wbr>Record]</a></span>
+        <span class="property-type"><a href="#txtrecordrecord">List[Txt<wbr>Record<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `record` blocks as defined below.
 {{% /md %}}</dd>
@@ -596,7 +596,7 @@ The TxtRecord resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -744,7 +744,7 @@ Get an existing TxtRecord resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">records</span><span class="p">:</span> <span class="nx">Optional[List[TxtRecordRecord]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TxtRecord</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">records</span><span class="p">:</span> <span class="nx">Optional[List[TxtRecordRecordArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TxtRecord</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1135,7 +1135,7 @@ The following state arguments are supported:
 <a href="#state_records_python" style="color: inherit; text-decoration: inherit;">records</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#txtrecordrecord">List[Txt<wbr>Record<wbr>Record]</a></span>
+        <span class="property-type"><a href="#txtrecordrecord">List[Txt<wbr>Record<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `record` blocks as defined below.
 {{% /md %}}</dd>
@@ -1157,7 +1157,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

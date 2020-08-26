@@ -164,17 +164,17 @@ example_subnet = azure.network.Subnet("exampleSubnet",
 example_network_security_group = azure.network.NetworkSecurityGroup("exampleNetworkSecurityGroup",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    security_rules=[{
-        "name": "test123",
-        "priority": 100,
-        "direction": "Inbound",
-        "access": "Allow",
-        "protocol": "Tcp",
-        "source_port_range": "*",
-        "destination_port_range": "*",
-        "source_address_prefix": "*",
-        "destination_address_prefix": "*",
-    }])
+    security_rules=[azure.network.NetworkSecurityGroupSecurityRuleArgs(
+        name="test123",
+        priority=100,
+        direction="Inbound",
+        access="Allow",
+        protocol="Tcp",
+        source_port_range="*",
+        destination_port_range="*",
+        source_address_prefix="*",
+        destination_address_prefix="*",
+    )])
 example_subnet_network_security_group_association = azure.network.SubnetNetworkSecurityGroupAssociation("exampleSubnetNetworkSecurityGroupAssociation",
     subnet_id=example_subnet.id,
     network_security_group_id=example_network_security_group.id)

@@ -1279,7 +1279,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1413,8 +1413,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="dayofweek_python">
-<a href="#dayofweek_python" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
+        <span id="day_of_week_python">
+<a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1424,8 +1424,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="starthourutc_python">
-<a href="#starthourutc_python" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
+        <span id="start_hour_utc_python">
+<a href="#start_hour_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour_<wbr>utc</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1928,8 +1928,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="aofbackupenabled_python">
-<a href="#aofbackupenabled_python" style="color: inherit; text-decoration: inherit;">aof<wbr>Backup<wbr>Enabled</a>
+        <span id="aof_backup_enabled_python">
+<a href="#aof_backup_enabled_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>backup_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1938,8 +1938,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="aofstorageconnectionstring0_python">
-<a href="#aofstorageconnectionstring0_python" style="color: inherit; text-decoration: inherit;">aof<wbr>Storage<wbr>Connection<wbr>String0</a>
+        <span id="aof_storage_connection_string0_python">
+<a href="#aof_storage_connection_string0_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>storage_<wbr>connection_<wbr>string0</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1948,8 +1948,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="aofstorageconnectionstring1_python">
-<a href="#aofstorageconnectionstring1_python" style="color: inherit; text-decoration: inherit;">aof<wbr>Storage<wbr>Connection<wbr>String1</a>
+        <span id="aof_storage_connection_string1_python">
+<a href="#aof_storage_connection_string1_python" style="color: inherit; text-decoration: inherit;">aof_<wbr>storage_<wbr>connection_<wbr>string1</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1958,8 +1958,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="enableauthentication_python">
-<a href="#enableauthentication_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Authentication</a>
+        <span id="enable_authentication_python">
+<a href="#enable_authentication_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>authentication</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1979,8 +1979,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxfragmentationmemoryreserved_python">
-<a href="#maxfragmentationmemoryreserved_python" style="color: inherit; text-decoration: inherit;">maxfragmentationmemory<wbr>Reserved</a>
+        <span id="maxfragmentationmemory_reserved_python">
+<a href="#maxfragmentationmemory_reserved_python" style="color: inherit; text-decoration: inherit;">maxfragmentationmemory_<wbr>reserved</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1990,8 +1990,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxmemorydelta_python">
-<a href="#maxmemorydelta_python" style="color: inherit; text-decoration: inherit;">maxmemory<wbr>Delta</a>
+        <span id="maxmemory_delta_python">
+<a href="#maxmemory_delta_python" style="color: inherit; text-decoration: inherit;">maxmemory_<wbr>delta</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2001,8 +2001,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxmemorypolicy_python">
-<a href="#maxmemorypolicy_python" style="color: inherit; text-decoration: inherit;">maxmemory<wbr>Policy</a>
+        <span id="maxmemory_policy_python">
+<a href="#maxmemory_policy_python" style="color: inherit; text-decoration: inherit;">maxmemory_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2012,8 +2012,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="maxmemoryreserved_python">
-<a href="#maxmemoryreserved_python" style="color: inherit; text-decoration: inherit;">maxmemory<wbr>Reserved</a>
+        <span id="maxmemory_reserved_python">
+<a href="#maxmemory_reserved_python" style="color: inherit; text-decoration: inherit;">maxmemory_<wbr>reserved</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2023,8 +2023,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="notifykeyspaceevents_python">
-<a href="#notifykeyspaceevents_python" style="color: inherit; text-decoration: inherit;">notify<wbr>Keyspace<wbr>Events</a>
+        <span id="notify_keyspace_events_python">
+<a href="#notify_keyspace_events_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>keyspace_<wbr>events</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2033,8 +2033,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rdbbackupenabled_python">
-<a href="#rdbbackupenabled_python" style="color: inherit; text-decoration: inherit;">rdb<wbr>Backup<wbr>Enabled</a>
+        <span id="rdb_backup_enabled_python">
+<a href="#rdb_backup_enabled_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>backup_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2044,8 +2044,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rdbbackupfrequency_python">
-<a href="#rdbbackupfrequency_python" style="color: inherit; text-decoration: inherit;">rdb<wbr>Backup<wbr>Frequency</a>
+        <span id="rdb_backup_frequency_python">
+<a href="#rdb_backup_frequency_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>backup_<wbr>frequency</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2055,8 +2055,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rdbbackupmaxsnapshotcount_python">
-<a href="#rdbbackupmaxsnapshotcount_python" style="color: inherit; text-decoration: inherit;">rdb<wbr>Backup<wbr>Max<wbr>Snapshot<wbr>Count</a>
+        <span id="rdb_backup_max_snapshot_count_python">
+<a href="#rdb_backup_max_snapshot_count_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>backup_<wbr>max_<wbr>snapshot_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2066,8 +2066,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="rdbstorageconnectionstring_python">
-<a href="#rdbstorageconnectionstring_python" style="color: inherit; text-decoration: inherit;">rdb<wbr>Storage<wbr>Connection<wbr>String</a>
+        <span id="rdb_storage_connection_string_python">
+<a href="#rdb_storage_connection_string_python" style="color: inherit; text-decoration: inherit;">rdb_<wbr>storage_<wbr>connection_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

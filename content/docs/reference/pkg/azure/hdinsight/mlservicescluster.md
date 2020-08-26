@@ -22,7 +22,7 @@ meta_desc: "Explore the MLServicesCluster resource of the hdinsight module, incl
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hdinsight/#pulumi_azure.hdinsight.MLServicesCluster">MLServicesCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[Dict[MLServicesClusterGateway]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Dict[MLServicesClusterRoles]]</span> = None<span class="p">, </span><span class="nx">rstudio</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[MLServicesClusterStorageAccount]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hdinsight/#pulumi_azure.hdinsight.MLServicesCluster">MLServicesCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[MLServicesClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[MLServicesClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">rstudio</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[MLServicesClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -592,7 +592,7 @@ The MLServicesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclustergateway">Dict[MLServices<wbr>Cluster<wbr>Gateway]</a></span>
+        <span class="property-type"><a href="#mlservicesclustergateway">MLServices<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
@@ -614,7 +614,7 @@ The MLServicesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterroles">Dict[MLServices<wbr>Cluster<wbr>Roles]</a></span>
+        <span class="property-type"><a href="#mlservicesclusterroles">MLServices<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
@@ -669,7 +669,7 @@ The MLServicesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterstorageaccount">List[MLServices<wbr>Cluster<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#mlservicesclusterstorageaccount">List[MLServices<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
@@ -680,7 +680,7 @@ The MLServicesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight ML Services Cluster.
 {{% /md %}}</dd>
@@ -926,7 +926,7 @@ Get an existing MLServicesCluster resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[Dict[MLServicesClusterGateway]]</span> = None<span class="p">, </span><span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Dict[MLServicesClusterRoles]]</span> = None<span class="p">, </span><span class="nx">rstudio</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[MLServicesClusterStorageAccount]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> MLServicesCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[MLServicesClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[MLServicesClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">rstudio</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[MLServicesClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> MLServicesCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1548,7 +1548,7 @@ The following state arguments are supported:
 <a href="#state_gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclustergateway">Dict[MLServices<wbr>Cluster<wbr>Gateway]</a></span>
+        <span class="property-type"><a href="#mlservicesclustergateway">MLServices<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
@@ -1603,7 +1603,7 @@ The following state arguments are supported:
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterroles">Dict[MLServices<wbr>Cluster<wbr>Roles]</a></span>
+        <span class="property-type"><a href="#mlservicesclusterroles">MLServices<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
@@ -1636,7 +1636,7 @@ The following state arguments are supported:
 <a href="#state_storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterstorageaccount">List[MLServices<wbr>Cluster<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#mlservicesclusterstorageaccount">List[MLServices<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
@@ -1647,7 +1647,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight ML Services Cluster.
 {{% /md %}}</dd>
@@ -2039,44 +2039,44 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="edgenode_python">
-<a href="#edgenode_python" style="color: inherit; text-decoration: inherit;">edge<wbr>Node</a>
+        <span id="edge_node_python">
+<a href="#edge_node_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesedgenode">Dict[MLServices<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node]</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesedgenode">MLServices<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `edge_node` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="headnode_python">
-<a href="#headnode_python" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
+        <span id="head_node_python">
+<a href="#head_node_python" style="color: inherit; text-decoration: inherit;">head_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesheadnode">Dict[MLServices<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node]</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesheadnode">MLServices<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="workernode_python">
-<a href="#workernode_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
+        <span id="worker_node_python">
+<a href="#worker_node_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesworkernode">Dict[MLServices<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node]</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesworkernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="zookeepernode_python">
-<a href="#zookeepernode_python" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
+        <span id="zookeeper_node_python">
+<a href="#zookeeper_node_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>node</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterroleszookeepernode">Dict[MLServices<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node]</a></span>
+        <span class="property-type"><a href="#mlservicesclusterroleszookeepernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd>
@@ -2360,8 +2360,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2670,8 +2670,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3013,8 +3013,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="targetinstancecount_python">
-<a href="#targetinstancecount_python" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
+        <span id="target_instance_count_python">
+<a href="#target_instance_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3046,8 +3046,8 @@ The following state arguments are supported:
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="mininstancecount_python">
-<a href="#mininstancecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3068,8 +3068,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3378,8 +3378,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -3556,8 +3556,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="isdefault_python">
-<a href="#isdefault_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

@@ -183,20 +183,20 @@ example_subnet = azure.network.Subnet("exampleSubnet",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
     address_prefix="10.0.1.0/24",
-    delegations=[{
-        "name": "example-delegation",
-        "serviceDelegation": {
-            "name": "Microsoft.Web/serverFarms",
-            "actions": ["Microsoft.Network/virtualNetworks/subnets/action"],
-        },
-    }])
+    delegations=[azure.network.SubnetDelegationArgs(
+        name="example-delegation",
+        service_delegation=azure.network.SubnetDelegationServiceDelegationArgs(
+            name="Microsoft.Web/serverFarms",
+            actions=["Microsoft.Network/virtualNetworks/subnets/action"],
+        ),
+    )])
 example_plan = azure.appservice.Plan("examplePlan",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    sku={
-        "tier": "Standard",
-        "size": "S1",
-    })
+    sku=azure.appservice.PlanSkuArgs(
+        tier="Standard",
+        size="S1",
+    ))
 example_app_service = azure.appservice.AppService("exampleAppService",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,

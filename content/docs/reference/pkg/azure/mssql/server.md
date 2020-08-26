@@ -146,16 +146,16 @@ example_server = azure.mssql.Server("exampleServer",
     version="12.0",
     administrator_login="missadministrator",
     administrator_login_password="thisIsKat11",
-    azuread_administrator={
-        "loginUsername": "AzureAD Admin",
-        "object_id": "00000000-0000-0000-0000-000000000000",
-    },
-    extended_auditing_policy={
-        "storage_endpoint": example_account.primary_blob_endpoint,
-        "storage_account_access_key": example_account.primary_access_key,
-        "storageAccountAccessKeyIsSecondary": True,
-        "retention_in_days": 6,
-    },
+    azuread_administrator=azure.mssql.ServerAzureadAdministratorArgs(
+        login_username="AzureAD Admin",
+        object_id="00000000-0000-0000-0000-000000000000",
+    ),
+    extended_auditing_policy=azure.mssql.ServerExtendedAuditingPolicyArgs(
+        storage_endpoint=example_account.primary_blob_endpoint,
+        storage_account_access_key=example_account.primary_access_key,
+        storage_account_access_key_is_secondary=True,
+        retention_in_days=6,
+    ),
     tags={
         "environment": "production",
     })
@@ -212,7 +212,7 @@ const exampleServer = new azure.mssql.Server("exampleServer", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.Server">Server</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azuread_administrator</span><span class="p">:</span> <span class="nx">Optional[Dict[ServerAzureadAdministrator]]</span> = None<span class="p">, </span><span class="nx">connection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ServerExtendedAuditingPolicy]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ServerIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.Server">Server</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azuread_administrator</span><span class="p">:</span> <span class="nx">Optional[ServerAzureadAdministratorArgs]</span> = None<span class="p">, </span><span class="nx">connection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[ServerExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServerIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -851,7 +851,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#azuread_administrator_python" style="color: inherit; text-decoration: inherit;">azuread_<wbr>administrator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverazureadadministrator">Dict[Server<wbr>Azuread<wbr>Administrator]</a></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azuread_administrator` block as defined below.
 {{% /md %}}</dd>
@@ -873,7 +873,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverextendedauditingpolicy">Dict[Server<wbr>Extended<wbr>Auditing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}</dd>
@@ -884,7 +884,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveridentity">Dict[Server<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -928,7 +928,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1076,7 +1076,7 @@ Get an existing Server resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azuread_administrator</span><span class="p">:</span> <span class="nx">Optional[Dict[ServerAzureadAdministrator]]</span> = None<span class="p">, </span><span class="nx">connection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ServerExtendedAuditingPolicy]]</span> = None<span class="p">, </span><span class="nx">fully_qualified_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ServerIdentity]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Server</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azuread_administrator</span><span class="p">:</span> <span class="nx">Optional[ServerAzureadAdministratorArgs]</span> = None<span class="p">, </span><span class="nx">connection_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[ServerExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">fully_qualified_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServerIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Server</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1668,7 +1668,7 @@ The following state arguments are supported:
 <a href="#state_azuread_administrator_python" style="color: inherit; text-decoration: inherit;">azuread_<wbr>administrator</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverazureadadministrator">Dict[Server<wbr>Azuread<wbr>Administrator]</a></span>
+        <span class="property-type"><a href="#serverazureadadministrator">Server<wbr>Azuread<wbr>Administrator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azuread_administrator` block as defined below.
 {{% /md %}}</dd>
@@ -1690,7 +1690,7 @@ The following state arguments are supported:
 <a href="#state_extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverextendedauditingpolicy">Dict[Server<wbr>Extended<wbr>Auditing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#serverextendedauditingpolicy">Server<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}</dd>
@@ -1712,7 +1712,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveridentity">Dict[Server<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#serveridentity">Server<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd>
@@ -1767,7 +1767,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1938,8 +1938,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="loginusername_python">
-<a href="#loginusername_python" style="color: inherit; text-decoration: inherit;">login<wbr>Username</a>
+        <span id="login_username_python">
+<a href="#login_username_python" style="color: inherit; text-decoration: inherit;">login_<wbr>username</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2182,8 +2182,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="storageaccountaccesskeyissecondary_python">
-<a href="#storageaccountaccesskeyissecondary_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
+        <span id="storage_account_access_key_is_secondary_python">
+<a href="#storage_account_access_key_is_secondary_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key_<wbr>is_<wbr>secondary</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

@@ -137,7 +137,7 @@ const exampleActionHttp = new azure.logicapps.ActionHttp("exampleActionHttp", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/logicapps/#pulumi_azure.logicapps.ActionHttp">ActionHttp</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">logic_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_afters</span><span class="p">:</span> <span class="nx">Optional[List[ActionHttpRunAfter]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/logicapps/#pulumi_azure.logicapps.ActionHttp">ActionHttp</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">logic_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_afters</span><span class="p">:</span> <span class="nx">Optional[List[ActionHttpRunAfterArgs]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -611,7 +611,7 @@ The ActionHttp resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a Map of Key-Value Pairs that should be sent to the `uri` when this HTTP Action is triggered.
 {{% /md %}}</dd>
@@ -633,7 +633,7 @@ The ActionHttp resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#run_afters_python" style="color: inherit; text-decoration: inherit;">run_<wbr>afters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionhttprunafter">List[Action<wbr>Http<wbr>Run<wbr>After]</a></span>
+        <span class="property-type"><a href="#actionhttprunafter">List[Action<wbr>Http<wbr>Run<wbr>After<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
 {{% /md %}}</dd>
@@ -737,7 +737,7 @@ Get an existing ActionHttp resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">logic_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_afters</span><span class="p">:</span> <span class="nx">Optional[List[ActionHttpRunAfter]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ActionHttp</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">logic_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_afters</span><span class="p">:</span> <span class="nx">Optional[List[ActionHttpRunAfterArgs]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ActionHttp</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1120,7 +1120,7 @@ The following state arguments are supported:
 <a href="#state_headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a Map of Key-Value Pairs that should be sent to the `uri` when this HTTP Action is triggered.
 {{% /md %}}</dd>
@@ -1164,7 +1164,7 @@ The following state arguments are supported:
 <a href="#state_run_afters_python" style="color: inherit; text-decoration: inherit;">run_<wbr>afters</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionhttprunafter">List[Action<wbr>Http<wbr>Run<wbr>After]</a></span>
+        <span class="property-type"><a href="#actionhttprunafter">List[Action<wbr>Http<wbr>Run<wbr>After<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
 {{% /md %}}</dd>
@@ -1302,8 +1302,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="actionname_python">
-<a href="#actionname_python" style="color: inherit; text-decoration: inherit;">action<wbr>Name</a>
+        <span id="action_name_python">
+<a href="#action_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1313,8 +1313,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="actionresult_python">
-<a href="#actionresult_python" style="color: inherit; text-decoration: inherit;">action<wbr>Result</a>
+        <span id="action_result_python">
+<a href="#action_result_python" style="color: inherit; text-decoration: inherit;">action_<wbr>result</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

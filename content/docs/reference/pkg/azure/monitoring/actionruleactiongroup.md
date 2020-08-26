@@ -119,10 +119,10 @@ example_action_group = azure.monitoring.ActionGroup("exampleActionGroup",
 example_action_rule_action_group = azure.monitoring.ActionRuleActionGroup("exampleActionRuleActionGroup",
     resource_group_name=example_resource_group.name,
     action_group_id=example_action_group.id,
-    scope={
-        "type": "ResourceGroup",
-        "resourceIds": [example_resource_group.id],
-    },
+    scope=azure.monitoring.ActionRuleActionGroupScopeArgs(
+        type="ResourceGroup",
+        resource_ids=[example_resource_group.id],
+    ),
     tags={
         "foo": "bar",
     })
@@ -168,7 +168,7 @@ const exampleActionRuleActionGroup = new azure.monitoring.ActionRuleActionGroup(
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActionRuleActionGroup">ActionRuleActionGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[Dict[ActionRuleActionGroupCondition]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[Dict[ActionRuleActionGroupScope]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/monitoring/#pulumi_azure.monitoring.ActionRuleActionGroup">ActionRuleActionGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ActionRuleActionGroupConditionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[ActionRuleActionGroupScopeArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -653,7 +653,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupcondition">Dict[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupcondition">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `condition` block as defined below.
 {{% /md %}}</dd>
@@ -697,7 +697,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupscope">Dict[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope]</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupscope">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `scope` block as defined below.
 {{% /md %}}</dd>
@@ -708,7 +708,7 @@ The ActionRuleActionGroup resource accepts the following [input]({{< relref "/do
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -812,7 +812,7 @@ Get an existing ActionRuleActionGroup resource's state with the given name, ID, 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[Dict[ActionRuleActionGroupCondition]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[Dict[ActionRuleActionGroupScope]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> ActionRuleActionGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[ActionRuleActionGroupConditionArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[ActionRuleActionGroupScopeArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> ActionRuleActionGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1228,7 +1228,7 @@ The following state arguments are supported:
 <a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupcondition">Dict[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupcondition">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `condition` block as defined below.
 {{% /md %}}</dd>
@@ -1283,7 +1283,7 @@ The following state arguments are supported:
 <a href="#state_scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupscope">Dict[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope]</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupscope">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Scope<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `scope` block as defined below.
 {{% /md %}}</dd>
@@ -1294,7 +1294,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1586,22 +1586,22 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alertcontext_python">
-<a href="#alertcontext_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Context</a>
+        <span id="alert_context_python">
+<a href="#alert_context_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>context</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionalertcontext">Dict[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Context]</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionalertcontext">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `alert_context` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="alertruleid_python">
-<a href="#alertruleid_python" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Id</a>
+        <span id="alert_rule_id_python">
+<a href="#alert_rule_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionalertruleid">Dict[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Rule<wbr>Id]</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionalertruleid">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Alert<wbr>Rule<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `alert_rule_id` block as defined below.
 {{% /md %}}</dd>
@@ -1612,7 +1612,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditiondescription">Dict[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Description]</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditiondescription">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `description` block as defined below.
 {{% /md %}}</dd>
@@ -1623,18 +1623,18 @@ The following state arguments are supported:
 <a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionmonitor">Dict[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor]</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionmonitor">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span id="monitorservice_python">
-<a href="#monitorservice_python" style="color: inherit; text-decoration: inherit;">monitor<wbr>Service</a>
+        <span id="monitor_service_python">
+<a href="#monitor_service_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>service</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionmonitorservice">Dict[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor<wbr>Service]</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionmonitorservice">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Monitor<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor_service` as block defined below.
 {{% /md %}}</dd>
@@ -1645,7 +1645,7 @@ The following state arguments are supported:
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditionseverity">Dict[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Severity]</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditionseverity">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Severity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `severity` block as defined below.
 {{% /md %}}</dd>
@@ -1656,7 +1656,7 @@ The following state arguments are supported:
 <a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionruleactiongroupconditiontargetresourcetype">Dict[Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Target<wbr>Resource<wbr>Type]</a></span>
+        <span class="property-type"><a href="#actionruleactiongroupconditiontargetresourcetype">Action<wbr>Rule<wbr>Action<wbr>Group<wbr>Condition<wbr>Target<wbr>Resource<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `target_resource_type` block as defined below.
 {{% /md %}}</dd>
@@ -2713,8 +2713,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="resourceids_python">
-<a href="#resourceids_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Ids</a>
+        <span id="resource_ids_python">
+<a href="#resource_ids_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>ids</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>

@@ -101,7 +101,7 @@ func main() {
 		exampleVirtualHub, err := network.NewVirtualHub(ctx, "exampleVirtualHub", &network.VirtualHubArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			Location:          exampleResourceGroup.Location,
-			VirtualWanId:      pulumi.String(azurerm_virtual_wan.Example.Id),
+			VirtualWanId:      pulumi.Any(azurerm_virtual_wan.Example.Id),
 			AddressPrefix:     pulumi.String("10.0.1.0/24"),
 		})
 		if err != nil {

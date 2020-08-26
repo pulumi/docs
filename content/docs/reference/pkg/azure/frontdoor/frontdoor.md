@@ -208,41 +208,41 @@ example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", locati
 example_frontdoor = azure.frontdoor.Frontdoor("exampleFrontdoor",
     resource_group_name=example_resource_group.name,
     enforce_backend_pools_certificate_name_check=False,
-    routing_rules=[{
-        "name": "exampleRoutingRule1",
-        "acceptedProtocols": [
+    routing_rules=[azure.frontdoor.FrontdoorRoutingRuleArgs(
+        name="exampleRoutingRule1",
+        accepted_protocols=[
             "Http",
             "Https",
         ],
-        "patternsToMatches": ["/*"],
-        "frontend_endpoints": ["exampleFrontendEndpoint1"],
-        "forwardingConfiguration": {
-            "forwardingProtocol": "MatchRequest",
-            "backendPoolName": "exampleBackendBing",
-        },
-    }],
-    backend_pool_load_balancings=[{
-        "name": "exampleLoadBalancingSettings1",
-    }],
-    backend_pool_health_probes=[{
-        "name": "exampleHealthProbeSetting1",
-    }],
-    backend_pools=[{
-        "name": "exampleBackendBing",
-        "backends": [{
-            "hostHeader": "www.bing.com",
-            "address": "www.bing.com",
-            "httpPort": 80,
-            "httpsPort": 443,
-        }],
-        "loadBalancingName": "exampleLoadBalancingSettings1",
-        "healthProbeName": "exampleHealthProbeSetting1",
-    }],
-    frontend_endpoints=[{
-        "name": "exampleFrontendEndpoint1",
-        "host_name": "example-FrontDoor.azurefd.net",
-        "custom_https_provisioning_enabled": False,
-    }])
+        patterns_to_matches=["/*"],
+        frontend_endpoints=["exampleFrontendEndpoint1"],
+        forwarding_configuration=azure.frontdoor.FrontdoorRoutingRuleForwardingConfigurationArgs(
+            forwarding_protocol="MatchRequest",
+            backend_pool_name="exampleBackendBing",
+        ),
+    )],
+    backend_pool_load_balancings=[azure.frontdoor.FrontdoorBackendPoolLoadBalancingArgs(
+        name="exampleLoadBalancingSettings1",
+    )],
+    backend_pool_health_probes=[azure.frontdoor.FrontdoorBackendPoolHealthProbeArgs(
+        name="exampleHealthProbeSetting1",
+    )],
+    backend_pools=[azure.frontdoor.FrontdoorBackendPoolArgs(
+        name="exampleBackendBing",
+        backends=[azure.frontdoor.FrontdoorBackendPoolBackendArgs(
+            host_header="www.bing.com",
+            address="www.bing.com",
+            http_port=80,
+            https_port=443,
+        )],
+        load_balancing_name="exampleLoadBalancingSettings1",
+        health_probe_name="exampleHealthProbeSetting1",
+    )],
+    frontend_endpoints=[azure.frontdoor.FrontdoorFrontendEndpointArgs(
+        name="exampleFrontendEndpoint1",
+        host_name="example-FrontDoor.azurefd.net",
+        custom_https_provisioning_enabled=False,
+    )])
 ```
 
 {{% /example %}}
@@ -309,7 +309,7 @@ const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.Frontdoor">Frontdoor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolHealthProbe]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolLoadBalancing]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPool]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorFrontendEndpoint]]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorRoutingRule]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.Frontdoor">Frontdoor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -934,7 +934,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backend_pool_health_probes_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>health_<wbr>probes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd>
@@ -945,7 +945,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backend_pool_load_balancings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd>
@@ -956,7 +956,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backend_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">List[Frontdoor<wbr>Backend<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd>
@@ -978,7 +978,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">List[Frontdoor<wbr>Frontend<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">List[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -1000,7 +1000,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">List[Frontdoor<wbr>Routing<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">List[Frontdoor<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd>
@@ -1065,7 +1065,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1257,7 +1257,7 @@ Get an existing Frontdoor resource's state with the given name, ID, and optional
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolHealthProbe]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolLoadBalancing]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPool]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorFrontendEndpoint]]</span> = None<span class="p">, </span><span class="nx">header_frontdoor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorRoutingRule]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> Frontdoor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_pool_health_probes</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolHealthProbeArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pool_load_balancings</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolLoadBalancingArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorBackendPoolArgs]]</span> = None<span class="p">, </span><span class="nx">backend_pools_send_receive_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">cname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enforce_backend_pools_certificate_name_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frontend_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorFrontendEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">header_frontdoor_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_rules</span><span class="p">:</span> <span class="nx">Optional[List[FrontdoorRoutingRuleArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Frontdoor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1890,7 +1890,7 @@ The following state arguments are supported:
 <a href="#state_backend_pool_health_probes_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>health_<wbr>probes</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd>
@@ -1901,7 +1901,7 @@ The following state arguments are supported:
 <a href="#state_backend_pool_load_balancings_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>load_<wbr>balancings</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd>
@@ -1912,7 +1912,7 @@ The following state arguments are supported:
 <a href="#state_backend_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pools</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">List[Frontdoor<wbr>Backend<wbr>Pool]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd>
@@ -1967,7 +1967,7 @@ The following state arguments are supported:
 <a href="#state_frontend_endpoints_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>endpoints</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">List[Frontdoor<wbr>Frontend<wbr>Endpoint]</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">List[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd>
@@ -2032,7 +2032,7 @@ The following state arguments are supported:
 <a href="#state_routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">List[Frontdoor<wbr>Routing<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">List[Frontdoor<wbr>Routing<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd>
@@ -2043,7 +2043,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2273,15 +2273,15 @@ The following state arguments are supported:
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolbackend">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolbackend">List[Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `backend` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="healthprobename_python">
-<a href="#healthprobename_python" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Name</a>
+        <span id="health_probe_name_python">
+<a href="#health_probe_name_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2291,8 +2291,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="loadbalancingname_python">
-<a href="#loadbalancingname_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Name</a>
+        <span id="load_balancing_name_python">
+<a href="#load_balancing_name_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2612,8 +2612,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="hostheader_python">
-<a href="#hostheader_python" style="color: inherit; text-decoration: inherit;">host<wbr>Header</a>
+        <span id="host_header_python">
+<a href="#host_header_python" style="color: inherit; text-decoration: inherit;">host_<wbr>header</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2623,8 +2623,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="httpport_python">
-<a href="#httpport_python" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
+        <span id="http_port_python">
+<a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2634,8 +2634,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="httpsport_python">
-<a href="#httpsport_python" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
+        <span id="https_port_python">
+<a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3010,8 +3010,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="probemethod_python">
-<a href="#probemethod_python" style="color: inherit; text-decoration: inherit;">probe<wbr>Method</a>
+        <span id="probe_method_python">
+<a href="#probe_method_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>method</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3254,8 +3254,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionallatencymilliseconds_python">
-<a href="#additionallatencymilliseconds_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Latency<wbr>Milliseconds</a>
+        <span id="additional_latency_milliseconds_python">
+<a href="#additional_latency_milliseconds_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>latency_<wbr>milliseconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3276,8 +3276,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="samplesize_python">
-<a href="#samplesize_python" style="color: inherit; text-decoration: inherit;">sample<wbr>Size</a>
+        <span id="sample_size_python">
+<a href="#sample_size_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>size</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3287,8 +3287,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="successfulsamplesrequired_python">
-<a href="#successfulsamplesrequired_python" style="color: inherit; text-decoration: inherit;">successful<wbr>Samples<wbr>Required</a>
+        <span id="successful_samples_required_python">
+<a href="#successful_samples_required_python" style="color: inherit; text-decoration: inherit;">successful_<wbr>samples_<wbr>required</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3634,7 +3634,7 @@ The following state arguments are supported:
 <a href="#custom_https_configuration_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>https_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Dict[Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_https_configuration` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `azurerm_frontdoor_custom_https_configuration` resource{{% /md %}}</p></dd>
@@ -3663,8 +3663,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessionaffinityenabled_python">
-<a href="#sessionaffinityenabled_python" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Enabled</a>
+        <span id="session_affinity_enabled_python">
+<a href="#session_affinity_enabled_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3674,8 +3674,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="sessionaffinityttlseconds_python">
-<a href="#sessionaffinityttlseconds_python" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Ttl<wbr>Seconds</a>
+        <span id="session_affinity_ttl_seconds_python">
+<a href="#session_affinity_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>ttl_<wbr>seconds</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3685,8 +3685,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="webapplicationfirewallpolicylinkid_python">
-<a href="#webapplicationfirewallpolicylinkid_python" style="color: inherit; text-decoration: inherit;">web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Id</a>
+        <span id="web_application_firewall_policy_link_id_python">
+<a href="#web_application_firewall_policy_link_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>application_<wbr>firewall_<wbr>policy_<wbr>link_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3973,8 +3973,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurekeyvaultcertificatesecretname_python">
-<a href="#azurekeyvaultcertificatesecretname_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Name</a>
+        <span id="azure_key_vault_certificate_secret_name_python">
+<a href="#azure_key_vault_certificate_secret_name_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>certificate_<wbr>secret_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3984,8 +3984,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurekeyvaultcertificatesecretversion_python">
-<a href="#azurekeyvaultcertificatesecretversion_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Secret<wbr>Version</a>
+        <span id="azure_key_vault_certificate_secret_version_python">
+<a href="#azure_key_vault_certificate_secret_version_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>certificate_<wbr>secret_<wbr>version</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3995,8 +3995,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="azurekeyvaultcertificatevaultid_python">
-<a href="#azurekeyvaultcertificatevaultid_python" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault<wbr>Certificate<wbr>Vault<wbr>Id</a>
+        <span id="azure_key_vault_certificate_vault_id_python">
+<a href="#azure_key_vault_certificate_vault_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault_<wbr>certificate_<wbr>vault_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4006,8 +4006,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatesource_python">
-<a href="#certificatesource_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Source</a>
+        <span id="certificate_source_python">
+<a href="#certificate_source_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4028,8 +4028,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="provisioningstate_python">
-<a href="#provisioningstate_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4039,8 +4039,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="provisioningsubstate_python">
-<a href="#provisioningsubstate_python" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Substate</a>
+        <span id="provisioning_substate_python">
+<a href="#provisioning_substate_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>substate</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4360,8 +4360,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="acceptedprotocols_python">
-<a href="#acceptedprotocols_python" style="color: inherit; text-decoration: inherit;">accepted<wbr>Protocols</a>
+        <span id="accepted_protocols_python">
+<a href="#accepted_protocols_python" style="color: inherit; text-decoration: inherit;">accepted_<wbr>protocols</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4393,8 +4393,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="patternstomatches_python">
-<a href="#patternstomatches_python" style="color: inherit; text-decoration: inherit;">patterns<wbr>To<wbr>Matches</a>
+        <span id="patterns_to_matches_python">
+<a href="#patterns_to_matches_python" style="color: inherit; text-decoration: inherit;">patterns_<wbr>to_<wbr>matches</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -4415,11 +4415,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="forwardingconfiguration_python">
-<a href="#forwardingconfiguration_python" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Configuration</a>
+        <span id="forwarding_configuration_python">
+<a href="#forwarding_configuration_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Dict[Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `forwarding_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -4437,11 +4437,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectconfiguration_python">
-<a href="#redirectconfiguration_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration</a>
+        <span id="redirect_configuration_python">
+<a href="#redirect_configuration_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Dict[Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -4692,8 +4692,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="backendpoolname_python">
-<a href="#backendpoolname_python" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool<wbr>Name</a>
+        <span id="backend_pool_name_python">
+<a href="#backend_pool_name_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4703,8 +4703,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cacheenabled_python">
-<a href="#cacheenabled_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Enabled</a>
+        <span id="cache_enabled_python">
+<a href="#cache_enabled_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4714,8 +4714,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cachequeryparameterstripdirective_python">
-<a href="#cachequeryparameterstripdirective_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
+        <span id="cache_query_parameter_strip_directive_python">
+<a href="#cache_query_parameter_strip_directive_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>query_<wbr>parameter_<wbr>strip_<wbr>directive</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4725,8 +4725,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cacheusedynamiccompression_python">
-<a href="#cacheusedynamiccompression_python" style="color: inherit; text-decoration: inherit;">cache<wbr>Use<wbr>Dynamic<wbr>Compression</a>
+        <span id="cache_use_dynamic_compression_python">
+<a href="#cache_use_dynamic_compression_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>use_<wbr>dynamic_<wbr>compression</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -4736,8 +4736,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customforwardingpath_python">
-<a href="#customforwardingpath_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Forwarding<wbr>Path</a>
+        <span id="custom_forwarding_path_python">
+<a href="#custom_forwarding_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>forwarding_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4747,8 +4747,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="forwardingprotocol_python">
-<a href="#forwardingprotocol_python" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Protocol</a>
+        <span id="forwarding_protocol_python">
+<a href="#forwarding_protocol_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5002,8 +5002,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="redirectprotocol_python">
-<a href="#redirectprotocol_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Protocol</a>
+        <span id="redirect_protocol_python">
+<a href="#redirect_protocol_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5013,8 +5013,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="redirecttype_python">
-<a href="#redirecttype_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
+        <span id="redirect_type_python">
+<a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5024,8 +5024,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customfragment_python">
-<a href="#customfragment_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
+        <span id="custom_fragment_python">
+<a href="#custom_fragment_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fragment</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5035,8 +5035,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customhost_python">
-<a href="#customhost_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Host</a>
+        <span id="custom_host_python">
+<a href="#custom_host_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5046,8 +5046,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="custompath_python">
-<a href="#custompath_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
+        <span id="custom_path_python">
+<a href="#custom_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5057,8 +5057,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="customquerystring_python">
-<a href="#customquerystring_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
+        <span id="custom_query_string_python">
+<a href="#custom_query_string_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>query_<wbr>string</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

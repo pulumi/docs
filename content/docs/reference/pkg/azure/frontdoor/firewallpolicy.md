@@ -336,94 +336,94 @@ example_firewall_policy = azure.frontdoor.FirewallPolicy("exampleFirewallPolicy"
     custom_block_response_status_code=403,
     custom_block_response_body="PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
     custom_rules=[
-        {
-            "name": "Rule1",
-            "enabled": True,
-            "priority": 1,
-            "rateLimitDurationInMinutes": 1,
-            "rateLimitThreshold": 10,
-            "type": "MatchRule",
-            "action": "Block",
-            "matchConditions": [{
-                "matchVariable": "RemoteAddr",
-                "operator": "IPMatch",
-                "negationCondition": False,
-                "matchValues": [
+        azure.frontdoor.FirewallPolicyCustomRuleArgs(
+            name="Rule1",
+            enabled=True,
+            priority=1,
+            rate_limit_duration_in_minutes=1,
+            rate_limit_threshold=10,
+            type="MatchRule",
+            action="Block",
+            match_conditions=[azure.frontdoor.FirewallPolicyCustomRuleMatchConditionArgs(
+                match_variable="RemoteAddr",
+                operator="IPMatch",
+                negation_condition=False,
+                match_values=[
                     "192.168.1.0/24",
                     "10.0.0.0/24",
                 ],
-            }],
-        },
-        {
-            "name": "Rule2",
-            "enabled": True,
-            "priority": 2,
-            "rateLimitDurationInMinutes": 1,
-            "rateLimitThreshold": 10,
-            "type": "MatchRule",
-            "action": "Block",
-            "matchConditions": [
-                {
-                    "matchVariable": "RemoteAddr",
-                    "operator": "IPMatch",
-                    "negationCondition": False,
-                    "matchValues": ["192.168.1.0/24"],
-                },
-                {
-                    "matchVariable": "RequestHeader",
-                    "selector": "UserAgent",
-                    "operator": "Contains",
-                    "negationCondition": False,
-                    "matchValues": ["windows"],
-                    "transforms": [
+            )],
+        ),
+        azure.frontdoor.FirewallPolicyCustomRuleArgs(
+            name="Rule2",
+            enabled=True,
+            priority=2,
+            rate_limit_duration_in_minutes=1,
+            rate_limit_threshold=10,
+            type="MatchRule",
+            action="Block",
+            match_conditions=[
+                azure.frontdoor.FirewallPolicyCustomRuleMatchConditionArgs(
+                    match_variable="RemoteAddr",
+                    operator="IPMatch",
+                    negation_condition=False,
+                    match_values=["192.168.1.0/24"],
+                ),
+                azure.frontdoor.FirewallPolicyCustomRuleMatchConditionArgs(
+                    match_variable="RequestHeader",
+                    selector="UserAgent",
+                    operator="Contains",
+                    negation_condition=False,
+                    match_values=["windows"],
+                    transforms=[
                         "Lowercase",
                         "Trim",
                     ],
-                },
+                ),
             ],
-        },
+        ),
     ],
     managed_rules=[
-        {
-            "type": "DefaultRuleSet",
-            "version": "1.0",
-            "exclusions": [{
-                "matchVariable": "QueryStringArgNames",
-                "operator": "Equals",
-                "selector": "not_suspicious",
-            }],
-            "overrides": [
-                {
-                    "ruleGroupName": "PHP",
-                    "rules": [{
-                        "rule_id": "933100",
-                        "enabled": False,
-                        "action": "Block",
-                    }],
-                },
-                {
-                    "ruleGroupName": "SQLI",
-                    "exclusions": [{
-                        "matchVariable": "QueryStringArgNames",
-                        "operator": "Equals",
-                        "selector": "really_not_suspicious",
-                    }],
-                    "rules": [{
-                        "rule_id": "942200",
-                        "action": "Block",
-                        "exclusions": [{
-                            "matchVariable": "QueryStringArgNames",
-                            "operator": "Equals",
-                            "selector": "innocent",
-                        }],
-                    }],
-                },
+        azure.frontdoor.FirewallPolicyManagedRuleArgs(
+            type="DefaultRuleSet",
+            version="1.0",
+            exclusions=[azure.frontdoor.FirewallPolicyManagedRuleExclusionArgs(
+                match_variable="QueryStringArgNames",
+                operator="Equals",
+                selector="not_suspicious",
+            )],
+            overrides=[
+                azure.frontdoor.FirewallPolicyManagedRuleOverrideArgs(
+                    rule_group_name="PHP",
+                    rules=[azure.frontdoor.FirewallPolicyManagedRuleOverrideRuleArgs(
+                        rule_id="933100",
+                        enabled=False,
+                        action="Block",
+                    )],
+                ),
+                azure.frontdoor.FirewallPolicyManagedRuleOverrideArgs(
+                    rule_group_name="SQLI",
+                    exclusions=[azure.frontdoor.FirewallPolicyManagedRuleOverrideExclusionArgs(
+                        match_variable="QueryStringArgNames",
+                        operator="Equals",
+                        selector="really_not_suspicious",
+                    )],
+                    rules=[azure.frontdoor.FirewallPolicyManagedRuleOverrideRuleArgs(
+                        rule_id="942200",
+                        action="Block",
+                        exclusions=[azure.frontdoor.FirewallPolicyManagedRuleOverrideRuleExclusionArgs(
+                            match_variable="QueryStringArgNames",
+                            operator="Equals",
+                            selector="innocent",
+                        )],
+                    )],
+                ),
             ],
-        },
-        {
-            "type": "Microsoft_BotManagerRuleSet",
-            "version": "1.0",
-        },
+        ),
+        azure.frontdoor.FirewallPolicyManagedRuleArgs(
+            type="Microsoft_BotManagerRuleSet",
+            version="1.0",
+        ),
     ])
 ```
 
@@ -550,7 +550,7 @@ const exampleFirewallPolicy = new azure.frontdoor.FirewallPolicy("exampleFirewal
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.FirewallPolicy">FirewallPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_block_response_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_block_response_status_code</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyCustomRule]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyManagedRule]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/frontdoor/#pulumi_azure.frontdoor.FirewallPolicy">FirewallPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_block_response_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_block_response_status_code</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyCustomRuleArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyManagedRuleArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1112,7 +1112,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#custom_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomrule">List[Firewall<wbr>Policy<wbr>Custom<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallpolicycustomrule">List[Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -1134,7 +1134,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#managed_rules_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedrule">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedrule">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -1178,7 +1178,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Web Application Firewall Policy.
 {{% /md %}}</dd>
@@ -1370,7 +1370,7 @@ Get an existing FirewallPolicy resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_block_response_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_block_response_status_code</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyCustomRule]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frontend_endpoint_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyManagedRule]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">) -&gt;</span> FirewallPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_block_response_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_block_response_status_code</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyCustomRuleArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frontend_endpoint_ids</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallPolicyManagedRuleArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> FirewallPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1929,7 +1929,7 @@ The following state arguments are supported:
 <a href="#state_custom_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomrule">List[Firewall<wbr>Policy<wbr>Custom<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallpolicycustomrule">List[Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -1973,7 +1973,7 @@ The following state arguments are supported:
 <a href="#state_managed_rules_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedrule">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedrule">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -2028,7 +2028,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Web Application Firewall Policy.
 {{% /md %}}</dd>
@@ -2397,11 +2397,11 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="matchconditions_python">
-<a href="#matchconditions_python" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
+        <span id="match_conditions_python">
+<a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">List[Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">List[Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_condition` block defined below.
 {{% /md %}}</dd>
@@ -2419,8 +2419,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ratelimitdurationinminutes_python">
-<a href="#ratelimitdurationinminutes_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Duration<wbr>In<wbr>Minutes</a>
+        <span id="rate_limit_duration_in_minutes_python">
+<a href="#rate_limit_duration_in_minutes_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>duration_<wbr>in_<wbr>minutes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2430,8 +2430,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ratelimitthreshold_python">
-<a href="#ratelimitthreshold_python" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
+        <span id="rate_limit_threshold_python">
+<a href="#rate_limit_threshold_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>threshold</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2685,8 +2685,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvalues_python">
-<a href="#matchvalues_python" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
+        <span id="match_values_python">
+<a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2696,8 +2696,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvariable_python">
-<a href="#matchvariable_python" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2718,8 +2718,8 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="negationcondition_python">
-<a href="#negationcondition_python" style="color: inherit; text-decoration: inherit;">negation<wbr>Condition</a>
+        <span id="negation_condition_python">
+<a href="#negation_condition_python" style="color: inherit; text-decoration: inherit;">negation_<wbr>condition</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2955,7 +2955,7 @@ The following state arguments are supported:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleexclusion">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Exclusion]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleexclusion">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd>
@@ -2966,7 +2966,7 @@ The following state arguments are supported:
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverride">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverride">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `override` blocks as defined below.
 {{% /md %}}</dd>
@@ -3118,8 +3118,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvariable_python">
-<a href="#matchvariable_python" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3296,8 +3296,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="rulegroupname_python">
-<a href="#rulegroupname_python" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Name</a>
+        <span id="rule_group_name_python">
+<a href="#rule_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>name</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3311,7 +3311,7 @@ The following state arguments are supported:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideexclusion">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Exclusion]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideexclusion">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Exclusion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd>
@@ -3322,7 +3322,7 @@ The following state arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverriderule">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverriderule">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below. If none are specified, all of the rules in the group will be disabled.
 {{% /md %}}</dd>
@@ -3474,8 +3474,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvariable_python">
-<a href="#matchvariable_python" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -3722,7 +3722,7 @@ The following state arguments are supported:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideruleexclusion">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Exclusion]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideruleexclusion">List[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd>
@@ -3874,8 +3874,8 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span id="matchvariable_python">
-<a href="#matchvariable_python" style="color: inherit; text-decoration: inherit;">match<wbr>Variable</a>
+        <span id="match_variable_python">
+<a href="#match_variable_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variable</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

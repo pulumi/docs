@@ -1217,7 +1217,7 @@ The following output properties are available:
 <a href="#node_labels_python" style="color: inherit; text-decoration: inherit;">node_<wbr>labels</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Kubernetes Labels applied to each Node in this Node Pool.
 {{% /md %}}</dd>
@@ -1304,7 +1304,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the Kubernetes Cluster Node Pool.
 {{% /md %}}</dd>

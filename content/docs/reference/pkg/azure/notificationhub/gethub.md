@@ -668,7 +668,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -892,8 +892,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="applicationmode_python">
-<a href="#applicationmode_python" style="color: inherit; text-decoration: inherit;">application<wbr>Mode</a>
+        <span id="application_mode_python">
+<a href="#application_mode_python" style="color: inherit; text-decoration: inherit;">application_<wbr>mode</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -903,8 +903,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="bundleid_python">
-<a href="#bundleid_python" style="color: inherit; text-decoration: inherit;">bundle<wbr>Id</a>
+        <span id="bundle_id_python">
+<a href="#bundle_id_python" style="color: inherit; text-decoration: inherit;">bundle_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -914,8 +914,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="keyid_python">
-<a href="#keyid_python" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
+        <span id="key_id_python">
+<a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -925,8 +925,8 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="teamid_python">
-<a href="#teamid_python" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
+        <span id="team_id_python">
+<a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
