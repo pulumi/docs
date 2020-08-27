@@ -1,13 +1,14 @@
 ---
-title: "Deploying Oauth Server for Netlify CMs App on AWS With Pulumi"
+title: "Deploying the Infrastructure of OAuth Server for CMS App"
 date: 2020-08-26T08:43:38-07:00
 draft: false
+meta_desc: "Implementing OAuth server for Netlify CMS app, deployING it using ECS Fargate Service, and configurING domain and certificate for it."
 meta_image: cms-oauth.png
 authors: ["zephyr-zhou"]
-tags: ["aws","netlify-cms","github-oauth","ecs-fargate"]
+tags: ["aws","netlify-cms","github-oauth","ecs-fargate", "github-actions"]
 ---
 
-As we discussed in our [previous post]({{<relref "/blog/deploying-oauth-server-for-cms-on-aws-with-pulumi">}}), we have deployed our CMS app on AWS rather than its default platform Netlify. In this way, we couldn't take advantage of [Netlify's Identity Service](https://docs.netlify.com/visitor-access/identity/#enable-identity-in-the-ui), which will handle Github access for Github backend of Netlify CMS. Therefore, we need to implement an [External OAuth Client Server](https://www.netlifycms.org/docs/external-oauth-clients/#header). 
+As we discussed in our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}), we have deployed our CMS app on AWS rather than its default platform Netlify. In this way, we couldn't take advantage of [Netlify's Identity Service](https://docs.netlify.com/visitor-access/identity/#enable-identity-in-the-ui), which will handle Github access for Github backend of Netlify CMS. Therefore, we need to implement an [External OAuth Client Server](https://www.netlifycms.org/docs/external-oauth-clients/#header).
 
 We have used the Go example provided by Netlify CMS, made changes to make it work, deployed it using ECS Fargate Service, and configured domain and certificate for it. In this post, we will share the way that we have done that.
 
@@ -39,12 +40,12 @@ const appService = new awsx.ecs.FargateService("app-svc", {
             memory: 128 /*MB*/,
             portMappings: [ tg ],
             environment: [
-                { 
+                {
                     name: "HOST",
                     // The target domain which would concatenate with callbacks in main.go
                     value: pulumi.interpolate `https://${cmsStackConfig.targetDomain}`
                 },
-                { 
+                {
                     name: "SESSION_SECRET",
                     value: sessionSecretRandomString.result
                 },
@@ -70,6 +71,7 @@ const appService = new awsx.ecs.FargateService("app-svc", {
     desiredCount: 1,
 });
 ```
+
 Therefore, we could safely remove those two folders `randstr` and `dotenv`.
 
 ### Fixed Bugs
@@ -91,7 +93,7 @@ function recieveMessage(e) {
     }
 ```
 
-Moreover, the code appends the value of the `HOST` environment variable to the Github callback links. The source code also appended `https://` in the font. 
+Moreover, the code appends the value of the `HOST` environment variable to the Github callback links. The source code also appended `https://` in the font.
 ![https at the front of links](./https-problem.jpg)
 If we already pass in the host domain of OAuth with `https://` then it would cause the redirect error as well because of the wrong link. Thus, we deleted all the `https://` in the front.
 
@@ -133,6 +135,7 @@ githubScope := os.Getenv("GITHUB_SCOPE")
         )
     }
 ```
+
 ## Writing a Dockerfile
 
 Replace the working directory in the Dockerfile with the path to your cloned repository. Especially, replace zephyrz73 with your Github user name.
@@ -140,6 +143,7 @@ Replace the working directory in the Dockerfile with the path to your cloned rep
 ```dockerfile
 WORKDIR /go/src/github.com/zephyrz73/aws-ts-netlify-cms-and-oauth/cms-oauth
 ```
+
 In this way, it would copy the right content into the Docker Image. This is an essential step for deploying the server with AWS Fargate.
 
 Now that CMS Server itself is deployed, we can start to implement the infrastructure.
@@ -152,7 +156,7 @@ For deploying the OAuth server using ECS Fargate, we could reference the [Hello 
 
 The simple example created an ECS cluster, Application Load Balancer (alb) and its listener, and a Fargate Service, which its container is using the Docker image we built by the docker file. There are some changes we made:
 
-We specify the port number of the alb to be 443 which is the standard port for HTTPS instead of port 80 which is the standard port for HTTP because of the URL in main.go that we used are start with `https://`. HTTPS is also much secure to handle the CMS access token. 
+We specify the port number of the alb to be 443 which is the standard port for HTTPS instead of port 80 which is the standard port for HTTP because of the URL in main.go that we used are start with `https://`. HTTPS is also much secure to handle the CMS access token.
 
 ```typescript
 // Define an ec2 application load balancer alb to distribute incomming application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones.
@@ -160,14 +164,15 @@ const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer(
     "net-lb", { external: true, securityGroups: cluster.securityGroups });
 
 // alb need a listener to listen to 443 the standard port for the HTTPS traffic, certificate is using the certificate we created above
-const web = alb.createListener("web", { 
+const web = alb.createListener("web", {
     port: 443,
     external: true,
     protocol: "HTTPS",
     certificateArn: certificate.arn
 });
 ```
-We also created a single target group for load balancers to distribute the traffic to. In this way, the user could have a different port for the target group and don't have to use 443 https port.  
+
+We also created a single target group for load balancers to distribute the traffic to. In this way, the user could have a different port for the target group and don't have to use 443 https port.
 
 ``` typescript
 let inputTargetGroupPort: pulumi.Input<number> = cmsStackConfig.targetGroupPort!;
@@ -176,13 +181,13 @@ if (inputTargetGroupPort === undefined) {
     inputTargetGroupPort = 80;
 }
 
-// when Listener Rule is satisfied then traffic is route to this target group. 
+// when Listener Rule is satisfied then traffic is route to this target group.
 const tg = alb.createTargetGroup("oauth-tg", {
-    port: inputTargetGroupPort, 
+    port: inputTargetGroupPort,
     loadBalancer: alb
 });
-
 ```
+
 The target group port was also implemented as an optional stack configuration for the user to specify a different target group port.
 If the user wants to use the different port numbers, they could do so by `pulumi config set cms-OAuth:targetGroupPort` and type in the port number value. The default port is 80 which is https port for local development.
 
@@ -201,7 +206,8 @@ new awsx.lb.ListenerRule("oauth-listener-rule", web, {
     }],
 });
 ```
-Also, as mentioned previously, when building the Fargate service, we could pass in environment variables that act as a parameter to main.go. 
+
+Also, as mentioned previously, when building the Fargate service, we could pass in environment variables that act as a parameter to main.go.
 
 ```typescript
 // Create a Fargate service task that can scale out.
@@ -213,12 +219,12 @@ const appService = new awsx.ecs.FargateService("app-svc", {
             memory: 128 /*MB*/,
             portMappings: [ tg ],
             environment: [
-                { 
+                {
                     name: "HOST",
                     // The target domain which would concatenate with callbacks in main.go
                     value: pulumi.interpolate `https://${cmsStackConfig.targetDomain}`
                 },
-                { 
+                {
                     name: "SESSION_SECRET",
                     value: sessionSecretRandomString.result
                 },
@@ -244,11 +250,13 @@ const appService = new awsx.ecs.FargateService("app-svc", {
     desiredCount: 1,
 });
 ```
+
 For `HOST` we would pass in the link that we would want this OAuth Server to have. We could set it by set the stack configuration by doing `pulumi config set pulumi-website-cms:targetDomain https://some-cms-oauth-domain.pulumi-demos.com` and replace the name with what you want the OAuth Server to have.
 
 `SESSION_SECRET` is another environment variable to pass in main.go that we mention earlier. We generated value by using Pulumi's `random.RandomPassword` previously.
 
-To get `GITHUB_SECRET` and `GITHUB_TOKEN`, we need to register for a Github OAuth Application. Netlify have provided [instructions](https://docs.netlify.com/visitor-access/oauth-provider-tokens/#setup-and-settings) for that. For the Home Page Url should be the targetDomain that we build with our [previous post]({{<relref "/blog/deploying-oauth-server-for-cms-on-aws-with-pulumi">}}). For the Authorization callback URL we should enter `https://{{the domain of your OAuth App}}/github/callback` which is specified by the main.go. 
+To get `GITHUB_SECRET` and `GITHUB_TOKEN`, we need to register for a Github OAuth Application. Netlify have provided [instructions](https://docs.netlify.com/visitor-access/oauth-provider-tokens/#setup-and-settings) for that. For the Home Page Url should be the targetDomain that we build with our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}). For the Authorization callback URL we should enter `https://{{the domain of your OAuth App}}/github/callback` which is specified by the main.go.
+
 ```go
     github.New(
         os.Getenv("GITHUB_KEY"), os.Getenv("GITHUB_SECRET"),
@@ -257,14 +265,17 @@ To get `GITHUB_SECRET` and `GITHUB_TOKEN`, we need to register for a Github OAut
         "public_repo",
     )
 ```
+
 Then we can copy and paste the github key and secret as stack configuration as well.
+
 ```bash
 $ pulumi config set netlify-cms-oauth-provider-infrastructure:githubKey {{YOUR_GITHUB_KEY}}
 $ pulumi config set --secret netlify-cms-oauth-provider-infrastructure:githubSecret
 $ {{YOUR_GITHUB_SECRET}}
 ```
-`--secret` would safely encrypt your github secret. Also, 
-don't directly append the secret to the command like this ` $ pulumi config set --secret netlify-cms-oauth-provider-infrastructure:githubKey {{YOUR_GITHUB_SECRET}} `.
+
+`--secret` would safely encrypt your github secret. Also,
+don't directly append the secret to the command like this `$ pulumi config set --secret netlify-cms-oauth-provider-infrastructure:githubKey {{YOUR_GITHUB_SECRET}}`.
 Because it might cause the secret to being stored inside the command memory. We should only specify the key without a name and hit ENTER key, then you can type secret on next line(won't show the value)
 
 For `TARGET_PORT` that is how we passed in the `targetGroupPort` configuration value to main.go. That is also the port number that we want the server itself to serve. We also checked if this environment variable is set in main.go in case we need to test main.go locally without Pulumi.
@@ -284,12 +295,12 @@ As mentioned previously, `GITHUB_SCOPE` is the environment variable to tell main
 
 ### Create a Certificate for the OAuth Server
 
-The process is similar how we created certificate for CMS in our [previous post]({{<relref "/blog/deploying-oauth-server-for-cms-on-aws-with-pulumi">}}). 
-Similarly, we also referenced Pulumi's [static website example](https://github.com/pulumi/examples/tree/master/aws-ts-static-website). 
+The process is similar how we created certificate for CMS in our [previous post]({{< relref "/blog/deploying-netlify-cms-on-aws" >}}).
+Similarly, we also referenced Pulumi's [static website example](https://github.com/pulumi/examples/tree/master/aws-ts-static-website).
 
-We can extract what we need just for creating the certificate and delete irrelevant parts including uploading content to the S3 bucket and configure CloudFront. Then the rest only involves creating an east region provider, a certificate, and certificate validation. 
+We can extract what we need just for creating the certificate and delete irrelevant parts including uploading content to the S3 bucket and configure CloudFront. Then the rest only involves creating an east region provider, a certificate, and certificate validation.
 
-However, for the part of creating Alias Record, the values of the alias field should be filled with information about the application load balancer that we created. 
+However, for the part of creating Alias Record, the values of the alias field should be filled with information about the application load balancer that we created.
 
 ```typescript
 // Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
@@ -315,17 +326,19 @@ function createAliasRecord(
 // Create the aliasRecord with targetdomain and application load balancer
 const aRecord = createAliasRecord(cmsStackConfig.targetDomain, alb);
 ```
+
 ### Run infrastructure and Github Workflow
 
-Then we could run `pulumi up` to deploy all of this. Similar to the cms folder we have to build the Github workflow under folder `cms-oauth/.github/workflows/build-and-deploy.yml`. The workflow is also using the repository secret that we set in the Github. 
+Then we could run `pulumi up` to deploy all of this. Similar to the cms folder we have to build the Github workflow under folder `cms-oauth/.github/workflows/build-and-deploy.yml`. The workflow is also using the repository secret that we set in the Github.
 
 ![Github Secret](./github_secret.jpg)
 
 Also, similarly, `cms-OAuth/scripts` contain the script for assuming role functionality and if you are using IAM User's token to assume the role from the other repository then you could use this script.
 
 ## Last Step
+
 Don't forget to update the CMS configuration file.
-To put all of our deployment of CMS and CMS OAuth Server together, we should specify the site_domain and URL in `./public/config.yml` of the cms folder. 
+To put all of our deployment of CMS and CMS OAuth Server together, we should specify the site_domain and URL in `./public/config.yml` of the cms folder.
 
 ```yaml
 backend:
@@ -335,14 +348,15 @@ backend:
   # This site_domain and base_url are sudo domains
   # Replace site_domain with targetDomain pulumi stack configuration inside cms/infrastructure folder
   # Replace base_url with targetDomain pulumi stack configuration inside cms-oauth/infrastructure folder
-  site_domain: https://some-cms-domain.pulumi-demos.com  
-  base_url: https://some-oauth-domain.pulumi-demos.com 
+  site_domain: https://some-cms-domain.pulumi-demos.com
+  base_url: https://some-oauth-domain.pulumi-demos.com
 ```
+
 The site_domain is the domain of the CMS and the base_url is the domain of OAuth Server that we deployed. They should be the same as the `targetDomain` variable we set in the stack configuration of both CMS and OAuth Server.
 
 ## In the End
 
-Congratulations on building both CMS web application, the OAuth client-server, and deploy the infrastructure! Now if everything works perfectly, you would see the "Login with Github" button shown and click it would redirect to the Github login pages. 
+Congratulations on building both CMS web application, the OAuth client-server, and deploy the infrastructure! Now if everything works perfectly, you would see the "Login with Github" button shown and click it would redirect to the Github login pages.
 
 ![OAuth Client Server](./oauth-client-server.jpg)
 
@@ -355,7 +369,8 @@ All codes of CMS and OAuth Client Server are available in [Pulumi's example repo
 ---
 
 Special Thanks to:
+
 - Tony Alves @talves for providing [template](https://github.com/ADARTA/netlify-cms-react-example) to separate CMS as a stand-alone React App
 - Igor Kuznetsov @igk1972 for providing [go code example](https://github.com/igk1972/netlify-cms-oauth-provider-go) for providing the OAuth Client-Server source code
 - Paul Stack @stack72 for developing [Pulumi example of deploying Dockerized App using ECS Fargate](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate) and [Pulumi example of deploying the static website on AWS](https://github.com/pulumi/examples/tree/master/aws-ts-static-website)
-- Every Pulumi folks have ever helped me out about this
+- Every Pulumi folks have ever helped me out about this~
