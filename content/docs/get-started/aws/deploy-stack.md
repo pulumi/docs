@@ -12,13 +12,13 @@ menu:
 aliases: ["/docs/quickstart/aws/deploy-stack/"]
 ---
 
-Let's go ahead and deploy the stack:
+Let's go ahead and run our first update:
 
 ```bash
 $ pulumi up
 ```
 
-This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
+This command evaluates your program and determines the resource updates to make. First, a preview is shown that outlines the changes that will be made:
 
 ```
 Previewing update (dev):
@@ -31,12 +31,18 @@ Resources:
     + 2 to create
 
 Do you want to perform this update?
-  yes
-> no
+> yes
+  no
   details
 ```
 
-Choosing `yes` will create resources in AWS.
+Once the preview has finished you are given three options to choose from:
+
+- `yes` will run your update.
+- `no` will not run the update.
+- `details` will show you the diff for the full set of properties within the stack.
+
+Select `yes` to create your bucket.
 
 ```
 Do you want to perform this update? yes
@@ -55,8 +61,50 @@ Resources:
 Duration: 14s
 ```
 
-The name of the bucket that we exported is shown as a [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}).
+Remember the output we defined in the previous step? That [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) can be seen in the `Outputs:` section of our update. For example, the name of the bucket created above is `my-bucket-68e33ec`. To confirm our bucket has been created, let's list the contents of our bucket.
 
-Next, we'll make some modifications to the program.
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+
+{{% choosable language javascript %}}
+
+```bash
+$ aws s3 ls $(pulumi stack output bucketName)
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```bash
+$ aws s3 ls $(pulumi stack output bucketName)
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```bash
+$ aws s3 ls $(pulumi stack output bucket_name)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```bash
+$ aws s3 ls $(pulumi stack output bucketName)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```bash
+$ aws s3 ls $(pulumi stack output BucketName)
+```
+
+{{% /choosable %}}
+
+Running that command should result in no output as our bucket is currently empty. Let's change that by modifying our bucket to host a static website.
 
 {{< get-started-stepper >}}
