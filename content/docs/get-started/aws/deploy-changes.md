@@ -321,7 +321,7 @@ Finally, you can checkout your new static website at the URL in the `Outputs` se
 {{% choosable language javascript %}}
 
 ```bash
-$ curl $(pulumi stack output bucketName)
+$ curl $(pulumi stack output bucketEndpoint)
 ```
 
 {{% /choosable %}}
@@ -329,7 +329,7 @@ $ curl $(pulumi stack output bucketName)
 {{% choosable language typescript %}}
 
 ```bash
-$ curl $(pulumi stack output bucketName)
+$ curl $(pulumi stack output bucketEndpoint)
 ```
 
 {{% /choosable %}}
@@ -337,7 +337,7 @@ $ curl $(pulumi stack output bucketName)
 {{% choosable language python %}}
 
 ```bash
-$ curl $(pulumi stack output bucket_name)
+$ curl $(pulumi stack output bucket_endpoint)
 ```
 
 {{% /choosable %}}
@@ -345,7 +345,7 @@ $ curl $(pulumi stack output bucket_name)
 {{% choosable language go %}}
 
 ```bash
-$ curl $(pulumi stack output bucketName)
+$ curl $(pulumi stack output bucketEndpoint)
 ```
 
 {{% /choosable %}}
@@ -353,7 +353,7 @@ $ curl $(pulumi stack output bucketName)
 {{% choosable language csharp %}}
 
 ```bash
-$ curl $(pulumi stack output BucketName)
+$ curl $(pulumi stack output BucketEndpoint)
 ```
 
 {{% /choosable %}}
