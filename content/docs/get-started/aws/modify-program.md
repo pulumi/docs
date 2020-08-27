@@ -63,7 +63,7 @@ Now that we have our new `index.html` with some content, let's modify our progra
 {{% choosable language javascript %}}
 
 ```javascript
-const path = require("path);
+const path = require("path");
 ```
 
 Next we will create a new bucket object on the lines right after creating the bucket itself.
@@ -107,10 +107,10 @@ import os
 Next we will create a new bucket object on the lines right after creating the bucket itself.
 
 ```python
-filepath = os.path.abspath("site/index.html")
+filepath = os.path.abspath('site/index.html')
 
-bucketObject = pulumi_aws.s3.BucketObject(
-    "index.html",
+bucketObject = s3.BucketObject(
+    'index.html',
     bucket=bucket,
     source=pulumi.FileAsset(filepath)
 )
@@ -122,9 +122,8 @@ bucketObject = pulumi_aws.s3.BucketObject(
 
 ```go
 import (
+    "path/filepath"
     // Existing imports...
-    "path"
-	"path/filepath"
 )
 ```
 
@@ -133,7 +132,7 @@ Next we will create a new bucket object on the lines right after creating the bu
 ```go
 filePath, err := filepath.Abs("./site/index.html")
 
-_, err := s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
+_, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
     Bucket: bucket.ID(),
     Source: pulumi.NewFileAsset(filePath),
 })
@@ -155,7 +154,7 @@ Next we will create a new bucket object on the lines right after creating the bu
 ```csharp
 var filePath = Path.GetFullPath("./site/index.html");
 
-var bucketObject = new BucketObject("index.html",
+var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
     Bucket = bucket.BucketName,
     Source = new FileAsset(filePath),

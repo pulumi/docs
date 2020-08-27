@@ -170,7 +170,7 @@ export const bucketEndpoint = pulumi.interpolate`http://${bucket.websiteEndpoint
 {{% choosable language python %}}
 
 ```python
-bucket = pulumi_aws.s3.Bucket('contentBucket',
+bucket = s3.Bucket('my-bucket',
     website={
         'index_document': 'index.html',
     })
@@ -179,7 +179,7 @@ bucket = pulumi_aws.s3.Bucket('contentBucket',
 Next, your `index.html` object will need two changes: an ACL of public-read so that it can be accessed anonymously over the Internet, and a content type so that it is served as HTML:
 
 ```python
-bucketObject = pulumi_aws.s3.BucketObject(
+bucketObject = s3.BucketObject(
     'index.html',
     acl='public-read',
     content_type='text/html',
@@ -191,7 +191,7 @@ bucketObject = pulumi_aws.s3.BucketObject(
 Finally, at the bottom of your program export the resulting bucket’s endpoint URL so we can easily access it:
 
 ```python
-export('bucket-endpoint', Output.concat('http://', bucket.website_endpoint))
+pulumi.export('bucket_endpoint', pulumi.Output.concat('http://', bucket.website_endpoint))
 ```
 
 {{% /choosable %}}
@@ -199,7 +199,7 @@ export('bucket-endpoint', Output.concat('http://', bucket.website_endpoint))
 {{% choosable language go %}}
 
 ```go
-bucket, err := s3.NewBucket(ctx, "s3-website-bucket", &s3.BucketArgs{
+bucket, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
     Website: s3.BucketWebsiteArgs{
         IndexDocument: pulumi.String("index.html"),
     },
@@ -209,7 +209,7 @@ bucket, err := s3.NewBucket(ctx, "s3-website-bucket", &s3.BucketArgs{
 Next, your `index.html` object will need two changes: an ACL of public-read so that it can be accessed anonymously over the Internet, and a content type so that it is served as HTML:
 
 ```go
-_, err := s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
+_, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
     Acl:         pulumi.String("public-read"),
     ContentType: pulumi.String("text/html"),
     Bucket:      bucket.ID(),
@@ -220,12 +220,17 @@ _, err := s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
 Finally, at the bottom of your program export the resulting bucket’s endpoint URL so we can easily access it:
 
 ```go
-ctx.Export("bucketEndpoint", pulumi.Sprintf("http://%s", siteBucket.WebsiteEndpoint))
+ctx.Export("bucketEndpoint", pulumi.Sprintf("http://%s", bucket.WebsiteEndpoint))
 ```
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
+```csharp
+// Add this import
+using Pulumi.Aws.S3.Inputs;
+```
 
 ```csharp
 var bucket = new Bucket("my-bucket", new BucketArgs
@@ -240,7 +245,7 @@ var bucket = new Bucket("my-bucket", new BucketArgs
 Next, your `index.html` object will need two changes: an ACL of public-read so that it can be accessed anonymously over the Internet, and a content type so that it is served as HTML:
 
 ```csharp
-var bucketObject = new BucketObject("index.html",
+var bucketObject = new BucketObject("index.html", new BucketObjectArgs
 {
     Acl = "public-read",
     ContentType = "text/html",
@@ -260,7 +265,6 @@ this.BucketEndpoint = Output.Format($"http://{bucket.WebsiteEndpoint}");
 ```csharp
 [Output] public Output<string> BucketName { get; set; }
 [Output] public Output<string> BucketEndpoint { get; set; }
-}
 ```
 
 {{% /choosable %}}
