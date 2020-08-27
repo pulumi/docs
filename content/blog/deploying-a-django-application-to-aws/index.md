@@ -132,210 +132,37 @@ django_admin_password = config.require_secret("django-admin-password")
 django_secret_key = config.require_secret("django-secret-key")
 ```
 
-After setting up the imports and configurations, we create an Elastic Container Service Cluster.
-A Cluster represents a group of tasks and services that work together for a certain purpose. In
-this instance, the purpose is to provide users with a voting application.
+After setting up the imports and configurations, we create an ECS Cluster, VPC, Subnet, RDS instance, and several other items. All the components are identical to the ones in the [first]({{< relref "/blog/creating-a-python-aws-application-using-flask-and-redis" >}}) and [second]({{< relref "/blog/deploying-mysql-schemas-using-dynamic-providers/" >}}) blog posts, and the full code can be seen in this example's [github repository.](https://github.com/pulumi/examples/tree/vova/aws-django-voting-app/aws-django-voting-app).
 
 ```python
-app_cluster = aws.ecs.Cluster("app-cluster")
+app_cluster = aws.ecs.Cluster(...)
+
+app_vpc = aws.ec2.Vpc(...)
+app_vpc_subnet = aws.ec2.Subnet(...)
+
+app_gateway = aws.ec2.InternetGateway(...)
+app_routetable = aws.ec2.RouteTable(...)
+app_security_group = aws.ec2.SecurityGroup(...)
+
+app_exec_role = aws.iam.Role(...)
+exec_policy_attachment = aws.iam.RolePolicyAttachment(...)
+app_task_role = aws.iam.Role(...)
+task_policy_attachment = aws.iam.RolePolicyAttachment(...)
+task_policy_attachment = aws.iam.RolePolicyAttachment(...)
+
+app_ecr_repo = aws.ecr.Repository(...)
+app_lifecycle_policy = aws.ecr.LifecyclePolicy(...)
+
+extra_rds_subnet = aws.ec2.Subnet(...)
+app_database_subnetgroup = aws.rds.SubnetGroup(...)
+mysql_rds_server = aws.rds.Instance(...)
+mysql_provider = mysql.Provider(...)
+mysql_database = mysql.Database(...)
+mysql_user = mysql.User(...)
+mysql_access_grant = mysql.Grant(...)
 ```
 
-To allow tasks within our cluster to communicate, we create a Virtual Private
-Cloud and an associated subnet. Two subnets are required for the project, so the availability zone suffix is set to "a".
-
-```python
-app_vpc = aws.ec2.Vpc("app-vpc",
-    cidr_block="172.31.0.0/16",
-    enable_dns_hostnames=True)
-
-app_vpc_subnet = aws.ec2.Subnet("app-vpc-subnet",
-    cidr_block="172.31.0.0/20",
-    availability_zone=availability_zone + "a",
-    vpc_id=app_vpc)
-```
-
-A gateway and routing table are needed to allow the VPC to communicate with the Internet.
-Once created, we associate the routing table with our VPC.
-
-```python
-app_gateway = aws.ec2.InternetGateway("app-gateway",
-    vpc_id=app_vpc.id)
-
-app_routetable = aws.ec2.RouteTable("app-routetable",
-    routes=[
-        {
-            "cidr_block": "0.0.0.0/0",
-            "gateway_id": app_gateway.id,
-        }
-    ],
-    vpc_id=app_vpc.id)
-
-app_routetable_association = aws.ec2.MainRouteTableAssociation("app_routetable_association",
-    route_table_id=app_routetable.id,
-    vpc_id=app_vpc)
-```
-
-To control traffic flow between applications running inside our VPC, we create a security group.
-
-```python
-app_security_group = aws.ec2.SecurityGroup("security-group",
-	vpc_id=app_vpc.id,
-	description="Enables HTTP access",
-    ingress=[{
-		'protocol': 'tcp',
-		'from_port': 0,
-		'to_port': 65535,
-		'cidr_blocks': ['0.0.0.0/0'],
-    }],
-    egress=[{
-		'protocol': '-1',
-		'from_port': 0,
-		'to_port': 0,
-		'cidr_blocks': ['0.0.0.0/0'],
-    }])
-```
-
-To start our services, we need to create an Identity and Access Management (IAM) role
-and attach execution permissions to it.
-
-```python
-app_exec_role = aws.iam.Role("app-exec-role",
-    assume_role_policy="""{
-        "Version": "2012-10-17",
-        "Statement": [
-        {
-            "Action": "sts:AssumeRole",
-            "Principal": {
-                "Service": "ecs-tasks.amazonaws.com"
-            },
-            "Effect": "Allow",
-            "Sid": ""
-        }]
-    }""")
-
-exec_policy_attachment = aws.iam.RolePolicyAttachment("app-exec-policy", role=app_exec_role.name,
-	policy_arn="arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy")
-```
-
-Likewise, our ECS service will need to have a task role to manage it and its own set
-of permissions.
-
-```python
-app_task_role = aws.iam.Role("app-task-role",
-    assume_role_policy="""{
-        "Version": "2012-10-17",
-        "Statement": [
-        {
-            "Action": "sts:AssumeRole",
-            "Principal": {
-                "Service": "ecs-tasks.amazonaws.com"
-            },
-            "Effect": "Allow",
-            "Sid": ""
-        }]
-    }""")
-
-task_policy_attachment = aws.iam.RolePolicyAttachment("app-access-policy", role=app_task_role.name,
-	policy_arn="arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess")
-
-task_policy_attachment = aws.iam.RolePolicyAttachment("app-lambda-policy", role=app_task_role.name,
-	policy_arn="arn:aws:iam::aws:policy/AWSLambdaFullAccess")
-```
-
-An Elastic Container Registry Repository stores the application Docker images that we want
-to run. The life cycle policy automatically removes the oldest untagged image that we uploaded.
-
-```python
-app_ecr_repo = aws.ecr.Repository("app-ecr-repo",
-    image_tag_mutability="MUTABLE")
-
-app_lifecycle_policy = aws.ecr.LifecyclePolicy("app-lifecycle-policy",
-    repository=app_ecr_repo.name,
-    policy="""{
-        "rules": [
-            {
-                "rulePriority": 10,
-                "description": "Remove untagged images",
-                "selection": {
-                    "tagStatus": "untagged",
-                    "countType": "imageCountMoreThan",
-                    "countNumber": 1
-                },
-                "action": {
-                    "type": "expire"
-                }
-            }
-        ]
-    }""")
-```
-
-With the infrastructure in place, we can start writing the backend for the application.
-
-Our MySQL database is created with an RDS instance. To create the instance, Amazon requires
-that it be given two subnets in different availability zones.
-
-```python
-extra_rds_subnet = aws.ec2.Subnet("extra-rds-subnet",
-    cidr_block="172.31.128.0/20",
-    availability_zone=availability_zone + "b",
-    vpc_id=app_vpc)
-```
-
-Both subnets are assigned to a SubnetGroup that belongs to the RDS instance.
-
-```python
-app_database_subnetgroup = aws.rds.SubnetGroup("app-database-subnetgroup",
-    subnet_ids=[app_vpc_subnet.id, extra_rds_subnet.id])
-
-mysql_rds_server = aws.rds.Instance("mysql-server",
-    engine="mysql",
-    username=sql_admin_name,
-    password=sql_admin_password,
-    instance_class="db.t2.micro",
-    allocated_storage=20,
-    skip_final_snapshot=True,
-    publicly_accessible=True,
-    db_subnet_group_name=app_database_subnetgroup.id,
-    vpc_security_group_ids=[app_security_group.id])
-```
-
-Pulumi offers some additional tools to make handling MySQL easier.
-
-```python
-mysql_provider = mysql.Provider("mysql-provider",
-    endpoint=mysql_rds_server.endpoint,
-    username=sql_admin_name,
-    password=sql_admin_password)
-```
-
-We initialize the example database and create a user to manage it.
-
-```python
-mysql_database = mysql.Database("mysql-database",
-    name="votes-database",
-    opts=pulumi.ResourceOptions(provider=mysql_provider))
-
-mysql_user = mysql.User("mysql-standard-user",
-    user=sql_user_name,
-    host="example.com",
-    plaintext_password=sql_user_password,
-    opts=pulumi.ResourceOptions(provider=mysql_provider))
-```
-
-The user account which we will give to Django only needs the "SELECT", "UPDATE", "INSERT",
-and DELETE permissions to function.
-
-```python
-mysql_access_grant = mysql.Grant("mysql-access-grant",
-    user=mysql_user.user,
-    host=mysql_user.host,
-    database=mysql_database.name,
-    privileges= ["SELECT", "UPDATE", "INSERT", "DELETE"],
-    opts=pulumi.ResourceOptions(provider=mysql_provider))
-```
-
-Our RDS instance has been set up, and the MySQL backend is complete. All that's left is to
-create the Django frontend.
+With the basic infrastructure and MySQL backend in place, all that's left is to create the Django frontend.
 
 A target group, balancer, and listener are created for the frontend.
 
