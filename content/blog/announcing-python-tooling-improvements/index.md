@@ -1,6 +1,6 @@
 ---
 title: "Announcing Python Tooling Improvements"
-date: 2020-08-25
+date: 2020-08-27
 draft: false
 meta_desc: "Type annotations and support for passing nested values with data classes provides a significant improvement to the Python experience."
 meta_image: python-tooling.png
@@ -107,13 +107,13 @@ Nested outputs can now be accessed in a more strongly-typed way as well.
 Consider accessing one of the website settings from the bucket. Previously, nested outputs were returned as raw `dict`s, and you'd get the value by looking it up in the `dict` by its key:
 
 ```python
-index_document = my_bucket.website.apply(lambda w: w["indexDocument"] if w else None)
+index_document = my_bucket.website.apply(lambda w: w["indexDocument"])
 ```
 
 Now, nested outputs are returned as data classes, and values can be accessed via properties.
 
 ```python
-index_document = my_bucket.website.apply(lambda w: w.index_document if w else None)
+index_document = my_bucket.website.apply(lambda w: w.index_document)
 ```
 
 Existing programs that lookup the values in the `dict` continue to work as-is because the new output data classes are subclasses of `dict` and continue to return the same data with the same keys as before.
